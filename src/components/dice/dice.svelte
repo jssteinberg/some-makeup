@@ -1,38 +1,34 @@
-<div class="container">
+<div class="container" aria-hidden="true">
   <div class="cube">
-    <div class="side front"></div>
-    <div class="side left"></div>
-    <div class="side right"></div>
-    <div class="side back"></div>
-    <div class="side top"></div>
-    <div class="side bottom"></div>
+    <div class="side front">1</div>
+    <div class="side left">2</div>
+    <div class="side right">3</div>
+    <div class="side back">4</div>
+    <div class="side top">5</div>
+    <div class="side bottom">6</div>
   </div>
 </div>
 
 <style>
 .container {
-  width: 400px;
-  height: 400px;
-  border: 2px solid white;
-  border-radius: 4px;
-  display: -webkit-box;
+  --size: calc(10 * var(--spacer, 1rem));
+  width: 100%;
+  height: var(--size);
+  border: calc(.25 * var(--spacer)) solid hsla(358.7,100%,43.9%,25%);
+  border-radius: calc(.5 * var(--spacer));
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-perspective: 800px;
-          perspective: 800px;
-  -webkit-perspective-origin: top right;
-          perspective-origin: top right;
+  justify-content: center;
+  align-items: center;
+  perspective: calc(3 * var(--size));
+  perspective-origin: top right;
 }
 
 .cube {
+  --cube-size: calc(.25 * var(--size));
   position: relative;
-  width: 200px;
-  height: 200px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  transform-style: preserve-3d;
 }
 
 .side {
@@ -40,42 +36,36 @@
   width: 100%;
   height: 100%;
   opacity: 0.9;
-  border: 2px solid white;
+  background: hsla(358.7,100%,43.9%,50%);
+  border: 1px solid hsla(358.7,100%,43.9%,25%);
+  display: grid;
+  place-items: center;
+  font-weight: 100;
+  color: white;
 }
 
 .front {
-  background-color: #d50000;
-  -webkit-transform: translateZ(100px);
-          transform: translateZ(100px);
+  transform: translateZ(calc(.5 * var(--cube-size)));
 }
 
 .back {
-  background-color: #aa00ff;
-  -webkit-transform: translateZ(-100px);
-          transform: translateZ(-100px);
+  transform: translateZ(calc(-.5 * var(--cube-size)));
 }
 
 .left {
-  background-color: #304ffe;
-  -webkit-transform: rotateY(90deg) translateZ(100px);
-          transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(calc(.5 * var(--cube-size)));
 }
 
 .right {
-  background-color: #0091ea;
-  -webkit-transform: rotateY(-90deg) translateZ(100px);
-          transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(calc(.5 * var(--cube-size)));
 }
 
 .top {
-  background-color: #00bfa5;
-  -webkit-transform: rotateX(90deg) translateZ(100px);
-          transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(calc(.5 * var(--cube-size)));
 }
 
 .bottom {
-  background-color: #64dd17;
-  -webkit-transform: rotateX(-90deg) translateZ(100px);
-          transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(calc(.5 * var(--cube-size)));
+  background: hsla(358.7,100%,43.9%,75%);
 }
 </style>
