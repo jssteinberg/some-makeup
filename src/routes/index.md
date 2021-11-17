@@ -10,7 +10,7 @@
 
 <style>
 	:global(:root) {
-		background: radial-gradient(ellipse 100% 25vh, red, maroon 25%, black);
+		background: radial-gradient(ellipse 100% 25vh, red, maroon 25%, black), black;
 		min-height: 100vh;
 	}
 
