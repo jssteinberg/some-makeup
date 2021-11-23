@@ -14,12 +14,12 @@
   --size: calc(10 * var(--spacer, 1rem));
   width: 100%;
   height: var(--size);
-  border: calc(.25 * var(--spacer)) solid hsla(358.7,100%,43.9%,25%);
+  background: linear-gradient(hsla(358.7,100%,43.9%,20%),hsla(358.7,100%,43.9%,10%));
   border-radius: calc(.5 * var(--spacer));
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: calc(3 * var(--size));
+  perspective: calc(4 * var(--size));
   perspective-origin: top right;
 }
 
@@ -46,10 +46,12 @@
 
 .front {
   transform: translateZ(calc(.5 * var(--cube-size)));
+  background: hsla(358.7,100%,32.5%,80%);
 }
 
 .back {
   transform: translateZ(calc(-.5 * var(--cube-size)));
+  background: hsla(358.7,100%,43.9%,30%);
 }
 
 .left {
