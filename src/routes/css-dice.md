@@ -20,7 +20,8 @@ title: CSS Dice
 
 	h1 {
 		text-align: center;
-		font-family: georgia, serif;
+		font-family: serif;
+		font-size: 30px;
 		font-weight: normal;
 	}
 

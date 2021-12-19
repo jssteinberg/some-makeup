@@ -25,46 +25,87 @@
 
 <script>
 	import "../app.css";
+	import { page } from '$app/stores';
+
 	export let posts;
 </script>
+
+{#if $page.path === '/'}
+	<h1>Some Makeup</h1>
+{/if}
 
 <main>
 	<slot />
 </main>
 
-<footer class="menu">
-	<h2><em>Global nav.</em></h2>
+<footer class="footer">
+	<h2>Global nav</h2>
 	<ol>
 		{#each posts as post}
 		<li>
-			<span aria-hidden="true">›</span>
-			<a href={post.slug}>{post.title}</a>
+			<a
+				aria-current={$page.path === post.path ? 'page' : undefined}
+				href={post.path}
+				>
+				{post.title}
+			</a>
 		</li>
 		{/each}
-
-		<li>
-			<a href="/">Front</a>
-		</li>
 	</ol>
+
+	<p>
+		<strong>
+			<a href="/">Some makeup</a> {new Date().getFullYear()}
+		</strong>
+	</p>
 </footer>
 
 <style>
+	h1,
+	h2,
+	a {
+		font-family: var(--mono-font, monospace);
+		font-weight: normal;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
 	main,
-	.menu {
+	.footer {
 		padding: 0 1em;
 	}
 
-	.menu {
-		font-family: var(--mono-font, monospace);
-		font-size: 16px; /* Use px incase page changes :root font-size */
+	.footer,
+	main > :global(*) {
+		margin-inline-start: auto;
+		margin-inline-end: auto;	
+		width: min(100%, 40rem);
+	}
 
-		margin: 4em 0;
-		padding-block-start: 1em;
+	h1 {
+		margin: calc(2 * var(--spacer, 1em)) 0;
+	}
+
+	.footer {
+		--mute-fg: hsla(var(--fg-h),var(--fg-s),var(--fg-l),25%);
+		font-size: 16px; /* Use px incase page changes :root font-size */
+		box-shadow: inset 0 1px var(--mute-fg);
+		font-family: var(--mono-font, monospace);
+		font-size: .8em;
+
+		margin-block-start: calc(4 * var(--spacer));
+		padding-block-start: calc(2 * var(--spacer));
+
+		text-align: center;
 	}
 
 	ol {
-		list-style: none;
-		padding: 0;
+		list-style: square;
+		padding: 0 2em;
+	}
+
+	li::marker {
+		color: var(--mute);
 	}
 
 	a {
@@ -72,5 +113,9 @@
 		align-items: center;
 		min-height: 48px;
 		min-width: 48px;
+	}
+
+	a[aria-current] {
+		text-decoration: none;
 	}
 </style>
