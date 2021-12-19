@@ -1,7 +1,7 @@
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
-	const posts = Object.keys(markdownFiles)
+	const data = Object.keys(markdownFiles)
 		.map((path) => {
 			return {
 				filePath: path,
@@ -17,7 +17,7 @@
 	export async function load() {
 		return {
 			props: {
-				posts,
+				posts: data,
 			},
 		};
 	}
