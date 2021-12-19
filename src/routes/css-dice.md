@@ -1,11 +1,15 @@
-# CSS Casino Dice
+---
+title: CSS Dice
+---
+
+# CSS Dice
 
 <div class="wrapper">
 	<Dice />
 </div>
 
 <script>
-	import Dice from '../components/dice/dice.svelte';
+	import Dice from '../libs/css-dice/dice.svelte';
 </script>
 
 <style>

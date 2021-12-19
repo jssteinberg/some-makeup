@@ -1,7 +1,5 @@
-/* Write your global styles here, in PostCSS syntax */
 @import 'floor-typography-css/src/reset.css';
 @import 'floor-typography-css/src/normalize-style.css';
-@import 'floor-typography-css/src/headings-font.css';
 
 /* ## ROOT VARIABLES */
 
@@ -9,12 +7,6 @@
 	--added-lead: .6;
 	--rlh: calc(1rem * (1 + var(--added-lead))); /* Root line-height */
 	--spacer: var(--rlh, 1rem); /* Adjusts vertical rhythm */
-
-	/* Headings */
-	--h1-added-lead: .15; /* Adjusts h1's line-height, thus its font-size */
-	--h2-added-lead: .15;
-	--h3-added-lead: .4;
-	--h4-added-lead: .4;
 
 	/* Font-families */
 	--system-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -25,57 +17,29 @@
 
 :root {
 	font-family: var(--system-font);
-	font-size: 1.25rem; /* Equals 20px with browser default font-size 16px */
-}
-
-@media (min-width: 1200px) {
-	:root {
-		font-size: 1rem;
-	}
 }
 
 body {
-	margin: 0 auto; /* Change browser default body margin */
-	padding: 0 1rem;
-	max-width: 50em; /* Set site width */
+	margin: 0;
 }
 
 /* Global colors */
+
 :root {
 	background: hsl(0,0%,7.5%);
 }
+
 body {
 	color: hsl(0,0%,95%); /* Set color on body (not root) for color-scheme cycling. */
 }
 
-/* Headings */
-main { --h1-min-font-size: 2em; /* Bigger h1 in main (define as natural number). */ }
-h1 { hyphens: manual; /* By default hyphens is set to auto, but h1 should be manual. */ }
-h5, .h5 { font-weight: bold; }
-h6, .h6 { font-style: italic; }
+/* Font sizes */
 
-/* Headings' margins */
-h1, .h1,
-h2, .h2 {
-	margin-block-start: calc(var(--spacer, 1rem) * 1);
-	margin-block-end: calc(var(--spacer, 1rem) * 1);
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1em;
 }
-h3, .h3,
-h4, .h4 {
-	margin-block-start: calc(var(--spacer, 1rem) * 1.5);
-	margin-block-end: calc(var(--spacer, 1rem) * .5);
-}
-h5, .h5,
-h6, .h6 {
-	margin-block-end: 0;
-}
-h3 + *, .h3 + *,
-h4 + *, .h4 + *,
-h5 + *, .h5 + *,
-h6 + *, .h6 + * {
-	/* Remove top margin on next el */
-	margin-block-start: 0;
-}
+
+small { font-size: .8em; }
 
 /* Links */
 
@@ -83,100 +47,21 @@ a { color: inherit; }
 
 /* Lists */
 
-ol, ul { padding-inline-start: max(var(--space, 1rem), var(--rlh, 2em)); /* Uses root line-height or 2em if --space or 1rem is smaller---a nice list padding for bullets or numbers. */ }
+ol, ul {
+	padding-inline-start: 2em;
+}
 
 /* Blockquote */
 
 blockquote {
-	--border-size: calc(var(--spacer, 1rem) * .1);
+	--blockquote-border-size: calc(var(--spacer, 1rem) * .1);
 	margin-inline-start: 0;
 	margin-inline-end: 0;
-	padding-inline-start: calc(var(--spacer, 1em) - var(--border-size));
-	border-left: var(--border-size) solid var(--mute);
+	padding-inline-start: calc(var(--spacer, 1em) - var(--blockquote-border-size));
+	border-left: var(--blockquote-border-size) solid;
 }
 
 /* Code blocks */
 
 code { font-size: .95em; }
 pre code { font-size: .875em; }
-
-/* ## CLASSES */
-
-/* ### .prose */
-
-/* Lists */
-
-.prose ol,
-.prose ul {
-	--indent: calc(1 * var(--spacer, 2em));
-	list-style: none;
-	padding-inline-start: var(--indent);
-}
-
-.prose ol {
-	counter-reset: ol-counter;
-}
-
-.prose li {
-	position: relative;
-	text-indent: calc(var(--indent) * -.5);
-}
-
-.prose li::before {
-	display: inline-block;
-	min-width: calc(var(--indent) * .5);
-}
-
-.prose ol > li::before {
-	counter-increment: ol-counter;
-	content: counter(ol-counter) ".\0000a0"; /* \0000a0 is space */
-}
-
-.prose ul > li::before {
-	content: "";
-}
-
-/* Bullet */
-.prose ul > li::after {
-	/* Size */
-	--s: 6px;
-	width: var(--s); height: var(--s);
-
-	display: block;
-
-	position: absolute;
-	top: calc((1 + var(--added-lead)) * .5375em - var(--s) / 2); left: calc(var(--indent) * -.8);
-	z-index: 1;
-
-	background: currentColor;
-	border-radius: calc(.5 * var(--s));
-
-	content: "";
-}
-
-/* Fix first-child new line */
-.prose li > :first-child {
-	display: inline-block;
-	margin-block-start: 0;
-}
-
-/* Fix text-indent side effect on child elements. */
-.prose li :not(li) {
-	text-indent: 0;
-}
-
-/* Fix first-child block elements */
-.prose li > * > :first-child:not(ol):not(ul):not(li) {
-	display: inline;
-}
-
-/* Fix list items with headings */
-.prose li h1 + *, .prose li .h1 + *,
-.prose li h2 + *, .prose li .h2 + *,
-.prose li h3 + *, .prose li .h3 + *,
-.prose li h4 + *, .prose li .h4 + *,
-.prose li h5 + *, .prose li .h5 + *,
-.prose li h6 + *, .prose li .h6 + * {
-	/* Remove top margin on next el */
-	margin-block-start: 0;
-}
