@@ -1,7 +1,7 @@
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
-	const data = Object.keys(markdownFiles)
+	const posts = Object.keys(markdownFiles)
 		.map((path) => {
 			return {
 				filePath: path,
@@ -17,7 +17,7 @@
 	export async function load() {
 		return {
 			props: {
-				data,
+				posts,
 			},
 		};
 	}
@@ -25,7 +25,7 @@
 
 <script>
 	import "../app.css";
-	export let data;
+	export let posts;
 </script>
 
 <main>
@@ -35,7 +35,7 @@
 <footer class="menu">
 	<h2><em>Global nav.</em></h2>
 	<ol>
-		{#each data as post}
+		{#each posts as post}
 		<li>
 			<span aria-hidden="true">›</span>
 			<a href={post.slug}>{post.title}</a>
