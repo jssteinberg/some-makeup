@@ -86,26 +86,24 @@
 		margin: calc(2 * var(--spacer, 1em)) 0;
 	}
 
+	.footer::before {
+		--block-start-size: calc(4 * var(--spacer, 1rem));
+		content: '';
+		display: block;
+		background: currentColor;
+		width: var(--spacer, 1rem); height: var(--spacer, 1rem);
+		margin: var(--block-start-size) auto calc(.75 * var(--block-start-size));
+	}
+
 	.footer {
-		--mute-fg: hsla(var(--fg-h),var(--fg-s),var(--fg-l),25%);
-		font-size: 16px; /* Use px incase page changes :root font-size */
-		box-shadow: inset 0 1px var(--mute-fg);
+		font-size: 16px;
 		font-family: var(--mono-font, monospace);
-		font-size: .8em;
-
-		margin-block-start: calc(4 * var(--spacer));
-		padding-block-start: calc(2 * var(--spacer));
-
 		text-align: center;
 	}
 
 	ol {
-		list-style: square;
-		padding: 0 2em;
-	}
-
-	li::marker {
-		color: var(--mute);
+		list-style: none;
+		padding: 0;
 	}
 
 	a {
