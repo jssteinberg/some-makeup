@@ -4,7 +4,7 @@
 :root {
 	--added-lead: .6;
 	--rlh: calc(1rem * (1 + var(--added-lead))); /* Root line-height */
-	--spacer: var(--rlh);
+	--spacer: 1rem;
 	--system-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 	--fg-h: 0;

@@ -46,6 +46,7 @@
 			<a
 				aria-current={$page.path === post.path ? 'page' : undefined}
 				href={post.path}
+				sveltekit:prefetch
 				>
 				{post.title}
 			</a>
@@ -54,9 +55,7 @@
 	</ol>
 
 	<p>
-		<strong>
-			<a href="/">Some makeup</a> {new Date().getFullYear()}
-		</strong>
+		<a sveltekit:prefetch href="/">Some makeup</a> {new Date().getFullYear()}
 	</p>
 </footer>
 
@@ -86,13 +85,15 @@
 		margin: calc(2 * var(--spacer, 1em)) 0;
 	}
 
+	p::before,
 	.footer::before {
-		--block-start-size: calc(4 * var(--spacer, 1rem));
+		--block-start-size: calc(3 * var(--spacer, 1rem));
+
 		content: '';
 		display: block;
 		background: currentColor;
 		width: var(--spacer, 1rem); height: var(--spacer, 1rem);
-		margin: var(--block-start-size) auto calc(.75 * var(--block-start-size));
+		margin: var(--block-start-size) auto;
 	}
 
 	.footer {
@@ -107,13 +108,18 @@
 	}
 
 	a {
+		--a-min-size: calc(3 * var(--spacer, 1rem));
 		display: inline-grid;
 		align-items: center;
-		min-height: 48px;
-		min-width: 48px;
+		min-height: var(--a-min-size);
+		min-width: var(--a-min-size);
+		text-decoration-thickness: .1rem;
+		text-underline-offset: .2em;
+		transition: all .125s;
 	}
 
+	a:active,
 	a[aria-current] {
-		text-decoration: none;
+		text-decoration-thickness: .4rem;
 	}
 </style>

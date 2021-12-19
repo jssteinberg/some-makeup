@@ -5,7 +5,7 @@ title: CSS Dice
 # CSS Dice
 
 <div class="wrapper">
-	<Dice />
+	<Dice bg />
 </div>
 
 <script>
@@ -16,7 +16,7 @@ title: CSS Dice
 	h1 {
 		text-align: center;
 		font-family: serif;
-		font-size: 30px;
+		font-size: 2em;
 		font-weight: normal;
 	}
 
