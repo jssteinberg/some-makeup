@@ -9,9 +9,3 @@
 <Dice />
 
 <p>Take some time to play.</p>
-
-<style>
-	p {
-		text-align: center;
-	}
-</style>

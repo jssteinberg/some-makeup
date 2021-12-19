@@ -30,11 +30,11 @@
 	export let posts;
 </script>
 
-{#if $page.path === '/'}
-	<h1>Some Makeup</h1>
-{/if}
+<main class="{$page.path.replace(/^\//, '')}">
+	{#if $page.path === '/'}
+		<h1>Some Makeup</h1>
+	{/if}
 
-<main>
 	<slot />
 </main>
 
@@ -74,15 +74,16 @@
 		padding: 0 1em;
 	}
 
-	.footer,
-	main > :global(*) {
+	main > :global(*),
+	footer {
 		margin-inline-start: auto;
 		margin-inline-end: auto;	
 		width: min(100%, 40rem);
 	}
 
-	h1 {
+	main {
 		margin: calc(2 * var(--spacer, 1em)) 0;
+		text-align: center;
 	}
 
 	p::before,
