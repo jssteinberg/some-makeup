@@ -69,15 +69,12 @@
 		text-transform: uppercase;
 	}
 
-	main,
-	.footer {
-		padding: 0 1em;
-	}
-
 	main > :global(*),
 	footer {
 		margin-inline-start: auto;
 		margin-inline-end: auto;	
+		padding-inline-start: 5vw;
+		padding-inline-end: 5vw;	
 		width: min(100%, 40rem);
 	}
 
@@ -114,13 +111,11 @@
 		align-items: center;
 		min-height: var(--a-min-size);
 		min-width: var(--a-min-size);
-		text-decoration-thickness: .1rem;
-		text-underline-offset: .2em;
 		transition: all .125s;
 	}
 
 	a:active,
 	a[aria-current] {
-		text-decoration-thickness: .4rem;
+		text-decoration: none;
 	}
 </style>

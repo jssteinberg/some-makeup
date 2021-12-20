@@ -8,4 +8,10 @@
 
 <Dice />
 
-<p>Take some time to play.</p>
+<p><em>Some makeup on the web front---by Johan S. Steinberg</em></p>
+
+<style>
+	* {
+		font-family: var(--mono-font);
+	}
+</style>

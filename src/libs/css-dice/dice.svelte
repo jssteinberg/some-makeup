@@ -14,7 +14,6 @@
 </div>
 
 <style>
-
 	@keyframes rotateDice {
 		0%     { transform: rotateX(0deg)   rotateY(0deg)    }
 		100%   { transform: rotateX(-360deg) rotateY(-360deg) }
@@ -36,13 +35,13 @@
 		content: '';
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
-		background: linear-gradient(currentColor, transparent);
-		opacity: .025;
-		border-bottom: 2px solid;
+		background: linear-gradient(currentColor, transparent 95%, currentColor 95%);
+		opacity: .05;
 	}
 
 	.cube {
 		--cube-size: calc(.25 * var(--size));
+
 		position: relative;
 		width: var(--cube-size);
 		height: var(--cube-size);
@@ -60,8 +59,11 @@
 		height: 100%;
 		opacity: 0.9;
 		background: hsla(var(--c-h), var(--c-s), var(--c-l), 50%);
-		background: radial-gradient(circle, hsla(var(--c-h), var(--c-s), var(--c-l), 25%) 12.5%, hsla(var(--c-h), var(--c-s), var(--c-l), 87.5%) 75%);
-		border: 1px solid hsla(var(--c-h), var(--c-s), var(--c-l), 75%);
+		background: radial-gradient(
+			circle, hsla(var(--c-h), var(--c-s), calc(var(--c-l) - 2.5%), 50%) 37.5%,
+			hsla(var(--c-h), var(--c-s), var(--c-l), 100%) 87.5%
+		);
+		border: 1px solid hsla(var(--c-h), var(--c-s), var(--c-l), 87.5%);
 
 		font-weight: 100;
 		color: white;
