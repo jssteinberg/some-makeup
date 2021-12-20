@@ -1,5 +1,6 @@
 ---
-title: CSS Dice
+title: The Dice
+date: ['2021-20-12']
 ---
 
 # CSS Dice
@@ -14,9 +15,7 @@ title: CSS Dice
 
 <style>
 	h1 {
-		text-align: center;
 		font-family: serif;
-		font-size: 2em;
 		font-weight: normal;
 	}
 

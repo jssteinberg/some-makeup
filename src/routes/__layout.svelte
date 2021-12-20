@@ -11,8 +11,8 @@
 				metadata: markdownFiles[path].metadata,
 			};
 		})
-		// ignore some slugs
-		.filter((item) => !["index"].includes(item.fileSlug));
+		.filter((item) => !["index"].includes(item.fileSlug))
+		.reverse();
 
 	export async function load() {
 		return {
@@ -39,7 +39,7 @@
 </main>
 
 <footer class="footer">
-	<h2>Global nav</h2>
+	<h2>Nav</h2>
 	<ol>
 		{#each posts as post}
 		<li>
@@ -60,7 +60,7 @@
 </footer>
 
 <style>
-	h1,
+	:global(h1),
 	h2,
 	a {
 		font-family: var(--mono-font, monospace);
