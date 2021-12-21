@@ -3,7 +3,7 @@ title: Dice
 date: ['2021-20-12']
 ---
 
-# Some Makeup **Dice**
+# [Some Makeup](/) **Dice**
 
 <div class="wrapper">
 	<Dice bg hue={deg} />
