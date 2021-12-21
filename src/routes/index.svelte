@@ -8,4 +8,4 @@
 
 <Dice />
 
-<p>A taste of The Dice</p>
+<p>Try the Dice</p>

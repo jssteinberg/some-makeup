@@ -15,6 +15,7 @@
 
 	font-family: var(--system-font);
 	background: var(--bg);
+	transition: background .5s;
 }
 
 body {

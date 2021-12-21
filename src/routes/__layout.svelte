@@ -11,8 +11,7 @@
 				metadata: markdownFiles[path].metadata,
 			};
 		})
-		.filter((item) => !["index"].includes(item.fileSlug))
-		.reverse();
+		.filter((item) => !["index"].includes(item.fileSlug));
 
 	export async function load() {
 		return {
@@ -83,6 +82,14 @@
 		text-align: center;
 	}
 
+	:global(hr) {
+		--block-start-size: calc(3 * var(--spacer, 1rem));
+		border: none;
+		position: relative;
+		margin: var(--block-start-size) auto;
+	}
+
+	:global(hr::before),
 	p::before,
 	.footer::before {
 		--block-start-size: calc(3 * var(--spacer, 1rem));

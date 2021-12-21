@@ -1,8 +1,9 @@
 <script>
 	export let bg = false;
+	export let hue = 358.7;
 </script>
 
-<div class="container" class:bg={bg} aria-hidden="true">
+<div class="container" class:bg={bg} aria-hidden="true" style={`--dice-hue: ${hue}deg`}>
 	<div class="cube">
 		<div class="side front">1</div>
 		<div class="side left">2</div>
@@ -20,6 +21,9 @@
 	}
 
 	.container {
+		--c-h: var(--dice-hue, 358.7);
+		--c-s: 100%;
+		--c-l: 43.9%;
 		--size: calc(7.5 * 1em);
 
 		font-size: 2em;
@@ -35,8 +39,7 @@
 		content: '';
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
-		background: linear-gradient(currentColor, transparent 95%, currentColor 95%);
-		opacity: .05;
+		border: 1px solid hsla(var(--c-h), var(--c-s), var(--c-l), 25%);
 	}
 
 	.cube {
@@ -51,9 +54,6 @@
 	}
 
 	.side {
-		--c-h: 358.7;
-		--c-s: 100%;
-		--c-l: 43.9%;
 		position: absolute;
 		width: 100%;
 		height: 100%;
