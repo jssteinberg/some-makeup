@@ -58,14 +58,17 @@ date: ['2021-20-12']
 	}
 
 	input {
-		display: block;
-		min-height: max(3rem, 48px);
-		padding-inline: 1em;
-		margin: var(--spacer, 1rem) auto;
-		color: inherit;
-		border: none;
+/* Some resets */
+font-size: inherit;
+padding: calc(.5 * var(--spacer, 1rem)) 1em;
+border: none;
 
 		background: hsl(var(--new-fg-h),25%,12.5%);
+		color: inherit;
+
+		display: block;
+		margin: var(--spacer, 1rem) auto;
+
 		border-radius: .5rem;
 	}
 
