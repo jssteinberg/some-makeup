@@ -13,8 +13,8 @@ date: ['2021-20-12']
 
 <p>
 	<label>
-		HSL color hue (0.00-360.00):
-		<input type="number" bind:value={deg} /> degrees
+		Dice color hue (0.00-360.00):
+		<input type="number" min="0" max="360" step="0.01" bind:value={deg} /> degrees
 	</label>
 </p>
 
@@ -58,16 +58,22 @@ date: ['2021-20-12']
 	}
 
 	input {
-/* Some resets */
-border: none;
-font-family: inherit;
-font-size: inherit;
-padding: calc(.5 * var(--spacer, 1rem)) 1em;
-
-		background: hsl(var(--new-fg-h),25%,12.5%);
+		/* Resets and restyle */
+		border: none;
+		font-family: inherit;
+		font-size: inherit;
+		height: unset;
+		/* restyle */
+		background: hsl(var(--new-fg-h, var(--fg-h), 0),25%,12.5%);
 		color: inherit;
+		padding: calc(.5 * var(--spacer, 1rem)) 1em;
 
+		/* extra style */
 		border-radius: .5rem;
+		margin-block-start: var(--spacer, 1rem);
+
+		/* context style */
+		width: calc(6ch + 4em);
 	}
 
 	input:focus {
