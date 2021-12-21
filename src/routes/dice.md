@@ -74,6 +74,7 @@ date: ['2021-20-12']
 
 		/* context style */
 		width: calc(6ch + 4em);
+text-align: center;
 	}
 
 	input:focus {
