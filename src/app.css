@@ -15,12 +15,13 @@
 
 	font-family: var(--system-font);
 	background: var(--bg);
-	transition: background .5s;
+	transition: background 1s;
 }
 
 body {
-	margin: 0;
 	color: var(--fg); /* Set color on body (not root) for color-scheme cycling. */
+	margin: 0;
+	padding: var(--spacer, 1rem);
 }
 
 a { color: inherit; }
