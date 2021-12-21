@@ -13,8 +13,8 @@ date: ['2021-20-12']
 
 <p>
 	<label>
-		HSL color hue (0-360):
-		<input type="number" bind:value={deg} />
+		HSL color hue (0.00-360.00):
+		<input type="number" bind:value={deg} /> degrees
 	</label>
 </p>
 
@@ -65,9 +65,6 @@ border: none;
 
 		background: hsl(var(--new-fg-h),25%,12.5%);
 		color: inherit;
-
-		display: block;
-		margin: var(--spacer, 1rem) auto;
 
 		border-radius: .5rem;
 	}
