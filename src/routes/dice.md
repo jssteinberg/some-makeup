@@ -35,6 +35,8 @@ date: ['2021-20-12']
 </script>
 
 <style>
+	@import '../app-input.css';
+
 	:global(:root.new-colors) {
 		--bg: hsl(var(--new-fg-h,358.7),25%,5%);
 		--fg: hsl(var(--new-fg-h,358.7),75%,75%);
@@ -54,27 +56,7 @@ date: ['2021-20-12']
 	}
 
 	input {
-		/* Resets and restyle */
-		border: none;
-		font-family: inherit;
-		font-size: inherit;
-		height: unset;
-		/* restyle */
-		background: hsl(var(--new-fg-h, var(--fg-h), 0),25%,12.5%);
-		color: inherit;
-		padding: calc(.5 * var(--spacer, 1rem)) 1em;
-
-		/* extra style */
-		border-radius: .5rem;
-		margin-block-start: var(--spacer, 1rem);
-
-		/* context style */
 		width: calc(6ch + 4em);
-text-align: center;
-	}
-
-	input:focus {
-		outline: 1px solid hsl(var(--new-fg-h),100%,43.9%);
-		border-radius: 0;
+		text-align: center;
 	}
 </style>

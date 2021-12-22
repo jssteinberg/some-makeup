@@ -1,0 +1,21 @@
+input {
+	/* Resets and restyle */
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	height: unset;
+	/* restyle */
+	background: hsla(var(--fg-h, 0),0%,100%,.1);
+	background: hsla(var(--new-fg-h),25%,100%,.1);
+	color: inherit;
+	padding: calc(.5 * var(--spacer, 1rem)) 1em;
+
+	/* extra style */
+	border-radius: .5rem;
+	margin-block-start: var(--spacer, 1rem);
+}
+
+input:focus {
+	outline: 1px solid;
+	border-radius: 0;
+}

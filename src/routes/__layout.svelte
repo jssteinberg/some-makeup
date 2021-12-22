@@ -107,7 +107,7 @@
 		text-align: center;
 	}
 
-	ol {
+	.footer ol {
 		list-style: none;
 		padding: 0;
 	}
@@ -118,11 +118,5 @@
 		align-items: center;
 		min-height: var(--a-min-size);
 		min-width: var(--a-min-size);
-		transition: all .125s;
-	}
-
-	a[aria-current] {
-		text-decoration: none;
-text-decoration: line-through;
 	}
 </style>

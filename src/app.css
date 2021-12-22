@@ -24,7 +24,14 @@ body {
 	padding: var(--spacer, 1rem);
 }
 
-a { color: inherit; }
+a {
+	color: inherit;
+}
+
+a[aria-current] {
+	text-decoration: none;
+	text-decoration: line-through;
+}
 
 h1,h2,h3,h4,h5,h6 { font-size: 1em; }
 small { font-size: .8em; }
