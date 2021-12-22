@@ -121,8 +121,8 @@
 		transition: all .125s;
 	}
 
-	a:active,
 	a[aria-current] {
 		text-decoration: none;
+text-decoration: line-through;
 	}
 </style>
