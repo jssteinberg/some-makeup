@@ -13,9 +13,10 @@
 	--fg: hsl(var(--fg-h),var(--fg-s),var(--fg-l));
 	--bg: hsl(0,0%,7.5%);
 
-	font-family: var(--system-font);
 	background: var(--bg);
+	font-family: var(--system-font);
 	transition: background 1s;
+	min-height: 100vh;
 }
 
 body {
