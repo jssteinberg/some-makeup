@@ -22,11 +22,11 @@ date: ['2021-20-12']
 	import Dice from '../libs/css-dice/dice.svelte';
 	import {onDestroy} from 'svelte';
 	let deg = 358.7;
-	$: setCssColor = setNewCssColors(deg);
+	$: setCssColor = setNewCssColors({fg: deg});
 
-	const setNewCssColors = (deg) => {
+	const setNewCssColors = ({fg}) => {
 		if (typeof document === 'undefined') return false;
-		document.documentElement.style.setProperty('--new-fg-h', deg);
+		document.documentElement.style.setProperty('--new-fg-h', fg);
 		document.documentElement.classList.add('new-colors');
 		return true;
 	};
