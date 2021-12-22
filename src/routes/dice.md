@@ -12,9 +12,13 @@ date: ['2021-20-12']
 <hr/>
 
 <p>
+	<input type="range" bind:value={deg} min="0" max="359.99" step="0.01">
+</p>
+
+<p>
 	<label>
 		Dice color hue (0.00-360.00):
-		<input type="number" inputmode="decimal" min="0" max="360" step="0.01" bind:value={deg} /> degrees
+		<input type="number" inputmode="decimal" min="0" max="359.99" maxlength="6" step="0.01" bind:value={deg} /> degrees
 	</label>
 </p>
 
@@ -58,5 +62,9 @@ date: ['2021-20-12']
 	input {
 		width: calc(6ch + 4em);
 		text-align: center;
+	}
+
+	input[type="range"] {
+		width: 100%;
 	}
 </style>
