@@ -36,12 +36,8 @@ date: ['2021-20-12']
 
 <style>
 	:global(:root.new-colors) {
-		background: hsl(var(--new-fg-h,358.7),25%,5%);
-	}
-
-	:global(:root.new-colors) * {
-		accent-color: hsl(var(--new-fg-h,358.7),75%,75%);
-		color: hsl(var(--new-fg-h,358.7),75%,75%);
+		--bg: hsl(var(--new-fg-h,358.7),25%,5%);
+		--fg: hsl(var(--new-fg-h,358.7),75%,75%);
 	}
 
 	h1 strong {
