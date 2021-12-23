@@ -11,16 +11,20 @@ date: ['2021-20-12']
 
 <hr/>
 
-<p>
-	<input type="range" bind:value={deg} min="0" max="359.99" step="0.01">
-</p>
+<form>
+	<p>
+		<label>
+			Color
+			<input type="range" bind:value={deg} min="0" max="359.9" step="0.1">
+		</label>
 
-<p>
-	<label>
-		Dice color hue (0.00-360.00):
-		<input type="number" inputmode="decimal" min="0" max="359.99" maxlength="6" step="0.01" bind:value={deg} /> degrees
-	</label>
-</p>
+		<label>
+			<input type="number" inputmode="decimal" min="0" max="359.9" maxlength="5" step="0.1" bind:value={deg} />
+			<br aria-hidden>
+			color hue degrees (0.0-359.9)
+		</label>
+	</p>
+</form>
 
 <AccentHue hue={deg} />
 
@@ -47,8 +51,9 @@ date: ['2021-20-12']
 	}
 
 	input[type="number"] {
-		width: calc(6ch + 4em);
+		width: calc(5ch + 4em);
 		text-align: center;
+		margin: calc(.5 * var(--spacer, 1rem)) auto;
 	}
 
 	input[type="range"] {
