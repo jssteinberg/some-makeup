@@ -1,6 +1,12 @@
 <script>
+	import {onMount} from 'svelte';
 	export let bg = false;
 	export let hue = 358.7;
+
+	onMount(() => {
+		if (typeof document === 'undefined') return false;
+		document.documentElement.classList.add('started-dice-animation');
+	});
 </script>
 
 <div class="container" class:bg={bg} aria-hidden="true" style={`--dice-hue: ${hue}deg`}>
@@ -67,7 +73,7 @@
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
-		.cube {
+		:global(:root.started-dice-animation) .cube {
 			animation: rotateDice 25s linear infinite;
 		}
 	}
