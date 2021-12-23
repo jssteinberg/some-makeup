@@ -15,11 +15,6 @@
 </div>
 
 <style>
-	@keyframes rotateDice {
-		0%     { transform: rotateX(0deg)   rotateY(0deg)    }
-		100%   { transform: rotateX(-360deg) rotateY(-360deg) }
-	}
-
 	.container {
 		--c-h: var(--dice-hue, 358.7);
 		--c-s: 100%;
@@ -32,7 +27,7 @@
 		display: grid;
 		place-items: center;
 		perspective: calc(4 * var(--size));
-		perspective-origin: top right;
+		perspective-origin: top;
 	}
 
 	.container.bg::after {
@@ -44,13 +39,28 @@
 
 	.cube {
 		--cube-size: calc(.25 * var(--size));
+		--r-y: -15deg;
+		--r-x: -30deg;
 
 		position: relative;
 		width: var(--cube-size);
 		height: var(--cube-size);
 		transform-style: preserve-3d;
+		transform: rotateX(var(--r-x)) rotateY(var(--r-y)) rotateZ(0deg);
+	}
 
-		animation: rotateDice 25s linear infinite;
+	@keyframes rotateDice {
+		0%   { transform: rotateX(calc(var(--r-x) + 0deg))   rotateY(calc(var(--r-y) + 0deg  )) rotateZ(0deg) }
+		25%  { transform: rotateX(calc(var(--r-x) + 7.5deg)) rotateY(calc(var(--r-y) + 90deg )) rotateZ(0deg) }
+		50%  { transform: rotateX(calc(var(--r-x) + 0deg))   rotateY(calc(var(--r-y) + 180deg)) rotateZ(0deg) }
+		75%  { transform: rotateX(calc(var(--r-x) + 0deg))   rotateY(calc(var(--r-y) + 270deg)) rotateZ(7.5deg) }
+		100% { transform: rotateX(calc(var(--r-x) + 0deg))   rotateY(calc(var(--r-y) + 360deg)) rotateZ(0deg) }
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.cube {
+			animation: rotateDice 25s linear infinite;
+		}
 	}
 
 	.side {

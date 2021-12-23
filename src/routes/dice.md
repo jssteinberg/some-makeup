@@ -43,7 +43,6 @@ date: ['2021-20-12']
 
 	:global(:root.new-colors) {
 		--bg: hsl(var(--new-fg-h,358.7),25%,5%);
-		--fg: hsl(var(--new-fg-h,358.7),75%,75%);
 	}
 
 	h1 strong {
@@ -60,6 +59,7 @@ date: ['2021-20-12']
 	}
 
 	input {
+		color: hsl(var(--new-fg-h,358.7),75%,75%);
 		width: calc(6ch + 4em);
 		text-align: center;
 	}
