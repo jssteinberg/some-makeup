@@ -16,8 +16,6 @@
 
 	background: var(--bg);
 	font-family: var(--system-font);
-	transition: background 1s;
-	min-height: 100vh;
 }
 
 body {
