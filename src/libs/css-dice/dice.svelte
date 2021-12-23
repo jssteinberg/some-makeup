@@ -37,7 +37,7 @@
 		--size: calc(7.5 * 1em);
 
 		font-size: 2em;
-		width: min(100%, calc(2 * var(--size)));
+		width: 100%;
 		height: var(--size);
 		display: grid;
 		place-items: center;

@@ -48,13 +48,13 @@
 				sveltekit:prefetch
 				>
 
+				{post.title}
+
 				{#if post.metadata?.date}
 					<span class="date">
-						<time>{post.metadata.date[0]}</time><span class="visually-hidden">:</span>
+						<time>{post.metadata.date[0]}</time>
 					</span>
 				{/if}
-
-				{post.title}
 
 			</a>
 		</li>
@@ -76,7 +76,7 @@
 		text-transform: uppercase;
 	}
 
-	main > :global(*),
+	main > :global(:not(:where(hr))),
 	footer {
 		margin-inline-start: auto;
 		margin-inline-end: auto;	
@@ -91,23 +91,21 @@
 	}
 
 	:global(hr) {
-		--block-start-size: calc(3 * var(--spacer, 1rem));
 		border: none;
-		position: relative;
-		margin: var(--block-start-size) auto;
 	}
 
-	:global(hr::before),
+	:global(hr),
 	p::before,
 	.footer::before {
-		--sep-size: calc(2 * var(--spacer, 1rem));
 		--block-start-size: calc(4 * var(--spacer, 1rem));
+		--sep-size: calc(2 * var(--spacer, 1rem));
 
+		background: currentColor;
 		content: '';
 		display: block;
-		background: currentColor;
-		width: var(--decor-width); height: var(--sep-size);
 		margin: var(--block-start-size) auto;
+		padding: 0;
+		width: var(--decor-width); height: var(--sep-size);
 	}
 
 	.footer {
