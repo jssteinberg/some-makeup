@@ -100,12 +100,13 @@
 	:global(hr::before),
 	p::before,
 	.footer::before {
-		--block-start-size: calc(3 * var(--spacer, 1rem));
+		--sep-size: calc(2 * var(--spacer, 1rem));
+		--block-start-size: calc(4 * var(--spacer, 1rem));
 
 		content: '';
 		display: block;
 		background: currentColor;
-		width: var(--spacer, 1rem); height: var(--spacer, 1rem);
+		width: var(--decor-width); height: var(--sep-size);
 		margin: var(--block-start-size) auto;
 	}
 
@@ -130,6 +131,16 @@
 
 	ul a:not(:is(:hover,:focus,[aria-current])) {
 		text-decoration: none;
+	}
+
+	ul a::before {
+		--sep-size: calc(1 * var(--spacer, 1rem));
+
+		content: '';
+		display: block;
+		background: currentColor;
+		width: var(--decor-width); height: var(--sep-size);
+		margin: calc(.5 * var(--spacer, 1rem)) auto;
 	}
 
 	.date {
