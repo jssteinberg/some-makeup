@@ -65,6 +65,6 @@ date: ['2021-20-12']
 	}
 
 	input[type="range"] {
-		width: 100%;
+		width: calc(100% - 1.5rem);
 	}
 </style>
