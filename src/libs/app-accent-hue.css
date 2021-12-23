@@ -1,0 +1,8 @@
+:root.accent-hue {
+	--bg: hsl(var(--accent-hue),25%,5%);
+}
+
+:root.accent-hue input {
+	background: hsla(var(--accent-hue),25%,100%,.1);
+	color: hsl(var(--accent-hue),75%,75%);
+}

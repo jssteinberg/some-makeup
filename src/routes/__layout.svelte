@@ -23,7 +23,7 @@
 </script>
 
 <script>
-	import "../app.css";
+	import "../libs/app.css";
 	import { page } from '$app/stores';
 
 	export let posts;

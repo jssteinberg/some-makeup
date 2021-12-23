@@ -7,7 +7,6 @@ input {
 	max-width: 100%;
 	/* restyle */
 	background: hsla(var(--fg-h, 0),0%,100%,.1);
-	background: hsla(var(--new-fg-h),25%,100%,.1);
 	color: inherit;
 	padding: calc(.5 * var(--spacer, 1rem)) 1em;
 

@@ -1,5 +1,7 @@
 <script>
 	import Dice from '../libs/css-dice/dice.svelte';
+	import AccentHue from '../libs/AccentHue.svelte';
+	let hue = 358.7;
 </script>
 
 <svelte:head>
@@ -8,4 +10,6 @@
 
 <Dice />
 
-<p>Try the Dice</p>
+<p>See Dice</p>
+
+<AccentHue hue={hue} />

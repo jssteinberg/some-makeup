@@ -22,29 +22,17 @@ date: ['2021-20-12']
 	</label>
 </p>
 
+<AccentHue hue={deg} />
+
 <script>
 	import Dice from '../libs/css-dice/dice.svelte';
-	import {onDestroy} from 'svelte';
+	import AccentHue from '../libs/AccentHue.svelte';
+	import '../libs/app-input.css';
+
 	let deg = 358.7;
-	$: setCssColor = setNewCssColors({fg: deg});
-
-	const setNewCssColors = ({fg}) => {
-		if (typeof document === 'undefined') return false;
-		document.documentElement.style.setProperty('--new-fg-h', fg);
-		document.documentElement.classList.add('new-colors');
-		return true;
-	};
-
-	onDestroy(() => typeof document !== 'undefined' ? document.documentElement.classList.remove('new-colors') : false);
 </script>
 
 <style>
-	@import '../app-input.css';
-
-	:global(:root.new-colors) {
-		--bg: hsl(var(--new-fg-h,358.7),25%,5%);
-	}
-
 	h1 strong {
 		display: block;
 		font-size: 2em;
@@ -58,8 +46,7 @@ date: ['2021-20-12']
 		place-items: center;
 	}
 
-	input {
-		color: hsl(var(--new-fg-h,358.7),75%,75%);
+	input[type="number"] {
 		width: calc(6ch + 4em);
 		text-align: center;
 	}
