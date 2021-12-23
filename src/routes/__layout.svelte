@@ -39,7 +39,7 @@
 
 <footer class="footer">
 	<h2>Nav</h2>
-	<ol>
+	<ul>
 		{#each posts as post}
 		<li>
 			<a
@@ -47,11 +47,19 @@
 				href={post.path}
 				sveltekit:prefetch
 				>
+
+				{#if post.metadata?.date}
+					<span class="date">
+						<time>{post.metadata.date[0]}</time><span class="visually-hidden">:</span>
+					</span>
+				{/if}
+
 				{post.title}
+
 			</a>
 		</li>
 		{/each}
-	</ol>
+	</ul>
 
 	<p>
 		<a sveltekit:prefetch href="/">Some makeup</a> {new Date().getFullYear()}
@@ -107,7 +115,7 @@
 		text-align: center;
 	}
 
-	.footer ol {
+	.footer ul {
 		list-style: none;
 		padding: 0;
 	}
@@ -118,5 +126,13 @@
 		align-items: center;
 		min-height: var(--a-min-size);
 		min-width: var(--a-min-size);
+	}
+
+	ul a:not(:is(:hover,:focus,[aria-current])) {
+		text-decoration: none;
+	}
+
+	.date {
+		font-size: .8em;
 	}
 </style>
