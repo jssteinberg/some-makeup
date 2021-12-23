@@ -4,17 +4,26 @@
 </script>
 
 <div class="container" class:bg={bg} aria-hidden="true" style={`--dice-hue: ${hue}deg`}>
-	<div class="cube">
-		<div class="side front">1</div>
-		<div class="side left">2</div>
-		<div class="side right">3</div>
-		<div class="side back">4</div>
-		<div class="side top">5</div>
-		<div class="side bottom">6</div>
-	</div>
+	<ul class="cube">
+		<li class="side front">1</li>
+		<li class="side bottom">2</li>
+		<li class="side right">3</li>
+		<li class="side left">4</li>
+		<li class="side top">5</li>
+		<li class="side back">6</li>
+	</ul>
 </div>
 
 <style>
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		display: block;
+	}
+
 	.container {
 		--c-h: var(--dice-hue, 358.7);
 		--c-s: 100%;
@@ -88,15 +97,15 @@
 	}
 
 	.back {
-		transform: translateZ(calc(-0.5 * var(--cube-size)));
+		transform: translateZ(calc(-0.5 * var(--cube-size))) rotateZ(180deg);
 	}
 
 	.left {
-		transform: rotateY(90deg) translateZ(calc(0.5 * var(--cube-size)));
+		transform: rotateY(90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(-90deg);
 	}
 
 	.right {
-		transform: rotateY(-90deg) translateZ(calc(0.5 * var(--cube-size)));
+		transform: rotateY(-90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(90deg);
 	}
 
 	.top {
