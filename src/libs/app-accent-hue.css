@@ -1,5 +1,5 @@
 :root {
-	transition: background 1s;
+	transition: background .75s;
 	min-height: 100vh; /* Too avoid bg clip on bg change */
 }
 

@@ -11,7 +11,7 @@
 				metadata: markdownFiles[path].metadata,
 			};
 		})
-		.filter((item) => !["index"].includes(item.fileSlug));
+		.filter((item) => !['index'].includes(item.title));
 
 	export async function load() {
 		return {
@@ -62,7 +62,8 @@
 	</ul>
 
 	<p>
-		<a sveltekit:prefetch href="/">Some makeup</a> {new Date().getFullYear()}
+		<a sveltekit:prefetch href="/">Some makeup</a> {new Date().getFullYear()};
+		<a href="/about">About</a>
 	</p>
 </footer>
 
@@ -98,14 +99,14 @@
 	p::before,
 	.footer::before {
 		--block-start-size: calc(4 * var(--spacer, 1rem));
-		--sep-size: calc(2 * var(--spacer, 1rem));
+		--sep-size: calc(1 * var(--spacer, 1rem));
 
 		background: currentColor;
 		content: '';
 		display: block;
 		margin: var(--block-start-size) auto;
 		padding: 0;
-		width: var(--decor-width); height: var(--sep-size);
+		width: var(--sep-size); height: var(--sep-size);
 	}
 
 	.footer {

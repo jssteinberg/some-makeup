@@ -1,6 +1,7 @@
 ---
 title: Dice
 date: ['2021-20-12']
+type: post
 ---
 
 # [Some Makeup](/) **Dice**
