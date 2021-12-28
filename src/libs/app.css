@@ -25,6 +25,7 @@ body {
 	padding: var(--spacer, 1rem);
 }
 
+.link,
 a {
 	color: inherit;
 	text-decoration: underline;

@@ -39,16 +39,17 @@
 
 <footer class="footer">
 	<h2>Nav</h2>
-	<ul>
+	<ul class="posts">
 		{#each posts as post}
 		<li>
 			<a
+				id={post.title.toLowerCase()}
 				aria-current={$page.path === post.path ? 'page' : undefined}
 				href={post.path}
 				sveltekit:prefetch
 				>
 
-				{post.title}
+				<span class="post-title link">{post.title}</span>
 
 				{#if post.metadata?.date}
 					<span class="date">
@@ -99,14 +100,14 @@
 	p::before,
 	.footer::before {
 		--block-start-size: calc(4 * var(--spacer, 1rem));
-		--sep-size: calc(1 * var(--spacer, 1rem));
+		--sep-size: calc(2 * var(--spacer, 1rem));
 
 		background: currentColor;
 		content: '';
 		display: block;
 		margin: var(--block-start-size) auto;
 		padding: 0;
-		width: var(--sep-size); height: var(--sep-size);
+		width: var(--decor-width); height: var(--sep-size);
 	}
 
 	.footer {
@@ -128,18 +129,23 @@
 		min-width: var(--a-min-size);
 	}
 
-	ul a:not(:is(:hover,:focus,[aria-current])) {
+	.posts a {
 		text-decoration: none;
+		margin-block-start: calc(2.5 * var(--spacer, 1rem) - var(--decor-width));
 	}
 
-	ul a::before {
-		--sep-size: calc(1 * var(--spacer, 1rem));
-
+	.posts a::before {
 		content: '';
 		display: block;
 		background: currentColor;
-		width: var(--decor-width); height: var(--sep-size);
-		margin: calc(.5 * var(--spacer, 1rem)) auto;
+		width: var(--decor-width); height: var(--decor-width);
+		margin: 0 auto calc(1.5 * var(--spacer, 1rem));
+		opacity: .5;
+	}
+
+	.posts a:is(:hover,:focus)::before {
+		opacity: 1;
+		transition: .25s ease-in-out;
 	}
 
 	.date {

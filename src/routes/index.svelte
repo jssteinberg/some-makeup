@@ -1,26 +1,32 @@
 <script>
-	import Dice from '../libs/css-dice/dice.svelte';
-	import AccentHue from '../libs/AccentHue.svelte';
-	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
+	import Dice from "../libs/css-dice/dice.svelte";
+	import AccentHue from "../libs/AccentHue.svelte";
+	import { goto } from "$app/navigation";
+	import { onMount } from "svelte";
+	import { page } from "$app/stores";
 
 	let hue = 358.7;
-	let js = 'no-js';
+	let js = "no-js";
 
-	onMount(() => js = 'js');
+	onMount(() => (js = "js"));
 </script>
 
 <svelte:head>
 	<title>Some makeup</title>
 </svelte:head>
 
-<div on:click={() => goto('/dice')} class:js>
 <Dice />
+<p>
+	<a
+		href="{$page.path}#dice"
+		on:click|preventDefault={() => goto("/dice")}
+		class:js
+		>
+		See Dice
+	</a>
+</p>
 
-<p>See Dice</p>
-</div>
-
-<AccentHue hue={hue} />
+<AccentHue {hue} />
 
 <style>
 	.js:hover {
