@@ -29,7 +29,7 @@ body {
 a {
 	color: inherit;
 	text-decoration: underline;
-	text-decoration-thickness: var(--decor-width);
+	text-decoration-thickness: max(1px, calc(.5 * var(--decor-width)));
 	text-underline-offset: .3em;
 }
 
@@ -44,6 +44,8 @@ code { font-size: .95em; }
 pre code { font-size: .875em; }
 
 ol, ul { padding-inline-start: 2em; }
+
+ul { list-style: square; }
 
 /* Blockquote */
 

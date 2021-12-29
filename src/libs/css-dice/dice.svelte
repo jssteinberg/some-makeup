@@ -10,18 +10,18 @@
 </script>
 
 <div class="container" class:bg={bg} aria-hidden="true" style={`--dice-hue: ${hue}deg`}>
-	<ul class="cube">
+	<ol class="cube">
 		<li class="side front">1</li>
 		<li class="side bottom">2</li>
 		<li class="side right">3</li>
 		<li class="side left">4</li>
 		<li class="side top">5</li>
 		<li class="side back">6</li>
-	</ul>
+	</ol>
 </div>
 
 <style>
-	ul {
+	ol {
 		list-style: none;
 		padding: 0;
 	}

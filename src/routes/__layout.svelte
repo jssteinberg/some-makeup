@@ -1,19 +1,20 @@
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
-	const data = Object.keys(markdownFiles)
-		.map((path) => {
-			return {
-				filePath: path,
-				slug: getSlug(path),
-				path: `/${getSlug(path)}`,
-				title: markdownFiles[path].metadata?.title || getSlug(path),
-				metadata: markdownFiles[path].metadata,
-			};
-		})
-		.filter((item) => !['index'].includes(item.title));
 
-	export async function load() {
+	export async function load({ page }) {
+		const data = Object.keys(markdownFiles)
+			.map((path) => {
+				return {
+					filePath: path,
+					slug: getSlug(path),
+					path: `${page.path}/${getSlug(path)}`,
+					title: markdownFiles[path].metadata?.title || getSlug(path),
+					metadata: markdownFiles[path].metadata,
+				};
+			})
+			.filter((item) => !['index'].includes(item.title));
+
 		return {
 			props: {
 				posts: data,
@@ -39,26 +40,27 @@
 
 <footer class="footer">
 	<h2>Nav</h2>
+
 	<ul class="posts">
 		{#each posts as post}
-		<li>
-			<a
-				id={post.title.toLowerCase()}
-				aria-current={$page.path === post.path ? 'page' : undefined}
-				href={post.path}
-				sveltekit:prefetch
-				>
+			<li>
+				<a
+					id={post.title.toLowerCase()}
+					aria-current={$page.path === post.path ? 'page' : undefined}
+					href={post.path}
+					sveltekit:prefetch
+					>
 
-				<span class="post-title link">{post.title}</span>
+					<span class="post-title link">{post.title}</span>
 
-				{#if post.metadata?.date}
-					<span class="date">
-						<time>{post.metadata.date[0]}</time>
-					</span>
-				{/if}
+					{#if post.metadata?.date}
+						<span class="date">
+							<time>{post.metadata.date[0]}</time>
+						</span>
+					{/if}
 
-			</a>
-		</li>
+				</a>
+			</li>
 		{/each}
 	</ul>
 
