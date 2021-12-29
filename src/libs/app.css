@@ -3,7 +3,7 @@
 @import 'floor-typography-css/src/classes-visually-hidden.css';
 
 :root {
-	--added-lead: .6;
+	--added-lead: .45;
 	--rlh: calc(1rem * (1 + var(--added-lead))); /* Root line-height */
 	--spacer: 1rem;
 	--decor-width: 2px;

@@ -11,7 +11,7 @@
 				metadata: markdownFiles[path].metadata,
 			};
 		})
-		.filter((item) => !['index'].includes(item.title));
+		.filter((item) => !["index"].includes(item.title));
 
 	export async function load() {
 		return {
@@ -24,13 +24,13 @@
 
 <script>
 	import "../libs/app.css";
-	import { page } from '$app/stores';
+	import { page } from "$app/stores";
 
 	export let posts;
 </script>
 
-<main class="{$page.path.replace(/^\//, '')}">
-	{#if $page.path === '/'}
+<main class={$page.path.replace(/^\//, "")}>
+	{#if $page.path === "/"}
 		<h1>Some Makeup</h1>
 	{/if}
 
@@ -45,11 +45,10 @@
 			<li>
 				<a
 					id={post.title.toLowerCase()}
-					aria-current={$page.path === post.path ? 'page' : undefined}
+					aria-current={$page.path === post.path ? "page" : undefined}
 					href={post.path}
 					sveltekit:prefetch
-					>
-
+				>
 					<span class="post-title link">{post.title}</span>
 
 					{#if post.metadata?.date}
@@ -57,15 +56,21 @@
 							<time>{post.metadata.date[0]}</time>
 						</span>
 					{/if}
-
 				</a>
 			</li>
 		{/each}
 	</ul>
 
 	<p>
-		<a sveltekit:prefetch href="/">Some makeup</a> {new Date().getFullYear()};
-		<a href="/about">About</a>
+		<a
+			sveltekit:prefetch
+			href="/">Some makeup</a
+		>
+		{new Date().getFullYear()};
+		<a
+			aria-current={$page.path === '/about' ? "page" : undefined}
+			href="/about">About</a
+		>
 	</p>
 </footer>
 
@@ -79,13 +84,15 @@
 		text-transform: uppercase;
 	}
 
-	main > :global(:not(:where(hr))),
-	footer {
-		margin-inline-start: auto;
-		margin-inline-end: auto;	
-		padding-inline-start: 5vw;
-		padding-inline-end: 5vw;	
-		width: min(100%, 40rem);
+	@media (min-width: 600px) {
+		main > :global(:not(:where(hr))),
+		footer {
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+			padding-inline-start: 5vw;
+			padding-inline-end: 5vw;
+			width: min(100%, 50rem);
+		}
 	}
 
 	main {
@@ -104,11 +111,12 @@
 		--sep-size: calc(2 * var(--spacer, 1rem));
 
 		background: currentColor;
-		content: '';
+		content: "";
 		display: block;
 		margin: var(--block-start-size) auto;
 		padding: 0;
-		width: var(--decor-width); height: var(--sep-size);
+		width: var(--decor-width);
+		height: var(--sep-size);
 	}
 
 	.footer {
@@ -136,20 +144,21 @@
 	}
 
 	.posts a::before {
-		content: '';
+		content: "";
 		display: block;
 		background: currentColor;
-		width: var(--decor-width); height: var(--decor-width);
+		width: var(--decor-width);
+		height: var(--decor-width);
 		margin: 0 auto calc(1.5 * var(--spacer, 1rem));
-		opacity: .5;
+		opacity: 0.5;
 	}
 
-	.posts a:is(:hover,:focus)::before {
+	.posts a:is(:hover, :focus)::before {
 		opacity: 1;
-		transition: .25s ease-in-out;
+		transition: 0.25s ease-in-out;
 	}
 
 	.date {
-		font-size: .8em;
+		font-size: 0.8em;
 	}
 </style>
