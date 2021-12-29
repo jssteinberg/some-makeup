@@ -1,20 +1,19 @@
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
+	const data = Object.keys(markdownFiles)
+		.map((path) => {
+			return {
+				filePath: path,
+				slug: getSlug(path),
+				path: `${page.path}/${getSlug(path)}`,
+				title: markdownFiles[path].metadata?.title || getSlug(path),
+				metadata: markdownFiles[path].metadata,
+			};
+		})
+		.filter((item) => !['index'].includes(item.title));
 
-	export async function load({ page }) {
-		const data = Object.keys(markdownFiles)
-			.map((path) => {
-				return {
-					filePath: path,
-					slug: getSlug(path),
-					path: `${page.path}/${getSlug(path)}`,
-					title: markdownFiles[path].metadata?.title || getSlug(path),
-					metadata: markdownFiles[path].metadata,
-				};
-			})
-			.filter((item) => !['index'].includes(item.title));
-
+	export async function load() {
 		return {
 			props: {
 				posts: data,
