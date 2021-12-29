@@ -6,7 +6,7 @@
 			return {
 				filePath: path,
 				slug: getSlug(path),
-				path: `${page.path}/${getSlug(path)}`,
+				path: `/${getSlug(path)}`,
 				title: markdownFiles[path].metadata?.title || getSlug(path),
 				metadata: markdownFiles[path].metadata,
 			};
