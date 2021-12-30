@@ -1,32 +1,6 @@
-<script context="module">
-	const markdownFiles = import.meta.globEager(`./*.md`);
-	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
-	const data = Object.keys(markdownFiles)
-		.map((path) => {
-			return {
-				filePath: path,
-				slug: getSlug(path),
-				path: `/${getSlug(path)}`,
-				title: markdownFiles[path].metadata?.title || getSlug(path),
-				metadata: markdownFiles[path].metadata,
-			};
-		})
-		.filter((item) => !["index"].includes(item.title));
-
-	export async function load() {
-		return {
-			props: {
-				posts: data,
-			},
-		};
-	}
-</script>
-
 <script>
 	import "../libs/app.css";
 	import { page } from "$app/stores";
-
-	export let posts;
 </script>
 
 <main class={$page.path.replace(/^\//, "")}>
@@ -38,39 +12,25 @@
 </main>
 
 <footer class="footer">
-	<h2>Nav</h2>
-
-	<ul class="posts">
-		{#each posts as post}
-			<li>
-				<a
-					id={post.title.toLowerCase()}
-					aria-current={$page.path === post.path ? "page" : undefined}
-					href={post.path}
-					sveltekit:prefetch
-				>
-					<span class="post-title link">{post.title}</span>
-
-					{#if post.metadata?.date}
-						<span class="date">
-							<time>{post.metadata.date[0]}</time>
-						</span>
-					{/if}
-				</a>
-			</li>
-		{/each}
-	</ul>
-
-	<p>
-		<a
-			sveltekit:prefetch
-			href="/">Some makeup</a
-		>
-		{new Date().getFullYear()};
-		<a
-			aria-current={$page.path === '/about' ? "page" : undefined}
-			href="/about">About</a
-		>
+<h2>Nav</h2>
+<ul>
+<li>
+<a aria-current={$page.path === '' ? "page" : undefined} href="/">Index</a>
+</li>
+<li>
+<a aria-current={$page.path === '/johan' ? "page" : undefined} href="/johan">Johan</a>
+</li>
+</ul>
+<p>
+<a
+sveltekit:prefetch
+href="/">Some makeup</a
+>
+{new Date().getFullYear()};
+<a
+aria-current={$page.path === '/about' ? "page" : undefined}
+href="/about">About</a
+>
 	</p>
 </footer>
 
@@ -86,7 +46,7 @@
 
 	@media (min-width: 600px) {
 		main > :global(:not(:where(hr))),
-		footer {
+		.footer {
 			margin-inline-start: auto;
 			margin-inline-end: auto;
 			padding-inline-start: 5vw;
@@ -125,11 +85,6 @@
 		text-align: center;
 	}
 
-	.footer ul {
-		list-style: none;
-		padding: 0;
-	}
-
 	a {
 		--a-min-size: calc(3 * var(--spacer, 1rem));
 		display: inline-grid;
@@ -138,27 +93,8 @@
 		min-width: var(--a-min-size);
 	}
 
-	.posts a {
-		text-decoration: none;
-		margin-block-start: calc(2.5 * var(--spacer, 1rem) - var(--decor-width));
-	}
-
-	.posts a::before {
-		content: "";
-		display: block;
-		background: currentColor;
-		width: var(--decor-width);
-		height: var(--decor-width);
-		margin: 0 auto calc(1.5 * var(--spacer, 1rem));
-		opacity: 0.5;
-	}
-
-	.posts a:is(:hover, :focus)::before {
-		opacity: 1;
-		transition: 0.25s ease-in-out;
-	}
-
-	.date {
-		font-size: 0.8em;
+	.footer ul {
+		list-style: none;
+		padding: 0;
 	}
 </style>
