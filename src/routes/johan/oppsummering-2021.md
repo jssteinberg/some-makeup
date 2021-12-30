@@ -26,7 +26,7 @@ Men noe kode har det blitt. Noen UU-fikser er til og med i prod...
 <style>
 	h1 ~ * {
 		text-align: start;
-		font-size: 1.1rem;
+		font-size: 1.125rem;
 		margin-block-start: calc(2 * var(--spacer, 1rem));
 		margin-block-end: calc(2 * var(--spacer, 1rem));
 	}
