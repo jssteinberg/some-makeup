@@ -56,3 +56,11 @@ blockquote {
 	padding-inline-start: calc(var(--spacer, 1em) - var(--blockquote-border-size));
 	border-left: var(--blockquote-border-size) solid;
 }
+
+.touch-target {
+	--el-min-size: max(48px, calc(3 * var(--spacer, 1rem)));
+	display: inline-grid;
+	align-items: center;
+	min-height: var(--el-min-size);
+	min-width: var(--el-min-size);
+}

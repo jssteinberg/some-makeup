@@ -12,25 +12,27 @@
 </main>
 
 <footer class="footer">
-<h2>Nav</h2>
-<ul>
-<li>
-<a aria-current={$page.path === '' ? "page" : undefined} href="/">Index</a>
-</li>
-<li>
-<a aria-current={$page.path === '/johan' ? "page" : undefined} href="/johan">Johan</a>
-</li>
-</ul>
-<p>
-<a
-sveltekit:prefetch
-href="/">Some makeup</a
->
-{new Date().getFullYear()};
-<a
-aria-current={$page.path === '/about' ? "page" : undefined}
-href="/about">About</a
->
+	<h2>Nav</h2>
+	<ul>
+		<li>
+		<a class="touch-target" aria-current={$page.path === '' ? "page" : undefined} href="/">Index</a>
+		</li>
+		<li>
+			<a class="touch-target" aria-current={$page.path === '/johan' ? "page" : undefined} href="/johan">Johan</a>
+		</li>
+	</ul>
+
+	<p>
+		<a class="touch-target"
+			sveltekit:prefetch
+			href="/">Some makeup</a>
+
+		{new Date().getFullYear()};
+
+		<a class="touch-target"
+			aria-current={$page.path === '/about' ? "page" : undefined}
+			href="/about">
+			About</a>
 	</p>
 </footer>
 
@@ -83,14 +85,6 @@ href="/about">About</a
 		font-size: 16px;
 		font-family: var(--mono-font, monospace);
 		text-align: center;
-	}
-
-	a {
-		--a-min-size: calc(3 * var(--spacer, 1rem));
-		display: inline-grid;
-		align-items: center;
-		min-height: var(--a-min-size);
-		min-width: var(--a-min-size);
 	}
 
 	.footer ul {

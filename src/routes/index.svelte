@@ -59,6 +59,7 @@
 	{#each posts as post}
 		<li>
 			<a
+				class="touch-target"
 				id={post.title.toLowerCase()}
 				aria-current={$page.path === post.path ? "page" : undefined}
 				href={post.path}
