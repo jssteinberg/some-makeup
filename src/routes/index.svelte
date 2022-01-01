@@ -44,16 +44,13 @@
 	<title>Some makeup</title>
 </svelte:head>
 
-<Dice />
-<p>
-	<a
-		href="{$page.path}#dice"
-		on:click|preventDefault={() => goto("/dice")}
-		class:js
-		>
-		See Dice
-	</a>
-</p>
+<a
+	href="{$page.path}#dice"
+	on:click|preventDefault={() => goto("/dice")}
+	class:js
+	>
+	<Dice />
+</a>
 
 <ul class="posts">
 	{#each posts as post}
@@ -64,7 +61,7 @@
 				aria-current={$page.path === post.path ? "page" : undefined}
 				href={post.path}
 				sveltekit:prefetch
-			>
+				>
 				<span class="post-title link">{post.title}</span>
 
 				{#if post.metadata?.date}
