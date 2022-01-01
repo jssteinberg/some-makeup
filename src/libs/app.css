@@ -3,8 +3,10 @@
 @import 'floor-typography-css/src/classes-visually-hidden.css';
 
 :root {
+	/* Root line-height */
+	--RLH: calc(1rem * (1 + var(--added-lead)));
+
 	--added-lead: .45;
-	--rlh: calc(1rem * (1 + var(--added-lead))); /* Root line-height */
 	--spacer: 1rem;
 	--decor-width: 2px;
 	--system-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -17,13 +19,20 @@
 
 	background: var(--bg);
 	font-family: var(--system-font);
+	text-rendering: optimizeLegibility;
 }
 
 body {
-	color: var(--fg); /* Set color on body (not root) for color-scheme cycling. */
+	color: var(--fg); /* Set color on body (not root)---Safari fix for dynamic dark/light mode changing. */
 	margin: 0;
 	padding: var(--spacer, 1rem);
 }
+
+/* Font size adjustment */
+h1,h2,h3,h4,h5,h6 { font-size: 1em; }
+small { font-size: .8em; }
+code { font-size: .95em; }
+pre code { font-size: .875em; }
 
 .link,
 a {
@@ -38,13 +47,8 @@ a[aria-current] {
 	text-decoration: line-through;
 }
 
-h1,h2,h3,h4,h5,h6 { font-size: 1em; }
-small { font-size: .8em; }
-code { font-size: .95em; }
-pre code { font-size: .875em; }
-
-ol, ul { padding-inline-start: 2em; }
-
+/* List styles */
+ol, ul { padding-inline-start: max(var(--space, 1rem), var(--rlh, 2em)); }
 ul { list-style: square; }
 
 /* Blockquote */
