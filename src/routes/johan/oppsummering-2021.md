@@ -1,6 +1,7 @@
 ---
 title: Oppsummering 2021
 date: ['2021-12-29']
+layout: typographic
 ---
 
 # Oppsummering 2021
@@ -22,12 +23,3 @@ Men noe kode har det blitt. Noen UU-fikser er til og med i prod...
 ---
 
 **På min gamle jobb.** Jeg startet året med å ferdigstille [Flyktning.net](https://flyktning.net/) hos UNN, for RVTS.
-
-<style>
-	h1 ~ * {
-		text-align: start;
-		font-size: 1.125rem;
-		margin-block-start: calc(2 * var(--spacer, 1rem));
-		margin-block-end: calc(2 * var(--spacer, 1rem));
-	}
-</style>

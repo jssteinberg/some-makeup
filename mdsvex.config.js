@@ -1,5 +1,8 @@
 const config = {
-  layout: '/src/libs/MdPageLayout.svelte',
+  layout: {
+    typographic: '/src/libs/MdTypographicLayout.svelte',
+    _: '/src/libs/MdPageLayout.svelte',
+  },
   extensions: [".svelte.md", ".md", ".svx"],
 
   smartypants: {

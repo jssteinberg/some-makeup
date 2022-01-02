@@ -19,7 +19,6 @@
 
 	background: var(--bg);
 	font-family: var(--system-font);
-	text-rendering: optimizeLegibility;
 }
 
 body {
