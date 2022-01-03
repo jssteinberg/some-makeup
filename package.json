@@ -14,7 +14,7 @@
     "cssnano": "^5.0.8",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.2.1",
-    "floor-typography-css": "^20.0.0",
+    "floor-typography-css": "^20.0.2",
     "mdsvex": "^0.9.8",
     "postcss": "^8.3.9",
     "postcss-import": "^14.0.2",

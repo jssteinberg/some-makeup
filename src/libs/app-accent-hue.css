@@ -1,13 +1,18 @@
 :root {
-	transition: background .75s;
+	transition: background .75s ease;
 	min-height: 100vh; /* Too avoid bg clip on bg change */
 }
 
 :root.accent-hue {
 	--bg: hsl(var(--accent-hue),25%,7.5%);
+	--accent-fg: hsl(var(--accent-hue),75%,75%);
+}
+
+:root.accent-hue article.read ::marker {
+	color: var(--accent-fg);
 }
 
 :root.accent-hue input {
 	background: hsla(var(--accent-hue),25%,100%,.1);
-	color: hsl(var(--accent-hue),75%,75%);
+	color: var(--accent-fg);
 }

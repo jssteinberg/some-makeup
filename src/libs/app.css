@@ -3,22 +3,23 @@
 @import 'floor-typography-css/src/classes-visually-hidden.css';
 
 :root {
-	/* Root line-height */
-	--RLH: calc(1rem * (1 + var(--added-lead)));
+	/* Root Relative Line Height (not dynamic---do not use for line-height property) */
+	--RRLH: calc(1rem * (1 + var(--added-lead, .2)));
 
-	--added-lead: .45;
+	--added-lead: .5;
 	--spacer: 1rem;
 	--decor-width: 2px;
-	--system-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	--system-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	--system-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 	--fg-h: 0;
 	--fg-s: 0%;
 	--fg-l: 97.5%;
 	--fg: hsl(var(--fg-h),var(--fg-s),var(--fg-l));
-	--bg: hsl(0,0%,7.5%);
+	--bg: hsl(0,0%,5%);
 
 	background: var(--bg);
-	font-family: var(--system-font);
+	font-family: var(--system-sans);
 }
 
 body {
@@ -33,14 +34,13 @@ small { font-size: .8em; }
 code { font-size: .95em; }
 pre code { font-size: .875em; }
 
-.link,
-a {
+/* Link */
+a, .link {
 	color: inherit;
 	text-decoration: underline;
 	text-decoration-thickness: max(1px, calc(.5 * var(--decor-width)));
 	text-underline-offset: .3em;
 }
-
 a[aria-current] {
 	text-decoration: none;
 	text-decoration: line-through;
@@ -50,8 +50,11 @@ a[aria-current] {
 ol, ul { padding-inline-start: max(var(--space, 1rem), var(--rlh, 2em)); }
 ul { list-style: square; }
 
-/* Blockquote */
+/* Horizontal rule */
+hr { border: none; height: unset; }
+hr::before { content: '❦'; display: block; font-size: 2em; text-align: center; }
 
+/* Blockquote */
 blockquote {
 	--blockquote-border-size: calc(var(--spacer, 1rem) * .1);
 	margin-inline-start: 0;
@@ -60,6 +63,7 @@ blockquote {
 	border-left: var(--blockquote-border-size) solid;
 }
 
+/* Touch target class */
 .touch-target {
 	--el-min-size: max(48px, calc(3 * var(--spacer, 1rem)));
 	display: inline-grid;

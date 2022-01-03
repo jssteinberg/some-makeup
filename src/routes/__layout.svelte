@@ -47,7 +47,7 @@
 	}
 
 	@media (min-width: 600px) {
-		main > :global(:not(:where(hr))),
+		main > :global(*),
 		.footer {
 			margin-inline-start: auto;
 			margin-inline-end: auto;
@@ -62,11 +62,6 @@
 		text-align: center;
 	}
 
-	:global(hr) {
-		border: none;
-	}
-
-	:global(hr),
 	p::before,
 	.footer::before {
 		--block-start-size: calc(4 * var(--spacer, 1rem));
