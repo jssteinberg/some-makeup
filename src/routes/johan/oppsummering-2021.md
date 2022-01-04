@@ -1,12 +1,11 @@
 ---
 lang: nb
-title: Oppsummering jobb 2021 Johan Sebergsen Steinberg
+title: Johans jobbår 2021
 date: ['2021-12-29']
-layout: read
 set: ['typography']
 ---
 
-# [Johan Sebergsen Steinberg](/johan) Oppsummering Jobb 2021
+# Jobbåret 2021
 
 **Ny jobb**
 - Jeg startet å jobbe med Utdanning.no i august, med nye, gode kolleger i Direktoratet for høyere utdanning og kompetanse!
@@ -23,7 +22,7 @@ set: ['typography']
 - Jeg utviklet grunn CSS-en for normalisering og typografi (basert på mitt eget bibliotek [Floor Typography CSS](//floortypography.vercel.app), oppdatert for 2022).
 - Jeg var/er utviklerkontakt for de eksterne utviklerne.
 
-**Design & frontend**
+**Diverse rådgivning**
 - Jeg har rådgitt innen design og frontend på forskjellige prosjekter (UU, SEO, Dimensjonering, Yrkesbeskrivelser, Arbeidsmarkedskart).
 
 **Startet produksjon**
@@ -43,24 +42,9 @@ set: ['typography']
 </script>
 
 <style>
-	h1 a {
-		display: block;
-		font-weight: 300; font-weight: 100;
-		text-decoration: none;
-		box-shadow: 0 1px hsla(0,0%,100%,.25);
-	}
-
-	h1 a:is(:hover,:focus) {
-		box-shadow: 0 1px hsla(0,0%,100%,1);
-	}
-
 	ul {
 		list-style: inside square;
 		padding: 0;
-	}
-
-	li {
-		display: inline list-item; /* Only works in Firefox ATM */
 	}
 
 	p, p + ul, p + ul > li {

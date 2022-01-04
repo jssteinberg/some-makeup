@@ -50,7 +50,7 @@
 					<Dice />
 				{/if}
 
-				<span class="post-title link">{post.title}</span>
+				<span class="post-title link" lang={post.metadata?.lang ? post.metadata.lang : undefined}>{post.title}</span>
 
 				{#if post.metadata?.date}
 					<small class="date">
