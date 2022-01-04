@@ -23,34 +23,18 @@
 </script>
 
 <script>
-	import "../libs/app.css";
-
 	import Dice from "../libs/css-dice/dice.svelte";
 	import AccentHue from "../libs/AccentHue.svelte";
-	import { goto } from "$app/navigation";
-	import { onMount } from "svelte";
 	import { page } from "$app/stores";
 
 	export let posts;
 
-
 	let hue = 358.7;
-	let js = "no-js";
-
-	onMount(() => (js = "js"));
 </script>
 
 <svelte:head>
 	<title>Some makeup</title>
 </svelte:head>
-
-<a
-	href="{$page.path}#dice"
-	on:click|preventDefault={() => goto("/dice")}
-	class:js
-	>
-	<Dice />
-</a>
 
 <ul class="posts">
 	{#each posts as post}
@@ -62,12 +46,16 @@
 				href={post.path}
 				sveltekit:prefetch
 				>
+				{#if post.metadata?.set && post.metadata.set.includes('featured')}
+					<Dice />
+				{/if}
+
 				<span class="post-title link">{post.title}</span>
 
 				{#if post.metadata?.date}
-					<span class="date">
+					<small class="date">
 						<time>{post.metadata.date[0]}</time>
-					</span>
+					</small>
 				{/if}
 			</a>
 		</li>
@@ -77,12 +65,16 @@
 <AccentHue {hue} />
 
 <style>
-	.js:hover {
-		cursor: pointer;
-	}
-
 	.posts {
 		list-style: none;
 		padding: 0;
+	}
+
+	.posts a {
+		text-decoration: none;
+	}
+
+	.post-title {
+		text-transform:  uppercase;
 	}
 </style>

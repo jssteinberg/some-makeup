@@ -1,9 +1,9 @@
 ---
-title: J. Sebergsen Steinberg
+title: Johan Sebergsen Steinberg
 lang: nb
 ---
 
-# J. Sebergsen Steinberg
+# Johan Sebergsen Steinberg
 
 <ul class="posts">
 	{#each posts as post}

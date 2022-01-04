@@ -14,7 +14,7 @@
 	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 	--fg-h: 0;
 	--fg-s: 0%;
-	--fg-l: 97.5%;
+	--fg-l: 95%;
 	--fg: hsl(var(--fg-h),var(--fg-s),var(--fg-l));
 	--bg: hsl(0,0%,5%);
 

@@ -21,8 +21,8 @@
 
 		text-rendering: optimizeLegibility;
 		text-align: start;
-		font-family: var(--system-serif);
 		font-size: var(--font-size);
+		font-weight: 300;
 	}
 
 	@media (min-width: 1200px) {

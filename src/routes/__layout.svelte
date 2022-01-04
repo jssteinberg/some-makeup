@@ -15,24 +15,32 @@
 	<h2>Nav</h2>
 	<ul>
 		<li>
-		<a class="touch-target" aria-current={$page.path === '' ? "page" : undefined} href="/">Index</a>
+			<a
+				sveltekit:prefetch
+				class="touch-target"
+				aria-current={$page.path === "/" ? "page" : undefined}
+				href="/"
+			>
+				Front
+			</a>
 		</li>
+
 		<li>
-			<a class="touch-target" aria-current={$page.path === '/johan' ? "page" : undefined} href="/johan">Johan</a>
+			<a
+				class="touch-target"
+				sveltekit:prefetch
+				aria-current={$page.path === "/about" ? "page" : undefined}
+				href="/about"
+			>
+				?
+			</a>
 		</li>
 	</ul>
 
 	<p>
-		<a class="touch-target"
-			sveltekit:prefetch
-			href="/">Some makeup</a>
+		<a class="touch-target" sveltekit:prefetch href="/"> Some makeup </a>
 
-		{new Date().getFullYear()};
-
-		<a class="touch-target"
-			aria-current={$page.path === '/about' ? "page" : undefined}
-			href="/about">
-			About</a>
+		{new Date().getFullYear()}
 	</p>
 </footer>
 
@@ -40,7 +48,6 @@
 	:global(h1),
 	h2,
 	a {
-		font-family: var(--mono-font, monospace);
 		font-weight: normal;
 		text-align: center;
 		text-transform: uppercase;
@@ -78,7 +85,6 @@
 
 	.footer {
 		font-size: 16px;
-		font-family: var(--mono-font, monospace);
 		text-align: center;
 	}
 

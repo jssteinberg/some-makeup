@@ -4,15 +4,16 @@
 }
 
 :root.accent-hue {
-	--bg: hsl(var(--accent-hue),25%,7.5%);
+	--bg: hsl(var(--accent-hue),25%,7%);
 	--accent-fg: hsl(var(--accent-hue),75%,75%);
 }
 
+:root.accent-hue article.read li::before,
 :root.accent-hue article.read ::marker {
 	color: var(--accent-fg);
 }
 
-:root.accent-hue input {
+:root.accent-hue input:not(:is([type="range"],[type="radio"],[type="checkbox"])) {
 	background: hsla(var(--accent-hue),25%,100%,.1);
 	color: var(--accent-fg);
 }

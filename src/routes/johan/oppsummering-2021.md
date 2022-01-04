@@ -1,15 +1,16 @@
 ---
 lang: nb
-title: Oppsummering 2021
+title: Oppsummering jobb 2021 Johan Sebergsen Steinberg
 date: ['2021-12-29']
 layout: read
+set: ['typography']
 ---
 
-# Oppsummering 2021
+# [Johan Sebergsen Steinberg](/johan) Oppsummering Jobb 2021
 
 **Ny jobb**
 - Jeg startet å jobbe med Utdanning.no i august, med nye, gode kolleger i Direktoratet for høyere utdanning og kompetanse!
-- Jeg er særlig fornøyd med å bli tatt godt i mot og se at kompetansen min blir satt pris på.
+- Jeg er særlig fornøyd med å bli tatt godt imot og se at kompetansen min blir satt pris på.
 - Jeg ser spesielt frem til å bidra mer med frontend på Utdanning.no i det kommende året.
 
 **Lære React**
@@ -30,9 +31,10 @@ layout: read
 
 ---
 
-**Jeg avsluttet** min reise i e-helse hos min tidligere arbeidsgiver Universitetssykehuset Nord-Norge
+**Jeg avsluttet** min reise i e-helse hos min tidligere arbeidsgiver Universitetssykehuset Nord-Norge.
 - Året startet med at jeg ferdigstilte [Flyktning.net](https://flyktning.net/) for RVTS med Javascript-rammeverket Svelte.
-- Jeg overførte arbeid og oppgaver før avslutning i en stilling jeg vokste mye i; som ga meg mye ansvar, frihet og muligheter, og; som jeg trivdes veldig godt i.
+- Jeg overførte arbeid og oppgaver før avslutning.
+- Det har vært en stilling jeg har vokste mye i; som ga meg mye ansvar, frihet og muligheter, og; som jeg trivdes veldig godt i.
 
 <AccentHue hue="29.7" />
 
@@ -41,31 +43,44 @@ layout: read
 </script>
 
 <style>
+	h1 a {
+		display: block;
+		font-weight: 300; font-weight: 100;
+		text-decoration: none;
+		box-shadow: 0 1px hsla(0,0%,100%,.25);
+	}
+
+	h1 a:is(:hover,:focus) {
+		box-shadow: 0 1px hsla(0,0%,100%,1);
+	}
+
 	ul {
 		list-style: inside square;
 		padding: 0;
 	}
 
 	li {
-		display: inline list-item;
+		display: inline list-item; /* Only works in Firefox ATM */
 	}
 
-	p, p + ul {
+	p, p + ul, p + ul > li {
 		display: inline;
+	}
+
+	p + ul > li::before {
+		content: '•';
+		line-height: 0;
+		margin-inline-end: .125ch;
+		margin-inline-start: .125ch;
+		font-size: 2em;
+		vertical-align: baseline;
+		position: relative;
+		top: .125em;
 	}
 
 	p + ul::after {
 		content: '';
 		display: block;
 		margin: var(--spacer, 1rem) 0;
-	}
-
-	li, p {
-		padding-inline-end: .5ch;
-	}
-
-	p strong {
-		font-weight: normal;
-		font-variant: small-caps;
 	}
 </style>
