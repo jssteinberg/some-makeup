@@ -60,7 +60,7 @@
 			margin-inline-end: auto;
 			padding-inline-start: 5vw;
 			padding-inline-end: 5vw;
-			width: min(100%, 50rem);
+			width: min(100%, calc(40rem + 15vw));
 		}
 	}
 

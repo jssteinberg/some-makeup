@@ -33,8 +33,7 @@
 	}
 
 	article.typography :global(h1) {
-		text-align: inherit;
-		font-family: inherit;
+		font-family: var(--serif);
 		text-transform: none;
 
 		/* Bigger size, same leading */
@@ -44,5 +43,9 @@
 			/ var(--h1-line-height)
 		);
 		line-height: var(--h1-line-height);
+	}
+
+	article.typography :global(:not(h1,h2,h3,h4,h5,h6) strong) {
+		color: hsl(var(--fg-h),var(--fg-s),calc(5% + var(--fg-l)));
 	}
 </style>

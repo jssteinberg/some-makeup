@@ -5,7 +5,7 @@ date: ['2021-12-29']
 set: ['typography']
 ---
 
-# Jobbåret 2021
+# Johans jobbår 2021
 
 **Ny jobb**
 - Jeg startet å jobbe med Utdanning.no i august, med nye, gode kolleger i Direktoratet for høyere utdanning og kompetanse!
@@ -34,12 +34,6 @@ set: ['typography']
 - Året startet med at jeg ferdigstilte [Flyktning.net](https://flyktning.net/) for RVTS med Javascript-rammeverket Svelte.
 - Jeg overførte arbeid og oppgaver før avslutning.
 - Det har vært en stilling jeg har vokste mye i; som ga meg mye ansvar, frihet og muligheter, og; som jeg trivdes veldig godt i.
-
-<AccentHue hue="29.7" />
-
-<script>
-	import AccentHue from '../../libs/AccentHue.svelte';
-</script>
 
 <style>
 	ul {

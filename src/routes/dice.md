@@ -41,7 +41,7 @@ set: ['featured']
 	h1 strong {
 		display: block;
 		font-size: 2em;
-		font-family: serif;
+		font-family: var(--serif, serif);
 		font-weight: normal;
 		text-transform: none;
 	}
