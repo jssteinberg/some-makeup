@@ -33,7 +33,11 @@
 </script>
 
 <svelte:head>
-	<title>Some makeup</title>
+	<title>Some Makeup</title>
+	<meta name="description" content={(`
+		Presenting the ideas of Johan Sebergsen Steinberg—frontend, design or
+		societally related—with some makeup.
+		`).trim().replace(/[\n\t]/g, ' ')}>
 </svelte:head>
 
 <ul class="posts">
