@@ -1,5 +1,5 @@
 ---
-title: Dice
+title: CSS Dice
 date: ['2021-20-12']
 set: ['featured']
 ---

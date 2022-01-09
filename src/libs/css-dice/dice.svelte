@@ -9,7 +9,7 @@
 	});
 </script>
 
-<div class="container" class:bg={bg} aria-hidden="true" style={`--dice-hue: ${hue}deg`}>
+<div class="scene container" class:bg={bg} aria-hidden="true" style={`--dice-hue: ${hue}deg`}>
 	<ol class="cube">
 		<li class="side front">1</li>
 		<li class="side bottom">2</li>
@@ -30,7 +30,7 @@
 		display: block;
 	}
 
-	.container {
+	.scene.scene {
 		--c-h: var(--dice-hue, 358.7);
 		--c-s: 100%;
 		--c-l: 43.9%;
@@ -45,7 +45,7 @@
 		perspective-origin: top;
 	}
 
-	.container.bg::after {
+	.scene.bg::after {
 		content: '';
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
