@@ -5,6 +5,7 @@
 :root {
 	/* Root Relative Line Height (not dynamic---do not use for line-height property) */
 	--RRLH: calc(1rem * (1 + var(--added-lead, .2)));
+	--TOUCH-TARGET-MIN-SIZE: max(48px, calc(2 * var(--RRLH, 1.5)));
 
 	--added-lead: .5;
 	--spacer: 1rem;

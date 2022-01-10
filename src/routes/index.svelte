@@ -1,4 +1,6 @@
 <script context="module">
+	import sortPosts from '../libs/utils/getSortedListOfMarkdownPosts';
+
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
 	const data = Object.keys(markdownFiles)
@@ -16,7 +18,7 @@
 	export async function load() {
 		return {
 			props: {
-				posts: data,
+				posts: sortPosts(data, { sortBy: { property: ['metadata.date'], type: 'date' } }),
 			},
 		};
 	}
@@ -44,7 +46,6 @@
 	{#each posts as post}
 		<li>
 			<a
-				class="touch-target"
 				id={post.title.toLowerCase()}
 				aria-current={$page.path === post.path ? "page" : undefined}
 				href={post.path}
@@ -75,6 +76,16 @@
 	}
 
 	.posts a {
+		--padding-block: calc(.5 * var(--spacer, 1rem));
+		--min-height: calc(var(--TOUCH-TARGET-MIN-SIZE) - var(--padding-block) * 2);
+
+		display: grid;
+		align-items: center;
+		margin: var(--spacer, 1rem) 0;
+		min-height: var(--min-height);
+		padding: var(--padding-block) 1em calc(var(--padding-block) + var(--shadow-size));
+
+		font-weight: 300;
 		text-decoration: none;
 	}
 
