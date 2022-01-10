@@ -69,13 +69,14 @@ const getListSortedByType = (list, sortBy) => {
 			...(typeof sortBy.reverse === 'undefined' || !sortBy.reverse ? sortedSubList.reverse() : sortedSubList),
 			...list.filter((item) => typeof getValFromProp(sortBy.property, item) === 'undefined')
 		];
-	} else
+	} else {
 		const sortedListByString = getListSortedByString(
 			list,
 			sortBy.property
 		);
-	
+
 		return sortBy.reverse ? sortedListByString.reverse() : sortedListByString;
+	}
 };
 
 /** (Array, Array[Object]|Object{ property Array|String, type String, index Number }, [i number]) - recursive if sortBy is array
