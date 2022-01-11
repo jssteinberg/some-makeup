@@ -38,7 +38,6 @@ const getListSortedByDateString = (list, sortBy) => {
 
 	return list.
 		sort((a,b) => {
-
 			const aDate = getSingleDateString(
 				getValFromProp(sortBy.property, a)
 			);
@@ -47,9 +46,8 @@ const getListSortedByDateString = (list, sortBy) => {
 			);
 
 			if (aDate && bDate)
-				return new Date(bDate) - new Date(aDate);
-			if (aDate) return -1;
-			if (bDate) return 1;
+				return new Date(aDate) - new Date(bDate);
+
 			return 0;
 		});
 };

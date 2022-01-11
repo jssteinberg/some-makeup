@@ -1,6 +1,6 @@
 ---
 title: CSS Dice
-date: ['2021-20-12']
+date: ['2021-12-20']
 set: ['featured']
 ---
 
