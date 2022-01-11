@@ -1,15 +1,21 @@
 <script>
 	export let title = 'Knut';
 	export let lang;
+	export let date;
 	export let set;
+
+	$: langAttr = lang ?? set?.includes('nb') ? 'nb' : '';
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
 
-<article {lang} class="{set?.includes('typography') ? 'typography' : undefined}">
+<article lang={langAttr} class="{set?.includes('typography') ? 'typography' : undefined}">
 	<slot />
+	{#if date}
+		<p class="date"><time>{date[0]}</time></p>
+	{/if}
 </article>
 
 <style>
@@ -32,10 +38,14 @@
 		}
 	}
 
+	article.typography p.date,
 	article.typography :global(h1) {
 		font-family: var(--serif);
+		text-align: center;
 		text-transform: none;
+	}
 
+	article.typography :global(h1) {
 		/* Bigger size, same leading */
 		--h1-line-height: 1.25;
 		font-size: calc(

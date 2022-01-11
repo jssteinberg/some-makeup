@@ -1,8 +1,7 @@
 ---
-lang: nb
 title: Johans jobbår 2021
 date: ['2021-12-29']
-set: ['typography']
+set: ['nb', 'typography']
 ---
 
 # Johans jobbår 2021

@@ -15,13 +15,13 @@
 		})
 		.filter((item) => !["index"].includes(item.title));
 
-	export async function load() {
+	export const load = async () => {
 		return {
 			props: {
 				posts: sortPosts(data, { sortBy: { property: ['metadata.date'], type: 'date' } }),
 			},
 		};
-	}
+	};
 </script>
 
 <script>

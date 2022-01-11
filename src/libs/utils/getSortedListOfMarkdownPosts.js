@@ -61,7 +61,7 @@ const getListSortedByType = (list, sortBy) => {
 		const sortedSubList = getListSortedByDateString(
 			list.filter((item) => typeof getValFromProp(sortBy.property, item) !== 'undefined'),
 			sortBy
-		)
+		);
 
 		return [
 			...(typeof sortBy.reverse === 'undefined' || !sortBy.reverse ? sortedSubList.reverse() : sortedSubList),
