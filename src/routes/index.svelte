@@ -1,26 +1,15 @@
 <script context="module">
-	import sortPosts from '../libs/utils/getSortedListOfMarkdownPosts';
+	export const load = async ({ fetch }) => {
+		try {
+			const response = await fetch('/index-posts-by-curry.json');
+			const posts = await response.json();
 
-	const markdownFiles = import.meta.globEager(`./*.md`);
-	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
-	const data = Object.keys(markdownFiles)
-		.map((path) => {
 			return {
-				filePath: path,
-				slug: getSlug(path),
-				path: `/${getSlug(path)}`,
-				title: markdownFiles[path].metadata?.title || getSlug(path),
-				metadata: markdownFiles[path].metadata,
+				props: { posts }
 			};
-		})
-		.filter((item) => !["index"].includes(item.title));
-
-	export const load = async () => {
-		return {
-			props: {
-				posts: sortPosts(data, { sortBy: { property: ['metadata.date'], type: 'date' } }),
-			},
-		};
+		} catch (error) {
+			console.error(`Error in load function for /: ${error}`);
+		}
 	};
 </script>
 
