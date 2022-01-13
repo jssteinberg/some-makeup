@@ -26,7 +26,7 @@ export async function get({ params }) {
 		: list
 			.filter(obj => getProp(obj, prop, i))
 			.sort((a, b) => organize(a, b, prop, i))
-	const organize = (a, b, prop, i=null) => {
+	const organize = (a, b, prop, i) => {
 		const valA = getProp(a, prop, i)
 		const valB = getProp(b, prop, i)
 
