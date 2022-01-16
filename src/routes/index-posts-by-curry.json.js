@@ -21,7 +21,11 @@ export async function get({ params }) {
 
 	return {
 		status: 200,
+<<<<<<< HEAD
 		body: getPostsFrom(pages)([`date`, `title`]),
+=======
+		body: listPosts(pages)([`date`, `title`]),
+>>>>>>> c95038f9719780b7ca994795d7427d5a05107569
 		// body: listPosts(pages)([[`metadate.date`, 0], `title`])
 	};
 }
