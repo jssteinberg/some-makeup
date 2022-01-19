@@ -1,11 +1,8 @@
-const getProp = (obj, prop, i=null) => {
-	const val = prop.split('.').reduce((acc, c) => acc && acc[c], obj)
-	return val && typeof i === `number` ? val[i] : val
-}
+import {getValue} from './lowSplash.js'
 
-export const sortPosts = (a, b, prop, i) => {
-	const valA = getProp(a, prop, i)
-	const valB = getProp(b, prop, i)
+export const sortPosts = (a, b, key, i) => {
+	const valA = getValue(a, key, i)
+	const valB = getValue(b, key, i)
 
 	if (valA instanceof Date && valB instanceof Date)
 		return valA - valB
@@ -20,13 +17,13 @@ const listPosts = (list=[], opt={ exclude: 0 }) => (props=[[]], i=0) => {
 	if (!(props.length > i)) return list
 
 	const reverse = opt?.reverse ?? true
-	const prop = props[i] instanceof Array ? props[i][0] : props[i]
-	const propI = props[i] instanceof Array ? props[i][1] : null
+	const key = props[i] instanceof Array ? props[i][0] : props[i]
+	const valIndex = props[i] instanceof Array ? props[i][1] : null
 	const newList = !opt?.exclude ?
 		listPosts(list, opt)(props, i + 1)
-			.sort((a, b) => sortPosts(a, b, prop, propI)) :
+			.sort((a, b) => sortPosts(a, b, key, valIndex)) :
 		listPosts(list, opt)(props, i + 1)
-			.filter(obj => !getProp(obj, prop, propI))
+			.filter(obj => !getValue(obj, key, valIndex))
 
 	return reverse ? newList.reverse() : newList
 }
