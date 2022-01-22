@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<link rel="canonical" href={`https://some.makeup${$page.path}`}>
+	<link rel="canonical" href={`https://some.makeup${$page.path}`} />
 </svelte:head>
 
 <main class={$page.path.replace(/^\//, "")}>
