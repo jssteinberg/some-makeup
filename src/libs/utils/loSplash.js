@@ -1,4 +1,4 @@
-/* lowSplash.js - A splash of FP util functions. */
+/* loSplash.js - A splash of FP util functions. */
 
 /** Fn returns a value in an object from key.
  * @arg {object} obj

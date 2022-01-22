@@ -1,4 +1,4 @@
-import {getValue} from './lowSplash.js'
+import {getValue} from './loSplash.js'
 
 export const sortPosts = (a, b, key, i) => {
 	const valA = getValue(a, key, i)
