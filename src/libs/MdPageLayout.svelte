@@ -1,17 +1,30 @@
 <script>
-	export let title = 'Knut';
+	import Logo from "./Logo.svelte";
+
+	export let title = "Knut";
 	export let lang;
 	export let date;
-	export let set;
+	export let set = [];
 
-	$: langAttr = lang ?? set?.includes('nb') ? 'nb' : '';
+	$: langAttr = lang ?? set.includes("nb") ? "nb" : "";
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
 
-<article lang={langAttr} class="{set?.includes('typography') ? 'typography' : undefined}">
+{#if set.includes('logo')}
+	<p>
+		<a href="/">
+			<Logo text={false} />
+		</a>
+	</p>
+{/if}
+
+<article
+	lang={langAttr}
+	class={set.includes("typography") ? "typography" : undefined}
+>
 	<slot />
 	{#if date}
 		<p class="date"><time>{date[0]}</time></p>
@@ -20,7 +33,7 @@
 
 <style>
 	article.typography {
-		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, .6));
+		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.6));
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT));
 
 		--font-size: 1.125rem;
@@ -48,14 +61,11 @@
 	article.typography :global(h1) {
 		/* Bigger size, same leading */
 		--h1-line-height: 1.25;
-		font-size: calc(
-			1em * (1 + var(--added-lead, .6))
-			/ var(--h1-line-height)
-		);
+		font-size: calc(1em * (1 + var(--added-lead, 0.6)) / var(--h1-line-height));
 		line-height: var(--h1-line-height);
 	}
 
-	article.typography :global(:not(h1,h2,h3,h4,h5,h6) strong) {
-		color: hsl(var(--fg-h),var(--fg-s),calc(5% + var(--fg-l)));
+	article.typography :global(:not(h1, h2, h3, h4, h5, h6) strong) {
+		color: hsl(var(--fg-h), var(--fg-s), calc(5% + var(--fg-l)));
 	}
 </style>

@@ -1,10 +1,10 @@
 ---
 title: CSS Dice
 date: ['2021-12-20']
-set: ['featured']
+set: ['featured','logo']
 ---
 
-# [Some Makeup](/) **Dice**
+# Dice
 
 <div class="wrapper">
 	<Dice bg hue={deg} />
@@ -38,8 +38,7 @@ set: ['featured']
 </script>
 
 <style>
-	h1 strong {
-		display: block;
+	h1 {
 		font-size: 2em;
 		font-family: var(--serif, serif);
 		font-weight: normal;

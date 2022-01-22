@@ -82,7 +82,6 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		opacity: 0.9;
 		background: hsla(var(--c-h), var(--c-s), var(--c-l), 50%);
 		background: radial-gradient(
 			circle, hsla(var(--c-h), var(--c-s), calc(var(--c-l) - 2.5%), 50%) 37.5%,
@@ -90,6 +89,7 @@
 		);
 		border: 1px solid hsla(var(--c-h), var(--c-s), var(--c-l), 87.5%);
 
+		font-weight: 300;
 		font-weight: 100;
 		color: white;
 		text-shadow: 1px 1px hsla(0,0%,0%,25%), -1px -1px hsla(0,0%,0%,25%);

@@ -1,10 +1,10 @@
 ---
 title: Minimal Buttons
 date: ['2022-01-09']
-set: ['typography']
+set: ['typography','logo']
 ---
 
-# [Some Makeup](/) Minimal Buttons
+# Minimal Buttons
 
 *A minimal flexible button design that can respect typographic sizes and usability.*
 
@@ -77,11 +77,6 @@ Pill shape and reduce shadow:
 </script>
 
 <style>
-	h1 a {
-		display: block;
-		font-size: 1rem;
-	}
-
 	:global(.button--primary) {
 		--hue: 215;
 		--saturation: 100%;
