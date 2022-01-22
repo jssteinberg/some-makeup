@@ -17,7 +17,7 @@
 		font-size: .8em;
 		text-align: center;
 		font-family: var(--mono-font, monospace);
-		text-transform: uppercase;
+		text-transform: lowercase;
 		line-height: 1;
 	}
 	.letter.s { top: 0; }
@@ -30,7 +30,7 @@
 		--cube-size: calc(1.25 * 1em);
 
 		position: relative;
-		width: calc(4ch + var(--cube-size));
+		width: calc(4.5ch + var(--cube-size));
 		height: calc(3em + var(--cube-size));
 		display: grid;
 		place-items: center;
