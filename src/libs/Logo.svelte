@@ -18,19 +18,20 @@
 		text-align: center;
 		font-family: var(--mono-font, monospace);
 		text-transform: uppercase;
+		line-height: 1;
 	}
-	.letter.s { top: 0; left: 0; }
-	.letter.o { top: 0; right: 0; }
-	.letter.m { bottom: 0; left: 0; }
-	.letter.e { bottom: 0; right: 0; }
+	.letter.s { top: 0; }
+	.letter.o { top: calc(50% - .5em); right: 0; }
+	.letter.m { top: calc(50% - .5em); left: 0; }
+	.letter.e { bottom: 0; }
 
 	.scene {
 		--size: calc(7.5 * 1em);
 		--cube-size: calc(1.25 * 1em);
 
 		position: relative;
-		width: calc(3ch + var(--cube-size));
-		height: calc(3.5ex + var(--cube-size));
+		width: calc(4ch + var(--cube-size));
+		height: calc(3em + var(--cube-size));
 		display: grid;
 		place-items: center;
 		margin: 0 auto calc(5 * var(--spacer, 1rem));
