@@ -53,8 +53,18 @@ ol, ul { padding-inline-start: max(var(--space, 1rem), var(--rlh, 2em)); }
 ul { list-style: square; }
 
 /* Horizontal rule */
-hr { border: none; height: unset; }
-hr::before { content: '❦'; display: block; font-size: 2em; text-align: center; }
+hr::before, hr::after { all: unset; }
+hr {
+	--block-start-size: calc(3 * var(--spacer, 1rem));
+	--sep-size: calc(2 * var(--spacer, 1rem));
+	all: unset;
+	background: currentColor;
+	display: block;
+	margin: var(--block-start-size) auto;
+	padding: 0;
+	width: var(--decor-width, 1px);
+	height: var(--sep-size);
+}
 
 /* Blockquote */
 blockquote {
