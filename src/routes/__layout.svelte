@@ -1,6 +1,7 @@
 <script>
 	import "../libs/app.css";
 	import { page } from "$app/stores";
+	import Sep from "../libs/Sep.svelte";
 </script>
 
 <svelte:head>
@@ -15,36 +16,32 @@
 	<slot />
 </main>
 
+<Sep hr />
 <footer class="footer">
-	<h2>Nav</h2>
-	<ul>
-		<li>
-			<a
-				sveltekit:prefetch
-				class="touch-target"
-				aria-current={$page.path === "/" ? "page" : undefined}
-				href="/"
-			>
-				Front
-			</a>
-		</li>
-
-		<li>
-			<a
-				class="touch-target"
-				sveltekit:prefetch
-				aria-current={$page.path === "/about" ? "page" : undefined}
-				href="/about"
-			>
-				?
-			</a>
-		</li>
-	</ul>
+	<h2>
+		<a
+			sveltekit:prefetch
+			class="touch-target"
+			aria-current={$page.path === "/" ? "page" : undefined}
+			href="/"
+		>
+			Some Makeup
+		</a>
+	</h2>
 
 	<p>
-		<a class="touch-target" sveltekit:prefetch href="/"> Some makeup </a>
-
 		{new Date().getFullYear()}
+	</p>
+
+	<p>
+		<a
+			class="touch-target"
+			sveltekit:prefetch
+			aria-current={$page.path === "/about" ? "page" : undefined}
+			href="/about"
+		>
+			?
+		</a>
 	</p>
 </footer>
 
@@ -73,27 +70,13 @@
 		text-align: center;
 	}
 
-	p::before,
-	.footer::before {
-		--block-start-size: calc(4 * var(--spacer, 1rem));
-		--sep-size: calc(2 * var(--spacer, 1rem));
-
-		background: currentColor;
-		content: "";
-		display: block;
-		margin: var(--block-start-size) auto;
-		padding: 0;
-		width: var(--decor-width);
-		height: var(--sep-size);
-	}
-
 	.footer {
 		font-size: 16px;
 		text-align: center;
-	}
 
-	.footer ul {
-		list-style: none;
-		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1ch;
 	}
 </style>
