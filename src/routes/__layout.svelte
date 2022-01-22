@@ -3,6 +3,10 @@
 	import { page } from "$app/stores";
 </script>
 
+<svelte:head>
+	<link rel="canonical" href={`https://some.makeup${$page.path}`}>
+</svelte:head>
+
 <main class={$page.path.replace(/^\//, "")}>
 	{#if $page.path === "/"}
 		<h1>Some Makeup</h1>
