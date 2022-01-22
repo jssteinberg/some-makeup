@@ -90,6 +90,7 @@
 		);
 		border: 1px solid hsla(var(--c-h), var(--c-s), var(--c-l), 87.5%);
 
+		font-weight: 300;
 		font-weight: 100;
 		color: white;
 		text-shadow: 1px 1px hsla(0,0%,0%,25%), -1px -1px hsla(0,0%,0%,25%);

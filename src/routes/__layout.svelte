@@ -2,6 +2,7 @@
 	import "../libs/app.css";
 	import { page } from "$app/stores";
 	import Sep from "../libs/Sep.svelte";
+	import Logo from "../libs/Logo.svelte";
 </script>
 
 <svelte:head>
@@ -10,7 +11,17 @@
 
 <main class={$page.path.replace(/^\//, "")}>
 	{#if $page.path === "/"}
-		<h1>Some Makeup</h1>
+		<h1>
+			<a href="/">
+				<Logo />
+			</a>
+		</h1>
+	<!-- {:else} -->
+	<!-- 	<p> -->
+	<!-- 		<a href="/"> -->
+	<!-- 			<Logo /> -->
+	<!-- 		</a> -->
+	<!-- 	</p> -->
 	{/if}
 
 	<slot />

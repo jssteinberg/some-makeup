@@ -1,6 +1,6 @@
 @import 'floor-typography-css/src/reset.css';
 @import 'floor-typography-css/src/normalize-style.css';
-@import 'floor-typography-css/src/classes-visually-hidden.css';
+/* @import 'floor-typography-css/src/classes-visually-hidden.css'; */
 
 :root {
 	/* Root Relative Line Height (not dynamic---do not use for line-height property) */
