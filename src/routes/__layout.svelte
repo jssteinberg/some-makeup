@@ -12,7 +12,7 @@
 <main class={$page.path.replace(/^\//, "")}>
 	{#if $page.path === "/"}
 		<h1>
-			<a href="/">
+			<a href="/" sveltekit:prefetch>
 				<Logo />
 			</a>
 		</h1>

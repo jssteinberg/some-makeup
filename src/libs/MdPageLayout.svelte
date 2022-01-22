@@ -15,7 +15,7 @@
 
 {#if set.includes('logo')}
 	<p>
-		<a href="/">
+		<a href="/" sveltekit:prefetch>
 			<Logo text={false} />
 		</a>
 	</p>
