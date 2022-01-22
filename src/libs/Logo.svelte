@@ -3,17 +3,9 @@
 </script>
 
 <span class={`scene ${text ? '' : 'no-text'}`}>
-	<span class="letter s">S</span>
-	<span class="letter o">o</span>
-	<span class="letter m">m</span>
-	<span class="letter e">e</span>
+	<span class="letter s">S</span><span class="letter o">o</span><span class="letter m">m</span><span class="letter e">e</span>
 	<span class="cube">
-		<span class="side front">M</span>
-		<span class="side top">A</span>
-		<span class="side back">K</span>
-		<span class="side bottom">E</span>
-		<span class="side right">U</span>
-		<span class="side left">P</span>
+		<span class="side front">M</span><span class="side top">A</span><span class="side back">K</span><span class="side bottom">E</span><span class="side right">U</span><span class="side left">P</span>
 	</span>
 </span>
 
