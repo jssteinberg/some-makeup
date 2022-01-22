@@ -74,7 +74,6 @@
 		min-height: var(--min-height);
 		padding: var(--padding-block) 1em calc(var(--padding-block) + var(--shadow-size));
 
-		font-weight: 300;
 		text-decoration: none;
 	}
 
