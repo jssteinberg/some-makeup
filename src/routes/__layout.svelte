@@ -16,7 +16,7 @@
 	<slot />
 </main>
 
-<Sep hr />
+<Sep />
 <footer class="footer">
 	<h2>
 		<a

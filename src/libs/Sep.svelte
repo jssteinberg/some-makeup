@@ -1,11 +1,14 @@
 <script>
 	export let hr;
+	export let sep;
 </script>
 
 {#if hr}
 	<hr />
-{:else}
+{:else if sep}
 	<div role="separator" />
+{:else}
+	<span aria-hidden="true" />
 {/if}
 
 <style>
