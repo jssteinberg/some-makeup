@@ -14,7 +14,8 @@
 
 	.letter {
 		position: absolute;
-		font-size: .8em;
+		font-size: .95em;
+		font-weight: normal;
 		text-align: center;
 		font-family: var(--mono-font, monospace);
 		text-transform: lowercase;
@@ -30,8 +31,8 @@
 		--cube-size: calc(1.25 * 1em);
 
 		position: relative;
-		width: calc(4.5ch + var(--cube-size));
-		height: calc(3em + var(--cube-size));
+		width: calc(5ch + var(--cube-size));
+		height: calc(3.5em + var(--cube-size));
 		display: grid;
 		place-items: center;
 		margin: 0 auto calc(5 * var(--spacer, 1rem));
@@ -55,8 +56,8 @@
 		height: 100%;
 		display: grid;
 		place-items: center;
-		border: 1px solid rgba(255,255,255,.5);
-		background: hsla(0, 0%, 0%, 0);
+		border: 1px solid rgba(255,255,255,.75);
+		background: hsla(0, 0%, 100%, .2);
 		color: hsla(0, 0%, 100%, 0);
 	}
 

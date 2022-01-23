@@ -79,12 +79,27 @@
 
 		display: grid;
 		align-items: center;
+
 		margin: var(--spacer, 1rem) 0;
 		min-height: var(--min-height);
-		padding: var(--padding-block) 1em
-			calc(var(--padding-block) + var(--shadow-size));
+		padding: var(--padding-block) 1em;
 
+		border-radius: 0.5rem;
 		text-decoration: none;
+		transition: background .25s;
+	}
+
+	.posts a:hover {
+		background: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.03);
+	}
+
+	.posts a:focus {
+		outline: 2px solid hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.06);
+		background: linear-gradient(
+			-160deg,
+			hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.025),
+			hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.045)
+		);
 	}
 
 	.post-title {
