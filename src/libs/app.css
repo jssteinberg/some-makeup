@@ -89,4 +89,5 @@ blockquote {
 
 pre {
 	overflow-y: auto;
+	white-space: pre;
 }
