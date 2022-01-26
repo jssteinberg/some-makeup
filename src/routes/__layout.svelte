@@ -72,6 +72,16 @@
 	}
 
 	@media (min-width: 600px) {
+		main.home :global(.post-title) {
+			/* Bigger size, same leading */
+			--line-height: 1.05;
+			font-size: calc(1em * (1 + var(--added-lead, 0.6)) / var(--line-height));
+			line-height: var(--line-height);
+			font-variant: small-caps;
+			text-transform: lowercase;
+		}
+
+		/* Content width */
 		main > :global(*),
 		.footer {
 			margin-inline-start: auto;
