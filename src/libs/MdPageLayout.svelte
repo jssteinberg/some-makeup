@@ -2,15 +2,16 @@
 	import Logo from "./Logo.svelte";
 
 	export let title = "Knut";
+	export let metaTitle;
 	export let lang;
-	export let date;
+	//export let date;
 	export let set = [];
 
 	$: langAttr = lang ?? set.includes("nb") ? "nb" : "";
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{metaTitle || title}</title>
 </svelte:head>
 
 {#if set.includes('logo')}
@@ -26,9 +27,6 @@
 	class={set.includes("typography") ? "typography" : undefined}
 >
 	<slot />
-	{#if date}
-		<p class="date"><time>{date[0]}</time></p>
-	{/if}
 </article>
 
 <style>
@@ -51,21 +49,22 @@
 		}
 	}
 
-	article.typography p.date,
 	article.typography :global(h1) {
-		font-family: var(--serif);
-		text-align: center;
 		text-transform: none;
 	}
 
 	article.typography :global(h1) {
 		/* Bigger size, same leading */
-		--h1-line-height: 1.25;
-		font-size: calc(1em * (1 + var(--added-lead, 0.6)) / var(--h1-line-height));
-		line-height: var(--h1-line-height);
-	}
-
-	article.typography :global(:not(h1, h2, h3, h4, h5, h6) strong) {
-		color: hsl(var(--fg-h), var(--fg-s), calc(5% + var(--fg-l)));
+		--internal-h-added-lead: .2;
+		--internal-h-line-height: calc(
+			1 +
+			var(--h1-added-lead, var(--internal-h-added-lead))
+		);
+		font-size: calc(
+			var(--h1-min-font-size, 1em)
+			* (1 + var(--added-lead, .6)) /
+			var(--internal-h-line-height)
+		);
+		line-height: var(--internal-h-line-height);
 	}
 </style>

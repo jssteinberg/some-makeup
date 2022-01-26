@@ -20,9 +20,9 @@
 				{/if}
 
 				<span
-					class="post-title link"
+					class="post-title"
 					lang={post.metadata?.lang ? post.metadata.lang : undefined}
-					>{post.title}</span
+					>{@html post.title}</span
 				>
 
 				{#if post.metadata?.date}
@@ -41,7 +41,7 @@
 		padding: 0;
 	}
 
-	.posts a {
+	a {
 		--padding-block: calc(0.5 * var(--spacer, 1rem));
 		--min-height: calc(var(--TOUCH-TARGET-MIN-SIZE) - var(--padding-block) * 2);
 
@@ -57,20 +57,24 @@
 		transition: background .25s;
 	}
 
-	.posts a:hover {
+	a:hover {
 		background: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.03);
 	}
 
-	.posts a:focus {
-		outline: 2px solid hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.06);
+	a:focus {
 		background: linear-gradient(
 			-160deg,
 			hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.025),
 			hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.045)
 		);
+		outline: 2px solid hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.1);
+	}
+
+	a:active {
+		background: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.1);
 	}
 
 	.post-title {
-		text-transform: uppercase;
+		font-weight: bold;
 	}
 </style>

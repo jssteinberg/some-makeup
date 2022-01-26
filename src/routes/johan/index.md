@@ -1,6 +1,6 @@
 ---
 title: Johan Sebergsen Steinberg
-set: ["nb"]
+lang: nb
 ---
 
 # Johan Sebergsen Steinberg
@@ -9,7 +9,7 @@ set: ["nb"]
 
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
-	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, "$1");
+	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
 	export async function load({ page }) {
 		const data = Object.keys(markdownFiles)

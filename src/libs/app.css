@@ -39,6 +39,9 @@ small { font-size: .8em; }
 code { font-size: .95em; }
 pre code { font-size: .875em; }
 
+/* Font weight adjustment */
+h1 { font-weight: 800; font-weight: 900; }
+
 /* Link */
 a, .link {
 	color: inherit;
@@ -82,4 +85,8 @@ blockquote {
 	align-items: center;
 	min-height: var(--el-min-size);
 	min-width: var(--el-min-size);
+}
+
+pre {
+	overflow-y: auto;
 }

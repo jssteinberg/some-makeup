@@ -60,4 +60,8 @@ set: ['nb', 'typography']
 		display: block;
 		margin: var(--spacer, 1rem) 0;
 	}
+
+	strong {
+		color: hsl(var(--fg-h), var(--fg-s), calc(5% + var(--fg-l)));
+	}
 </style>

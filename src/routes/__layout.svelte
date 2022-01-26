@@ -9,7 +9,7 @@
 	<link rel="canonical" href={`https://some.makeup${$page.path}`} />
 </svelte:head>
 
-<main class={$page.path.replace(/^\//, "")}>
+<main class={$page.path.replace(/^\//, "") || 'home'}>
 	{#if $page.path === "/"}
 		<h1>
 			<a href="/" sveltekit:prefetch>
@@ -58,10 +58,16 @@
 
 <style>
 	:global(h1),
+	main.home :global(.posts),
+	h2,
+	a {
+		text-align: center;
+	}
+
+	main.home :global(.posts),
 	h2,
 	a {
 		font-weight: normal;
-		text-align: center;
 		text-transform: uppercase;
 	}
 
