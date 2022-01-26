@@ -5,7 +5,7 @@ date: ['2022-01-26']
 set: ['logo', 'typography']
 ---
 
-# Gradient Text: **Overused Yet?**
+# Gradient Text:<br aria-hidden> **Overused Yet?**
 
 The CSS code for gradient text has become too simple---**everyone's doing it!**
 
