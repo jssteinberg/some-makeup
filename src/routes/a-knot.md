@@ -10,10 +10,7 @@ Daidalos
 		color: red;
 	}
 
-	:global(main.knut) {
+	:global(main.a-knot) {
 		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 	}
 </style>

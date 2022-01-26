@@ -9,7 +9,7 @@ const rootPages = () => {
 			filePath: path,
 			slug: getSlug(path),
 			path: `/${getSlug(path)}`,
-			title: mdFiles[path].metadata?.title || getSlug(path),
+			title: mdFiles[path].metadata?.title || getSlug(path).replace(/-/, ' '),
 			date: mdFiles[path].metadata?.date[0] ? new Date(mdFiles[path].metadata.date[0]) : null,
 			metadata: mdFiles[path].metadata,
 		}));
