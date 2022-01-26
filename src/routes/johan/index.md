@@ -1,45 +1,11 @@
 ---
 title: Johan Sebergsen Steinberg
-lang: nb
+set: ["nb"]
 ---
 
 # Johan Sebergsen Steinberg
 
-<ul class="posts">
-	{#each posts as post}
-	<li>
-		<a
-			id={post.title.toLowerCase()}
-			href={post.path}
-			sveltekit:prefetch
-			>
-
-			<span class="post-title link" lang={post.metadata?.lang ? post.metadata.lang : undefined}>{post.title}</span>
-
-			{#if post.metadata?.date}
-				<span class="date">
-					<time>{post.metadata.date[0]}</time>
-				</span>
-			{/if}
-
-		</a>
-	</li>
-	{/each}
-</ul>
-
-<style>
-	.posts {
-		list-style: none;
-		padding: 0;
-	}
-
-	.posts a { text-decoration: none; }
-
-	.posts .date {
-		display: block;
-		font-size: .8em;
-	}
-</style>
+<PostList {posts} />
 
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
@@ -67,5 +33,6 @@ lang: nb
 </script>
 
 <script>
+	import PostList from "../../libs/PostList.svelte";
 	export let posts;
 </script>
