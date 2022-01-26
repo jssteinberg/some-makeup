@@ -89,6 +89,7 @@ blockquote {
 
 pre {
 	overflow-y: auto;
-	white-space: pre;
 	overflow-wrap: normal;
+	padding: var(--spacer, 1rem) 0;
+	white-space: pre;
 }
