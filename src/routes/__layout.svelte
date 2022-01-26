@@ -16,12 +16,12 @@
 				<Logo />
 			</a>
 		</h1>
-	<!-- {:else} -->
-	<!-- 	<p> -->
-	<!-- 		<a href="/"> -->
-	<!-- 			<Logo /> -->
-	<!-- 		</a> -->
-	<!-- 	</p> -->
+	{:else if $page.path.match(/^\/johan/)}
+		<p>
+			<a href="/">
+				<Logo text={false} />
+			</a>
+		</p>
 	{/if}
 
 	<slot />
