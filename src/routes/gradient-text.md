@@ -71,10 +71,6 @@ When is this rolled back?
 		}
 	}
 
-	h1 strong {
-		display: block;
-	}
-
 	strong {
 		text-transform: uppercase;
 	}
