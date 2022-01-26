@@ -33,7 +33,7 @@ When is this rolled back?
 		background-image: linear-gradient(
 			90deg, teal, skyblue);
 		color: transparent;
-		-webkit-background-clip: text;
+		background-clip: text;
 	}
 
 	h1 {
