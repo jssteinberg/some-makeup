@@ -87,7 +87,7 @@ When is this rolled back?
 		-webkit-background-clip: text;
 	}
 
-	:global(main.gradient-text article) {
-		width: min(100%, calc(50rem + 15vw));
+	:global(:root) {
+		--base-width: 55rem;
 	}
 </style>
