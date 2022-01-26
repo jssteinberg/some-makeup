@@ -27,6 +27,10 @@ Do we think everyone should be able to code now? Like everyone should code their
 
 When is this rolled back?
 
+---
+
+*__Developer note.__ Safari does not like block elements within an element with gradient text.*
+
 <style>
 	h1 {
 		/* Gradient text. This is a problem: */
