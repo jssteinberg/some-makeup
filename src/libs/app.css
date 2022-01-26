@@ -65,8 +65,8 @@ hr {
 	display: block;
 	margin: var(--block-start-size) auto;
 	padding: 0;
-	width: var(--decor-width, 1px);
-	height: var(--sep-size);
+	height: var(--decor-width, 1px);
+	width: var(--sep-size);
 }
 
 /* Blockquote */
