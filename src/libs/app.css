@@ -90,6 +90,5 @@ blockquote {
 pre {
 	overflow-y: auto;
 	white-space: pre;
-	hyphens: manual; /* 4 */
-	/*overflow-wrap: break-word; /* 5 */
+	overflow-wrap: normal;
 }
