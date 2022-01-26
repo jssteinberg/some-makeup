@@ -49,6 +49,12 @@
 		}
 	}
 
+	@media (min-width: 1500px) {
+		article.typography {
+			--font-size: 1.125rem;
+		}
+	}
+
 	article.typography :global(h1) {
 		text-transform: none;
 	}
