@@ -14,9 +14,9 @@
 </script>
 
 <script>
-	import MetaTags from "src/libs/MetaTags.svelte";
-	import AccentHue from "src/libs/AccentHue.svelte";
-	import PostList from "src/libs/PostList.svelte";
+	import MetaTags from "/src/libs/MetaTags.svelte";
+	import AccentHue from "/src/libs/AccentHue.svelte";
+	import PostList from "/src/libs/PostList.svelte";
 
 	export let posts;
 

@@ -4,7 +4,9 @@ date: ['2021-12-20']
 set: ['featured','logo']
 ---
 
-# Dice
+# CSS Dice
+
+Playing with my CSS dice.
 
 <div class="wrapper">
 	<Dice bg hue={deg} />
@@ -28,10 +30,12 @@ set: ['featured','logo']
 </form>
 
 <AccentHue hue={deg} />
+<GradientPostStyle hue={deg} />
 
 <script>
 	import Dice from '../libs/css-dice/dice.svelte';
 	import AccentHue from '../libs/AccentHue.svelte';
+	import GradientPostStyle from '/src/libs/GradientPostStyle.svelte';
 	import '../libs/app-input.css';
 
 	let deg = 358.7;
@@ -39,7 +43,6 @@ set: ['featured','logo']
 
 <style>
 	h1 {
-		font-size: 2em;
 		font-family: var(--serif, serif);
 		font-weight: normal;
 		text-transform: none;
