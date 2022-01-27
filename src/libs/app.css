@@ -58,7 +58,7 @@ ul { list-style: square; }
 /* Horizontal rule */
 hr::before, hr::after { all: unset; }
 hr {
-	--block-start-size: calc(3 * var(--spacer, 1rem));
+	--block-start-size: calc(2 * var(--spacer, 1rem));
 	--sep-size: calc(2 * var(--spacer, 1rem));
 	all: unset;
 	background: currentColor;
