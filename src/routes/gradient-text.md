@@ -41,7 +41,8 @@ h1.gradient-text {
 	h1 {
 		--h1-min-font-size: 2em;
 
-		padding: calc(2 * var(--spacer, 1rem)) 0;
+		margin-block-end: calc(2 * var(--spacer, 1rem));
+		padding-block-end: calc(1 * var(--spacer, 1rem));
 		position: relative;
 		text-align: start;
 	}
@@ -50,13 +51,12 @@ h1.gradient-text {
 		content: '';
 		display: block;
 		position: absolute;
-		top: 0; left: 0; right: 0;
-		height: .1em;
-		background-image: linear-gradient(
-			90deg,
-			teal,
-			skyblue
-		);
+		bottom: 0; left: 0; right: 0;
+		height: .1ex;
+		background-image:
+			linear-gradient(
+				90deg, teal, skyblue
+			);
 	}
 
 	@media (min-width: 900px) {
