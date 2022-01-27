@@ -84,4 +84,9 @@ h1.gradient-text {
 	:global(:root) {
 		--base-width: 55rem;
 	}
+
+	:global(.token.function),
+	:global(.token.property) {
+		font-weight: bold;
+	}
 </style>

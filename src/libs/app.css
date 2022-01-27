@@ -91,5 +91,6 @@ pre {
 	overflow-y: auto;
 	overflow-wrap: normal;
 	padding: var(--spacer, 1rem) 0;
+	tab-size: 2;
 	white-space: pre;
 }
