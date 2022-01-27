@@ -58,6 +58,7 @@
 	@media (min-width: 1200px) {
 		article.typography {
 			--font-size: 1rem;
+			--h1-min-font-size: 2rem;
 		}
 	}
 
