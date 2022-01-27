@@ -1,11 +1,11 @@
 ---
-title: 'Gradient Text:<br aria-hidden="true"> Overused Yet?'
-metaTitle: 'Gradient Text: Overused Yet?'
+title: 'Gradient CSS Text:<br aria-hidden="true"> Overused Yet?'
+metaTitle: 'Gradient CSS Text: Overused Yet?'
 date: ['2022-01-26']
 set: ['logo', 'typography']
 ---
 
-# Gradient Text:<br aria-hidden> **Overused Yet?**
+# Gradient CSS Text:<br aria-hidden> **Overused Yet?**
 
 The CSS code for gradient text has become too simple---**everyone's doing it!**
 
@@ -14,8 +14,10 @@ Look at it! Fancy CSS has never been this simple:
 
 ```css
 h1.gradient-text {
-	background-image: linear-gradient(
-		90deg, teal, skyblue);
+	background-image:
+		linear-gradient(
+			90deg, teal, skyblue
+		);
 	color: transparent;
 	-webkit-background-clip: text;
 }
@@ -28,8 +30,10 @@ h1.gradient-text {
 <style>
 	h1 {
 		/* Gradient text. This is a problem: */
-		background-image: linear-gradient(
-			90deg, teal, skyblue);
+		background-image:
+			linear-gradient(
+				90deg, teal, skyblue
+			);
 		color: transparent;
 		background-clip: text;
 	}
