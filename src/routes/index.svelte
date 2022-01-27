@@ -14,26 +14,21 @@
 </script>
 
 <script>
-	import AccentHue from "../libs/AccentHue.svelte";
-	import PostList from "../libs/PostList.svelte";
+	import MetaTags from "src/libs/MetaTags.svelte";
+	import AccentHue from "src/libs/AccentHue.svelte";
+	import PostList from "src/libs/PostList.svelte";
 
 	export let posts;
 
 	let hue = 358.7;
 </script>
 
-<svelte:head>
-	<title>Some Makeup</title>
-	<meta
-		name="description"
-		content={`
-		Presenting the ideas of Johan Sebergsen Steinberg—frontend, design or
-		societally related—with some makeup.
-	`
-			.trim()
-			.replace(/[\n\t]/g, " ")}
-	/>
-</svelte:head>
+<MetaTags
+	data={{
+		title: `Some Makeup`,
+		description: `Makeup frontend, design and life.`,
+	}}
+/>
 
 <PostList {posts} />
 <AccentHue {hue} />
