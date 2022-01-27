@@ -21,12 +21,6 @@ h1.gradient-text {
 }
 ```
 
-It doesn't even need syntax highlighting!
-
-Do we think everyone should be able to code now? Like everyone should code their own website? Gradient text wouldn't even make it bloated now!
-
-When is this rolled back?
-
 ---
 
 *__Developer note.__ Safari does not like block elements within an element with gradient text.*
