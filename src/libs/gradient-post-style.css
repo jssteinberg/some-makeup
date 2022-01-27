@@ -1,4 +1,4 @@
-h1 {
+:root.gradient-post-style h1 {
 	--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);
 	--to: hsla(var(--gradient-base-hue, 180), 50%, 50%, 1);
 	/* Gradient text. This is a problem: */
@@ -7,7 +7,7 @@ h1 {
 	background-clip: text;
 }
 
-h1 {
+:root.gradient-post-style h1 {
 	font-size: 3em;
 	--h1-min-font-size: 2em;
 
@@ -17,7 +17,7 @@ h1 {
 	text-align: start;
 }
 
-h1::before {
+:root.gradient-post-style h1::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -29,25 +29,25 @@ h1::before {
 }
 
 @media (min-width: 900px) {
-	h1 {
+	:root.gradient-post-style h1 {
 		font-size: 4em;
 		--h1-min-font-size: 3em;
 	}
 }
 
 @media (min-width: 1500px) {
-	h1 {
+	:root.gradient-post-style h1 {
 		font-size: 5em;
 		--h1-added-lead: 0;
 		--h1-min-font-size: 4em;
 	}
 }
 
-strong {
+:root.gradient-post-style strong {
 	text-transform: uppercase;
 }
 
-:not(h1) > strong {
+:root.gradient-post-style :not(h1) > strong {
 	--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);
 	font-weight: 800;
 	font-weight: 900;
@@ -56,6 +56,6 @@ strong {
 	-webkit-background-clip: text;
 }
 
-:root {
+:root.gradient-post-style {
 	--base-width: 55rem;
 }
