@@ -1,25 +1,27 @@
 ---
-title: Minimal Buttons
+title: Simple Shadow-Beneath Buttons
 date: ['2022-01-09']
 set: ['typography','logo']
 ---
 
-# Minimal Buttons
+# Simple Shadow-Beneath Buttons
 
-*A minimal flexible button design that can respect typographic sizes and usability.*
+Simple buttons with shadow beneath.
 
-What is the bare minimum that distinguishes something as a button in any digital context?
+A11y requirements: 48px min size and focus. Also avoid `disabled` attribute (use `aria-disabled`), but it must still be allowed, e.g., for pagination. ([Css-tricks.com/making-disabled-buttons-more-inclusive](//css-tricks.com/making-disabled-buttons-more-inclusive)) ([Some alternative solutions](//stories.justinewin.com/disabled-buttons-dont-have-to-suck-10da0bb6d37e).)
 
-Rounded corners or shadow. With only shadow, even square buttons to a button. Shadow wins!
+---
 
-Light button backgrounds with dark text are more iffy. Hence, here I focus on dark backgrounds and white text.
-
-There are some a11y requirements: 48px min size and focus.
+Regular and primary:
 
 <p>
 <Button>Regular button</Button>
 <Button primary>Primary button</Button>
+<Button trueDisabled>Regular disabled</Button>
+<Button primary disabled>Primary disabled</Button>
 </p>
+
+More lines:
 
 <p>
 <Button>Regular button with<br>line break</Button>
@@ -30,7 +32,10 @@ With rounded corners:
 <p>
 <Button class="button--border-radius">Regular button</Button>
 <Button class="button--border-radius" primary>Primary button</Button>
+<Button class="button--border-radius" disabled>Regular disabled</Button>
+<Button class="button--border-radius" primary disabled>Primary disabled</Button>
 </p>
+
 
 Any HSL's hue and saturation:
 
@@ -48,7 +53,7 @@ Any HSL's hue and saturation:
 <Button class="button--border-radius" hue=300>Regular button</Button>
 </p>
 
-Pill shape and reduce shadow:
+Pill-shape and reduce shadow:
 
 <p>
 <Button class="button--pill-radius" hue=0>Regular button</Button>
