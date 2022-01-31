@@ -6,6 +6,7 @@
 	$: canonical = data.canonical;
 	$: author = data.author;
 	$: image = data.image;
+	$: alt = data.alt;
 	$: keywords = data.keywords;
 </script>
 
@@ -25,8 +26,8 @@
 	{/if}
 
 	{#if canonical}
-		<meta name="url" content={canonical} />
 		<link rel="canonical" href={canonical} />
+		<meta name="url" content={canonical} /><!-- Where did I get this from? -->
 	{/if}
 
 	{#if author}
@@ -34,10 +35,15 @@
 	{/if}
 
 	{#if image}
-		<meta itemprop="image" content={image} />
 		<link rel="image_src" href={image} />
+		<meta itemprop="image" content={image} />
 		<meta property="twitter:image" content={image} />
 		<meta property="og:image" content={image} />
+		<!-- Alt text //www.stefanjudis.com/today-i-learned/how-to-define-open-graph-twitter-image-alt-text-and-why-it-might-not-matter -->
+		{#if title}
+			<meta property="twitter:image:alt" content={alt ?? title} />
+			<meta property="og:image:alt " content={alt ?? title} />
+		{/if}
 	{/if}
 
 	{#if keywords}
