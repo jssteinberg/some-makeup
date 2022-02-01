@@ -1,8 +1,8 @@
 /* loSplash.js - A splash of FP util functions. */
 
-/** Fn returns a value in an object from key.
+/** Fn returns an object property's value from a key string.
  * @arg {object} obj
- * @arg {string} key - `parentKey.key`, so use `.` to seperate keys.
+ * @arg {string} key - `parentKey.key`. Use `.` to separate keys.
  * @arg {number} [i] - index of value to return, if value is array.
  * @return {any}
  */
@@ -13,3 +13,9 @@ export const getValue = (obj, key, i=null) => {
 
 	return val && typeof i === `number` ? val[i] : val
 }
+
+/** Fn returns an immutable object from object.
+ * @arg {object} obj
+ * @return {object}
+ */
+export const factory = obj => Object.freeze(obj)
