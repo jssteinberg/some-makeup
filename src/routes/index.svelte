@@ -30,5 +30,5 @@
 	}}
 />
 
-<PostList {posts} />
+<PostList posts={[...posts, { title: 'WIP', path: '/wip' }]} />
 <AccentHue {hue} />

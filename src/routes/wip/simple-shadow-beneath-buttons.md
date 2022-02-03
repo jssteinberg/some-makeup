@@ -78,7 +78,7 @@ Pill-shape and reduce shadow:
 
 
 <script>
-	import Button from '../libs/Button.svelte';
+	import Button from '../../libs/Button.svelte';
 </script>
 
 <style>
