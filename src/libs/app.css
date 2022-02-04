@@ -17,7 +17,7 @@
 	--fg-s: 0%;
 	--fg-l: 85%;
 	--fg: hsl(var(--fg-h),var(--fg-s),var(--fg-l));
-	--bg: hsl(0,0%,5%);
+	--bg: hsl(0,0%,6.5%);
 
 	background-color: var(--bg);
 	font-family: var(--sans);
