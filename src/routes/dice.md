@@ -2,6 +2,7 @@
 title: CSS Dice
 date: ['2021-12-20']
 set: ['featured','logo']
+tags: ['css','3d']
 ---
 
 # CSS Dice
