@@ -32,3 +32,10 @@
 
 <PostList posts={[...posts, { title: 'WIP', path: '/wip' }]} />
 <AccentHue {hue} />
+
+<style>
+	:global(main.home) {
+		width: calc(var(--base-width) - 20rem);
+		margin: 0 auto;
+	}
+</style>

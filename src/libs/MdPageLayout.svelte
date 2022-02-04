@@ -42,6 +42,14 @@
 </article>
 
 <style>
+	article > :global(:where(*:not(hr))) {
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		padding-inline-start: var(--body-gap);
+		padding-inline-end: var(--body-gap);
+		width: min(100%, var(--base-width));
+	}
+
 	article.typography {
 		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.6));
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT));

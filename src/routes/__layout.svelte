@@ -80,23 +80,6 @@
 			font-variant: small-caps;
 			text-transform: lowercase;
 		}
-
-		/* Content width */
-		main > :global(*),
-		.footer {
-			margin-inline-start: auto;
-			margin-inline-end: auto;
-		}
-		main > :global(*) {
-			padding-inline-start: var(--body-gap, 5vw);
-			padding-inline-end: var(--body-gap, 5vw);
-			width: min(100%, calc(var(--base-width, 40rem) + 15vw));
-		}
-		.footer {
-			padding-inline-start: 5vw;
-			padding-inline-end: 5vw;
-			width: min(100%, calc(40rem + 15vw));
-		}
 	}
 
 	main {
@@ -106,6 +89,7 @@
 
 	.footer {
 		font-size: 16px;
+		padding: 0 var(--body-gap, 1rem);
 		text-align: center;
 
 		display: flex;

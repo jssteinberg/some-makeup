@@ -9,10 +9,15 @@
 
 	--added-lead: .5;
 	--spacer: 1rem;
+
+	--base-width: calc(40rem + 15vw);
+	--body-gap: max(1rem, 6vw);
 	--decor-width: 2px;
+
 	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 	--serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
+
 	--fg-h: 0;
 	--fg-s: 0%;
 	--fg-l: 85%;
@@ -30,7 +35,7 @@
 body {
 	color: var(--fg); /* Set color on body (not root)---Safari fix for dynamic dark/light mode changing. */
 	margin: 0;
-	padding: var(--spacer, 1rem);
+	padding: 0;
 }
 
 /* Font size adjustment */

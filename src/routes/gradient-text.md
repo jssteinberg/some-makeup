@@ -17,7 +17,7 @@ Look at it! Fancy CSS has never been this simple:
 h1.gradient-text {
 	background-image:
 		linear-gradient(
-			90deg, teal, skyblue
+			90deg, var(--from), var(--to)
 		);
 	color: transparent;
 	-webkit-background-clip: text;
@@ -35,8 +35,21 @@ h1.gradient-text {
 </script>
 
 <style>
-	:global(:root) {
-		--base-width: 55rem;
+	:global(main.gradient-text article) {
+		--article-width: min(100%, calc(var(--base-width) + 20rem + 5vw));
+		width: var(--article-width);
+		margin: 0 auto;
+	}
+
+	h1 {
+		padding-inline-start: var(--body-gap, 5vw);
+		padding-inline-end: var(--body-gap, 5vw);
+		width: var(--article-width);
+	}
+
+	:global(main.gradient-text article > :where(:not(hr):not(h1))) {
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 	}
 
 	:global(.token.function),

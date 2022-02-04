@@ -6,6 +6,8 @@ set: ['nb', 'typography']
 
 # Johans jobbår 2021
 
+<div class="wrapper">
+
 **Ny jobb**
 - Jeg startet å jobbe med Utdanning.no i august, med nye, gode kolleger i Direktoratet for høyere utdanning og kompetanse!
 - Jeg er særlig fornøyd med å bli tatt godt imot og se at kompetansen min blir satt pris på.
@@ -34,8 +36,10 @@ set: ['nb', 'typography']
 - Jeg overførte arbeid og oppgaver før avslutning.
 - Det har vært en stilling jeg har vokste mye i; som ga meg mye ansvar, frihet og muligheter, og; som jeg trivdes veldig godt i.
 
+</div>
+
 <style>
-	ul {
+	.wrapper ul {
 		list-style: inside square;
 		padding: 0;
 	}

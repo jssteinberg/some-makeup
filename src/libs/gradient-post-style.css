@@ -11,19 +11,26 @@
 	font-size: 3em;
 	--h1-min-font-size: 2em;
 
-	margin-block-end: calc(2.5 * var(--spacer, 1rem));
-	padding-block-end: calc(1.5 * var(--spacer, 1rem));
+	margin-block-end: calc(3.5 * var(--spacer, 1rem));
+	padding-block-end: calc(3.5 * var(--spacer, 1rem));
 	position: relative;
 }
 
 :root.gradient-post-style h1::after {
+	--block-start-size: calc(4 * var(--spacer, 1rem));
+	--sep-size: calc(2 * var(--spacer, 1rem));
+
 	content: "";
 	display: block;
 	position: absolute;
-	right: 0; bottom: 0;
-	height: calc(.5 * var(--spacer, 1rem));
-	width: 50%;
-	background: linear-gradient(90deg, var(--from), var(--to));
+	right: 0; bottom: 0; left: 0;
+	background: linear-gradient(var(--from), var(--to));
+
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: var(--decor-width);
+	height: var(--sep-size);
 }
 
 @media (min-width: 900px) {
@@ -33,7 +40,7 @@
 	}
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
 	:root.gradient-post-style h1 {
 		font-size: 5em;
 		--h1-added-lead: 0;
