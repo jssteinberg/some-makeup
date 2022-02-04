@@ -40,6 +40,10 @@ h1.gradient-text {
 
 	:global(.token.function),
 	:global(.token.property) {
+		--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);
+		background-clip: text;
+		background-image: linear-gradient(90deg, var(--from), var(--fg, white));
+		color: transparent;
 		font-weight: bold;
 	}
 </style>

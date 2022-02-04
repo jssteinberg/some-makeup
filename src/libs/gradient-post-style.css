@@ -11,20 +11,18 @@
 	font-size: 3em;
 	--h1-min-font-size: 2em;
 
-	margin-block-end: calc(2 * var(--spacer, 1rem));
-	padding-block-end: calc(1 * var(--spacer, 1rem));
+	margin-block-end: calc(2.5 * var(--spacer, 1rem));
+	padding-block-end: calc(1.5 * var(--spacer, 1rem));
 	position: relative;
-	text-align: start;
 }
 
-:root.gradient-post-style h1::before {
+:root.gradient-post-style h1::after {
 	content: "";
 	display: block;
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 0.1ex;
+	right: 0; bottom: 0;
+	height: calc(.5 * var(--spacer, 1rem));
+	width: 50%;
 	background: linear-gradient(90deg, var(--from), var(--to));
 }
 
@@ -49,11 +47,11 @@
 
 :root.gradient-post-style :not(h1) > strong {
 	--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);
-	font-weight: 800;
-	font-weight: 900;
+	background-clip: text;
 	background-image: linear-gradient(90deg, var(--from), var(--fg, white));
 	color: transparent;
-	-webkit-background-clip: text;
+	font-weight: 800;
+	font-weight: 900;
 }
 
 :root.gradient-post-style {
