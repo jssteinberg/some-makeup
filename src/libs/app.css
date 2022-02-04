@@ -19,11 +19,11 @@
 	--fg: hsl(var(--fg-h),var(--fg-s),var(--fg-l));
 	--bg: hsl(0,0%,5%);
 
-	background: var(--bg);
+	background-color: var(--bg);
 	font-family: var(--sans);
 
 	/* For animating backgrounds */
-	transition: background .75s ease;
+	transition: background-color .75s ease;
 	min-height: 100vh; /* Too avoid bg clip on bg change */
 }
 
