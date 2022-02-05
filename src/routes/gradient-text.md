@@ -37,19 +37,12 @@ h1.gradient-text {
 <style>
 	:global(main.gradient-text article) {
 		--article-width: min(100%, calc(var(--base-width) + 20rem + 5vw));
-		width: var(--article-width);
-		margin: 0 auto;
 	}
 
 	:global(main.gradient-text) h1 {
 		padding-inline-start: var(--body-gap, 5vw);
 		padding-inline-end: var(--body-gap, 5vw);
 		width: var(--article-width);
-	}
-
-	:global(main.gradient-text article > :where(:not(hr):not(h1))) {
-		margin-inline-start: 0;
-		margin-inline-end: 0;
 	}
 
 	:global(.token.function),
