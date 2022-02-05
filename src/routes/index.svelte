@@ -36,6 +36,7 @@
 <style>
 	:global(main.home) {
 		width: calc(var(--base-width) - 20rem);
-		margin: 0 auto;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
 	}
 </style>
