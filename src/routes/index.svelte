@@ -30,12 +30,15 @@
 	}}
 />
 
-<PostList posts={[...posts, { title: 'WIP', path: '/wip' }]} />
+<div class="links">
+	<PostList posts={[...posts, { title: 'WIP', path: '/wip' }]} />
+</div>
+
 <AccentHue {hue} />
 
 <style>
-	:global(main.home) {
-		width: calc(var(--base-width) - 20rem);
+	.links {
+		width: 20em;
 		margin-inline-start: auto;
 		margin-inline-end: auto;
 	}

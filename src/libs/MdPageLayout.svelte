@@ -45,8 +45,8 @@
 	article > :global(:where(*:not(hr))) {
 		margin-inline-start: auto;
 		margin-inline-end: auto;
-		padding-inline-start: var(--body-gap);
-		padding-inline-end: var(--body-gap);
+		padding-inline-start: var(--body-gap-inline);
+		padding-inline-end: var(--body-gap-inline);
 		width: min(100%, var(--base-width));
 	}
 

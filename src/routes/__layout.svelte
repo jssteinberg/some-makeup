@@ -89,7 +89,7 @@
 
 	.footer {
 		font-size: 16px;
-		padding: 0 var(--body-gap, 1rem);
+		padding: 0 var(--body-gap-inline, 16px);
 		text-align: center;
 
 		display: flex;

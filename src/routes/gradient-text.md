@@ -40,8 +40,8 @@ h1.gradient-text {
 	}
 
 	:global(main.gradient-text) h1 {
-		padding-inline-start: var(--body-gap, 5vw);
-		padding-inline-end: var(--body-gap, 5vw);
+		padding-inline-start: var(--body-gap-inline, 1rem);
+		padding-inline-end: var(--body-gap-inline, 1rem);
 		width: var(--article-width);
 	}
 

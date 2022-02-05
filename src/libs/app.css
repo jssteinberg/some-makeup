@@ -11,7 +11,7 @@
 	--spacer: 1rem;
 
 	--base-width: calc(40rem + 15vw);
-	--body-gap: max(1rem, 6vw);
+	--body-gap-inline: 6vw;
 	--decor-width: 2px;
 
 	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
