@@ -41,7 +41,7 @@ h1.gradient-text {
 		margin: 0 auto;
 	}
 
-	h1 {
+	:global(main.gradient-text) h1 {
 		padding-inline-start: var(--body-gap, 5vw);
 		padding-inline-end: var(--body-gap, 5vw);
 		width: var(--article-width);
