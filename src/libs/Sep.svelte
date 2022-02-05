@@ -22,9 +22,9 @@
 		--sep-size: calc(2 * var(--spacer, 1rem));
 
 		all: unset;
-		background: currentColor;
+		background: var(--sep-color);
 		display: block;
-		margin: var(--block-start-size) auto;
+		margin: calc(2 * var(--block-start-size)) auto var(--block-start-size);
 		padding: 0;
 		width: var(--decor-width);
 		height: var(--sep-size);

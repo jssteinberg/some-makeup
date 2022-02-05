@@ -1,6 +1,7 @@
 <script>
 	import "../libs/app.css";
 	import { page } from "$app/stores";
+	import Sep from "../libs/Sep.svelte";
 	import Logo from "../libs/Logo.svelte";
 </script>
 
@@ -26,10 +27,7 @@
 	<slot />
 </main>
 
-<span aria-hidden="true" class="sep">
-	<Logo text={false} />
-</span>
-
+<Sep />
 <footer class="footer">
 	<h2>
 		<a
@@ -98,10 +96,5 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1ch;
-	}
-
-	.sep {
-		display: block;
-		margin-block-start: calc(6 * var(--spacer, 1rem));
 	}
 </style>

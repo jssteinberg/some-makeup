@@ -1,5 +1,8 @@
-:root.gradient-post-style h1 {
+:root.gradient-post-style {
 	--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);
+}
+
+:root.gradient-post-style h1 {
 	--to: hsla(var(--gradient-base-hue, 180), 50%, 50%, 1);
 	/* Gradient text. This is a problem: */
 	background-image: linear-gradient(90deg, var(--from), var(--to));
