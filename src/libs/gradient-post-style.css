@@ -51,11 +51,11 @@
 	}
 }
 
-:root.gradient-post-style strong {
+:root.gradient-post-style :where(h2,strong) {
 	text-transform: uppercase;
 }
 
-:root.gradient-post-style :not(h1) > strong {
+:root.gradient-post-style :where(h2){
 	--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);
 	background-clip: text;
 	background-image: linear-gradient(90deg, var(--from), var(--fg, white));
