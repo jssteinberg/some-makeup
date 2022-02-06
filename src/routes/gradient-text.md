@@ -26,7 +26,10 @@ h1.gradient-text {
 
 ---
 
-*__Developer note.__ Safari does not like block elements within an element with gradient text.*
+## Developer notes
+
+- Safari does not like block elements within an element with gradient text.
+- Safari, again, will no break inline gradient elements to new line.
 
 <GradientPostStyle />
 
