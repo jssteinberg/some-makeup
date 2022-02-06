@@ -61,9 +61,10 @@ a, .link {
 }
 
 /* List styles */
-ol { list-style: inside decimal; }
-ul { list-style: inside square; }
-ol, ul { padding-inline-start: 1em; }
+:where(ol,ul) { padding: 0; }
+:where(ol,ul) :where(ol,ul) { padding-inline-start: 1em; }
+ol { list-style: decimal inside; }
+ul { list-style: square inside; }
 
 /* Horizontal rule */
 hr {
@@ -81,7 +82,6 @@ hr::before {
 	border: var(--decor-width) solid;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(
-		90deg,
 		var(
 			--from,
 			hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * .3))
@@ -95,7 +95,7 @@ hr::before {
 	left: calc(50% + var(--size) * -.5 - var(--decor-width) / 2);
 	width: var(--size);
 	height: var(--size);
-	transform: rotate(45deg);
+	transform: rotate(-225deg);
 }
 
 /* Blockquote */
