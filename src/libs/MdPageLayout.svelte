@@ -36,7 +36,7 @@
 
 <article
 	lang={langAttr}
-	class={set.includes("typography") ? "typography" : undefined}
+	class={set.includes("typography") ? "typography post" : "post"}
 >
 	<slot />
 </article>
