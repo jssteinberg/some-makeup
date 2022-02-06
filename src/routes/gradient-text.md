@@ -8,10 +8,7 @@ tags: ['css']
 
 # Gradient CSS Text:<br aria-hidden> **Overused Yet?**
 
-The CSS code for gradient text has become too simple---**everyone's doing it!**
-
-Look at it! Fancy CSS has never been this simple:
-
+The CSS code for gradient text has become too simple---**everyone's doing it!** Look at it! Fancy CSS has never been this simple:
 
 ```css
 h1.gradient-text {
@@ -56,4 +53,6 @@ h1.gradient-text {
 		color: transparent;
 		font-weight: bold;
 	}
+
+strong { text-transform: uppercase; }
 </style>
