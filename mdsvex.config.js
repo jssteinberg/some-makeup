@@ -1,7 +1,7 @@
 const config = {
   layout: {
-    //read: '/src/libs/MdTypographicLayout.svelte',
-    _: '/src/libs/MdPageLayout.svelte',
+    //read: '/src/libs/MdsvexReadingLayout.svelte',
+    _: '/src/libs/MdsvexLayout.svelte',
   },
   extensions: [".svelte.md", ".md", ".svx"],
 

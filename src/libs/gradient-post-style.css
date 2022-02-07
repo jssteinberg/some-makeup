@@ -3,13 +3,13 @@
 	--to: hsla(var(--gradient-base-hue, 180), 50%, 50%, 1);
 }
 
-:root.gradient-post-style .post h1 {
+:root.gradient-post-style .post :where(h1) {
 	background-image: linear-gradient(90deg, var(--from), var(--to));
 	color: transparent;
 	background-clip: text;
 }
 
-:root.gradient-post-style .post h1 {
+:root.gradient-post-style .post :where(h1) {
 	--h1-min-font-size: 2em;
 
 	margin-block-end: calc(3.5 * var(--spacer, 1rem));
@@ -17,11 +17,7 @@
 	position: relative;
 }
 
-:root.gradient-post-style .post:not(.typography) h1 {
-	font-size: 3em;
-}
-
-:root.gradient-post-style .post h1::after {
+:root.gradient-post-style .post :where(h1)::after {
 	--block-start-size: calc(4 * var(--spacer, 1rem));
 	--sep-size: calc(2 * var(--spacer, 1rem));
 
@@ -39,21 +35,15 @@
 }
 
 @media (min-width: 900px) {
-	:root.gradient-post-style .post h1 {
+	:root.gradient-post-style .post :where(h1) {
 		--h1-min-font-size: 3em;
 		--h1-added-lead: .1;
-	}
-	:root.gradient-post-style .post:not(.typography) h1 {
-		font-size: 4em;
 	}
 }
 
 @media (min-width: 1200px) {
-	:root.gradient-post-style .post h1 {
+	:root.gradient-post-style .post :where(h1) {
 		--h1-min-font-size: 4em;
-	}
-	:root.gradient-post-style .post:not(.typography) h1 {
-		font-size: 5em;
 	}
 }
 
@@ -61,7 +51,7 @@
 	text-transform: uppercase;
 }
 
-:root.gradient-post-style .post :where(h2){
+:root.gradient-post-style .post :where(h2) {
 	background-clip: text;
 	background-image: linear-gradient(90deg, var(--from), var(--fg, white));
 	color: transparent;

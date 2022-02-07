@@ -79,19 +79,4 @@
 	article.typography :global(h1) {
 		text-transform: none;
 	}
-
-	article.typography :global(h1) {
-		/* Bigger size, same leading */
-		--internal-h-added-lead: .15;
-		--internal-h-line-height: calc(
-			1 +
-			var(--h1-added-lead, var(--internal-h-added-lead))
-		);
-		font-size: calc(
-			var(--h1-min-font-size, 1em)
-			* (1 + var(--added-lead, .6)) /
-			var(--internal-h-line-height)
-		);
-		line-height: var(--internal-h-line-height);
-	}
 </style>
