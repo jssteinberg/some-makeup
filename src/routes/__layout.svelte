@@ -1,7 +1,7 @@
 <script>
 	import "../libs/app.css";
 	import { page } from "$app/stores";
-	import Sep from "../libs/Sep.svelte";
+	import Footer from "../libs/Footer.svelte";
 	import Logo from "../libs/Logo.svelte";
 </script>
 
@@ -9,7 +9,7 @@
 	<link rel="canonical" href={`https://some.makeup${$page.path}`} />
 </svelte:head>
 
-<main class={$page.path.replace(/^\//, "") || 'home'}>
+<main class={$page.path.replace(/^\//, "").replace(/\//g, "-") || 'home'}>
 	{#if $page.path === "/"}
 		<h1>
 			<a href="/" sveltekit:prefetch>
@@ -27,45 +27,21 @@
 	<slot />
 </main>
 
-<Sep />
-<footer class="footer">
-	<h2>
-		<a
-			sveltekit:prefetch
-			class="touch-target"
-			aria-current={$page.path === "/" ? "page" : undefined}
-			href="/"
-		>
-			Some Makeup
-		</a>
-	</h2>
-
-	<p>
-		{new Date().getFullYear()}
-	</p>
-
-	<p>
-		<a
-			class="touch-target"
-			sveltekit:prefetch
-			aria-current={$page.path === "/about" ? "page" : undefined}
-			href="/about"
-		>
-			?
-		</a>
-	</p>
-</footer>
+<Footer />
 
 <style>
+	h1 {
+		font-size: 1em;
+	}
+
 	:global(h1),
 	main.home :global(.posts),
-	h2,
 	a {
 		text-align: center;
 	}
 
 	main.home :global(.posts),
-	h2,
+	:global(.footer h2),
 	a {
 		font-weight: normal;
 		text-transform: uppercase;
@@ -74,27 +50,14 @@
 	@media (min-width: 600px) {
 		main.home :global(.post-title) {
 			/* Bigger size, same leading */
-			--line-height: 1.05;
-			font-size: calc(1em * (1 + var(--added-lead, 0.6)) / var(--line-height));
+			--line-height: 1.3;
+			font-size: calc(1em * var(--ROOT-LINE-HEIGHT, 1.2) / var(--line-height));
 			line-height: var(--line-height);
-			font-variant: small-caps;
-			text-transform: lowercase;
 		}
 	}
 
 	main {
 		margin: calc(2 * var(--spacer, 1em)) 0;
 		text-align: center;
-	}
-
-	.footer {
-		font-size: 16px;
-		padding: 0 var(--body-gap-inline, 16px);
-		text-align: center;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1ch;
 	}
 </style>

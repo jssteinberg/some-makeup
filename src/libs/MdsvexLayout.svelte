@@ -51,8 +51,7 @@
 	}
 
 	article.typography {
-		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.6));
-		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT));
+		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT, 1.6));
 
 		--font-size: clamp(1rem, 1rem + .55vw, 1.25rem);
 		--spacer: var(--RELATIVE-LINE-HEIGHT);

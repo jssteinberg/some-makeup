@@ -1,3 +1,17 @@
+<MetaTags
+	data={{
+		title: `Some Makeup`,
+		description: `Makeup frontend, design and life.`,
+	}}
+/>
+
+<Sep />
+<div class="links">
+	<PostList {posts} />
+</div>
+
+<AccentHue {hue} />
+
 <script context="module">
 	export const load = async ({ fetch }) => {
 		try {
@@ -17,24 +31,12 @@
 	import MetaTags from "/src/libs/MetaTags.svelte";
 	import AccentHue from "/src/libs/AccentHue.svelte";
 	import PostList from "/src/libs/PostList.svelte";
+	import Sep from "../libs/Sep.svelte";
 
 	export let posts;
 
 	let hue = 358.7;
 </script>
-
-<MetaTags
-	data={{
-		title: `Some Makeup`,
-		description: `Makeup frontend, design and life.`,
-	}}
-/>
-
-<div class="links">
-	<PostList posts={[...posts, { title: 'WIP', path: '/wip' }]} />
-</div>
-
-<AccentHue {hue} />
 
 <style>
 	.links {

@@ -18,13 +18,13 @@
 	}
 
 	* {
-		--block-start-size: calc(4 * var(--spacer, 1rem));
+		--block-start-size: calc(3.5 * var(--spacer, 1rem));
 		--sep-size: calc(2 * var(--spacer, 1rem));
 
 		all: unset;
 		background: var(--sep-color);
 		display: block;
-		margin: calc(2 * var(--block-start-size)) auto var(--block-start-size);
+		margin: calc(1.5 * var(--block-start-size)) auto var(--block-start-size);
 		padding: 0;
 		width: var(--decor-width);
 		height: var(--sep-size);

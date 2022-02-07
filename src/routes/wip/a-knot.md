@@ -10,7 +10,7 @@ Daidalos
 		color: red;
 	}
 
-	:global(main.a-knot) {
+	:global(main.wip-a-knot article) {
 		min-height: 100vh;
 	}
 </style>

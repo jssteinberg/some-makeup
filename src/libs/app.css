@@ -3,12 +3,14 @@
 /* @import 'floor-typography-css/src/classes-visually-hidden.css'; */
 
 :root {
-	/* Root Relative Line Height (not dynamic---do not use for line-height property) */
-	--RRLH: calc(1rem * (1 + var(--added-lead, .2)));
-	--TOUCH-TARGET-MIN-SIZE: max(48px, calc(2 * var(--RRLH, 1.5)));
+	--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.2));
+	--RRLH: calc(1rem * var(--ROOT-LINE-HEIGHT)); /* Root Relative Line Height (not dynamic---do not use for line-height property) */
+	--TOUCH-TARGET-MIN-SIZE: max(48px, calc(2 * var(--RRLH)));
 
 	--added-lead: .55;
 	--spacer: 1rem;
+	--h1-added-lead: .15;
+	--code-inline-font-size: .925em;
 
 	--base-width: calc(40rem + 15vw);
 	--body-gap-inline: 6vw;
@@ -42,7 +44,7 @@ body {
 /* Font size adjustment */
 h1,h2,h3,h4,h5,h6 { font-size: 1em; }
 small { font-size: .8em; }
-code { font-size: .925em; }
+code { font-size: var(--code-inline-font-size); }
 pre code { font-size: .875em; }
 
 /* Headings */
@@ -51,7 +53,6 @@ h1 {
 	margin-block-end: calc(2 * var(--spacer, 1rem));
 
 	/* Bigger size, same leading */
-	--internal-h-added-lead: .15;
 	--internal-h-line-height: calc(
 		1 +
 		var(--h1-added-lead, var(--internal-h-added-lead))
@@ -77,7 +78,7 @@ a, .link {
 :where(ol,ul) { padding: 0; }
 :where(ol,ul) :where(ol,ul) { padding-inline-start: 1em; }
 ol { list-style: decimal inside; }
-ul { list-style: square inside; }
+ul { list-style: disc inside; }
 
 /* Horizontal rule */
 hr {
@@ -123,8 +124,12 @@ blockquote {
 /* Touch target class */
 .touch-target {
 	--el-min-size: max(48px, calc(3 * var(--spacer, 1rem)));
-	display: inline-grid;
+
+	display: flex;
 	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
 	min-height: var(--el-min-size);
 	min-width: var(--el-min-size);
 }
