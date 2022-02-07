@@ -26,7 +26,7 @@ h1.gradient-text {
 ## Developer notes
 
 - Safari does not like block elements within an element with gradient text.
-- Safari, again, will no break inline gradient elements to new line.
+- Safari will not break inline gradient elements to new line.
 
 <GradientPostStyle />
 
@@ -54,5 +54,8 @@ h1.gradient-text {
 		font-weight: bold;
 	}
 
-strong { text-transform: uppercase; }
+	strong {
+		font-weight: 800; font-weight: 900;
+		text-transform: uppercase;
+	}
 </style>

@@ -54,7 +54,7 @@
 		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.6));
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT));
 
-		--font-size: 1.125rem;
+		--font-size: clamp(1rem, 1rem + .55vw, 1.25rem);
 		--spacer: var(--RELATIVE-LINE-HEIGHT);
 
 		text-rendering: optimizeLegibility;
@@ -65,8 +65,8 @@
 
 	@media (min-width: 1200px) {
 		article.typography {
-			--font-size: 1rem;
-			--h1-min-font-size: 2rem;
+			--font-size: 1.1rem;
+			--h1-min-font-size: 1rem;
 		}
 	}
 
@@ -82,7 +82,7 @@
 
 	article.typography :global(h1) {
 		/* Bigger size, same leading */
-		--internal-h-added-lead: .2;
+		--internal-h-added-lead: .15;
 		--internal-h-line-height: calc(
 			1 +
 			var(--h1-added-lead, var(--internal-h-added-lead))
