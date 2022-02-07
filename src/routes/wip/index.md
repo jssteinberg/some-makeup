@@ -4,7 +4,7 @@ title: WIP
 
 # WIP
 
-<PostList {posts} />
+<PostList posts={[...posts, {title: 'Svelte Layout Reset', path: '/reset'}]} />
 
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
