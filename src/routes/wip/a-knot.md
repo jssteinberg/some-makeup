@@ -3,7 +3,6 @@ knut 456859071230
 uuuytgjyieoråcn r-.
 Daidalos
 
-
 <style>
 	p {
 		font-size: 2em;

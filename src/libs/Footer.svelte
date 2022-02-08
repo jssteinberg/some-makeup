@@ -1,3 +1,8 @@
+<script>
+	import { page } from '$app/stores';
+	import Sep from './Sep.svelte';
+</script>
+
 <Sep />
 
 <footer class="footer">
@@ -5,7 +10,7 @@
 		<a
 			sveltekit:prefetch
 			class="touch-target"
-			aria-current={$page.url.pathname === "/" ? "page" : undefined}
+			aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 			href="/"
 		>
 			Some Makeup
@@ -21,18 +26,18 @@
 			<a
 				class="touch-target"
 				sveltekit:prefetch
-				aria-current={$page.url.pathname === "/wip" ? "page" : undefined}
+				aria-current={$page.url.pathname === '/wip' ? 'page' : undefined}
 				href="/wip"
 			>
 				(WIP)
 			</a>
 		</li>
-	
+
 		<li>
 			<a
 				class="touch-target"
 				sveltekit:prefetch
-				aria-current={$page.url.pathname === "/about" ? "page" : undefined}
+				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 				href="/about"
 			>
 				(?)
@@ -40,11 +45,6 @@
 		</li>
 	</ul>
 </footer>
-
-<script>
-	import { page } from "$app/stores";
-	import Sep from "./Sep.svelte";
-</script>
 
 <style>
 	footer {
@@ -60,12 +60,12 @@
 	}
 
 	a {
-		text-underline-offset: .5em;
+		text-underline-offset: 0.5em;
 		text-decoration-thickness: var(--decor-width);
-		text-decoration-color: var(--sep-color)
+		text-decoration-color: var(--sep-color);
 	}
 
-	a:is(:hover,:focus) {
+	a:is(:hover, :focus) {
 		text-decoration-color: currentColor;
 	}
 

@@ -1,8 +1,8 @@
 ---
 title: CSS Dice
 date: ['2021-12-20']
-set: ['featured','logo']
-tags: ['css','3d']
+set: ['featured', 'logo']
+tags: ['css', '3d']
 ---
 
 # CSS Dice
@@ -22,12 +22,13 @@ Playing with my CSS dice.
 			<input type="range" bind:value={deg} min="0" max="359.9" step="0.1">
 		</label>
 
-		<label>
-			<input type="number" inputmode="decimal" min="0" max="359.9" maxlength="5" step="0.1" bind:value={deg} />
-			<br aria-hidden>
-			color hue degrees (0.0-359.9)
-		</label>
-	</p>
+    	<label>
+    		<input type="number" inputmode="decimal" min="0" max="359.9" maxlength="5" step="0.1" bind:value={deg} />
+    		<br aria-hidden>
+    		color hue degrees (0.0-359.9)
+    	</label>
+    </p>
+
 </form>
 
 <AccentHue hue={deg} />

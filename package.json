@@ -14,7 +14,7 @@
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.4.2",
 		"cssnano": "^5.0.17",
-		"eslint": "^7.32.0",
+		"eslint": "^8.8.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
 		"floor-typography-css": "^20.0.2",

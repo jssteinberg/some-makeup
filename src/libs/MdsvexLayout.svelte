@@ -1,8 +1,8 @@
 <script>
-	import Logo from "./Logo.svelte";
-	import MetaTags from "./MetaTags.svelte";
+	import Logo from './Logo.svelte';
+	import MetaTags from './MetaTags.svelte';
 
-	export let title = "Knut";
+	export let title = 'Knut';
 	export let metaTitle;
 	export let lang;
 	export let description;
@@ -11,20 +11,22 @@
 	//export let date;
 	export let set = [];
 
-	$: langAttr = lang ?? set?.includes("nb") ? "nb" : undefined;
+	$: langAttr = lang ?? set?.includes('nb') ? 'nb' : undefined;
 </script>
 
-<MetaTags data={
-	{
+<MetaTags
+	data={{
 		title,
 		metaTitle,
 		author,
 		keywords: tags,
-		description: description ?? (langAttr && langAttr === 'nb' ?
-				`Et innlegg på bokmål om ${metaTitle || title}.` :
-				`A post about ${metaTitle || title}.`),
-	}
-} />
+		description:
+			description ??
+			(langAttr && langAttr === 'nb'
+				? `Et innlegg på bokmål om ${metaTitle || title}.`
+				: `A post about ${metaTitle || title}.`)
+	}}
+/>
 
 {#if set.includes('logo')}
 	<p>
@@ -34,10 +36,7 @@
 	</p>
 {/if}
 
-<article
-	lang={langAttr}
-	class={set.includes("typography") ? "typography post" : "post"}
->
+<article lang={langAttr} class={set.includes('typography') ? 'typography post' : 'post'}>
 	<slot />
 </article>
 
@@ -53,7 +52,7 @@
 	article.typography {
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT, 1.6));
 
-		--font-size: clamp(1rem, 1rem + .55vw, 1.25rem);
+		--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);
 		--spacer: var(--RELATIVE-LINE-HEIGHT);
 
 		text-rendering: optimizeLegibility;

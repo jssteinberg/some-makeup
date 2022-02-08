@@ -1,16 +1,16 @@
 <script>
-	import "../libs/app.css";
-	import { page } from "$app/stores";
-	import Footer from "../libs/Footer.svelte";
-	import Logo from "../libs/Logo.svelte";
+	import '../libs/app.css';
+	import { page } from '$app/stores';
+	import Footer from '../libs/Footer.svelte';
+	import Logo from '../libs/Logo.svelte';
 </script>
 
 <svelte:head>
 	<link rel="canonical" href={`https://some.makeup${$page.url.pathnme}`} />
 </svelte:head>
 
-<main class={$page.url.pathname.replace(/^\//, "").replace(/\//g, "-") || 'home'}>
-	{#if $page.url.pathname === "/"}
+<main class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
+	{#if $page.url.pathname === '/'}
 		<h1>
 			<a href="/" sveltekit:prefetch>
 				<Logo />

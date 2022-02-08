@@ -3,28 +3,45 @@
 </script>
 
 <span class={`scene ${text ? '' : 'no-text'}`}>
-	<span class="letter s">S</span><span class="letter o">o</span><span class="letter m">m</span><span class="letter e">e</span>
+	<span class="letter s">S</span><span class="letter o">o</span><span class="letter m">m</span><span
+		class="letter e">e</span
+	>
 	<span class="cube">
-		<span class="side front">M</span><span class="side top">A</span><span class="side back">K</span><span class="side bottom">E</span><span class="side right">U</span><span class="side left">P</span>
+		<span class="side front">M</span><span class="side top">A</span><span class="side back">K</span
+		><span class="side bottom">E</span><span class="side right">U</span><span class="side left"
+			>P</span
+		>
 	</span>
 </span>
 
 <style>
-	.no-text { color: transparent; }
+	.no-text {
+		color: transparent;
+	}
 
 	.letter {
 		position: absolute;
-		font-size: .95em;
+		font-size: 0.95em;
 		font-weight: normal;
 		text-align: center;
 		font-family: var(--mono-font, monospace);
 		text-transform: lowercase;
 		line-height: 1;
 	}
-	.letter.s { top: 0; }
-	.letter.o { top: calc(50% - .5em); right: 0; }
-	.letter.m { top: calc(50% - .5em); left: 0; }
-	.letter.e { bottom: 0; }
+	.letter.s {
+		top: 0;
+	}
+	.letter.o {
+		top: calc(50% - 0.5em);
+		right: 0;
+	}
+	.letter.m {
+		top: calc(50% - 0.5em);
+		left: 0;
+	}
+	.letter.e {
+		bottom: 0;
+	}
 
 	.scene {
 		--size: calc(7.5 * 1em);
@@ -56,21 +73,33 @@
 		height: 100%;
 		display: grid;
 		place-items: center;
-		border: 1px solid rgba(255,255,255,.75);
-		background: hsla(0, 0%, 100%, .2);
+		border: 1px solid rgba(255, 255, 255, 0.75);
+		background: hsla(0, 0%, 100%, 0.2);
 		color: hsla(0, 0%, 100%, 0);
 	}
 
 	/* front */
-	.front { transform: translateZ(calc(0.5 * var(--cube-size))); }
+	.front {
+		transform: translateZ(calc(0.5 * var(--cube-size)));
+	}
 	/* back */
-	.back { transform: translateZ(calc(-0.5 * var(--cube-size))) rotateZ(180deg); }
+	.back {
+		transform: translateZ(calc(-0.5 * var(--cube-size))) rotateZ(180deg);
+	}
 	/* left */
-	.left { transform: rotateY(90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(-90deg); }
+	.left {
+		transform: rotateY(90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(-90deg);
+	}
 	/* right */
-	.right { transform: rotateY(-90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(90deg); }
+	.right {
+		transform: rotateY(-90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(90deg);
+	}
 	/* top */
-	.top { transform: rotateX(90deg) translateZ(calc(0.5 * var(--cube-size))); }
+	.top {
+		transform: rotateX(90deg) translateZ(calc(0.5 * var(--cube-size)));
+	}
 	/* bottom */
-	.bottom { transform: rotateX(-90deg) translateZ(calc(0.5 * var(--cube-size))); }
+	.bottom {
+		transform: rotateX(-90deg) translateZ(calc(0.5 * var(--cube-size)));
+	}
 </style>

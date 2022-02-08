@@ -13,7 +13,7 @@
 
 <style>
 	article {
-		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, .6));
+		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.6));
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT));
 
 		--font-size: 1.125rem;
@@ -38,10 +38,7 @@
 
 		/* Bigger size, same leading */
 		--h1-line-height: 1.25;
-		font-size: calc(
-			1em * (1 + var(--added-lead, .6))
-			/ var(--h1-line-height)
-		);
+		font-size: calc(1em * (1 + var(--added-lead, 0.6)) / var(--h1-line-height));
 		line-height: var(--h1-line-height);
 	}
 </style>

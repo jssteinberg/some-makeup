@@ -1,6 +1,6 @@
 :root.accent-hue {
-	--bg: hsl(var(--accent-hue),25%,6.5%);
-	--accent-fg: hsl(var(--accent-hue),75%,75%);
+	--bg: hsl(var(--accent-hue), 25%, 6.5%);
+	--accent-fg: hsl(var(--accent-hue), 75%, 75%);
 }
 
 :root.accent-hue article.typography li::before,
@@ -8,7 +8,7 @@
 	color: var(--accent-fg);
 }
 
-:root.accent-hue input:not(:is([type="range"],[type="radio"],[type="checkbox"])) {
-	background: hsla(var(--accent-hue),25%,100%,.1);
+:root.accent-hue input:not(:is([type='range'], [type='radio'], [type='checkbox'])) {
+	background: hsla(var(--accent-hue), 25%, 100%, 0.1);
 	color: var(--accent-fg);
 }

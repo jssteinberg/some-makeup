@@ -8,21 +8,16 @@
 	export let hue;
 	export { classes as class };
 
-	$: saturation = hue ? "100%" : undefined;
-	$: style =
-		hue && saturation
-			? `--hue: ${hue}; --saturation: ${saturation}`
-			: undefined;
+	$: saturation = hue ? '100%' : undefined;
+	$: style = hue && saturation ? `--hue: ${hue}; --saturation: ${saturation}` : undefined;
 
-	classes = `button ${classes || ""} ${primary ? "button--primary" : ""} ${disabled || trueDisabled ? `button--disabled` : ``}`;
+	classes = `button ${classes || ''} ${primary ? 'button--primary' : ''} ${
+		disabled || trueDisabled ? `button--disabled` : ``
+	}`;
 </script>
 
-{#if typeof href === "string" && href.length}
-	<a
-		{href}
-		class={classes ? classes : undefined}
-		style={style ? style : undefined}
-	>
+{#if typeof href === 'string' && href.length}
+	<a {href} class={classes ? classes : undefined} style={style ? style : undefined}>
 		<slot />
 	</a>
 {:else}
@@ -44,8 +39,7 @@
 
 		--_touch-target-min-size: max(48px, calc(2 * var(--RRLH, 1.5)));
 		--_min-height: calc(
-			var(--_touch-target-min-size) - var(--padding-block) * 2 -
-				var(--shadow-size)
+			var(--_touch-target-min-size) - var(--padding-block) * 2 - var(--shadow-size)
 		);
 
 		all: unset;
@@ -60,17 +54,12 @@
 		font-weight: var(--font-weight, normal);
 		line-height: var(--line-height, 1.375);
 		min-height: var(--_min-height);
-		padding: var(--padding-block) 1em
-			calc(var(--padding-block) + var(--_shadow-padding));
+		padding: var(--padding-block) 1em calc(var(--padding-block) + var(--_shadow-padding));
 	}
 
 	:where(a, button):focus {
 		outline: 2px solid
-			hsl(
-				var(--hue--focus, var(--hue, 0)),
-				var(--saturation--focus, var(--saturation, 0%)),
-				25%
-			);
+			hsl(var(--hue--focus, var(--hue, 0)), var(--saturation--focus, var(--saturation, 0%)), 25%);
 		outline-offset: 1px;
 	}
 
@@ -83,7 +72,7 @@
 	:where(.button--disabled) {
 		box-shadow: none;
 		cursor: default;
-		opacity: .65;
+		opacity: 0.65;
 		position: relative;
 		top: var(--shadow-size);
 	}

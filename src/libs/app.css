@@ -4,81 +4,106 @@
 
 :root {
 	--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.2));
-	--RRLH: calc(1rem * var(--ROOT-LINE-HEIGHT)); /* Root Relative Line Height (not dynamic---do not use for line-height property) */
+	--RRLH: calc(
+		1rem * var(--ROOT-LINE-HEIGHT)
+	); /* Root Relative Line Height (not dynamic---do not use for line-height property) */
 	--TOUCH-TARGET-MIN-SIZE: max(48px, calc(2 * var(--RRLH)));
 
-	--added-lead: .55;
+	--added-lead: 0.55;
 	--spacer: 1rem;
-	--h1-added-lead: .15;
-	--code-inline-font-size: .925em;
+	--h1-added-lead: 0.15;
+	--code-inline-font-size: 0.925em;
 
 	--base-width: calc(40rem + 15vw);
 	--body-gap-inline: 6vw;
 	--decor-width: 2px;
 
-	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-	--serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
+	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+		Noto Color Emoji;
+	--serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+		monospace; /* Mono elements' fonts are set to --mono-font */
 
 	--fg-h: 0;
 	--fg-s: 0%;
 	--fg-l: 85%;
-	--fg: hsl(var(--fg-h),var(--fg-s),var(--fg-l));
-	--bg: hsl(0,0%,6.5%);
-	--sep-color: hsla(var(--fg-h),var(--fg-s),var(--fg-l),.2);
+	--fg: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
+	--bg: hsl(0, 0%, 6.5%);
+	--sep-color: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.2);
 
 	background-color: var(--bg);
 	font-family: var(--sans);
 
 	/* For animating backgrounds */
-	transition: background-color .75s ease;
+	transition: background-color 0.75s ease;
 	min-height: 100vh; /* Too avoid bg clip on bg change */
 }
 
 body {
-	color: var(--fg); /* Set color on body (not root)---Safari fix for dynamic dark/light mode changing. */
+	color: var(
+		--fg
+	); /* Set color on body (not root)---Safari fix for dynamic dark/light mode changing. */
 	margin: 0;
 	padding: 0;
 }
 
 /* Font size adjustment */
-h1,h2,h3,h4,h5,h6 { font-size: 1em; }
-small { font-size: .8em; }
-code { font-size: var(--code-inline-font-size); }
-pre code { font-size: .875em; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1em;
+}
+small {
+	font-size: 0.8em;
+}
+code {
+	font-size: var(--code-inline-font-size);
+}
+pre code {
+	font-size: 0.875em;
+}
 
 /* Headings */
 h1 {
-	font-weight: 800; font-weight: 900;
+	font-weight: 800;
+	font-weight: 900;
 	margin-block-end: calc(2 * var(--spacer, 1rem));
 
 	/* Bigger size, same leading */
-	--internal-h-line-height: calc(
-		1 +
-		var(--h1-added-lead, var(--internal-h-added-lead))
-	);
+	--internal-h-line-height: calc(1 + var(--h1-added-lead, var(--internal-h-added-lead)));
 	font-size: calc(
-		var(--h1-min-font-size, 1em)
-		* (1 + var(--added-lead, .6)) /
-		var(--internal-h-line-height)
+		var(--h1-min-font-size, 1em) * (1 + var(--added-lead, 0.6)) / var(--internal-h-line-height)
 	);
 	line-height: var(--internal-h-line-height);
 }
 
 /* Link */
-a, .link {
+a,
+.link {
 	color: inherit;
 	text-decoration: underline;
-	text-decoration-color: hsl(var(--fg-h),var(--fg-s),calc(var(--fg-l) - 25%));
+	text-decoration-color: hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) - 25%));
 	text-decoration-thickness: 1px;
-	text-underline-offset: .125em;
+	text-underline-offset: 0.125em;
 }
 
 /* List styles */
-:where(ol,ul) { padding: 0; }
-:where(ol,ul) :where(ol,ul) { padding-inline-start: 1em; }
-ol { list-style: decimal inside; }
-ul { list-style: disc inside; }
+:where(ol, ul) {
+	padding: 0;
+}
+:where(ol, ul) :where(ol, ul) {
+	padding-inline-start: 1em;
+}
+ol {
+	list-style: decimal inside;
+}
+ul {
+	list-style: disc inside;
+}
 
 /* Horizontal rule */
 hr {
@@ -96,17 +121,14 @@ hr::before {
 	border: var(--decor-width) solid;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(
-		var(
-			--from,
-			hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * .3))
-		),
+		var(--from, hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.3))),
 		transparent
 	);
 	content: '';
 	display: block;
 	position: absolute;
-	top: calc(var(--size) * -.5 - var(--decor-width) / 2);
-	left: calc(50% + var(--size) * -.5 - var(--decor-width) / 2);
+	top: calc(var(--size) * -0.5 - var(--decor-width) / 2);
+	left: calc(50% + var(--size) * -0.5 - var(--decor-width) / 2);
 	width: var(--size);
 	height: var(--size);
 	transform: rotate(-225deg);
@@ -114,7 +136,7 @@ hr::before {
 
 /* Blockquote */
 blockquote {
-	--blockquote-border-size: calc(var(--spacer, 1rem) * .1);
+	--blockquote-border-size: calc(var(--spacer, 1rem) * 0.1);
 	margin-inline-start: 0;
 	margin-inline-end: 0;
 	padding-inline-start: calc(var(--spacer, 1em) - var(--blockquote-border-size));

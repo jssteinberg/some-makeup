@@ -6,13 +6,13 @@ input {
 	height: unset;
 	max-width: 100%;
 	/* restyle */
-	background: hsla(var(--fg-h, 0),0%,100%,.1);
+	background: hsla(var(--fg-h, 0), 0%, 100%, 0.1);
 	color: inherit;
-	padding: calc(.5 * var(--spacer, 1rem)) 1em;
+	padding: calc(0.5 * var(--spacer, 1rem)) 1em;
 
 	/* extra style */
 	accent-color: currentColor;
-	border-radius: .5rem;
+	border-radius: 0.5rem;
 	margin-block-start: var(--spacer, 1rem);
 }
 

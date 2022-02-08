@@ -1,7 +1,7 @@
 ---
 title: Simple Shadow-Beneath Buttons
 date: ['2022-01-09']
-set: ['typography','logo']
+set: ['typography', 'logo']
 ---
 
 # Simple Shadow-Beneath Buttons
@@ -35,7 +35,6 @@ With rounded corners:
 <Button class="button--border-radius" disabled>Regular disabled</Button>
 <Button class="button--border-radius" primary disabled>Primary disabled</Button>
 </p>
-
 
 Any HSL's hue and saturation:
 
@@ -75,7 +74,6 @@ Pill-shape and reduce shadow:
 <Button class="button--border-radius" primary>Primary button</Button>
 </p>
 </section>
-
 
 <script>
 	import Button from '../../libs/Button.svelte';

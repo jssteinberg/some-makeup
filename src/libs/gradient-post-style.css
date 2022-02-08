@@ -21,10 +21,12 @@
 	--block-start-size: calc(4 * var(--spacer, 1rem));
 	--sep-size: calc(2 * var(--spacer, 1rem));
 
-	content: "";
+	content: '';
 	display: block;
 	position: absolute;
-	right: 0; bottom: 0; left: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	background: linear-gradient(var(--from), var(--to));
 
 	display: block;
@@ -37,7 +39,7 @@
 @media (min-width: 900px) {
 	:root.gradient-post-style .post :where(h1) {
 		--h1-min-font-size: 3em;
-		--h1-added-lead: .1;
+		--h1-added-lead: 0.1;
 	}
 }
 

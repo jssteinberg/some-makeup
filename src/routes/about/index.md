@@ -1,6 +1,6 @@
 ---
 title: '?ome Makeup'
-set: ['logo','typography']
+set: ['logo', 'typography']
 ---
 
 # ?

@@ -1,7 +1,7 @@
 <script>
-	import { page } from "$app/stores";
+	import { page } from '$app/stores';
 	// Featured
-	import Dice from "../libs/css-dice/dice.svelte";
+	import Dice from '../libs/css-dice/dice.svelte';
 
 	export let posts;
 </script>
@@ -11,17 +11,15 @@
 		<li>
 			<a
 				id={post.title.toLowerCase()}
-				aria-current={$page.url.pathname === post.path ? "page" : undefined}
+				aria-current={$page.url.pathname === post.path ? 'page' : undefined}
 				href={post.path}
 				sveltekit:prefetch
 			>
-				{#if post.metadata?.set && post.metadata.set.includes("featured")}
+				{#if post.metadata?.set && post.metadata.set.includes('featured')}
 					<Dice />
 				{/if}
 
-				<span
-					class="post-title"
-					lang={post.metadata?.lang ? post.metadata.lang : undefined}
+				<span class="post-title" lang={post.metadata?.lang ? post.metadata.lang : undefined}
 					>{@html post.title}</span
 				>
 
@@ -54,7 +52,7 @@
 
 		border-radius: 0.5rem;
 		text-decoration: none;
-		transition: background .25s;
+		transition: background 0.25s;
 	}
 
 	a:hover {
