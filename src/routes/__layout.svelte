@@ -6,17 +6,17 @@
 </script>
 
 <svelte:head>
-	<link rel="canonical" href={`https://some.makeup${$page.path}`} />
+	<link rel="canonical" href={`https://some.makeup${$page.url.pathnme}`} />
 </svelte:head>
 
-<main class={$page.path.replace(/^\//, "").replace(/\//g, "-") || 'home'}>
-	{#if $page.path === "/"}
+<main class={$page.url.pathname.replace(/^\//, "").replace(/\//g, "-") || 'home'}>
+	{#if $page.url.pathname === "/"}
 		<h1>
 			<a href="/" sveltekit:prefetch>
 				<Logo />
 			</a>
 		</h1>
-	{:else if $page.path.match(/^\/johan/)}
+	{:else if $page.url.pathname.match(/^\/johan/)}
 		<p>
 			<a href="/">
 				<Logo text={false} />

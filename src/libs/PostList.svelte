@@ -11,7 +11,7 @@
 		<li>
 			<a
 				id={post.title.toLowerCase()}
-				aria-current={$page.path === post.path ? "page" : undefined}
+				aria-current={$page.url.pathname === post.path ? "page" : undefined}
 				href={post.path}
 				sveltekit:prefetch
 			>

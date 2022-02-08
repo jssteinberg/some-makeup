@@ -5,7 +5,7 @@
 		<a
 			sveltekit:prefetch
 			class="touch-target"
-			aria-current={$page.path === "/" ? "page" : undefined}
+			aria-current={$page.url.pathname === "/" ? "page" : undefined}
 			href="/"
 		>
 			Some Makeup
@@ -21,7 +21,7 @@
 			<a
 				class="touch-target"
 				sveltekit:prefetch
-				aria-current={$page.path === "/wip" ? "page" : undefined}
+				aria-current={$page.url.pathname === "/wip" ? "page" : undefined}
 				href="/wip"
 			>
 				(WIP)
@@ -32,7 +32,7 @@
 			<a
 				class="touch-target"
 				sveltekit:prefetch
-				aria-current={$page.path === "/about" ? "page" : undefined}
+				aria-current={$page.url.pathname === "/about" ? "page" : undefined}
 				href="/about"
 			>
 				(?)

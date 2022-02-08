@@ -2,7 +2,7 @@
 	import { page } from "$app/stores";
 </script>
 
-{#if $page.path !== "/johan"}
+{#if $page.url.pathname !== "/johan"}
 	<p><a href="/johan">Johan Sebergsen Steinberg</a></p>
 {/if}
 

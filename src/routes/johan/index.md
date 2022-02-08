@@ -11,13 +11,13 @@ lang: nb
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
-	export async function load({ page }) {
+	export async function load({ url }) {
 		const data = Object.keys(markdownFiles)
 			.map((path) => {
 				return {
 					filePath: path,
 					slug: getSlug(path),
-					path: `${page.path}/${getSlug(path)}`,
+					path: `${url.pathname}/${getSlug(path)}`,
 					title: markdownFiles[path].metadata?.title || getSlug(path),
 					metadata: markdownFiles[path].metadata,
 				};
