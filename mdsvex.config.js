@@ -1,16 +1,18 @@
-const config = {
-  layout: {
-    //read: '/src/libs/MdsvexReadingLayout.svelte',
-    _: '/src/libs/MdsvexLayout.svelte',
-  },
-  extensions: [".svelte.md", ".md", ".svx"],
+import { defineMDSveXConfig as defineConfig } from 'mdsvex';
+const config = defineConfig({
+	layout: {
+		//read: '/src/libs/MdsvexReadingLayout.svelte',
+		_: '/src/libs/MdsvexLayout.svelte'
+	},
 
-  smartypants: {
-    dashes: "oldschool",
-  },
+	extensions: ['.svelte.md', '.md', '.svx'],
 
-  remarkPlugins: [],
-  rehypePlugins: [],
-};
+	smartypants: {
+		dashes: 'oldschool'
+	},
+
+	remarkPlugins: [],
+	rehypePlugins: []
+});
 
 export default config;
