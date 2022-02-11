@@ -1,5 +1,6 @@
 ---
 title: WIP
+set: ['logo']
 ---
 
 # WIP

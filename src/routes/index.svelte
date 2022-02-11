@@ -32,16 +32,6 @@
 />
 
 <Sep />
-<div class="links">
-	<PostList {posts} />
-</div>
+<PostList {posts} />
 
 <AccentHue {hue} />
-
-<style>
-	.links {
-		width: 20em;
-		margin-inline-start: auto;
-		margin-inline-end: auto;
-	}
-</style>
