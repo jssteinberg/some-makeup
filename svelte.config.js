@@ -8,7 +8,12 @@ const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: 'index.html',
+			precompress: true
+		})
 	},
 
 	preprocess: [
