@@ -11,7 +11,7 @@ set: ['logo']
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
-	export async function load({ url }) {
+	export const load = async ({ url }) => {
 		const data = Object.keys(markdownFiles)
 			.map((path) => {
 				return {
@@ -29,7 +29,7 @@ set: ['logo']
 				posts: data,
 			},
 		};
-	}
+	};
 </script>
 
 <script>

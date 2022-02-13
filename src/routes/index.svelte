@@ -9,6 +9,7 @@
 			};
 		} catch (error) {
 			console.error(`Error in load function for /: ${error}`);
+			return { props: { posts: [] }}
 		}
 	};
 </script>
