@@ -11,17 +11,17 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html',
-			precompress: true
-		})
+			fallback: null,
+			precompress: true,
+		}),
 	},
 
 	preprocess: [
 		preprocess({
-			postcss: true
+			postcss: true,
 		}),
-		mdsvex(mdsvexConfig)
-	]
+		mdsvex(mdsvexConfig),
+	],
 };
 
 export default config;
