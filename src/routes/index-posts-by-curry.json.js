@@ -17,11 +17,11 @@ const rootPages = () => {
 	);
 };
 
-export async function get() {
+export const get = async () => {
 	const pages = rootPages();
 
 	return {
 		status: 200,
 		body: getPostsFrom(pages)([`date`, `title`])
 	};
-}
+};
