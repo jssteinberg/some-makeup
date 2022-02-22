@@ -21,7 +21,7 @@
 	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
 		Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
 		Noto Color Emoji;
-	--serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+	--serif: ui-serif, Constantia, Georgia, Hoefler Text, serif;
 	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New,
 		monospace; /* Mono elements' fonts are set to --mono-font */
 
