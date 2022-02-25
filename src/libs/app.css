@@ -122,7 +122,7 @@ hr::before {
 	border-image-slice: 1;
 	border-image-source: linear-gradient(
 		var(--from, hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.3))),
-		transparent
+		hsla(var(--fg-h) var(--fg-s) calc(var(--fg-l) * 0.3) / .1)
 	);
 	content: '';
 	display: block;
