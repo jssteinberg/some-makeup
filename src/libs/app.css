@@ -8,9 +8,10 @@
 		1rem * var(--ROOT-LINE-HEIGHT)
 	); /* Root Relative Line Height (not dynamic---do not use for line-height property) */
 	--TOUCH-TARGET-MIN-SIZE: max(48px, calc(2 * var(--RRLH)));
+	--S: 1rem; /* Document constant spacer */
 
+	--spacer: var(--S);
 	--added-lead: 0.55;
-	--spacer: 1rem;
 	--h1-added-lead: 0.15;
 	--code-inline-font-size: 0.925em;
 
