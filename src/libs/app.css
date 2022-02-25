@@ -1,5 +1,4 @@
-@import 'floor-typography-css/src/reset.css';
-@import 'floor-typography-css/src/normalize-style.css';
+@import 'floor-typography-css/src/floor.css';
 /* @import 'floor-typography-css/src/classes-visually-hidden.css'; */
 
 :root {
