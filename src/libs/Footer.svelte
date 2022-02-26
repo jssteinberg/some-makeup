@@ -5,7 +5,7 @@
 
 <Sep />
 
-<footer class="footer">
+<footer class="site footer">
 	<h2>
 		<a
 			sveltekit:prefetch
@@ -52,6 +52,7 @@
 		font-size: var(--code-inline-font-size);
 		padding: 0 var(--body-gap-inline, 16px) calc(2 * var(--spacer, 1rem));
 		text-align: center;
+		text-transform: uppercase;
 
 		display: flex;
 		justify-content: center;
@@ -60,7 +61,7 @@
 	}
 
 	a {
-		text-underline-offset: 0.5em;
+		text-underline-offset: calc(3 * var(--decor-width));
 		text-decoration-thickness: var(--decor-width);
 		text-decoration-color: var(--sep-color);
 	}

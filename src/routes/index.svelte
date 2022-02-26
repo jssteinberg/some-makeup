@@ -33,6 +33,6 @@
 />
 
 <Sep />
-<PostList {posts} />
+<PostList {posts} biggerTitles />
 
 <AccentHue {hue} />

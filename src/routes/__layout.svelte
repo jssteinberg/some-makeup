@@ -9,55 +9,77 @@
 	<link rel="canonical" href={`https://some.makeup${$page.url.pathnme}`} />
 </svelte:head>
 
-<main class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
+<header class="site header">
 	{#if $page.url.pathname === '/'}
-		<h1>
-			<a href="/" sveltekit:prefetch>
+		<a href="/" sveltekit:prefetch>
+			<h1>
 				<Logo />
-			</a>
-		</h1>
+			</h1>
+		</a>
 	{:else if $page.url.pathname.match(/^\/johan/)}
-		<p>
-			<a href="/">
+		<a href="/" sveltekit:prefetch>
+			<h2>
 				<Logo text={false} />
-			</a>
-		</p>
+			</h2>
+		</a>
 	{/if}
+</header>
 
+<main class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
 	<slot />
 </main>
 
 <Footer />
 
 <style>
-	h1 {
-		font-size: 1em;
+	header, main { font-family: var(--sans); }
+	main { text-align: center; }
+
+	main :global(:where(h1)) {
+		--h1-added-lead: .125;
+		font-weight: 800; font-weight: 900;
+		margin-block-end: calc(2 * var(--spacer, 1rem));
 	}
 
-	:global(h1),
-	main.home :global(.posts),
-	a {
-		text-align: center;
+	/* List styles */
+	main :global(ol) { list-style: decimal inside; }
+	main :global(ul) { list-style: disc inside; }
+
+	/* Horizontal rule */
+	main :global(hr) {
+		all: unset;
+		background: linear-gradient(90deg, transparent, var(--sep-color), transparent);
+		display: block;
+		margin: calc(3 * var(--spacer, 1rem)) auto;
+		padding: 0;
+		position: relative;
+		height: 1px;
+		width: calc(100% - var(--body-gap-inline) * 2);
+	}
+	main :global(hr::before) {
+		--size: calc(1 * var(--spacer, 1em));
+		border: var(--decor-width) solid;
+		border-image-slice: 1;
+		border-image-source: linear-gradient(
+			var(--from, hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.3))),
+			hsla(var(--fg-h) var(--fg-s) calc(var(--fg-l) * 0.3) / .1)
+		);
+		content: '';
+		display: block;
+		position: absolute;
+		top: calc(var(--size) * -0.5 - var(--decor-width) / 2);
+		left: calc(50% + var(--size) * -0.5 - var(--decor-width) / 2);
+		width: var(--size);
+		height: var(--size);
+		transform: rotate(-225deg);
 	}
 
-	main.home :global(.posts),
-	:global(.footer h2),
-	a {
-		font-weight: normal;
-		text-transform: uppercase;
-	}
-
-	@media (min-width: 600px) {
-		main.home :global(.post-title) {
-			/* Bigger size, same leading */
-			--line-height: 1.3;
-			font-size: calc(1em * var(--ROOT-LINE-HEIGHT, 1.2) / var(--line-height));
-			line-height: var(--line-height);
-		}
-	}
-
-	main {
-		margin: calc(2 * var(--spacer, 1em)) 0;
-		text-align: center;
+	/* Blockquote */
+	main :global(blockquote) {
+		--blockquote-border-size: calc(var(--spacer, 1rem) * 0.1);
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+		padding-inline-start: calc(var(--spacer, 1em) - var(--blockquote-border-size));
+		border-left: var(--blockquote-border-size) solid;
 	}
 </style>

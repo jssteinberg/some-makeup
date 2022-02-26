@@ -13,8 +13,7 @@
 
 <style>
 	article {
-		--ROOT-LINE-HEIGHT: calc(1 + var(--added-lead, 0.6));
-		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--ROOT-LINE-HEIGHT));
+		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
 
 		--font-size: 1.125rem;
 		--spacer: var(--RELATIVE-LINE-HEIGHT);

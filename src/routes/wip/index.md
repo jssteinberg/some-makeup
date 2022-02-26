@@ -8,6 +8,8 @@ set: ['logo']
 <PostList posts={[...posts, {title: 'Svelte Layout Reset', path: '/reset'}]} />
 
 <script context="module">
+	import listPosts from '../../libs/utils/getPosts.js';
+
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
@@ -18,7 +20,7 @@ set: ['logo']
 					filePath: path,
 					slug: getSlug(path),
 					path: `${url.pathname}/${getSlug(path)}`,
-					title: markdownFiles[path].metadata?.title || getSlug(path),
+					title: markdownFiles[path].metadata?.title || getSlug(path).replace(/-/, ' '),
 					metadata: markdownFiles[path].metadata,
 				};
 			})
@@ -26,7 +28,7 @@ set: ['logo']
 
 		return {
 			props: {
-				posts: data,
+				posts: listPosts(data)([[`metadata.date`, 0], `title`])
 			},
 		};
 	};

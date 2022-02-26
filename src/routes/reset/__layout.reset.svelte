@@ -1,5 +1,1 @@
-<style>
-	:root {
-		/* all: initial; */
-	}
-</style>
+<slot></slot>

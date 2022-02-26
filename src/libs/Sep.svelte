@@ -24,7 +24,7 @@
 		all: unset;
 		background: var(--sep-color);
 		display: block;
-		margin: calc(1.5 * var(--block-start-size)) auto var(--block-start-size);
+		margin: calc(1 * var(--block-start-size)) auto var(--block-start-size);
 		padding: 0;
 		width: var(--decor-width);
 		height: var(--sep-size);

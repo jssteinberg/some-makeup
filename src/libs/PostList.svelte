@@ -4,9 +4,10 @@
 	import Dice from '../libs/css-dice/dice.svelte';
 
 	export let posts;
+	export let biggerTitles;
 </script>
 
-<ul class="posts">
+<ul class={`posts ${biggerTitles ? `bigger-titles` : ``}`}>
 	{#each posts as post}
 		<li>
 			<a
@@ -87,10 +88,22 @@
 
 	.post-title {
 		font-weight: bold;
-		transition: transform .15s ease-out;
+		text-transform: uppercase;
 	}
 
 	a:hover .post-title {
-		transform: translateY(-.25rem);
+		text-decoration: underline;
+		text-underline-offset: var(--decor-width);
+		text-decoration-thickness: var(--decor-width);
 	}
+
+	@media (min-width: 600px) {
+		.bigger-titles .post-title {
+			/* Bigger size, same leading */
+			--line-height: 1.3;
+			font-size: calc(1em * var(--RLH) / var(--line-height));
+			line-height: var(--line-height);
+		}
+	}
+
 </style>
