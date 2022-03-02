@@ -1,16 +1,16 @@
 :root.gradient-post-style .post {
-	--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);
-	--to: hsla(var(--gradient-base-hue, 180), 50%, 50%, 1);
+	--from: hsla(var(--gradient-base-hue, 180), 50%, 60%, 1);
+	--to: hsla(var(--gradient-base-hue, 180), 75%, 90%, 1);
 }
 
 :root.gradient-post-style .post :where(h1) {
-	background-image: linear-gradient(90deg, var(--from), var(--to));
+	background-image: linear-gradient(45deg, var(--from), var(--to));
 	color: transparent;
 	background-clip: text;
 }
 
 :root.gradient-post-style .post :where(h1) {
-	--h1-min-font-size: 2em;
+	--h1-line-span: 2;
 
 	margin-block-end: calc(3.5 * var(--spacer, 1rem));
 	padding-block-end: calc(3.5 * var(--spacer, 1rem));
@@ -38,14 +38,14 @@
 
 @media (min-width: 900px) {
 	:root.gradient-post-style .post :where(h1) {
-		--h1-min-font-size: 3em;
+		--h1-line-span: 3;
 		--h1-added-lead: 0.1;
 	}
 }
 
 @media (min-width: 1200px) {
 	:root.gradient-post-style .post :where(h1) {
-		--h1-min-font-size: 4em;
+		--h1-line-span: 4;
 	}
 }
 
@@ -55,7 +55,7 @@
 
 :root.gradient-post-style .post :where(h2) {
 	background-clip: text;
-	background-image: linear-gradient(90deg, var(--from), var(--fg, white));
+	background-image: linear-gradient(45deg, var(--from), var(--fg, white));
 	color: transparent;
 	font-weight: 800;
 	font-weight: 900;

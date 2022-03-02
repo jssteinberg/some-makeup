@@ -61,8 +61,8 @@
 	}
 
 	a {
-		text-underline-offset: calc(3 * var(--decor-width));
-		text-decoration-thickness: var(--decor-width);
+		text-underline-offset: 2px;
+		text-decoration-thickness: calc(2 * var(--decor-width));
 		text-decoration-color: var(--sep-color);
 	}
 

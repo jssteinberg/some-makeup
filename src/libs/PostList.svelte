@@ -93,8 +93,9 @@
 
 	a:hover .post-title {
 		text-decoration: underline;
-		text-underline-offset: var(--decor-width);
-		text-decoration-thickness: var(--decor-width);
+		text-decoration-color: var(--sep-color);
+		text-underline-offset: 2px;
+		text-decoration-thickness: calc(2 * var(--decor-width));
 	}
 
 	@media (min-width: 600px) {

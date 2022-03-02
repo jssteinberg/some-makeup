@@ -41,6 +41,21 @@
 		margin-block-end: calc(2 * var(--spacer, 1rem));
 	}
 
+	/* Link */
+	:global(a),
+	:global(.link) {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-color: var(--sep-color);
+		text-decoration-thickness: calc(2 * var(--decor-width));
+		text-underline-offset: 2px;
+	}
+
+	:global(a:is(:hover)),
+	:global(.link:is(:hover)) {
+		text-decoration-color: currentColor;
+	}
+
 	/* List styles */
 	main :global(ol) { list-style: decimal inside; }
 	main :global(ul) { list-style: disc inside; }
@@ -48,12 +63,12 @@
 	/* Horizontal rule */
 	main :global(hr) {
 		all: unset;
-		background: linear-gradient(90deg, transparent, var(--sep-color), transparent);
+		background-image: linear-gradient(90deg, transparent, var(--sep-color), transparent);
 		display: block;
-		margin: calc(3 * var(--spacer, 1rem)) auto;
+		margin: calc(3 * var(--spacer, 1rem) - .5 * var(--decor-width)) auto;
 		padding: 0;
 		position: relative;
-		height: 1px;
+		height: var(--decor-width);
 		width: calc(100% - var(--body-gap-inline) * 2);
 	}
 	main :global(hr::before) {
@@ -67,7 +82,7 @@
 		content: '';
 		display: block;
 		position: absolute;
-		top: calc(var(--size) * -0.5 - var(--decor-width) / 2);
+		top: calc(var(--size) * -.5 - -.5 * var(--decor-width));
 		left: calc(50% + var(--size) * -0.5 - var(--decor-width) / 2);
 		width: var(--size);
 		height: var(--size);

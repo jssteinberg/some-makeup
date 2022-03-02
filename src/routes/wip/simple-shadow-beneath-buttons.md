@@ -8,7 +8,7 @@ set: ['typography', 'logo']
 
 Simple buttons with shadow beneath.
 
-A11y requirements: 48px min size and focus. Also avoid `disabled` attribute (use `aria-disabled`), but it must still be allowed, e.g., for pagination. ([Css-tricks.com/making-disabled-buttons-more-inclusive](//css-tricks.com/making-disabled-buttons-more-inclusive)) ([Some alternative solutions](//stories.justinewin.com/disabled-buttons-dont-have-to-suck-10da0bb6d37e).)
+A11y requirements: 48px min size and focus. Also avoid `disabled` attribute (use `aria-disabled`), but it must still be allowed, e.g., for pagination. ([CSS-tricks.com/making-disabled-buttons-more-inclusive](//css-tricks.com/making-disabled-buttons-more-inclusive)) ([Some alternative solutions](//stories.justinewin.com/disabled-buttons-dont-have-to-suck-10da0bb6d37e).)
 
 ---
 

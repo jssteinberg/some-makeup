@@ -1,5 +1,5 @@
-@import 'floor-typography-css/src/floor.css';
-@import 'floor-typography-css/src/headings.css';
+@import '/_.css';
+@import '/headings.css';
 
 :root {
 	--RLH: calc(1 + var(--added-lead, 0.2));
@@ -23,8 +23,7 @@
 		Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
 		Noto Color Emoji;
 	--serif: ui-serif, Constantia, Georgia, Hoefler Text, serif;
-	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New,
-		monospace; /* Mono elements' fonts are set to --mono-font */
+	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 
 	--fg-h: 0;
 	--fg-s: 0%;
@@ -61,16 +60,6 @@ pre {
 .site:where(.header,.footer) :where(ol,ul) {
 	list-style: none;
 	padding: 0;
-}
-
-/* Link */
-a,
-.link {
-	color: inherit;
-	text-decoration: underline;
-	text-decoration-color: hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) - 25%));
-	text-decoration-thickness: 1px;
-	text-underline-offset: 0.125em;
 }
 
 /* Touch target class */
