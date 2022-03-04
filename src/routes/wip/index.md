@@ -5,7 +5,29 @@ set: ['logo']
 
 # WIP
 
+<Sep />
+
 <PostList posts={[...posts, {title: 'Svelte Layout Reset', path: '/reset'}]} />
+
+<AccentHue {hue} />
+
+<MetaTags
+	data={{
+		title: `Some Makeup`,
+		description: `Makeup frontend, design and life.`
+	}}
+/>
+
+<script>
+	import MetaTags from '/src/libs/MetaTags.svelte';
+	import AccentHue from '/src/libs/AccentHue.svelte';
+	import PostList from '/src/libs/PostList.svelte';
+	import Sep from '/src/libs/Sep.svelte';
+
+	export let posts;
+
+	let hue = 358.7;
+</script>
 
 <script context="module">
 	import listPosts from '../../libs/utils/getPosts.js';
@@ -32,9 +54,4 @@ set: ['logo']
 			},
 		};
 	};
-</script>
-
-<script>
-	import PostList from "../../libs/PostList.svelte";
-	export let posts;
 </script>
