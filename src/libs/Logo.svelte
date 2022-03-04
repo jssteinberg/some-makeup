@@ -52,7 +52,7 @@
 		height: calc(3.5em + var(--cube-size));
 		display: grid;
 		place-items: center;
-		margin: calc(1 * var(--S)) auto;
+		margin: calc(1 * var(--SPACER)) auto;
 
 		perspective: calc(4 * var(--size));
 		perspective-origin: top;

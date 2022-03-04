@@ -34,11 +34,11 @@ h1.gradient-text {
 </script>
 
 <style>
-	:global(main.gradient-text article) {
+	:global(main[class*="gradient-text"] article) {
 		--article-width: min(100%, calc(var(--base-width) + 20rem + 5vw));
 	}
 
-	:global(main.gradient-text) h1 {
+	:global(main[class*="gradient-text"]) h1 {
 		padding-inline-start: var(--body-gap-inline, 1rem);
 		padding-inline-end: var(--body-gap-inline, 1rem);
 		width: var(--article-width);

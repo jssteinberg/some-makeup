@@ -1,8 +1,11 @@
 import getPostsFrom from '../libs/utils/getPosts.js';
 
 const rootPages = () => {
-	const mdFiles = import.meta.globEager(`./*.md`);
-	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, '$1');
+	const mdFiles = {
+		...import.meta.globEager(`./v1/*.md`),
+		...import.meta.globEager(`./*.md`)
+	}
+	const getSlug = (path) => path.replace(/.*\/(.*)\..*$/, '$1')
 
 	return Object.keys(mdFiles).map(
 		(path) =>
@@ -14,14 +17,14 @@ const rootPages = () => {
 				date: mdFiles[path].metadata?.date[0] ? new Date(mdFiles[path].metadata.date[0]) : null,
 				metadata: mdFiles[path].metadata
 			})
-	);
-};
+	).filter(item => !['index'].includes(item.slug))
+}
 
 export const get = async () => {
-	const pages = rootPages();
+	const pages = rootPages() || []
 
 	return {
 		status: 200,
 		body: getPostsFrom(pages)([`date`, `title`])
-	};
-};
+	}
+}

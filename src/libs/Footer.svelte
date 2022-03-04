@@ -1,23 +1,16 @@
 <script>
 	import { page } from '$app/stores';
-	import Sep from './Sep.svelte';
 </script>
 
-<Sep />
-
-<footer class="site footer">
-	<h2>
+<footer class="footer">
+	<p>
 		<a
 			sveltekit:prefetch
 			class="touch-target"
 			aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 			href="/"
 		>
-			Some Makeup
-		</a>
-	</h2>
-
-	<p>
+			Some Makeup</a>,
 		{new Date().getFullYear()}
 	</p>
 
@@ -29,7 +22,7 @@
 				aria-current={$page.url.pathname === '/wip' ? 'page' : undefined}
 				href="/wip"
 			>
-				(WIP)
+				WIP
 			</a>
 		</li>
 
@@ -40,7 +33,7 @@
 				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 				href="/about"
 			>
-				(?)
+				?
 			</a>
 		</li>
 	</ul>
@@ -48,30 +41,27 @@
 
 <style>
 	footer {
-		font-family: var(--mono-font);
-		font-size: var(--code-inline-font-size);
 		padding: 0 var(--body-gap-inline, 16px) calc(2 * var(--spacer, 1rem));
 		text-align: center;
-		text-transform: uppercase;
 
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 1ch;
+		gap: .5em 1em;
 	}
 
 	a {
-		text-underline-offset: 2px;
-		text-decoration-thickness: calc(2 * var(--decor-width));
-		text-decoration-color: var(--sep-color);
-	}
-
-	a:is(:hover, :focus) {
-		text-decoration-color: currentColor;
+		text-decoration: none;
+		box-shadow: inset 0 -1px;
 	}
 
 	ul {
 		display: flex;
+		gap: .5em;
 		list-style: none;
+		padding: 0;
 	}
+
+	ul li::before { content: '(' }
+	ul li::after { content: ')' }
 </style>

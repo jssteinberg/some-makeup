@@ -1,5 +1,4 @@
 <script>
-	import Logo from './Logo.svelte';
 	import MetaTags from './MetaTags.svelte';
 
 	export let title = 'Knut';
@@ -27,14 +26,6 @@
 				: `A post about ${metaTitle || title}.`)
 	}}
 />
-
-{#if set.includes('logo')}
-	<p>
-		<a href="/" sveltekit:prefetch>
-			<Logo text={false} />
-		</a>
-	</p>
-{/if}
 
 <article lang={langAttr} class={set.includes('typography') ? 'typography post' : 'post'}>
 	<slot />

@@ -1,5 +1,5 @@
-@import '/_.css';
-@import '/headings.css';
+/* @import '/_.css'; */
+/* @import '/headings.css'; */
 
 :root {
 	--RLH: calc(1 + var(--added-lead, 0.2));
@@ -7,9 +7,9 @@
 		1rem * var(--RLH)
 	); /* Root Relative Line Height (not dynamic---do not use for line-height property) */
 	--TOUCH-TARGET-MIN-SIZE: max(48px, calc(2 * var(--RRLH)));
-	--S: 1rem; /* Document constant spacer */
+	--SPACER: 1rem; /* Document constant spacer */
 
-	--spacer: var(--S);
+	--spacer: var(--SPACER);
 	--added-lead: 0.55;
 	--h1-added-lead: var(--added-lead);
 	--h2-added-lead: var(--added-lead);
@@ -27,23 +27,27 @@
 
 	--fg-h: 0;
 	--fg-s: 0%;
-	--fg-l: 85%;
+	--fg-l: 91%;
 	--fg: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
 	--bg: hsl(0, 0%, 6.5%);
 	--sep-color: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.2);
 
 	background-color: var(--bg);
-
-	/* For animating backgrounds */
-	transition: background-color 0.75s ease;
 	min-height: 100vh; /* Too avoid bg clip on bg change */
 }
+
+/* @media (motion-ok) {
+/* 	/* For animating backgrounds */
+/* 	transition: background-color 0.75s ease;
+/* }
+ */
 
 body {
 	color: var( --fg); /* color on body---safari fix for dynamic dark/light mode changing */
 	margin: 0;
-	padding: 0;
 }
+
+a { color: inherit; }
 
 small { font-size: 0.8em; }
 code { font-size: var(--code-inline-font-size); }
@@ -57,18 +61,13 @@ pre {
 	white-space: pre;
 }
 
-.site:where(.header,.footer) :where(ol,ul) {
-	list-style: none;
-	padding: 0;
-}
-
 /* Touch target class */
 .touch-target {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 
-	min-height: var(--TOUCH-TARGET-MIN-SIZE, 48px);
-	min-width: var(--TOUCH-TARGET-MIN-SIZE, 48px);
+	min-height: var(--TOUCH-TARGET-MIN-SIZE);
+	min-width: var(--TOUCH-TARGET-MIN-SIZE);
 }
