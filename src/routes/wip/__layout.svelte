@@ -8,8 +8,12 @@
 </main>
 
 <style>
-	main { font-family: var(--sans); }
-	main { text-align: center; }
+	main {
+		font-family: var(--sans);
+		text-align: center;
+		margin: 0 auto;
+		width: min(var(--base-width), 100% - 2 * var(--body-gap-inline));
+	}
 
 	main :global(:where(h1)) {
 		--h1-added-lead: .125;

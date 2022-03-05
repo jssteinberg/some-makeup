@@ -5,6 +5,8 @@ description: Makeup front and life.
 
 # Some Makeup
 
+- [Style](#)
+
 <!--
 <PostList {posts} biggerTitles />
 

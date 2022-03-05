@@ -45,23 +45,27 @@
 		text-align: center;
 
 		display: flex;
-		justify-content: center;
 		align-items: center;
-		gap: .5em 1em;
-	}
-
-	a {
-		text-decoration: none;
-		box-shadow: inset 0 -1px;
+		flex-wrap: wrap;
+		gap: 0 1ch;
+		justify-content: center;
 	}
 
 	ul {
 		display: flex;
-		gap: .5em;
+		flex-wrap: wrap;
+
 		list-style: none;
 		padding: 0;
 	}
 
-	ul li::before { content: '(' }
-	ul li::after { content: ')' }
+	footer::before { content: '{' }
+	footer::after { content: '}' }
+
+	ul a::before,
+	ul a::after {
+		padding: 0 1ch;
+	}
+	ul a::before { content: '[' }
+	ul a::after { content: ']' }
 </style>

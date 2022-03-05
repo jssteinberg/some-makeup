@@ -4,6 +4,7 @@ metaTitle: 'Gradient CSS Text: Overused Yet?'
 date: ['2022-01-26']
 set: ['logo', 'typography']
 tags: ['css']
+layout: v1
 ---
 
 # Gradient CSS Text:<br aria-hidden> **Overused Yet?**
