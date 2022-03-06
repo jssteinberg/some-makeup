@@ -34,7 +34,6 @@
 <style>
 	article.typography {
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
-
 		--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);
 		--spacer: var(--RELATIVE-LINE-HEIGHT);
 
@@ -42,10 +41,6 @@
 		text-align: start;
 		font-size: var(--font-size);
 		font-weight: 300;
-	}
-
-	article :global(h1) {
-		text-align: center;
 	}
 
 	@media (min-width: 1200px) {

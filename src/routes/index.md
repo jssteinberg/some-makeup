@@ -7,6 +7,13 @@ description: Makeup front and life.
 
 - [Style](#)
 
+<style>
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+</style>
+
 <!--
 <PostList {posts} biggerTitles />
 
