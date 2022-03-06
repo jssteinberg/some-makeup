@@ -1,7 +1,7 @@
 ---
 title: Simple Shadow-Beneath Buttons
 date: ['2022-01-09']
-set: ['typography', 'logo']
+set: ['typography']
 ---
 
 # Simple Shadow-Beneath Buttons

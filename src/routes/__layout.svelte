@@ -11,7 +11,10 @@
 <Footer />
 
 <style>
-	nav { text-align: center; }
+	nav {
+		font-family: var(--mono-font);
+		text-align: center;
+	}
 
 	a {
 		padding: 1em;

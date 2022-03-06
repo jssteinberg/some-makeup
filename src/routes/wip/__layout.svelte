@@ -12,7 +12,6 @@
 		font-family: var(--sans);
 		text-align: center;
 		margin: 0 auto;
-		width: min(var(--base-width), 100% - 2 * var(--body-gap-inline));
 	}
 
 	main :global(:where(h1)) {
@@ -22,8 +21,8 @@
 	}
 
 	/* Link */
-	:global(a),
-	:global(.link) {
+	main :global(a),
+	main :global(.link) {
 		color: inherit;
 		text-decoration: underline;
 		text-decoration-color: var(--sep-color);

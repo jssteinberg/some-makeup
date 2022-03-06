@@ -41,31 +41,44 @@
 
 <style>
 	footer {
+		font-family: var(--mono-font);
 		padding: 0 var(--body-gap-inline, 16px) calc(2 * var(--spacer, 1rem));
 		text-align: center;
 
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 0 1ch;
 		justify-content: center;
 	}
 
-	ul {
-		display: flex;
-		flex-wrap: wrap;
+	a {
+		--touch-target-width: none;
+		background-image: linear-gradient(currentColor, currentColor);
+		background-position: center calc(50% + 1.25ex);
+		background-repeat: no-repeat;
+		background-size: calc(100% - .75ex) .125ex;
+		text-decoration: none;
+		word-spacing: -1ch;
+	}
 
+	p {
+		font-weight: bolder;
+	}
+
+	ul {
 		list-style: none;
 		padding: 0;
+
+		display: flex;
+		flex-wrap: wrap;
 	}
 
-	footer::before { content: '{' }
-	footer::after { content: '}' }
-
-	ul a::before,
+	ul a::before {
+		content: '[';
+		margin-inline-end: 1ch;
+	}
 	ul a::after {
-		padding: 0 1ch;
+		content: ']';
+		margin-inline-start: 1ch;
 	}
-	ul a::before { content: '[' }
-	ul a::after { content: ']' }
 </style>

@@ -69,5 +69,5 @@ pre {
 	flex-wrap: wrap;
 
 	min-height: var(--TOUCH-TARGET-MIN-SIZE);
-	min-width: var(--TOUCH-TARGET-MIN-SIZE);
+	min-width: var(--touch-target-width, var(--TOUCH-TARGET-MIN-SIZE));
 }

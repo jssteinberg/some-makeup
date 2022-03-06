@@ -32,6 +32,15 @@
 </article>
 
 <style>
+	article {
+		padding-inline-start: var(--body-gap-inline);
+		padding-inline-end: var(--body-gap-inline);
+
+		display: grid;
+		grid-template-columns: min(100%, var(--base-width));
+		justify-content: center;
+	}
+
 	article.typography {
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
 		--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);
