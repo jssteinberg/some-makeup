@@ -3,7 +3,7 @@ title: Some Makeup
 description: Makeup front and life.
 ---
 
-# Some Makeup
+# Some <span aria-label="Makeup" aria-hidden>Makeup</span>
 
 - [Style](#)
 
@@ -11,6 +11,12 @@ description: Makeup front and life.
 	ul {
 		list-style: none;
 		padding: 0;
+	}
+
+	h1 span {
+		color: black;
+		display: block;
+		font-size: calc(25vw);
 	}
 </style>
 

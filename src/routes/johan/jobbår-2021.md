@@ -57,9 +57,8 @@ set: ['nb', 'typography']
 	p + ul > li::before {
 		content: '•';
 		line-height: 0;
-		margin-inline-end: .125ch;
-		margin-inline-start: .125ch;
-		font-size: 2em;
+		margin-inline-end: .2em;
+		margin-inline-start: .3em;
 		vertical-align: baseline;
 		position: relative;
 		top: .125em;
