@@ -17,8 +17,26 @@
 	}
 
 	a {
-		padding: 1em;
+		position: relative;
 		text-decoration: none;
+		width: 100%;
+	}
+
+	a:focus {
+		outline: none;
+	}
+
+	a:is(:hover,:focus)::after {
+		opacity: .25;
+	}
+
+	a::after {
+		background: currentColor;
+		content: '';
+		opacity: 0;
+		position: absolute;
+		inset: 0;
+		z-index: -1;
 	}
 </style>
 
