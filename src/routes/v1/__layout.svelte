@@ -1,10 +1,14 @@
 <script>
-	import '/src/libs/app-v1.css';
 	import { page } from '$app/stores';
 </script>
 
 <div class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
 	<slot />
+
+	<style>
+		@import "/_.css";
+		@import "/headings.css";
+	</style>
 </div>
 
 <style>
