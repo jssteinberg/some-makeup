@@ -2,8 +2,8 @@
  * Browser normalizer (no ie) and intuitive defaults, narrow viewports first. */
 
 *, ::before, ::after {
-  /* Don't repeat background images by default. */
-  background-repeat: no-repeat;
+	/* Don't repeat background images by default. */
+	background-repeat: no-repeat;
 	/* Border-box is expected. */
 	box-sizing: border-box;
 }
