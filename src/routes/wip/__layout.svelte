@@ -1,28 +1,35 @@
 <script>
 	import { page } from '$app/stores';
 	import '/src/libs/app.css';
+	import { onDestroy } from 'svelte';
+
+	let loadGlobalCss = true;
+
+	onDestroy(() => {
+		loadGlobalCss = false;
+	});
 </script>
 
-<main class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
+<div class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
 	<slot />
-</main>
+</div>
 
 <style>
-	main {
+	div {
 		font-family: var(--sans);
 		text-align: center;
 		margin: 0 auto;
 	}
 
-	main :global(:where(h1)) {
+	div :global(:where(h1)) {
 		--h1-added-lead: .125;
 		font-weight: 800; font-weight: 900;
 		margin-block-end: calc(2 * var(--spacer, 1rem));
 	}
 
 	/* Link */
-	main :global(a),
-	main :global(.link) {
+	div :global(a),
+	div :global(.link) {
 		color: inherit;
 		text-decoration: underline;
 		text-decoration-color: var(--sep-color);
@@ -36,11 +43,11 @@
 	}
 
 	/* List styles */
-	main :global(ol) { list-style: decimal inside; }
-	main :global(ul) { list-style: disc inside; }
+	div :global(ol) { list-style: decimal inside; }
+	div :global(ul) { list-style: disc inside; }
 
 	/* Horizontal rule */
-	main :global(hr) {
+	div :global(hr) {
 		all: unset;
 		background-image: linear-gradient(90deg, transparent, var(--sep-color), transparent);
 		display: block;
@@ -50,7 +57,7 @@
 		height: var(--decor-width);
 		width: calc(100% - var(--body-gap-inline) * 2);
 	}
-	main :global(hr::before) {
+	div :global(hr::before) {
 		--size: calc(1 * var(--spacer, 1em));
 		border: var(--decor-width) solid;
 		border-image-slice: 1;
@@ -69,7 +76,7 @@
 	}
 
 	/* Blockquote */
-	main :global(blockquote) {
+	div :global(blockquote) {
 		--blockquote-border-size: calc(var(--spacer, 1rem) * 0.1);
 		margin-inline-start: 0;
 		margin-inline-end: 0;

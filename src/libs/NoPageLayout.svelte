@@ -27,7 +27,7 @@
 	}}
 />
 
-<div lang={langAttr} class={`content ${set.includes(`typography`) ? `typography` : ``}`}>
+<div class="content">
 	<slot />
 </div>
 
@@ -39,32 +39,5 @@
 		display: grid;
 		grid-template-columns: min(100%, var(--base-width));
 		justify-content: center;
-	}
-
-	.content.typography {
-		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
-		--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);
-		--spacer: var(--RELATIVE-LINE-HEIGHT);
-
-		text-rendering: optimizeLegibility;
-		text-align: start;
-		font-size: var(--font-size);
-		font-weight: 300;
-	}
-
-	@media (min-width: 1200px) {
-		.content.typography {
-			--font-size: 1.1rem;
-		}
-	}
-
-	@media (min-width: 1500px) {
-		.content.typography {
-			--font-size: 1.125rem;
-		}
-	}
-
-	.content.typography :global(h1) {
-		text-transform: none;
 	}
 </style>

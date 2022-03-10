@@ -1,22 +1,29 @@
 ---
 title: Some Makeup
 description: Makeup front and life.
+layout: no
 ---
 
-# Some <span aria-label="Makeup" aria-hidden>Makeup</span>
+<div class="wrapper">
+
+# Some <span aria-hidden aria-label="Makeup">Makeup</span>
 
 - [Style](#)
 
+</div>
+
 <style>
+	.wrapper {
+		font-size: clamp(1rem, min(6vh,6vw), min(6vh,6vw));
+	}
+
 	ul {
 		list-style: none;
 		padding: 0;
 	}
 
-	h1 span {
-		color: black;
+	h1 [aria-label*="makeup" i] {
 		display: block;
-		font-size: calc(25vw);
 	}
 </style>
 

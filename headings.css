@@ -5,7 +5,7 @@ h1, .h1 {
 		var(--h1-added-lead, var(--_heading-added-lead))
 	);
 	font-size: calc(
-		var(--h1-line-span, 1) * 1em
+		var(--h1-line-span, 2) * 1em
 		* (1 + var(--added-lead, .6))
 		/ var(--_heading-line-height)
 	);

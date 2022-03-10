@@ -44,6 +44,7 @@
 		font-family: var(--mono-font);
 		padding: 0 var(--body-gap-inline, 16px) calc(2 * var(--spacer, 1rem));
 		text-align: center;
+		word-spacing: -1ch;
 
 		display: flex;
 		align-items: center;
@@ -56,9 +57,8 @@
 		background-image: linear-gradient(currentColor, currentColor);
 		background-position: center calc(50% + 1.25ex);
 		background-repeat: no-repeat;
-		background-size: calc(100% - .75ex) .125ex;
+		background-size: calc(100% - 1ch) .125ex;
 		text-decoration: none;
-		word-spacing: -1ch;
 	}
 
 	p {

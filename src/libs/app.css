@@ -2,6 +2,17 @@
 /* @import '/headings.css'; */
 
 :root {
+	/* THE MINIMAL NORMALIZE */
+
+	/* Auto hyphenate words for narrow viewports. */
+	hyphens: auto;
+	/* Break words for no x-axis scrolling (use this, not `word-break`). */
+	overflow-wrap: break-word;
+	/* Prevent adjustment of font-size after Ios orientation change. */
+	-webkit-text-size-adjust: 100%;
+
+	/* NORMAL STYLESHEET */
+
 	--RLH: calc(1 + var(--added-lead, 0.2));
 	--RRLH: calc(
 		1rem * var(--RLH)
@@ -10,9 +21,6 @@
 	--SPACER: 1rem; /* Document constant spacer */
 
 	--spacer: var(--SPACER);
-	--added-lead: 0.55;
-	--h1-added-lead: var(--added-lead);
-	--h2-added-lead: var(--added-lead);
 	--code-inline-font-size: 0.925em;
 
 	--base-width: calc(40rem + 15vw);
