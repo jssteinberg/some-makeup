@@ -1,18 +1,21 @@
 /* @import '/_.css'; */
 /* @import '/headings.css'; */
 
+/* THE MINIMAL BROWSER CSS FIX */
+
+*, ::before, ::after {
+	box-sizing: border-box; /* Border-box is expected. */
+}
+
 :root {
-	/* THE MINIMAL NORMALIZE */
+	hyphens: auto; /* Auto hyphenate words for narrow viewports. */
+	overflow-wrap: break-word; /* Break words for no x-axis scrolling (use this, not `word-break`). */
+	-webkit-text-size-adjust: 100%; /* Prevent adjustment of font-size after Ios orientation change. */
+}
 
-	/* Auto hyphenate words for narrow viewports. */
-	hyphens: auto;
-	/* Break words for no x-axis scrolling (use this, not `word-break`). */
-	overflow-wrap: break-word;
-	/* Prevent adjustment of font-size after Ios orientation change. */
-	-webkit-text-size-adjust: 100%;
+/* STYLES */
 
-	/* NORMAL STYLESHEET */
-
+:root {
 	--RLH: calc(1 + var(--added-lead, 0.2));
 	--RRLH: calc(
 		1rem * var(--RLH)
