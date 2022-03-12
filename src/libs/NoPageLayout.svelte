@@ -31,6 +31,6 @@
 	<slot />
 
 	<style>
-		@import '/src/some-minimal.css';
+		@import '/src/sparse.css';
 	</style>
 </div>

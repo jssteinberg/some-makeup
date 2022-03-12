@@ -6,9 +6,9 @@ layout: no
 
 <div class="wrapper">
 
-# <strong aria-hidden aria-label="Some">Some</strong> Makeup
+# *some*.makeup
 
-- [CSS](#)
+- [Style](#)
 
 </div>
 
@@ -29,10 +29,18 @@ layout: no
 		padding: 0;
 	}
 
-	h1 [aria-hidden] {
+	h1 em {
 		display: block;
-		-webkit-text-stroke: 1px var(--fg);
-		color: var(--bg);
+	}
+
+	/* Touch target class */
+	a {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		min-height: var(--TOUCH-TARGET-MIN-SIZE);
+		min-width: var(--TOUCH-TARGET-MIN-SIZE);
 	}
 </style>
 

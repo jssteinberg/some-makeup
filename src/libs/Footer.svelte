@@ -41,7 +41,7 @@
 
 <style>
 	footer {
-		box-shadow: inset 0 1px var(--sep-color);
+		box-shadow: inset 0 0 0 1px var(--sep-color);
 		font-family: var(--mono-font);
 		margin: 1em var(--body-gap-inline, 1em);
 		text-align: center;
@@ -54,7 +54,6 @@
 	}
 
 	a {
-		--touch-target-width: none;
 		background-image: linear-gradient(currentColor, currentColor);
 		background-position: center calc(50% + 1.5ex);
 		background-repeat: no-repeat;

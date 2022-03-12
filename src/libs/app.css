@@ -1,5 +1,5 @@
 /* @import '/src/some.css'; */
-/* @import '/src/headings.css'; */
+/* @import '/src/some-typography.css'; */
 
 /* STYLES */
 
@@ -72,5 +72,5 @@ pre {
 	flex-wrap: wrap;
 
 	min-height: var(--TOUCH-TARGET-MIN-SIZE);
-	min-width: var(--touch-target-width, var(--TOUCH-TARGET-MIN-SIZE));
+	min-width: var(--touch-target-min-width, var(--TOUCH-TARGET-MIN-SIZE));
 }

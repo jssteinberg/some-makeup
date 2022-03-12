@@ -7,7 +7,7 @@
 
 	<style>
 		@import "/src/some.css";
-		@import "/src/headings.css";
+		@import "/src/some-typography.css";
 	</style>
 </div>
 
