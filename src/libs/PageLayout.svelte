@@ -29,6 +29,10 @@
 
 <div lang={langAttr} class={`content ${set.includes(`typography`) ? `typography` : ``}`}>
 	<slot />
+
+	<style>
+		@import '/src/contain.css';
+	</style>
 </div>
 
 <style>

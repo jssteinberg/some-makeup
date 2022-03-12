@@ -1,0 +1,38 @@
+*, ::before, ::after {
+	/* Background images are not repeated. */
+	background-repeat: no-repeat;
+	/* Border-box so size includes border and padding, and border doesn't hide text */
+	box-sizing: border-box;
+}
+
+/* `::before`/`::after` inherits border-radius. */
+::before, ::after { border-radius: inherit; }
+
+:root {
+	/* Words are automatically hyphenated to fit narrow widths. */
+	hyphens: auto;
+	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
+	line-sizing: normal;
+	/* Words break for no x-axis scrolling (use this, not `word-break`). */
+	overflow-wrap: break-word;
+	/* Prevent adjustment of font-size after Ios orientation change. */
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Prevent `<sub>`/`<sup>` from affecting the line height. */
+sub, sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+
+/* `[hidden]` maintain behaviour when overriding `display` values. */
+/* `audio` with no controls should not display. */
+/* `source` has nothing to display and should not display. */
+[hidden], audio:not([controls]), source { display:none; }
+
+/* Remove unnecessary wrapping `picture`, while maintaining content. */
+picture { display: contents; }

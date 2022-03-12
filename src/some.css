@@ -1,21 +1,7 @@
 :root {
 	/* Line-height for readability on any viewport width. */
 	line-height: calc(1 + var(--added-lead, .6));
-	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
-	line-sizing: normal;
 }
-
-
-/* FIX DISPLAY. */
-
-/* `[hidden]` maintain behaviour when overriding `display` values. */
-/* `audio` with no controls should not display. */
-/* `source` has nothing to display and should not display. */
-[hidden], audio:not([controls]), source { display:none; }
-
-/* Remove unnecessary wrapping `picture`, while maintaining content. */
-picture { display: contents; }
-
 
 /* FLOOR TYPOGRAPHY. */
 
