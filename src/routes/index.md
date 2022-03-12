@@ -6,15 +6,15 @@ layout: no
 
 <div class="wrapper">
 
-# Some <span aria-hidden aria-label="Makeup">Makeup</span>
+# <strong aria-hidden aria-label="Some">Some</strong> Makeup
 
-- [Style](#)
+- [CSS](#)
 
 </div>
 
 <style>
 	.wrapper {
-		font-size: max(3rem, min(5.25vh,7.5vw));
+		font-size: max(2rem, min(5.25vh,7.5vw));
 
 		padding-inline-start: var(--body-gap-inline);
 		padding-inline-end: var(--body-gap-inline);
