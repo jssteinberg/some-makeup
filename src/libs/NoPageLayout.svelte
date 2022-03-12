@@ -27,17 +27,10 @@
 	}}
 />
 
-<div class="content">
+<div>
 	<slot />
+
+	<style>
+		@import '/src/some-minimal.css';
+	</style>
 </div>
-
-<style>
-	.content {
-		padding-inline-start: var(--body-gap-inline);
-		padding-inline-end: var(--body-gap-inline);
-
-		display: grid;
-		grid-template-columns: min(100%, var(--base-width));
-		justify-content: center;
-	}
-</style>

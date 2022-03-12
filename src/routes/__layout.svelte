@@ -18,6 +18,7 @@
 	.site-header {
 		font-family: var(--mono-font);
 		text-align: center;
+		margin: 0 var(--body-gap-inline, 1em);
 	}
 
 	.site-header a {
@@ -31,11 +32,11 @@
 	}
 
 	.site-header a:is(:hover,:focus)::after {
-		opacity: .25;
+		opacity: 1;
 	}
 
 	.site-header a::after {
-		background: currentColor;
+		background: var(--sep-color);
 		content: '';
 		opacity: 0;
 		position: absolute;
@@ -43,12 +44,12 @@
 		z-index: -1;
 	}
 
-	.root-layout {
-		display: grid;
-		grid-template-columns: 100vw;
-		grid-template-rows: auto 1fr auto;
-		min-height: 100vh;
-	}
+	/* .root-layout { */
+	/* 	display: grid; */
+	/* 	grid-template-columns: 100vw; */
+	/* 	grid-template-rows: auto 1fr auto; */
+	/* 	min-height: 100vh; */
+	/* } */
 </style>
 
 <script>

@@ -41,8 +41,9 @@
 
 <style>
 	footer {
+		box-shadow: inset 0 1px var(--sep-color);
 		font-family: var(--mono-font);
-		padding: 0 var(--body-gap-inline, 16px) calc(2 * var(--spacer, 1rem));
+		margin: 1em var(--body-gap-inline, 1em);
 		text-align: center;
 		word-spacing: -1ch;
 
@@ -55,22 +56,25 @@
 	a {
 		--touch-target-width: none;
 		background-image: linear-gradient(currentColor, currentColor);
-		background-position: center calc(50% + 1.25ex);
+		background-position: center calc(50% + 1.5ex);
 		background-repeat: no-repeat;
-		background-size: calc(100% - 1ch) .125ex;
+		background-size: calc(100% - 1ch) 1px;
 		text-decoration: none;
 	}
 
 	p {
 		font-weight: bolder;
+		margin: 0;
 	}
 
 	ul {
 		list-style: none;
+		margin: 0;
 		padding: 0;
 
 		display: flex;
 		flex-wrap: wrap;
+		/* Do we need gap of 8px for lighthouse? */
 	}
 
 	ul a::before {

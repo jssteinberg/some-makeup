@@ -1,17 +1,5 @@
-/* @import '/_.css'; */
-/* @import '/headings.css'; */
-
-/* THE MINIMAL BROWSER CSS FIX */
-
-*, ::before, ::after {
-	box-sizing: border-box; /* Border-box is expected. */
-}
-
-:root {
-	hyphens: auto; /* Auto hyphenate words for narrow viewports. */
-	overflow-wrap: break-word; /* Break words for no x-axis scrolling (use this, not `word-break`). */
-	-webkit-text-size-adjust: 100%; /* Prevent adjustment of font-size after Ios orientation change. */
-}
+/* @import '/src/some.css'; */
+/* @import '/src/headings.css'; */
 
 /* STYLES */
 
@@ -36,10 +24,8 @@
 	--serif: ui-serif, Constantia, Georgia, Hoefler Text, serif;
 	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 
-	--fg-h: 0;
-	--fg-s: 0%;
-	--fg-l: 91%;
-	--fg: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
+	--fg-h: 0; --fg-s: 0%; --fg-l: 91%; --fg-a: 1;
+	--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));
 	--bg: hsl(0, 0%, 6.5%);
 	--sep-color: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.2);
 
@@ -58,7 +44,13 @@ body {
 	margin: 0;
 }
 
-a { color: inherit; }
+a {
+	color: inherit;
+}
+
+:where(a, u, ins, abbr) {
+	text-decoration-thickness: 1px;
+}
 
 small { font-size: 0.8em; }
 code { font-size: var(--code-inline-font-size); }

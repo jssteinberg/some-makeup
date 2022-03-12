@@ -14,7 +14,14 @@ layout: no
 
 <style>
 	.wrapper {
-		font-size: clamp(1rem, min(6vh,6vw), min(6vh,6vw));
+		font-size: max(3rem, min(5.25vh,7.5vw));
+
+		padding-inline-start: var(--body-gap-inline);
+		padding-inline-end: var(--body-gap-inline);
+
+		display: grid;
+		grid-template-columns: min(100%, var(--base-width) + 10vw);
+		justify-content: center;
 	}
 
 	ul {
@@ -22,8 +29,10 @@ layout: no
 		padding: 0;
 	}
 
-	h1 [aria-label*="makeup" i] {
+	h1 [aria-hidden] {
 		display: block;
+		-webkit-text-stroke: 1px var(--fg);
+		color: var(--bg);
 	}
 </style>
 
