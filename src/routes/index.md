@@ -6,21 +6,21 @@ layout: no
 
 <div class="wrapper">
 
-# *some*.makeup
+# _some_**.**makeup
 
-- [Style](#)
+- [style](/style)
 
 </div>
 
 <style>
 	.wrapper {
-		font-size: max(2rem, min(5.25vh,7.5vw));
+		font-size: max(2rem, min(5.125vh,7.5vw));
 
 		padding-inline-start: var(--body-gap-inline);
 		padding-inline-end: var(--body-gap-inline);
 
 		display: grid;
-		grid-template-columns: min(100%, var(--base-width) + 10vw);
+		grid-template-columns: min(100%, var(--base-width));
 		justify-content: center;
 	}
 
@@ -29,7 +29,12 @@ layout: no
 		padding: 0;
 	}
 
-	h1 em {
+	li::before {
+		content: '-';
+	}
+
+	h1 strong::after {
+		content: '';
 		display: block;
 	}
 

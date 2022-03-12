@@ -48,10 +48,6 @@ a {
 	color: inherit;
 }
 
-:where(a, u, ins, abbr) {
-	text-decoration-thickness: 1px;
-}
-
 small { font-size: 0.8em; }
 code { font-size: var(--code-inline-font-size); }
 pre code { font-size: 0.875em; }

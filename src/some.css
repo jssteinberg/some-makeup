@@ -1,27 +1,8 @@
-/* _ to build typographic style on.
- * Browser normalizer (no ie) and intuitive defaults, narrow viewports first. */
-
-*, ::before, ::after {
-	/* Don't repeat background images by default. */
-	background-repeat: no-repeat;
-	/* Border-box is expected. */
-	box-sizing: border-box;
-}
-
-/* `::before`/`::after` inheriting border-radius is intuitive. */
-::before, ::after { border-radius: inherit; }
-
 :root {
 	/* Line-height for readability on any viewport width. */
 	line-height: calc(1 + var(--added-lead, .6));
 	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
 	line-sizing: normal;
-	/* Auto hyphenate words for narrow viewports. */
-	hyphens: auto;
-	/* Break words for no x-axis scrolling (use this, not `word-break`). */
-	overflow-wrap: break-word;
-	/* Prevent adjustment of font-size after Ios orientation change. */
-	-webkit-text-size-adjust: 100%;
 }
 
 

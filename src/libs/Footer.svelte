@@ -41,7 +41,6 @@
 
 <style>
 	footer {
-		box-shadow: inset 0 0 0 1px var(--sep-color);
 		font-family: var(--mono-font);
 		margin: 1em var(--body-gap-inline, 1em);
 		text-align: center;
