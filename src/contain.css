@@ -36,3 +36,19 @@ sup { top: -0.5em; }
 
 /* Remove unnecessary wrapping `picture`, while maintaining content. */
 picture { display: contents; }
+
+img, svg, video, canvas, audio, iframe, embed, object {
+	/* Remove space-below in case authors overwrite the display value. */
+	vertical-align: middle;
+	/* Responsive by default. */
+	max-width: 100%;
+}
+
+/* Responsive by default. */
+img, svg, video, canvas { height: auto; }
+
+/* No inline margin -- horizontal align with adjacent. */
+figure { margin-inline-start: 0; margin-inline-end: 0; }
+
+/* Wrap pre-formatted text by default. */
+pre { white-space: pre-wrap; }

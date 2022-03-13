@@ -10,7 +10,7 @@
 			aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 			href="/"
 		>
-			Some Makeup</a>,
+			some.makeup</a>
 		{new Date().getFullYear()}
 	</p>
 
@@ -41,22 +41,20 @@
 
 <style>
 	footer {
-		font-family: var(--mono-font);
 		margin: 1em var(--body-gap-inline, 1em);
-		text-align: center;
-		word-spacing: -1ch;
 
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		justify-content: center;
+		gap: 1em;
 	}
 
 	a {
-		background-image: linear-gradient(currentColor, currentColor);
-		background-position: center calc(50% + 1.5ex);
-		background-repeat: no-repeat;
-		background-size: calc(100% - 1ch) 1px;
+		/* background-image: linear-gradient(var(--sep-color), var(--sep-color)); */
+		/* background-position: center calc(50% + 2ex); */
+		/* background-repeat: no-repeat; */
+		/* background-size: 1ex 1ex; */
 		text-decoration: none;
 	}
 
@@ -72,15 +70,20 @@
 
 		display: flex;
 		flex-wrap: wrap;
-		/* Do we need gap of 8px for lighthouse? */
+		gap: max(8px, .5rem);
 	}
 
 	ul a::before {
-		content: '[';
+		content: '(';
 		margin-inline-end: 1ch;
 	}
+
 	ul a::after {
-		content: ']';
+		content: ')';
 		margin-inline-start: 1ch;
+	}
+
+	a[href="/"]::before {
+		content: '//';
 	}
 </style>

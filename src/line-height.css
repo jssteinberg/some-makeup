@@ -1,0 +1,85 @@
+:root {
+	/* Line-height for readability on any viewport width. */
+	line-height: calc(1 + var(--added-lead, .6));
+}
+
+h1, .h1 {
+	--_added-lead: .125;
+	--_line-height: calc(
+		1 +
+		var(--h1-added-lead, var(--_added-lead))
+	);
+	font-size: calc(
+		var(--h1-line-span, 2) * 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h2, .h2 {
+	--_added-lead: .25;
+	--_line-height: calc(
+		1 +
+		var(--h2-added-lead, var(--_added-lead))
+	);
+	font-size: calc(
+		var(--h2-line-span, 1) * 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h3, .h3 {
+	--_added-lead: calc(var(--added-lead, .6));
+	--_line-height: calc(
+		1 +
+		var(--h3-added-lead, var(--_added-lead))
+	);
+	font-size: calc(
+		var(--h3-line-span, 1) * 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h4, .h4 {
+	--_line-height: calc(
+		1 +
+		var(--h4-added-lead, var(--added-lead, .6))
+	);
+	font-size: calc(
+		var(--h4-line-span, 1) * 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h5, .h5 {
+	--_line-height: calc(
+		1 +
+		var(--h5-added-lead, var(--added-lead, .6))
+	);
+	font-size: calc(
+		var(--h5-line-span, 1) * 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h6, .h6 {
+	--_line-height: calc(
+		1 +
+		var(--h6-added-lead, var(--added-lead, .6))
+	);
+	font-size: calc(
+		var(--h6-line-span, 1) * 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}

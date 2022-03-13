@@ -1,20 +1,18 @@
 ---
-title: Some Makeup
-description: Makeup front and life.
+title: some.makeup
+description: makeup style for life
 layout: no
 ---
 
 <div class="wrapper">
 
-# _some_**.**makeup
-
-- [style](/style)
+# _some_**.**[makeup-style](/style)
 
 </div>
 
 <style>
 	.wrapper {
-		font-size: max(2rem, min(5.125vh,7.5vw));
+		font-size: max(1rem, min(2.5vw,2.5vh));
 
 		padding-inline-start: var(--body-gap-inline);
 		padding-inline-end: var(--body-gap-inline);
@@ -22,15 +20,6 @@ layout: no
 		display: grid;
 		grid-template-columns: min(100%, var(--base-width));
 		justify-content: center;
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-	}
-
-	li::before {
-		content: '-';
 	}
 
 	h1 strong::after {

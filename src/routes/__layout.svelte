@@ -14,9 +14,8 @@
 	<Footer />
 </div>
 
-<style lang="postcss">
+<style>
 	.site-header {
-		font-family: var(--mono-font);
 		text-align: center;
 		margin: 0 var(--body-gap-inline, 1em);
 	}
@@ -43,13 +42,6 @@
 		inset: 0;
 		z-index: -1;
 	}
-
-	/* .root-layout { */
-	/* 	display: grid; */
-	/* 	grid-template-columns: 100vw; */
-	/* 	grid-template-rows: auto 1fr auto; */
-	/* 	min-height: 100vh; */
-	/* } */
 </style>
 
 <script>

@@ -1,22 +1,14 @@
-# Some Makeup
+# Makeup Style
 
-A site with some makeup.
+## Changes from Floor Typography CSS
 
-## Developing
+- CSS is split into files more logically.
+- `--line-span` var for headings, not `--h…-min-font-size`.
+- `--space` var for controlling spacing, not `--spacer`.
+- Only sets margin-block-start for spacing reset (space.css).
+- Removes setting font-size for h1 (OG from CSS Remedy). Browser default makes sense, and font-size can be, and usually is, set when styling.
 
-Once you've installed dependencies with `npm install`, start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+	```css
+	/* Correct the font size for `:is(article,section) h1` elements (Chrome/Firefox/Safari). */
+	h1 { font-size: 2em; }
+	```

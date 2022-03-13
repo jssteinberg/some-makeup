@@ -1,17 +1,8 @@
-/* @import '/src/some.css'; */
-/* @import '/src/some-typography.css'; */
-
-/* STYLES */
-
 :root {
-	--RLH: calc(1 + var(--added-lead, 0.2));
-	--RRLH: calc(
-		1rem * var(--RLH)
-	); /* Root Relative Line Height (not dynamic---do not use for line-height property) */
-	--TOUCH-TARGET-MIN-SIZE: max(48px, calc(2 * var(--RRLH)));
-	--SPACER: 1rem; /* Document constant spacer */
+	--TOUCH-TARGET-MIN-SIZE: max(48px, 3rem);
+	--SPACE: 1rem; /* Document constant spacing var */
 
-	--spacer: var(--SPACER);
+	--space: var(--SPACER);
 	--code-inline-font-size: 0.925em;
 
 	--base-width: calc(40rem + 15vw);
@@ -44,18 +35,12 @@ body {
 	margin: 0;
 }
 
-a {
-	color: inherit;
-}
-
-small { font-size: 0.8em; }
-code { font-size: var(--code-inline-font-size); }
-pre code { font-size: 0.875em; }
+a { color: inherit; }
 
 pre {
 	overflow-y: auto;
 	overflow-wrap: normal;
-	padding: var(--spacer, 1rem) 0;
+	padding: 0 0 var(--space, 1rem) 0;
 	tab-size: 2;
 	white-space: pre;
 }

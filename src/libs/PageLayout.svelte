@@ -32,6 +32,12 @@
 
 	<style>
 		@import '/src/contain.css';
+		@import '/src/improve.css';
+		@import '/src/space.css';
+
+		small { font-size: 0.8em; }
+		code { font-size: var(--code-inline-font-size); }
+		pre code { font-size: 0.875em; }
 	</style>
 </div>
 
@@ -66,9 +72,5 @@
 		.content.typography {
 			--font-size: 1.125rem;
 		}
-	}
-
-	.content.typography :global(h1) {
-		text-transform: none;
 	}
 </style>

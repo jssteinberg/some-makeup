@@ -1,0 +1,16 @@
+/* FIX */
+
+/* Always `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
+strong { font-weight: bolder; }
+
+pre, code, kbd, samp {
+	/* Fix the inheritance and scaling of font-size for preformatted text. */
+	font-family: var(--mono-font, monospace), var(--mono-font, monospace);
+	/* Normalize font-size for all browsers. */
+	font-size: 1em;
+}
+
+/* INTERACTION. */
+
+/* Some intuitive consistency for clickable elements. */
+button, summary { cursor: pointer; }
