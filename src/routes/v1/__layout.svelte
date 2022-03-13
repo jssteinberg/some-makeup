@@ -4,11 +4,6 @@
 
 <div class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
 	<slot />
-
-	<style>
-		@import "/src/some.css";
-		@import "/src/some-typography.css";
-	</style>
 </div>
 
 <style>

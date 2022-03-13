@@ -1,16 +1,18 @@
-/* Consistent block margins for the needed block-level elements. */
+/* Consistent block margin for the needed block-level elements. */
 address, datalist, details, fieldset, pre, table,
 canvas, embed, figure, iframe, object, video,
 dl, ol, ul,
 h1, h2, h3, h4, h5, h6,
 blockquote, p {
-	margin-block-start: var(--space, 1rem);
-	margin-block-end: 0;
+	/* No margin top so grid can be used without doubling margins. */
+	margin-block-start: 0;
+	/* Block margin end gives natural flow with space for any next element. */
+	margin-block-end: var(--space, 1rem);
 }
 
 /* Remove block margin for children that shouldn't disrupt vertical flow. */
 ol ol, ol ul, ul ol, ul ul {
-	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 /* Style `hr` to match space */
@@ -18,11 +20,11 @@ hr {
 	/* Remove border to not affect vertical rhythm. */
 	border: none;
 	/* Use box-shadow as border to not distrupt vertical rhythm */
-	box-shadow: 0 -1px;
+	box-shadow: inset 0 -1px;
 	/* Remove Firefox `color: gray`. */
 	color: inherit;
 	/* Normalize box sizing (Firefox). */
 	height: calc(2 * var(--space, 1rem));
 	/* Spacing, remove margin-inline `auto` (to not be centered by default). */
-	margin: calc(2 * var(--space, 1rem)) 0 0;
+	margin: 0 0 calc(2 * var(--space, 1rem));
 }

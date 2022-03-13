@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import '/src/libs/app.css';
 	import { onDestroy } from 'svelte';
 
 	let loadGlobalCss = true;
@@ -14,8 +13,7 @@
 	<slot />
 
 	<style>
-		@import "/src/some.css";
-		@import "/src/some-typography.css";
+		@import "/src/line-height.css";
 	</style>
 </div>
 
