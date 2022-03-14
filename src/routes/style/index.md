@@ -12,25 +12,25 @@ These CSS files fixes default browser CSS (no IE though), for narrow viewports f
 ---
 
 ```css
-@import 'makeup-style/src/contain.css';
+@import 'makeup-style/static/contain.css';
 ```
 
-CSS to prevent text and content from overflowing and prevents elements from disrupting the default vertical rhythm by affecting line-height.
+CSS to prevent text and content from overflowing.
 
-*This file is pretty much mandatory for avoiding many styling gotchas. The other files are optional.*
+*This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports. The other files are optional.*
 
 ---
 
 ```css
-@import 'makeup-style/src/improve.css';
+@import 'makeup-style/static/intuitive.css';
 ```
 
-Improved CSS for basic elements, excluding form elements. Includes option for defining variable `--mono-font` for setting mono-font-family.
+CSS for intuitive styling behaviours and browser default fixes that prevents elements from disrupting the default vertical rhythm by affecting line-height, excluding form elements. Includes option for defining variable `--mono-font` for setting mono-font-family.
 
 ---
 
 ```css
-@import 'makeup-style/src/space.css';
+@import 'makeup-style/static/space.css';
 ```
 
 CSS that sets consistent spacing between the needed block-level elements. Spacing can be adjusted and controlled with variable `--space` (defaults -- by falling back -- to `1rem`).
@@ -38,7 +38,7 @@ CSS that sets consistent spacing between the needed block-level elements. Spacin
 ---
 
 ```css
-@import 'makeup-style/src/line-height.css';
+@import 'makeup-style/static/line-height.css';
 ```
 
 CSS that sets line-height for equal leading of headings and body text. (...variables for `--added-lead`, headings added-lead and headings line-span...)

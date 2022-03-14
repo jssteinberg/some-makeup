@@ -3,7 +3,7 @@
 </script>
 
 <footer class="footer">
-	<p>
+	<h2>
 		<a
 			sveltekit:prefetch
 			class="touch-target"
@@ -12,7 +12,7 @@
 		>
 			some.makeup</a>
 		{new Date().getFullYear()}
-	</p>
+	</h2>
 
 	<ul>
 		<li>
@@ -50,22 +50,18 @@
 		gap: 1em;
 	}
 
-	a {
-		/* background-image: linear-gradient(var(--sep-color), var(--sep-color)); */
-		/* background-position: center calc(50% + 2ex); */
-		/* background-repeat: no-repeat; */
-		/* background-size: 1ex 1ex; */
+	* {
+		font-size: 1em;
+		margin: 0;
 		text-decoration: none;
 	}
 
-	p {
-		font-weight: bolder;
-		margin: 0;
+	a[href="/"]::before {
+		content: '//';
 	}
 
 	ul {
 		list-style: none;
-		margin: 0;
 		padding: 0;
 
 		display: flex;
@@ -81,9 +77,5 @@
 	ul a::after {
 		content: ')';
 		margin-inline-start: 1ch;
-	}
-
-	a[href="/"]::before {
-		content: '//';
 	}
 </style>

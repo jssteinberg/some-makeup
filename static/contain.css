@@ -1,0 +1,19 @@
+:root {
+	/* Words are automatically hyphenated to fit narrow widths. */
+	hyphens: auto;
+	/* Words break for no x-axis scrolling (use this, not `word-break`). */
+	overflow-wrap: break-word;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+	/* Remove space-below in case authors overwrite the display value. */
+	vertical-align: middle;
+	/* Responsive by default. */
+	max-width: 100%;
+}
+
+/* Responsive by default. */
+img, svg, video, canvas { height: auto; }
+
+/* Wrap pre-formatted text by default. */
+pre { white-space: pre-wrap; }

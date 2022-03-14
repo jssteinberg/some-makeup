@@ -1,3 +1,5 @@
+/* EASE STYLING BEHAVIOUR */
+
 *, ::before, ::after {
 	/* Background images are not repeated. */
 	background-repeat: no-repeat;
@@ -8,13 +10,14 @@
 /* `::before`/`::after` inherits border-radius. */
 ::before, ::after { border-radius: inherit; }
 
+/* No inline margin -- horizontal align with adjacent. */
+figure { margin-inline-start: 0; margin-inline-end: 0; }
+
+/* IMPROVE INLINE DISTURBING ELEMENTS */
+
 :root {
-	/* Words are automatically hyphenated to fit narrow widths. */
-	hyphens: auto;
 	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
 	line-sizing: normal;
-	/* Words break for no x-axis scrolling (use this, not `word-break`). */
-	overflow-wrap: break-word;
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%;
 }
@@ -29,6 +32,11 @@ sub, sup {
 sub { bottom: -0.25em; }
 sup { top: -0.5em; }
 
+/* Normalize inline mono-font size for all browsers. */
+code, kbd, samp { font-size: 1em; }
+
+/* INTUITIVE DISPLAY VALUE */
+
 /* `[hidden]` maintain behaviour when overriding `display` values. */
 /* `audio` with no controls should not display. */
 /* `source` has nothing to display and should not display. */
@@ -37,18 +45,15 @@ sup { top: -0.5em; }
 /* Remove unnecessary wrapping `picture`, while maintaining content. */
 picture { display: contents; }
 
-img, svg, video, canvas, audio, iframe, embed, object {
-	/* Remove space-below in case authors overwrite the display value. */
-	vertical-align: middle;
-	/* Responsive by default. */
-	max-width: 100%;
-}
+/* FIX FUNCTION */
 
-/* Responsive by default. */
-img, svg, video, canvas { height: auto; }
+/* Always `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
+strong { font-weight: bolder; }
 
-/* No inline margin -- horizontal align with adjacent. */
-figure { margin-inline-start: 0; margin-inline-end: 0; }
+/* EXTEND */
 
-/* Wrap pre-formatted text by default. */
-pre { white-space: pre-wrap; }
+/* Fix font inheritance for preformatted text. */
+pre, code, kbd, samp { -_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
+
+/* Mouse interaction consistency for clickable elements for usability. */
+button, summary { cursor: pointer; }

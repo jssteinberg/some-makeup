@@ -31,13 +31,12 @@
 	<slot />
 
 	<style>
-		@import '/src/contain.css';
-		@import '/src/improve.css';
-		@import '/src/space.css';
+		@import '/contain.css';
+		@import '/intuitive.css';
+		@import '/space.css';
 
-		small { font-size: 0.8em; }
 		code { font-size: var(--code-inline-font-size); }
-		pre code { font-size: 0.875em; }
+		pre code, small { font-size: 0.875em; }
 	</style>
 </div>
 
@@ -54,7 +53,7 @@
 	.content.typography {
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
 		--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);
-		--spacer: var(--RELATIVE-LINE-HEIGHT);
+		--space: var(--RELATIVE-LINE-HEIGHT);
 
 		text-rendering: optimizeLegibility;
 		text-align: start;

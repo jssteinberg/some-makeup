@@ -13,7 +13,7 @@
 	<slot />
 
 	<style>
-		@import "/src/line-height.css";
+		@import "/line-height.css";
 	</style>
 </div>
 
