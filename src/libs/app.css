@@ -17,6 +17,7 @@
 	--serif: ui-serif, Constantia, Georgia, Hoefler Text, serif;
 	--serif: serif;
 	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
+	--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);
 
 	--fg-h: 0; --fg-s: 0%; --fg-l: 91%; --fg-a: 1;
 	--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));

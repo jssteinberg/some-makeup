@@ -41,13 +41,13 @@
 
 <style>
 	footer {
-		margin: 1em var(--body-gap-inline, 1em);
+		margin: 2em var(--body-gap-inline, 1em);
 
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 1em;
+		gap: max(8px, .5rem) 1em;
 	}
 
 	* {

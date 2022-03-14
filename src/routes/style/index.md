@@ -17,7 +17,7 @@ These CSS files fixes default browser CSS (no IE though), for narrow viewports f
 
 CSS to prevent text and content from overflowing.
 
-*This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports. The other files are optional.*
+*This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
 
 ---
 

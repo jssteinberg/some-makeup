@@ -36,12 +36,17 @@
 		@import '/space.css';
 
 		code { font-size: var(--code-inline-font-size); }
-		pre code, small { font-size: 0.875em; }
+		pre code,
+		small {
+			font-size: 0.875em;
+		}
 	</style>
 </div>
 
 <style>
 	.content {
+		font-size: var(--font-size);
+
 		padding-inline-start: var(--body-gap-inline);
 		padding-inline-end: var(--body-gap-inline);
 
@@ -52,27 +57,24 @@
 
 	.content > :global(:not(:is(h1,pre,code,kbd,samp))) {
 		font-family: var(--sans);
+		font-weight: 300;
 	}
 
 	.content.typography {
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
-		--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);
 		--space: var(--RELATIVE-LINE-HEIGHT);
 
 		text-rendering: optimizeLegibility;
-		text-align: start;
-		font-size: var(--font-size);
-		font-weight: 300;
 	}
 
 	@media (min-width: 1200px) {
-		.content.typography {
+		.content {
 			--font-size: 1.1rem;
 		}
 	}
 
 	@media (min-width: 1500px) {
-		.content.typography {
+		.content {
 			--font-size: 1.125rem;
 		}
 	}
