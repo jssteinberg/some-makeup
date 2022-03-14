@@ -1,9 +1,11 @@
+@import '/static/class/touch-target.css';
+
 :root {
 	--TOUCH-TARGET-MIN-SIZE: max(48px, 3rem);
 	--SPACE: 1rem; /* Document constant spacing var */
 
 	--space: var(--SPACER);
-	--code-inline-font-size: 0.925em;
+	--code-inline-font-size: 0.9em;
 
 	--base-width: calc(40rem + 15vw);
 	--body-gap-inline: 6vw;
@@ -44,15 +46,4 @@ pre {
 	padding: 0 0 var(--space, 1rem) 0;
 	tab-size: 2;
 	white-space: pre;
-}
-
-/* Touch target class */
-.touch-target {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-
-	min-height: var(--TOUCH-TARGET-MIN-SIZE);
-	min-width: var(--touch-target-min-width, var(--TOUCH-TARGET-MIN-SIZE));
 }

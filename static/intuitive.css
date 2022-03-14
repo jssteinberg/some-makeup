@@ -1,41 +1,4 @@
-/* EASE STYLING BEHAVIOUR */
-
-*, ::before, ::after {
-	/* Background images are not repeated. */
-	background-repeat: no-repeat;
-	/* Border-box so size includes border and padding, and border doesn't hide text */
-	box-sizing: border-box;
-}
-
-/* `::before`/`::after` inherits border-radius. */
-::before, ::after { border-radius: inherit; }
-
-/* No inline margin -- horizontal align with adjacent. */
-figure { margin-inline-start: 0; margin-inline-end: 0; }
-
-/* IMPROVE INLINE DISTURBING ELEMENTS */
-
-:root {
-	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
-	line-sizing: normal;
-	/* Prevent adjustment of font-size after Ios orientation change. */
-	-webkit-text-size-adjust: 100%;
-}
-
-/* Prevent `<sub>`/`<sup>` from affecting the line height. */
-sub, sup {
-	position: relative;
-	font-size: 75%;
-	line-height: 0;
-	vertical-align: baseline;
-}
-sub { bottom: -0.25em; }
-sup { top: -0.5em; }
-
-/* Normalize inline mono-font size for all browsers. */
-code, kbd, samp { font-size: 1em; }
-
-/* INTUITIVE DISPLAY VALUE */
+/* IMPROVE DISPLAY VALUES */
 
 /* `[hidden]` maintain behaviour when overriding `display` values. */
 /* `audio` with no controls should not display. */
@@ -45,15 +8,43 @@ code, kbd, samp { font-size: 1em; }
 /* Remove unnecessary wrapping `picture`, while maintaining content. */
 picture { display: contents; }
 
-/* FIX FUNCTION */
+/* MAINTAIN VERTICAL RHYTHM */
+
+:root {
+	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
+	line-sizing: normal;
+	/* Prevent adjustment of font-size after Ios orientation change. */
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Prevent `<sub>`/`<sup>` from affecting line height. */
+sub, sup { line-height: 0; }
+
+/* Normalize inline mono-font size for all browsers. */
+pre, code, kbd, samp { font-size: 1em; }
+
+/* FIX SEMANTIC STYLING */
 
 /* Always `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
 strong { font-weight: bolder; }
 
 /* EXTEND */
 
-/* Fix font inheritance for preformatted text. */
-pre, code, kbd, samp { -_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
+/* Fix font inheritance for preformatted text and add optional font-family variable. */
+pre, code, kbd, samp { --_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
 
 /* Mouse interaction consistency for clickable elements for usability. */
 button, summary { cursor: pointer; }
+
+/* DX FOR STYLING */
+
+*, ::before, ::after {
+	/* Background images are not repeated. */
+	background-repeat: no-repeat;
+}
+
+/* `::before`/`::after` inherits border-radius. */
+::before, ::after { border-radius: inherit; }
+
+/* No inline margin -- horizontal align with adjacent. */
+figure { margin-inline-start: 0; margin-inline-end: 0; }

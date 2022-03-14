@@ -50,6 +50,10 @@
 		justify-content: center;
 	}
 
+	.content > :global(:not(:is(h1,pre,code,kbd,samp))) {
+		font-family: var(--sans);
+	}
+
 	.content.typography {
 		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
 		--font-size: clamp(1rem, 1rem + 0.55vw, 1.25rem);

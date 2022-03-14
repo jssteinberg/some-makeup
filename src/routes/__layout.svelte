@@ -17,7 +17,7 @@
 <style>
 	.site-header {
 		text-align: center;
-		margin: 0 var(--body-gap-inline, 1em);
+		margin: 0 0 1em;
 	}
 
 	.site-header a {
@@ -35,7 +35,7 @@
 	}
 
 	.site-header a::after {
-		background: var(--sep-color);
+		background: black;
 		content: '';
 		opacity: 0;
 		position: absolute;

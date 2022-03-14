@@ -1,8 +1,15 @@
+/* CONTAIN OVERFLOW-X */
+
 :root {
 	/* Words are automatically hyphenated to fit narrow widths. */
 	hyphens: auto;
 	/* Words break for no x-axis scrolling (use this, not `word-break`). */
 	overflow-wrap: break-word;
+}
+
+*, ::before, ::after {
+	/* Border-box so size includes border and padding, and border doesn't hide text */
+	box-sizing: border-box;
 }
 
 img, svg, video, canvas, audio, iframe, embed, object {
