@@ -15,9 +15,7 @@ These CSS files fixes default browser CSS (no IE though), for narrow viewports f
 @import 'makeup-style/static/contain.css';
 ```
 
-CSS to prevent text and content from overflowing.
-
-*This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
+CSS to prevent text and content from overflowing. *This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
 
 ---
 

@@ -1,5 +1,6 @@
 <script>
 	import MetaTags from './MetaTags.svelte';
+	import './prism.css';
 
 	export let title = 'Knut';
 	export let metaTitle;
@@ -51,13 +52,9 @@
 		}
 
 		pre {
-			overflow-y: auto;
-			overflow-wrap: normal;
-			padding: var(--space);
+			padding: var(--space) calc(.5 * var(--space));
 			tab-size: 2;
-			white-space: pre;
-
-			background: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .125);
+			box-shadow: inset 0 0 0 1px var(--sep-color);
 		}
 
 		ol, ul {
