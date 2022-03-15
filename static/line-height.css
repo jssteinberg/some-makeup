@@ -1,6 +1,6 @@
-:root {
+:not(:where(h1,h2,h3,h4,h5,h6)) {
 	/* Line-height for readability on any viewport width. */
-	line-height: calc(1 + var(--added-lead, .6));
+	line-height: calc(1 + var(--added-lead));
 }
 
 h1, .h1 {

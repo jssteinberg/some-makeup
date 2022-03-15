@@ -38,6 +38,7 @@
 
 		main {
 			--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+			--added-lead: .6;
 		}
 
 		code {
