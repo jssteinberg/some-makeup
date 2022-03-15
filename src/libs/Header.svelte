@@ -9,7 +9,7 @@
 	}
 
 	.site-header a {
-		box-shadow: 0 0 0 1px, inset 0 -1ex;
+		box-shadow: inset 0 0 0 1px, inset 0 -1ex;
 		position: relative;
 		text-decoration: none;
 	}
