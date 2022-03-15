@@ -30,21 +30,44 @@
 <div lang={langAttr} class={`content ${set.includes(`typography`) ? `typography` : ``}`}>
 	<slot />
 
-	<style>
-		@import '/contain.css';
-		@import '/intuitive.css';
-		@import '/space.css';
+	<style lang="scss">
+		@use '../static/contain.css';
+		@use '../static/intuitive.css';
+		@use '../static/space.css';
+		@use '../static/line-height.css';
 
-		code { font-size: var(--code-inline-font-size); }
-		pre code,
-		small {
+		main {
+			--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+		}
+
+		code {
+			font-size: var(--code-inline-font-size);
+		}
+
+		small,
+		pre code {
 			font-size: 0.875em;
+		}
+
+		pre {
+			overflow-y: auto;
+			overflow-wrap: normal;
+			padding: var(--space);
+			tab-size: 2;
+			white-space: pre;
+
+			background: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .125);
+		}
+
+		ol, ul {
+			padding-inline-start: var(--space);
 		}
 	</style>
 </div>
 
 <style>
 	.content {
+		font-family: var(--sans);
 		font-size: var(--font-size);
 
 		padding-inline-start: var(--body-gap-inline);
@@ -55,15 +78,11 @@
 		justify-content: center;
 	}
 
-	.content > :global(:not(:is(h1,pre,code,kbd,samp))) {
-		font-family: var(--sans);
+	.content > :global(:not(:where(h1,h2,h3,h4,h5,h6,pre,kbd,samp))) {
 		font-weight: 300;
 	}
 
 	.content.typography {
-		--RELATIVE-LINE-HEIGHT: calc(var(--font-size) * var(--RLH));
-		--space: var(--RELATIVE-LINE-HEIGHT);
-
 		text-rendering: optimizeLegibility;
 	}
 

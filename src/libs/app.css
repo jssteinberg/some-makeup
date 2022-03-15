@@ -4,7 +4,7 @@
 	--TOUCH-TARGET-MIN-SIZE: max(48px, 3rem);
 	--SPACE: 1rem; /* Document constant spacing var */
 
-	--space: var(--SPACER);
+	--space: var(--SPACE);
 	--code-inline-font-size: 0.9em;
 
 	--base-width: calc(40rem + 15vw);
@@ -40,11 +40,3 @@ body {
 }
 
 a { color: inherit; }
-
-pre {
-	overflow-y: auto;
-	overflow-wrap: normal;
-	padding: 0 0 var(--space, 1rem) 0;
-	tab-size: 2;
-	white-space: pre;
-}

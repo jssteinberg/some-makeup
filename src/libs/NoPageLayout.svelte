@@ -30,7 +30,7 @@
 <div>
 	<slot />
 
-	<style lang="postcss">
-		@import '/contain.css';
+	<style lang="scss">
+		@use '../static/contain.css';
 	</style>
 </div>

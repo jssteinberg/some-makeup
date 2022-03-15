@@ -1,3 +1,9 @@
+<script>
+	import '../libs/app.css';
+	import { page } from '$app/stores';
+	import Footer from '/src/libs/Footer.svelte';
+</script>
+
 <svelte:head>
 	<link rel="canonical" href={`https://some.makeup${$page.url.pathnme}`} />
 </svelte:head>
@@ -6,11 +12,11 @@
 	<nav class="site-header">
 		<a href="/" class="touch-target">/</a>
 	</nav>
-	
+
 	<main>
 		<slot />
 	</main>
-	
+
 	<Footer />
 </div>
 
@@ -30,7 +36,7 @@
 		outline: none;
 	}
 
-	.site-header a:is(:hover,:focus)::after {
+	.site-header a:is(:hover, :focus)::after {
 		opacity: 1;
 	}
 
@@ -43,9 +49,3 @@
 		z-index: -1;
 	}
 </style>
-
-<script>
-	import '/src/libs/app.css'
-	import { page } from '$app/stores'
-	import Footer from '/src/libs/Footer.svelte'
-</script>

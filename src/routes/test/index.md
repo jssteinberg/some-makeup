@@ -6,7 +6,7 @@ title: Test
 
 ## `sub` & `sup`
 
-*These three blocks of text should have the same height.*
+*Test: These three blocks of text should have the same height.*
 
 A normal<br>
 multi-line paragraph<br>
@@ -24,3 +24,59 @@ without any element disturbing line-height.
 	<var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var><br>
 	A sentence below.
 </p>
+
+## Lists
+
+- `ul` list item
+- `ul` list item
+  - nested `ul` list item
+    - nested `ul` list item
+  - nested `ul` list item
+- `ul` list item
+- `ul` list item
+  - nested `ul` list item
+    - nested `ul` list item
+  - nested `ul` list item
+- `ul` list item
+
+---
+
+1. `ol` list item
+1. `ol` list item
+   1. nested `ol` list item
+      1. nested `ol` list item
+   1. nested `ol` list item
+1. `ol` list item
+1. `ol` list item
+   1. nested `ol` list item
+      1. nested `ol` list item
+   1. nested `ol` list item
+1. `ol` list item
+
+---
+
+1. `ol` list item
+1. `ol` list item
+   - nested `ul` list item
+     1. nested `ol` list item
+   - nested `ul` list item
+1. `ol` list item
+1. `ol` list item
+   1. nested `ol` list item
+      - nested `ul` list item
+   1. nested `ol` list item
+1. `ol` list item
+
+---
+
+- `ul` list item
+- `ul` list item
+  1.  nested `ol` list item
+      - nested `ul` list item
+  1.  nested `ol` list item
+- `ul` list item
+- `ul` list item
+  - nested `ul` list item
+    1. nested `ol` list item
+  - nested `ul` list item
+- `ul` list item

@@ -11,14 +11,28 @@ const config = {
 	kit: {
 		// adapter: adapter({ precompress: true, }),
 		adapter: adapter(),
+
+		vite: {
+			css: {
+				preprocessorOptions: {
+					scss: {
+						additionalData: '@use "src/variables.scss" as *;'
+					}
+				}
+			}
+		}
 	},
 
 	preprocess: [
 		preprocess({
 			postcss: true,
+
+			scss: {
+				prependData: '@use "src/variables.scss" as *;'
+			}
 		}),
-		mdsvex(mdsvexConfig),
-	],
+		mdsvex(mdsvexConfig)
+	]
 };
 
 export default config;
