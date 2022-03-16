@@ -5,7 +5,7 @@ description: So you want to makeup some styling?
 
 # Makeup Style
 
-So you want to makeup some styling?
+So you want to makeup style?
 
 These CSS files fixes default browser CSS (no IE though), for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 
