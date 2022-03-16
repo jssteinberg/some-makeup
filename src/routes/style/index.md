@@ -39,11 +39,16 @@ CSS that sets consistent spacing between the needed block-level elements. Spacin
 @import 'makeup-style/static/line-height.css';
 ```
 
-CSS that sets line-height to equal leading for headings and body/other text. **Requires variable `--added-lead` to be defined and line-height must be set with it.**
+CSS that sets line-height to equal leading for headings and body/other text.
 
-Each heading can be customized with their own '`--h[1,2,3,4,5,6]-added-lead`' and '`--h[1,2,3,4,5,6]-line-span`' on document root or children.
+*This file requires variable `--added-lead` to be defined and line-height must be set with it.*
 
-Basically there are two options for defining `--added-lead` and setting line-height.
+Each heading can be customized with their own variables on document root or children:
+
+- '`--h[1,2,3,4,5,6]-added-lead`'
+- '`--h[1,2,3,4,5,6]-line-span`'
+
+For defining `--added-lead` and setting line-height, there are basically two options:
 
 ```css
 :root {
