@@ -1,32 +1,56 @@
 {
-	"name": "makeup-style",
-	"version": "0.0.0",
-	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"package": "svelte-kit package",
-		"preview": "svelte-kit preview",
-		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-static": "^1.0.0-next.26",
-		"@sveltejs/adapter-vercel": "^1.0.0-next.43",
-		"@sveltejs/kit": "^1.0.0-next.267",
-		"autoprefixer": "^10.4.2",
-		"cssnano": "^5.0.17",
-		"eslint": "^8.9.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-svelte3": "^3.2.1",
-		"mdsvex": "^0.10.5",
-		"postcss": "^8.4.5",
-		"postcss-import": "^14.0.2",
-		"postcss-load-config": "^3.1.1",
-		"prettier": "^2.4.1",
-		"prettier-plugin-svelte": "^2.4.0",
-		"sass": "^1.49.9",
-		"svelte": "^3.44.0",
-		"svelte-preprocess": "^4.10.1"
-	},
-	"type": "module"
+  "name": "makeup-style",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.26",
+    "@sveltejs/adapter-vercel": "^1.0.0-next.43",
+    "@sveltejs/kit": "^1.0.0-next.267",
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.17",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "mdsvex": "^0.10.5",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-load-config": "^3.1.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "sass": "^1.49.9",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.1"
+  },
+  "description": "CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.",
+  "main": "static/contain.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jssteinberg/some-makeup.git"
+  },
+  "keywords": [
+    "normalize",
+    "typography",
+    "css",
+    "remedy",
+    "intuitive",
+    "default"
+  ],
+  "author": "Johan Sebergsen Steinberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jssteinberg/some-makeup/issues"
+  },
+  "homepage": "https://github.com/jssteinberg/some-makeup/tree/next#readme",
+  "files": [
+    "static/*.css",
+    "static/class/*.css"
+  ],
+  "type": "module"
 }
