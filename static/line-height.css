@@ -27,7 +27,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	--_added-lead: calc(var(--added-lead, .25));
+	--_added-lead: var(--added-lead, .25);
 	--_line-height: calc(
 		1 +
 		var(--h3-added-lead, var(--_added-lead))
