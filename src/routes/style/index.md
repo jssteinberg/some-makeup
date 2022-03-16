@@ -39,4 +39,32 @@ CSS that sets consistent spacing between the needed block-level elements. Spacin
 @import 'makeup-style/static/line-height.css';
 ```
 
-CSS that sets line-height for equal leading of headings and body text. (...variables for `--added-lead`, headings added-lead and headings line-span...)
+CSS that sets line-height to equal leading for headings and body/other text. **Requires variable `--added-lead` to be defined and line-height must be set with it.**
+
+Each heading can be customized with their own '`--h[1,2,3,4,5,6]-added-lead`' and '`--h[1,2,3,4,5,6]-line-span`' on document root or children.
+
+Basically there are two options for defining `--added-lead` and setting line-height.
+
+```css
+:root {
+	/* For both options, define variable on a parent: */
+	--added-lead: .25;
+
+	/* OPTION 1 (safer): */
+	line-height: calc(1 + var(--added-lead));
+}
+
+/* Opt. 1 requires line-height to be reset for children when `--added-lead` is changed: */
+main {
+	--added-lead: .6;
+	line-height: calc(1 + var(--added-lead));
+}
+
+/* OPTION 2 (seems less safe, but this way new line-height does not have to be set for children): */
+:not(:where(h1,h2,h3,h4,h5,h6)) {
+	line-height: calc(1 + var(--added-lead));
+}
+
+/* Opt. 2 will update line-height without the need to set it again: */
+main { --added-lead: .6; }
+```
