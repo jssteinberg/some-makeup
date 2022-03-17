@@ -12,7 +12,7 @@ layout: no
 
 <style>
 	.wrapper {
-		font-size: clamp(var(--font-size), min(5vw,5.5vh), 2.25rem);
+		font-size: clamp(var(--font-size) + .125rem, min(5vw,5.5vh), 2.25rem);
 
 		padding-inline-start: var(--body-gap-inline);
 		padding-inline-end: var(--body-gap-inline);
