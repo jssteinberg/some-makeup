@@ -8,6 +8,13 @@ layout: no
 
 # _some_**.**[makeup-style](/style)
 
+<!--
+- <a href="/gradient-text" sveltekit:prefetch>
+		Gradient CSS Text:<br aria-hidden="true">
+		Overused Yet?
+	</a>
+-->
+
 </div>
 
 <style>
@@ -37,26 +44,3 @@ layout: no
 		min-width: var(--TOUCH-TARGET-MIN-SIZE);
 	}
 </style>
-
-<!--
-<PostList {posts} biggerTitles />
-
-<script>
-	import PostList from '/src/libs/PostList.svelte';
-	export let posts;
-</script>
-
-<script context="module">
-	export const load = async ({ fetch }) => {
-		try {
-			const response = await fetch('/index-posts-by-curry.json');
-			const posts = await response.json();
-
-			return { props: { posts } };
-		} catch (error) {
-			console.error(`Error in load function for /: ${error}`);
-			return { props: { posts: [] }}
-		}
-	};
-</script>
--->

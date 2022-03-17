@@ -10,7 +10,7 @@ Makeup Style differs from normalize.css, sanitize.css, CSS remedy, etc. in how i
 
 ## Changes from Floor Typography CSS
 
-- CSS reorganized into files.
+- CSS reorganized in new files.
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 - Only sets margin-block-end for spacing reset (not top AND bottom). Now in file space.css.

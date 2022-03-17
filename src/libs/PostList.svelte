@@ -1,38 +1,40 @@
 <script>
 	import { page } from '$app/stores';
 	// Featured
-	import Dice from '../libs/css-dice/dice.svelte';
+	import Dice from './css-dice/dice.svelte';
 
 	export let posts;
 	export let biggerTitles;
 </script>
 
-<ul class={`posts ${biggerTitles ? `bigger-titles` : ``}`}>
-	{#each posts as post}
-		<li>
-			<a
-				id={post.title.toLowerCase()}
-				aria-current={$page.url.pathname === post.path ? 'page' : undefined}
-				href={post.path}
-				sveltekit:prefetch
-			>
-				{#if post.metadata?.set && post.metadata.set.includes('featured')}
-					<Dice />
-				{/if}
-
-				<span class="post-title" lang={post.metadata?.lang ? post.metadata.lang : undefined}
-					>{@html post.title}</span
+{#if posts}
+	<ul class={`posts ${biggerTitles ? `bigger-titles` : ``}`}>
+		{#each posts as post}
+			<li>
+				<a
+					id={post.title.toLowerCase()}
+					aria-current={$page.url.pathname === post.path ? 'page' : undefined}
+					href={post.path}
+					sveltekit:prefetch
 				>
+					{#if post.metadata?.set && post.metadata.set.includes('featured')}
+						<Dice />
+					{/if}
 
-				{#if post.metadata?.date}
-					<small class="date">
-						<time>{post.metadata.date[0]}</time>
-					</small>
-				{/if}
-			</a>
-		</li>
-	{/each}
-</ul>
+					<span class="post-title" lang={post.metadata?.lang ? post.metadata.lang : undefined}>
+						{@html post.title}
+					</span>
+
+					{#if post.metadata?.date}
+						<small class="date">
+							<time>{post.metadata.date[0]}</time>
+						</small>
+					{/if}
+				</a>
+			</li>
+		{/each}
+	</ul>
+{/if}
 
 <style>
 	ul {

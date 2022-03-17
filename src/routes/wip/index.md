@@ -11,15 +11,7 @@ set: ['logo']
 
 <AccentHue {hue} />
 
-<MetaTags
-	data={{
-		title: `Some Makeup`,
-		description: `Makeup frontend, design and life.`
-	}}
-/>
-
 <script>
-	import MetaTags from '/src/libs/MetaTags.svelte';
 	import AccentHue from '/src/libs/AccentHue.svelte';
 	import PostList from '/src/libs/PostList.svelte';
 	import Sep from '/src/libs/Sep.svelte';
