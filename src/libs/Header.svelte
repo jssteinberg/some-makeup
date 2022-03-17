@@ -9,8 +9,9 @@
 	}
 
 	.site-header a {
-		box-shadow: inset 0 0 0 1px, inset 0 -1ex;
-		position: relative;
+		border-radius: 99px;
+		box-shadow: -1px -1px var(--sep-color);
+		font-weight: bold;
 		text-decoration: none;
 	}
 
@@ -18,16 +19,7 @@
 		outline: none;
 	}
 
-	.site-header a:is(:hover, :focus)::after {
-		opacity: 1;
-	}
-
-	.site-header a::after {
-		background: black;
-		content: '';
-		opacity: 0;
-		position: absolute;
-		inset: 0;
-		z-index: -1;
+	.site-header a:is(:hover, :focus) {
+		--sep-color: var(--fg);
 	}
 </style>
