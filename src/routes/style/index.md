@@ -9,7 +9,7 @@ So you want to makeup style?
 
 These CSS files fixes default browser CSS (no IE though), for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 
----
+## 1.
 
 ```css
 @import 'makeup-style/static/contain.css';
@@ -17,7 +17,7 @@ These CSS files fixes default browser CSS (no IE though), for narrow viewports f
 
 CSS to prevent text and content from overflowing. *This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
 
----
+## 2.
 
 ```css
 @import 'makeup-style/static/intuitive.css';
@@ -25,7 +25,7 @@ CSS to prevent text and content from overflowing. *This file is pretty much mand
 
 CSS for intuitive styling behaviours and browser default fixes that prevents elements from disrupting the default vertical rhythm by affecting line-height, excluding form elements. Includes option for defining variable `--mono-font` for setting mono-font-family.
 
----
+## 3.
 
 ```css
 @import 'makeup-style/static/space.css';
@@ -33,7 +33,7 @@ CSS for intuitive styling behaviours and browser default fixes that prevents ele
 
 CSS that sets consistent spacing between the needed block-level elements. Spacing can be adjusted and controlled with variable `--space` (defaults -- by falling back -- to `1rem`).
 
----
+## 4.
 
 ```css
 @import 'makeup-style/static/line-height.css';
@@ -55,21 +55,26 @@ For defining `--added-lead` and setting line-height, there are basically two opt
 	/* For both options, define variable on a parent: */
 	--added-lead: .25;
 
-	/* OPTION 1 (safer): */
+	/* OPTION 1 (safer) */
 	line-height: calc(1 + var(--added-lead));
 }
 
-/* Opt. 1 requires line-height to be reset for children when `--added-lead` is changed: */
+/* Opt. 1
+ * requires line-height to be reset for children when `--added-lead` is changed: */
 main {
 	--added-lead: .6;
 	line-height: calc(1 + var(--added-lead));
 }
 
-/* OPTION 2 (seems less safe, but this way new line-height does not have to be set for children): */
+/* OPTION 2 (seems less safe)
+ * This way changing line-height for children
+ * only requires updating var `--added-lead`. */
 :not(:where(h1,h2,h3,h4,h5,h6)) {
 	line-height: calc(1 + var(--added-lead));
 }
 
-/* Opt. 2 will update line-height without the need to set it again: */
+/* Opt. 2
+ * will update line-height for children
+ * only by redefining `--added-lead`: */
 main { --added-lead: .6; }
 ```

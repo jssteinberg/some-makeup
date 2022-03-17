@@ -51,12 +51,6 @@
 			font-size: 0.875em;
 		}
 
-		pre {
-			padding: var(--space) calc(.5 * var(--space));
-			tab-size: 2;
-			box-shadow: inset 0 0 0 1px var(--sep-color);
-		}
-
 		ol, ul {
 			padding-inline-start: var(--space);
 		}
