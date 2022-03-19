@@ -4,7 +4,7 @@ metaTitle: 'Gradient CSS Text: Overused Yet?'
 date: ['2022-01-26']
 set: ['logo', 'typography']
 tags: ['css']
-layout: v1
+layout: no
 ---
 
 # Gradient CSS Text:<br aria-hidden> **Overused Yet?**
@@ -35,16 +35,6 @@ h1.gradient-text {
 </script>
 
 <style>
-	:global(main[class*="gradient-text"] article) {
-		--article-width: min(100%, calc(var(--base-width) + 20rem + 5vw));
-	}
-
-	:global(main[class*="gradient-text"]) h1 {
-		padding-inline-start: var(--body-gap-inline, 1rem);
-		padding-inline-end: var(--body-gap-inline, 1rem);
-		width: var(--article-width);
-	}
-
 	:global(.token.function),
 	:global(.token.property) {
 		--from: hsla(var(--gradient-base-hue, 180), 75%, 75%, 1);

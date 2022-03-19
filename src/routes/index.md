@@ -8,12 +8,10 @@ layout: no
 
 # _some_**.**[makeup-style](/style)
 
-<!--
 - <a href="/gradient-text" sveltekit:prefetch>
 		Gradient CSS Text:<br aria-hidden="true">
 		Overused Yet?
 	</a>
--->
 
 </div>
 

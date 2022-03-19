@@ -52,7 +52,8 @@ For defining `--added-lead` and setting line-height, there are basically two opt
 
 ```css
 :root {
-	/* For both options, define variable on a parent: */
+	/* For both options,
+	 * define variable on a parent: */
 	--added-lead: .25;
 
 	/* OPTION 1 (safer) */
@@ -60,7 +61,8 @@ For defining `--added-lead` and setting line-height, there are basically two opt
 }
 
 /* Opt. 1
- * requires line-height to be reset for children when `--added-lead` is changed: */
+ * requires line-height to be reset for children
+ * when `--added-lead` is changed: */
 main {
 	--added-lead: .6;
 	line-height: calc(1 + var(--added-lead));
