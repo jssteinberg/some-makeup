@@ -6,7 +6,7 @@
 	<h2>
 		<a
 			sveltekit:prefetch
-			class="touch-target"
+			class="touch-target-center"
 			aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 			href="/"
 		>
@@ -17,7 +17,7 @@
 	<ul>
 		<li>
 			<a
-				class="touch-target"
+				class="touch-target-center"
 				sveltekit:prefetch
 				aria-current={$page.url.pathname === '/wip' ? 'page' : undefined}
 				href="/wip"
@@ -28,7 +28,7 @@
 
 		<li>
 			<a
-				class="touch-target"
+				class="touch-target-center"
 				sveltekit:prefetch
 				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 				href="/about"

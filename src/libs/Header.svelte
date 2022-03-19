@@ -1,6 +1,6 @@
-<nav class="site-header">
-	<a href="/" class="touch-target">/</a>
-</nav>
+<header class="site-header">
+	<a href="/" class="touch-target-center">/</a>
+</header>
 
 <style>
 	.site-header {

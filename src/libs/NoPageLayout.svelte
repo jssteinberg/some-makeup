@@ -1,5 +1,6 @@
 <script>
 	import MetaTags from './MetaTags.svelte';
+	import ContainCss from './ContainCss.svelte';
 
 	export let title = 'Knut';
 	export let metaTitle;
@@ -27,10 +28,5 @@
 	}}
 />
 
-<div>
-	<slot />
-
-	<style lang="scss">
-		@use '../static/contain.css';
-	</style>
-</div>
+<slot />
+<ContainCss />

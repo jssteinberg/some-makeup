@@ -17,7 +17,7 @@ layout: no
 
 <style>
 	.wrapper {
-		font-size: clamp(var(--font-size) + .125rem, min(5vw,5.5vh), 2.25rem);
+		font-size: clamp(var(--font-size) + .125rem, var(--font-size) + min(1vw,1.5vh), 2.125rem);
 
 		padding-inline-start: var(--body-gap-inline);
 		padding-inline-end: var(--body-gap-inline);
@@ -40,9 +40,6 @@ layout: no
 
 		min-height: var(--TOUCH-TARGET-MIN-SIZE);
 		min-width: var(--TOUCH-TARGET-MIN-SIZE);
-
-		font-variant: small-caps;
-		text-transform: lowercase;
 	}
 
 	ul {

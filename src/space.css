@@ -21,12 +21,22 @@
 hr {
 	/* Remove border to not affect vertical rhythm. */
 	border: none;
-	/* Use box-shadow as border to not disrupt vertical rhythm */
-	box-shadow: 0 -1px;
 	/* Remove Firefox `color: gray`. */
 	color: inherit;
 	/* Normalize box sizing (Firefox). */
 	height: var(--hr-space, var(--space, 1rem));
 	/* Spacing, remove margin-inline `auto` (to not be centered by default). */
 	margin: 0;
+	/* Relative position to cotain `::after` */
+	position: relative;
+}
+
+/* Position absolute `::after` with border */
+hr::after {
+	border-top: 1px solid;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }

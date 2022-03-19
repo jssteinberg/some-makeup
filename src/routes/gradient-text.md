@@ -45,4 +45,18 @@ h1.gradient-text {
 		font-weight: 800; font-weight: 900;
 		text-transform: uppercase;
 	}
+
+	h1 {
+		--from: hsla(var(--gradient-base-hue, 180), 50%, 60%, 1);
+		--to: hsla(var(--gradient-base-hue, 180), 75%, 90%, 1);
+		background-image: linear-gradient(45deg, var(--from), var(--to));
+		color: transparent;
+		background-clip: text;
+	}
+
+	@media (min-width: 900px) {
+		h1 {
+			--h1-line-span: 3;
+		}
+	}
 </style>

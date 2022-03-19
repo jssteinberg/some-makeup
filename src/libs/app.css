@@ -6,7 +6,7 @@
 
 	--added-lead: .25; /* Approx. browser default line-height added-lead */
 	--space: var(--SPACE);
-	--font-size: clamp(1rem, 1rem + 0.6vw, 1.25rem);
+	--font-size: clamp(1rem, 5vw, 1.5rem);
 
 	--base-width: calc(40rem + 15vw);
 	--body-gap-inline: 6vw;
@@ -29,7 +29,7 @@
 	line-height: calc(1 + var(--added-lead));
 }
 
-div,
+div, header, nav, footer,
 address, datalist, details, fieldset, pre, table,
 canvas, embed, figure, iframe, object, video,
 dl, ol, ul,
@@ -49,18 +49,3 @@ body {
 }
 
 a { color: inherit; }
-
-pre {
-	hyphens: none;
-	overflow: auto;
-	padding: var(--space, 1em) 0;
-	tab-size: 2;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-}
-
-:not(pre) > code {
-	white-space: normal;
-}

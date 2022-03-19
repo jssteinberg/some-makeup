@@ -29,7 +29,7 @@
     "svelte-preprocess": "^4.10.1"
   },
   "description": "CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.",
-  "main": "static/contain.css",
+  "main": "contain.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jssteinberg/some-makeup.git"

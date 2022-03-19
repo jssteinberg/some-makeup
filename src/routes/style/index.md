@@ -12,7 +12,7 @@ These CSS files fixes default browser CSS (no IE though), for narrow viewports f
 ## 1.
 
 ```css
-@import 'makeup-style/static/contain.css';
+@import 'makeup-style/contain.css';
 ```
 
 CSS to prevent text and content from overflowing. *This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
@@ -20,7 +20,7 @@ CSS to prevent text and content from overflowing. *This file is pretty much mand
 ## 2.
 
 ```css
-@import 'makeup-style/static/intuitive.css';
+@import 'makeup-style/src/intuitive.css';
 ```
 
 CSS for intuitive styling behaviours and browser default fixes that prevents elements from disrupting the default vertical rhythm by affecting line-height, excluding form elements. Includes option for defining variable `--mono-font` for setting mono-font-family.
@@ -28,7 +28,7 @@ CSS for intuitive styling behaviours and browser default fixes that prevents ele
 ## 3.
 
 ```css
-@import 'makeup-style/static/space.css';
+@import 'makeup-style/src/space.css';
 ```
 
 CSS that sets consistent spacing between the needed block-level elements. Spacing can be adjusted and controlled with variable `--space` (defaults -- by falling back -- to `1rem`).
@@ -36,7 +36,7 @@ CSS that sets consistent spacing between the needed block-level elements. Spacin
 ## 4.
 
 ```css
-@import 'makeup-style/static/line-height.css';
+@import 'makeup-style/src/line-height.css';
 ```
 
 CSS that sets line-height to equal leading for headings and body/other text.
@@ -71,7 +71,7 @@ main {
 /* OPTION 2 (seems less safe)
  * This way changing line-height for children
  * only requires updating var `--added-lead`. */
-div,
+div, header, nav, footer,
 address, datalist, details, fieldset, pre, table,
 canvas, embed, figure, iframe, object, video,
 dl, ol, ul,
@@ -85,10 +85,8 @@ blockquote, p {
 main { --added-lead: .6; }
 ```
 
-<style>
-	pre {
-		border-radius: 0 0 .5rem 0;
-		box-shadow: 1px 1px var(--sep-color);
-		padding: 0 calc(.5 * var(--space)) var(--space) 0;
-	}
-</style>
+<PrismCss />
+
+<script>
+	import PrismCss from '/src/libs/PrismCss.svelte';
+</script>

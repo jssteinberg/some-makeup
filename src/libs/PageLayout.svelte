@@ -1,6 +1,9 @@
 <script>
 	import MetaTags from './MetaTags.svelte';
-	import './prism.css';
+	import ContainCss from './ContainCss.svelte';
+	import IntuitiveCss from './IntuitiveCss.svelte';
+	import SpaceCss from './SpaceCss.svelte';
+	import LineHeightCss from './LineHeightCss.svelte';
 
 	export let title = 'Knut';
 	export let metaTitle;
@@ -28,35 +31,20 @@
 	}}
 />
 
+<ContainCss />
+<IntuitiveCss />
+<SpaceCss />
+<LineHeightCss />
+
 <div lang={langAttr} class={`content ${set.includes(`typography`) ? `typography` : ``}`}>
 	<slot />
-
-	<style lang="scss">
-		@use '../static/contain.css';
-		@use '../static/intuitive.css';
-		@use '../static/space.css';
-		@use '../static/line-height.css';
-
-		main {
-			--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
-			--added-lead: .6;
-		}
-
-		code { font-size: .9em; }
-
-		small,
-		pre code {
-			font-size: 0.85em;
-		}
-
-		ol, ul {
-			padding-inline-start: var(--space);
-		}
-	</style>
 </div>
 
 <style>
 	.content {
+		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+		--added-lead: .6;
+
 		font-family: var(--sans);
 		font-size: var(--font-size);
 
@@ -66,10 +54,6 @@
 		display: grid;
 		grid-template-columns: min(100%, var(--base-width));
 		justify-content: center;
-	}
-
-	.content > :global(:not(:where(h1,h2,h3,h4,h5,h6,pre,kbd,samp))) {
-		font-weight: 300;
 	}
 
 	.content.typography {
@@ -86,5 +70,42 @@
 		.content {
 			--font-size: 1.125rem;
 		}
+	}
+
+	.content :global(h1) {
+		font-weight: 700; font-weight: 800; font-weight: 900;
+	}
+
+	.content :global(:is(p,li)) {
+		font-weight: 300;
+	}
+
+	.content :global(code) { font-size: .9em; }
+
+	.content :global(small),
+	.content :global(pre code) {
+		font-size: 0.85em;
+	}
+
+	.content :global(:is(ol, ul)) {
+		padding-inline-start: var(--space);
+	}
+
+	:where(.content) :global(pre) {
+		hyphens: none;
+		overflow: auto;
+		tab-size: 2;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+
+		border-radius: 0 0 .5rem 0;
+		box-shadow: 1px 1px var(--sep-color);
+		padding: 0 var(--space) var(--space) 0;
+	}
+
+	.content :global(:not(pre) > code) {
+		white-space: normal;
 	}
 </style>
