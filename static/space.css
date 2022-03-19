@@ -1,9 +1,11 @@
 /* Consistent block margin for the needed block-level elements. */
-address, datalist, details, fieldset, pre, table,
-canvas, embed, figure, iframe, object, video,
-dl, ol, ul,
-h1, h2, h3, h4, h5, h6,
-blockquote, p {
+:where(
+	h1, h2, h3, h4, h5, h6,
+	address, datalist, details, fieldset, pre, table,
+	canvas, embed, figure, iframe, object, video,
+	dl, ol, ul,
+	blockquote, p
+) {
 	/* No margin top so grid can be used without doubling margins. */
 	margin-block-start: 0;
 	/* Block margin end gives natural flow with space for any next element. */
@@ -11,7 +13,7 @@ blockquote, p {
 }
 
 /* Remove block margin for children that shouldn't disrupt vertical flow. */
-ol ol, ol ul, ul ol, ul ul {
+:where(ol, ul) :where(ol, ul) {
 	margin-block-end: 0;
 }
 

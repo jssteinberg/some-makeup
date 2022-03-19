@@ -9,7 +9,7 @@ layout: no
 # _some_**.**[makeup-style](/style)
 
 - <a href="/gradient-text" sveltekit:prefetch>
-		Gradient CSS Text:<br aria-hidden="true">
+		Gradient Text CSS:
 		Overused Yet?
 	</a>
 
@@ -40,5 +40,13 @@ layout: no
 
 		min-height: var(--TOUCH-TARGET-MIN-SIZE);
 		min-width: var(--TOUCH-TARGET-MIN-SIZE);
+
+		font-variant: small-caps;
+		text-transform: lowercase;
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
 	}
 </style>

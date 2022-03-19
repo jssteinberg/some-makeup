@@ -71,7 +71,11 @@ main {
 /* OPTION 2 (seems less safe)
  * This way changing line-height for children
  * only requires updating var `--added-lead`. */
-:not(:where(h1,h2,h3,h4,h5,h6)) {
+div,
+address, datalist, details, fieldset, pre, table,
+canvas, embed, figure, iframe, object, video,
+dl, ol, ul,
+blockquote, p {
 	line-height: calc(1 + var(--added-lead));
 }
 
