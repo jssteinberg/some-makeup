@@ -42,9 +42,7 @@
 			--added-lead: .6;
 		}
 
-		code {
-			font-size: var(--code-inline-font-size);
-		}
+		code { font-size: .9em; }
 
 		small,
 		pre code {

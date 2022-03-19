@@ -11,11 +11,6 @@ pre[class*="language-"] {
 	color: #f8f8f2;
 }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	white-space: normal;
-}
-
 .token.comment,
 .token.prolog,
 .token.doctype,
