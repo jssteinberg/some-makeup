@@ -8,6 +8,9 @@ layout: no
 
 # _some_**.**[makeup-style](/style)
 
+- <a href="/vanilla-svelte-parallax" sveltekit:prefetch>
+		Vanilla Svelte Parallax
+	</a>
 - <a href="/gradient-text" sveltekit:prefetch>
 		Gradient Text CSS:
 		Overused Yet?
