@@ -80,3 +80,11 @@ main {
  * only by redefining `--added-lead`: */
 main { --added-lead: .6; }
 ```
+
+<style>
+	pre {
+		border-radius: 0 0 .5rem 0;
+		box-shadow: 1px 1px var(--sep-color);
+		padding: 0 calc(.5 * var(--space)) var(--space) 0;
+	}
+</style>

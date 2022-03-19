@@ -47,5 +47,12 @@ body {
 a { color: inherit; }
 
 pre {
+	hyphens: none;
+	overflow: auto;
+	padding: var(--space, 1em) 0;
 	tab-size: 2;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
 }

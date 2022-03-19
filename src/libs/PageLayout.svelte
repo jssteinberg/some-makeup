@@ -1,5 +1,6 @@
 <script>
 	import MetaTags from './MetaTags.svelte';
+	import './prism.css';
 
 	export let title = 'Knut';
 	export let metaTitle;
@@ -35,7 +36,6 @@
 		@use '../static/intuitive.css';
 		@use '../static/space.css';
 		@use '../static/line-height.css';
-		@use './prism.css';
 
 		main {
 			--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
@@ -53,12 +53,6 @@
 
 		ol, ul {
 			padding-inline-start: var(--space);
-		}
-
-		pre {
-			border-radius: 0 0 .5rem 0;
-			box-shadow: 1px 1px var(--sep-color);
-			padding: 0 calc(.5 * var(--space)) var(--space) 0;
 		}
 	</style>
 </div>

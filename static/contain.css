@@ -23,4 +23,4 @@ img, svg, video, canvas, audio, iframe, embed, object {
 img, svg, video, canvas { height: auto; }
 
 /* Wrap pre-formatted text by default. */
-pre { white-space: pre-wrap; }
+:where(pre) { white-space: pre-wrap; }
