@@ -6,9 +6,12 @@
 
 	--added-lead: .25; /* Approx. browser default line-height added-lead */
 	--space: var(--SPACE);
-	--font-size: clamp(1rem, 5vw, 1.5rem);
+	--font-size: clamp(
+		1rem, 4.9vw, 1.3rem
+	);
 
-	--base-width: calc(40rem + 15vw);
+	--max-content-width: calc(40rem + 15vw);
+	--content-width: min(100%, var(--max-content-width));
 	--body-gap-inline: 6vw;
 	--decor-width: 2px;
 

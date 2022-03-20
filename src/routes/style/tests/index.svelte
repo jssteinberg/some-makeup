@@ -1,21 +1,21 @@
 <script>
 	import ContainCss from "/src/libs/ContainCss.svelte";
-	let contain = false;
+	let contain = true;
 </script>
 
 {#if contain} <ContainCss /> {/if}
 
 <div class="wrapper">
-	<h1>Test</h1>
+	<h1>Tests</h1>
 	
 	<p>
 	<button on:click={() => {contain = !contain}}>
-		contain.css
 		{#if contain}
-			(yes)
+			(On)
 		{:else}
-			(no)
+			(Off)
 		{/if}
+		contain.css
 	</button>
 	</p>
 	
@@ -26,19 +26,23 @@
 
 <style>
 	.wrapper {
-		padding: var(--space, 1rem) var(--body-gap-inline);
-		width: var(--base-width);
-		max-width: 100%;
+		width: min(
+			100vw - 2 * var(--body-gap-inline),
+			var(--max-content-width)
+		);
+		margin: 0 auto;
 
 		position: relative;
 	}
 
 	.wrapper::after {
+		--padding-inline: calc(.125 * var(--body-gap-inline));
+		border-left: var(--padding-inline) dashed yellow;
+		border-right: var(--padding-inline) dashed yellow;
 		content: '';
 		position: absolute;
-		inset: 0;
-		background: var(--fg);
+		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
 		z-index: -1;
-		opacity: .1;
+		opacity: .5;
 	}
 </style>

@@ -1,13 +1,18 @@
 <nav>
 	<a class="touch-target" href="/style">Makeup Style</a>
-	<a class="touch-target" href="/style/test">Test</a>
+	<a class="touch-target" href="/style/tests">Tests</a>
 </nav>
 
 <slot />
 
 <style>
 	nav {
-		padding: .5rem var(--body-gap-inline);
+		padding: .5rem 0;
+		width: min(
+			100vw - 2 * var(--body-gap-inline),
+			var(--max-content-width)
+		);
+		margin: 0 auto;
 		
 		display: flex;
 		flex-wrap: wrap;

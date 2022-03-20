@@ -20,13 +20,17 @@ layout: no
 
 <style>
 	.wrapper {
-		font-size: clamp(var(--font-size) + .125rem, var(--font-size) + min(1vw,1.5vh), 2.125rem);
+		font-size: clamp(
+			var(--font-size) + .125rem,
+			var(--font-size) + min(1vw,1.5vh),
+			2.125rem
+		);
 
 		padding-inline-start: var(--body-gap-inline);
 		padding-inline-end: var(--body-gap-inline);
 
 		display: grid;
-		grid-template-columns: min(100%, var(--base-width));
+		grid-template-columns: var(--content-width);
 		justify-content: center;
 	}
 

@@ -52,7 +52,7 @@
 		padding-inline-end: var(--body-gap-inline);
 
 		display: grid;
-		grid-template-columns: min(100%, var(--base-width));
+		grid-template-columns: var(--content-width);
 		justify-content: center;
 	}
 
