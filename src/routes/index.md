@@ -42,7 +42,6 @@ layout: no
 	/* Touch target class */
 	a {
 		display: inline-flex;
-		align-items: center;
 		flex-wrap: wrap;
 
 		min-height: var(--TOUCH-TARGET-MIN-SIZE);
@@ -52,5 +51,9 @@ layout: no
 	ul {
 		padding: 0;
 		list-style: none;
+	}
+
+	ul a {
+		align-items: center;
 	}
 </style>

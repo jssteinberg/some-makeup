@@ -80,7 +80,7 @@
 		font-weight: 300;
 	}
 
-	.content :global(code) { font-size: .9em; }
+	.content :global(code) { font-size: .85em; }
 
 	.content :global(small),
 	.content :global(pre code) {

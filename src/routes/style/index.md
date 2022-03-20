@@ -12,7 +12,7 @@ These CSS files fixes default browser CSS (no IE though), for narrow viewports f
 ## 1.
 
 ```css
-@import 'makeup-style/contain.css';
+@import 'makeup-style/src/contain.css';
 ```
 
 CSS to prevent text and content from overflowing. *This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
@@ -23,7 +23,9 @@ CSS to prevent text and content from overflowing. *This file is pretty much mand
 @import 'makeup-style/src/intuitive.css';
 ```
 
-CSS for intuitive styling behaviours and browser default fixes that prevents elements from disrupting the default vertical rhythm by affecting line-height, excluding form elements. Includes option for defining variable `--mono-font` for setting mono-font-family.
+CSS for intuitive styling behaviours and browser default fixes that prevents elements from disrupting the default vertical rhythm by affecting line-height (excluding form elements). Includes option for defining variable:
+
+- `--mono-font` for setting mono-font-family.
 
 ## 3.
 
@@ -31,7 +33,9 @@ CSS for intuitive styling behaviours and browser default fixes that prevents ele
 @import 'makeup-style/src/space.css';
 ```
 
-CSS that sets consistent spacing between the needed block-level elements. Spacing can be adjusted and controlled with variable `--space` (defaults -- by falling back -- to `1rem`).
+CSS that sets consistent spacing between the needed block-level elements. Spacing can be adjusted and controlled with variable:
+
+- `--space` (defaults, falls back, to `1rem`).
 
 ## 4.
 
@@ -56,7 +60,7 @@ For defining `--added-lead` and setting line-height, there are basically two opt
 	 * define variable on a parent: */
 	--added-lead: .25;
 
-	/* OPTION 1 (safer) */
+	/* OPTION 1 */
 	line-height: calc(1 + var(--added-lead));
 }
 
@@ -68,7 +72,7 @@ main {
 	line-height: calc(1 + var(--added-lead));
 }
 
-/* OPTION 2 (seems less safe)
+/* OPTION 2
  * This way changing line-height for children
  * only requires updating var `--added-lead`. */
 div, header, nav, footer,
