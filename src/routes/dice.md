@@ -9,7 +9,7 @@ tags: ['css', '3d']
 
 Playing with my CSS dice.
 
-<div class="wrapper">
+<div class="dice-wrapper">
 	<Dice bg hue={deg} />
 </div>
 
@@ -24,7 +24,6 @@ Playing with my CSS dice.
 
     	<label>
     		<input type="number" inputmode="decimal" min="0" max="359.9" maxlength="5" step="0.1" bind:value={deg} />
-    		<br aria-hidden>
     		color hue degrees (0.0-359.9)
     	</label>
     </p>
@@ -44,15 +43,10 @@ Playing with my CSS dice.
 </script>
 
 <style>
-	h1 {
-		font-family: var(--serif, serif);
-		font-weight: normal;
-		text-transform: none;
-	}
-
-	.wrapper {
+	.dice-wrapper {
 		display: grid;
 		place-items: center;
+		margin-block-end: var(--space, 1em);
 	}
 
 	input[type="number"] {

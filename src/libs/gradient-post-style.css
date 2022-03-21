@@ -9,33 +9,6 @@
 	background-clip: text;
 }
 
-:root.gradient-post-style .content :where(h1) {
-	--h1-line-span: 2;
-
-	margin-block-end: calc(3.5 * var(--space, 1rem));
-	padding-block-end: calc(3.5 * var(--space, 1rem));
-	position: relative;
-}
-
-:root.gradient-post-style .content :where(h1)::after {
-	--block-start-size: calc(4 * var(--space, 1rem));
-	--sep-size: calc(2 * var(--space, 1rem));
-
-	content: '';
-	display: block;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: linear-gradient(var(--from), var(--to));
-
-	display: block;
-	margin: 0 auto;
-	padding: 0;
-	width: var(--decor-width);
-	height: var(--sep-size);
-}
-
 @media (min-width: 900px) {
 	:root.gradient-post-style .content :where(h1) {
 		--h1-line-span: 3;

@@ -1,5 +1,6 @@
 ---
 title: Vanilla Svelte Parallax
+date: ['2022-03-21']
 ---
 
 # Vanilla Svelte Parallax

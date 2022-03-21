@@ -1,6 +1,6 @@
 ---
 title: some.makeup
-description: makeup style for life
+description: Makeup some style for the web
 layout: no
 ---
 
@@ -9,11 +9,16 @@ layout: no
 # _some_**.**[makeup-style](/style)
 
 - <a href="/vanilla-svelte-parallax" sveltekit:prefetch>
-		Vanilla Svelte Parallax
+	Vanilla Svelte Parallax
 	</a>
+
 - <a href="/gradient-text" sveltekit:prefetch>
-		Gradient Text CSS:
-		Overused Yet?
+	Gradient Text CSS:
+	Overused Yet?
+	</a>
+
+- <a href="/dice" sveltekit:prefetch>
+	CSS Dice
 	</a>
 
 </div>
@@ -39,18 +44,19 @@ layout: no
 		display: block;
 	}
 
-	/* Touch target class */
 	a {
 		display: inline-flex;
 		flex-wrap: wrap;
 
-		min-height: var(--TOUCH-TARGET-MIN-SIZE);
-		min-width: var(--TOUCH-TARGET-MIN-SIZE);
+		min-height: var(--TOUCH-TARGET-MIN-SIZE, 48px);
+		min-width: var(--TOUCH-TARGET-MIN-SIZE, 48px);
 	}
 
 	ul {
-		padding: 0;
+		display: grid;
+		gap: 1em;
 		list-style: none;
+		padding: 0;
 	}
 
 	ul a {
