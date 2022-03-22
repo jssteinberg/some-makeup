@@ -4,7 +4,7 @@
 
 <style>
 	.site-header {
-		padding: var(--body-gap-inline);
+		padding: var(--view-inline);
 		padding-block-end: var(--space, 1rem);
 	}
 

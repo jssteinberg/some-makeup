@@ -41,7 +41,7 @@
 
 <style>
 	footer {
-		padding: var(--body-gap-inline, 1em);
+		padding: var(--view-inline, 1em);
 
 		display: flex;
 		align-items: center;

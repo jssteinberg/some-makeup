@@ -9,7 +9,7 @@
 	nav {
 		padding: .5rem 0;
 		width: min(
-			100vw - 2 * var(--body-gap-inline),
+			100vw - 2 * var(--view-inline),
 			var(--max-content-width)
 		);
 		margin: 0 auto;

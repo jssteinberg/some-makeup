@@ -27,7 +27,7 @@
 <style>
 	.wrapper {
 		width: min(
-			100vw - 2 * var(--body-gap-inline),
+			100vw - 2 * var(--view-inline),
 			var(--max-content-width)
 		);
 		margin: 0 auto;
@@ -36,7 +36,7 @@
 	}
 
 	.wrapper::after {
-		--padding-inline: calc(.125 * var(--body-gap-inline));
+		--padding-inline: calc(.125 * var(--view-inline));
 		border-left: var(--padding-inline) dashed yellow;
 		border-right: var(--padding-inline) dashed yellow;
 		content: '';

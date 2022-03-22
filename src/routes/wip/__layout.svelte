@@ -58,7 +58,7 @@
 		padding: 0;
 		position: relative;
 		height: var(--decor-width);
-		width: calc(100% - var(--body-gap-inline) * 2);
+		width: calc(100% - var(--view-inline) * 2);
 	}
 	div :global(hr::before) {
 		--size: calc(1 * var(--spacer, 1em));

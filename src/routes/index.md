@@ -31,8 +31,8 @@ layout: no
 			2.125rem
 		);
 
-		padding-inline-start: var(--body-gap-inline);
-		padding-inline-end: var(--body-gap-inline);
+		padding-inline-start: var(--view-inline);
+		padding-inline-end: var(--view-inline);
 
 		display: grid;
 		grid-template-columns: var(--content-width);
