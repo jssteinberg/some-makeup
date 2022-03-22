@@ -15,6 +15,7 @@
 	</h2>
 
 	<ul>
+		<!--
 		<li>
 			<a
 				class="touch-target-center"
@@ -25,6 +26,7 @@
 				WIP
 			</a>
 		</li>
+		-->
 
 		<li>
 			<a

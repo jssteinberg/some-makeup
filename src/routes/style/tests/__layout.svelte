@@ -4,59 +4,39 @@
 	import SpaceCss from "/src/libs/SpaceCss.svelte";
 	import LineHeightCss from "/src/libs/LineHeightCss.svelte";
 
-	let contain = true;
-	let intuitive = true;
-	let space = true;
-	let lineHeight = true;
+	let css = {
+		contain: true,
+		intuitive: true,
+		space: true,
+		lineHeight: true,
+	};
+
+	const toggleCss = (file) => { css[file] = !css[file] };
 </script>
 
-{#if contain} <ContainCss /> {/if}
-{#if intuitive} <IntuitiveCss /> {/if}
-{#if space} <SpaceCss /> {/if}
-{#if lineHeight} <lineHeightCss /> {/if}
-
 <div class="wrapper">
-	<h1>Tests</h1>
-	
-	<p>
-		<button on:click={() => {contain = !contain}}>
-			{#if contain}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			contain.css
-		</button>
-		<button on:click={() => {intuitive = !intuitive}}>
-			{#if intuitive}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			intuitive.css
-		</button>
-		<button on:click={() => {space = !space}}>
-			{#if space}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			space.css
-		</button>
-		<button on:click={() => {lineHeight = !lineHeight}}>
-			{#if lineHeight}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			line-height.css
-		</button>
+	<p class="button-container">
+		{#each Object.keys(css) as file}
+			<button on:click={toggleCss(file)} class={`${css[file] ? `on` : `off`}`}>
+				<span class="status">
+					{#if css[file]} (On) {:else} (Off) {/if}
+				</span>
+				<span class="file">
+					{file === 'lineHeight' ? 'line-height' : file}.css
+				</span>
+			</button>
+		{/each}
 	</p>
-
-	<hr>
+	
+	<h1>Tests</h1>
 
 	<slot />
 </div>
+
+{#if css.contain} <ContainCss /> {/if}
+{#if css.intuitive} <IntuitiveCss /> {/if}
+{#if css.space} <SpaceCss /> {/if}
+{#if css.lineHeight} <LineHeightCss /> {/if}
 
 <style>
 	.wrapper {
@@ -70,13 +50,59 @@
 	}
 
 	.wrapper::after {
-		--padding-inline: calc(1 * var(--view-inline));
-		border-left: var(--padding-inline) solid yellow;
-		border-right: var(--padding-inline) solid yellow;
+		--padding-inline: 2px;
+		border-right: var(--padding-inline) solid red;
 		content: '';
 		position: absolute;
 		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
 		z-index: -1;
-		opacity: .125;
+		opacity: .5;
+	}
+
+	.button-container {
+		box-sizing: border-box;
+		margin: 0 0 1em;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1px;
+
+		position: sticky;
+		top: 1px;
+		z-index: 1;
+	}
+
+	button {
+		background: var(--bg);
+		box-shadow: inset 0 0 0 1px var(--fg);
+		border: none;
+		border-radius: none;
+		box-sizing: border-box;
+		color: inherit;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: inherit;
+		padding: 1em;
+		text-align: start;
+		opacity: .9;
+	}
+
+	button.on {
+		background: var(--fg);
+		color: var(--bg);
+	}
+
+	button .status {
+		min-width: 5ch;
+	}
+
+	@media (min-width: 600px) {
+		.button-container {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	.wrapper :global(h2) {
+		box-shadow: 0 1px;
 	}
 </style>

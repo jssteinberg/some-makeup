@@ -43,7 +43,7 @@ CSS that sets consistent spacing between the needed block-level elements. Spacin
 @import 'makeup-style/src/line-height.css';
 ```
 
-CSS that sets line-height to equal leading for headings and body/other text.
+CSS that sets line-height to equal leading for headings.
 
 *This file requires variable `--added-lead` to be defined and line-height must be set with it.*
 

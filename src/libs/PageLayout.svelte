@@ -88,7 +88,7 @@
 		word-break: normal;
 		word-wrap: normal;
 
-		border-radius: 0 0 .5rem 0;
+		border-radius: .5rem 0;
 		box-shadow: 1px 1px var(--sep-color);
 		padding: 0 var(--space) var(--space) 0;
 	}

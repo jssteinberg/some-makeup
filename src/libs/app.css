@@ -1,10 +1,10 @@
-@import '/static/class/touch-target.css';
+@import '/src/class/touch-target.css';
 
 :root {
 	--TOUCH-TARGET-MIN-SIZE: max(48px, 3rem);
 	--SPACE: 1rem; /* Document constant spacing var */
 
-	--added-lead: .25; /* Approx. browser default line-height added-lead */
+	--added-lead: .225; /* Approx. browser default added-lead */
 	--space: var(--SPACE);
 	--font-size: clamp(
 		1rem, 4.9vw, 1.3rem
@@ -29,7 +29,6 @@
 
 	background-color: var(--bg);
 	min-height: 100vh; /* Too avoid bg clip on bg change */
-	line-height: calc(1 + var(--added-lead));
 }
 
 @media (min-width: 900px) {
@@ -42,14 +41,6 @@
 	:root {
 		--font-size: clamp(1rem, .5rem + 0.55vw, 1.12em);
 	}
-}
-
-div, header, nav, footer,
-address, datalist, details, fieldset, pre, table,
-canvas, embed, figure, iframe, object, video,
-dl, ol, ul,
-blockquote, p {
-	line-height: calc(1 + var(--added-lead));
 }
 
 /* @media (motion-ok) {

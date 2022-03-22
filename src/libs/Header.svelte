@@ -9,8 +9,7 @@
 	}
 
 	.site-header a {
-		border-radius: 99px;
-		box-shadow: -1px -1px var(--sep-color);
+		box-shadow: -1px -1px;
 		font-weight: bold;
 		text-decoration: none;
 	}
@@ -20,6 +19,6 @@
 	}
 
 	.site-header a:is(:hover, :focus) {
-		--sep-color: var(--fg);
+		box-shadow: 0 0 0 1px;
 	}
 </style>
