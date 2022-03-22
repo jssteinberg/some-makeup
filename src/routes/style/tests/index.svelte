@@ -1,23 +1,63 @@
 <script>
 	import ContainCss from "/src/libs/ContainCss.svelte";
+	import IntuitiveCss from "/src/libs/IntuitiveCss.svelte";
+	import SpaceCss from "/src/libs/SpaceCss.svelte";
+	import LineHeightCss from "/src/libs/LineHeightCss.svelte";
+
 	let contain = true;
+	let intuitive = true;
+	let space = true;
+	let lineHeight = true;
 </script>
 
 {#if contain} <ContainCss /> {/if}
+{#if intuitive} <IntuitiveCss /> {/if}
+{#if space} <SpaceCss /> {/if}
+{#if lineHeight} <lineHeightCss /> {/if}
 
 <div class="wrapper">
 	<h1>Tests</h1>
 	
 	<p>
-	<button on:click={() => {contain = !contain}}>
-		{#if contain}
-			(On)
-		{:else}
-			(Off)
-		{/if}
-		contain.css
-	</button>
+		<button on:click={() => {contain = !contain}}>
+			{#if contain}
+				(On)
+			{:else}
+				(Off)
+			{/if}
+			contain.css
+		</button>
+		<button on:click={() => {intuitive = !intuitive}}>
+			{#if intuitive}
+				(On)
+			{:else}
+				(Off)
+			{/if}
+			intuitive.css
+		</button>
+		<button on:click={() => {space = !space}}>
+			{#if space}
+				(On)
+			{:else}
+				(Off)
+			{/if}
+			space.css
+		</button>
+		<button on:click={() => {lineHeight = !lineHeight}}>
+			{#if lineHeight}
+				(On)
+			{:else}
+				(Off)
+			{/if}
+			line-height.css
+		</button>
 	</p>
+
+	<hr>
+
+	<h2>Long words should not overflow, but break with a hyphen if necessary</h2>
+
+	<p>The fictional dish Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato­silphio­karabo­melito­katakechy­meno­kichl­epi­kossypho­phatto­perister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baphe­tragano­pterygon</p>
 	
 	<pre>
 <code>Asuperlonglineofcodetoseeifitwraps. Itisdifficultformetomakeupenoughcontentforthistest! Ihavetowriteevenmore?? Howwideisthiscontainer?</code>
@@ -36,13 +76,13 @@
 	}
 
 	.wrapper::after {
-		--padding-inline: calc(.125 * var(--view-inline));
-		border-left: var(--padding-inline) dashed yellow;
-		border-right: var(--padding-inline) dashed yellow;
+		--padding-inline: calc(1 * var(--view-inline));
+		border-left: var(--padding-inline) solid yellow;
+		border-right: var(--padding-inline) solid yellow;
 		content: '';
 		position: absolute;
 		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
 		z-index: -1;
-		opacity: .5;
+		opacity: .125;
 	}
 </style>

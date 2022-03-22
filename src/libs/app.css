@@ -32,6 +32,18 @@
 	line-height: calc(1 + var(--added-lead));
 }
 
+@media (min-width: 900px) {
+	:root {
+		--font-size: 1.1rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: clamp(1rem, .5rem + 0.55vw, 1.12em);
+	}
+}
+
 div, header, nav, footer,
 address, datalist, details, fieldset, pre, table,
 canvas, embed, figure, iframe, object, video,

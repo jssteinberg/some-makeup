@@ -60,18 +60,6 @@
 		text-rendering: optimizeLegibility;
 	}
 
-	@media (min-width: 1200px) {
-		.content {
-			--font-size: 1.1rem;
-		}
-	}
-
-	@media (min-width: 1500px) {
-		.content {
-			--font-size: 1.125rem;
-		}
-	}
-
 	.content :global(h1) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
 	}

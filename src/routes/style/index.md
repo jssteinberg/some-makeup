@@ -89,6 +89,12 @@ blockquote, p {
 main { --added-lead: .6; }
 ```
 
+## Class Files
+
+```css
+@import 'makeup-style/static/class/touch-target.css';
+```
+
 <PrismCss />
 
 <script>
