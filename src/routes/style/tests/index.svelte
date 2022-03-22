@@ -1,88 +1,13 @@
-<script>
-	import ContainCss from "/src/libs/ContainCss.svelte";
-	import IntuitiveCss from "/src/libs/IntuitiveCss.svelte";
-	import SpaceCss from "/src/libs/SpaceCss.svelte";
-	import LineHeightCss from "/src/libs/LineHeightCss.svelte";
+	<h2>Long Words</h2>
 
-	let contain = true;
-	let intuitive = true;
-	let space = true;
-	let lineHeight = true;
-</script>
+	<p>Long words should not overflow, but break if necessary, and automatically with a hyphen if can be</p>
 
-{#if contain} <ContainCss /> {/if}
-{#if intuitive} <IntuitiveCss /> {/if}
-{#if space} <SpaceCss /> {/if}
-{#if lineHeight} <lineHeightCss /> {/if}
-
-<div class="wrapper">
-	<h1>Tests</h1>
+	<p>The fictional dish Lopadotemachoselachogaleokranioleipsanodrimhypotrimmatosilphiokarabomelitokatakechymenokichlepikossyphophattoperisteralektryonoptekephalliokigklopeleiolagoiosiraiobaphetraganopterygon</p>
 	
-	<p>
-		<button on:click={() => {contain = !contain}}>
-			{#if contain}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			contain.css
-		</button>
-		<button on:click={() => {intuitive = !intuitive}}>
-			{#if intuitive}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			intuitive.css
-		</button>
-		<button on:click={() => {space = !space}}>
-			{#if space}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			space.css
-		</button>
-		<button on:click={() => {lineHeight = !lineHeight}}>
-			{#if lineHeight}
-				(On)
-			{:else}
-				(Off)
-			{/if}
-			line-height.css
-		</button>
-	</p>
+	<p>“Schmaltzed and strengthed (10 letters) appear to be the longest monosyllabic words recorded in The Oxford English Dictionary, while scraunched and scroonched appear to be the longest monosyllabic words recorded in Webster's Third New International Dictionary; but squirrelled (11 letters) is the longest if pronounced as one syllable only (as permitted in The Shorter Oxford English Dictionary and Merriam-Webster Online Dictionary at squirrel, and in Longman Pronunciation Dictionary). Schtroumpfed (12 letters) was coined by Umberto Eco, while broughammed (11 letters) was coined by William Harmon after broughamed (10 letters) was coined by George Bernard Shaw.” (<cite><a href="https://en.wikipedia.org/wiki/Longest_word_in_English">Wikipedia</a></cite>)</p>
 
-	<hr>
+	<h2><code>pre</code></h2>
 
-	<h2>Long words should not overflow, but break with a hyphen if necessary</h2>
-
-	<p>The fictional dish Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato­silphio­karabo­melito­katakechy­meno­kichl­epi­kossypho­phatto­perister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baphe­tragano­pterygon</p>
-	
 	<pre>
 <code>Asuperlonglineofcodetoseeifitwraps. Itisdifficultformetomakeupenoughcontentforthistest! Ihavetowriteevenmore?? Howwideisthiscontainer?</code>
 	</pre>
-</div>
-
-<style>
-	.wrapper {
-		width: min(
-			100vw - 2 * var(--view-inline),
-			var(--max-content-width)
-		);
-		margin: 0 auto;
-
-		position: relative;
-	}
-
-	.wrapper::after {
-		--padding-inline: calc(1 * var(--view-inline));
-		border-left: var(--padding-inline) solid yellow;
-		border-right: var(--padding-inline) solid yellow;
-		content: '';
-		position: absolute;
-		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
-		z-index: -1;
-		opacity: .125;
-	}
-</style>
