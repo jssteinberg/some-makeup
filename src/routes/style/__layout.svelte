@@ -7,13 +7,7 @@
 
 <style>
 	nav {
-		padding: .5rem 0;
-		width: min(
-			100vw - 2 * var(--view-inline),
-			var(--max-content-width)
-		);
-		margin: 0 auto;
-		
+		padding: .5rem var(--view-inline);
 		display: flex;
 		flex-wrap: wrap;
 		gap: .5rem 1rem;

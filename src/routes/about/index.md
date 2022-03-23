@@ -1,8 +1,8 @@
 ---
-title: '?ome Makeup'
-set: ['logo', 'typography']
+title: '?ome.makeup'
+set: ['typography']
 ---
 
-# ?
+# About
 
-This site is developed by [Johan Sebergsen Steinberg](/johan), using Sveltekit. Source code is on Github.
+*some.makeup* is made by [Johan Sebergsen Steinberg](/johan) with the Sveltekit framework.

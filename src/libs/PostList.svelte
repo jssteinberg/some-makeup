@@ -41,7 +41,7 @@
 		list-style: none;
 		padding: 0;
 		display: grid;
-		justify-content: center;
+		justify-content: start;
 		grid-template-columns: min(20em, 100%);
 	}
 
@@ -53,39 +53,11 @@
 		align-items: center;
 		position: relative;
 
-		margin: var(--spacer, 1rem) 0;
+		margin: var(--space, 1rem) 0;
 		min-height: var(--min-height);
-		padding: var(--padding-block) 1em;
+		padding: var(--padding-block) 0;
 
 		text-decoration: none;
-	}
-
-	a::after {
-		background: var(--bg-to);
-		border-radius: inherit;
-		content: '';
-		position: absolute;
-		z-index: -1;
-		top: -.5rem; right: 0; bottom: -.5rem; left: 0;
-		transition: opacity .25s ease;
-		outline: 2px solid hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.1);
-	}
-
-	a:not(:is(:focus,:active))::after {
-		opacity: 0;
-	}
-
-	a:focus {
-		--bg-to: linear-gradient(
-			-160deg,
-			hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.015),
-			hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.025)
-		);
-		outline: none;
-	}
-
-	a:active {
-		--bg-to: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.1);
 	}
 
 	.post-title {

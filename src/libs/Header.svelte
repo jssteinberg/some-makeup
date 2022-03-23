@@ -9,16 +9,12 @@
 	}
 
 	.site-header a {
-		box-shadow: -1px -1px;
-		font-weight: bold;
+		box-shadow: inset 1px 1px;
 		text-decoration: none;
-	}
-
-	.site-header a:focus {
 		outline: none;
 	}
 
 	.site-header a:is(:hover, :focus) {
-		box-shadow: 0 0 0 1px;
+		box-shadow: inset 0 0 0 1px;
 	}
 </style>

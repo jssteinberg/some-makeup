@@ -40,23 +40,20 @@
 
 <style>
 	.wrapper {
-		width: min(
-			100vw - 2 * var(--view-inline),
-			var(--max-content-width)
-		);
-		margin: 0 auto;
+		width: var(--content-width);
+		margin: 0 var(--view-inline);
 
 		position: relative;
 	}
 
 	.wrapper::after {
-		--padding-inline: 2px;
+		--padding-inline: 1px;
 		border-right: var(--padding-inline) solid red;
 		content: '';
 		position: absolute;
 		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
 		z-index: -1;
-		opacity: .5;
+		opacity: 1;
 	}
 
 	.button-container {
@@ -103,6 +100,6 @@
 	}
 
 	.wrapper :global(h2) {
-		box-shadow: 0 1px;
+		box-shadow: 0 1px red;
 	}
 </style>

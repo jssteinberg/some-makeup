@@ -53,7 +53,7 @@
 
 		display: grid;
 		grid-template-columns: var(--content-width);
-		justify-content: center;
+		justify-content: start;
 	}
 
 	.content.typography {
@@ -88,8 +88,7 @@
 		word-break: normal;
 		word-wrap: normal;
 
-		border-radius: .5rem 0;
-		box-shadow: 1px 1px var(--sep-color);
+		box-shadow: inset -1px -1px var(--sep-color);
 		padding: 0 var(--space) var(--space) 0;
 	}
 

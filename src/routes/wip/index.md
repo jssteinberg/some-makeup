@@ -5,8 +5,6 @@ set: ['logo']
 
 # WIP
 
-<Sep />
-
 <PostList posts={[...posts, {title: 'Svelte Layout Reset', path: '/reset'}]} />
 
 <AccentHue {hue} />
@@ -14,7 +12,6 @@ set: ['logo']
 <script>
 	import AccentHue from '/src/libs/AccentHue.svelte';
 	import PostList from '/src/libs/PostList.svelte';
-	import Sep from '/src/libs/Sep.svelte';
 
 	export let posts;
 

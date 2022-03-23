@@ -46,7 +46,6 @@ set: ['nb', 'typography']
 
 <style>
 	.wrapper ul {
-		list-style: inside square;
 		padding: 0;
 	}
 
@@ -61,13 +60,13 @@ set: ['nb', 'typography']
 		margin-inline-start: .3em;
 		vertical-align: baseline;
 		position: relative;
-		top: .125em;
+		top: 0;
 	}
 
 	p + ul::after {
 		content: '';
 		display: block;
-		margin: var(--spacer, 1rem) 0;
+		margin: var(--space, 1rem) 0;
 	}
 
 	strong {

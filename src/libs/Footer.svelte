@@ -6,7 +6,6 @@
 	<h2>
 		<a
 			sveltekit:prefetch
-			class="touch-target-center"
 			aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 			href="/"
 		>
@@ -14,70 +13,53 @@
 		{new Date().getFullYear()}
 	</h2>
 
-	<ul>
-		<!--
-		<li>
-			<a
-				class="touch-target-center"
-				sveltekit:prefetch
-				aria-current={$page.url.pathname === '/wip' ? 'page' : undefined}
-				href="/wip"
-			>
-				WIP
-			</a>
-		</li>
-		-->
+	<p>
+		<a
+		sveltekit:prefetch
+		aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
+		href="/about"
+		>
+		About
+		</a>
+	</p>
 
-		<li>
-			<a
-				class="touch-target-center"
-				sveltekit:prefetch
-				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
-				href="/about"
-			>
-				?
-			</a>
-		</li>
-	</ul>
+	<p>
+		This site does not collect any personal information and uses no cookies.
+	</p>
 </footer>
 
 <style>
 	footer {
-		padding: var(--view-inline, 1em);
-
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: max(8px, .5rem) 1em;
+		box-shadow: inset 1px 0;
+		margin: calc(1.5 * var(--TOUCH-TARGET-MIN-SIZE)) var(--view-inline) 0;
+		padding: 1em;
 	}
 
 	* {
 		font-size: 1em;
-		margin: 0;
+	}
+
+	a {
+		display: inline-flex;
+		align-items: center;
+		min-height: var(--TOUCH-TARGET-MIN-SIZE);
+		min-width: var(--TOUCH-TARGET-MIN-SIZE);
+	}
+
+	h2 a::before { content: "//"; }
+
+	a::before {
+		content: "/";
+		font-weight: bold;
+	}
+
+	a:not(:is(:hover,:focus)) {
 		text-decoration: none;
 	}
 
-	a[href="/"]::before {
-		content: '//';
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-
-		display: flex;
-		flex-wrap: wrap;
-		gap: max(8px, .5rem);
-	}
-
-	ul a::before {
-		content: '(';
-		margin-inline-end: 1ch;
-	}
-
-	ul a::after {
-		content: ')';
-		margin-inline-start: 1ch;
+	h2, h2 + * {
+		display: inline;
+		margin-inline-end: 1em;
+		text-transform: lowercase;
 	}
 </style>

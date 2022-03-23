@@ -33,6 +33,6 @@ lang: nb
 </script>
 
 <script>
-	import PostList from "../../libs/PostList.svelte";
+	import PostList from "/src/libs/PostList.svelte";
 	export let posts;
 </script>
