@@ -11,6 +11,11 @@ Makeup Style differs from normalize.css, sanitize.css, CSS remedy, etc. in how i
 ## Changes from Floor Typography CSS
 
 - CSS reorganized in new files.
+	- contain.css and intuitive.css (merge these two?)
+		- possible names: dx.css, fix.css, usable.css, ground.css, dirt.css
+		- default.css?
+	- space.css
+	- line-height.css (change to leading.css?)
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 - Only sets margin-block-end for spacing reset (not top AND bottom). Now in file space.css.
