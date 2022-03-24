@@ -7,25 +7,33 @@ description: So you want to makeup some styling?
 
 So you want to makeup style?
 
-These CSS files fixes default browser CSS (no IE though), for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
+These minimal CSS files fixes default browser CSS (no IE though), for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 
 ## 1.
-
-```css
-@import 'makeup-style/src/contain.css';
-```
-
-CSS to prevent text and content from overflowing. *This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
-
-## 2.
 
 ```css
 @import 'makeup-style/src/intuitive.css';
 ```
 
-CSS for intuitive styling behaviours and browser default fixes that prevents elements from disrupting the default vertical rhythm by affecting line-height (excluding form elements). Includes option for defining variable:
+CSS to prevent text and content from overflowing and affecting line-height, and CSS fixes for semantics, font and usability. *This file is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
 
-- `--mono-font` for setting mono-font-family.
+### Variables
+
+Includes option for defining variable `--mono-font` for setting mono-font-family, e.g.:
+
+```css
+:root {
+	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+```
+
+## 2.
+
+```css
+@import 'makeup-style/src/dx.css';
+```
+
+Opinionated CSS with intuitive CSS behaviours for a better developer experience when coding.
 
 ## 3.
 
@@ -33,7 +41,11 @@ CSS for intuitive styling behaviours and browser default fixes that prevents ele
 @import 'makeup-style/src/space.css';
 ```
 
-CSS that sets consistent spacing between the needed block-level elements. Spacing can be adjusted and controlled with variable:
+CSS that sets consistent spacing between the needed block-level elements.
+
+### Variables
+
+Spacing can be adjusted and controlled with variable:
 
 - `--space` (defaults, falls back, to `1rem`).
 

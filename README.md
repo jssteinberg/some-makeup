@@ -11,10 +11,8 @@ Makeup Style differs from normalize.css, sanitize.css, CSS remedy, etc. in how i
 ## Changes from Floor Typography CSS
 
 - CSS reorganized in new files.
-	- contain.css and intuitive.css (merge these two?)
-		- possible names: dx.css, fix.css, usable.css, ground.css, dirt.css
-		- default.css?
-		- move to intuitive.css!
+	- intuitive.css
+	- dx.css
 	- space.css
 	- line-height.css (change to leading.css?)
 - `--line-span` var for headings (not `--h…-min-font-size`).
