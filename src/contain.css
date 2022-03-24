@@ -8,22 +8,18 @@
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%;
 	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
-	line-sizing: normal;
-}
+	line-sizing: normal; }
 
 *, ::before, ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
-	box-sizing: border-box;
-}
+	box-sizing: border-box; }
 
 img, svg, video, canvas, audio, iframe, embed, object {
 	/* Remove space-below in case authors overwrite the display value. */
 	vertical-align: middle;
-	/* Responsive by default. */
-	max-width: 100%;
-}
 
-/* Responsive by default. */
+	/* Responsive media. */
+	max-width: 100%; }
 img, svg, video, canvas { height: auto; }
 
 /* Wrap pre-formatted text by default. */
@@ -44,8 +40,7 @@ strong { font-weight: bolder; }
 pre, code, kbd, samp {
 	--_f: var(--mono-font, monospace);
 	font-family: var(--_f),var(--_f);
-	font-size: 1em;
-}
+	font-size: 1em; }
 
 /* FIX USABILITY */
 
