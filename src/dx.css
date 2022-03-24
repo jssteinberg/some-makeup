@@ -1,0 +1,19 @@
+/* INTUITIVE DISPLAY BEHAVIOUR */
+
+/* `[hidden]` maintain behaviour when overriding `display` values. */
+/* `audio` with no controls should not display. */
+/* `source` has nothing to display and should not display. */
+[hidden], audio:not([controls]), source { display:none; }
+
+/* Remove unnecessary wrapping `picture`, while maintaining content. */
+picture { display: contents; }
+
+/* IMPROVE DX FOR STYLING */
+
+*, ::before, ::after {
+	/* Background images are not repeated. */
+	background-repeat: no-repeat;
+}
+
+/* `::before`/`::after` inherits border-radius. */
+::before, ::after { border-radius: inherit; }

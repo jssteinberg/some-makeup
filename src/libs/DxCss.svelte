@@ -1,5 +1,5 @@
 <div aria-hidden>
 	<style lang="scss">
-		@use '../contain.css';
+		@use '../dx.css';
 	</style>
 </div>

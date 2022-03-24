@@ -1,7 +1,7 @@
 <script>
 	import MetaTags from './MetaTags.svelte';
-	import ContainCss from './ContainCss.svelte';
-	import IntuitiveCss from './IntuitiveCss.svelte';
+	import ContainCss from './IntuitiveCss.svelte';
+	import IntuitiveCss from './DxCss.svelte';
 	import SpaceCss from './SpaceCss.svelte';
 	import LineHeightCss from './LineHeightCss.svelte';
 
@@ -44,6 +44,7 @@
 	.content {
 		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
 		--added-lead: .6;
+		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 
 		font-family: var(--sans);
 		font-size: var(--font-size);

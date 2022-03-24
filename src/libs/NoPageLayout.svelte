@@ -1,6 +1,6 @@
 <script>
 	import MetaTags from './MetaTags.svelte';
-	import ContainCss from './ContainCss.svelte';
+	import ContainCss from './IntuitiveCss.svelte';
 
 	export let title = 'Knut';
 	export let metaTitle;
