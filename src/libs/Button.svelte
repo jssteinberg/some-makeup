@@ -37,9 +37,9 @@
 		--shadow-size: 0.55em;
 		--_shadow-padding: var(--shadow-size);
 
-		--_touch-target-min-size: max(48px, calc(2 * var(--RRLH, 1.5)));
+		--_TOUCH-TARGET-SIZE: max(48px, calc(2 * var(--RRLH, 1.5)));
 		--_min-height: calc(
-			var(--_touch-target-min-size) - var(--padding-block) * 2 - var(--shadow-size)
+			var(--_TOUCH-TARGET-SIZE) - var(--padding-block) * 2 - var(--shadow-size)
 		);
 
 		all: unset;

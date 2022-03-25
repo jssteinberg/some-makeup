@@ -1,7 +1,7 @@
 @import '/src/class/touch-target.css';
 
 :root {
-	--TOUCH-TARGET-MIN-SIZE: max(48px, 3rem);
+	--TOUCH-TARGET-SIZE: max(48px, 3rem);
 	--SPACE: 1rem; /* Document constant spacing var */
 
 	--added-lead: .225; /* Approx. browser default added-lead */

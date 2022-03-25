@@ -15,7 +15,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 
-		min-height: var(--TOUCH-TARGET-MIN-SIZE, 48px);
-		min-width: var(--touch-target-min-width, var(--TOUCH-TARGET-MIN-SIZE, 48px));
+		min-height: var(--TOUCH-TARGET-SIZE, 48px);
+		min-width: var(--touch-target-min-width, var(--TOUCH-TARGET-SIZE, 48px));
 	}
 </style>

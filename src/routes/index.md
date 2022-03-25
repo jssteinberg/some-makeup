@@ -13,13 +13,11 @@ Gradient Text CSS:
 Overused Yet?
 </a>
 
-<details>
-	<summary title="More"></summary>
-
+<Details title="More">
 	<p>
-	<a href="/wip" sveltekit:prefetch>WIP</a>
+		<a href="/wip" sveltekit:prefetch>WIP</a>
 	</p>
-</details>
+</Details>
 
 </div>
 
@@ -29,6 +27,7 @@ Overused Yet?
 		grid-template-columns: var(--content-width);
 		padding-inline-start: var(--view-inline);
 		padding-inline-end: var(--view-inline);
+		text-rendering: optimizeLegibility;
 
 		/* Adjust font-size */
 		font-size: clamp(
@@ -43,15 +42,15 @@ Overused Yet?
 		display: block;
 	}
 
-	a, summary {
+	a {
 		display: inline-flex;
 		flex-wrap: wrap;
 
-		min-height: var(--TOUCH-TARGET-MIN-SIZE, 48px);
-		min-width: var(--TOUCH-TARGET-MIN-SIZE, 48px);
+		min-height: var(--TOUCH-TARGET-SIZE, 48px);
+		min-width: var(--TOUCH-TARGET-SIZE, 48px);
 	}
 
-	ul a, summary {
+	ul a {
 		align-items: center;
 	}
 
@@ -61,29 +60,8 @@ Overused Yet?
 		list-style: none;
 		padding: 0;
 	}
-
-	/* Details */
-
-	summary {
-		box-shadow: inset 1px -1px;
-		cursor: pointer;
-		justify-content: center;
-		font-size: calc(.5 * var(--TOUCH-TARGET-MIN-SIZE));
-	}
-
-	summary::-webkit-details-marker { display: none; }
-
-	summary::before { content: "+"; }
-
-	details[open] summary {
-		box-shadow: inset 1px 1px;
-	}
-
-	details[open] summary::before {
-		transform: rotate(45deg);
-	}
-
-	details[open] {
-		box-shadow: inset -1px -1px var(--sep-color);
-	}
 </style>
+
+<script>
+	import Details from "/src/libs/Details.svelte";
+</script>

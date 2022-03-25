@@ -31,12 +31,3 @@
 <slot />
 
 <ContainCss />
-
-<div aria-hidden>
-	<style>
-		:root {
-			/* Prevent adjustment of font-size after Ios orientation change. */
-			-webkit-text-size-adjust: 100%;
-		}
-	</style>
-</div>

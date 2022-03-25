@@ -47,7 +47,7 @@
 
 	a {
 		--padding-block: calc(.5 * var(--spacer, 1rem));
-		--min-height: calc(var(--TOUCH-TARGET-MIN-SIZE) - var(--padding-block) * 2);
+		--min-height: calc(var(--TOUCH-TARGET-SIZE) - var(--padding-block) * 2);
 
 		display: grid;
 		align-items: center;

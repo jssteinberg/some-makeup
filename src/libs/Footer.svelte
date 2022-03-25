@@ -30,7 +30,7 @@
 
 <style>
 	footer {
-		margin: calc(1.5 * var(--TOUCH-TARGET-MIN-SIZE)) var(--view-inline) 0;
+		margin: calc(1.5 * var(--TOUCH-TARGET-SIZE)) var(--view-inline) 0;
 		padding: 1em;
 		position: relative;
 	}
@@ -50,8 +50,8 @@
 	a {
 		display: inline-flex;
 		align-items: center;
-		min-height: var(--TOUCH-TARGET-MIN-SIZE);
-		min-width: var(--TOUCH-TARGET-MIN-SIZE);
+		min-height: var(--TOUCH-TARGET-SIZE);
+		min-width: var(--TOUCH-TARGET-SIZE);
 	}
 
 	h2 a::before { content: "//"; }
