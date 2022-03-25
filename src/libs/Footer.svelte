@@ -30,9 +30,17 @@
 
 <style>
 	footer {
-		box-shadow: inset 1px 0;
 		margin: calc(1.5 * var(--TOUCH-TARGET-MIN-SIZE)) var(--view-inline) 0;
 		padding: 1em;
+		position: relative;
+	}
+
+	footer::before {
+		background: currentColor;
+		content: "";
+		position: absolute;
+		width: 1px;
+		inset: 0;
 	}
 
 	* {
