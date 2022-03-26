@@ -54,3 +54,31 @@ body {
 }
 
 a { color: inherit; }
+
+[class*="border-"] {
+	position: relative;
+}
+
+[class*="border-"]::before,
+[class*="border-"]::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
+
+.border-tr {
+
+}
+
+.border-tl {
+
+}
+
+.border-rb {
+
+}
+
+[class*="border-"][class*="-l"]::after {
+	border-left: 1px solid;
+}
