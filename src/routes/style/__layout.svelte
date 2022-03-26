@@ -1,6 +1,6 @@
 <nav>
-	<a class="touch-target" href="/style">Makeup Style</a>
-	<a class="touch-target" href="/style/tests">Tests</a>
+	<a class="touch-target" href="/style" sveltekit:prefetch>makeup-style</a>
+	<a class="touch-target" href="/style/tests" sveltekit:prefetch>Tests</a>
 </nav>
 
 <slot />
@@ -11,5 +11,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: .5rem 1rem;
+		text-transform: lowercase;
 	}
 </style>

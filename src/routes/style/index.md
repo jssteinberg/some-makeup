@@ -1,13 +1,13 @@
 ---
-title: Makeup Style
+title: makeup-style
 description: So you want to makeup some styling?
 ---
 
-# Makeup Style
+# makeup-style
 
 So you want to makeup style?
 
-These minimal CSS files fixes default browser CSS (no IE though), for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
+These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style. (No Internet Explorer support.)
 
 ## 1.
 
@@ -103,8 +103,11 @@ main { --added-lead: .6; }
 
 ## Class Files
 
+Files that adds CSS classes.
+
 ```css
-@import 'makeup-style/static/class/touch-target.css';
+/* .touch-target, .touch-target-center */
+@import 'makeup-style/src/class/touch-target.css';
 ```
 
 <PrismCss />

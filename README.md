@@ -1,20 +1,22 @@
-# Makeup Style
+# makeup-style
 
 CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.
 
-Makeup Style differs from normalize.css, sanitize.css, CSS remedy, etc. in how it does not bother normalizing everything, but makes sure styling out of the box does not break anything, is intuitive to style and enables styling to be typographically correct.
+makeup-style differs from normalize.css, sanitize.css, CSS remedy, etc. in how it does not bother normalizing every weird element. Some elements are rarely used or should be styled and code-split given its context. makeup-style instead fixes CSS so no elements overflow or affect line-height, so elements are more intuitive to style and to enable easier typographically correct styling -- utilizing CSS functions and variables when suitable.
 
 [Documentation](https://dev.some.makeup/style)
 
-"*The version of [Floor Typography CSS](https://floortypography.vercel.app) I want myself.*"
+---
 
-## Changes from Floor Typography CSS
+*makeup-style is a slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
+
+*Changes from Floor Typography CSS v22:*
 
 - CSS reorganized in new files.
-	- intuitive.css
-	- dx.css
+	- intuitive.css (fix.css?)
+	- dx.css (dev.css?)
 	- space.css
-	- line-height.css (change to leading.css?)
+	- line-height.css (lead.css, leading.css?)
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 - Only sets margin-block-end for spacing reset (not top AND bottom). Now in file space.css.

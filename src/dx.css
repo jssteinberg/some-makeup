@@ -8,7 +8,7 @@
 /* Remove unnecessary wrapping `picture`, while maintaining content. */
 picture { display: contents; }
 
-/* IMPROVE DX FOR STYLING */
+/* INTUITIVE BEHAVIOUR FOR STYLING */
 
 *, ::before, ::after {
 	/* Background images are not repeated. */

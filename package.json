@@ -49,8 +49,8 @@
   },
   "homepage": "https://github.com/jssteinberg/some-makeup/tree/next#readme",
   "files": [
-    "static/*.css",
-    "static/class/*.css"
+    "src/*.css",
+    "src/class/*.css"
   ],
   "type": "module"
 }

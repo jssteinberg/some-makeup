@@ -1,17 +1,17 @@
 <script>
-	import ContainCss from "/src/libs/IntuitiveCss.svelte";
-	import IntuitiveCss from "/src/libs/DxCss.svelte";
+	import IntuitiveCss from "/src/libs/IntuitiveCss.svelte";
+	import DxCss from "/src/libs/DxCss.svelte";
 	import SpaceCss from "/src/libs/SpaceCss.svelte";
 	import LineHeightCss from "/src/libs/LineHeightCss.svelte";
 
+	const toggleCss = (file) => { css[file] = !css[file] };
+
 	let css = {
-		contain: true,
 		intuitive: true,
+		dx: true,
 		space: true,
 		lineHeight: true,
 	};
-
-	const toggleCss = (file) => { css[file] = !css[file] };
 </script>
 
 <div class="wrapper">
@@ -22,7 +22,11 @@
 					{#if css[file]} (On) {:else} (Off) {/if}
 				</span>
 				<span class="file">
-					{file === 'lineHeight' ? 'line-height' : file}.css
+					{
+						file === 'lineHeight' ?
+							'line-height'
+							: file
+					}.css
 				</span>
 			</button>
 		{/each}
@@ -33,8 +37,8 @@
 	<slot />
 </div>
 
-{#if css.contain} <ContainCss /> {/if}
 {#if css.intuitive} <IntuitiveCss /> {/if}
+{#if css.dx} <DxCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.lineHeight} <LineHeightCss /> {/if}
 
