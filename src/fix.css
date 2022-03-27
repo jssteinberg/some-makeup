@@ -48,10 +48,8 @@ pre, code, kbd, samp {
 
 /* Then prevent inline mono-font elements from affecting line-height. */
 /* Use same value for `small` (normalize). */
-/* Use same value for `button` (to not affect line-height). */
 code, kbd, samp,
-small,
-button {
+small {
 	font-size: 1.75ex; }
 
 /* Fix to inherit font-family. */
