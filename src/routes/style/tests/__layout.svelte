@@ -20,6 +20,7 @@
 	<a href="/style/tests/overflow" sveltekit:prefetch>overflow</a>
 	<a href="/style/tests/line-height" sveltekit:prefetch>line-height</a>
 	<a href="/style/tests/media" sveltekit:prefetch>media</a>
+	<a href="/style/tests/inputs" sveltekit:prefetch>inputs</a>
 </Nav>
 
 <div class="wrapper">

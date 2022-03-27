@@ -26,14 +26,19 @@ pre {
 sub, sup {
 	line-height: 0; }
 
+/* Remove space below for vertical flow. */
 img, svg, video, canvas, audio, iframe, embed, object {
-	/* Remove space-below in case authors overwrite the display value. */
-	vertical-align: middle;
+	vertical-align: middle; }
 
-	/* Responsive media. */
-	max-width: 100%; }
-img, svg, video, canvas {
+/* Make elements responsive. */
+img, svg, video, canvas, audio, iframe, embed, object,
+input, select, textarea {
+	max-width: 100%;
 	height: auto; }
+
+/* Intuitive inline margins -- horizontal align with adjacent. */
+figure {
+	margin-inline-start: 0; margin-inline-end: 0; }
 
 /* FIX SEMANTIC STYLING */
 

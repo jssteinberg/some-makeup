@@ -5,14 +5,19 @@
 
 	<p>Images should not overflow container horizontally.</p>
 
-	<img src="/tests/bird.jpg" alt="">
+	<p>
+		<img src="/tests/bird.jpg" alt="">
+	</p>
 
 	<p><em>A bird</em></p>
 </section>
 
 <style>
-	img {
-		background: red;
-		display: inline;
+	p {
+		background: var(--sep-color)
+	}
+
+	img, figure {
+		background-color: red;
 	}
 </style>
