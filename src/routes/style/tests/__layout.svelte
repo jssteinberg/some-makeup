@@ -20,7 +20,7 @@
 	let scrollY = 0;
 
 	afterUpdate(() => {
-		els = document.body.querySelectorAll('#tests section p');
+		els = document.body.querySelectorAll('#tests section :is(p,h2)');
 	});
 </script>
 
