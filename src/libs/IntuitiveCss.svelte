@@ -1,5 +1,5 @@
 <div aria-hidden>
 	<style lang="scss">
-		@use '../intuitive.css';
+		@use '../fix.css';
 	</style>
 </div>

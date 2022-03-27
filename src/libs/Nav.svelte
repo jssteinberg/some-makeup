@@ -1,4 +1,8 @@
-<nav>
+<script>
+	export let ariaLabel;
+</script>
+
+<nav aria-label={ariaLabel}>
 	<slot />
 </nav>
 

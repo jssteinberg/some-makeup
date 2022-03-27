@@ -3,16 +3,21 @@
 	import DxCss from "/src/libs/DxCss.svelte";
 	import SpaceCss from "/src/libs/SpaceCss.svelte";
 	import LineHeightCss from "/src/libs/LineHeightCss.svelte";
+	import Nav from "/src/libs/Nav.svelte";
 
 	const toggleCss = (file) => { css[file] = !css[file] };
 
 	let css = {
-		intuitive: true,
+		fix: true,
 		dx: true,
 		space: true,
 		lineHeight: true,
 	};
 </script>
+	
+<Nav ariaLabel="Test scenarios">
+	<a href="/overflow">overflow</a>
+</Nav>
 
 <div class="wrapper">
 	<p class="button-container">
@@ -31,13 +36,11 @@
 			</button>
 		{/each}
 	</p>
-	
-	<h1>Tests</h1>
 
 	<slot />
 </div>
 
-{#if css.intuitive} <IntuitiveCss /> {/if}
+{#if css.fix} <IntuitiveCss /> {/if}
 {#if css.dx} <DxCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.lineHeight} <LineHeightCss /> {/if}
