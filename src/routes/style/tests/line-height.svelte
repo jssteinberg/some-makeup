@@ -21,11 +21,26 @@
 
 			<p><strong><code>kbd</code>:</strong> Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render the internet.</p>
 
+			<hr>
+
 			<p><small>(Small text can have equal font-size value for ease-of-mind).</small></p>
+
+			<hr>
 
 			<p><code>pre</code> blocks can disrupt the vertical flow if their size and line-height differs from other content.</p>
 
 <pre><code>{`float InvSqrt(float x) {
+	float xhalf = 0.5f * x;
+	int i = *(int*)&x;
+	i = 0x5f3759df - (i >> 1);
+	x = *(float*)&i;
+	x = x*(1.5f - xhalf*x*x);
+	return x;
+}`}</code></pre>
+
+		<p>A trick (not included in makeup-style) to further ensure that height of <code>pre</code> blocks follow the flow of the context is to set <code>{`pre { font-family: inherit }`}</code> if you know it has inner wrapping <code>code</code> elements, as it often has for code previews generated from a markdown parser or a CMS.</p>
+
+<pre class="pre-trick"><code>{`float InvSqrt(float x) {
 	float xhalf = 0.5f * x;
 	int i = *(int*)&x;
 	i = 0x5f3759df - (i >> 1);
@@ -65,6 +80,10 @@
 <style>
 	section :is(code, kbd, samp) {
 		color: lightgreen;
+	}
+
+	pre.pre-trick {
+		font-family: inherit;
 	}
 
 	.ex {

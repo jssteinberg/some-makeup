@@ -86,6 +86,11 @@
 		padding: 0 var(--space) var(--space) 0;
 	}
 
+	:where(.content) :global(pre[class*="language-"]) {
+		/* Inherit font to fix correct flow height */
+		font-family: inherit;
+	}
+
 	.content :global(:not(pre) > code) {
 		white-space: normal;
 	}
