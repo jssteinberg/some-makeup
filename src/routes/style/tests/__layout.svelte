@@ -1,29 +1,53 @@
 <script>
-	import IntuitiveCss from "/src/libs/IntuitiveCss.svelte";
-	import DxCss from "/src/libs/DxCss.svelte";
-	import SpaceCss from "/src/libs/SpaceCss.svelte";
-	import LineHeightCss from "/src/libs/LineHeightCss.svelte";
-	import Nav from "/src/libs/Nav.svelte";
+	import IntuitiveCss from '/src/libs/IntuitiveCss.svelte';
+	import DxCss from '/src/libs/DxCss.svelte';
+	import SpaceCss from '/src/libs/SpaceCss.svelte';
+	import LineHeightCss from '/src/libs/LineHeightCss.svelte';
+	import Nav from '/src/libs/Nav.svelte';
+	import { afterUpdate } from 'svelte';
 
-	const toggleCss = (file) => { css[file] = !css[file] };
+	const toggleCss = (file) => {
+		css[file] = !css[file];
+	};
 
 	let css = {
 		fix: true,
 		dx: false,
 		space: false,
-		lineHeight: false,
+		lineHeight: false
 	};
+	let els;
+	let scrollY = 0;
+
+	afterUpdate(() => {
+		els = document.body.querySelectorAll('#tests section p');
+	});
 </script>
-	
-<hr>
+
+<svelte:window bind:scrollY />
+
+{#if els}
+	<div aria-hidden id="element-heights">
+		{#each els as item}
+			<span
+				style:transform={`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`}
+			>
+				{item.offsetHeight}
+			</span>
+		{/each}
+	</div>
+{/if}
+
+<hr />
 <Nav ariaLabel="Test scenarios">
 	<a href="/style/tests/overflow" sveltekit:prefetch>overflow</a>
 	<a href="/style/tests/line-height" sveltekit:prefetch>line-height</a>
 	<a href="/style/tests/media" sveltekit:prefetch>media</a>
 	<a href="/style/tests/inputs" sveltekit:prefetch>inputs</a>
+	<a href="/style/tests/usability" sveltekit:prefetch>usability</a>
 </Nav>
 
-<div class="wrapper">
+<div id="tests" class="wrapper">
 	<p class="button-container">
 		{#each Object.keys(css) as file}
 			<button on:click={toggleCss(file)} class={`${css[file] ? `on` : `off`}`}>
@@ -31,11 +55,7 @@
 					{#if css[file]} (On) {:else} (Off) {/if}
 				</span>
 				<span class="file">
-					{
-						file === 'lineHeight' ?
-							'line-height'
-							: file
-					}.css
+					{file === 'lineHeight' ? 'line-height' : file}.css
 				</span>
 			</button>
 		{/each}
@@ -92,7 +112,7 @@
 		font-size: inherit;
 		padding: 1em;
 		text-align: start;
-		opacity: .9;
+		opacity: 0.9;
 	}
 
 	button.on {
@@ -111,6 +131,16 @@
 	}
 
 	.wrapper :global(h2) {
-		box-shadow: inset 0 -.5ex var(--sep-color);
+		box-shadow: inset 0 -0.5ex var(--sep-color);
+	}
+
+	#element-heights span {
+		opacity: .5;
+		font-size: min(var(--view-inline) - .8em, 1.7ex);
+		line-height: 1;
+		width: var(--view-inline);
+		position: absolute;
+		left: 1px;
+		top: 0;
 	}
 </style>

@@ -17,6 +17,8 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 
 	CSS to prevent text and content from overflowing, prevents some elements from affecting line-height, and CSS fixes for semantics, font and usability. *This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
 
+	**`--font-size-small`.** File includes option for defining variable `--font-size-small` for setting the font-size for elements using a smaller font-size (defaults, falls back, to `1.7ex`).
+
 	**`--mono-font`.** File includes option for defining variable `--mono-font` for setting mono-font-family (defaults, falls back, to `monospace`). E.g.:
 
 	```css
@@ -24,6 +26,7 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 	}
 	```
+
 
 2. ```css
 	@import 'makeup-style/src/dx.css';

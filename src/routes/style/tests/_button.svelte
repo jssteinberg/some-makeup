@@ -17,5 +17,6 @@
 		padding-block-start: 0;
 		padding-block-end: 0;
 		font-size: 1em;
+		line-height: 1;
 	}
 </style>

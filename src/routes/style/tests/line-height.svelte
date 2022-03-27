@@ -38,16 +38,6 @@
 	return x;
 }`}</code></pre>
 
-		<p>A trick (not included in makeup-style) to further ensure that height of <code>pre</code> blocks follow the flow of the context is to set <code>{`pre { font-family: inherit }`}</code> if you know it has inner wrapping <code>code</code> elements, as it often has for code previews generated from a markdown parser or a CMS.</p>
-
-<pre class="pre-trick"><code>{`float InvSqrt(float x) {
-	float xhalf = 0.5f * x;
-	int i = *(int*)&x;
-	i = 0x5f3759df - (i >> 1);
-	x = *(float*)&i;
-	x = x*(1.5f - xhalf*x*x);
-	return x;
-}`}</code></pre>
 		</div>
 	{/each}
 </section>
@@ -83,13 +73,11 @@
 </aside> -->
 
 <style>
-	section :is(code, kbd, samp) {
-		color: lightgreen;
-	}
-
-	pre.pre-trick {
-		font-family: inherit;
-	}
+	/* section :is(code, kbd, samp) { */
+	/* 	background: rgba(0, 255, 0, .25); */
+	/* 	border-radius: .25rem; */
+	/* 	padding: 0 .5ch; */
+	/* } */
 
 	.ex {
 		font-size: 2.5ex;

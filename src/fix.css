@@ -16,8 +16,8 @@
 pre {
 	white-space: pre-wrap; }
 
-/* Prevent `<sub>`/`<sup>` from affecting line height. */
-sub, sup {
+/* Prevent different inline elements from affecting line height. */
+code, kbd, samp, sub, sup {
 	line-height: 0; }
 
 /* Remove space below for vertical flow. */
@@ -30,9 +30,37 @@ input, select, textarea {
 	max-width: 100%;
 	height: auto; }
 
+/* Remove the margin on controls in Safari. */
+button, input, select {
+	margin: 0; }
+
+/* UNIFORM INLINE SPACINGS */
+
 /* Intuitive inline margins -- horizontal align with adjacent. */
 figure {
 	margin-inline-start: 0; margin-inline-end: 0; }
+
+/* FIX INABILITY TO STYLE */
+
+/* Fix inability to style buttons in iOS and Safari. */
+button, [type="button" i], [type="reset" i], [type="submit" i] {
+	-webkit-appearance: button; }
+
+/* Fix inability to style upload buttons in iOS and Safari. */
+::-webkit-file-upload-button {
+	-webkit-appearance: button; }
+
+/* FIX DISPLAY BEHAVIOUR */
+
+/* `[hidden]` maintain behaviour when overriding `display` values. */
+/* `audio` with no controls should not display. */
+/* `source` has nothing to display and should not display. */
+[hidden], audio:not([controls]), source {
+	display:none; }
+
+/* Remove unnecessary wrapping `picture`, while maintaining content. */
+picture {
+	display: contents; }
 
 /* FIX SEMANTIC STYLING */
 
@@ -42,26 +70,29 @@ strong {
 
 /* FIX/EXTEND FONTS */
 
-/* Fix font inheritance for preformatted text and add optional font-family variable. */
-pre, code, kbd, samp {
-	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
-
-/* Then prevent inline mono-font elements from affecting line-height. */
-/* Use same value for `small` (normalize). */
-code, kbd, samp,
-small {
-	font-size: 1.75ex; }
+code, kbd, samp, pre {
+	/* Fix font inheritance for preformatted text and add optional font-family variable. */
+	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f);
+	/* Fix to inherit font-size. */
+	font-size: 1em; }
 
 /* Fix to inherit font-family. */
-button, textarea {
+button, textarea, ::-webkit-file-upload-button {
 	font-family: inherit; }
-
-/* Fix some elements to inherit font-size. */
-pre {
-	font-size: 1em; }
 
 /* FIX USABILITY */
 
 /* Consistent mouse interaction with clickable elements for usability. */
 button, summary {
 	cursor: pointer; }
+
+/* Consistent cursor for disabled elements */
+[aria-disabled="true"], [disabled] {
+	cursor: not-allowed; }
+
+/* Accessible display on visually hidden only elements. */
+[aria-hidden="false"][hidden] {
+	display: initial; }
+[aria-hidden="false"][hidden]:not(:focus) {
+	clip: rect(0, 0, 0, 0);
+	position: absolute; }

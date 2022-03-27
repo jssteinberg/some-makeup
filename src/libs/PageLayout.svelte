@@ -73,6 +73,16 @@
 		padding-inline-start: var(--space);
 	}
 
+	/* Code */
+
+	:where(.content) :global(:is(code,kbd,samp)) {
+		font-size: 1.75ex;
+	}
+
+	:where(.content) :global(pre code) {
+		font-size: 1.625ex;
+	}
+
 	:where(.content) :global(pre) {
 		hyphens: none;
 		overflow: auto;
@@ -84,11 +94,6 @@
 
 		box-shadow: inset -1px -1px var(--sep-color);
 		padding: 0 var(--space) var(--space) 0;
-	}
-
-	:where(.content) :global(pre[class*="language-"]) {
-		/* Inherit font to fix correct flow height */
-		font-family: inherit;
 	}
 
 	.content :global(:not(pre) > code) {
