@@ -3,7 +3,7 @@
 </script>
 
 <footer class="footer border-l">
-	<h2>
+	<h2 class="nav">
 		<a
 			sveltekit:prefetch
 			aria-current={$page.url.pathname === '/' ? 'page' : undefined}
@@ -13,7 +13,7 @@
 		{new Date().getFullYear()}
 	</h2>
 
-	<p>
+	<p class="nav">
 		<a
 		sveltekit:prefetch
 		aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
@@ -25,6 +25,10 @@
 
 	<p>
 		This site does not collect any personal information and uses no cookies.
+	</p>
+
+	<p>
+		<a href="#">#</a>
 	</p>
 </footer>
 
@@ -47,9 +51,9 @@
 
 	h2 a::before { content: "//"; }
 
-	a::before {
+	.nav a::before {
 		content: "/";
-		font-weight: bold;
+		font-weight: bolder;
 	}
 
 	a:not(:is(:hover,:focus)) {

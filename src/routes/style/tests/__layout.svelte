@@ -111,6 +111,6 @@
 	}
 
 	.wrapper :global(h2) {
-		box-shadow: inset 0 -1ex var(--sep-color);
+		box-shadow: inset 0 -.5ex var(--sep-color);
 	}
 </style>

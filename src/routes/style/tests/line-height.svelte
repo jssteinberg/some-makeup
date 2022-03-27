@@ -64,6 +64,11 @@
 	<p><em>Another paragraph to compare with.<br>Over two lines,<br>three lines.</em></p>
 </section>
 
+<ButtonSection />
+<div class="sans">
+	<ButtonSection />
+</div>
+
 <!-- <aside>
 	<h2>CSS unit experiment</h2>
 
@@ -89,4 +94,12 @@
 	.ex {
 		font-size: 2.5ex;
 	}
+
+	.sans {
+		background: var(--sep-color);
+	}
 </style>
+
+<script>
+	import ButtonSection from "./_button.svelte";
+</script>
