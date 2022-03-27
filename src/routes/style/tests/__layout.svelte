@@ -15,8 +15,10 @@
 	};
 </script>
 	
+<hr>
 <Nav ariaLabel="Test scenarios">
-	<a href="/overflow">overflow</a>
+	<a href="/style/tests/overflow" sveltekit:prefetch>overflow</a>
+	<a href="/style/tests/line-height" sveltekit:prefetch>line-height</a>
 </Nav>
 
 <div class="wrapper">

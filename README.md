@@ -13,10 +13,10 @@ makeup-style differs from normalize.css, sanitize.css, CSS remedy, etc. in how i
 *Changes from Floor Typography CSS v22:*
 
 - CSS reorganized in new files.
-	- intuitive.css (fix.css?)
-	- dx.css (dev.css?)
+	- fix.css
+	- dx.css
 	- space.css
-	- line-height.css (lead.css, leading.css?)
+	- line-height.css (lead.css?)
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 - Only sets margin-block-end for spacing reset (not top AND bottom). Now in file space.css.
