@@ -1,6 +1,14 @@
 <h1>overflow</h1>
 
-<p>Long texts can break a layout by overflowing horizontally, creating the need for a horizontal scrollbar.</p>
+<p>Unintentionally affecting an element's size and long texts can break a layout by overflowing horizontally, creating the need for a horizontal scrollbar.</p>
+
+<section>
+	<h2>Size calculation</h2>
+
+	<p class="border-example">This element has a wide border and <code>width: 100%</code>. <code>box-sizing: border-box</code> will include border and padding when computing an elements size, so width is actually <code>100%</code> even this element has a border.</p>
+
+	<p class="padding-example">This element has lots of padding and <code>width: 100%</code>. <code>box-sizing: border-box</code> will include border and padding when computing an elements size, so width is actually <code>100%</code> even this element has padding.</p>
+</section>
 
 <section id="long-words">
 	<h2>Long Words</h2>
@@ -10,16 +18,6 @@
 	<p>Lopadotemachoselachogaleokranioleipsanodrimhypotrimmatosilphiokarabomelitokatakechymenokichlepikossyphophattoperisteralektryonoptekephalliokigklopeleiolagoiosiraiobaphetraganopterygon</p>
 
 	<p>Strengthed</p>
-</section>
-
-<section>
-	<h2><code>box-sizing: border-box</code></h2>
-
-	<p>Adding border and/or padding to an element will affect its size when `border-box` isn't set.</p>
-
-	<p class="border-example">This element has a wide border and <code>width: 100%</code>. <code>box-sizing: border-box</code> will include border and padding when computing an elements size, so width is actually <code>100%</code> even this element has a border.</p>
-
-	<p class="padding-example">This element has lots of padding and <code>width: 100%</code>. <code>box-sizing: border-box</code> will include border and padding when computing an elements size, so width is actually <code>100%</code> even this element has padding.</p>
 </section>
 
 <section>

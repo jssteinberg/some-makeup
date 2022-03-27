@@ -55,6 +55,12 @@ body {
 
 a { color: inherit; }
 
+/* CLASSES */
+
+.sans {
+	font-family: var(--sans);
+}
+
 [class*="border-"] {
 	position: relative;
 }

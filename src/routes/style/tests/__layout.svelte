@@ -9,9 +9,9 @@
 
 	let css = {
 		fix: true,
-		dx: true,
-		space: true,
-		lineHeight: true,
+		dx: false,
+		space: false,
+		lineHeight: false,
 	};
 </script>
 	
@@ -49,7 +49,7 @@
 
 <style>
 	.wrapper {
-		width: var(--content-width);
+		max-width: var(--content-width);
 		margin: 0 var(--view-inline);
 
 		position: relative;
@@ -57,7 +57,7 @@
 
 	.wrapper::after {
 		--padding-inline: 1px;
-		border-right: var(--padding-inline) solid red;
+		border-right: var(--padding-inline) dashed;
 		content: '';
 		position: absolute;
 		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
@@ -102,13 +102,13 @@
 		min-width: 5ch;
 	}
 
-	@media (min-width: 600px) {
+	@media (min-width: 75ch) {
 		.button-container {
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 
 	.wrapper :global(h2) {
-		box-shadow: 0 1px red;
+		box-shadow: 0 1px var(--sep-color);
 	}
 </style>

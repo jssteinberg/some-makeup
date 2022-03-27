@@ -15,7 +15,7 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 	@import 'makeup-style/src/fix.css';
 	```
 
-	CSS to prevent text and content from overflowing and affecting line-height, and CSS fixes for semantics, font and usability. *This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
+	CSS to prevent text and content from overflowing, prevents some elements from affecting line-height, and CSS fixes for semantics, font and usability. *This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
 
 	**`--mono-font`.** File includes option for defining variable `--mono-font` for setting mono-font-family (defaults, falls back, to `monospace`). E.g.:
 

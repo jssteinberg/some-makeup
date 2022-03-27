@@ -15,5 +15,12 @@ picture { display: contents; }
 	background-repeat: no-repeat;
 }
 
-/* `::before`/`::after` inherits border-radius. */
-::before, ::after { border-radius: inherit; }
+/* `::before`/`::after` inherits more across browsers. */
+::before, ::after {
+	/* Inherit border-radius. */
+	border-radius: inherit;
+	/* Inherit text-decoration. */
+  text-decoration: inherit;
+	/* Inherit vertical alignment. */
+  vertical-align: inherit; /* 2 */
+}

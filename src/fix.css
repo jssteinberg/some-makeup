@@ -6,9 +6,7 @@
 	/* Words break for no x-axis scrolling (use this, not `word-break`). */
 	overflow-wrap: break-word;
 	/* Prevent adjustment of font-size after Ios orientation change. */
-	-webkit-text-size-adjust: 100%;
-	/* [Consistent line-spacing for inline, different line-heights](//drafts.csswg.org/css-inline-3/#line-sizing-property). */
-	line-sizing: normal; }
+	-webkit-text-size-adjust: 100%; }
 
 *, ::before, ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
@@ -35,12 +33,16 @@ strong { font-weight: bolder; }
 
 /* FIX/EXTEND FONTS */
 
-pre, code, kbd, samp {
-	/* Fix font inheritance for preformatted text and add optional font-family variable. */
-	--_f: var(--mono-font, monospace);
-	font-family: var(--_f),var(--_f);
-	/* Normalize mono-font size for all browsers. */
-	font-size: 1em; }
+/* Fix font inheritance for preformatted text and add optional font-family variable. */
+pre, code, kbd, samp { --_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
+
+/* Keep equal size for pre blocks. */
+pre { font-size: 1em; }
+
+/* Prevent inline mono-font elements from affecting line-height. */
+/* Normalize font-size. */
+code, kbd, samp,
+small { font-size: 1.75ex; }
 
 /* FIX USABILITY */
 

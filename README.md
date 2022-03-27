@@ -22,6 +22,7 @@ makeup-style differs from normalize.css, sanitize.css, CSS remedy, etc. in how i
 - Only sets margin-block-end for spacing reset (not top AND bottom). Now in file space.css.
 - `sub` and `sup` has only normalize of `0` `line-height` to not affect parent `line-height`.
 - Removes setting font-size for h1 (OG from CSS Remedy). Browser default makes sense, and font-size can be, and usually is, set when styling.
+- Remove `line-sizing`, an outdated CSS proposal (OG from CSS Remedy).
 
 	```css
 	/* Correct the font size for `:is(article,section) h1` elements (Chrome/Firefox/Safari). */

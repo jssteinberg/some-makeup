@@ -69,13 +69,6 @@
 		font-weight: 300;
 	}
 
-	.content :global(code) { font-size: .85em; }
-
-	.content :global(small),
-	.content :global(pre code) {
-		font-size: 0.85em;
-	}
-
 	.content :global(:is(ol, ul)) {
 		padding-inline-start: var(--space);
 	}
