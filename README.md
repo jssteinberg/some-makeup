@@ -6,6 +6,10 @@ makeup-style differs from normalize.css, sanitize.css, CSS remedy, etc. in how i
 
 [Documentation](https://dev.some.makeup/style)
 
+Plan v2:
+
+- wrap stuff in `:where()`
+
 ---
 
 *makeup-style is a slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
