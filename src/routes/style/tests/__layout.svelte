@@ -19,6 +19,7 @@
 <Nav ariaLabel="Test scenarios">
 	<a href="/style/tests/overflow" sveltekit:prefetch>overflow</a>
 	<a href="/style/tests/line-height" sveltekit:prefetch>line-height</a>
+	<a href="/style/tests/media" sveltekit:prefetch>media</a>
 </Nav>
 
 <div class="wrapper">
@@ -109,6 +110,6 @@
 	}
 
 	.wrapper :global(h2) {
-		box-shadow: 0 1px var(--sep-color);
+		box-shadow: inset 0 -1ex var(--sep-color);
 	}
 </style>

@@ -107,10 +107,6 @@ Files that adds CSS classes.
 		padding: 0;
 	}
 
-	.content ol :is(ol,ul) {
-		margin-block-end: var(--space,1em);
-	}
-
 	.content ol > ::before {
 		counter-increment: ol-counter;
 		content: counter(ol-counter) ".\0000a0"; /* \0000a0 is space */

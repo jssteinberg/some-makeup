@@ -11,9 +11,9 @@ blockquote, p {
 }
 
 /* Remove block margin for children that shouldn't disrupt vertical flow. */
-ol ol, ol ul, ul ol, ul ul {
-	margin-block-end: 0;
-}
+/* ol ol, ol ul, ul ol, ul ul { */
+/* 	margin-block-end: 0; */
+/* } */
 
 /* Style `hr` with `--space` to match rhythm. */
 hr {
