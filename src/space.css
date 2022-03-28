@@ -5,9 +5,9 @@ canvas, embed, figure, iframe, object, video,
 dl, ol, ul,
 blockquote, p {
 	/* No margin top so grid can be used without doubling margins. */
-	margin-block-start: 0;
+	margin-block-start: var(--block-start, var(--space, 1rem));
 	/* Block margin end gives natural flow with space for any next element. */
-	margin-block-end: var(--space, 1rem);
+	margin-block-end: var(--block-end, var(--space, 1rem));
 }
 
 /* Remove block margin for children that shouldn't disrupt vertical flow. */
