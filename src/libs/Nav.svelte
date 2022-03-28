@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	console.log($page);
 
 	export let ariaLabel;
 	export let links = [];
