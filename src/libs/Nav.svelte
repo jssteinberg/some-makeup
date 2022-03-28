@@ -45,7 +45,7 @@
 		text-decoration: none;
 	}
 
-	nav :global(a:is(:hover,:focus-visible)) {
+	nav :global(a:is(:hover,:focus)) {
 		box-shadow: inset 0 0 0 1px;
 		text-decoration: none;
 	}
