@@ -42,11 +42,11 @@ figure {
 
 /* FIX INABILITY TO STYLE */
 
-/* Fix inability to style buttons in iOS and Safari. */
+/* Fix inability to style buttons in Ios and Safari. */
 button, [type="button" i], [type="reset" i], [type="submit" i] {
 	-webkit-appearance: button; }
 
-/* Fix inability to style upload buttons in iOS and Safari. */
+/* Fix inability to style upload buttons in Ios and Safari. */
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; }
 
@@ -70,10 +70,12 @@ strong {
 
 /* FIX/EXTEND FONTS */
 
+/* Fix font inheritance for preformatted text and add optional font-family variable. */
 code, kbd, samp, pre {
-	/* Fix font inheritance for preformatted text and add optional font-family variable. */
-	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f);
-	/* Fix to inherit font-size. */
+	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
+
+/* Fix font-size for all browsers (textarea for Safari). */
+code, kbd, samp, pre, textarea {
 	font-size: 1em; }
 
 /* Fix to inherit font-family. */
