@@ -3,38 +3,10 @@ h1, h2, h3, h4, h5, h6,
 address, datalist, details, fieldset, pre, table,
 canvas, embed, figure, iframe, object, video,
 dl, ol, ul,
-blockquote, p {
-	/* No margin top so grid can be used without doubling margins. */
+blockquote, p, hr {
 	margin-block-start: var(--block-start, var(--space, 1rem));
-	/* Block margin end gives natural flow with space for any next element. */
-	margin-block-end: var(--block-end, var(--space, 1rem));
-}
+	margin-block-end: var(--block-end, var(--space, 1rem)); }
 
-/* Remove block margin for children that shouldn't disrupt vertical flow. */
-/* ol ol, ol ul, ul ol, ul ul { */
-/* 	margin-block-end: 0; */
-/* } */
-
-/* Style `hr` with `--space` to match rhythm. */
+/* Use variables for height. */
 hr {
-	/* Remove border to not affect vertical rhythm. */
-	border: none;
-	/* Remove Firefox `color: gray`. */
-	color: inherit;
-	/* Normalize box sizing (Firefox). */
-	height: var(--hr-space, var(--space, 1rem));
-	/* Spacing, remove margin-inline `auto` (to not be centered by default). */
-	margin: 0;
-	/* Relative position to cotain `::after` */
-	position: relative;
-}
-
-/* Position absolute `::after` with border */
-hr::after {
-	border-top: 1px solid;
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
+	height: var(--hr-height, var(--space, 1rem)); }

@@ -3,8 +3,6 @@ title: makeup-style
 description: So you want to makeup some styling?
 ---
 
-<div class="content">
-
 # makeup-style
 
 So you want to makeup style?
@@ -17,9 +15,7 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 
 	CSS to prevent text and content from overflowing, prevents some elements from affecting line-height, and CSS fixes for semantics, font and usability. *This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
 
-	**`--font-size-small`.** File includes option for defining variable `--font-size-small` for setting the font-size for elements using a smaller font-size (defaults, falls back, to `1.7ex`).
-
-	**`--mono-font`.** File includes option for defining variable `--mono-font` for setting mono-font-family (defaults, falls back, to `monospace`). E.g.:
+	`--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`). E.g.:
 
 	```css
 	:root {
@@ -27,6 +23,17 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 	}
 	```
 
+	*Side effects:*
+
+	- Easy gradient `<hr>`:
+
+		```css
+		hr {
+			background-image: linear-gradient(90deg,lightblue,blue);
+		}
+		```
+
+		---
 
 2. ```css
 	@import 'makeup-style/src/dx.css';
@@ -40,7 +47,11 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 
 	CSS that sets consistent spacing between the needed block-level elements.
 
-	**`--space`.** Spacing can be adjusted and controlled with variable `--space` (defaults, falls back, to `1rem`).
+	`--space` for setting vertical spacing between intuitive block-level elements. Falls back to `1rem`.
+
+	`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `--space`, then `1rem`.
+
+	`--hr-height` for setting height of `<hr>`. Falls back to `--space`, then `1rem`.
 
 4. ```css
 	@import 'makeup-style/src/line-height.css';
@@ -101,27 +112,29 @@ Files that adds CSS classes.
 @import 'makeup-style/src/class/touch-target.css';
 ```
 
-</div>
-
 <style>
-	.content ol {
+	:global(.content >) ol {
 		counter-reset: ol-counter;
 		list-style: none;
 		padding: 0;
 	}
 
-	.content ol > ::before {
+	:global(.content >) ol > ::before {
 		counter-increment: ol-counter;
 		content: counter(ol-counter) ".\0000a0"; /* \0000a0 is space */
 		display: block;
 		margin-block-start: 1em;
 	}
 
-	.content > ol > ::before {
+	:global(.content >) ol > ::before {
 		font-size: 2em;
 		font-weight: bold;
 		font-weight: 800;
 		font-weight: 900;
+	}
+
+	hr {
+		background-image: linear-gradient(90deg,lightblue,blue);
 	}
 </style>
 

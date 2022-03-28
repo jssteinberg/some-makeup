@@ -43,10 +43,10 @@
 <style>
 	.content {
 		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+		--block-start: 0;
 		--added-lead: .6;
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 
-		font-family: var(--sans);
 		font-size: var(--font-size);
 
 		padding-inline-start: var(--view-inline);
@@ -61,7 +61,15 @@
 		text-rendering: optimizeLegibility;
 	}
 
-	.content :global(h1) {
+	.content :global(h1 ~ :not(pre)) {
+		font-family: var(--sans);
+	}
+
+	.content > :global(:first-child) {
+		--block-start: var(--space);
+	}
+
+	.content :global(h2) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
 	}
 
@@ -76,7 +84,7 @@
 	/* Code */
 
 	:where(.content) :global(:is(code,kbd,samp)) {
-		font-size: 1.75ex;
+		font-size: 1.625ex;
 	}
 
 	:where(.content) :global(pre code) {

@@ -23,7 +23,7 @@ Plan v2:
 	- line-height.css (lead.css?)
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
-- Only sets margin-block-end for spacing reset (not top AND bottom). Now in file space.css.
+	- Space is not removed for sub-lists (would cause unexpected list styles if parent list was styled unconventional. Rather remove margin for sub-lists in containers of choice).
 - `sub` and `sup` has only normalize of `0` `line-height` to not affect parent `line-height`.
 - Removes setting font-size for h1 (OG from CSS Remedy). Browser default makes sense, and font-size can be, and usually is, set when styling.
 - Remove `line-sizing`, an outdated CSS proposal (OG from CSS Remedy).

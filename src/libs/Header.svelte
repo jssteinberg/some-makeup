@@ -14,7 +14,7 @@
 		outline: none;
 	}
 
-	.site-header a:is(:hover, :focus) {
+	.site-header a:is(:hover, :focus-visible) {
 		box-shadow: inset 0 0 0 1px;
 	}
 </style>

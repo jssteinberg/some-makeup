@@ -35,7 +35,7 @@
 <style>
 	footer {
 		margin: calc(1.5 * var(--TOUCH-TARGET-SIZE)) var(--view-inline) 0;
-		padding: 1em calc(var(--TOUCH-TARGET-SIZE, 48px) / 2 - .5ch);
+		padding: 1em;
 	}
 
 	* {

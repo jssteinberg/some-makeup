@@ -6,6 +6,28 @@
 	import Nav from '/src/libs/Nav.svelte';
 	import { afterUpdate } from 'svelte';
 
+	const links = [
+		{
+			label: 'overflow',
+			href: '/style/tests/overflow',
+		},
+		{
+			label: 'line-height',
+			href: '/style/tests/line-height',
+		},
+		{
+			label: 'media',
+			href: '/style/tests/media',
+		},
+		{
+			label: 'inputs',
+			href: '/style/tests/inputs',
+		},
+		{
+			label: 'usability',
+			href: '/style/tests/usability',
+		},
+	];
 	const toggleCss = (file) => {
 		css[file] = !css[file];
 	};
@@ -38,13 +60,7 @@
 	</div>
 {/if}
 
-<hr />
-<Nav ariaLabel="Test scenarios">
-	<a href="/style/tests/overflow" sveltekit:prefetch>overflow</a>
-	<a href="/style/tests/line-height" sveltekit:prefetch>line-height</a>
-	<a href="/style/tests/media" sveltekit:prefetch>media</a>
-	<a href="/style/tests/inputs" sveltekit:prefetch>inputs</a>
-	<a href="/style/tests/usability" sveltekit:prefetch>usability</a>
+<Nav {links} ariaLabel="Test scenarios">
 </Nav>
 
 <div id="tests" class="wrapper">
@@ -138,9 +154,10 @@
 		opacity: .5;
 		font-size: min(var(--view-inline) - .8em, 1.7ex);
 		line-height: 1;
-		width: var(--view-inline);
+		width: calc(var(--view-inline) - 1px);
 		position: absolute;
 		left: 1px;
 		top: 0;
+		text-align: end;
 	}
 </style>
