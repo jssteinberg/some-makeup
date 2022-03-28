@@ -51,7 +51,7 @@
 	}
 
 	:where(nav) :global(a.parent) {
-		box-shadow: inset 0 1px;
+		box-shadow: inset 0 -1px;
 	}
 
 	/* nav ~ :global(nav a) { */
