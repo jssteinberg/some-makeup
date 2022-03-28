@@ -87,12 +87,12 @@ button, summary {
 	cursor: pointer; }
 
 /* Consistent cursor for disabled elements */
-[aria-disabled="true"], [disabled] {
+[aria-disabled="true" i], [disabled] {
 	cursor: not-allowed; }
 
 /* Accessible display on visually hidden only elements. */
-[aria-hidden="false"][hidden] {
+[aria-hidden="false" i][hidden] {
 	display: initial; }
-[aria-hidden="false"][hidden]:not(:focus) {
+[aria-hidden="false" i][hidden]:not(:focus) {
 	clip: rect(0, 0, 0, 0);
 	position: absolute; }
