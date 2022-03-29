@@ -23,6 +23,8 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 	}
 	```
 
+	---
+
 	*Side effects:*
 
 	- Easy gradient `<hr>`:
@@ -32,8 +34,6 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 			background-image: linear-gradient(90deg,lightblue,blue);
 		}
 		```
-
-		---
 
 2. ```css
 	@import 'makeup-style/src/dx.css';

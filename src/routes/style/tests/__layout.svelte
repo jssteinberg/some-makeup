@@ -50,6 +50,7 @@
 
 {#if els}
 	<div aria-hidden id="element-heights">
+		<span class="header">px</span>
 		{#each els as item}
 			<span
 				style:transform={`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`}
@@ -150,14 +151,34 @@
 		box-shadow: inset 0 -0.5ex var(--sep-color);
 	}
 
+	#element-heights {
+		position: absolute;
+		top: 0;
+	}
+
+	#element-heights::after {
+		content: "";
+		background: no-repeat top right/1px 100% linear-gradient(transparent,var(--sep-color),transparent);
+		width: calc(var(--view-inline) - 1px);
+		position: fixed;
+		inset: 0;
+		height: 100%;
+	}
+
 	#element-heights span {
 		opacity: .5;
 		font-size: min(var(--view-inline) - .8em, 1.7ex);
 		line-height: 1;
-		width: calc(var(--view-inline) - 1px);
+		width: calc(var(--view-inline) - 3px);
 		position: absolute;
 		left: 1px;
 		top: 0;
 		text-align: end;
+	}
+
+	#element-heights .header {
+		position: fixed;
+		top: unset;
+		bottom: 1em;
 	}
 </style>
