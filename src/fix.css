@@ -92,13 +92,6 @@ button, summary {
 [aria-disabled="true" i], [disabled] {
 	cursor: not-allowed; }
 
-/* Accessible display on visually hidden only elements. */
-[aria-hidden="false" i][hidden] {
-	display: initial; }
-[aria-hidden="false" i][hidden]:not(:focus) {
-	clip: rect(0, 0, 0, 0);
-	position: absolute; }
-
 /* FIX STYLES THAT MAKES ELEMENTS AVOIDED */
 
 hr {

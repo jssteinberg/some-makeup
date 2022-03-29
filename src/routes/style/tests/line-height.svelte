@@ -26,10 +26,6 @@
 
 			<hr>
 
-			<p><small>(Small text can have equal font-size value for ease-of-mind).</small></p>
-
-			<hr>
-
 			<p><code>pre</code> blocks can disrupt the vertical flow if their size and line-height differs from other content.</p>
 
 <pre><code>{`float InvSqrt(float x) {
