@@ -158,7 +158,7 @@
 
 	#element-heights::after {
 		content: "";
-		background: no-repeat top right/1px 100% linear-gradient(transparent,var(--sep-color),transparent);
+		background: no-repeat top right/1px 100% linear-gradient(transparent 25vh,var(--sep-color),transparent 75vh);
 		width: calc(var(--view-inline) - 1px);
 		position: fixed;
 		inset: 0;
@@ -167,7 +167,9 @@
 
 	#element-heights span {
 		opacity: .5;
-		font-size: min(var(--view-inline) - .8em, 1.7ex);
+		font-family: var(--sans);
+		font-weight: 100; font-weight: 300;
+		font-size: min(var(--view-inline) - .9em, 1.7ex);
 		line-height: 1;
 		width: calc(var(--view-inline) - 3px);
 		position: absolute;
@@ -178,7 +180,6 @@
 
 	#element-heights .header {
 		position: fixed;
-		top: unset;
-		bottom: 1em;
+		top: calc(50vh - .5em);
 	}
 </style>
