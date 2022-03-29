@@ -34,9 +34,9 @@
 
 	let css = {
 		fix: true,
-		dx: false,
+		do: false,
 		space: false,
-		lineHeight: false
+		flow: false,
 	};
 	let els;
 	let scrollY = 0;
@@ -45,6 +45,11 @@
 		els = document.body.querySelectorAll('#tests section :is(p,h2)');
 	});
 </script>
+
+{#if css.fix} <IntuitiveCss /> {/if}
+{#if css.do} <DxCss /> {/if}
+{#if css.space} <SpaceCss /> {/if}
+{#if css.flow} <LineHeightCss /> {/if}
 
 <svelte:window bind:scrollY />
 
@@ -61,8 +66,7 @@
 	</div>
 {/if}
 
-<Nav {links} ariaLabel="Test scenarios">
-</Nav>
+<Nav {links} ariaLabel="Test scenarios" />
 
 <div id="tests" class="wrapper">
 	<p class="button-container">
@@ -80,11 +84,6 @@
 
 	<slot />
 </div>
-
-{#if css.fix} <IntuitiveCss /> {/if}
-{#if css.dx} <DxCss /> {/if}
-{#if css.space} <SpaceCss /> {/if}
-{#if css.lineHeight} <LineHeightCss /> {/if}
 
 <style>
 	.wrapper {

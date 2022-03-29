@@ -9,98 +9,69 @@ So you want to makeup style?
 
 These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style. (No Internet Explorer support.)
 
-1. ```css
-	@import 'makeup-style/src/fix.css';
-	```
+## A
 
-	CSS to prevent text and content from overflowing, prevents some elements from affecting line-height, and CSS fixes for semantics, font and usability. *This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.*
+```css
+@import 'makeup-style/src/fix.css';
+```
 
-	`--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`). E.g.:
+CSS to prevent text and content from overflowing, prevents some elements from affecting line-height (excluding buttons), and CSS fixes for font settings, semantic styling and usability. This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.
+
+`--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`). E.g.:
+
+```css
+:root {
+	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+```
+
+## A addon
+
+```css
+@import 'makeup-style/src/do.css';
+```
+
+Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better developer experience.
+
+## B1
+
+```css
+@import 'makeup-style/src/space.css';
+```
+
+CSS that sets consistent spacing between the needed block-level elements.
+
+`--space` for setting vertical spacing between intuitive block-level elements. Falls back to `1rem`.
+
+`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `--space`, then `1rem`.
+
+## B2
+
+```css
+@import 'makeup-style/src/flow.css';
+```
+
+*Requires fix.css and space.css.*
+
+CSS that sets line-height to equal leading for headings.
+
+`--hr-height` for setting height of `<hr>`. Falls back to `--space`, then `1rem`.
+
+Each heading can be customized with their own variables on document root or children:
+
+- '`--h[1,2,3,4,5,6]-added-lead`'
+- '`--h[1,2,3,4,5,6]-line-span`'
+
+---
+
+*Side effects:*
+
+- Easy gradient `<hr>`:
 
 	```css
-	:root {
-		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	hr {
+		background-image: linear-gradient(90deg,lightblue,blue);
 	}
-	```
-
-	---
-
-	*Side effects:*
-
-	- Easy gradient `<hr>`:
-
-		```css
-		hr {
-			background-image: linear-gradient(90deg,lightblue,blue);
-		}
-		```
-
-2. ```css
-	@import 'makeup-style/src/dx.css';
-	```
-
-	Opinionated CSS with intuitive CSS behaviours for a better developer experience when coding.
-
-3. ```css
-	@import 'makeup-style/src/space.css';
-	```
-
-	CSS that sets consistent spacing between the needed block-level elements.
-
-	`--space` for setting vertical spacing between intuitive block-level elements. Falls back to `1rem`.
-
-	`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `--space`, then `1rem`.
-
-	`--hr-height` for setting height of `<hr>`. Falls back to `--space`, then `1rem`.
-
-4. ```css
-	@import 'makeup-style/src/line-height.css';
-	```
-
-	CSS that sets line-height to equal leading for headings.
-
-	*This file requires variable `--added-lead` to be defined and line-height must be set with it.*
-
-	Each heading can be customized with their own variables on document root or children:
-
-	- '`--h[1,2,3,4,5,6]-added-lead`'
-	- '`--h[1,2,3,4,5,6]-line-span`'
-
-	For defining `--added-lead` and setting line-height, there are basically two options:
-
-	```css
-	:root {
-		/* For both options,
-		 * define variable on a parent: */
-		--added-lead: .25;
-
-		/* OPTION 1 */
-		line-height: calc(1 + var(--added-lead));
-	}
-
-	/* Opt. 1
-	 * requires line-height to be reset for children
-	 * when `--added-lead` is changed: */
-	main {
-		--added-lead: .6;
-		line-height: calc(1 + var(--added-lead));
-	}
-
-	/* OPTION 2
-	 * This way changing line-height for children
-	 * only requires updating var `--added-lead`. */
-	div, header, nav, footer,
-	address, datalist, details, fieldset, pre, table,
-	canvas, embed, figure, iframe, object, video,
-	dl, ol, ul,
-	blockquote, p {
-		line-height: calc(1 + var(--added-lead));
-	}
-
-	/* Opt. 2
-	 * will update line-height for children
-	 * only by redefining `--added-lead`: */
-	main { --added-lead: .6; }
 	```
 
 ## Class Files

@@ -8,12 +8,10 @@
 	<p>On Ios font-size for certain elements can get a bigger size when changing device-orientation to landscape.</p>
 </section>
 
-<section class="inline-element-example">
-	<h2>Mono font elements</h2>
-
 	{#each [0,1] as i}
 		<div class={i === 1 ? `sans` : ``}>
-			{#if i === 1} <h3>Test with sans font</h3>{/if}
+		<section class="inline-element-example">
+			<h2>Mono font elements</h2>
 
 			<p><em>A paragraph to compare with.<br>Over two lines.</em></p>
 			<p><em>Another paragraph to compare with.<br>Over two lines,<br>three lines.</em></p>
@@ -36,11 +34,7 @@
 	x = x*(1.5f - xhalf*x*x);
 	return x;
 }`}</code></pre>
-
-		</div>
-	{/each}
 </section>
-
 <section>
 	<h2><code>sub, sup</code></h2>
 
@@ -48,12 +42,28 @@
 	C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."<br aria-hidden><em><code>sub</code> should not affect line-heigh.</em></p>
 
 	<p>The <b>Pythagorean theorem</b> is often expressed as the following equation: <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var><br aria-hidden><em><code>sup</code> should not affect line-heigh.</em></p>
+
+	<p>In a grid:</p>
+
+	<p class="grid-test">
+		<sub>lot of sub</sub>
+		<sup>lot of sup</sup>
+	</p>
 </section>
+
+
+		</div>
+	{/each}
 
 <ButtonSection />
 <div class="sans">
 	<ButtonSection />
 </div>
+
+<p class="grid-test">
+	<code>some code</code>
+	<code>some code</code>
+</p>
 
 <!-- <aside>
 	<h2>CSS unit experiment</h2>
@@ -81,6 +91,11 @@
 
 	.sans {
 		background: var(--sep-color);
+	}
+
+	.grid-test {
+		width: 5em;
+		display: flex;
 	}
 </style>
 

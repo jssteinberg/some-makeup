@@ -10,13 +10,3 @@
 
 	<button>Button</button>
 </section>
-
-<style>
-	:is(p,li,dl,blockquote,h1,h2,h3,h4,h5,h6) button { /* address? */
-		border: none;
-		padding-block-start: 0;
-		padding-block-end: 0;
-		font-size: 1em;
-		line-height: 1;
-	}
-</style>

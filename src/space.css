@@ -5,8 +5,5 @@ canvas, embed, figure, iframe, object, video,
 dl, ol, ul,
 blockquote, p, hr {
 	margin-block-start: var(--block-start, var(--space, 1rem));
-	margin-block-end: var(--block-end, var(--space, 1rem)); }
-
-/* Use variables for height. */
-hr {
-	height: var(--hr-height, var(--space, 1rem)); }
+	margin-block-end: var(--block-end, var(--space, 1rem));
+}

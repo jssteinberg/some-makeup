@@ -16,9 +16,9 @@
 pre {
 	white-space: pre-wrap; }
 
-/* Prevent different inline elements from affecting line height. */
+/* Prevent inline elements from affecting line height. */
 code, kbd, samp, sub, sup {
-	line-height: 0; }
+	line-height: .8; }
 
 /* Remove space below for vertical flow. */
 img, svg, video, canvas, audio, iframe, embed, object {
@@ -29,16 +29,6 @@ img, svg, video, canvas, audio, iframe, embed, object,
 input, select, textarea {
 	max-width: 100%;
 	height: auto; }
-
-/* Remove the margin on controls in Safari. */
-button, input, select {
-	margin: 0; }
-
-/* UNIFORM INLINE SPACINGS */
-
-/* Intuitive inline margins -- horizontal align with adjacent. */
-figure {
-	margin-inline-start: 0; margin-inline-end: 0; }
 
 /* FIX INABILITY TO STYLE */
 
@@ -62,12 +52,6 @@ button, [type="button" i], [type="reset" i], [type="submit" i] {
 picture {
 	display: contents; }
 
-/* FIX SEMANTIC STYLING */
-
-/* Always `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
-strong {
-	font-weight: bolder; }
-
 /* FIX/EXTEND FONTS */
 
 /* Fix font inheritance for preformatted text and add optional font-family variable. */
@@ -82,6 +66,22 @@ code, kbd, samp, pre, textarea {
 button, textarea, ::-webkit-file-upload-button {
 	font-family: inherit; }
 
+/* UNIFORM SPACINGS */
+
+/* Remove the margin on controls in Safari. */
+button, input, select {
+	margin: 0; }
+
+/* Intuitive inline margins -- horizontal align with adjacent. */
+figure {
+	margin-inline-start: 0; margin-inline-end: 0; }
+
+/* FIX SEMANTIC STYLING */
+
+/* Always `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
+strong {
+	font-weight: bolder; }
+
 /* FIX USABILITY */
 
 /* Consistent mouse interaction with clickable elements for usability. */
@@ -91,16 +91,3 @@ button, summary {
 /* Consistent cursor for disabled elements */
 [aria-disabled="true" i], [disabled] {
 	cursor: not-allowed; }
-
-/* FIX STYLES THAT MAKES ELEMENTS AVOIDED */
-
-hr {
-	/* No border, it disrupts vertical rhythm. */
-	border: none;
-	/* Inherit color (Firefox) */
-	color: inherit;
-	/* Non flow/rhythm disrupting horizontal rules. */
-	background: no-repeat center/100% 1px
-		linear-gradient(currentColor,currentColor);
-	height: 1em;
-}

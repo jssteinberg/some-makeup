@@ -1,0 +1,116 @@
+div, header, nav, footer,
+address, datalist, details, fieldset, pre, table,
+canvas, embed, figure, iframe, object, video,
+dl, ol, ul,
+blockquote, p {
+	line-height: calc(1 + var(--added-lead, .6));
+}
+
+button, [type="button" i], [type="reset" i], [type="submit" i] {
+	background: transparent;
+	border: none;
+	box-shadow: 0 1px, 0 -1px, inset 1px 0, inset -1px 0;
+	color: inherit;
+	padding: var(--space, 1rem) calc(2 * var(--space, 1rem));
+	font-size: 1em;
+	line-height: inherit;
+}
+
+:is(p,h1,h2,h3,h4,h5,h6) :is(
+	button, [type="button" i], [type="reset" i], [type="submit" i]
+) {
+	padding: 0 1ch;
+}
+
+hr {
+	/* No border, it disrupts vertical rhythm. */
+	border: none;
+	/* Inherit color (Firefox) */
+	color: inherit;
+	/* Non flow disrupting horizontal rules. */
+	background: no-repeat center/100% 1px
+		linear-gradient(currentColor,currentColor);
+	/* Use variables for height. */
+	height: var(--hr-height, var(--space, 1rem));
+}
+
+h1, .h1 {
+	--_added-lead: .125;
+	--_line-height: calc(
+		1 + var(--h1-added-lead, var(--_added-lead))
+	);
+	font-size: calc(
+		var(--h1-line-span, 2)
+		* 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h2, .h2 {
+	--_added-lead: .25;
+	--_line-height: calc(
+		1 + var(--h2-added-lead, var(--_added-lead))
+	);
+	font-size: calc(
+		var(--h2-line-span, 1)
+		* 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h3, .h3 {
+	--_added-lead: var(--added-lead, .6);
+	--_line-height: calc(
+		1 + var(--h3-added-lead, var(--_added-lead))
+	);
+	font-size: calc(
+		var(--h3-line-span, 1)
+		* 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h4, .h4 {
+	--_line-height: calc(
+		1 + var(--h4-added-lead, var(--added-lead, .6))
+	);
+	font-size: calc(
+		var(--h4-line-span, 1)
+		* 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h5, .h5 {
+	--_line-height: calc(
+		1 + var(--h5-added-lead, var(--added-lead, .6))
+	);
+	font-size: calc(
+		var(--h5-line-span, 1)
+		* 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
+
+h6, .h6 {
+	--_line-height: calc(
+		1 + var(--h6-added-lead, var(--added-lead, .6))
+	);
+	font-size: calc(
+		var(--h6-line-span, 1)
+		* 1em
+		* (1 + var(--added-lead, .6))
+		/ var(--_line-height)
+	);
+	line-height: var(--_line-height);
+}
