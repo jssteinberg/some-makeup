@@ -1,4 +1,4 @@
-/* CONTAIN OVERFLOW & LINE HEIGHT */
+/* CONTAIN OVERFLOW */
 
 :root {
 	/* Words are auto hyphenated to fit narrow widths. */
@@ -15,14 +15,6 @@
 /* Wrap pre-formatted text by default. */
 pre {
 	white-space: pre-wrap; }
-
-/* Prevent inline elements from affecting line height. */
-code, kbd, samp, sub, sup {
-	line-height: .625; }
-
-/* Remove space below for vertical flow. */
-img, svg, video, canvas, audio, iframe, embed, object {
-	vertical-align: middle; }
 
 /* Make elements responsive. */
 img, svg, video, canvas, audio, iframe, embed, object,
@@ -50,6 +42,10 @@ picture {
 
 /* FIX/EXTEND FONT */
 
+/* Prevent inline elements from affecting line height. */
+code, kbd, samp, sub, sup {
+	line-height: .625; }
+
 /* Fix font inheritance for preformatted text and add optional font-family variable. */
 code, kbd, samp, pre {
 	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
@@ -59,10 +55,14 @@ code, kbd, samp, pre, input, textarea {
 	font-size: 1em; }
 
 /* Fix to inherit font-family. */
-button, input, textarea, ::-webkit-file-upload-button {
+button, textarea, ::-webkit-file-upload-button {
 	font-family: inherit; }
 
 /* UNIFORM SPACINGS */
+
+/* Remove space below for vertical flow. */
+img, svg, video, canvas, audio, iframe, embed, object {
+	vertical-align: middle; }
 
 /* Remove the margin on controls in Safari. */
 button, input, select {
