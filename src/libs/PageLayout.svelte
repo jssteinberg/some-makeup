@@ -56,12 +56,15 @@
 		padding-inline-start: var(--view-inline);
 		padding-inline-end: var(--view-inline);
 
-		display: grid;
-		grid-template-columns: var(--content-width);
-		justify-content: start;
+		display: flex;
+		flex-direction: column;
 	}
 
-	.content > :global(:not(hr)) {
+	.content > :global(:not(h1)) {
+		width: var(--content-width);
+	}
+
+	.content > :global(:not(h1,hr)) {
 		--block-start: 0;
 	}
 

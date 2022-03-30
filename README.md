@@ -8,7 +8,7 @@ Plan v2:
 
 - wrap stuff in `:where()`
 
-Inspiration: The Elements of Typographic Style, normalize.css, modern normalize, CSS Remedy, sanitize.css, Open Props, modern reset.
+Inspiration: The Elements of Typographic Style, normalize.css, modern normalize, CSS Remedy, sanitize.css, [Open Props][op], [A modern CSS reset][amcr], [Cube CSS][cc].
 
 ---
 
@@ -32,3 +32,7 @@ Inspiration: The Elements of Typographic Style, normalize.css, modern normalize,
 	/* Correct the font size for `:is(article,section) h1` elements (Chrome/Firefox/Safari). */
 	h1 { font-size: 2em; }
 	```
+
+op: https://open-props.style/
+amcr: https://piccalil.li/blog/a-modern-css-reset/
+cc: https://cube.fyi/

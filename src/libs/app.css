@@ -42,6 +42,12 @@
 	}
 }
 
+@media (min-width: 1500px) {
+	:root {
+		--view-inline: 15vw;
+	}
+}
+
 /* @media (motion-ok) {
 /* 	/* For animating backgrounds */
 /* 	transition: background-color 0.75s ease;

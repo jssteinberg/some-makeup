@@ -9,7 +9,9 @@
 	export { classes as class };
 
 	$: saturation = hue ? '100%' : undefined;
-	$: style = hue && saturation ? `--hue: ${hue}; --saturation: ${saturation}` : undefined;
+	$: style = hue && saturation ?
+		`--hue: ${hue}; --saturation: ${saturation}`
+		: undefined;
 
 	classes = `button ${classes || ''} ${primary ? 'button--primary' : ''} ${
 		disabled || trueDisabled ? `button--disabled` : ``
@@ -33,13 +35,12 @@
 
 <style>
 	:where(a, button) {
-		--padding-block: calc(0.5 * var(--spacer, 1rem));
+		--padding-block: calc(0.5 * var(--space, 1rem));
 		--shadow-size: 0.55em;
 		--_shadow-padding: var(--shadow-size);
 
-		--_TOUCH-TARGET-SIZE: max(48px, calc(2 * var(--RRLH, 1.5)));
 		--_min-height: calc(
-			var(--_TOUCH-TARGET-SIZE) - var(--padding-block) * 2 - var(--shadow-size)
+			var(--TOUCH-TARGET-SIZE) - var(--padding-block) * 2 - var(--shadow-size)
 		);
 
 		all: unset;
@@ -47,6 +48,7 @@
 		border-radius: var(--border-radius, 0);
 		box-shadow: inset 0 calc(-1 * var(--shadow-size))
 			hsla(var(--hue, 0), var(--saturation, 0%), 12.5%, 70%);
+		box-sizing: border-box;
 		cursor: pointer;
 		color: white;
 		display: inline-block;

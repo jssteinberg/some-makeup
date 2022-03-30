@@ -1,11 +1,11 @@
 ---
-title: 'Gradient Text CSS: Overused Yet?'
-metaTitle: 'Gradient Text CSS: Overused Yet?'
+title: 'CSS for gradient text: Overused yet?'
+description: The CSS code for gradient text has become too simple.
 official: '2022-01-26'
 tags: ['css']
 ---
 
-# Gradient Text CSS:<br aria-hidden> Overused Yet?
+# CSS for gradient text:<br aria-hidden> Overused yet?
 
 The CSS code for gradient text has become too simple---**everyone's doing it!** Look at it! Fancy CSS has never been this simple:
 
@@ -53,15 +53,6 @@ h1.gradient-text {
 		background-clip: text;
 	}
 
-	@media (min-width: 900px) {
-		h1 {
-			--h1-line-span: 3;
-		}
-	}
-
-	@media (min-width: 1200px) {
-		h1 {
-			--h1-line-span: 4;
-		}
-	}
+	@media (min-width: 900px) { h1 { --h1-line-span: 3; } }
+	@media (min-width: 1200px) { h1 { --h1-line-span: 4; } }
 </style>

@@ -4,7 +4,7 @@
 
 <style>
 	.site-header {
-		padding: var(--view-inline);
+		padding: max(1em, calc(.25 * var(--view-inline))) var(--view-inline);
 		padding-block-end: var(--space, 1rem);
 	}
 
