@@ -1,11 +1,12 @@
 <script>
 	import { page } from '$app/stores';
 
-	export let ariaLabel;
 	export let links = [];
+	export let ariaLabel;
+	export let role;
 </script>
 
-<nav aria-label={ariaLabel}>
+<nav {role} aria-label={ariaLabel}>
 	{#each links as link}
 		<a
 			href={link.href}

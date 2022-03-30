@@ -5,6 +5,7 @@
 	import LineHeightCss from '/src/libs/LineHeightCss.svelte';
 	import Nav from '/src/libs/Nav.svelte';
 	import { afterUpdate } from 'svelte';
+	import { page } from '$app/stores';
 
 	const links = [
 		{
@@ -51,6 +52,12 @@
 {#if css.space} <SpaceCss /> {/if}
 {#if css.flow} <LineHeightCss /> {/if}
 
+<svelte:head>
+	<title>
+		test {links.find(val => val.href === $page.url.pathname).label}, makeup-style
+	</title>
+</svelte:head>
+
 <svelte:window bind:scrollY />
 
 {#if els}
@@ -58,7 +65,9 @@
 		<span class="header">px</span>
 		{#each els as item}
 			<span
-				style:transform={`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`}
+				style:transform={
+					`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
+				}
 			>
 				{item.offsetHeight}
 			</span>
@@ -66,12 +75,12 @@
 	</div>
 {/if}
 
-<Nav {links} ariaLabel="Test scenarios" />
+<Nav {links} role="Tests" />
 
 <div id="tests" class="wrapper">
 	<p class="button-container">
 		{#each Object.keys(css) as file}
-			<button on:click={toggleCss(file)} class={`${css[file] ? `on` : `off`}`}>
+			<button on:click={() => toggleCss(file)} class={`${css[file] ? `on` : `off`}`}>
 				<span class="status">
 					{#if css[file]} (On) {:else} (Off) {/if}
 				</span>

@@ -55,7 +55,7 @@
 	}
 
 	details[open] {
-		box-shadow: inset -1px -1px var(--sep-color);
+		box-shadow: inset -1px -1px;
 	}
 
 	.summary-content {

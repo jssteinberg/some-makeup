@@ -1,6 +1,6 @@
 This is still the most up-to-date post I find on this, adressing several cases not discussed anywhere else: https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
 
-This result in the following snippet:
+Incorporating a technique from [sanitize.css](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L344-L356), it results in the following snippet:
 
 ```css
 /* Accessible display on visually hidden only elements. */
