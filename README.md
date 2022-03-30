@@ -1,18 +1,18 @@
-# makeup-style
+# [makeup-style (documentation)](https://some.makeup/style)
 
 CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.
 
-makeup-style differs from normalize.css, sanitize.css, CSS remedy, etc. in how it does not bother normalizing every weird element. Some elements are rarely used or should be styled and code-split given its context. makeup-style instead fixes CSS so no elements overflow or affect line-height, so elements are more intuitive to style and to enable easier typographically correct styling -- utilizing CSS functions and variables when suitable.
-
-[Documentation](https://dev.some.makeup/style)
+makeup-style differs from normalize.css and sanitize.css in how it does not bother normalizing every weird element. Some elements are rarely used or should be styled and code-split given its context. makeup-style instead fixes CSS so no elements overflow or affect line-height, so elements are more intuitive to style and to enable easier typographically correct styling -- utilizing CSS functions and variables when suitable.
 
 Plan v2:
 
 - wrap stuff in `:where()`
 
+Inspiration: The Elements of Typographic Style, normalize.css, modern normalize, CSS Remedy, sanitize.css, Open Props, modern reset.
+
 ---
 
-*makeup-style is a slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
+*makeup-style is the updated, slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
 
 *Changes from Floor Typography CSS v22:*
 

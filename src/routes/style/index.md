@@ -1,6 +1,7 @@
 ---
 title: makeup-style
 description: So you want to makeup some styling?
+set: ['typography', 'code']
 ---
 
 # makeup-style
@@ -9,7 +10,7 @@ So you want to makeup style?
 
 These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style. (No Internet Explorer support.)
 
-## A
+## A: Fix
 
 ```css
 @import 'makeup-style/src/fix.css';
@@ -25,7 +26,7 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 }
 ```
 
-## A addon
+## A.1: Do
 
 ```css
 @import 'makeup-style/src/do.css';
@@ -33,7 +34,7 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 
 Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better developer experience.
 
-## B1
+## B1: Space
 
 ```css
 @import 'makeup-style/src/space.css';
@@ -45,7 +46,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 
 `--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `--space`, then `1rem`.
 
-## B2
+## B2: Flow
 
 ```css
 @import 'makeup-style/src/flow.css';
@@ -108,9 +109,3 @@ Files that adds CSS classes.
 		background-image: linear-gradient(90deg,lightblue,blue);
 	}
 </style>
-
-<PrismCss />
-
-<script>
-	import PrismCss from '/src/libs/PrismCss.svelte';
-</script>

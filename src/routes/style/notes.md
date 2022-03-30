@@ -1,12 +1,21 @@
+---
+title: Notes, makeup-style
+description: Developer notes for CSS library makeup-style.
+set: ['typography', 'code']
+---
+
 # Notes
+
+*Developer notes for makeup-style, the CSS library.*
 
 ## Library guide
 
 - File names as actions.
+- A returning value seems to be ".625".
 
 ## Space
 
-"space.css" as file name. `--space` as a variable name.
+"space.css" as file name. `--space` as variable name.
 
 In the library I created before this, the variable was eventually renamed `--spacer`. Mostly to be more in style with Bootstrap naming. "Space" is shorter and I like that the file has the same name. Space. The file can't be named "spacer". An import now looks likes this: `@import 'makeup-style/src/space.css'`. It's like an action you take. Space CSS! You also "fix CSS!" "Spacer CSS" doesn't work.
 

@@ -4,6 +4,7 @@
 	import IntuitiveCss from './DxCss.svelte';
 	import SpaceCss from './SpaceCss.svelte';
 	import LineHeightCss from './LineHeightCss.svelte';
+	import PrismCss from './PrismCss.svelte';
 
 	export let title = 'Knut';
 	export let metaTitle;
@@ -31,6 +32,10 @@
 	}}
 />
 
+{#if set.includes('code')}
+	<PrismCss />
+{/if}
+
 <ContainCss />
 <IntuitiveCss />
 <SpaceCss />
@@ -42,8 +47,7 @@
 
 <style>
 	.content {
-		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
-		--block-start: 0;
+		/* --space: calc(var(--font-size) * (1 + var(--added-lead, .6))); */
 		--added-lead: .6;
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 
@@ -55,6 +59,10 @@
 		display: grid;
 		grid-template-columns: var(--content-width);
 		justify-content: start;
+	}
+
+	.content > :global(:not(hr)) {
+		--block-start: 0;
 	}
 
 	.content.typography {
@@ -79,6 +87,10 @@
 
 	.content :global(:is(ol, ul)) {
 		padding-inline-start: var(--space);
+	}
+
+	.content :global(ul) {
+		list-style: square;
 	}
 
 	/* Code */

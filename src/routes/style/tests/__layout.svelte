@@ -75,7 +75,7 @@
 	</div>
 {/if}
 
-<Nav {links} role="Tests" />
+<Nav {links} ariaLabel="Test-pages" />
 
 <div id="tests" class="wrapper">
 	<p class="button-container">

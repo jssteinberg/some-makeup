@@ -1,14 +1,15 @@
-This is still the most up-to-date post I find on this, adressing several cases not discussed anywhere else: https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
+---
+title: Visually Hidden HTML
+description: How to hide HTML elements visually with CSS.
+---
 
-Incorporating a technique from [sanitize.css](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L344-L356), it results in the following snippet:
+# Visually Hidden HTML
+
+To visually hide HTML elements with CSS, this is still the most comprehensive post I find on this, adressing several cases not discussed anywhere else: https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
+
+Then, also incorporating a technique with attributes from [sanitize.css](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L344-L356), it results in the following snippet:
 
 ```css
-/* Accessible display on visually hidden only elements. */
-
-[aria-hidden="false" i][hidden] {
-  display: initial;
-}
-
 .visually-hidden,
 .visually-hidden-focusable:not(:focus),
 [aria-hidden="false" i][hidden]:not(:focus) {
@@ -24,4 +25,14 @@ Incorporating a technique from [sanitize.css](https://github.com/csstools/saniti
   width: 1px !important;
   white-space: nowrap !important;
 }
+
+[aria-hidden="false" i][hidden] {
+  display: initial;
+}
 ```
+
+<PrismCss />
+
+<script>
+  import PrismCss from '/src/libs/PrismCss.svelte';
+</script>

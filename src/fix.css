@@ -69,7 +69,7 @@ button, input, select {
 	margin: 0; }
 
 /* Intuitive inline margins -- horizontal align with adjacent. */
-figure {
+figure, hr {
 	margin-inline-start: 0; margin-inline-end: 0; }
 
 /* FIX SEMANTIC STYLING */

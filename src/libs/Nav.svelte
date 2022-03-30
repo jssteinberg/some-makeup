@@ -3,10 +3,9 @@
 
 	export let links = [];
 	export let ariaLabel;
-	export let role;
 </script>
 
-<nav {role} aria-label={ariaLabel}>
+<nav aria-label={ariaLabel}>
 	{#each links as link}
 		<a
 			href={link.href}
