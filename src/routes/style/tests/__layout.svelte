@@ -54,7 +54,7 @@
 
 <svelte:head>
 	<title>
-		test {links.find(val => val.href === $page.url.pathname).label}, makeup-style
+		test {links.find(val => val.href === $page.url.pathname)?.label || `…`}, makeup-style
 	</title>
 </svelte:head>
 

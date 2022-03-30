@@ -41,7 +41,11 @@
 <SpaceCss />
 <LineHeightCss />
 
-<div lang={langAttr} class={`content ${set.includes(`typography`) ? `typography` : ``}`}>
+<div lang={langAttr} class={`
+	content
+	${set.includes(`typography`) ? `content--typography` : ``}
+	${set.includes(`sans`) ? `content--sans` : ``}
+`}>
 	<slot />
 </div>
 
@@ -49,7 +53,6 @@
 	.content {
 		/* --space: calc(var(--font-size) * (1 + var(--added-lead, .6))); */
 		--added-lead: .6;
-		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
 
 		font-size: var(--font-size);
 
@@ -60,7 +63,7 @@
 		flex-direction: column;
 	}
 
-	.content > :global(:not(h1)) {
+	.content > :global(:not(h1,pre)) {
 		width: var(--content-width);
 	}
 
@@ -68,11 +71,12 @@
 		--block-start: 0;
 	}
 
-	.content.typography {
+	.content--typography {
 		text-rendering: optimizeLegibility;
 	}
 
-	.content :global(h1 ~ :not(pre)) {
+	.content--sans :global(h1 ~ *) {
+		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 		font-family: var(--sans);
 	}
 
@@ -82,6 +86,7 @@
 
 	.content :global(h2) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
+		margin-block-start: calc(2 * var(--space, 1em));
 	}
 
 	.content :global(:is(p,li)) {
@@ -98,15 +103,11 @@
 
 	/* Code */
 
-	:where(.content) :global(:is(code,kbd,samp)) {
-		font-size: 1.625ex;
+	.content :global(:is(code,kbd,samp)) {
+		font-size: 1.7ex;
 	}
 
-	:where(.content) :global(pre code) {
-		font-size: 1.625ex;
-	}
-
-	:where(.content) :global(pre) {
+	.content :global(pre) {
 		hyphens: none;
 		overflow: auto;
 		tab-size: 2;
@@ -115,8 +116,8 @@
 		word-break: normal;
 		word-wrap: normal;
 
-		box-shadow: inset -1px -1px var(--sep-color);
-		padding: 0 var(--space) var(--space) 0;
+		box-shadow: inset -1px 0 var(--sep-color);
+		padding: var(--space, 1em) var(--space, 1em) var(--space, 1em) 0;
 	}
 
 	.content :global(:not(pre) > code) {

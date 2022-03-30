@@ -40,18 +40,14 @@
 		padding: 0 1em;
 	}
 
-	nav :global(a[aria-current="page"]) {
-		box-shadow: inset -1px -1px;
-		text-decoration: none;
-	}
-
+	nav :global(a[aria-current="page"]),
 	nav :global(a:is(:hover,:focus)) {
 		box-shadow: inset 0 0 0 1px;
 		text-decoration: none;
 	}
 
 	:where(nav) :global(a.parent) {
-		box-shadow: inset 0 -1px;
+		box-shadow: inset -1px 1px;
 	}
 
 	/* nav ~ :global(nav a) { */

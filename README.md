@@ -2,6 +2,10 @@
 
 CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.
 
+*Files: src/fix.css, src/do.css, src/space.css, src/flow.css.*
+
+---
+
 makeup-style differs from normalize.css and sanitize.css in how it does not bother normalizing every weird element. Some elements are rarely used or should be styled and code-split given its context. makeup-style instead fixes CSS so no elements overflow or affect line-height, so elements are more intuitive to style and to enable easier typographically correct styling -- utilizing CSS functions and variables when suitable.
 
 Plan v2:

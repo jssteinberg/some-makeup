@@ -1,7 +1,7 @@
 ---
 title: makeup-style
 description: So you want to makeup some styling?
-set: ['typography', 'code']
+set: ['typography', 'code', 'sans']
 ---
 
 # makeup-style
