@@ -48,7 +48,7 @@
   "bugs": {
     "url": "https://github.com/jssteinberg/some-makeup/issues"
   },
-  "homepage": "https://github.com/jssteinberg/some-makeup/tree/next#readme",
+  "homepage": "https://github.com/jssteinberg/some-makeup#readme",
   "files": [
     "src/*.css",
     "src/class/*.css"

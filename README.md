@@ -1,8 +1,10 @@
-# [makeup-style (documentation)](https://some.makeup/style)
+# makeup-style
+
+[Documentation](https://some.makeup/style)
 
 CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.
 
-*Files: src/fix.css, src/do.css, src/space.css, src/flow.css.*
+*Relevant files in repository/package: src/fix.css, src/do.css, src/space.css, src/flow.css.*
 
 ---
 
@@ -15,7 +17,7 @@ Plan v2:
 
 Inspiration: The Elements of Typographic Style, normalize.css, modern normalize, CSS Remedy, sanitize.css, [Open Props][op], [A modern CSS reset][amcr], [Cube CSS][cc].
 
----
+## History
 
 *makeup-style is the updated, slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
 
@@ -34,6 +36,6 @@ Inspiration: The Elements of Typographic Style, normalize.css, modern normalize,
 	h1 { font-size: 2em; }
 	```
 
-op: https://open-props.style/
-amcr: https://piccalil.li/blog/a-modern-css-reset/
-cc: https://cube.fyi/
+[op]: https://open-props.style/
+[amcr]: https://piccalil.li/blog/a-modern-css-reset/
+[cc]: https://cube.fyi/
