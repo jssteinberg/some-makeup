@@ -13,7 +13,7 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 <div class="grid">
 <section>
 
-## 1. Fix
+## 1. "Fix"
 
 ```css
 @import 'makeup-style/src/fix.css';
@@ -36,7 +36,7 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 </section>
 <section>
 
-## 1.1. Do -- *A Fix Expansion*
+## 1.1. "Do" -- *A Fix Expansion*
 
 ```css
 @import 'makeup-style/src/do.css';
@@ -47,7 +47,7 @@ Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better devel
 </section>
 <section>
 
-## 2. Space
+## 2. "Space"
 
 ```css
 @import 'makeup-style/src/space.css';
@@ -86,7 +86,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 </section>
 <section>
 
-## 2.1. Flow -- *A Space Expansion*
+## 2.1. "Flow" -- *A Space Expansion*
 
 ```css
 @import 'makeup-style/src/flow.css';
@@ -148,7 +148,7 @@ CSS that sets line-height, headings' line-height to be computed to container def
 		background-image: linear-gradient(90deg,lightblue,blue);
 	}
 
-	@media (min-width: 900px) {
+	@media (min-width: 600px) {
 		.grid {
 			display: flex;
 			flex-direction: column;
