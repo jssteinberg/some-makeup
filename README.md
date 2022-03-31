@@ -1,10 +1,10 @@
 # makeup-style
 
-[Documentation](https://some.makeup/style)
-
 CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.
 
 *Relevant files in repository/package: src/fix.css, src/do.css, src/space.css, src/flow.css.*
+
+[Documentation -- read more about each file and see tests](https://some.makeup/style)
 
 ---
 
