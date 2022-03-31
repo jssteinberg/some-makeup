@@ -75,6 +75,11 @@
 		text-rendering: optimizeLegibility;
 	}
 
+	.content :global(h1) {
+		font-family: var(--sans);
+		font-weight: 700; font-weight: 800; font-weight: 900;
+	}
+
 	.content--sans :global(h1 ~ *) {
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 		font-family: var(--sans);
