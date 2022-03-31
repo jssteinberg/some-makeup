@@ -15,7 +15,7 @@ Plan v2:
 - wrap stuff in `:where()`
 - remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now.
 
-Inspiration: The Elements of Typographic Style, normalize.css, modern normalize, CSS Remedy, sanitize.css, [Open Props][op], [A modern CSS reset][amcr], [Cube CSS][cc].
+Inspiration: The Elements of Typographic Style, normalize.css, modern normalize, CSS Remedy, sanitize.css, BEM, [Open Props][op], [A modern CSS reset][amcr].
 
 ## History
 
