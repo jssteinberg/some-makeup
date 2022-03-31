@@ -62,7 +62,17 @@
 		display: inline-flex;
 	}
 
+	.summary-content > :global(*) {
+		margin-block: 0;
+	}
+
 	.summary-content > :global(:last-child) {
-		padding-inline-end: calc(var(--TOUCH-TARGET-SIZE, 48px) / 2 - .5ch);
+		padding-inline-end: 1em;
+	}
+
+	summary ~ :global(*) {
+		box-shadow: none;
+		border-right: none;
+		border-left: none;
 	}
 </style>

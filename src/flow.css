@@ -9,9 +9,10 @@ blockquote, p {
 button, [type="button" i], [type="reset" i], [type="submit" i] {
 	background: transparent;
 	border: none;
-	box-shadow: 0 1px, 0 -1px, inset 1px 0, inset -1px 0;
+	border-radius: .25em;
+	box-shadow: 0 0 0 1px inset;
 	color: inherit;
-	padding: var(--space, 1rem) calc(2 * var(--space, 1rem));
+	padding: var(--space, 1em) calc(2 * var(--space, 1em));
 	font-size: 1em;
 	line-height: inherit;
 }
@@ -19,7 +20,7 @@ button, [type="button" i], [type="reset" i], [type="submit" i] {
 :is(p,h1,h2,h3,h4,h5,h6) :is(
 	button, [type="button" i], [type="reset" i], [type="submit" i]
 ) {
-	padding: 0 1ch;
+	padding: 0 1em;
 }
 
 hr {
@@ -31,7 +32,7 @@ hr {
 	background: no-repeat center/100% 1px
 		linear-gradient(currentColor,currentColor);
 	/* Use variables for height. */
-	height: var(--hr-height, var(--space, 1rem));
+	height: var(--hr-height, var(--space, 1em));
 }
 
 h1, .h1 {

@@ -53,6 +53,7 @@
 	.content {
 		/* --space: calc(var(--font-size) * (1 + var(--added-lead, .6))); */
 		--added-lead: .6;
+		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
 		font-size: var(--font-size);
 
@@ -63,7 +64,7 @@
 		flex-direction: column;
 	}
 
-	.content > :global(:not(h1,pre)) {
+	:where(.content) > :global(:not(h1,pre)) {
 		width: var(--content-width);
 	}
 
@@ -80,13 +81,12 @@
 		font-weight: 700; font-weight: 800; font-weight: 900;
 	}
 
-	.content--sans :global(h1 ~ *) {
-		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	.content--sans :global(h1 ~ :not(pre)) {
 		font-family: var(--sans);
 	}
 
 	.content > :global(:first-child) {
-		--block-start: var(--space);
+		--block-start: var(--space, 1em);
 	}
 
 	.content :global(h2) {
@@ -99,7 +99,7 @@
 	}
 
 	.content :global(:is(ol, ul)) {
-		padding-inline-start: var(--space);
+		padding-inline-start: var(--space, 1em);
 	}
 
 	.content :global(ul) {
@@ -109,10 +109,10 @@
 	/* Code */
 
 	.content :global(:is(code,kbd,samp)) {
-		font-size: 1.7ex;
+		font-size: .9em;
 	}
 
-	.content :global(pre) {
+	:where(.content) :global(:where(pre)) {
 		hyphens: none;
 		overflow: auto;
 		tab-size: 2;
@@ -121,7 +121,7 @@
 		word-break: normal;
 		word-wrap: normal;
 
-		box-shadow: inset -1px 0 var(--sep-color);
+		box-shadow: inset -1px 1px;
 		padding: var(--space, 1em) var(--space, 1em) var(--space, 1em) 0;
 	}
 

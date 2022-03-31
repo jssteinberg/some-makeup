@@ -2,10 +2,8 @@
 
 :root {
 	--TOUCH-TARGET-SIZE: max(48px, 3rem);
-	--SPACE: 1rem; /* Document constant spacing var */
 
 	--added-lead: .225; /* Approx. browser default added-lead */
-	--space: var(--SPACE);
 	--font-size: clamp(
 		1rem, 4.8vw, 1.3rem
 	);

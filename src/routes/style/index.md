@@ -8,9 +8,12 @@ set: ['typography', 'code', 'sans']
 
 So you want to makeup style?
 
-These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style. (No Internet Explorer support.)
+These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 
-## A: Fix
+<div class="grid">
+<section>
+
+## 1. Fix
 
 ```css
 @import 'makeup-style/src/fix.css';
@@ -18,7 +21,10 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 
 CSS to prevent text and content from overflowing, prevents some elements from affecting line-height (excluding buttons), and CSS fixes for font settings, semantic styling and usability. This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.
 
-`--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`). E.g.:
+`--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`.
+
+<Details>
+<h3 slot="summary">Example</h3>
 
 ```css
 :root {
@@ -26,7 +32,11 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 }
 ```
 
-## A.1: Do
+</Details>
+</section>
+<section>
+
+## 1.1. Do -- *A Fix Expansion*
 
 ```css
 @import 'makeup-style/src/do.css';
@@ -34,7 +44,10 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 
 Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better developer experience.
 
-## B1: Space
+</section>
+<section>
+
+## 2. Space
 
 ```css
 @import 'makeup-style/src/space.css';
@@ -42,26 +55,72 @@ Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better devel
 
 CSS that sets consistent spacing between the needed block-level elements.
 
-`--space` for setting vertical spacing between intuitive block-level elements. Falls back to `1rem`.
+`--space` for setting vertical spacing between intuitive block-level elements. Falls back to `1em`.
 
-`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `--space`, then `1rem`.
+`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1em)`.
 
-## B2: Flow
+<Details>
+<h3 slot="summary">Example</h3>
+
+
+```css
+:root {
+	--font-size: clamp(
+		1rem, 4.8vw, 1.3rem
+	);
+	--space: var(--font-size);
+}
+
+.content {
+	font-size: var(--font-size);
+}
+
+@media (min-width: 900px) {
+	:root {
+		--font-size: 1.1rem;
+	}
+}
+```
+
+</Details>
+</section>
+<section>
+
+## 2.1. Flow -- *A Space Expansion*
 
 ```css
 @import 'makeup-style/src/flow.css';
 ```
 
-*Requires fix.css and space.css.*
+CSS that sets line-height, headings' line-height to be computed to container defining `--added-lead`, and sets other elements to flow.
 
-CSS that sets line-height to equal leading for headings.
+`--added-lead` for setting line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
 
-`--hr-height` for setting height of `<hr>`. Falls back to `--space`, then `1rem`.
+`--space` for setting some more spaces. Falls back to `1em`.
 
-Each heading can be customized with their own variables on document root or children:
+`--hr-height` for setting height of `<hr>`. Falls back to `var(--space, 1em)`.
 
-- '`--h[1,2,3,4,5,6]-added-lead`'
-- '`--h[1,2,3,4,5,6]-line-span`'
+{#each Array.from(Array(6)) as _,i}
+
+<p>
+	<code>--h{i + 1}-line-span</code>
+	for setting the number of lines the heading should span over. Falls back to 
+	{#if i === 0}<code>2</code>{:else}<code>1</code>{/if}.
+</p>
+
+<p>
+	<code>--h{i + 1}-added-lead</code>
+	for setting the added lead to the heading's line-height. Falls back to
+	{#if i === 0}
+		<code>.125</code>.
+	{:else if i === 1}
+		<code>.25</code>.
+	{:else}
+		<code>var(--added-lead, .6)</code>.
+	{/if}
+</p>
+
+{/each}
 
 ---
 
@@ -75,9 +134,9 @@ Each heading can be customized with their own variables on document root or chil
 	}
 	```
 
-## Class Files
+</div>
 
-Files that adds CSS classes.
+## Additional Class Files
 
 ```css
 /* .touch-target, .touch-target-center */
@@ -85,27 +144,41 @@ Files that adds CSS classes.
 ```
 
 <style>
-	:global(.content >) ol {
-		counter-reset: ol-counter;
-		list-style: none;
-		padding: 0;
-	}
-
-	:global(.content >) ol > ::before {
-		counter-increment: ol-counter;
-		content: counter(ol-counter) ".\0000a0"; /* \0000a0 is space */
-		display: block;
-		margin-block-start: 1em;
-	}
-
-	:global(.content >) ol > ::before {
-		font-size: 2em;
-		font-weight: bold;
-		font-weight: 800;
-		font-weight: 900;
-	}
-
 	hr {
 		background-image: linear-gradient(90deg,lightblue,blue);
 	}
+
+	@media (min-width: 900px) {
+		.grid {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.grid section {
+			width: calc(100% - min(5em, var(--view-inline)));
+		}
+
+		.grid section:nth-of-type(even) {
+			align-self: flex-end;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.grid {
+			--gap: calc(1em + 1.5vw);
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 1em var(--gap);
+		}
+
+		.grid section {
+			width: calc(50% - var(--gap));
+		}
+	}
 </style>
+
+<script>
+ 	import Details from '/src/libs/Details.svelte';
+</script>

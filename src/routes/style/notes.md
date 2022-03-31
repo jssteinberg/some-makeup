@@ -11,7 +11,6 @@ set: ['typography', 'code']
 ## Library guide
 
 - File names as actions.
-- A returning value seems to be ".625".
 
 ## Space
 

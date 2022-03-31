@@ -29,6 +29,7 @@ Inspiration: The Elements of Typographic Style, normalize.css, modern normalize,
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 	- Space is not removed for sub-lists (would cause unexpected list styles if parent list was styled unconventional. Rather remove margin for sub-lists in containers of choice).
+	- `--space` falls back to `1em`, not `1rem`.
 - `sub` and `sup` has only normalize of `0` `line-height` to not affect parent `line-height`.
 - Removes setting font-size for h1 (OG from CSS Remedy). Browser default makes sense, and font-size can be, and usually is, set when styling.
 - Remove `line-sizing`, an outdated CSS proposal (OG from CSS Remedy).
