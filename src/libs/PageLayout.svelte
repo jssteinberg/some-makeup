@@ -82,10 +82,9 @@
 
 	.content :global(h1) {
 		font-family: var(--sans);
-		font-weight: 700; font-weight: 800; font-weight: 900;
 	}
 
-	.content :global(h2) {
+	.content :global(:is(h1, h2)) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
 	}
 
