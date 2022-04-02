@@ -24,7 +24,7 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 `--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`.
 
 <Details>
-<h3 slot="summary">Example</h3>
+<h3 slot="summary">Variable use</h3>
 
 ```css
 :root {
@@ -60,7 +60,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 `--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1em)`.
 
 <Details>
-<h3 slot="summary">Example</h3>
+<h3 slot="summary">Variable use</h3>
 
 
 ```css
@@ -68,10 +68,10 @@ CSS that sets consistent spacing between the needed block-level elements.
 	--font-size: clamp(
 		1rem, 4.8vw, 1.3rem
 	);
-	--space: var(--font-size);
 }
 
 .content {
+	--space: var(--font-size);
 	font-size: var(--font-size);
 }
 
