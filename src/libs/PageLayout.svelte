@@ -55,6 +55,7 @@
 		--added-lead: .6;
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
+		font-family: var(--sans);
 		font-size: var(--font-size);
 
 		padding-inline-start: var(--view-inline);
@@ -86,6 +87,9 @@
 
 	.content :global(h2) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
+	}
+
+	.content :global(:is(h2, h3)) {
 		margin-block-start: calc(2 * var(--space, 1em));
 	}
 
