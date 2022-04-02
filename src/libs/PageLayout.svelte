@@ -64,29 +64,24 @@
 		flex-direction: column;
 	}
 
-	:where(.content) > :global(:not(h1,pre)) {
-		width: var(--content-width);
+	.content--typography { text-rendering: optimizeLegibility; }
+	.content--sans :global(h1 ~ :not(pre)) { font-family: var(--sans); }
+
+	.content > :global(:first-child) {
+		--block-start: var(--space, 1em);
 	}
 
 	.content > :global(:not(h1,hr)) {
 		--block-start: 0;
 	}
 
-	.content--typography {
-		text-rendering: optimizeLegibility;
+	:where(.content) > :global(:not(h1,pre)) {
+		width: var(--content-width);
 	}
 
 	.content :global(h1) {
 		font-family: var(--sans);
 		font-weight: 700; font-weight: 800; font-weight: 900;
-	}
-
-	.content--sans :global(h1 ~ :not(pre)) {
-		font-family: var(--sans);
-	}
-
-	.content > :global(:first-child) {
-		--block-start: var(--space, 1em);
 	}
 
 	.content :global(h2) {
@@ -104,6 +99,10 @@
 
 	.content :global(ul) {
 		list-style: square;
+	}
+
+	.content :global(:is(em,cite) :is(em,cite)) {
+		font-style: normal;
 	}
 
 	/* Code */

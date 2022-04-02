@@ -36,7 +36,7 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 </section>
 <section>
 
-## 1.1. "Do" -- *A Fix Expansion*
+## "Do" -- *A <cite>Fix</cite> Expansion*
 
 ```css
 @import 'makeup-style/src/do.css';
@@ -86,7 +86,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 </section>
 <section>
 
-## 2.1. "Flow" -- *A Space Expansion*
+## "Flow" -- *A <cite>Space</cite> Expansion*
 
 ```css
 @import 'makeup-style/src/flow.css';
