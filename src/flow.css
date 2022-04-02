@@ -12,7 +12,7 @@ button, [type="button" i], [type="reset" i], [type="submit" i] {
 	border-radius: .25em;
 	box-shadow: 0 0 0 1px inset;
 	color: inherit;
-	padding: var(--space, 1em) calc(2 * var(--space, 1em));
+	padding: var(--space, 1rem) calc(2 * var(--space, 1rem));
 	font-size: 1em;
 	line-height: inherit;
 }
@@ -32,7 +32,7 @@ hr {
 	background: no-repeat center/100% 1px
 		linear-gradient(currentColor,currentColor);
 	/* Use variables for height. */
-	height: var(--hr-height, var(--space, 1em));
+	height: var(--hr-height, var(--space, 1rem));
 }
 
 h1, .h1 {

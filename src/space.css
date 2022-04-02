@@ -4,6 +4,6 @@ address, datalist, details, fieldset, pre, table,
 canvas, embed, figure, iframe, object, video,
 dl, ol, ul,
 blockquote, p, hr {
-	margin-block-start: var(--block-start, var(--space, 1em));
-	margin-block-end: var(--block-end, var(--space, 1em));
+	margin-block-start: var(--block-start, var(--space, 1rem));
+	margin-block-end: var(--block-end, var(--space, 1rem));
 }

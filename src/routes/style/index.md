@@ -55,12 +55,12 @@ Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better devel
 
 CSS that sets consistent spacing between the needed block-level elements.
 
-`--space` for setting vertical spacing between intuitive block-level elements. Falls back to `1em`.
+`--space` for setting vertical spacing between intuitive block-level elements. It's a point to not use a font-size realtive unit like `em` or `ex`, but use `rem` or another value to set font-size for a container. Falls back to `1rem`.
 
-`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1em)`.
+`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1rem)`.
 
 <Details>
-<span slot="summary">Variable use</span>
+<span slot="summary">Example use</span>
 
 
 ```css
@@ -96,9 +96,9 @@ CSS that sets line-height, headings' line-height to be computed to container def
 
 `--added-lead` for setting line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
 
-`--space` for setting some more spaces. Falls back to `1em`.
+`--space` for setting some more spaces. Falls back to `1rem`.
 
-`--hr-height` for setting height of `<hr>`. Falls back to `var(--space, 1em)`.
+`--hr-height` for setting height of `<hr>`. Falls back to `var(--space, 1rem)`.
 
 {#each Array.from(Array(6)) as _,i}
 
