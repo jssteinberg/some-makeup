@@ -24,7 +24,7 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 `--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`.
 
 <Details>
-<h3 slot="summary">Variable use</h3>
+<span slot="summary">Variable use</span>
 
 ```css
 :root {
@@ -36,7 +36,7 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 </section>
 <section>
 
-## "Do" -- *A <cite>Fix</cite> Expansion*
+### "Do" -- *A <cite>Fix</cite> Expansion*
 
 ```css
 @import 'makeup-style/src/do.css';
@@ -60,7 +60,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 `--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1em)`.
 
 <Details>
-<h3 slot="summary">Variable use</h3>
+<span slot="summary">Variable use</span>
 
 
 ```css
@@ -86,7 +86,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 </section>
 <section>
 
-## "Flow" -- *A <cite>Space</cite> Expansion*
+### "Flow" -- *A <cite>Space</cite> Expansion*
 
 ```css
 @import 'makeup-style/src/flow.css';
@@ -157,24 +157,11 @@ CSS that sets line-height, headings' line-height to be computed to container def
 
 		.grid section {
 			width: calc(100% - min(5em, var(--view-inline)));
+			max-width: var(--content-width);
 		}
 
 		.grid section:nth-of-type(even) {
 			align-self: flex-end;
-		}
-	}
-
-	@media (min-width: 1200px) {
-		.grid {
-			--gap: calc(1em + 1.5vw);
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			gap: 1em var(--gap);
-		}
-
-		.grid section {
-			width: calc(50% - var(--gap));
 		}
 	}
 </style>
