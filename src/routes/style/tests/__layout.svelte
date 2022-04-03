@@ -61,7 +61,7 @@
 <svelte:window bind:scrollY />
 
 {#if els}
-	<div aria-hidden id="element-heights">
+	<div aria-hidden="true" id="element-heights">
 		<span class="header">px</span>
 		{#each els as item}
 			<span

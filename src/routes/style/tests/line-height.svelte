@@ -39,9 +39,9 @@
 	<h2><code>sub, sup</code></h2>
 
 	<p>Almost every developer's favorite molecule is
-	C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."<br aria-hidden><em><code>sub</code> should not affect line-heigh.</em></p>
+	C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."<br aria-hidden="true"><em><code>sub</code> should not affect line-heigh.</em></p>
 
-	<p>The <b>Pythagorean theorem</b> is often expressed as the following equation: <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var><br aria-hidden><em><code>sup</code> should not affect line-heigh.</em></p>
+	<p>The <b>Pythagorean theorem</b> is often expressed as the following equation: <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var><br aria-hidden="true"><em><code>sup</code> should not affect line-heigh.</em></p>
 
 	<p>In a grid:</p>
 

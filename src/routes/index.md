@@ -8,10 +8,16 @@ layout: no
 
 # _some_**.**[makeup-style](/style)
 
+- <a href="/html-attr-true" sveltekit:prefetch>
+
+	`true` HTML attributes
+
+	</a>
 - <a href="/gradient-text" sveltekit:prefetch>
-Gradient Text CSS:
-Overused Yet?
-</a>
+
+	Gradient Text CSS: Overused Yet?
+
+	</a>
 
 <Details title="More">
 	<p>
@@ -52,6 +58,10 @@ Overused Yet?
 
 	ul a {
 		align-items: center;
+	}
+
+	ul a > p {
+		margin: 0;
 	}
 
 	ul {

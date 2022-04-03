@@ -1,7 +1,7 @@
 ---
 title: 'CSS for gradient text: Overused yet?'
 description: The CSS code for gradient text has become too simple.
-official: '2022-01-26'
+date: ['2022-01-26']
 tags: ['css']
 set: ['typography', 'sans']
 ---
