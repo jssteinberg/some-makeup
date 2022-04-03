@@ -51,7 +51,7 @@
 
 <style>
 	.content {
-		/* --space: calc(var(--font-size) * (1 + var(--added-lead, .6))); */
+		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
 		--added-lead: .6;
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
@@ -69,7 +69,7 @@
 	.content--sans :global(h1 ~ :not(pre)) { font-family: var(--sans); }
 
 	.content > :global(:first-child) {
-		--block-start: var(--space, 1em);
+		--block-start: var(--space);
 	}
 
 	.content > :global(:not(h1,hr)) {
@@ -88,16 +88,16 @@
 		font-weight: 700; font-weight: 800; font-weight: 900;
 	}
 
-	.content :global(:is(h2, h3)) {
-		margin-block-start: calc(2 * var(--space, 1em));
-	}
+	/* .content :global(:is(h2, h3)) { */
+	/* 	margin-block-start: calc(2 * var(--space)); */
+	/* } */
 
 	.content :global(:is(p,li)) {
 		font-weight: 300;
 	}
 
 	.content :global(:is(ol, ul)) {
-		padding-inline-start: var(--space, 1em);
+		padding-inline-start: var(--space);
 	}
 
 	.content :global(ul) {
@@ -106,6 +106,12 @@
 
 	.content :global(:is(em,cite) :is(em,cite)) {
 		font-style: normal;
+	}
+
+	.content :global(a) {
+		text-underline-offset:     .15em;
+		text-decoration-thickness: .5ex;
+		text-decoration-color: var(--sep-color);
 	}
 
 	/* Code */
@@ -123,11 +129,17 @@
 		word-break: normal;
 		word-wrap: normal;
 
-		box-shadow: inset -1px 1px;
-		padding: var(--space, 1em) var(--space, 1em) var(--space, 1em) 0;
+		box-shadow: inset -1px 1px var(--sep-color);
+		padding: var(--space) var(--space) var(--space) 0;
 	}
 
 	.content :global(:not(pre) > code) {
+		background: var(--sep-color);
+		border-radius: .4em;
+		box-shadow:
+			0 -.2em var(--sep-color),
+			0  .1em var(--sep-color);
+		padding: 0 .2em;
 		white-space: normal;
 	}
 </style>

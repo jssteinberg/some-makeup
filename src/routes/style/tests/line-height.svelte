@@ -13,6 +13,7 @@
 		<section class="inline-element-example">
 			<h2>Mono font elements</h2>
 
+			<p><em>A paragraph to compare with.</em></p>
 			<p><em>A paragraph to compare with.<br>Over two lines.</em></p>
 			<p><em>Another paragraph to compare with.<br>Over two lines,<br>three lines.</em></p>
 

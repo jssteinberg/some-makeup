@@ -21,7 +21,7 @@ Inspiration: The Elements of Typographic Style, normalize.css, modern normalize,
 
 *makeup-style is the updated, slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
 
-*Breaking changes from Floor Typography CSS v22:*
+*Changes from Floor Typography CSS v22:*
 
 - CSS reorganized in new files: fix.css, do.css, space.css and flow.css.
 - `--line-span` var for headings (not `--h…-min-font-size`).

@@ -51,7 +51,7 @@ code, kbd, samp, pre {
 	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
 
 /* Fix font-size for all browsers (textarea for Safari). */
-code, kbd, samp, pre, input, textarea {
+pre, input, textarea {
 	font-size: 1em; }
 
 /* Fix to inherit font-family. */

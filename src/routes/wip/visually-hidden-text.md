@@ -5,9 +5,9 @@ description: How to hide HTML elements visually with CSS.
 
 # Visually Hidden HTML
 
-To visually hide HTML elements with CSS, this is still the most comprehensive post I find on this, adressing several cases not discussed anywhere else: https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
+To visually hide HTML elements with CSS, this is still the most comprehensive post I've found on this, adressing several cases not discussed anywhere else: https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
 
-Then, also incorporating a technique with attributes from [sanitize.css](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L344-L356), it results in the following snippet:
+Then, also incorporating a technique with attributes used in [sanitize.css](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L344-L356), it results in the following snippet:
 
 ```css
 .visually-hidden,

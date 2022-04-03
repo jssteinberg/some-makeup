@@ -47,10 +47,7 @@
 	});
 </script>
 
-{#if css.fix} <IntuitiveCss /> {/if}
-{#if css.do} <DxCss /> {/if}
-{#if css.space} <SpaceCss /> {/if}
-{#if css.flow} <LineHeightCss /> {/if}
+<Nav {links} ariaLabel="Test-pages" />
 
 <svelte:head>
 	<title>
@@ -75,8 +72,6 @@
 	</div>
 {/if}
 
-<Nav {links} ariaLabel="Test-pages" />
-
 <div id="tests" class="wrapper">
 	<p class="button-container">
 		{#each Object.keys(css) as file}
@@ -93,6 +88,11 @@
 
 	<slot />
 </div>
+
+{#if css.fix} <IntuitiveCss /> {/if}
+{#if css.do} <DxCss /> {/if}
+{#if css.space} <SpaceCss /> {/if}
+{#if css.flow} <LineHeightCss /> {/if}
 
 <style>
 	.wrapper {

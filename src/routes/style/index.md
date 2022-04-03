@@ -8,12 +8,16 @@ set: ['typography', 'code', 'sans']
 
 So you want to makeup style?
 
+```sh
+npm install makeup-style
+```
+
 These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 
 <div class="grid">
 <section>
 
-## 1. "Fix"
+## "Fix"
 
 ```css
 @import 'makeup-style/src/fix.css';
@@ -47,7 +51,7 @@ Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better devel
 </section>
 <section>
 
-## 2. "Space"
+## "Space"
 
 ```css
 @import 'makeup-style/src/space.css';
@@ -100,16 +104,24 @@ CSS that sets line-height, headings' line-height to be computed to container def
 
 `--hr-height` for setting height of `<hr>`. Falls back to `var(--space, 1rem)`.
 
-{#each Array.from(Array(6)) as _,i}
+{#each Array.from(Array(3)) as _,i}
 
 <p>
-	<code>--h{i + 1}-line-span</code>
+	{#if i !== 2}
+		<code>--h{i + 1}-line-span</code>
+	{:else}
+		<code>--h3-line-span</code>-<code>--h6-line-span</code>
+	{/if}
 	for setting the number of lines the heading should span over. Falls back to 
 	{#if i === 0}<code>2</code>{:else}<code>1</code>{/if}.
 </p>
 
 <p>
-	<code>--h{i + 1}-added-lead</code>
+	{#if i !== 2}
+		<code>--h{i + 1}-added-lead</code>
+	{:else}
+		<code>--h3-added-lead</code>-<code>--h6-added-lead</code>
+	{/if}
 	for setting the added lead to the heading's line-height. Falls back to
 	{#if i === 0}
 		<code>.125</code>.

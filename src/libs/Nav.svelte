@@ -24,8 +24,10 @@
 	nav {
 		padding: 0.5rem var(--view-inline);
 		display: flex;
-		flex-wrap: wrap;
+		flex: 1;
 		gap: 0.5rem 1rem;
+		overflow-x: auto;
+		position: relative;
 	}
 
 	nav :global(a) {
@@ -34,7 +36,8 @@
 		flex-wrap: wrap;
 
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
-		min-width: var(--touch-target-min-width, var(--TOUCH-TARGET-SIZE, 48px));
+		min-width: max(min-content, var(--touch-target-min-width, var(--TOUCH-TARGET-SIZE, 48px)));
+		white-space: nowrap;
 
 		outline: none;
 		padding: 0 1em;
