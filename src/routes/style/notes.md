@@ -18,7 +18,7 @@ fix.css fixes CSS so no elements overflow or affect line-height, so elements are
 
 "Hold on" you are thinking. "So some thing will look different from browser to browser?" Yes, probably. I would say these differences are so small that it does not matter. For instance `<hr>` is gray in Firefox and text color in Webkit, the font-size for `<sub>`/`<sup>` will differ slightly, but when a site wants a certain style these elements are then styled specifically if needed anyway.
 
-Some comparisons from other libraries:
+Some comparisons with similar libraries:
 
 - Opposite of CSS Remedy, font-size for h1 is not set. Browser default makes sense, and font-size can be, and usually is, set when styling.
 - `<sub>`/`<sup>` are not positioned (they already are in modern browsers), only styled with less line-height to not disrupt vertical rhythm, as are some other elements:
