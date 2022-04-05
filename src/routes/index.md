@@ -10,7 +10,7 @@ layout: no
 
 - <a href="/html-attr-true" sveltekit:prefetch>
 
-	`true` HTML attributes
+	`true` HTML Attributes
 
 	</a>
 - <a href="/gradient-text" sveltekit:prefetch>

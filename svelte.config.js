@@ -20,6 +20,11 @@ const config = {
 						additionalData: '@use "src/variables.scss" as *;'
 					}
 				}
+			},
+			resolve: {
+				alias: {
+					$libs: resolve('./src/libs')
+				}
 			}
 		}
 	},

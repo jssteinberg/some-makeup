@@ -54,8 +54,9 @@
 		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
 		--added-lead: .6;
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+		--cfs: var(--sans);
 
-		font-family: var(--sans);
+		font-family: var(--cfs);
 		font-size: var(--font-size);
 
 		padding-inline-start: var(--view-inline);
@@ -66,13 +67,15 @@
 	}
 
 	.content--typography { text-rendering: optimizeLegibility; }
-	.content--sans :global(h1 ~ :not(pre)) { font-family: var(--sans); }
+	.content--sans :global(h1 ~ :not(pre)) {
+		font-family: var(--cfs);
+	}
 
-	.content > :global(:first-child) {
+	:where(.content) > :global(:first-child) {
 		--block-start: var(--space);
 	}
 
-	.content > :global(:not(h1,hr)) {
+	:where(.content) > :global(:not(h1,hr)) {
 		--block-start: 0;
 	}
 
@@ -80,43 +83,40 @@
 		width: var(--content-width);
 	}
 
-	.content :global(h1) {
-		font-family: var(--sans);
+	:where(.content) :global(h1) {
+		font-family: var(--cfs);
 	}
 
-	.content :global(:is(h1, h2)) {
+	:where(.content) :global(:is(h1, h2)) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
 	}
 
-	/* .content :global(:is(h2, h3)) { */
-	/* 	margin-block-start: calc(2 * var(--space)); */
-	/* } */
-
-	.content :global(:is(p,li)) {
-		font-weight: 300;
-	}
-
-	.content :global(:is(ol, ul)) {
+	:where(.content) :global(:is(ol, ul)) {
 		padding-inline-start: var(--space);
 	}
 
-	.content :global(ul) {
+	:where(.content) :global(ul) {
 		list-style: square;
 	}
 
-	.content :global(:is(em,cite) :is(em,cite)) {
+	:where(.content) :global(:is(em,cite) :is(em,cite)) {
 		font-style: normal;
 	}
 
-	.content :global(a) {
+	:where(.content) :global(a) {
 		text-underline-offset:     .15em;
 		text-decoration-thickness: .5ex;
 		text-decoration-color: var(--sep-color);
 	}
 
+	:where(.content) :global(blockquote) {
+		margin: 0;
+		font-style: italic;
+	}
+
 	/* Code */
 
-	.content :global(:is(code,kbd,samp)) {
+	:where(.content) :global(:is(code,kbd,samp)) {
 		font-size: .9em;
 	}
 
@@ -133,7 +133,7 @@
 		padding: var(--space) var(--space) var(--space) 0;
 	}
 
-	.content :global(:not(pre) > code) {
+	:where(.content) :global(:not(pre) > code) {
 		background: var(--sep-color);
 		border-radius: .4em;
 		box-shadow:
