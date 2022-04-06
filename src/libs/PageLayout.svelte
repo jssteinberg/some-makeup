@@ -112,6 +112,7 @@
 	:where(.content) :global(blockquote) {
 		margin: 0;
 		font-style: italic;
+		font-variation-settings: "ital" 1;
 	}
 
 	/* Code */
