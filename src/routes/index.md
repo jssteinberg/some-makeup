@@ -19,11 +19,11 @@ layout: no
 
 	</a>
 
-<Details title="More">
-	<p>
-		<a href="/wip" sveltekit:prefetch>WIP</a>
-	</p>
-</Details>
+<p>
+	<small>
+	<a href="/wip" sveltekit:prefetch>WIP</a>
+	</small>
+</p>
 
 </div>
 
@@ -71,7 +71,3 @@ layout: no
 		padding: 0;
 	}
 </style>
-
-<script>
-	import Details from "/src/libs/Details.svelte";
-</script>

@@ -53,6 +53,7 @@
 	.content {
 		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
 		--added-lead: .6;
+		--line-height: calc(1 + .6);
 		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 		--cfs: var(--sans);
 
@@ -109,10 +110,10 @@
 		text-decoration-color: var(--sep-color);
 	}
 
-	:where(.content) :global(blockquote) {
+	.content :global(blockquote) {
 		margin: 0;
-		font-style: italic;
-		font-variation-settings: "ital" 1;
+		font-variation-settings:
+			'wght' 675;
 	}
 
 	/* Code */
