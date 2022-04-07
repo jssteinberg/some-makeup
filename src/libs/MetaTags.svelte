@@ -1,13 +1,14 @@
 <script>
-	export let data;
+	export let title
+	export let metaTitle
+	export let description
+	export let canonical
+	export let author
+	export let image
+	export let alt
+	export let keywords
 
-	$: title = data?.metaTitle ?? data?.title;
-	$: description = data.description;
-	$: canonical = data.canonical;
-	$: author = data.author;
-	$: image = data.image;
-	$: alt = data.alt;
-	$: keywords = data.keywords;
+	title = metaTitle ?? title
 </script>
 
 <svelte:head>

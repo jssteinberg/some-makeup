@@ -15,17 +15,16 @@
 </script>
 
 <MetaTags
-	data={{
-		title,
-		metaTitle,
-		author,
-		keywords: tags,
-		description:
-			description ??
-			(langAttr && langAttr === 'nb'
-				? `Et innlegg på bokmål om ${metaTitle || title}.`
-				: `A post about ${metaTitle || title}.`)
-	}}
+	{title}
+	{metaTitle}
+	{author}
+	keywords={tags}
+	description={
+		description ??
+		(langAttr && langAttr === 'nb'
+			? `Et innlegg om ${metaTitle || title}.`
+			: `A post about ${metaTitle || title}.`)
+	}
 />
 
 <slot />
