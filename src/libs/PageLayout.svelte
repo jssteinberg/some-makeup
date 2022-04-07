@@ -27,7 +27,7 @@
 		description:
 			description ??
 			(langAttr && langAttr === 'nb'
-				? `Et innlegg på bokmål om ${metaTitle || title}.`
+				? `Et innlegg om ${metaTitle || title}.`
 				: `A post about ${metaTitle || title}.`)
 	}}
 />

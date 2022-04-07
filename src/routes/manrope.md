@@ -22,6 +22,7 @@ It's open source and is available as a [variable font](https://web.dev/variable-
 		font-weight: 100 1000;
 		font-stretch: 25% 151%;
 		font-style: normal;
+		font-display: swap;
 	}
 }
 
