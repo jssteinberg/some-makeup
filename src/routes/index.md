@@ -8,6 +8,11 @@ layout: no
 
 # _some_**.**[makeup-style](/style)
 
+- <a href="/manrope" sveltekit:prefetch>
+
+	Manrope Font
+
+	</a>
 - <a href="/html-attr-true" sveltekit:prefetch>
 
 	`true` HTML Attributes

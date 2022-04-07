@@ -93,7 +93,7 @@
 	}
 
 	:where(.content) :global(:is(ol, ul)) {
-		padding-inline-start: var(--space);
+		padding-inline-start: var(--space, 1em);
 	}
 
 	:where(.content) :global(ul) {
@@ -111,9 +111,25 @@
 	}
 
 	.content :global(blockquote) {
-		margin: 0;
-		font-variation-settings:
-			'wght' 675;
+		background:
+			linear-gradient(currentColor, currentColor)
+			bottom left/1px calc(100% - 1.75em)
+			no-repeat;
+		margin-inline: 0;
+		padding: var(--space, 1em) 0 0 calc(.5 * var(--space, 1em));
+		position: relative;
+	}
+
+	.content :global(blockquote::before) {
+		content: '“';
+		font-size: 3em;
+		position: absolute;
+		top: -.375em;
+		left: -.17em;
+	}
+
+	.content :global(blockquote > :is(p,ol,ul):last-child) {
+		margin-block-end: 0;
 	}
 
 	/* Code */

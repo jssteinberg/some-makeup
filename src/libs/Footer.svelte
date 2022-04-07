@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<footer class="footer border-l">
+<footer class="footer">
 	<h2 class="nav">
 		<a
 			sveltekit:prefetch
@@ -34,8 +34,7 @@
 
 <style>
 	footer {
-		margin: calc(1.5 * var(--TOUCH-TARGET-SIZE)) var(--view-inline) 0;
-		padding: 1em;
+		margin: var(--TOUCH-TARGET-SIZE) var(--view-inline);
 	}
 
 	* {
