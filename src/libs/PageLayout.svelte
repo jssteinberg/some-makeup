@@ -31,15 +31,6 @@
 	}
 />
 
-{#if set.includes('code')}
-	<PrismCss />
-{/if}
-
-<ContainCss />
-<IntuitiveCss />
-<SpaceCss />
-<LineHeightCss />
-
 <div lang={langAttr} class={`
 	content
 	${set.includes(`typography`) ? `content--typography` : ``}
@@ -47,6 +38,15 @@
 `}>
 	<slot />
 </div>
+
+<ContainCss />
+<IntuitiveCss />
+<SpaceCss />
+<LineHeightCss />
+
+{#if set.includes('code')}
+	<PrismCss />
+{/if}
 
 <style>
 	.content {
