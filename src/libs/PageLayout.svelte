@@ -166,7 +166,7 @@
 		/* --dash: calc(.5 * var(--space)); */
 
 		background:
-			top left/calc(var(--content-width) - .25 * var(--space)) 1px
+			top left/var(--content-width) 1px
 			linear-gradient(
 				90deg, var(--sep-color), var(--sep-color)
 			)
