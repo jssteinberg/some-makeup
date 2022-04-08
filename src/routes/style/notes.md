@@ -23,7 +23,7 @@ Some comparisons with similar libraries:
 - Opposite of CSS Remedy, font-size for h1 is not set. Browser default makes sense, and font-size can be, and usually is, set when styling.
 - `<sub>`/`<sup>` are not positioned (they already are in modern browsers), only styled with less line-height to not disrupt vertical rhythm, as are some other elements:
 
-	```
+	```css
 	code, kbd, samp, sub, sup {
 		line-height: .625; }
 	```

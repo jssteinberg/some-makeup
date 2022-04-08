@@ -4,9 +4,12 @@
 </script>
 
 {#if $page.url.pathname !== '/johan'}
-	<Nav>
-		<a href="/johan">Johan Sebergsen Steinberg</a>
-	</Nav>
+	<Nav links={[
+		{
+			href: `/johan`,
+			label: `Johan Sebergsen Steinberg`,
+		},
+	]} />
 {/if}
 
 <slot />

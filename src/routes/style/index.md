@@ -6,11 +6,7 @@ set: ['typography', 'code', 'sans']
 
 # makeup-style
 
-So you want to makeup style?
-
-```sh
-npm install makeup-style
-```
+So you want to makeup style? `npm install makeup-style`
 
 These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 

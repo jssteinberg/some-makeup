@@ -85,10 +85,12 @@
 
 	:where(.content) :global(h1) {
 		font-family: var(--cfs);
+		margin-block-end: calc(2 * var(--space));
 	}
 
 	:where(.content) :global(:is(h1, h2)) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
+		padding-block-start: calc(1 * var(--space));
 	}
 
 	:where(.content) :global(:is(ol, ul)) {
@@ -133,30 +135,41 @@
 
 	/* Code */
 
-	:where(.content) :global(:is(code,kbd,samp)) {
+	:where(.content) :global(:not(pre) > :is(code,kbd,samp)) {
 		font-size: .9em;
 	}
+
+	:where(.content) :global(:not(pre) > code) {
+		background: var(--sep-color);
+		border-radius: .15rem;
+		box-shadow:
+			0 -.2em var(--sep-color),
+			0  .2em var(--sep-color);
+		padding: 0 .2em;
+		white-space: normal;
+	}
+
+	/* Code block */
 
 	:where(.content) :global(:where(pre)) {
 		hyphens: none;
 		overflow: auto;
+		padding: var(--space) var(--space) var(--space) 0;
 		tab-size: 2;
 		white-space: pre;
 		word-spacing: normal;
 		word-break: normal;
 		word-wrap: normal;
 
-		box-shadow: inset -1px 1px var(--sep-color);
-		padding: var(--space) var(--space) var(--space) 0;
-	}
+		box-shadow: 1px 0 black;
 
-	:where(.content) :global(:not(pre) > code) {
-		background: var(--sep-color);
-		border-radius: .4em;
-		box-shadow:
-			0 -.2em var(--sep-color),
-			0  .1em var(--sep-color);
-		padding: 0 .2em;
-		white-space: normal;
+		/* --dash: calc(.5 * var(--space)); */
+
+		background:
+			top left/calc(var(--content-width) - .25 * var(--space)) 1px
+			linear-gradient(
+				90deg, var(--sep-color), var(--sep-color)
+			)
+			no-repeat;
 	}
 </style>

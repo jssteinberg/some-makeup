@@ -62,7 +62,6 @@
 
 	.post-title {
 		font-weight: bold;
-		text-transform: uppercase;
 	}
 
 	a:hover .post-title {
@@ -71,14 +70,4 @@
 		text-underline-offset: 2px;
 		text-decoration-thickness: calc(2 * var(--decor-width));
 	}
-
-	@media (min-width: 600px) {
-		.bigger-titles .post-title {
-			/* Bigger size, same leading */
-			--line-height: 1.3;
-			font-size: calc(1em * var(--RLH) / var(--line-height));
-			line-height: var(--line-height);
-		}
-	}
-
 </style>

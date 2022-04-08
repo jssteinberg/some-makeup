@@ -28,11 +28,11 @@ It's open source and is available as a [variable font](https://web.dev/variable-
 
 :root {
 	font-family: Manrope, sans-serif;
-	font-variation-settings: 'wght' 360;
+	font-variation-settings: "wght" 360;
 }
 
 h1 {
-	font-variation-settings: 'wght' 1000;
+	font-variation-settings: "wght" 1000;
 }
 ```
 

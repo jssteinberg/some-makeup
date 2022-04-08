@@ -1,6 +1,5 @@
 ---
 title: Johan Sebergsen Steinberg
-lang: nb
 set: ["typography"]
 ---
 
