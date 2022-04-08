@@ -1,9 +1,12 @@
 ---
 title: Johan Sebergsen Steinberg
 lang: nb
+set: ["typography"]
 ---
 
 # Johan Sebergsen Steinberg
+
+Johan is currently working as a senior engineer, coding React, Next.js, CSS and HTML---making it usable and accessible---and sometimes designing in Figma, and; always thinking about pleasing, minimalistic, optimized and ethical web products. *Previously worked with Svelte, and still loves and uses it after work.*
 
 <PostList {posts} />
 
