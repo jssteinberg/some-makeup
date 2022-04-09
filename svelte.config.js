@@ -1,7 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 import preprocess from 'svelte-preprocess';
-// import adapter from '@sveltejs/adapter-static';
 import adapter from '@sveltejs/adapter-vercel';
 import { resolve } from "path";
 
@@ -10,8 +9,11 @@ const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 
 	kit: {
-		// adapter: adapter({ precompress: true, }),
 		adapter: adapter(),
+
+		prerender: {
+			default: true,
+		},
 
 		vite: {
 			css: {
