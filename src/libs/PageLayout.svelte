@@ -135,17 +135,14 @@
 
 	/* Code */
 
-	:where(.content) :global(:not(pre) > :is(code,kbd,samp)) {
+	:where(.content) :global(:is(code,kbd,samp)) {
 		font-size: .9em;
 	}
 
-	:where(.content) :global(:not(pre) > code) {
+	:where(.content) :global(:not(:is(h1,pre)) > code) {
 		background: var(--sep-color);
 		border-radius: .15rem;
-		box-shadow:
-			0 -.2em var(--sep-color),
-			0  .2em var(--sep-color);
-		padding: 0 .2em;
+		padding: .2em;
 		white-space: normal;
 	}
 

@@ -3,9 +3,10 @@
 
 	export let links = [];
 	export let ariaLabel;
+	export let ariaHidden;
 </script>
 
-<nav aria-label={ariaLabel}>
+<nav aria-label={ariaLabel} aria-hidden={ariaHidden ? `true` : undefined}>
 	{#each links as link}
 		<a
 			href={link.href}

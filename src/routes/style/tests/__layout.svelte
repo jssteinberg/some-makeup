@@ -89,6 +89,8 @@
 	<slot />
 </div>
 
+<Nav {links} ariaLabel="Test-pages" ariaHidden />
+
 {#if css.fix} <IntuitiveCss /> {/if}
 {#if css.do} <DxCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}

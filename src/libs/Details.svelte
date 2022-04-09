@@ -21,6 +21,10 @@
 </details>
 
 <style>
+	details {
+		margin-block-end: calc(2 * var(--space, 1em));
+	}
+
 	summary {
 		display: inline-flex;
 		align-items: center;
