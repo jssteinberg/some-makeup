@@ -24,12 +24,6 @@ layout: no
 
 	</a>
 
-<p>
-	<small>
-	<a href="/wip" sveltekit:prefetch>WIP</a>
-	</small>
-</p>
-
 </div>
 
 <style>
