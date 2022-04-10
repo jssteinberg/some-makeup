@@ -14,7 +14,7 @@ set: ['typography', 'code']
 
 ## Philosophy
 
-fix.css fixes CSS so no elements overflow or affect line-height, so elements are more intuitive to style and to enable easier typographically correct styling -- utilizing CSS functions and variables when suitable. It differs from normalize.css, sanitize.css and CSS Remedy in how it does not bother normalizing what doesn't create a gotcha or distrupt typography. It obviously results in less CSS when fixing only what needs fixing and not trying to normalize what does not break anything.
+fix.css fixes CSS so no elements overflow or affect line-height, so elements are more intuitive to style and to enable easier typographically correct styling---utilizing CSS functions and variables when suitable. It differs from normalize.css, sanitize.css and CSS Remedy in how it does not bother normalizing what doesn't create a gotcha or distrupt typography. It obviously results in less CSS when fixing only what needs fixing and not trying to normalize what does not break anything.
 
 "Hold on" you are thinking. "So some thing will look different from browser to browser?" Yes, probably. I would say these differences are so small that it does not matter. For instance `<hr>` is gray in Firefox and text color in Webkit, the font-size for `<sub>`/`<sup>` will differ slightly, but when a site wants a certain style these elements are then styled specifically if needed anyway.
 

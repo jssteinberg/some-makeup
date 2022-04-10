@@ -105,6 +105,10 @@
 		font-style: normal;
 	}
 
+	:where(.content) :global(strong) {
+		font-variant: small-caps;
+	}
+
 	:where(.content) :global(a) {
 		text-underline-offset:     .15em;
 		text-decoration-thickness: .5ex;
