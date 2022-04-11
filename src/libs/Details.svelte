@@ -1,5 +1,5 @@
 <!-- Use:
-<Details title="More">
+<Details title="More" open>
 	<span slot="summary">More</span>
 	<p>
 		<a href="/wip" sveltekit:prefetch>WIP</a>
@@ -9,9 +9,10 @@
 
 <script>
 	export let title;
+	export let open;
 </script>
 
-<details>
+<details {open}>
 	<summary {title}>
 		<span class="summary-content">
 			<slot name="summary" />
@@ -23,6 +24,7 @@
 <style>
 	details {
 		margin-block-end: calc(2 * var(--space, 1em));
+		padding-inline-end: 1em;
 	}
 
 	summary {
@@ -74,7 +76,14 @@
 		padding-inline-end: 1em;
 	}
 
-	summary ~ :global(*) {
+	/* Details content */
+
+	:where(summary) + :global(:where(*)) {
+		margin-block-start: var(--space, 1em);
+	}
+
+	summary ~ :global(:not(hr)) {
+		background-image: none;
 		box-shadow: none;
 		border-right: none;
 		border-left: none;

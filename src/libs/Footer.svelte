@@ -13,15 +13,26 @@
 		{new Date().getFullYear()}
 	</h2>
 
-	<p class="nav">
-		<a
-		sveltekit:prefetch
-		aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
-		href="/about"
-		>
-		About
-		</a>
-	</p>
+	<ul class="nav">
+		<li>
+			<a
+			sveltekit:prefetch
+			aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
+			href="/about"
+			>
+			About
+			</a>
+		</li>
+		<li>
+			<a
+				aria-current={$page.url.pathname === '/wip' ? 'page' : undefined}
+				href="/wip"
+				sveltekit:prefetch
+			>
+				WIP
+			</a>
+		</li>
+	</ul>
 
 	<p>
 		This site does not collect any personal information and uses no cookies.
@@ -33,12 +44,25 @@
 </footer>
 
 <style>
+	*, ::before, ::after {
+		box-sizing: border-box;
+		font-size: 1em;
+	}
+
 	footer {
 		margin: var(--TOUCH-TARGET-SIZE) var(--view-inline);
 	}
 
-	* {
-		font-size: 1em;
+
+	h2, h2 + *, h2 + ul > li {
+		display: inline;
+		margin-inline-end: 1em;
+		text-transform: lowercase;
+		font-variant: small-caps;
+	}
+
+	ul {
+		padding: 0;
 	}
 
 	a {
@@ -46,6 +70,10 @@
 		align-items: center;
 		min-height: var(--TOUCH-TARGET-SIZE);
 		min-width: var(--TOUCH-TARGET-SIZE);
+	}
+
+	ul > :first-child a {
+		justify-content: center;
 	}
 
 	h2 a::before { content: "//"; }
@@ -57,11 +85,5 @@
 
 	a:not(:is(:hover,:focus)) {
 		text-decoration: none;
-	}
-
-	h2, h2 + * {
-		display: inline;
-		margin-inline-end: 1em;
-		text-transform: lowercase;
 	}
 </style>

@@ -25,9 +25,9 @@
 
 	<p>Some browsers has CSS default where the <code>pre</code> element will not wrap, and can overflow horizontally.</p>
 
-	<pre>
-<code>Asuperlonglineofcodetoseeifitwraps. Itisdifficultformetomakeupenoughcontentforthistest! Ihavetowriteevenmore?? Howwideisthiscontainer?</code>
-	</pre>
+<pre>Asuperlonglineofcodetoseeifitwraps. Itisdifficultformetomakeupenoughcontentforthistest! Ihavetowriteevenmore?? Howwideisthiscontainer?</pre>
+
+<pre><code>With "code". Asuperlonglineofcodetoseeifitwraps. Itisdifficultformetomakeupenoughcontentforthistest! Ihavetowriteevenmore?? Howwideisthiscontainer?</code></pre>
 </section>
 
 

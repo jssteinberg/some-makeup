@@ -1,27 +1,10 @@
-div, header, nav, footer,
-address, datalist, details, fieldset, pre, table,
-canvas, embed, figure, iframe, object, video,
-dl, ol, ul,
-blockquote, p {
-	line-height: calc(1 + var(--added-lead, .6));
-}
+/* pre { */
+/* 	font-size: 1em; */
+/* } */
 
-button, [type="button" i], [type="reset" i], [type="submit" i] {
-	background: transparent;
-	border: none;
-	border-radius: .25em;
-	box-shadow: 0 0 0 1px inset;
-	color: inherit;
-	padding: var(--space, 1rem) calc(2 * var(--space, 1rem));
-	font-size: 1em;
-	line-height: inherit;
-}
-
-:is(p,h1,h2,h3,h4,h5,h6) :is(
-	button, [type="button" i], [type="reset" i], [type="submit" i]
-) {
-	padding: 0 1em;
-}
+/* button, [type="button" i], [type="reset" i], [type="submit" i] { */
+/* 	padding-block: var(--space, 1rem); */
+/* } */
 
 hr {
 	/* No border, it disrupts vertical rhythm. */
@@ -114,4 +97,12 @@ h6, .h6 {
 		/ var(--_line-height)
 	);
 	line-height: var(--_line-height);
+}
+
+div, header, nav, footer,
+address, datalist, details, fieldset, pre, table,
+canvas, embed, figure, iframe, object, video,
+dl, ol, ul,
+blockquote, p {
+	line-height: calc(1 + var(--added-lead, .6));
 }

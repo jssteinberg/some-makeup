@@ -4,16 +4,20 @@ CSS fix for default browser CSS (no IE though), for narrow viewports first. Prov
 
 *Relevant files in repository/package: src/fix.css, src/do.css, src/space.css, src/flow.css.*
 
-[Documentation -- read more about each file and see tests](https://some.makeup/style)
+[Documentation---read more about each file and see tests](https://some.makeup/style)
 
 ---
+
+Plan:
+
+- Check support for `…-block`/`…-inline`. If good, then use.
 
 Plan v2:
 
 - wrap stuff in `:where()`
 - remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now.
 
-Inspiration: The Elements of Typographic Style, normalize.css, modern normalize, CSS Remedy, sanitize.css, BEM, [Open Props][op], [A modern CSS reset][amcr].
+Inspiration: The Elements of Typographic Style, [normalize.css][nc], [modern normalize][mn], CSS Remedy, sanitize.css, BEM, [Open Props][op], [A modern CSS reset][amcr].
 
 ## History
 
@@ -26,6 +30,8 @@ Inspiration: The Elements of Typographic Style, normalize.css, modern normalize,
 - `--space` var for controlling spacing (not `--spacer`).
 	- Space is not removed for sub-lists (would cause unexpected list styles if parent list was styled unconventional. Rather remove margin for sub-lists in containers of choice).
 
+[nc]: https://github.com/necolas/normalize.css/
+[mn]: https://github.com/sindresorhus/modern-normalize
 [op]: https://open-props.style/
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
 [cc]: https://cube.fyi/

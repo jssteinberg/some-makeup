@@ -23,12 +23,15 @@
 
 <style>
 	nav {
-		padding: 0.5rem var(--view-inline);
+		margin: 0.5rem 0;
+		margin-inline-start: var(--view-inline);
 		display: flex;
 		flex: 1;
 		gap: 0.5rem 1rem;
 		overflow-x: auto;
 		position: relative;
+
+		box-shadow: inset 1px 0;
 	}
 
 	nav :global(a) {
@@ -47,11 +50,14 @@
 	nav :global(a[aria-current="page"]),
 	nav :global(a:is(:hover,:focus)) {
 		box-shadow: inset 0 0 0 1px;
+	}
+
+	nav :global(a[aria-current="page"]) {
 		text-decoration: none;
 	}
 
 	:where(nav) :global(a.parent) {
-		box-shadow: inset -1px 1px;
+		box-shadow: inset 0 1px;
 	}
 
 	/* nav ~ :global(nav a) { */

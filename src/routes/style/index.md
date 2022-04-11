@@ -19,12 +19,23 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 @import 'makeup-style/src/fix.css';
 ```
 
-CSS to prevent text and content from overflowing, prevents some elements from affecting line-height (excluding buttons), and CSS fixes for font settings, semantic styling and usability. This CSS is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.
+Focused and lean CSS: to prevent text and content from overflowing; to prevent some elements from affecting line-height; fixes for font settings, semantic styling and usability (excluding button and inputs). *Mandatory CSS for basic typography and avoiding common layout gotchas, especially for narrow viewports.*
+
+</section>
+<section>
+
+### "Do"---A <cite>Fix</cite> Expansion
+
+```css
+@import 'makeup-style/src/do.css';
+```
+
+CSS with intuitive CSS behaviours and resets for doing CSS---for a better developer experience. *Includes resets for some `button` and `input` properties.*
 
 `--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`.
 
 <Details>
-<span slot="summary">Variable use</span>
+<span slot="summary">Example</span>
 
 ```css
 :root {
@@ -33,16 +44,6 @@ CSS to prevent text and content from overflowing, prevents some elements from af
 ```
 
 </Details>
-</section>
-<section>
-
-### "Do" -- *A <cite>Fix</cite> Expansion*
-
-```css
-@import 'makeup-style/src/do.css';
-```
-
-Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better developer experience.
 
 </section>
 <section>
@@ -60,7 +61,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 `--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1rem)`.
 
 <Details>
-<span slot="summary">Example use</span>
+<span slot="summary">Example</span>
 
 
 ```css
@@ -86,7 +87,7 @@ CSS that sets consistent spacing between the needed block-level elements.
 </section>
 <section>
 
-### "Flow" -- *A <cite>Space</cite> Expansion*
+### "Flow"---A <cite>Space</cite> Expansion
 
 ```css
 @import 'makeup-style/src/flow.css';

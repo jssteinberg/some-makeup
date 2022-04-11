@@ -3,7 +3,7 @@
 	import ContainCss from './IntuitiveCss.svelte';
 	import IntuitiveCss from './DxCss.svelte';
 	import SpaceCss from './SpaceCss.svelte';
-	import LineHeightCss from './LineHeightCss.svelte';
+	import LineHeightCss from './FlowCss.svelte';
 	import PrismCss from './PrismCss.svelte';
 
 	export let title = 'Knut';
@@ -71,12 +71,9 @@
 		font-family: var(--cfs);
 	}
 
-	:where(.content) > :global(:first-child) {
-		--block-start: var(--space);
-	}
-
-	:where(.content) > :global(:not(h1,hr)) {
-		--block-start: 0;
+	:where(.content) > :global(:not(h1)),
+	:where(.content) > :global(:not(h1) li p) {
+		margin-block-start: 0;
 	}
 
 	:where(.content) > :global(:not(h1,pre)) {
@@ -90,7 +87,6 @@
 
 	:where(.content) :global(:is(h1, h2)) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
-		padding-block-start: calc(1 * var(--space));
 	}
 
 	:where(.content) :global(:is(ol, ul)) {
@@ -103,6 +99,10 @@
 
 	:where(.content) :global(:is(em,cite) :is(em,cite)) {
 		font-style: normal;
+	}
+
+	:where(.content) :global(strong) {
+		font-variant: small-caps;
 	}
 
 	:where(.content) :global(a) {

@@ -1,5 +1,9 @@
 /* CONTAIN OVERFLOW */
 
+*, ::before, ::after {
+	/* Border-box so size includes border and padding, and border doesn't hide text */
+	box-sizing: border-box; }
+
 :root {
 	/* Words are auto hyphenated to fit narrow widths. */
 	hyphens: auto;
@@ -7,10 +11,6 @@
 	overflow-wrap: break-word;
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%; }
-
-*, ::before, ::after {
-	/* Border-box so size includes border and padding, and border doesn't hide text */
-	box-sizing: border-box; }
 
 /* Wrap pre-formatted text by default. */
 pre {
@@ -22,53 +22,19 @@ input, select, textarea {
 	max-width: 100%;
 	height: auto; }
 
-/* FIX INABILITY TO STYLE */
-
-/* Fix inability to style buttons in Ios and Safari. */
-button, [type="button" i], [type="reset" i], [type="submit" i], ::-webkit-file-upload-button {
-	-webkit-appearance: button; }
-
-/* FIX DISPLAY BEHAVIOUR */
-
-/* `[hidden]` maintain behaviour when overriding `display` values. */
-/* `audio` with no controls should not display. */
-/* `source` has nothing to display and should not display. */
-[hidden], audio:not([controls]), source {
-	display:none; }
-
-/* Remove unnecessary wrapping `picture`, while maintaining content. */
-picture {
-	display: contents; }
-
 /* FIX/EXTEND FONT */
 
-/* Prevent inline elements from affecting line height. */
+/* Prevent inline elements from affecting line height while having line-height. */
 code, kbd, samp, sub, sup {
 	line-height: .625; }
 
-/* Fix font inheritance for preformatted text and add optional font-family variable. */
-code, kbd, samp, pre {
-	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
-
-/* Fix font-size for all browsers (textarea for Safari). */
-pre, input, textarea {
+/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
+button, input, select, textarea {
 	font-size: 1em; }
 
-/* Fix to inherit font-family. */
-button, textarea, ::-webkit-file-upload-button {
-	font-family: inherit; }
+/* UNIFORM ALIGNMENT & SPACING */
 
-/* UNIFORM SPACINGS */
-
-/* Remove space below for vertical flow. */
-img, svg, video, canvas, audio, iframe, embed, object {
-	vertical-align: middle; }
-
-/* Remove the margin on controls in Safari. */
-button, input, select {
-	margin: 0; }
-
-/* Intuitive inline margins -- horizontal align with adjacent. */
+/* Intuitive inline margins---horizontal align with adjacent. */
 figure, hr {
 	margin-inline-start: 0; margin-inline-end: 0; }
 
@@ -81,9 +47,19 @@ strong {
 /* FIX USABILITY */
 
 /* Consistent mouse interaction with clickable elements for usability. */
-button, summary {
+::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button, select, summary {
 	cursor: pointer; }
 
 /* Consistent cursor for disabled elements */
-[aria-disabled="true" i], [disabled] {
+[aria-disabled="true" i], [disabled], [readonly] {
 	cursor: not-allowed; }
+
+/* Remove animations and transitions when user prefers it. */
+@media (prefers-reduced-motion: reduce) {
+	*, ::before, ::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

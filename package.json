@@ -1,6 +1,6 @@
 {
   "name": "makeup-style",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -11,7 +11,6 @@
     "test": ""
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.26",
     "@sveltejs/adapter-vercel": "^1.0.0-next.43",
     "@sveltejs/kit": "^1.0.0-next.267",
     "autoprefixer": "^10.4.2",
