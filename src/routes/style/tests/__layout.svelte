@@ -1,8 +1,5 @@
 <script>
-	import IntuitiveCss from '/src/libs/IntuitiveCss.svelte';
-	import DxCss from '/src/libs/DxCss.svelte';
-	import SpaceCss from '/src/libs/SpaceCss.svelte';
-	import LineHeightCss from '/src/libs/FlowCss.svelte';
+	import CssToggle from './_css-toggle.svelte';
 	import Nav from '/src/libs/Nav.svelte';
 	import { afterUpdate } from 'svelte';
 	import { page } from '$app/stores';
@@ -29,16 +26,6 @@
 			href: '/style/tests/usability',
 		},
 	];
-	const toggleCss = (file) => {
-		css[file] = !css[file];
-	};
-
-	let css = {
-		fix: true,
-		do: false,
-		space: false,
-		flow: false,
-	};
 	let els;
 	let scrollY = 0;
 
@@ -73,28 +60,11 @@
 {/if}
 
 <div id="tests" class="wrapper">
-	<p class="button-container">
-		{#each Object.keys(css) as file}
-			<button on:click={() => toggleCss(file)} class={`${css[file] ? `on` : `off`}`}>
-				<span class="status">
-					{#if css[file]}☑ {:else}☐ {/if}
-				</span>
-				<span class="file">
-					{file === 'lineHeight' ? 'line-height' : file}.css
-				</span>
-			</button>
-		{/each}
-	</p>
-
+	<CssToggle />
 	<slot />
 </div>
 
 <Nav {links} ariaLabel="Test-pages" ariaHidden />
-
-{#if css.fix} <IntuitiveCss /> {/if}
-{#if css.do} <DxCss /> {/if}
-{#if css.space} <SpaceCss /> {/if}
-{#if css.flow} <LineHeightCss /> {/if}
 
 <style>
 	*, ::before, ::after {
@@ -116,42 +86,6 @@
 		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
 		z-index: -1;
 		opacity: 1;
-	}
-
-	.button-container {
-		margin: 0 0 1em;
-
-		display: flex;
-		gap: .5rem;
-
-		position: sticky;
-		top: 1px;
-		z-index: 1;
-	}
-
-	.button-container button {
-		background: var(--bg);
-		box-shadow: inset 0 0 0 1px var(--fg);
-		border: none;
-		border-radius: .25em;
-		box-sizing: border-box;
-		color: inherit;
-		cursor: pointer;
-		font-family: inherit;
-		font-size: inherit;
-		margin: 0;
-		padding: 0 1em;
-		text-align: start;
-		opacity: 0.9;
-	}
-
-	button.on {
-		background: var(--fg);
-		color: var(--bg);
-	}
-
-	button .status {
-		min-width: 5ch;
 	}
 
 	.wrapper :global(h2) {
