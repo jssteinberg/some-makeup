@@ -75,7 +75,7 @@
 		--block-start: var(--space);
 	}
 
-	:where(.content) > :global(:not(h1,hr)) {
+	:where(.content) > :global(:not(h1)) {
 		--block-start: 0;
 	}
 

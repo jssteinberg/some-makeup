@@ -78,11 +78,11 @@
 
 	/* Details content */
 
-	summary + :global(*) {
+	:where(summary) + :global(:where(*)) {
 		margin-block-start: var(--space, 1em);
 	}
 
-	summary ~ :global(*) {
+	summary ~ :global(:not(hr)) {
 		background-image: none;
 		box-shadow: none;
 		border-right: none;

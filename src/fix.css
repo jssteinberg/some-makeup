@@ -1,5 +1,9 @@
 /* CONTAIN OVERFLOW */
 
+*, ::before, ::after {
+	/* Border-box so size includes border and padding, and border doesn't hide text */
+	box-sizing: border-box; }
+
 :root {
 	/* Words are auto hyphenated to fit narrow widths. */
 	hyphens: auto;
@@ -7,10 +11,6 @@
 	overflow-wrap: break-word;
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%; }
-
-*, ::before, ::after {
-	/* Border-box so size includes border and padding, and border doesn't hide text */
-	box-sizing: border-box; }
 
 /* Wrap pre-formatted text by default. */
 pre {
@@ -68,7 +68,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 button, input, select {
 	margin: 0; }
 
-/* Intuitive inline margins -- horizontal align with adjacent. */
+/* Intuitive inline margins---horizontal align with adjacent. */
 figure, hr {
 	margin-inline-start: 0; margin-inline-end: 0; }
 

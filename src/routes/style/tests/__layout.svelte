@@ -158,7 +158,10 @@
 	}
 
 	.wrapper :global(h2) {
-		box-shadow: inset 0 -0.5ex var(--sep-color);
+		background:
+			0 1em/100% 1px
+			linear-gradient(var(--sep-color), var(--sep-color))
+			no-repeat;
 	}
 
 	#element-heights {

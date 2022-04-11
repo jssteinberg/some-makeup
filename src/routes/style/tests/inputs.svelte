@@ -10,6 +10,25 @@
 
 <ButtonSection />
 
+
+<section>
+	<h2><code>optgroup</code></h2>
+
+	<label for="dino-select">Choose a dinosaur:</label>
+	<select id="dino-select">
+			<optgroup label="Theropods">
+					<option>Tyrannosaurus</option>
+					<option>Velociraptor</option>
+					<option>Deinonychus</option>
+			</optgroup>
+			<optgroup label="Sauropods">
+					<option>Diplodocus</option>
+					<option>Saltasaurus</option>
+					<option>Apatosaurus</option>
+			</optgroup>
+	</select>
+</section>
+
 <style>
 	/* textarea { */
 	/* 	font-family: inherit; */
