@@ -30,7 +30,7 @@ hr {
 	color: inherit;
 	/* Non flow disrupting horizontal rules. */
 	background: no-repeat center/100% 1px
-		linear-gradient(currentColor,currentColor);
+		linear-gradient(var(--hr-color, currentColor),var(--hr-color, currentColor));
 	/* Use variables for height. */
 	height: var(--hr-height, var(--space, 1rem));
 }
