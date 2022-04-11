@@ -44,13 +44,15 @@
 </footer>
 
 <style>
+	*, ::before, ::after {
+		box-sizing: border-box;
+		font-size: 1em;
+	}
+
 	footer {
 		margin: var(--TOUCH-TARGET-SIZE) var(--view-inline);
 	}
 
-	* {
-		font-size: 1em;
-	}
 
 	h2, h2 + *, h2 + ul > li {
 		display: inline;

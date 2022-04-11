@@ -8,6 +8,10 @@ CSS fix for default browser CSS (no IE though), for narrow viewports first. Prov
 
 ---
 
+Plan:
+
+- Check support for `…-block`/`…-inline`. If good, then use.
+
 Plan v2:
 
 - wrap stuff in `:where()`

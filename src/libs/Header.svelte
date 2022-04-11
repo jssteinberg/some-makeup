@@ -3,9 +3,13 @@
 </header>
 
 <style>
+	* {
+		box-sizing: border-box;
+	}
+
 	.site-header {
-		padding: max(1em, calc(.25 * var(--view-inline))) var(--view-inline);
-		padding-block-end: var(--space, 1rem);
+		padding: 2em var(--view-inline) 0;
+		margin-block-end: calc(.5 * var(--space, 1rem));
 	}
 
 	.site-header a {

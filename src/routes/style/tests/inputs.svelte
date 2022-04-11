@@ -1,4 +1,4 @@
-<h1>inputs</h1>
+<h1>Inputs</h1>
 
 <section>
 	<h2><code>textarea</code></h2>
@@ -29,12 +29,32 @@
 	</select>
 </section>
 
+<section>
+	<h2>Other Form Elements</h2>
+
+	<fieldset>
+	<legend>Choose your favorite monster</legend>
+
+	<input type="radio" id="kraken" name="monster">
+	<label for="kraken">Kraken</label><br/>
+
+	<input type="radio" id="sasquatch" name="monster">
+	<label for="sasquatch">Sasquatch</label><br/>
+
+	<input type="radio" id="mothman" name="monster">
+	<label for="mothman">Mothman</label>
+	</fieldset>
+</section>
+
+<TextInputs />
+
 <style>
-	/* textarea { */
-	/* 	font-family: inherit; */
+	/* h1 ~ :global(*) { */
+	/* 	text-transform: uppercase; */
 	/* } */
 </style>
 
 <script>
 	import ButtonSection from "./_button.svelte";
+	import TextInputs from "./_text-inputs.svelte";
 </script>

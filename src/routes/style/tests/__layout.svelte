@@ -2,7 +2,7 @@
 	import IntuitiveCss from '/src/libs/IntuitiveCss.svelte';
 	import DxCss from '/src/libs/DxCss.svelte';
 	import SpaceCss from '/src/libs/SpaceCss.svelte';
-	import LineHeightCss from '/src/libs/LineHeightCss.svelte';
+	import LineHeightCss from '/src/libs/FlowCss.svelte';
 	import Nav from '/src/libs/Nav.svelte';
 	import { afterUpdate } from 'svelte';
 	import { page } from '$app/stores';
@@ -77,7 +77,7 @@
 		{#each Object.keys(css) as file}
 			<button on:click={() => toggleCss(file)} class={`${css[file] ? `on` : `off`}`}>
 				<span class="status">
-					{#if css[file]} (On) {:else} (Off) {/if}
+					{#if css[file]}☑ {:else}☐ {/if}
 				</span>
 				<span class="file">
 					{file === 'lineHeight' ? 'line-height' : file}.css
@@ -97,6 +97,10 @@
 {#if css.flow} <LineHeightCss /> {/if}
 
 <style>
+	*, ::before, ::after {
+		box-sizing: border-box;
+	}
+
 	.wrapper {
 		max-width: var(--content-width);
 		margin: 0 var(--view-inline);
@@ -115,29 +119,28 @@
 	}
 
 	.button-container {
-		box-sizing: border-box;
 		margin: 0 0 1em;
 
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1px;
+		display: flex;
+		gap: .5rem;
 
 		position: sticky;
 		top: 1px;
 		z-index: 1;
 	}
 
-	button {
+	.button-container button {
 		background: var(--bg);
 		box-shadow: inset 0 0 0 1px var(--fg);
 		border: none;
-		border-radius: none;
+		border-radius: .25em;
 		box-sizing: border-box;
 		color: inherit;
 		cursor: pointer;
 		font-family: inherit;
 		font-size: inherit;
-		padding: 1em;
+		margin: 0;
+		padding: 0 1em;
 		text-align: start;
 		opacity: 0.9;
 	}
@@ -149,12 +152,6 @@
 
 	button .status {
 		min-width: 5ch;
-	}
-
-	@media (min-width: 75ch) {
-		.button-container {
-			grid-template-columns: repeat(4, 1fr);
-		}
 	}
 
 	.wrapper :global(h2) {
@@ -179,7 +176,8 @@
 	}
 
 	#element-heights span {
-		opacity: .5;
+		background: var(--bg);
+		color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .5);
 		font-family: var(--sans);
 		font-weight: 100; font-weight: 300;
 		font-size: min(var(--view-inline) - .9em, 1.7ex);

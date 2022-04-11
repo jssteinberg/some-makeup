@@ -23,9 +23,6 @@
 	--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));
 	--bg: hsl(0, 0%, 6.5%);
 	--sep-color: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.2);
-
-	background-color: var(--bg);
-	min-height: 100vh; /* Too avoid bg clip on bg change */
 }
 
 @media (min-width: 900px) {
@@ -46,11 +43,10 @@
 	}
 }
 
-/* @media (motion-ok) {
-/* 	/* For animating backgrounds */
-/* 	transition: background-color 0.75s ease;
-/* }
- */
+:root {
+	background-color: var(--bg);
+	min-height: 100vh; /* Too avoid bg clip on bg change */
+}
 
 body {
 	color: var( --fg); /* color on body---safari fix for dynamic dark/light mode changing */

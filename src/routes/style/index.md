@@ -19,7 +19,18 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 @import 'makeup-style/src/fix.css';
 ```
 
-Focused and lean CSS to prevent text and content from overflowing, to prevent some elements from affecting line-height (excluding buttons), and fixes for font settings, semantic styling and usability. This is pretty much mandatory for avoiding many layout gotchas, especially for narrow viewports.
+Focused and lean CSS: to prevent text and content from overflowing; to prevent some elements from affecting line-height; fixes for font settings, semantic styling and usability (excluding button and inputs). *Mandatory CSS for basic typography and avoiding common layout gotchas, especially for narrow viewports.*
+
+</section>
+<section>
+
+### "Do"---A <cite>Fix</cite> Expansion
+
+```css
+@import 'makeup-style/src/do.css';
+```
+
+CSS with intuitive CSS behaviours and resets for doing CSS---for a better developer experience. *Includes resets for some `button` and `input` properties.*
 
 `--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`.
 
@@ -33,16 +44,6 @@ Focused and lean CSS to prevent text and content from overflowing, to prevent so
 ```
 
 </Details>
-</section>
-<section>
-
-### "Do"---A <cite>Fix</cite> Expansion
-
-```css
-@import 'makeup-style/src/do.css';
-```
-
-Opinionated CSS with intuitive CSS behaviours when doing CSS: for a better developer experience.
 
 </section>
 <section>
