@@ -23,8 +23,9 @@
 
 <style>
 	nav {
-		margin: 0.5rem 0;
+		margin-block: 0.5rem;
 		margin-inline-start: var(--view-inline);
+		padding-inline-end: var(--view-inline);
 		display: flex;
 		flex: 1;
 		gap: 0.5rem 1rem;

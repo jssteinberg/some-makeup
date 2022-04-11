@@ -16,7 +16,7 @@
 	};
 </script>
 
-<p class="container">
+<div class="container">
 	{#each Object.keys(css) as file}
 		<label>
 			<input
@@ -29,7 +29,7 @@
 			{file === 'lineHeight' ? 'line-height' : file}.css
 		</label>
 	{/each}
-</p>
+</div>
 
 {#if css.fix} <IntuitiveCss /> {/if}
 {#if css.do} <DxCss /> {/if}
@@ -44,10 +44,13 @@
 	}
 
 	.container {
-		margin: 0 0 1em;
+		margin-block: .5em;
+		padding-inline: var(--view-inline);
 
 		display: flex;
+		flex-wrap: nowrap;
 		gap: 0.5rem;
+		overflow-x: auto;
 
 		position: sticky;
 		top: 1px;
@@ -62,6 +65,7 @@
 		line-height: 1;
 		opacity: 0.9;
 		padding: .5em 1em;
+		white-space: nowrap;
 	}
 
 	label:hover, label:focus-within {

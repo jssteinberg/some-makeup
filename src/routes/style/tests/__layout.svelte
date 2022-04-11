@@ -34,8 +34,6 @@
 	});
 </script>
 
-<Nav {links} ariaLabel="Test-pages" />
-
 <svelte:head>
 	<title>
 		test {links.find(val => val.href === $page.url.pathname)?.label || `…`}, makeup-style
@@ -43,6 +41,9 @@
 </svelte:head>
 
 <svelte:window bind:scrollY />
+
+<Nav {links} ariaLabel="Test-pages" />
+<CssToggle />
 
 {#if els}
 	<div aria-hidden="true" id="element-heights">
@@ -60,7 +61,6 @@
 {/if}
 
 <div id="tests" class="wrapper">
-	<CssToggle />
 	<slot />
 </div>
 
