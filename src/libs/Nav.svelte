@@ -13,6 +13,7 @@
 			sveltekit:prefetch
 			aria-current={$page.url.pathname === link.href ? `page` : undefined}
 			class:parent={$page.url.pathname.includes(link.href)}
+			tabindex={ariaHidden ? `-1` : undefined}
 		>
 			{link.label}
 		</a>

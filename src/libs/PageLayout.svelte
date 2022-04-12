@@ -1,5 +1,5 @@
 <script>
-	import MetaTags from './MetaTags.svelte';
+	import MetaTags from './MetaData.svelte';
 	import ContainCss from './IntuitiveCss.svelte';
 	import IntuitiveCss from './DxCss.svelte';
 	import SpaceCss from './SpaceCss.svelte';

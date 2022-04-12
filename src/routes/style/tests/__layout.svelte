@@ -1,47 +1,51 @@
 <script>
 	import CssToggle from './_css-toggle.svelte';
-	import Nav from '/src/libs/Nav.svelte';
+	import Nav from '$libs/Nav.svelte';
 	import { afterUpdate } from 'svelte';
 	import { page } from '$app/stores';
+	import MetaTags from '$libs/MetaData.svelte';
 
 	const links = [
 		{
-			label: 'overflow',
+			label: 'Overflow',
 			href: '/style/tests/overflow',
 		},
 		{
-			label: 'line-height',
+			label: 'Line-height',
 			href: '/style/tests/line-height',
 		},
 		{
-			label: 'media',
+			label: 'Media',
 			href: '/style/tests/media',
 		},
 		{
-			label: 'inputs',
+			label: 'Inputs',
 			href: '/style/tests/inputs',
 		},
 		{
-			label: 'usability',
+			label: 'Usability',
 			href: '/style/tests/usability',
 		},
 	];
+
 	let els;
 	let scrollY = 0;
+
+	$: testLabel = links.find(val => val.href === $page.url.pathname)?.label;
 
 	afterUpdate(() => {
 		els = document.body.querySelectorAll('#tests section :is(p,h2)');
 	});
 </script>
 
-<svelte:head>
-	<title>
-		makeup-style {links.find(val => val.href === $page.url.pathname)?.label || `…`} test
-	</title>
-</svelte:head>
-
 <svelte:window bind:scrollY />
-
+<MetaTags
+	title={`
+		makeup-style
+		${testLabel ? `${testLabel} test` : `tests`}
+	`}
+	description={`Test makeup-style code for ${testLabel}.`}
+/>
 <Nav {links} ariaLabel="Test-pages" />
 <CssToggle />
 
