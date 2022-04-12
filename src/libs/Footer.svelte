@@ -40,10 +40,10 @@
 		This site does not collect any personal information and uses no cookies.
 	</p>
 
-	<p aria-hidden="true" class="button-container">
+	<div aria-hidden="true" class="button-container">
 		<button class="touch-target" on:click={() => {dark = !dark}}>Dark/light</button>
 		<button class="touch-target" on:click={() => {window.scrollTo(0,0)}}>Top</button>
-	</p>
+	</div>
 </footer>
 
 <svelte:head>
@@ -114,5 +114,9 @@
 	.button-container {
 		display: flex;
 		gap: .5rem;
+	}
+
+	.button-container > ::after {
+		content: '.';
 	}
 </style>
