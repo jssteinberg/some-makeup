@@ -29,7 +29,7 @@ code, kbd, samp, sub, sup {
 	line-height: .625; }
 
 /* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
-button, input, select, textarea {
+::file-selector-button, button, input, select, textarea {
 	font-size: 1em; }
 
 /* UNIFORM ALIGNMENT & SPACING */
