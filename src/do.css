@@ -1,25 +1,26 @@
-/* COMFORTABLE BEHAVIOUR FOR STYLING */
+/* EASIER SETTINGS FOR STYLING */
 
 *, ::before, ::after {
 	/* Background images are not repeated. */
 	background-repeat: no-repeat; }
 
-/* `::before`/`::after` inherits more across browsers. */
 ::before, ::after {
 	/* Inherit border-radius. */
 	border-radius: inherit;
-	/* Inherit text-decoration. */
+	/* Inherit text-decoration for `content`. */
 	text-decoration: inherit;
 	/* Inherit vertical alignment. */
 	vertical-align: inherit; }
 
-/* FIX INABILITY TO STYLE */
+/* Variable for pre-formatted text font. */
+code, kbd, samp, pre {
+	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
+
+/* FIXES FOR STYLING */
 
 /* Fix inability to style buttons in Ios and Safari. */
 ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
 	-webkit-appearance: button; }
-
-/* FIX DISPLAY BEHAVIOUR */
 
 /* `[hidden]` maintain behaviour when overriding `display` values. */
 /* `audio` with no controls should not display. */
@@ -31,19 +32,13 @@
 picture {
 	display: contents; }
 
-/* --- */
-
-/* Fix font inheritance for pre-formatted text and add optional font-family variable. */
-code, kbd, samp, pre {
-	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
-
 /* Remove space below for vertical flow. */
 img, svg, video, canvas, audio, iframe, embed, object {
 	vertical-align: middle; }
 
-/* RESETS FOR STYLING */
+/* NORMALIZATION FOR EASIER CROSS-BROWSER STYLING */
 
-/* Fix to inherit font-family. */
+/* Inherit font-family. */
 ::file-selector-button, button, input, textarea, select {
 	font-family: inherit; }
 
@@ -51,18 +46,17 @@ img, svg, video, canvas, audio, iframe, embed, object {
 button, input, select, textarea {
 	margin: 0; }
 
+/* Normalize all button types. */
 ::file-selector-button, button, [type="button" i], [type="reset" i], [type="submit" i] {
 	border: none;
 	border-radius: .125em;
 	box-shadow: unset;
-	line-height: inherit;
-}
+	line-height: inherit; }
 
+/* Set `search` to textfield. */
 input[type="search" i] {
-	-webkit-appearance: textfield;
-}
+	-webkit-appearance: textfield; }
 
+/* Remove search cancel button. */
 input[type="search"]::-webkit-search-cancel-button {
-	/* Remove default */
-	-webkit-appearance: none;
-}
+	-webkit-appearance: none; }

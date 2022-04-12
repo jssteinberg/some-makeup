@@ -17,7 +17,7 @@ Plan v2:
 - wrap stuff in `:where()`
 - remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now.
 
-Inspiration: The Elements of Typographic Style, [normalize.css][nc], [modern normalize][mn], CSS Remedy, sanitize.css, BEM, [Open Props][op], [A modern CSS reset][amcr].
+Inspiration: The Elements of Typographic Style, [normalize.css][nc], [modern normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], BEM, [Open Props][op], [A modern CSS reset][amcr].
 
 ## History
 
@@ -26,12 +26,15 @@ Inspiration: The Elements of Typographic Style, [normalize.css][nc], [modern nor
 *Changes from Floor Typography CSS v22:*
 
 - CSS reorganized in new files: fix.css, do.css, space.css and flow.css.
+	- Updated fix and normalize (do.css), more tested.
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 	- Space is not removed for sub-lists (would cause unexpected list styles if parent list was styled unconventional. Rather remove margin for sub-lists in containers of choice).
 
-[nc]: https://github.com/necolas/normalize.css/
-[mn]: https://github.com/sindresorhus/modern-normalize
-[op]: https://open-props.style/
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
 [cc]: https://cube.fyi/
+[cr]: https://github.com/jensimmons/cssremedy
+[mn]: https://github.com/sindresorhus/modern-normalize
+[nc]: https://github.com/necolas/normalize.css/
+[op]: https://open-props.style/
+[sc]: https://github.com/csstools/sanitize.css

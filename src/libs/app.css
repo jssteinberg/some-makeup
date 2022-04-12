@@ -33,13 +33,13 @@
 
 @media (min-width: 1200px) {
 	:root {
-		--font-size: clamp(1rem, .5rem + 0.55vw, 1.12em);
+		--font-size: clamp(1rem, .25rem + 0.875vw, 1.12em);
 	}
 }
 
 @media (min-width: 1500px) {
 	:root {
-		--view-inline: 15vw;
+		--view-inline: 12.5vw;
 	}
 }
 

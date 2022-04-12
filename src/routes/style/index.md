@@ -6,7 +6,11 @@ set: ['typography', 'code', 'sans']
 
 # makeup-style
 
-So you want to makeup style? `npm install makeup-style`
+So you want to makeup style?
+
+```sh
+npm install makeup-style
+```
 
 These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 
@@ -19,7 +23,7 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 @import 'makeup-style/src/fix.css';
 ```
 
-Focused and lean CSS: to prevent text and content from overflowing; to prevent some elements from affecting line-height; fixes for font settings, semantic styling and usability (excluding button and inputs). *Mandatory CSS for basic typography and avoiding common layout gotchas, especially for narrow viewports.*
+Focused and lean CSS fix: to prevent text and content from overflowing; to prevent some elements from affecting line-height; fixes for font settings, semantic styling and usability (excluding `button` and `inputs`). *Mandatory CSS for basic typography and avoiding common layout gotchas, especially for narrow viewports.*
 
 </section>
 <section>
@@ -30,7 +34,7 @@ Focused and lean CSS: to prevent text and content from overflowing; to prevent s
 @import 'makeup-style/src/do.css';
 ```
 
-CSS with intuitive CSS behaviours and resets for doing CSS---for a better developer experience. *Includes resets for some `button` and `input` properties.*
+Intuitive settings for doing CSS---a better developer experience. *Includes simple reset for `button` and `input` so they are normalized enough to be simple to style.*
 
 `--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`.
 
