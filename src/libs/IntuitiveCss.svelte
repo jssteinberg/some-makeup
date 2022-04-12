@@ -1,5 +1,5 @@
-<div aria-hidden="true">
+<svelte:head>
 	<style lang="scss">
 		@use '../fix.css';
 	</style>
-</div>
+</svelte:head>

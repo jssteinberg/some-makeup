@@ -1,5 +1,5 @@
-<div aria-hidden="true">
+<svelte:head>
 	<style lang="scss">
 		@use './prism.css';
 	</style>
-</div>
+</svelte:head>

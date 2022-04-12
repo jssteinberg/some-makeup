@@ -1,4 +1,4 @@
-<div aria-hidden="true">
+<svelte:head>
 	<style lang="scss">
 		@use '../flow.css';
 
@@ -6,4 +6,4 @@
 			--added-lead: unset;
 		}
 	</style>
-</div>
+</svelte:head>

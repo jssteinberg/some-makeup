@@ -44,7 +44,9 @@
 		<button class="touch-target" on:click={() => {dark = !dark}}>Dark/light</button>
 		<button class="touch-target" on:click={() => {window.scrollTo(0,0)}}>Top</button>
 	</p>
+</footer>
 
+<svelte:head>
 	{#if !dark}
 		<style>
 			:root {
@@ -57,7 +59,7 @@
 			}
 		</style>
 	{/if}
-</footer>
+</svelte:head>
 
 <style>
 	*, ::before, ::after {
