@@ -16,6 +16,7 @@
 	};
 </script>
 
+<div class="sep" />
 <div class="container">
 	{#each Object.keys(css) as file}
 		<label>
@@ -53,27 +54,32 @@
 		overflow-x: auto;
 
 		position: sticky;
-		top: 1px;
+		top: .5rem;
 		z-index: 1;
 	}
 
 	label {
-		background: black;
-		border-radius: .125rem;
-		border: 1px solid;
-		color: white;
+		--_a: .825;
+		background: hsla(0 0% 0%/var(--_a));
+		border-radius: .5rem;
+		border: 1px solid var(--sep-color);
+		box-shadow: inset 0 0 1em 1px var(--sep-color);
+		color: hsla(0 0% 100%/var(--_a));
 		cursor: pointer;
 		line-height: 1;
-		opacity: 0.85;
 		padding: .5em 1em;
 		white-space: nowrap;
 	}
 
 	label:hover, label:focus-within {
-		opacity: 1;
+		--_a: 1;
 	}
 
 	input {
 		margin: 0;
+	}
+
+	.sep {
+		border-top: 1px solid;
 	}
 </style>
