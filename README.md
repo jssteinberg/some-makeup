@@ -6,7 +6,7 @@ The files in question: src/fix.css, src/do.css, src/space.css, src/flow.css.
 
 [Go to documentation](https://some.makeup/style)
 
-*Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr].*
+*Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr].*
 
 ---
 
