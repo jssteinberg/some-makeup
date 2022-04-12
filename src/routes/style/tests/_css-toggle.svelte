@@ -22,8 +22,6 @@
 		<label>
 			<input
 				type="checkbox"
-				id="scales"
-				name="scales"
 				checked={css[file] || undefined}
 				on:click={() => toggleCss(file)}
 			/>
