@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores';
+
+	let dark = true;
 </script>
 
 <footer class="footer">
@@ -38,9 +40,23 @@
 		This site does not collect any personal information and uses no cookies.
 	</p>
 
-	<p>
-		<a href="#">#</a>
+	<p aria-hidden="true" class="button-container">
+		<button class="touch-target" on:click={() => {dark = !dark}}>Dark/light</button>
+		<button class="touch-target" on:click={() => {window.scrollTo(0,0)}}>Top</button>
 	</p>
+
+	{#if !dark}
+		<style>
+			:root {
+				--bg: white;
+			}
+
+			body {
+				--fg-l: 0%;
+				--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));
+			}
+		</style>
+	{/if}
 </footer>
 
 <style>
@@ -57,19 +73,25 @@
 	h2, h2 + *, h2 + ul > li {
 		display: inline;
 		margin-inline-end: 1em;
-		text-transform: lowercase;
-		font-variant: small-caps;
 	}
 
 	ul {
 		padding: 0;
 	}
 
-	a {
+	a, button {
+		all: unset;
+		cursor: pointer;
 		display: inline-flex;
 		align-items: center;
 		min-height: var(--TOUCH-TARGET-SIZE);
 		min-width: var(--TOUCH-TARGET-SIZE);
+		text-transform: lowercase;
+		font-variant: small-caps;
+	}
+
+	:is(a, button):is(:focus-visible,:active) {
+		text-decoration: underline;
 	}
 
 	ul > :first-child a {
@@ -85,5 +107,10 @@
 
 	a:not(:is(:hover,:focus)) {
 		text-decoration: none;
+	}
+
+	.button-container {
+		display: flex;
+		gap: .5rem;
 	}
 </style>

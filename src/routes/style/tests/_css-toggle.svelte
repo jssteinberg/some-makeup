@@ -58,12 +58,13 @@
 	}
 
 	label {
-		background: white;
+		background: black;
 		border-radius: .125rem;
-		color: black;
+		border: 1px solid;
+		color: white;
 		cursor: pointer;
 		line-height: 1;
-		opacity: 0.9;
+		opacity: 0.85;
 		padding: .5em 1em;
 		white-space: nowrap;
 	}
