@@ -1,18 +1,18 @@
 ---
 title: makeup-style
 description: So you want to makeup some styling?
-set: ['typography', 'code', 'sans']
+set: ["typography", "code", "sans"]
 ---
 
 # makeup-style
 
 So you want to makeup style?
 
+These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
+
 ```sh
 npm install makeup-style
 ```
-
-These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides the intuitive default CSS for styling in general and typographic style.
 
 <div class="grid">
 <section>
@@ -20,10 +20,10 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 ## "Fix"
 
 ```css
-@import 'makeup-style/src/fix.css';
+@import "makeup-style/src/fix.css";
 ```
 
-Focused and lean CSS fix: to prevent text and content from overflowing; to prevent some elements from affecting line-height; fixes for font settings, semantic styling and usability (excluding `button` and `inputs`). *Mandatory CSS for basic typography and avoiding common layout gotchas, especially for narrow viewports.*
+Focused and lean CSS fix: to prevent text and content from overflowing; to prevent the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>; fixes for font rules, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm.
 
 </section>
 <section>
@@ -31,12 +31,12 @@ Focused and lean CSS fix: to prevent text and content from overflowing; to preve
 ### "Do"---A <cite>Fix</cite> Expansion
 
 ```css
-@import 'makeup-style/src/do.css';
+@import "makeup-style/src/do.css";
 ```
 
-Intuitive settings for doing CSS---a better developer experience. *Includes simple reset for `button` and `input` so they are normalized enough to be simple to style.*
+Intuitive rulesets for doing CSS---providing a better developer experience. It includes a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
 
-`--mono-font` for setting mono-font-family for `code, kbd, pre, samp`. Falls back to `monospace`.
+`--mono-font` for declaring `font-family` value for `code, kbd, pre, samp`. Falls back to `monospace`.
 
 <Details>
 <span slot="summary">Example</span>
@@ -55,14 +55,14 @@ Intuitive settings for doing CSS---a better developer experience. *Includes simp
 ## "Space"
 
 ```css
-@import 'makeup-style/src/space.css';
+@import "makeup-style/src/space.css";
 ```
 
-CSS that sets consistent spacing between the needed block-level elements.
+CSS rulesets for consistent spacing between the needed block-level elements.
 
-`--space` for setting vertical spacing between intuitive block-level elements. It's a point to not use a font-size realtive unit like `em` or `ex`, but use `rem` or another value to set font-size for a container. Falls back to `1rem`.
+`--space` for declaring vertical spacing between intuitive block-level elements. It's a point to not use a font-size relative unit like `em` or `ex`, but use a `rem` value (can also be part of a `clamp()`) to declare the font-size for a container. Falls back to `1rem`.
 
-`--block-start`/`--block-end` for setting start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1rem)`.
+`--block-start`/`--block-end` for declaring start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1rem)`.
 
 <Details>
 <span slot="summary">Example</span>
@@ -94,16 +94,20 @@ CSS that sets consistent spacing between the needed block-level elements.
 ### "Flow"---A <cite>Space</cite> Expansion
 
 ```css
-@import 'makeup-style/src/flow.css';
+@import "makeup-style/src/flow.css";
 ```
 
-CSS that sets line-height, headings' line-height to be computed to container defining `--added-lead`, and sets other elements to flow.
+CSS with rulesets declaring headings' line-height to be computed to container declaring `--added-lead`, and with rulesets for other elements to flow.
 
-`--added-lead` for setting line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
+#### Variables
 
-`--space` for setting some more spaces. Falls back to `1rem`.
+`--added-lead` for declaring line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
 
-`--hr-height` for setting height of `<hr>`. Falls back to `var(--space, 1rem)`.
+`--hr-color` for declaring color of `<hr>`. Falls back to `currentColor`.
+
+`--hr-height` for declaring height of `<hr>`. Falls back to `var(--space, 1rem)`.
+
+##### Headings
 
 {#each Array.from(Array(3)) as _,i}
 
@@ -113,7 +117,7 @@ CSS that sets line-height, headings' line-height to be computed to container def
 	{:else}
 		<code>--h3-line-span</code>-<code>--h6-line-span</code>
 	{/if}
-	for setting the number of lines the heading should span over. Falls back to 
+	for declaring the number of lines the heading should span over. Falls back to 
 	{#if i === 0}<code>2</code>{:else}<code>1</code>{/if}.
 </p>
 
@@ -123,7 +127,7 @@ CSS that sets line-height, headings' line-height to be computed to container def
 	{:else}
 		<code>--h3-added-lead</code>-<code>--h6-added-lead</code>
 	{/if}
-	for setting the added lead to the heading's line-height. Falls back to
+	for declaring the added lead to the heading's line-height. Falls back to
 	{#if i === 0}
 		<code>.125</code>.
 	{:else if i === 1}
@@ -153,7 +157,7 @@ CSS that sets line-height, headings' line-height to be computed to container def
 
 ```css
 /* .touch-target, .touch-target-center */
-@import 'makeup-style/src/class/touch-target.css';
+@import "makeup-style/src/class/touch-target.css";
 ```
 
 <style>
@@ -180,5 +184,5 @@ CSS that sets line-height, headings' line-height to be computed to container def
 </style>
 
 <script>
- 	import Details from '/src/libs/Details.svelte';
+ 	import Details from "/src/libs/Details.svelte";
 </script>

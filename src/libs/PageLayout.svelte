@@ -82,11 +82,31 @@
 
 	:where(.content) :global(h1) {
 		font-family: var(--cfs);
-		margin-block-end: calc(2 * var(--space));
+		margin-block-end: calc(1.5 * var(--space));
 	}
 
 	:where(.content) :global(:is(h1, h2)) {
 		font-weight: 700; font-weight: 800; font-weight: 900;
+	}
+
+	:where(.content) :global(:is(h4, h5, h6)) {
+		margin-block-end: 0;
+	}
+
+	:where(.content) :global(:is(h4, h5, h6) + *) {
+		margin-block-start: 0;
+	}
+
+	:where(.content) :global(:is(h5, h6)) {
+		font-weight: normal;
+		font-style: italic;
+	}
+
+
+	@media (min-width: 1500px) {
+		:where(.content) :global(h1) { --h1-line-span: 3; }
+		:where(.content) :global(h2) { --h2-line-span: 2; }
+		:where(.content) :global(h3) { --h3-added-lead: .25; }
 	}
 
 	:where(.content) :global(:is(ol, ul)) {
@@ -133,16 +153,16 @@
 		margin-block-end: 0;
 	}
 
-	/* Code */
-
-	:where(.content) :global(:is(code,kbd,samp)) {
+	:where(.content) :global(:is(code,kbd,samp,small)) {
 		font-size: .9em;
 	}
+
+	/* Code */
 
 	:where(.content) :global(:not(:is(h1,pre)) > code) {
 		background: var(--sep-color);
 		border-radius: .15rem;
-		padding: .2em;
+		padding: .15em .25em;
 		white-space: normal;
 	}
 

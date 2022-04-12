@@ -1,10 +1,12 @@
 # makeup-style
 
-CSS fix for default browser CSS (no IE though), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.
+Lean CSS files for fixing default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
-*Relevant files in repository/package: src/fix.css, src/do.css, src/space.css, src/flow.css.*
+The files in question: src/fix.css, src/do.css, src/space.css, src/flow.css.
 
-[Documentation---read more about each file and see tests](https://some.makeup/style)
+[Go to documentation](https://some.makeup/style)
+
+*Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr].*
 
 ---
 
@@ -17,8 +19,6 @@ Plan v2:
 - wrap stuff in `:where()`
 - remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now.
 
-Inspiration: The Elements of Typographic Style, [normalize.css][nc], [modern normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], BEM, [Open Props][op], [A modern CSS reset][amcr].
-
 ## History
 
 *makeup-style is the updated, slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
@@ -27,6 +27,7 @@ Inspiration: The Elements of Typographic Style, [normalize.css][nc], [modern nor
 
 - CSS reorganized in new files: fix.css, do.css, space.css and flow.css.
 	- Updated fix and normalize (do.css), more tested.
+	- Less files and features, more quality.
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 	- Space is not removed for sub-lists (would cause unexpected list styles if parent list was styled unconventional. Rather remove margin for sub-lists in containers of choice).
