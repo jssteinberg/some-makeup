@@ -1,14 +1,14 @@
-/* CONTAIN OVERFLOW */
+/* PREVENT OVERFLOW */
 
 *, ::before, ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box; }
 
 :root {
-	/* Words are auto hyphenated to fit narrow widths. */
-	hyphens: auto;
 	/* Words break for no x-axis scrolling (use this, not `word-break`). */
 	overflow-wrap: break-word;
+	/* Words are auto hyphenated to fit narrow widths. */
+	hyphens: auto;
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%; }
 
