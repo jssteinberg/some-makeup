@@ -55,13 +55,3 @@ img, svg, video, canvas, audio, iframe, embed, object {
 /* Consistent cursor for disabled elements */
 [aria-disabled="true" i], [disabled], [readonly] {
 	cursor: not-allowed; }
-
-/* REDUCE MOTION */
-
-/* Remove animations and transitions when user prefers it. */
-@media (prefers-reduced-motion: reduce) {
-	*, ::before, ::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important; }}
