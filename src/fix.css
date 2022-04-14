@@ -1,4 +1,4 @@
-/* PREVENT OVERFLOW */
+/* UNIVERSAL RULES & PREVENT OVERFLOW */
 
 *, ::before, ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
@@ -11,6 +11,8 @@
 	hyphens: auto;
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%; }
+
+/* FURTHER PREVENT OVERFLOW */
 
 /* Wrap pre-formatted text by default. */
 pre {
