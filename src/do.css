@@ -1,4 +1,4 @@
-/* EASIER SETTINGS FOR STYLING */
+/* FOR EASIER STYLING */
 
 *, ::before, ::after {
 	/* Background images are not repeated. */
@@ -32,7 +32,7 @@ code, kbd, samp, pre {
 picture {
 	display: contents; }
 
-/* Remove space below for vertical flow. */
+/* Remove unintended space below. */
 img, svg, video, canvas, audio, iframe, embed, object {
 	vertical-align: middle; }
 
