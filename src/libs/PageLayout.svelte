@@ -153,6 +153,10 @@
 		margin-block-end: 0;
 	}
 
+	.content :global(blockquote > :is(p,ol,ul):first-child) {
+		margin-block-start: 0;
+	}
+
 	:where(.content) :global(:is(code,kbd,samp,small)) {
 		font-size: .9em;
 	}
