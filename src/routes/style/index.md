@@ -23,7 +23,7 @@ npm install makeup-style
 @import "makeup-style/src/fix.css";
 ```
 
-Focused and lean CSS fix: to prevent text and content from overflowing; to prevent the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>; fixes for font rules, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
+Populate HTML documents and code CSS safely. Focused and lean CSS fix: to prevent text and content from overflowing; to prevent the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>; fixes for font rules, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
 </section>
 <section>
@@ -34,7 +34,7 @@ Focused and lean CSS fix: to prevent text and content from overflowing; to preve
 @import "makeup-style/src/do.css";
 ```
 
-Intuitive rulesets for doing CSS---providing a better developer experience. It includes a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
+Code CSS with ease. Intuitive rulesets for doing CSS---providing a better developer experience. It includes a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
 
 `--mono-font` for declaring `font-family` value for `code, kbd, pre, samp`. Falls back to `monospace`.
 
