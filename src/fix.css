@@ -38,7 +38,7 @@ code, kbd, samp, sub, sup {
 ::file-selector-button, button, input, select, textarea {
 	font-size: 1em; }
 
-/* UNIFORM ALIGNMENT & SPACING */
+/* CONSISTENT ALIGNMENTS */
 
 /* Intuitive inline margins---horizontal align with adjacent. */
 figure, hr {
