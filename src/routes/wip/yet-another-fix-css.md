@@ -56,7 +56,7 @@ For the root element there a two rules that prevents overflown text, and one nor
 
 `overflow-wrap: break-word` (not  `word-break` property) it simply breaks words if needed to not overflow horizontally and create a horizontal scrollbar.
 
-`hyphens: auto` allows the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set for advanced content creators who knows `&shy\;` and (for some elements) on wider viewports.
+`hyphens: auto` allows the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set for advanced content creators who knows `\&shy\;` and (for some elements) on wider viewports.
 
 `-webkit-text-size-adjust: 100%` is for preventing Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 
