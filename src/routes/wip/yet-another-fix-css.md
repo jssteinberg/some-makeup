@@ -56,9 +56,7 @@ For the root element there a two rules that prevents overflown text, and one nor
 
 `overflow-wrap: break-word` (not  `word-break` property) it simply breaks words if needed to not overflow horizontally and create a horizontal scrollbar.
 
-`[hyphens][hy]: auto` allows the browser to automatically hyphenate words if appropriate when text wraps. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set for advanced content creators who knows `&shy;` and (for some elements) on wider viewports.
-
-[hy]: https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
+`hyphens: auto` allows the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set for advanced content creators who knows `\&shy;` and (for some elements) on wider viewports.
 
 `-webkit-text-size-adjust: 100%` is for preventing Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 
@@ -140,6 +138,7 @@ Think about what CSS is/can be used to, and in what order from basic to advanced
 *If all needed elements where to be normalized across browsers, that would cause a lot of unused code for most apps and sites. Rather style those elements when they are used a lot. Perhaps it can be code-split. It obviously results in more focused and lean CSS when only what needs fixing is styled.*
 
 *The browser default CSS-fix, post-normalize.css, focused and lean*
+
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
 [cc]: https://cube.fyi/
