@@ -50,10 +50,10 @@ figure, hr {
 
 /* CONSISTENT CURSOR */
 
-/* Consistent mouse interaction with clickable elements. */
-::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button, select, summary {
-	cursor: pointer; }
-
 /* Consistent cursor for disabled elements */
 [aria-disabled="true" i], [disabled], [readonly] {
 	cursor: not-allowed; }
+
+/* Consistent cursor for clickable elements. */
+::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button, select, summary {
+	cursor: pointer; }
