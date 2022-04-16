@@ -26,12 +26,6 @@ code, kbd, samp, pre {
 ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
 	-webkit-appearance: button; }
 
-/* `[hidden]` maintain behaviour when overriding `display` values. */
-/* `audio` with no controls should not display. */
-/* `source` has nothing to display and should not display. */
-[hidden], audio:not([controls]), source {
-	display:none; }
-
 /* Remove unnecessary wrapping `picture`, while maintaining content. */
 picture {
 	display: contents; }
