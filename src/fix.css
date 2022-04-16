@@ -38,6 +38,14 @@ code, kbd, samp, sub, sup {
 ::file-selector-button, button, input, select, textarea {
 	font-size: 1em; }
 
+/* IMPROVE DISPLAY BEHAVIOR */
+
+/* `[hidden]` maintain behaviour when overriding `display` values. */
+/* `audio` with no controls should not display. */
+/* `source` has nothing to display and should not display. */
+[hidden], audio:not([controls]), source {
+	display:none; }
+
 /* CONSISTENT ALIGNMENTS */
 
 /* Remove layout disrupting space below. */
