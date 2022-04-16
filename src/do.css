@@ -1,7 +1,7 @@
 /* FOR EASIER STYLING */
 
+/* Background images are not repeated. */
 *, ::before, ::after {
-	/* Background images are not repeated. */
 	background-repeat: no-repeat; }
 
 ::before, ::after {
@@ -11,6 +11,10 @@
 	text-decoration: inherit;
 	/* Inherit vertical alignment. */
 	vertical-align: inherit; }
+
+/* Remove body margin---always removed when theming. */
+body {
+	margin: 0; }
 
 /* Variable for pre-formatted text font. */
 code, kbd, samp, pre {
