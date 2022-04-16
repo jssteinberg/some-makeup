@@ -34,7 +34,8 @@ Populate HTML documents and code CSS safely. Focused and lean CSS fix: to preven
 @import "makeup-style/src/do.css";
 ```
 
-Do CSS with ease. Intuitive rulesets for coding CSS---providing a better developer experience. It includes a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
+When you want to restyle more, do it with ease.
+Rulesets for a better developer experience and a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
 
 `--mono-font` for declaring `font-family` value for `code, kbd, pre, samp`. Falls back to `monospace`.
 
