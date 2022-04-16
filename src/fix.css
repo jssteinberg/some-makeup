@@ -40,13 +40,13 @@ code, kbd, samp, sub, sup {
 
 /* CONSISTENT ALIGNMENTS */
 
+/* Remove layout disrupting space below. */
+img, svg, video, canvas, audio, iframe, embed, object {
+	vertical-align: middle; }
+
 /* Intuitive inline margins---horizontal align with adjacent. */
 figure, hr {
 	margin-inline-start: 0; margin-inline-end: 0; }
-
-/* Remove unintended space below. */
-img, svg, video, canvas, audio, iframe, embed, object {
-	vertical-align: middle; }
 
 /* CONSISTENT CURSOR */
 
