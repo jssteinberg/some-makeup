@@ -27,7 +27,7 @@ input, select, textarea {
 /* FIX/EXTEND FONT */
 
 /* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
-strong {
+b, strong {
 	font-weight: bolder; }
 
 /* Prevent inline elements from affecting line height while having line-height. */
