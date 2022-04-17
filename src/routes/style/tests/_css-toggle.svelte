@@ -22,7 +22,7 @@
 		<label>
 			<input
 				type="checkbox"
-				checked={css[file] || undefined}
+				checked={css[file] || false}
 				on:click={() => toggleCss(file)}
 			/>
 			{file === 'lineHeight' ? 'line-height' : file}.css
