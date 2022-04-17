@@ -98,19 +98,13 @@ img, svg, video, canvas {
 
 Media and form related elements are ruled to be responsive, and could otherwise overflow.
 
----
-
-Add:
-
 ```css
-/* Only resize vertically (also for a11y). */
 textarea {
-	resize: vertical; }
+	resize: vertical;
+}
 ```
 
 For accessibility, textareas only resize vertically by default.
-
----
 
 ```css
 b, strong {
@@ -118,7 +112,7 @@ b, strong {
 }
 ```
 
-`<strong>`  should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
+`<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
 
 ```css
 code, kbd, samp, sub, sup {

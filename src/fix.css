@@ -26,6 +26,10 @@ img, svg, video, canvas {
 img, svg, video, canvas {
 	height: auto; }
 
+/* Only resize vertically (a11y and prevent overflow). */
+textarea {
+	resize: vertical; }
+
 /* FIX/EXTEND FONT */
 
 /* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
