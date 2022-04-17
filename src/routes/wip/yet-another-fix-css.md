@@ -58,23 +58,6 @@ For the root element there a two rules that prevents overflown text, and one nor
 
 `-webkit-text-size-adjust: 100%` is for preventing Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 
-<aside>
-
-*Side notes:*
-
-- CSS Remedy also adds `line-sizing: normal` to the root element, but that was from a CSS draft later changed. The fix presented here fixes it with a single `line-height` rule for the inline elements in question.
-- Often the `margin` on `<body>` is removed. This fix does not remove it (but the accompanying “do” CSS does).
-- Margins or sizes for headings are not included. Browsers has descent styles, even if `<h1>` can differ. Themes usually styles the headings they need with margins and size.
-- Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
-- Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s easier to remove them when needed.
-- `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
-- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme sets it consistently  between elements.
-- Form elements are not normalized, but are normalized for styling in the “do” CSS.
-- Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
-- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
-
-<\aside>
-
 ```css
 pre {
 	white-space: pre-wrap;
@@ -195,6 +178,19 @@ body {
 	margin: 0;
 }
 ```
+
+## Side notes
+
+- CSS Remedy also adds `line-sizing: normal` to the root element, but that was from a CSS draft later changed. The fix presented here fixes it with a single `line-height` rule for the inline elements in question.
+- Margins or sizes for headings are not included. Browsers has descent styles, even if `<h1>` can differ. Themes usually styles the headings they need with margins and size.
+- Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
+- Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s easier to remove them when needed.
+- `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
+- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme sets it consistently  between elements.
+- Form elements are not normalized, but are normalized for styling in the “do” CSS.
+- Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
+- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
+
 
 ### Notes
 
