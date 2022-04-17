@@ -70,7 +70,8 @@ For the root element there a two rules that prevents overflown text, and one nor
 - `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
 - `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme sets it consistently  between elements.
 - Form elements are not normalized, but are normalized for styling in the “do” CSS.
-- Using `:where()` or `@layer` could be of future improvements.
+- Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
+- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
 
 <\aside>
 
@@ -128,17 +129,18 @@ Some inline elements can affect the line-heights of lines they are on. This is n
 }
 ```
 
-In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. This causes Ios to zoom in on the `input` when focused. For many users its annoying and/or confusing. For accessibility and usability, and to deal with a following 
+In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. This causes Ios to zoom in on the `input` when focused. For many users its annoying and/or confusing. For accessibility and usability, and to deal with a following
 side-effect, consistency: all interactive elements that doesn’t already have `font-size: 1em` are part of this ruleset.
 
 ```css
 /* `[hidden]` maintain behaviour when overriding `display` values. */
-/* `audio` with no controls should not display. */
 /* `source` has nothing to display and should not display. */
-[hidden], audio:not([controls]), source {
-	display:none;
+[hidden], source {
+	display: none;
 }
 ```
+
+For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS. For `<source>`, this is can be considered a polyfill to not `display` this relatively new element which has nothing to display.
 
 ...
 
@@ -156,7 +158,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 ```
 
-This ruleset removes a block-end space for these elements that disrupts layouts.
+This ruleset removes a block-end space for these elements that (can when `display` is changed for some of these) disrupt layouts.
 
 ---
 

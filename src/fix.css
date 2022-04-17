@@ -47,9 +47,8 @@ code, kbd, samp, sub, sup {
 /* DISPLAY BEHAVIORS */
 
 /* `[hidden]` maintain behaviour when overriding `display` values. */
-/* `audio` with no controls should not display. */
 /* `source` has nothing to display and should not display. */
-[hidden], audio:not([controls]), source {
+[hidden], source {
 	display:none; }
 
 /* Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio. */
