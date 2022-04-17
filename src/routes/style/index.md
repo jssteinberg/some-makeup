@@ -37,19 +37,6 @@ Populate HTML documents and code CSS safely. Focused and lean CSS fix: to preven
 When you want to restyle more, do it with ease.
 Rulesets for a better developer experience and a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
 
-`--mono-font` for declaring `font-family` value for `code, kbd, pre, samp`. Falls back to `monospace`.
-
-<Details>
-<span slot="summary">Example</span>
-
-```css
-:root {
-	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-}
-```
-
-</Details>
-
 </section>
 <section>
 
@@ -140,9 +127,7 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 
 {/each}
 
----
-
-*Side effects:*
+#### Side effects
 
 - Easy gradient `<hr>`:
 
@@ -151,6 +136,7 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 		background-image: linear-gradient(90deg,lightblue,blue);
 	}
 	```
+	---
 
 </div>
 

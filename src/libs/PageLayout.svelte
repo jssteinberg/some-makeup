@@ -53,7 +53,6 @@
 		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
 		--added-lead: .6;
 		--line-height: calc(1 + .6);
-		--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 		--cfs: var(--sans);
 
 		font-family: var(--cfs);
@@ -162,6 +161,10 @@
 	}
 
 	/* Code */
+
+	:where(.content) :global(code) {
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	}
 
 	:where(.content) :global(:not(:is(h1,pre)) > code) {
 		background: var(--sep-color);

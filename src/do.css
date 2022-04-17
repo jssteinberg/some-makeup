@@ -16,10 +16,6 @@
 body {
 	margin: 0; }
 
-/* Variable for pre-formatted text font. */
-code, kbd, samp, pre {
-	--_f: var(--mono-font, monospace); font-family: var(--_f),var(--_f); }
-
 /* FIXES FOR STYLING */
 
 /* Fix inability to style buttons in Ios and Safari. */
