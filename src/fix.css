@@ -19,9 +19,11 @@ pre {
 	white-space: pre-wrap; }
 
 /* Make elements responsive. */
-img, svg, video, canvas, audio, iframe, embed, object,
-input, select, textarea {
-	max-width: 100%;
+audio, embed, iframe, object,
+input, select, textarea,
+img, svg, video, canvas {
+	max-width: 100%; }
+img, svg, video, canvas {
 	height: auto; }
 
 /* FIX/EXTEND FONT */
@@ -53,7 +55,8 @@ picture {
 /* CONSISTENT ALIGNMENTS */
 
 /* Remove layout disrupting space below. */
-img, svg, video, canvas, audio, iframe, embed, object {
+audio, embed, iframe, object,
+img, svg, video, canvas {
 	vertical-align: middle; }
 
 /* Intuitive inline margins---horizontal align with adjacent. */

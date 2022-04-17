@@ -85,23 +85,15 @@ To prevent `<pre>` from overflowing `pre-wrap` is declared.
 Another way to implement this would be a popular way to display code, using `overflow-x: auto`, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
 
 ```css
-img, svg, video, canvas, audio, iframe, embed, object,
-input, select, textarea {
-	max-width: 100%;
-	height: auto;
-}
-
-/* Better?
-- “`iframe`, `embed`, and `object` are also embedded, but have no intrinsic ratio,  so their `height` needs to be set explicitly.
-- Add audio?
-*/
 audio, embed, iframe, object,
 input, select, textarea,
-img, svg, video, canvas, audio {
-	max-width: 100%; }
-input, select, textarea,
-img, svg, video, canvas, audio {
-	height: auto; }
+img, svg, video, canvas {
+	max-width: 100%;
+}
+
+img, svg, video, canvas {
+	height: auto;
+}
 ```
 
 Media and form related elements are ruled to be responsive, and could otherwise overflow.
