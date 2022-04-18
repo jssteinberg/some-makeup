@@ -2,7 +2,7 @@
 set: ["typography", "code"]
 ---
 
-# Fix CSS: Beyond a Selective Normalize
+# Beyond a Selective CSS Normalize
 
 *At the time of writing this, normalize.css has not been updated since 2018 and CSS Remedy not since April 2021.*
 

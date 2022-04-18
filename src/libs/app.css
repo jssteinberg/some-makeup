@@ -22,7 +22,8 @@
 	--fg-h: 0; --fg-s: 0%; --fg-l: 91%; --fg-a: 1;
 	--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));
 	--bg: hsl(0, 0%, 6.5%);
-	--sep-color: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.2);
+	--sep-fg: hsla(var(--fg-h), var(--fg-s), var(--fg-l), var(--sep-fg-a, 0.2));
+	--sep-color: var(--sep-fg);
 }
 
 @media (min-width: 900px) {

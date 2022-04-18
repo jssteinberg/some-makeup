@@ -66,9 +66,6 @@
 	}
 
 	.content--typography { text-rendering: optimizeLegibility; }
-	.content--sans :global(h1 ~ :not(pre)) {
-		font-family: var(--cfs);
-	}
 
 	:where(.content) > :global(:not(h1)),
 	:where(.content) > :global(:not(h1) li p) {
@@ -80,7 +77,6 @@
 	}
 
 	:where(.content) :global(h1) {
-		font-family: var(--cfs);
 		margin-block-end: calc(1.5 * var(--space));
 	}
 
@@ -128,6 +124,10 @@
 		text-underline-offset:     .15em;
 		text-decoration-thickness: .5ex;
 		text-decoration-color: var(--sep-color);
+	}
+
+	:where(.content) :global(a:hover) {
+		text-decoration-color: currentColor;
 	}
 
 	.content :global(blockquote) {
@@ -185,14 +185,14 @@
 		word-break: normal;
 		word-wrap: normal;
 
-		box-shadow: 1px 0 black;
+		box-shadow: 1px 0 var(--sep-color);
 
 		/* --dash: calc(.5 * var(--space)); */
 
 		background:
-			top left/var(--content-width) 1px
+			top left/100% 1px
 			linear-gradient(
-				90deg, var(--sep-color), var(--sep-color)
+				90deg, currentColor, currentColor var(--content-width), var(--sep-color) var(--content-width)
 			)
 			no-repeat;
 	}

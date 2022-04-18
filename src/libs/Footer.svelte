@@ -51,11 +51,12 @@
 		<style>
 			:root {
 				--bg: white;
+				--fg-l: 0%;
+				--sep-fg-a: .15;
 			}
 
-			body {
-				--fg-l: 0%;
-				--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));
+			:is(pre,code) .token {
+				color: var(--fg) !important;
 			}
 		</style>
 	{/if}
