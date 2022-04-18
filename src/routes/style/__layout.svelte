@@ -11,8 +11,8 @@
 			href: '/style/tests',
 		},
 		{
-			label: 'notes',
-			href: '/style/notes',
+			label: 'in-depth',
+			href: '/style/info',
 		},
 	];
 </script>
