@@ -7,12 +7,12 @@
 			href: '/style',
 		},
 		{
-			label: 'tests',
-			href: '/style/tests',
+			label: 'In-depth',
+			href: '/style/info',
 		},
 		{
-			label: 'in-depth',
-			href: '/style/info',
+			label: 'Tests',
+			href: '/style/tests',
 		},
 	];
 </script>

@@ -1,21 +1,16 @@
 ---
 title: WIP
-set: ['logo']
+description: Works in progress.
 ---
 
 # WIP
 
 <PostList posts={[...posts, {title: 'Svelte Layout Reset', path: '/reset'}]} />
 
-<AccentHue {hue} />
-
 <script>
-	import AccentHue from '/src/libs/AccentHue.svelte';
 	import PostList from '/src/libs/PostList.svelte';
 
 	export let posts;
-
-	let hue = 358.7;
 </script>
 
 <script context="module">

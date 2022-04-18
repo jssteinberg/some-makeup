@@ -17,7 +17,7 @@ npm install makeup-style
 <div class="grid">
 <section>
 
-## "Fix"
+## 1. "Fix"
 
 ```css
 @import "makeup-style/src/fix.css";
@@ -28,7 +28,7 @@ Populate HTML documents and code CSS safely. Focused and lean CSS fix: to preven
 </section>
 <section>
 
-### "Do"---A <cite>Fix</cite> Expansion
+### 1.2 "Do"---A <cite>Fix</cite> Expansion
 
 ```css
 @import "makeup-style/src/do.css";
@@ -40,7 +40,7 @@ Rulesets for a better developer experience and a cross-browser normalize for `bu
 </section>
 <section>
 
-## "Space"
+## 2. "Space"
 
 ```css
 @import "makeup-style/src/space.css";
@@ -79,7 +79,7 @@ CSS rulesets for consistent spacing between the needed block-level elements.
 </section>
 <section>
 
-### "Flow"---A <cite>Space</cite> Expansion
+### 2.1 "Flow"---A <cite>Space</cite> Expansion
 
 ```css
 @import "makeup-style/src/flow.css";
@@ -140,7 +140,7 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 
 </div>
 
-## Additional Class Files
+## 3. Additional Class Files
 
 ```css
 /* .touch-target, .touch-target-center */
