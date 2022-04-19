@@ -66,6 +66,15 @@
 {/if}
 
 <div id="tests" class="wrapper">
+	<p>
+		<small>
+			{#if typeof navigator !== "undefined"}
+				{navigator.userAgent}
+			{:else}
+				…
+			{/if}
+		</small>
+	</p>
 	<slot />
 </div>
 
