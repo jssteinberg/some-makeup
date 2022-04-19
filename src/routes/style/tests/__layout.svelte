@@ -35,7 +35,7 @@
 
 	afterUpdate(() => {
 		const newEls = document.body.querySelectorAll('#tests section :is(p,h2)');
-		setTimeout(() => els = newEls, 100);
+		setTimeout(() => els = newEls, 1);
 	});
 </script>
 
@@ -53,28 +53,29 @@
 {#if els && els.length}
 	<div aria-hidden="true" id="element-heights">
 		<span class="header">px</span>
-		{#each els as item}
-			<span
-				style:transform={
-					`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
-				}
-			>
-				{item.offsetHeight}
-			</span>
-		{/each}
+			{#each els as item}
+				<span
+					style:transform={
+						`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
+					}
+				>
+					{item.offsetHeight}
+				</span>
+			{/each}
 	</div>
 {/if}
 
 <div id="tests" class="wrapper">
-	<p>
-		<small>
-			{#if typeof navigator !== "undefined"}
-				{navigator.userAgent}
-			{:else}
-				…
-			{/if}
-		</small>
-	</p>
+	<details>
+		<summary><em>Your browser</em></summary>
+
+		{#if typeof navigator !== "undefined"}
+			{navigator.userAgent}
+		{:else}
+			Not loaded
+		{/if}
+	</details>
+
 	<slot />
 </div>
 
