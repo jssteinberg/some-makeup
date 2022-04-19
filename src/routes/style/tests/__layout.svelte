@@ -34,7 +34,8 @@
 	$: testLabel = links.find(val => val.href === $page.url.pathname)?.label;
 
 	afterUpdate(() => {
-		els = document.body.querySelectorAll('#tests section :is(p,h2)');
+		const newEls = document.body.querySelectorAll('#tests section :is(p,h2)');
+		setTimeout(() => els = newEls, 100);
 	});
 </script>
 
@@ -49,7 +50,7 @@
 <Nav {links} ariaLabel="Test-pages" />
 <CssToggle />
 
-{#if els}
+{#if els && els.length}
 	<div aria-hidden="true" id="element-heights">
 		<span class="header">px</span>
 		{#each els as item}

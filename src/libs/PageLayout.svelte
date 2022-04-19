@@ -176,6 +176,10 @@
 	/* Code block */
 
 	:where(.content) :global(:where(pre)) {
+		background: linear-gradient(
+				90deg, currentColor, currentColor var(--content-width), var(--sep-color) var(--content-width)
+			) top left/100% 1px no-repeat;
+		box-shadow: inset -1px 0 var(--sep-color);
 		hyphens: none;
 		overflow: auto;
 		padding: var(--space) var(--space) var(--space) 0;
@@ -184,16 +188,5 @@
 		word-spacing: normal;
 		word-break: normal;
 		word-wrap: normal;
-
-		box-shadow: 1px 0 var(--sep-color);
-
-		/* --dash: calc(.5 * var(--space)); */
-
-		background:
-			top left/100% 1px
-			linear-gradient(
-				90deg, currentColor, currentColor var(--content-width), var(--sep-color) var(--content-width)
-			)
-			no-repeat;
 	}
 </style>
