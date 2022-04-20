@@ -1,7 +1,6 @@
 <script>
 	import CssToggle from './_css-toggle.svelte';
 	import Nav from '$libs/Nav.svelte';
-	import { afterUpdate } from 'svelte';
 	import { page } from '$app/stores';
 	import MetaTags from '$libs/MetaData.svelte';
 
@@ -32,11 +31,14 @@
 	let scrollY = 0;
 
 	$: testLabel = links.find(val => val.href === $page.url.pathname)?.label;
+	$: callUpdateTest = updateTest($page);
 
-	afterUpdate(() => {
-		const newEls = document.body.querySelectorAll('#tests section :is(p,h2)');
-		setTimeout(() => els = newEls, 1);
-	});
+	const updateTest = (pageObj) => {
+		if (typeof document !== 'undefined') {
+			els = document.body.querySelectorAll('#tests section :is(p,h2)');
+			/* setTimeout(() => els = newEls, 1); */
+		}
+	};
 </script>
 
 <svelte:window bind:scrollY />
@@ -48,7 +50,7 @@
 	description={`Test makeup-style code for ${testLabel}.`}
 />
 <Nav {links} ariaLabel="Test-pages" />
-<CssToggle />
+<CssToggle on:toggle={updateTest} />
 
 {#if els && els.length}
 	<div aria-hidden="true" id="element-heights">

@@ -3,9 +3,12 @@
 	import DxCss from '/src/libs/DxCss.svelte';
 	import SpaceCss from '/src/libs/SpaceCss.svelte';
 	import LineHeightCss from '/src/libs/FlowCss.svelte';
+	import { createEventDispatcher } from 'svelte';
 
+	const dispatch = createEventDispatcher();
 	const toggleCss = (file) => {
 		css[file] = !css[file];
+		dispatch("toggle", true);
 	};
 
 	let css = {
