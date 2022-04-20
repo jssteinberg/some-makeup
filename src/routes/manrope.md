@@ -2,6 +2,7 @@
 title: Manrope Font
 description: "A modern sans-serif variable font."
 set: ["typography", "code"]
+date: ["2022-04-20"]
 ---
 
 # Manrope Font
@@ -17,8 +18,8 @@ It's open source and is available as a [variable font](https://web.dev/variable-
 	@font-face {
 		font-family: "Manrope";
 		src:
-			url("./Manrope[wght].4.505.woff2") format("woff2 supports variations"),
-			url("./Manrope[wght].4.505.woff2") format("woff2-variations");
+			url("./Manrope.4.505.woff2") format("woff2 supports variations"),
+			url("./Manrope.4.505.woff2") format("woff2-variations");
 		font-weight: 100 1000;
 		font-stretch: 25% 151%;
 		font-style: normal;

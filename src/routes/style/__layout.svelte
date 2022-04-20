@@ -7,7 +7,7 @@
 			href: '/style',
 		},
 		{
-			label: 'In-depth',
+			label: 'In-depth info',
 			href: '/style/info',
 		},
 		{

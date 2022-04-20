@@ -68,6 +68,8 @@
 {/if}
 
 <div id="tests" class="wrapper">
+	<slot />
+
 	<details>
 		<summary><em>Your browser</em></summary>
 
@@ -77,12 +79,7 @@
 			Not loaded
 		{/if}
 	</details>
-
-	<slot />
 </div>
-
-<Nav {links} ariaLabel="Test-pages" ariaHidden />
-
 <style>
 	*, ::before, ::after {
 		box-sizing: border-box;
