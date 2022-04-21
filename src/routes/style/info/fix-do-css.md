@@ -26,21 +26,13 @@ The items naturally splits into different files---*the last item can be endlessl
 
 > Fix default CSS: so displaying content and styling is safe on any device by not overflowing; to prevent inline elements from affecting line-height, and; so defaults are consistent between elements.
 
-```css
-*, ::before, ::after {
-	box-sizing: border-box;
-}
-```
-
 A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 
 Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other box-sizing value can cause cut and overflown content.
 
 ```css
-:root {
-	overflow-wrap: break-word;
-	hyphens: auto;
-	-webkit-text-size-adjust: 100%;
+*, ::before, ::after {
+	box-sizing: border-box;
 }
 ```
 
@@ -53,14 +45,24 @@ For the root element there a two rules that prevents overflown text, and one nor
 `-webkit-text-size-adjust: 100%` is for preventing Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 
 ```css
-pre {
-	white-space: pre-wrap;
+:root {
+	overflow-wrap: break-word;
+	hyphens: auto;
+	-webkit-text-size-adjust: 100%;
 }
 ```
 
 To prevent `<pre>` from overflowing `pre-wrap` is declared. 
 
 Another way to implement this would be a popular way to display code, using `overflow-x: auto`, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
+
+```css
+pre {
+	white-space: pre-wrap;
+}
+```
+
+Media and form related elements are ruled to be responsive, and could otherwise overflow.
 
 ```css
 audio, embed, iframe, object,
@@ -74,7 +76,7 @@ img, svg, video, canvas {
 }
 ```
 
-Media and form related elements are ruled to be responsive, and could otherwise overflow.
+For accessibility, textareas only resize vertically by default.
 
 ```css
 textarea {
@@ -82,7 +84,7 @@ textarea {
 }
 ```
 
-For accessibility, textareas only resize vertically by default.
+`<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
 
 ```css
 b, strong {
@@ -90,7 +92,7 @@ b, strong {
 }
 ```
 
-`<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
+Some inline elements can affect the line-heights of lines they are on. This is not a full normalization---which would have little value---but a single common rule that fixes the main problem for all these elements. Brilliant!
 
 ```css
 code, kbd, samp, sub, sup {
@@ -98,7 +100,7 @@ code, kbd, samp, sub, sup {
 }
 ```
 
-Some inline elements can affect the line-heights of lines they are on. This is not a full normalization---which would have little value---but a single common rule that fixes the main problem for all these elements. Brilliant!
+In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. This causes Ios to zoom in on the `input` when focused. For many users its annoying and/or confusing. For accessibility and usability, and to deal with a following side-effect, consistency: all interactive elements that doesn’t already have `font-size: 1em` are part of this ruleset.
 
 ```css
 ::file-selector-button, button, input, select, textarea {
@@ -106,8 +108,7 @@ Some inline elements can affect the line-heights of lines they are on. This is n
 }
 ```
 
-In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. This causes Ios to zoom in on the `input` when focused. For many users its annoying and/or confusing. For accessibility and usability, and to deal with a following
-side-effect, consistency: all interactive elements that doesn’t already have `font-size: 1em` are part of this ruleset.
+For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS. For `<source>`, this is can be considered a polyfill to not `display` this relatively new element which has nothing to display.
 
 ```css
 /* `[hidden]` maintain behaviour when overriding `display` values. */
@@ -117,8 +118,6 @@ side-effect, consistency: all interactive elements that doesn’t already have `
 }
 ```
 
-For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS. For `<source>`, this is can be considered a polyfill to not `display` this relatively new element which has nothing to display.
-
 ...
 
 ```css
@@ -127,7 +126,7 @@ picture {
 }
 ```
 
-...
+This ruleset removes a block-end space for these elements that (can when `display` is changed for some of these) disrupt layouts.
 
 ```css
 img, svg, video, canvas, audio, iframe, embed, object {
@@ -135,11 +134,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 ```
 
-This ruleset removes a block-end space for these elements that (can when `display` is changed for some of these) disrupt layouts.
-
 ---
 
 *Below follows more opinionated rulesets.*
+
+To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>` the`auto` value would become apparent when parent container has `display` `flex` or `grid`.
 
 ```css
 figure, hr {
@@ -147,7 +146,7 @@ figure, hr {
 }
 ```
 
-To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>` the`auto` value would become apparent when parent container has `display` `flex` or `grid`.
+For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`.
 
 ```css
 [aria-disabled="true" i], [disabled], [readonly] {
@@ -155,15 +154,13 @@ To make elements align horizontally with other elements, `margin-inline` is remo
 }
 ```
 
-For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`.
+Ending with the most opinionated ruleset: all clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
 ```css
 ::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button, select, summary {
 	cursor: pointer;
 }
 ```
-
-Ending with the most opinionated ruleset: all clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
 ## Do CSS
 

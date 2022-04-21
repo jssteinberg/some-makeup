@@ -17,7 +17,7 @@ Plan:
 Plan v2:
 
 - wrap stuff in `:where()`
-- remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now.
+- remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now. *No! It's for maintaining behaviour.*
 
 ## History
 
