@@ -24,6 +24,8 @@
 	--bg: hsl(0, 0%, 6.5%);
 	--sep-fg: hsla(var(--fg-h), var(--fg-s), var(--fg-l), var(--sep-fg-a, 0.2));
 	--sep-color: var(--sep-fg);
+
+	color-scheme: dark;
 }
 
 @media (min-width: 900px) {

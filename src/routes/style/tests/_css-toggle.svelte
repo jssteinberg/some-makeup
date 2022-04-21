@@ -46,6 +46,7 @@
 	}
 
 	.container {
+		color-scheme: dark;
 		margin-block: .5em;
 		padding-inline: var(--view-inline);
 
