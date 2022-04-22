@@ -30,12 +30,6 @@
 
 @media (min-width: 900px) {
 	:root {
-		--font-size: 1.1rem;
-	}
-}
-
-@media (min-width: 1200px) {
-	:root {
 		--font-size: clamp(1rem, .25rem + 0.875vw, 1.12em);
 	}
 }
@@ -58,7 +52,7 @@ body {
 
 a { color: inherit; }
 
-/* CLASSES */
+/* UTIL CLASSES */
 
 .typography {
 	text-rendering: optimizeLegibility;
@@ -66,32 +60,4 @@ a { color: inherit; }
 
 .sans {
 	font-family: var(--sans);
-}
-
-[class*="border-"] {
-	position: relative;
-}
-
-[class*="border-"]::before,
-[class*="border-"]::after {
-	content: '';
-	position: absolute;
-	inset: 0;
-	z-index: -1;
-}
-
-.border-tr {
-
-}
-
-.border-tl {
-
-}
-
-.border-rb {
-
-}
-
-[class*="border-"][class*="-l"]::after {
-	border-left: 1px solid;
 }

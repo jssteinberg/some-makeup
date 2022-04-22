@@ -7,11 +7,11 @@
 			href: '/style',
 		},
 		{
-			label: 'In-depth info',
+			label: 'in-depth',
 			href: '/style/info',
 		},
 		{
-			label: 'Tests',
+			label: 'tests',
 			href: '/style/tests',
 		},
 	];
