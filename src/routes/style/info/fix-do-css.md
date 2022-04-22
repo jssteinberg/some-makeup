@@ -92,7 +92,7 @@ b, strong {
 }
 ```
 
-Some inline elements can affect the line-heights of lines they are on. This is not a full normalization---which would have little value---but a single common rule that fixes the main problem for all these elements. Brilliant!
+Some inline elements can affect the line-heights of lines they are on. This is not a full normalization of these elements---which would have little value---but a single common rule that fixes the main problem for all these elements. Brilliant!
 
 ```css
 code, kbd, samp, sub, sup {
@@ -108,17 +108,17 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 }
 ```
 
-For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS. For `<source>`, this is can be considered a polyfill to not `display` this relatively new element which has nothing to display.
+For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS.
+
+For `<source>`, this is can be considered a polyfill to not `display` this relatively new element which has nothing to display.
 
 ```css
-/* `[hidden]` maintain behaviour when overriding `display` values. */
-/* `source` has nothing to display and should not display. */
 [hidden], source {
 	display: none;
 }
 ```
 
-...
+Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio (polyfill).
 
 ```css
 picture {
@@ -157,18 +157,23 @@ For (usually interactive) elements currently not interactive `cursor` will consi
 Ending with the most opinionated ruleset: all clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
 ```css
-::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button, select, summary {
+::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,
+select, summary {
 	cursor: pointer;
 }
 ```
 
 ## Do CSS
 
+...
+
 ```css
 body {
 	margin: 0;
 }
 ```
+
+*To be continued*
 
 ## Side notes
 
@@ -183,11 +188,13 @@ body {
 - Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
 
 
+<!--
 ### Notes
 
 - Think about what CSS is/can be used to, and in what order from basic to advanced sites/apps: typography, layouts, usability, accessibility, more typography and graphical design, animations, 3D rendering.
 
 - If all needed elements where to be normalized across browsers, that would cause a lot of unused code for most apps and sites. Rather style those elements when they are used a lot. Perhaps it can be code-split. It obviously results in more focused and lean CSS when only what needs fixing is styled.
+-->
 
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
@@ -198,3 +205,12 @@ body {
 [nc]: https://github.com/necolas/normalize.css/
 [op]: https://open-props.style/
 [sc]: https://github.com/csstools/sanitize.css
+
+<style>
+	hr {
+		background-image: linear-gradient(-45deg, var(--sep-color), var(--sep-color));
+		background-size: var(--space, 1em);
+		margin: calc(2 * var(--space)) 0;
+		transform: rotate(45deg);
+	}
+</style>
