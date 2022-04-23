@@ -3,6 +3,7 @@
 	import Nav from '$libs/Nav.svelte';
 	import { page } from '$app/stores';
 	import MetaTags from '$libs/MetaData.svelte';
+	import TestsNav from './_tests-nav.svelte';
 
 	const links = [
 		{
@@ -34,10 +35,10 @@
 	$: callUpdateTest = updateTest($page);
 
 	const updateTest = (pageObj) => {
-		if (typeof document !== 'undefined') {
-			els = document.body.querySelectorAll('#tests section :is(p,h2)');
-			/* setTimeout(() => els = newEls, 1); */
-		}
+		if (typeof document !== 'undefined')
+			els = document.body.querySelectorAll(
+				'#tests section :is(p,h2)'
+			);
 	};
 </script>
 
@@ -70,6 +71,8 @@
 <div id="tests" class="wrapper">
 	<slot />
 
+	<TestsNav {links} />
+
 	<details>
 		<summary><em>Your browser</em></summary>
 
@@ -80,6 +83,7 @@
 		{/if}
 	</details>
 </div>
+
 <style>
 	*, ::before, ::after {
 		box-sizing: border-box;

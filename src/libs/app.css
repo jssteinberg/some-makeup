@@ -21,7 +21,10 @@
 
 	--fg-h: 0; --fg-s: 0%; --fg-l: 91%; --fg-a: 1;
 	--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));
-	--bg: hsl(0, 0%, 6.5%);
+
+	--bg-h: 0; --bg-s: 0%; --bg-l: 6.5%; --bg-a: 1;
+	--bg: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / var(--bg-a));
+
 	--sep-fg: hsla(var(--fg-h), var(--fg-s), var(--fg-l), var(--sep-fg-a, 0.2));
 	--sep-color: var(--sep-fg);
 }

@@ -20,6 +20,7 @@
 </script>
 
 <div class="sep" />
+
 <div class="container">
 	{#each Object.keys(css) as file}
 		<label>
@@ -48,7 +49,8 @@
 	.container {
 		color-scheme: dark;
 		margin-block: .5em;
-		padding-inline: var(--view-inline);
+		padding-inline-start: var(--view-inline);
+		padding-inline-end: 1rem;
 
 		display: flex;
 		flex-wrap: nowrap;

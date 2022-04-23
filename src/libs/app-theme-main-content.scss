@@ -54,10 +54,11 @@
 
 	h1 {
 		margin-block-end: calc(1.5 * var(--space));
+		font-weight: 700; font-weight: 800; font-weight: 900;
 	}
 
-	:is(h1, h2) {
-		font-weight: 700; font-weight: 800; font-weight: 900;
+	h2 {
+		font-weight: 700;
 	}
 
 	:is(h4, h5, h6) {
@@ -71,6 +72,10 @@
 	:is(h5, h6) {
 		font-weight: normal;
 		font-style: italic;
+	}
+
+	:is(h1,h2,h3,h4,h5,h6) em {
+		font-weight: normal;
 	}
 
 	@media (min-width: 1500px) {
