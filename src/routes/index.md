@@ -13,11 +13,6 @@ layout: no
 	Manrope Font
 
 	</a>
-- <a href="/html-attr-true" sveltekit:prefetch>
-
-	`true` HTML Attributes?
-
-	</a>
 - <a href="/gradient-text" sveltekit:prefetch>
 
 	Gradient Text CSS: Overused Yet?
