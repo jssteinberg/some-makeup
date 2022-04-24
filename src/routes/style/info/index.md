@@ -8,8 +8,9 @@ set: ["typography", "code"]
 
 An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but a link displays as a link, a list displays as a list, and so on. And I would think most agrees on that being a good thing, so many that there are quite a lot of projects in same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and others.
 
-## *Rethinking Normalize.css*
+---
 
+**Rethinking Normalize.css.**
 All CSS shouldn’t be normalized in a low level library *like* normalize.css. When it is, that code is opinionated and that style is likely overwritten when sites/apps are styled.
 
 The CSS fix presented below (which also has an accompanying “do” CSS) is not just yet-another take on normalize.css. It solves the same problems, updated, though differently (but obviously many similar rules to the before mentioned libraries), with code as minimal as possible. This code knows what it wants. It's focused. It has a priority of goals:
@@ -34,3 +35,28 @@ The items naturally splits into different files---*the last item can be endlessl
 [nc]: https://github.com/necolas/normalize.css/
 [op]: https://open-props.style/
 [sc]: https://github.com/csstools/sanitize.css
+
+<style lang="scss">
+	p:first-child {
+		margin-block-start: calc(1 * var(--space));
+	}
+
+	p:first-child,
+	hr + p {
+		strong:first-of-type {
+			font-family: initial;
+			font-size: calc(1em * var(--line-height));
+			line-height: 1;
+		}
+	}
+
+	/*
+	p {
+		margin-block-end: 0;
+	}
+
+	p + p {
+		margin-block-start: 0;
+	}
+	*/
+</style>

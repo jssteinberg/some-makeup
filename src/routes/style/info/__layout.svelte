@@ -31,7 +31,6 @@
 					<a
 						href={item.href}
 						sveltekit:prefetch
-						sveltekit:noscroll
 						class="touch-target"
 						aria-current={$page.url.pathname === item.href ? `page` : undefined}
 					>
