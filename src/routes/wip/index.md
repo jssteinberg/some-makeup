@@ -1,6 +1,7 @@
 ---
 title: WIP
 description: Works in progress.
+layout: no
 ---
 
 # WIP
@@ -39,3 +40,9 @@ description: Works in progress.
 		};
 	};
 </script>
+
+<style>
+h1, h1 ~ :global(*) {
+	margin-inline: var(--view-inline);
+}
+</style>

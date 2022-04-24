@@ -42,7 +42,7 @@
 
 <div lang={langAttr} class={`
 	app-theme-main-content
-	${set.includes(`typography`) ? `typography` : ``}
+	${set.includes(`nontypographic`) ? `` : `typography`}
 `}>
 	<slot />
 

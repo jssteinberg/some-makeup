@@ -62,7 +62,8 @@ a { color: inherit; }
 
 /* UTIL CLASSES */
 
-.typography {
+/* .typography, .typographic */
+[class="typograph"] {
 	text-rendering: optimizeLegibility;
 }
 

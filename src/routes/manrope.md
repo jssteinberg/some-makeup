@@ -1,11 +1,11 @@
 ---
-title: Manrope Font
+title: Manrope Font-Face
 description: "A modern sans-serif variable font."
-set: ["typography", "code"]
+set: ["code"]
 date: ["2022-04-20"]
 ---
 
-# Manrope Font
+# Manrope `@font-face`
 
 > A modern sans-serif for everyone.
 

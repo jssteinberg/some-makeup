@@ -8,12 +8,14 @@ layout: no
 
 # _some_**.**[makeup-style](/style)
 
-- <a href="/manrope" sveltekit:prefetch>
+- <small><time>2022-04-20</time></small>
+	<a href="/manrope" sveltekit:prefetch>
 
-	Manrope Font
+	Manrope `@font-face`
 
 	</a>
-- <a href="/gradient-text" sveltekit:prefetch>
+- <small><time>2022-01-26</time></small>
+	<a href="/gradient-text" sveltekit:prefetch>
 
 	Gradient Text CSS: Overused Yet?
 
@@ -50,10 +52,6 @@ layout: no
 		min-width: var(--TOUCH-TARGET-SIZE, 48px);
 	}
 
-	ul a {
-		align-items: center;
-	}
-
 	ul a > p {
 		margin: 0;
 	}
@@ -63,5 +61,9 @@ layout: no
 		gap: 1em;
 		list-style: none;
 		padding: 0;
+	}
+
+	time {
+		display: block;
 	}
 </style>
