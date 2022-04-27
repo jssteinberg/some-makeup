@@ -1,0 +1,153 @@
+.app-theme-main-content {
+	--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+	--added-lead: .6;
+	--line-height: calc(1 + .6);
+	--cfs: var(--sans);
+
+	font-family: var(--cfs);
+	font-size: var(--font-size);
+
+	padding-inline-start: var(--view-inline);
+	padding-inline-end: var(--view-inline);
+
+	display: flex;
+	flex-direction: column;
+
+	blockquote {
+		background:
+			linear-gradient(currentColor, currentColor)
+			bottom left/1px calc(100% - 1.75em)
+			no-repeat;
+		margin-inline: 0;
+		padding: var(--space, 1em) 0 0 calc(.5 * var(--space, 1em));
+		position: relative;
+	}
+
+	blockquote::before {
+		content: '“';
+		font-size: 3em;
+		position: absolute;
+		top: -.375em;
+		left: -.17em;
+	}
+
+	blockquote > :is(p,ol,ul):last-child {
+		margin-block-end: 0;
+	}
+
+	blockquote > :is(p,ol,ul):first-child {
+		margin-block-start: 0;
+	}
+}
+
+:where(.app-theme-main-content) {
+	> {
+		:not(h1),
+		:not(h1) li p {
+			margin-block-start: 0;
+		}
+
+		:not(h1,pre) {
+			width: var(--content-width);
+		}
+	}
+
+	h1 {
+		margin-block-end: calc(1.5 * var(--space));
+		font-weight: 700; font-weight: 800; font-weight: 900;
+	}
+
+	h2 {
+		font-weight: 700;
+	}
+
+	:is(h4, h5, h6) {
+		margin-block-end: 0;
+	}
+
+	:is(h4, h5, h6) + * {
+		margin-block-start: 0;
+	}
+
+	:is(h5, h6) {
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	:is(h1,h2,h3,h4,h5,h6) em {
+		font-weight: normal;
+	}
+
+	@media (min-width: 1500px) {
+		h1 { --h1-line-span: 3; }
+		h2 { --h2-line-span: 2; }
+		h3 { --h3-added-lead: .25; }
+	}
+
+	:is(ol, ul) {
+		padding-inline-start: var(--space, 1em);
+	}
+
+	ul {
+		list-style: square;
+	}
+
+	:is(em,cite) :is(em,cite) {
+		font-style: normal;
+	}
+
+	strong {
+		font-variant: small-caps;
+	}
+
+	a {
+		text-underline-offset:     .15em;
+		text-decoration-thickness: .5ex;
+		text-decoration-color: var(--sep-color);
+	}
+
+	a:hover {
+		text-decoration-color: currentColor;
+	}
+
+	:is(code,kbd,samp,small) {
+		font-size: .9em;
+	}
+
+	/* Code */
+
+	code {
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	}
+
+	:not(:is(h1,pre)) > code {
+		background: var(--sep-color);
+		border-radius: .15rem;
+		padding: .15em .25em;
+		white-space: normal;
+	}
+
+	/* Code block */
+
+	pre {
+		border-right: 1px dashed var(--sep-color);
+		hyphens: none;
+		overflow: auto;
+		padding: 0 var(--space) var(--space) 0;
+		tab-size: 2;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		position: relative;
+	}
+
+	:where(pre)::after {
+		border-bottom: 1px solid var(--sep-color);
+		content: "";
+		position: absolute;
+		bottom: 0; left: 0;
+		width: var(--content-width);
+		height: 1px;
+	}
+}

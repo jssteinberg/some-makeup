@@ -31,14 +31,6 @@
 	}
 />
 
-<div lang={langAttr} class={`
-	content
-	${set.includes(`typography`) ? `content--typography` : ``}
-	${set.includes(`sans`) ? `content--sans` : ``}
-`}>
-	<slot />
-</div>
-
 <ContainCss />
 <IntuitiveCss />
 <SpaceCss />
@@ -48,145 +40,13 @@
 	<PrismCss />
 {/if}
 
-<style>
-	.content {
-		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
-		--added-lead: .6;
-		--line-height: calc(1 + .6);
-		--cfs: var(--sans);
+<div lang={langAttr} class={`
+	app-theme-main-content
+	${set.includes(`nontypographic`) ? `` : `typography`}
+`}>
+	<slot />
 
-		font-family: var(--cfs);
-		font-size: var(--font-size);
-
-		padding-inline-start: var(--view-inline);
-		padding-inline-end: var(--view-inline);
-
-		display: flex;
-		flex-direction: column;
-	}
-
-	.content--typography { text-rendering: optimizeLegibility; }
-
-	:where(.content) > :global(:not(h1)),
-	:where(.content) > :global(:not(h1) li p) {
-		margin-block-start: 0;
-	}
-
-	:where(.content) > :global(:not(h1,pre)) {
-		width: var(--content-width);
-	}
-
-	:where(.content) :global(h1) {
-		margin-block-end: calc(1.5 * var(--space));
-	}
-
-	:where(.content) :global(:is(h1, h2)) {
-		font-weight: 700; font-weight: 800; font-weight: 900;
-	}
-
-	:where(.content) :global(:is(h4, h5, h6)) {
-		margin-block-end: 0;
-	}
-
-	:where(.content) :global(:is(h4, h5, h6) + *) {
-		margin-block-start: 0;
-	}
-
-	:where(.content) :global(:is(h5, h6)) {
-		font-weight: normal;
-		font-style: italic;
-	}
-
-
-	@media (min-width: 1500px) {
-		:where(.content) :global(h1) { --h1-line-span: 3; }
-		:where(.content) :global(h2) { --h2-line-span: 2; }
-		:where(.content) :global(h3) { --h3-added-lead: .25; }
-	}
-
-	:where(.content) :global(:is(ol, ul)) {
-		padding-inline-start: var(--space, 1em);
-	}
-
-	:where(.content) :global(ul) {
-		list-style: square;
-	}
-
-	:where(.content) :global(:is(em,cite) :is(em,cite)) {
-		font-style: normal;
-	}
-
-	:where(.content) :global(strong) {
-		font-variant: small-caps;
-	}
-
-	:where(.content) :global(a) {
-		text-underline-offset:     .15em;
-		text-decoration-thickness: .5ex;
-		text-decoration-color: var(--sep-color);
-	}
-
-	:where(.content) :global(a:hover) {
-		text-decoration-color: currentColor;
-	}
-
-	.content :global(blockquote) {
-		background:
-			linear-gradient(currentColor, currentColor)
-			bottom left/1px calc(100% - 1.75em)
-			no-repeat;
-		margin-inline: 0;
-		padding: var(--space, 1em) 0 0 calc(.5 * var(--space, 1em));
-		position: relative;
-	}
-
-	.content :global(blockquote::before) {
-		content: '“';
-		font-size: 3em;
-		position: absolute;
-		top: -.375em;
-		left: -.17em;
-	}
-
-	.content :global(blockquote > :is(p,ol,ul):last-child) {
-		margin-block-end: 0;
-	}
-
-	.content :global(blockquote > :is(p,ol,ul):first-child) {
-		margin-block-start: 0;
-	}
-
-	:where(.content) :global(:is(code,kbd,samp,small)) {
-		font-size: .9em;
-	}
-
-	/* Code */
-
-	:where(.content) :global(code) {
-		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-	}
-
-	:where(.content) :global(:not(:is(h1,pre)) > code) {
-		background: var(--sep-color);
-		border-radius: .15rem;
-		padding: .15em .25em;
-		white-space: normal;
-	}
-
-	/* Code block */
-
-	:where(.content) :global(:where(pre)) {
-		background: linear-gradient(
-				90deg, currentColor, currentColor var(--content-width), var(--sep-color) var(--content-width)
-			) top left/100% 1px no-repeat;
-		box-shadow: inset -1px 0 var(--sep-color);
-		hyphens: none;
-		overflow: auto;
-		padding: var(--space) var(--space) var(--space) 0;
-		tab-size: 2;
-		white-space: pre;
-		word-spacing: normal;
-		word-break: normal;
-		word-wrap: normal;
-	}
-</style>
+	<style lang="scss">
+		@use './app-theme-main-content.scss';
+	</style>
+</div>

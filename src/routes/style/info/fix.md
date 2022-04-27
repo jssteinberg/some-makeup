@@ -1,13 +1,9 @@
 ---
-title: Fix & Do CSS
+title: Fix CSS
 set: ["typography", "code"]
 ---
 
-# Fix & Do CSS:<br aria-hidden="true">Beyond a Selective CSS Normalize
-
-## Fix CSS
-
-> Fix default CSS: so displaying content and styling is safe on any device by not overflowing; to prevent inline elements from affecting line-height, and; so defaults are consistent between elements.
+# Fix CSS
 
 A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 

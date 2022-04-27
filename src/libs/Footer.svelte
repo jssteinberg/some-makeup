@@ -53,6 +53,8 @@
 				--bg: white;
 				--fg-l: 0%;
 				--sep-fg-a: .15;
+
+				color-scheme: light;
 			}
 
 			:is(pre,code) .token {

@@ -1,11 +1,15 @@
 <script>
-	import Nav from '/src/libs/Nav.svelte';
+	import { page } from '$app/stores';
 
 	const links = [
 		{
-			label: 'Fix & Do CSS',
-			href: '/style/info/fix-do-css',
+			label: 'Introduction',
+			href: '/style/info'
 		},
+		{
+			label: 'Fix CSS',
+			href: '/style/info/fix'
+		}
 		/* { */
 		/* 	label: 'Space & Flow CSS', */
 		/* 	href: '/style/space-flow-css', */
@@ -13,6 +17,78 @@
 	];
 </script>
 
-<Nav {links} />
+<article>
+	<header>
+		{#if $page.routeId === `style/info`}
+			<h1>makeup-style <strong>in-depth</strong></h1>
+		{:else}
+			<h2>makeup-style <strong>in-depth</strong></h2>
+		{/if}
 
-<slot />
+		<ol>
+			{#each links as item, i}
+				<li>
+					<a
+						href={item.href}
+						sveltekit:prefetch
+						class="touch-target"
+						aria-current={$page.url.pathname === item.href ? `page` : undefined}
+					>
+						{item.label}
+					</a>
+				</li>
+			{/each}
+		</ol>
+	</header>
+
+	<slot />
+</article>
+
+<style>
+	header {
+		--bg-9: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
+		--bg-75: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .75);
+
+		background: linear-gradient(
+			var(--bg-9),
+			var(--bg-75)
+		);
+		border-bottom: 1px solid var(--sep-color);
+		margin-block-end: 1rem;
+		overflow-x: auto;
+		padding-inline: var(--view-inline);
+
+		display: flex;
+		align-items: center;
+		gap: 1em;
+
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+
+	header * {
+		white-space: nowrap;
+	}
+
+	h1,
+	h2 {
+		font-size: 1em;
+		font-weight: normal;
+		line-height: inherit;
+		margin: 0;
+	}
+
+	header ol {
+		list-style: inside decimal;
+		margin: 0;
+		padding: 0;
+
+		display: flex;
+		gap: 1em;
+	}
+
+	[aria-current] {
+		text-decoration: none;
+	}
+</style>
