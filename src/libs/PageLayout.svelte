@@ -42,7 +42,8 @@
 
 <div lang={langAttr} class={`
 	app-theme-main-content
-	${set.includes(`nontypographic`) ? `` : `typography`}
+	${set.includes(`sans`) ? `sans-theme` : ``}
+	${set.includes(`mixed`) ? `` : `typography`}
 `}>
 	<slot />
 

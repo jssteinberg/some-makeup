@@ -1,7 +1,7 @@
 ---
 title: makeup-style
 description: So you want to makeup some styling?
-set: ["typography", "code", "sans"]
+set: ["code"]
 ---
 
 # makeup-style
@@ -14,9 +14,6 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 npm install makeup-style
 ```
 
-<div class="grid">
-<section>
-
 ## 1. "Fix"
 
 ```css
@@ -24,9 +21,6 @@ npm install makeup-style
 ```
 
 Populate HTML documents and code CSS safely. Focused and lean CSS fix: to prevent text and content from overflowing; to prevent the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>; fixes for font rules, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
-
-</section>
-<section>
 
 ### 1.2 "Do"---A <cite>Fix</cite> Expansion
 
@@ -36,9 +30,6 @@ Populate HTML documents and code CSS safely. Focused and lean CSS fix: to preven
 
 When you want to restyle more, do it with ease.
 Rulesets for a better developer experience and a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
-
-</section>
-<section>
 
 ## 2. "Space"
 
@@ -76,8 +67,6 @@ CSS rulesets for consistent spacing between the needed block-level elements.
 ```
 
 </Details>
-</section>
-<section>
 
 ### 2.1 "Flow"---A <cite>Space</cite> Expansion
 
@@ -136,9 +125,6 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 		background-image: linear-gradient(90deg,lightblue,blue);
 	}
 	```
-	---
-
-</div>
 
 ## 3. Additional Class Files
 
@@ -146,29 +132,6 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 /* .touch-target, .touch-target-center */
 @import "makeup-style/src/class/touch-target.css";
 ```
-
-<style>
-	hr {
-		background-image: linear-gradient(90deg,lightblue,blue);
-	}
-
-	@media (min-width: 600px) {
-		.grid {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.grid section {
-			width: calc(100% - min(5em, var(--view-inline)));
-			max-width: var(--content-width);
-		}
-
-		.grid section:nth-of-type(even) {
-			align-self: flex-end;
-		}
-	}
-</style>
 
 <script>
  	import Details from "/src/libs/Details.svelte";

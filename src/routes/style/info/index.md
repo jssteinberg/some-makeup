@@ -1,12 +1,13 @@
 ---
 title: makeup-style in-depth
 description: "An HTML element's default style does actually show the semantic meaning of that element."
-set: ["typography", "code"]
+set: ["code"]
 ---
 
 **Coding CSS a** decade ago, a CSS-reset was normally used, and an utter annoyance. Especially for those new to web development. (CSS-resets resets all/most styles for all/most elements). Then [normalize.css][nc] became popular, thank god, and elements would more or less keep their intended default styles, just be somewhat styled to be more similar across browsers. Visually HTML elements made semantic sense again.
 
 An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but a link displays as a link, a list displays as a list, and so on. And I would think most agrees on that being a good thing, so many that there are quite a lot of projects in same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and others.
+*Though sanitize.css does include some resets as well, like for [lists in `nav`](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L93-L96).*
 
 ---
 
@@ -18,14 +19,9 @@ The CSS fix presented below (which also has an accompanying “do” CSS) is not
 1. Fix default CSS: so displaying content and styling is safe on any device by not overflowing; to prevent inline elements from affecting line-height, and; so defaults are consistent between elements.
 2. Improve default CSS, partly reset some elements, so more restyling and *doing* programming is as intuitive as can be---generally and cross-browser.
 3. Add basic CSS rules for better, basic typography and for easier typographic styling.
+- *Also, when natural, provide CSS properties/variables to make adjustments easier when needed.*
 
-Also, when natural, provide CSS properties/variables to make adjustments easier when needed.
-
-The items naturally splits into different files---*the last item can be endlessly expanded on*---so the needed base code can be imported. This also makes the ‘pure’ fix file less opinionated.
-
-1. fix.css
-2. do.css
-3. space.css and flow.css
+The items quite naturally splits into different files, so only the needed code can be imported. This also makes the ‘pure’ fix file less opinionated.
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
 [cc]: https://cube.fyi/
@@ -38,7 +34,7 @@ The items naturally splits into different files---*the last item can be endlessl
 
 <style lang="scss">
 	p:first-child {
-		margin-block-start: calc(1 * var(--space));
+		margin-block-start: calc(1.5 * var(--space));
 	}
 
 	p:first-child,
@@ -50,13 +46,31 @@ The items naturally splits into different files---*the last item can be endlessl
 		}
 	}
 
-	/*
 	p {
 		margin-block-end: 0;
 	}
 
 	p + p {
 		margin-block-start: 0;
+		text-indent: var(--space);
 	}
-	*/
+
+	hr {
+		background: none !important;
+		margin: 0 !important;
+	}
+
+	@media (min-width: 1200px) {
+		ol {
+			list-style: decimal;
+		}
+
+		:is(ol,ul) {
+			padding: 0;
+		}
+
+		:is(ol,ul) :is(ol,ul) {
+			padding: var(--space);
+		}
+	}
 </style>

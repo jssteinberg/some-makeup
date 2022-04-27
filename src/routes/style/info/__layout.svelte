@@ -20,9 +20,9 @@
 <article>
 	<header>
 		{#if $page.routeId === `style/info`}
-			<h1>makeup-style <strong>in-depth</strong></h1>
+			<h1><a href="/style">makeup-style</a> <strong><a href="/style/info">in-depth</a></strong></h1>
 		{:else}
-			<h2>makeup-style <strong>in-depth</strong></h2>
+			<h2><a href="/style">makeup-style</a> <strong><a href="/style/info">in-depth</a></strong></h2>
 		{/if}
 
 		<ol>
@@ -51,9 +51,9 @@
 
 		background: linear-gradient(
 			var(--bg-9),
-			var(--bg-75)
+			var(--bg-75),
+			transparent
 		);
-		border-bottom: 1px solid var(--sep-color);
 		margin-block-end: 1rem;
 		overflow-x: auto;
 		padding-inline: var(--view-inline);
@@ -91,4 +91,5 @@
 	[aria-current] {
 		text-decoration: none;
 	}
+
 </style>

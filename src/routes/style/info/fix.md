@@ -1,13 +1,13 @@
 ---
 title: Fix CSS
-set: ["typography", "code"]
+set: ["code"]
 ---
 
 # Fix CSS
 
 A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 
-Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other box-sizing value can cause cut and overflown content.
+Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other `box-sizing` value can cause cut and overflown content.
 
 ```css
 *, ::before, ::after {
@@ -18,6 +18,12 @@ Another way to implement this would be using the above rule for the root element
 For the root element there a two rules that prevents overflown text, and one normalizing rule, all three important for mobile devices.
 
 `overflow-wrap: break-word` (not  `word-break` property) it simply breaks words if needed to not overflow horizontally and create a horizontal scrollbar.
+
+<aside>
+
+*A side note on the above, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
+
+</aside>
 
 `hyphens: auto` allows the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports or for advanced content creators who knows `shy`.
 
@@ -184,12 +190,3 @@ body {
 [nc]: https://github.com/necolas/normalize.css/
 [op]: https://open-props.style/
 [sc]: https://github.com/csstools/sanitize.css
-
-<style>
-	hr {
-		background-image: linear-gradient(-45deg, var(--sep-color), var(--sep-color));
-		background-size: var(--space, 1em);
-		margin: calc(2 * var(--space)) 0;
-		transform: rotate(45deg);
-	}
-</style>

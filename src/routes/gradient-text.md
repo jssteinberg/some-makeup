@@ -3,7 +3,6 @@ title: 'CSS for gradient text: Overused yet?'
 description: The CSS code for gradient text has become too simple.
 date: ['2022-01-26']
 tags: ['css']
-set: ['typography', 'sans']
 ---
 
 # CSS for gradient text:<br aria-hidden> Overused yet?
@@ -42,7 +41,6 @@ h1.gradient-text {
 	}
 
 	strong {
-		font-weight: 800; font-weight: 900;
 		text-transform: uppercase;
 	}
 
