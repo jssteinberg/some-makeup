@@ -55,11 +55,6 @@ The items quite naturally splits into different files, so only the needed code c
 		text-indent: var(--space);
 	}
 
-	hr {
-		background: none !important;
-		margin: 0 !important;
-	}
-
 	@media (min-width: 1200px) {
 		ol {
 			list-style: decimal;
