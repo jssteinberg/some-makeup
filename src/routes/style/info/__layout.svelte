@@ -16,6 +16,8 @@
 		/* 	href: '/style/space-flow-css', */
 		/* }, */
 	];
+
+	$: part = links.filter(link => $page.routeId === link.href.replace(/^\//, ``))[0]?.label;
 </script>
 
 <Nav {links} ariaLabel="In-depth Parts" sticky />
@@ -23,9 +25,11 @@
 <article>
 	<header>
 		<h1>
-			makeup-style <strong>in-depth</strong>
+			makeup-style <strong>in-depth:</strong>
 			<br aria-hidden="true">
-			Part {links.find(link => $page.routeId === link.href.replace(/^\//, ``))[0]?.label || ``}
+			{#if part}
+				Part {part}
+			{/if}
 		</h1>
 	</header>
 

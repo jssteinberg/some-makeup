@@ -55,18 +55,18 @@
 		padding: 0 1em;
 	}
 
-	nav :global(a[aria-current="page"]),
+	nav :global([aria-current="page"]),
 	nav :global(a:is(:hover,:focus)) {
 		box-shadow: inset 0 0 0 1px;
 	}
 
-	nav :global(a[aria-current="page"]) {
+	nav :global([aria-current="page"]) {
 		text-decoration: none;
 	}
 
-	/* :where(nav) :global(a.parent) { */
-	/* 	box-shadow: inset 0 1px; */
-	/* } */
+	:where(nav):not(:has([aria-current="page"])) :global(a.parent) {
+		box-shadow: inset 0 1px;
+	}
 
 	nav.sticky {
 		--bg-1: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
