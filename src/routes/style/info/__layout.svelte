@@ -4,7 +4,7 @@
 
 	const links = [
 		{
-			label: 'Fix and do CSS',
+			label: 'Safer & Intuitive CSS',
 			href: '/style/info',
 		},
 		{
@@ -50,6 +50,7 @@
 
 	h1 small {
 		font-style: italic;
+		font-size: var(--font-size, 1rem);
 	}
 
 	.sep {

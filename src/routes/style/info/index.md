@@ -47,6 +47,10 @@ The items quite naturally splits into different files, and can then be imported 
 		text-indent: var(--space);
 	}
 
+	:is(ol,ul) :is(ol,ul) {
+		margin: 0;
+	}
+
 	@media (min-width: 1200px) {
 		ol {
 			list-style: decimal;
@@ -57,7 +61,6 @@ The items quite naturally splits into different files, and can then be imported 
 		}
 
 		:is(ol,ul) :is(ol,ul) {
-			margin: 0;
 			padding-inline-start: var(--space);
 		}
 	}
