@@ -1,13 +1,14 @@
 <script>
 	import { page } from '$app/stores';
+	import Nav from '$libs/Nav.svelte';
 
 	const links = [
 		{
-			label: 'Introduction',
+			label: '1. Introduction',
 			href: '/style/info'
 		},
 		{
-			label: 'Fix CSS',
+			label: '2. Fix CSS',
 			href: '/style/info/fix'
 		}
 		/* { */
@@ -17,28 +18,15 @@
 	];
 </script>
 
+<Nav {links} ariaLabel="In-depth Parts" />
+
 <article>
 	<header>
-		{#if $page.routeId === `style/info`}
-			<h1><a href="/style">makeup-style</a> <strong><a href="/style/info">in-depth</a></strong></h1>
-		{:else}
-			<h2><a href="/style">makeup-style</a> <strong><a href="/style/info">in-depth</a></strong></h2>
-		{/if}
-
-		<ol>
-			{#each links as item, i}
-				<li>
-					<a
-						href={item.href}
-						sveltekit:prefetch
-						class="touch-target"
-						aria-current={$page.url.pathname === item.href ? `page` : undefined}
-					>
-						{item.label}
-					</a>
-				</li>
-			{/each}
-		</ol>
+		<h1>
+			makeup-style <strong>in-depth</strong>
+			<br aria-hidden="true">
+			{links.filter(link => $page.routeId === link.href.replace(/^\//, ``))[0].label}
+		</h1>
 	</header>
 
 	<slot />
@@ -46,17 +34,20 @@
 
 <style>
 	header {
-		--bg-9: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
-		--bg-75: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .75);
+		margin-block-end: 1rem;
+		padding-inline: var(--view-inline);
+	}
+
+	.header {
+		--bg-1: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
+		--bg-2: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .45);
 
 		background: linear-gradient(
-			var(--bg-9),
-			var(--bg-75),
+			var(--bg-1) 50%,
+			var(--bg-2),
 			transparent
 		);
-		margin-block-end: 1rem;
 		overflow-x: auto;
-		padding-inline: var(--view-inline);
 
 		display: flex;
 		align-items: center;
@@ -67,28 +58,7 @@
 		z-index: 1;
 	}
 
-	header * {
+	.header * {
 		white-space: nowrap;
-	}
-
-	h1,
-	h2 {
-		font-size: 1em;
-		font-weight: normal;
-		line-height: inherit;
-		margin: 0;
-	}
-
-	header ol {
-		list-style: inside decimal;
-		margin: 0;
-		padding: 0;
-
-		display: flex;
-		gap: 1em;
-	}
-
-	[aria-current] {
-		text-decoration: none;
 	}
 </style>

@@ -3,8 +3,6 @@ title: Fix CSS
 set: ["code"]
 ---
 
-# Fix CSS
-
 A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 
 Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other `box-sizing` value can cause cut and overflown content.

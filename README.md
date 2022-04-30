@@ -10,14 +10,14 @@ The files in question: src/fix.css, src/do.css, src/space.css, src/flow.css.
 
 ---
 
-Plan:
+Plan v1:
 
 - Check support for `…-block`/`…-inline`. If good, then use.
 
 Plan v2:
 
-- wrap stuff in `:where()`
-- remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now. *No! It's for maintaining behaviour.*
+- Wrap stuff in `:where()` or use `@layer`.
+- Remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now. *No! It's for maintaining behaviour.*
 
 ## History
 

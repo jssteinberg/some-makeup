@@ -50,7 +50,7 @@
 	{#if !dark}
 		<style>
 			:root {
-				--bg: white;
+				--bg-l: 100%;
 				--fg-l: 0%;
 				--sep-fg-a: .15;
 

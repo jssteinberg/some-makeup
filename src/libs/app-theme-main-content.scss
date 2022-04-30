@@ -1,5 +1,29 @@
-.app-theme-main-content {
+h1 {
+	margin-block: calc(1.5 * var(--space));
+	font-weight: normal;
+
+	header:has(&) {
+		font-size: var(--font-size);
+	}
+
+	@media (min-width: 1500px) {
+		--h1-line-span: 3;
+	}
+}
+
+:where(
+	h1,
+	.app-theme-main-content
+) {
 	--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+
+	strong {
+		font-variant: small-caps;
+		font-weight: normal;
+	}
+}
+
+.app-theme-main-content {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
 	--cfs: var(--sans);
@@ -35,11 +59,6 @@
 		width: var(--content-width);
 	}
 
-	h1 {
-		margin-block: calc(1.5 * var(--space));
-		font-weight: normal;
-	}
-
 	h2 {
 		margin-block-start: calc(2 * var(--space));
 		font-weight: 700;
@@ -58,12 +77,11 @@
 		font-style: italic;
 	}
 
-	:is(h1,h2,h3,h4,h5,h6) em {
+	:is(h2,h3,h4,h5,h6) em {
 		font-weight: normal;
 	}
 
 	@media (min-width: 1500px) {
-		h1 { --h1-line-span: 3; }
 		h2 { --h2-line-span: 2; }
 		h3 { --h3-added-lead: .25; }
 	}
@@ -74,11 +92,6 @@
 
 	:is(em,cite) :is(em,cite) {
 		font-style: normal;
-	}
-
-	strong {
-		font-variant: small-caps;
-		font-weight: normal;
 	}
 
 	a {

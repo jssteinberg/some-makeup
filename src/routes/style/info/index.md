@@ -37,7 +37,7 @@ The items quite naturally splits into different files, so only the needed code c
 		margin-block-start: calc(1.5 * var(--space));
 	}
 
-	p:first-child,
+	p:nth-of-type(1),
 	hr + p {
 		strong:first-of-type {
 			font-family: initial;
