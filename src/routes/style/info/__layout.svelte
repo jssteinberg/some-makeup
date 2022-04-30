@@ -4,11 +4,11 @@
 
 	const links = [
 		{
-			label: '1. Introduction',
+			label: '1—Background',
 			href: '/style/info'
 		},
 		{
-			label: '2. Fix CSS',
+			label: '2—Fix CSS',
 			href: '/style/info/fix'
 		}
 		/* { */
@@ -20,13 +20,15 @@
 	$: part = links.filter(link => $page.routeId === link.href.replace(/^\//, ``))[0]?.label;
 </script>
 
-<Nav {links} ariaLabel="In-depth Parts" sticky />
-
 <article>
 	<header>
 		<h1>
-			makeup-style <strong>in-depth:</strong>
+			<small>
+			makeup-style in-depth:
+			</small>
+
 			<br aria-hidden="true">
+
 			{#if part}
 				Part {part}
 			{/if}
@@ -34,11 +36,17 @@
 	</header>
 
 	<slot />
+
+	<Nav {links} ariaLabel="In-depth Parts" sticky="bottom" />
 </article>
 
 <style>
 	header {
 		margin-block-end: 1rem;
 		padding-inline: var(--view-inline);
+	}
+
+	h1 small {
+		font-style: italic;
 	}
 </style>

@@ -55,6 +55,7 @@
 		padding: 0 1em;
 	}
 
+	nav.sticky a,
 	nav :global([aria-current="page"]),
 	nav :global(a:is(:hover,:focus)) {
 		box-shadow: inset 0 0 0 1px;
@@ -69,22 +70,12 @@
 	}
 
 	nav.sticky {
-		--bg-1: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
-		--bg-2: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .45);
-
-		background: linear-gradient(
-			var(--bg-1) 50%,
-			var(--bg-2),
-			transparent
-		);
-
+		--_offset: 1vh;
 		position: sticky;
-		z-index: 1;
 	}
-	nav.sticky:not(.sticky--bottom) {
-		top: 0;
+	nav.sticky a {
+		background: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
 	}
-	nav.sticky--bottom {
-		bottom: 0;
-	}
+	nav.sticky:not(.sticky--bottom) { top: var(--_offset); }
+	nav.sticky--bottom { bottom: var(--_offset); }
 </style>
