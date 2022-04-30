@@ -37,7 +37,7 @@
 
 @media (min-width: 900px) {
 	:root {
-		--font-size: clamp(1.1rem, .25rem + 0.875vw, 1.12em);
+		--font-size: clamp(1.1rem, .125rem + 1vw, 1.12em);
 	}
 }
 

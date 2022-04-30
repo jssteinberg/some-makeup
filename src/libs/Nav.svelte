@@ -71,11 +71,13 @@
 	nav.sticky {
 		--bg-1: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
 		--bg-2: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .45);
+
 		background: linear-gradient(
 			var(--bg-1) 50%,
 			var(--bg-2),
 			transparent
 		);
+
 		position: sticky;
 		z-index: 1;
 	}

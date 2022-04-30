@@ -25,7 +25,7 @@
 		<h1>
 			makeup-style <strong>in-depth</strong>
 			<br aria-hidden="true">
-			{links.filter(link => $page.routeId === link.href.replace(/^\//, ``))[0].label}
+			Part {links.find(link => $page.routeId === link.href.replace(/^\//, ``))[0]?.label || ``}
 		</h1>
 	</header>
 
