@@ -5,23 +5,19 @@ set: ["code"]
 
 A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 
-Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other `box-sizing` value can cause cut and overflown content.
-
 ```css
 *, ::before, ::after {
 	box-sizing: border-box;
 }
 ```
 
+*Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other `box-sizing` value can cause cut and overflown content.*
+
+---
+
 For the root element there a two rules that prevents overflown text, and one normalizing rule, all three important for mobile devices.
 
-`overflow-wrap: break-word` (not  `word-break` property) it simply breaks words if needed to not overflow horizontally and create a horizontal scrollbar.
-
-<aside>
-
-*A side note on the above, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
-
-</aside>
+`overflow-wrap: break-word` (not  `word-break` property) it simply breaks words if needed to not overflow horizontally and create a horizontal scrollbar. *As a side note, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
 
 `hyphens: auto` allows the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports or for advanced content creators who knows `shy`.
 
@@ -35,15 +31,19 @@ For the root element there a two rules that prevents overflown text, and one nor
 }
 ```
 
-To prevent `<pre>` from overflowing `pre-wrap` is declared. 
+---
 
-Another way to implement this would be a popular way to display code, using `overflow-x: auto`, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
+To prevent `<pre>` from overflowing `pre-wrap` is set.
 
 ```css
 pre {
 	white-space: pre-wrap;
 }
 ```
+
+*Another way to implement this would be to not wrap the content and use `overflow-x: auto`, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.*
+
+---
 
 Media and form related elements are ruled to be responsive, and could otherwise overflow.
 
@@ -59,6 +59,8 @@ img, svg, video, canvas {
 }
 ```
 
+---
+
 For accessibility, textareas only resize vertically by default.
 
 ```css
@@ -66,6 +68,8 @@ textarea {
 	resize: vertical;
 }
 ```
+
+---
 
 `<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
 
@@ -75,6 +79,8 @@ b, strong {
 }
 ```
 
+---
+
 Some inline elements can affect the line-heights of lines they are on. This is not a full normalization of these elements---which would have little value---but a single common rule that fixes the main problem for all these elements. Brilliant!
 
 ```css
@@ -82,6 +88,8 @@ code, kbd, samp, sub, sup {
 	line-height: .625;
 }
 ```
+
+---
 
 In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. This causes Ios to zoom in on the `input` when focused. For many users its annoying and/or confusing. For accessibility and usability, and to deal with a following side-effect, consistency: all interactive elements that doesn’t already have `font-size: 1em` are part of this ruleset.
 
@@ -91,9 +99,11 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 }
 ```
 
+---
+
 For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS.
 
-For `<source>`, this is can be considered a polyfill to not `display` this relatively new element which has nothing to display.
+For `<source>`, ensure this relatively new element is not displayed. It has nothing to display and can affect styling. *A polyfill.*
 
 ```css
 [hidden], source {
@@ -101,13 +111,17 @@ For `<source>`, this is can be considered a polyfill to not `display` this relat
 }
 ```
 
-Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio (polyfill).
+---
+
+Remove wrapping `picture` while maintaining content. If not it can interfere with layout and aspect-ratio when styling. *A polyfill.*
 
 ```css
 picture {
 	display: contents;
 }
 ```
+
+---
 
 This ruleset removes a block-end space for these elements that (can when `display` is changed for some of these) disrupt layouts.
 
@@ -146,17 +160,9 @@ select, summary {
 }
 ```
 
-## Do CSS
+---
 
-...
-
-```css
-body {
-	margin: 0;
-}
-```
-
-*To be continued*
+*To be continued with *“Do” it Intuitively*.*
 
 ## Side notes
 

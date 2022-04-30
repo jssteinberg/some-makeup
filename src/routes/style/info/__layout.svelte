@@ -4,15 +4,15 @@
 
 	const links = [
 		{
-			label: '1—Background',
-			href: '/style/info'
+			label: 'Fix and do CSS',
+			href: '/style/info',
 		},
 		{
-			label: '2—Fix CSS',
-			href: '/style/info/fix'
-		}
+			label: '“Fix” it Safer',
+			href: '/style/info/fix',
+		},
 		/* { */
-		/* 	label: 'Space & Flow CSS', */
+		/* 	label: '“Do” it Intuitively', */
 		/* 	href: '/style/space-flow-css', */
 		/* }, */
 	];
@@ -30,12 +30,14 @@
 			<br aria-hidden="true">
 
 			{#if part}
-				Part {part}
+				{part}
 			{/if}
 		</h1>
 	</header>
 
 	<slot />
+
+	<span class="sep" />
 
 	<Nav {links} ariaLabel="In-depth Parts" sticky="bottom" />
 </article>
@@ -48,5 +50,10 @@
 
 	h1 small {
 		font-style: italic;
+	}
+
+	.sep {
+		display: block;
+		height: var(--space, 1rem);
 	}
 </style>

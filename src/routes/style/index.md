@@ -14,24 +14,23 @@ These minimal CSS files fixes default browser CSS, for narrow viewports first, a
 npm install makeup-style
 ```
 
-## 1. "Fix"
+## 1. "Fix CSS"
 
 ```css
 @import "makeup-style/src/fix.css";
 ```
 
-Populate HTML documents and code CSS safely. Focused and lean CSS fix: to prevent text and content from overflowing; to prevent the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>; fixes for font rules, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
+*Populate HTML documents and code CSS safely.* A lean CSS fix that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; fixes font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
-### 1.2 "Do"---A <cite>Fix</cite> Expansion
+### 1.2 "Do CSS"---A <cite>Fix CSS</cite> Expansion
 
 ```css
 @import "makeup-style/src/do.css";
 ```
 
-When you want to restyle more, do it with ease.
-Rulesets for a better developer experience and a cross-browser normalize for `button` and `input` (and inputs that looks like buttons), so they are straightforward to style for all modern browsers.
+*When you're doing a full makeover, safely trust your intuition.* (Slightly) improve the CSS developer experience, and how buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them.
 
-## 2. "Space"
+## 2. "Space CSS"
 
 ```css
 @import "makeup-style/src/space.css";
@@ -68,7 +67,7 @@ CSS rulesets for consistent spacing between the needed block-level elements.
 
 </Details>
 
-### 2.1 "Flow"---A <cite>Space</cite> Expansion
+### 2.1 "Flow CSS"---A <cite>Space CSS</cite> Expansion
 
 ```css
 @import "makeup-style/src/flow.css";
