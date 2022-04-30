@@ -22,7 +22,7 @@ Do we need yet-another take on normalize.css? Maybe we do, but this isn't exactl
 2. Fix default CSS to simplify a full restyle (includes `form` related elements) so coding is as intuitive as can be---generally and across browsers.
 <!-- 3. Add basic CSS rules for better, basic typography and for easier typographic styling. -->
 
-*Also, when natural, provide CSS properties/variables to make adjustments easier when needed.*
+Also, when natural, provide CSS properties/variables to make adjustments easier when needed.
 
 ---
 

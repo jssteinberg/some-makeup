@@ -20,7 +20,7 @@ npm install makeup-style
 @import "makeup-style/src/fix.css";
 ```
 
-*Populate HTML documents and code CSS safely.* A lean CSS fix that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; fixes font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
+*Populate HTML documents and makeup style safely.* A lean CSS fix that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; fixes font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
 ### 1.2 "Do CSS"---A <cite>Fix CSS</cite> Expansion
 
@@ -28,7 +28,7 @@ npm install makeup-style
 @import "makeup-style/src/do.css";
 ```
 
-*When you're doing a full makeover, safely trust your intuition.* (Slightly) improve the CSS developer experience, and how buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them.
+*When you're doing a full makeup, do it intuitively.* An improvement of the CSS developer experience, and how buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them.
 
 ## 2. "Space CSS"
 
