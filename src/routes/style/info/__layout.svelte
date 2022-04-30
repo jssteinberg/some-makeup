@@ -18,7 +18,7 @@
 	];
 </script>
 
-<Nav {links} ariaLabel="In-depth Parts" />
+<Nav {links} ariaLabel="In-depth Parts" sticky />
 
 <article>
 	<header>
@@ -36,29 +36,5 @@
 	header {
 		margin-block-end: 1rem;
 		padding-inline: var(--view-inline);
-	}
-
-	.header {
-		--bg-1: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
-		--bg-2: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .45);
-
-		background: linear-gradient(
-			var(--bg-1) 50%,
-			var(--bg-2),
-			transparent
-		);
-		overflow-x: auto;
-
-		display: flex;
-		align-items: center;
-		gap: 1em;
-
-		position: sticky;
-		top: 0;
-		z-index: 1;
-	}
-
-	.header * {
-		white-space: nowrap;
 	}
 </style>

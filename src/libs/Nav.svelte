@@ -4,9 +4,15 @@
 	export let links = [];
 	export let ariaLabel;
 	export let ariaHidden;
+	export let sticky = ``;
+
+	let classes = `
+		${sticky ? `sticky` : ``}
+		${sticky === `bottom` ? `sticky--bottom` : ``}
+	`;
 </script>
 
-<nav aria-label={ariaLabel} aria-hidden={ariaHidden ? `true` : undefined}>
+<nav aria-label={ariaLabel} aria-hidden={ariaHidden ? `true` : undefined} class={classes}>
 	{#each links as link}
 		<a
 			href={link.href}
@@ -58,11 +64,25 @@
 		text-decoration: none;
 	}
 
-	:where(nav) :global(a.parent) {
-		box-shadow: inset 0 1px;
-	}
-
-	/* nav ~ :global(nav a) { */
-	/* 	box-shadow: none; */
+	/* :where(nav) :global(a.parent) { */
+	/* 	box-shadow: inset 0 1px; */
 	/* } */
+
+	nav.sticky {
+		--bg-1: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
+		--bg-2: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .45);
+		background: linear-gradient(
+			var(--bg-1) 50%,
+			var(--bg-2),
+			transparent
+		);
+		position: sticky;
+		z-index: 1;
+	}
+	nav.sticky:not(.sticky--bottom) {
+		top: 0;
+	}
+	nav.sticky--bottom {
+		bottom: 0;
+	}
 </style>
