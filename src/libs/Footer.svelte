@@ -1,7 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-
-	let dark = true;
 </script>
 
 <footer class="footer">
@@ -41,28 +39,9 @@
 	</p>
 
 	<div aria-hidden="true" class="button-container">
-		<button class="touch-target" on:click={() => {dark = !dark}}>Dark/light</button>
-		<button class="touch-target" on:click={() => {window.scrollTo(0,0)}}>Top</button>
+		<a href="#top" tabindex="-1" class="touch-target" on:click|preventDefault={() => {window.scrollTo(0,0)}}>Top</a>
 	</div>
 </footer>
-
-<svelte:head>
-	{#if !dark}
-		<style>
-			:root {
-				--bg-l: 100%;
-				--fg-l: 0%;
-				--sep-fg-a: .15;
-
-				color-scheme: light;
-			}
-
-			:is(pre,code) .token {
-				color: var(--fg) !important;
-			}
-		</style>
-	{/if}
-</svelte:head>
 
 <style>
 	*, ::before, ::after {
@@ -84,9 +63,7 @@
 		padding: 0;
 	}
 
-	a, button {
-		all: unset;
-		cursor: pointer;
+	a {
 		display: inline-flex;
 		align-items: center;
 		min-height: var(--TOUCH-TARGET-SIZE);
@@ -95,7 +72,7 @@
 		font-variant: small-caps;
 	}
 
-	:is(a, button):is(:focus-visible,:active) {
+	a:is(:focus-visible,:active) {
 		text-decoration: underline;
 	}
 
