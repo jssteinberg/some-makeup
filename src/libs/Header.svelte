@@ -8,8 +8,7 @@
 				--bg-l: 100%;
 				--fg-l: 0%;
 				--sep-fg-a: .15;
-
-				color-scheme: light;
+				--color-scheme: light;
 			}
 
 			:is(pre,code) .token {

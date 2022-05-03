@@ -27,6 +27,8 @@
 
 	--sep-fg: hsla(var(--fg-h), var(--fg-s), var(--fg-l), var(--sep-fg-a, 0.2));
 	--sep-color: var(--sep-fg);
+
+	--color-scheme: dark;
 }
 
 @media (min-width: 600px) {
@@ -49,7 +51,7 @@
 
 :root {
 	background-color: var(--bg);
-	color-scheme: dark;
+	color-scheme: var(--color-scheme);
 	min-height: 100vh; /* Too avoid bg clip on bg change */
 }
 
