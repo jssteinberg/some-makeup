@@ -47,24 +47,40 @@
 	}
 
 	.color-switcher {
-		background: transparent;
+		background: var(--fg);
 		color: var(--bg);
 		position: relative;
 	}
 
 	.color-switcher::after {
-		background: var(--fg);
+		--_off: calc(.5rem - 1px);
+		--_duration: .25s;
+
+		background: transparent;
 		content: "";
 		display: block;
 		position: absolute;
-		inset: .5rem .5rem -.5rem -.5rem;
+		inset: var(--_off) var(--_off) calc(-1 * var(--_off)) calc(-1 * var(--_off));
 		z-index: -1;
 		transform: translate(0,0);
-		transition: transform .5s ease;
+		transition: transform var(--_duration) ease;
 	}
 
 	.color-switcher:is(:hover,:focus-visible)::after {
-		transform: translate(.5rem,-.5rem);
+		transform: translate(var(--_off), calc(-1 * var(--_off)));
+		outline: none;
+		animation: outline-1px calc(.5 * var(--_duration)) forwards var(--_duration);
+	}
+
+	@keyframes outline-1px {
+		from {
+			outline: 1px solid transparent;
+			outline-offset: 0;
+		}
+		to {
+			outline: 1px solid var(--fg);
+			outline-offset: 1px;
+		}
 	}
 </style>
 

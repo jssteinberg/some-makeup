@@ -57,8 +57,9 @@
 
 	nav.sticky a,
 	nav :global([aria-current="page"]),
-	nav :global(a:is(:hover,:focus)) {
+	nav :global(a:is(:hover,:focus-visible)) {
 		box-shadow: inset 0 0 0 1px;
+		text-decoration: underline;
 	}
 
 	nav :global([aria-current="page"]) {

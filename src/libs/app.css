@@ -58,12 +58,29 @@ body {
 	margin: 0;
 }
 
-a { color: inherit; }
+a {
+	color: inherit;
+}
+
+/* Transform for clicked feedback */
+a:active {
+	transform: translateY(2px);
+	transition: transform .1s ease;
+}
+
+/* Remove animations and transitions when user prefers it. */
+@media (prefers-reduced-motion: reduce) {
+	*, ::before, ::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
 
 /* UTIL CLASSES */
 
-/* .typography, .typographic */
-[class="typograph"] {
+.typography {
 	text-rendering: optimizeLegibility;
 }
 
