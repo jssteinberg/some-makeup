@@ -50,6 +50,7 @@
 		background: var(--fg);
 		color: var(--bg);
 		position: relative;
+		z-index: 2;
 	}
 
 	.color-switcher::after {
@@ -59,16 +60,20 @@
 		background: transparent;
 		content: "";
 		display: block;
-		position: absolute;
-		inset: var(--_off) var(--_off) calc(-1 * var(--_off)) calc(-1 * var(--_off));
-		z-index: -1;
+		outline: none;
 		transform: translate(0,0);
 		transition: transform var(--_duration) ease;
+
+		position: absolute;
+		inset: var(--_off) var(--_off) calc(-1 * var(--_off)) calc(-1 * var(--_off));
+		z-index: 1;
 	}
 
 	.color-switcher:is(:hover,:focus-visible)::after {
 		transform: translate(var(--_off), calc(-1 * var(--_off)));
-		outline: none;
+	}
+
+	.color-switcher:focus-visible::after {
 		animation: outline-1px calc(.5 * var(--_duration)) forwards var(--_duration);
 	}
 
