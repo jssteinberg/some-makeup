@@ -57,14 +57,14 @@
 		content: "";
 		display: block;
 		position: absolute;
-		inset: 0;
-		transform: translate(.5rem, .5rem);
+		inset: .5rem .5rem -.5rem -.5rem;
 		z-index: -1;
+		transform: translate(0,0);
 		transition: transform .5s ease;
 	}
 
-	.color-switcher:is(:hover,:focus)::after {
-		transform: none;
+	.color-switcher:is(:hover,:focus-visible)::after {
+		transform: translate(.5rem,-.5rem);
 	}
 </style>
 
