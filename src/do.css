@@ -1,7 +1,7 @@
-/* FOR EASIER STYLING */
+/* EASE STYLING */
 
-/* Background images are not repeated. */
 *, ::before, ::after {
+	/* Background images are not repeated. */
 	background-repeat: no-repeat; }
 
 ::before, ::after {
@@ -12,43 +12,45 @@
 	/* Inherit vertical alignment. */
 	vertical-align: inherit; }
 
-/* Remove body margin---always removed when theming. */
 body {
+	/* Remove body margin---always removed when theming. */
 	margin: 0; }
 
-/* NORMALIZATION FOR EASIER CROSS-BROWSER STYLING */
+/* EASE CROSS-BROWSER STYLING */
 
-/* Set `search` to textfield. */
 input[type="search" i] {
+	/* Set `search` to textfield. */
 	-webkit-appearance: textfield; }
 
-/* Remove search cancel button. */
 input[type="search"]::-webkit-search-cancel-button {
+	/* Remove search cancel button. */
 	-webkit-appearance: none; }
 
 button, ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i] {
 	/* Fix inability to style buttons in Ios and Safari. */
 	-webkit-appearance: button;
-	/* Normalize sanely. */
-	border: none;
-	box-shadow: unset;
-	line-height: inherit; }
+	/* `border` variable/`none`. */
+	border: var(--button-border, none);
+	/* `box-shadow` variable/`unset`. */
+	box-shadow: var(--button-shadow, unset);
+	/* `line-height` variable/`inherit`. */
+	line-height: var(--button-line-height, inherit); }
 
 ::file-selector-button, button, input, textarea, select {
-	/* Consistent, usable `border-radius`. */
-	border-radius: .125em;
-	/* Inherit font-family. */
-	font-family: inherit; }
+	/* Consistent, usable `border-radius` variable/value. */
+	border-radius: var(--form-elements-border-radius, .125em);
+	/* `font-family` variable/`inherit`. */
+	font-family: var(--form-elements-font-family, inherit); }
 
-/* Remove the margin on controls in Safari. */
 button, input, select, textarea {
+	/* Remove the margin on controls in Safari. */
 	margin: 0; }
 
-/* REDUCE MOTION */
+/* EASE KEEPING A11Y */
 
-/* Remove animations and transitions when user prefers it. */
 @media (prefers-reduced-motion: reduce) {
 	*, ::before, ::after {
+		/* Remove animations and transitions when user prefers it. */
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;

@@ -22,6 +22,8 @@ npm install makeup-style
 
 *Populate HTML documents and makeup style safely.* A lean CSS fix that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; fixes font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
+`--form-elements-font-size` for setting `font-size` value of `form` related elements (buttons, inputs, `select` and `textarea`).
+
 ### 1.2 "Do CSS"---A <cite>Fix CSS</cite> Expansion
 
 ```css
@@ -29,6 +31,16 @@ npm install makeup-style
 ```
 
 *When you're doing a full makeup, do it intuitively.* An improvement of the CSS developer experience, and how buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them.
+
+`--form-elements-border-radius` for ...
+
+`--form-elements-font-family` for ...
+
+`--button-border` for ... *Variables for customizing buttons are not included in completness.*
+
+`--button-shadow` for ... *Variables for customizing buttons are not included in completness.*
+
+`--button-line-height` for ... *Variables for customizing buttons are not included in completness.*
 
 ## 2. "Space CSS"
 
