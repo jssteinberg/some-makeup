@@ -46,7 +46,7 @@ code, kbd, samp, sub, sup {
 
 ::file-selector-button, button, input, select, textarea {
 	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). Include others elements for consistency. */
-	font-size: var(--form-elements-font-size, 1em); }
+	font-size: 1em; }
 
 /* DISPLAY BEHAVIORS */
 
