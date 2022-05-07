@@ -3,7 +3,7 @@
 		makeup-style
 		${testLabel ? `${testLabel} test` : `tests`}
 	`}
-	description={`Test makeup-style code for ${testLabel}.`}
+	description={`Test makeup-style code for ${testLabel ? testLabel : ``}.`}
 />
 
 <svelte:head>
@@ -18,16 +18,17 @@
 
 {#if els && els.length}
 	<div aria-hidden="true" id="element-heights">
-		<span class="header">px</span>
-			{#each els as item}
-				<span
-					style:transform={
-						`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
-					}
-				>
-					{item.offsetHeight}
-				</span>
-			{/each}
+		{#each els as item,i}
+			<span
+				class="element-height-val"
+				style:transform={
+					`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
+				}
+			>
+				{#if i === 0}px:{/if}
+				{item.offsetHeight}
+			</span>
+		{/each}
 	</div>
 {/if}
 
@@ -53,6 +54,7 @@
 	import { page } from '$app/stores';
 	import MetaTags from '$libs/MetaData.svelte';
 	import TestsNav from './_tests-nav.svelte';
+	import { onMount } from 'svelte';
 
 	const links = [
 		{
@@ -79,12 +81,8 @@
 
 	let els;
 	let scrollY = 0;
-	let testLabel;
-
-	$: {
-		testLabel = links.find(val => val.href === $page.url.pathname)?.label;
-		updateTest();
-	}
+	$: testLabel = links.find(val => val.href === $page.url.pathname)?.label;
+	$: if ($page) { updateTest(); }
 
 	const updateTest = () => {
 		if (typeof document !== 'undefined')
@@ -92,6 +90,8 @@
 				'#tests section :is(p,h2)'
 			);
 	};
+
+	onMount(() => { updateTest(); });
 </script>
 
 <style>
@@ -137,22 +137,17 @@
 		height: 100%;
 	}
 
-	#element-heights span {
+	.element-height-val {
 		background: var(--bg);
 		color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .5);
 		font-family: var(--sans);
 		font-weight: 100; font-weight: 300;
-		font-size: clamp(1ex, var(--view-inline) - .9em, 1.7ex);
-		line-height: 1;
+		font-size: clamp(1ex, var(--view-inline) - .9em, 1.5ex);
+		line-height: .9;
 		width: calc(var(--view-inline) - 3px);
 		position: absolute;
 		left: 1px;
 		top: 0;
 		text-align: end;
-	}
-
-	#element-heights .header {
-		position: fixed;
-		top: calc(50vh - .5em);
 	}
 </style>
