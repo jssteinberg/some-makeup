@@ -1,3 +1,52 @@
+<MetaTags
+	title={`
+		makeup-style
+		${testLabel ? `${testLabel} test` : `tests`}
+	`}
+	description={`Test makeup-style code for ${testLabel}.`}
+/>
+
+<svelte:head>
+	<meta name="robots" content="noindex">
+</svelte:head>
+
+<svelte:window bind:scrollY />
+
+<Nav {links} ariaLabel="Test-pages" />
+
+<CssToggle on:toggle={updateTest} />
+
+{#if els && els.length}
+	<div aria-hidden="true" id="element-heights">
+		<span class="header">px</span>
+			{#each els as item}
+				<span
+					style:transform={
+						`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
+					}
+				>
+					{item.offsetHeight}
+				</span>
+			{/each}
+	</div>
+{/if}
+
+<div id="tests" class="wrapper">
+	<slot />
+
+	<TestsNav {links} />
+
+	<details>
+		<summary><em>Your browser</em></summary>
+
+		{#if typeof navigator !== "undefined"}
+			{navigator.userAgent}
+		{:else}
+			Not loaded
+		{/if}
+	</details>
+</div>
+
 <script>
 	import CssToggle from './_css-toggle.svelte';
 	import Nav from '$libs/Nav.svelte';
@@ -44,48 +93,6 @@
 			);
 	};
 </script>
-
-<svelte:window bind:scrollY />
-<MetaTags
-	title={`
-		makeup-style
-		${testLabel ? `${testLabel} test` : `tests`}
-	`}
-	description={`Test makeup-style code for ${testLabel}.`}
-/>
-<Nav {links} ariaLabel="Test-pages" />
-<CssToggle on:toggle={updateTest} />
-
-{#if els && els.length}
-	<div aria-hidden="true" id="element-heights">
-		<span class="header">px</span>
-			{#each els as item}
-				<span
-					style:transform={
-						`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
-					}
-				>
-					{item.offsetHeight}
-				</span>
-			{/each}
-	</div>
-{/if}
-
-<div id="tests" class="wrapper">
-	<slot />
-
-	<TestsNav {links} />
-
-	<details>
-		<summary><em>Your browser</em></summary>
-
-		{#if typeof navigator !== "undefined"}
-			{navigator.userAgent}
-		{:else}
-			Not loaded
-		{/if}
-	</details>
-</div>
 
 <style>
 	*, ::before, ::after {
@@ -135,7 +142,7 @@
 		color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .5);
 		font-family: var(--sans);
 		font-weight: 100; font-weight: 300;
-		font-size: min(var(--view-inline) - .9em, 1.7ex);
+		font-size: clamp(1ex, var(--view-inline) - .9em, 1.7ex);
 		line-height: 1;
 		width: calc(var(--view-inline) - 3px);
 		position: absolute;
