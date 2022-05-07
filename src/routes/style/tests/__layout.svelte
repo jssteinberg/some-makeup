@@ -30,11 +30,14 @@
 
 	let els;
 	let scrollY = 0;
+	let testLabel;
 
-	$: testLabel = links.find(val => val.href === $page.url.pathname)?.label;
-	$: callUpdateTest = updateTest($page);
+	$: {
+		testLabel = links.find(val => val.href === $page.url.pathname)?.label;
+		updateTest();
+	}
 
-	const updateTest = (pageObj) => {
+	const updateTest = () => {
 		if (typeof document !== 'undefined')
 			els = document.body.querySelectorAll(
 				'#tests section :is(p,h2)'
