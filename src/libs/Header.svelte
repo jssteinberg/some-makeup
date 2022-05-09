@@ -1,6 +1,14 @@
 <header class="site-header">
 	<a href="/" class="touch-target-center">/</a>
-	<a role="button" href="?theme=dark" aria-hidden="true" class="touch-target-center color-switcher" on:click|preventDefault={() => {dark = !dark}}>Aa</a>
+	<a
+		role="button"
+		href={colorThemeParameter}
+		title="Dark/light background and colors"
+		class="touch-target-center color-switcher"
+		on:click|preventDefault={setColorThemeParameter}
+	>
+		<span aria-hidden="true">Aa</span>
+	</a>
 
 	{#if !dark}
 		<style>
@@ -89,5 +97,17 @@
 </style>
 
 <script>
+	import { page } from '$app/stores';
+
+	/* console.log($page) */
+
+	const setColorThemeParameter = () => {
+		dark = !dark;
+		colorThemeParameter = getColorThemeParameter();
+	};
+	const getColorThemeParameter = () => {
+		return `?c=${dark ? `light` : `dark`}`;
+	};
 	let dark = true;
+	let colorThemeParameter = getColorThemeParameter();
 </script>
