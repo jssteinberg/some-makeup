@@ -9,7 +9,7 @@
 	<link rel="canonical" href={`https://some.makeup${$page.url.pathname}`} />
 </svelte:head>
 
-<div class="root-layout">
+<div class="root-layout" id="doc">
 	<Header />
 
 	<main>

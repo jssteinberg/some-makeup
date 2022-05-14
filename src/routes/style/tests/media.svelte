@@ -17,7 +17,7 @@
 		background: var(--sep-color)
 	}
 
-	img, figure {
+	img {
 		background-color: red;
 	}
 </style>

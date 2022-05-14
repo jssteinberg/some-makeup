@@ -38,9 +38,16 @@
 		This site does not collect any personal information and uses no cookies.
 	</p>
 
-	<div aria-hidden="true" class="button-container">
-		<a href="#top" tabindex="-1" class="touch-target" on:click|preventDefault={() => {window.scrollTo(0,0)}}>Top</a>
-	</div>
+	<p aria-hidden="true">
+		<a
+			href="#doc"
+			tabindex="-1"
+			class="touch-target"
+			on:click|preventDefault={() => { window.scrollTo(0,0); }}
+		>
+			Top of page
+		</a>
+	</p>
 </footer>
 
 <style>
@@ -72,10 +79,6 @@
 		font-variant: small-caps;
 	}
 
-	a:is(:focus-visible,:active) {
-		text-decoration: underline;
-	}
-
 	ul > :first-child a {
 		justify-content: center;
 	}
@@ -85,18 +88,5 @@
 	.nav a::before {
 		content: "/";
 		font-weight: bolder;
-	}
-
-	a:not(:is(:hover,:focus)) {
-		text-decoration: none;
-	}
-
-	.button-container {
-		display: flex;
-		gap: .5rem;
-	}
-
-	.button-container > ::after {
-		content: '.';
 	}
 </style>
