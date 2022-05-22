@@ -1,17 +1,31 @@
 import { getValue } from './loSplash.js';
 
+/**
+ * @param {object} a
+ * @param {object} b
+ * @param {string} key
+ * @param {number} i
+ */
 export const sortPosts = (a, b, key, i) => {
 	const valA = getValue(a, key, i);
 	const valB = getValue(b, key, i);
 
-	if (valA instanceof Date && valB instanceof Date) return valA - valB;
+	if (valA instanceof Date && valB instanceof Date)
+		return valA - valB;
 	if (new Date(valA) instanceof Date)
-		return new Date(valB) instanceof Date ? new Date(valA) - new Date(valB) : 0;
-	if (typeof valA === `string` && typeof valB === `string`) return valA.localCompare(valB);
+		return new Date(valB) instanceof Date ?
+			new Date(valA) - new Date(valB) : 0;
+	if (typeof valA === `string` && typeof valB === `string`)
+		return valA.localeCompare(valB);
+
 	return 0;
 };
 
-const listPosts =
+/**
+ * @param {Array} list
+ * @param {Object} [opt]
+ */
+export const listPosts =
 	(list = [], opt = { exclude: 0 }) =>
 	(props = [[]], i = 0) => {
 		if (!(props.length > i)) return list;
@@ -22,6 +36,8 @@ const listPosts =
 		const newList = !opt?.exclude
 			? listPosts(list, opt)(props, i + 1).sort((a, b) => sortPosts(a, b, key, valIndex))
 			: listPosts(list, opt)(props, i + 1).filter((obj) => !getValue(obj, key, valIndex));
+
+		console.log(newList);
 
 		return reverse ? newList.reverse() : newList;
 	};

@@ -6,6 +6,6 @@
 	<meta name="robots" content="noindex">
 </svelte:head>
 
-<div class={$page.url.pathname.replace(/^\//, '').replace(/\//g, '-') || 'home'}>
+<div class={$page.url.pathname.replace(/^\//, ``).replace(/\//g, `-`) || `home`}>
 	<slot />
 </div>

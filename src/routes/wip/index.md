@@ -15,13 +15,13 @@ layout: no
 </script>
 
 <script context="module">
-	import listPosts from '../../libs/utils/getPosts.js';
+	import listPosts from '../../libs/utils/sortPosts.js';
 
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
 	export const load = async ({ url }) => {
-		const data = Object.keys(markdownFiles)
+		const posts = Object.keys(markdownFiles)
 			.map((path) => {
 				return {
 					filePath: path,
@@ -35,7 +35,8 @@ layout: no
 
 		return {
 			props: {
-				posts: listPosts(data)([[`metadata.date`, 0], `title`])
+				//posts: listPosts(posts)([[`metadata.date`, 0], `title`])
+				posts: sortPosts(posts)
 			},
 		};
 	};
