@@ -1,6 +1,6 @@
 # makeup-style
 
-Lean CSS files for fixing default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
+Minimal CSS files for fixing default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
 The files in question: src/fix.css, src/do.css, src/space.css, src/flow.css.
 
