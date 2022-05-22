@@ -67,3 +67,7 @@ layout: no
 		display: block;
 	}
 </style>
+
+<script context="module">
+	export const hydrate = false;
+</script>

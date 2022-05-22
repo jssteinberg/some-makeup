@@ -35,8 +35,6 @@
 <div id="tests" class="wrapper">
 	<slot />
 
-	<TestsNav {links} />
-
 	<details>
 		<summary><em>Your browser</em></summary>
 
@@ -53,7 +51,6 @@
 	import Nav from '$libs/Nav.svelte';
 	import { page } from '$app/stores';
 	import MetaTags from '$libs/MetaData.svelte';
-	import TestsNav from './_tests-nav.svelte';
 	import { onMount } from 'svelte';
 
 	const links = [
