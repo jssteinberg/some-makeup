@@ -6,9 +6,7 @@ set: ["code"]
 
 # makeup-style
 
-So you want to makeup style?
-
-These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
+So you want to makeup style? These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
 ```sh
 npm install makeup-style
@@ -22,13 +20,23 @@ npm install makeup-style
 
 *Populate HTML documents and makeup style safely.* A lean CSS fix that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; fixes font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
+It's an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], etc. *With the file below it even normalizes button and inputs, as the former does not.*
+
 ### 1.2 "Do CSS"---A <cite>Fix CSS</cite> Expansion
 
 ```css
 @import "makeup-style/src/do.css";
 ```
 
-*When you're doing a full makeup, do it intuitively.* An improvement of the CSS developer experience, and how buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them.
+*When you're doing a full makeup, do it intuitively.* An improvement of the CSS developer experience, and buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them. Buttons and inputs will most likely need some styling, but this makes consistent styling simpler.
+
+FYI, selectors to target all buttons:
+
+```css
+::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
+	/* ... */
+}
+```
 
 ## 2. "Space CSS"
 
@@ -131,6 +139,15 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 /* .touch-target, .touch-target-center */
 @import "makeup-style/src/class/touch-target.css";
 ```
+
+[amcr]: https://piccalil.li/blog/a-modern-css-reset/
+[cc]: https://cube.fyi/
+[cr]: https://github.com/jensimmons/cssremedy
+[mn]: https://github.com/sindresorhus/modern-normalize
+[mccr]: https://www.joshwcomeau.com/css/custom-css-reset/
+[nc]: https://github.com/necolas/normalize.css/
+[op]: https://open-props.style/
+[sc]: https://github.com/csstools/sanitize.css
 
 <script>
  	import Details from "/src/libs/Details.svelte";
