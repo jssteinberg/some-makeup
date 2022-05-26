@@ -154,7 +154,7 @@ h1 {
 	}
 
 	:where(pre)::after {
-		border-bottom: 1px solid;
+		border-bottom: 1px solid var(--sep-color);
 		content: "";
 		position: absolute;
 		bottom: 0; left: 0;

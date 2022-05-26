@@ -20,7 +20,7 @@ npm install makeup-style
 
 *Populate HTML documents and makeup style safely.* A lean CSS fix that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; fixes font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
-It's an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], etc. *With the file below it even normalizes button and inputs, as the former does not.*
+This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], etc. *With the file below it even normalizes button and inputs, as the alternatives mentioned does not.*
 
 ### 1.2 "Do CSS"---A <cite>Fix CSS</cite> Expansion
 
