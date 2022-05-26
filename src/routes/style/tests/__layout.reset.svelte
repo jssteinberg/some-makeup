@@ -12,6 +12,10 @@
 
 <svelte:window bind:scrollY />
 
+<Header />
+
+<StyleNav />
+
 <Nav {links} ariaLabel="Test-pages" />
 
 <CssToggle on:toggle={updateTest} />
@@ -48,10 +52,13 @@
 
 <script>
 	import CssToggle from './_css-toggle.svelte';
+	import StyleNav from '../_style-nav.svelte';
 	import Nav from '$libs/Nav.svelte';
 	import { page } from '$app/stores';
 	import MetaTags from '$libs/MetaData.svelte';
 	import { onMount } from 'svelte';
+	import Header from '$libs/Header.svelte';
+	import Footer from '$libs/Footer.svelte';
 
 	const links = [
 		{
