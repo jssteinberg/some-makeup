@@ -15,7 +15,7 @@ layout: no
 </script>
 
 <script context="module">
-	import listPosts from '../../libs/utils/sortPosts.js';
+	import listPosts from '../../libs/utils/getPosts.js';
 
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
@@ -35,8 +35,8 @@ layout: no
 
 		return {
 			props: {
-				//posts: listPosts(posts)([[`metadata.date`, 0], `title`])
-				posts: sortPosts(posts)
+				posts: listPosts(posts)([[`metadata.date`, 0], `title`])
+				//posts: sortPosts(posts)
 			},
 		};
 	};
