@@ -1,8 +1,8 @@
 <header class="site-header">
 	<a href="/" class="touch-target-center">/</a>
 	<a
-		role="button"
 		href={colorThemeParameter}
+		role="button"
 		title="Dark/light background and colors"
 		class="touch-target-center color-switcher"
 		on:click|preventDefault={setColorThemeParameter}

@@ -1,8 +1,15 @@
 # makeup-style
 
-Lean CSS files for fixing default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
+Minimal CSS files for fixing default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
-The files in question: src/fix.css, src/do.css, src/space.css, src/flow.css.
+```
+npm install makeup-style
+
+@import "makeup-style/src/fix.css";
+@import "makeup-style/src/do.css";
+@import "makeup-style/src/space.css";
+@import "makeup-style/src/flow.css";
+```
 
 [Go to documentation](https://some.makeup/style)
 
