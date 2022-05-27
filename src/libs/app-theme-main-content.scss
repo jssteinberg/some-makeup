@@ -27,13 +27,9 @@ h1 {
 .app-theme-main-content {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
-	--cfs: var(--sans);
-
-	margin-inline: var(--view-inline);
-	font-size: var(--font-size);
 
 	&.sans-theme {
-		font-family: var(--cfs);
+		font-family: var(--sans);
 	}
 
 	blockquote {
