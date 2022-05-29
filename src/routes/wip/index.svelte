@@ -1,22 +1,15 @@
----
-title: WIP
-description: Works in progress.
-layout: no
----
+<h1>WIP</h1>
 
-# WIP
-
-<PostList posts={[...posts, {title: 'Svelte Layout Reset', path: '/reset'}]} />
+<PostList {posts} />
 
 <script>
-	import PostList from '/src/libs/PostList.svelte';
+	import PostList from '$libs/PostList.svelte';
 
 	export let posts;
+	console.log(posts)
 </script>
 
 <script context="module">
-	import listPosts from '../../libs/utils/getPosts.js';
-
 	const markdownFiles = import.meta.globEager(`./*.md`);
 	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
@@ -35,8 +28,17 @@ layout: no
 
 		return {
 			props: {
-				posts: listPosts(posts)([[`metadata.date`, 0], `title`])
-				//posts: sortPosts(posts)
+				posts: [
+					...posts,
+					{ title: 'Svelte Layout Reset', path: '/reset' },
+				]
+					.sort((a, b) => a.title.localeCompare(b.title))
+					.sort((a, b) => {
+						const aDate = new Date(a.metadata?.date ? a.metadata.date[0] : `1990-01-01`);
+						const bDate = new Date(b.metadata?.date ? b.metadata.date[0] : `1990-01-01`);
+
+						return bDate - aDate;
+					}),
 			},
 		};
 	};

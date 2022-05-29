@@ -22,20 +22,20 @@ export const sortPosts = (a, b, key, i) => {
 };
 
 /**
- * @param {Array} list
+ * @param {Array} posts
  * @param {Object} [opt]
  */
 export const listPosts =
-	(list = [], opt = { exclude: 0 }) =>
+	(posts = [], opt = { exclude: 0 }) =>
 	(props = [[]], i = 0) => {
-		if (!(props.length > i)) return list;
+		if (!(props.length > i)) return posts;
 
-		const reverse = opt?.reverse ?? true;
+		const reverse = false;
 		const key = props[i] instanceof Array ? props[i][0] : props[i];
 		const valIndex = props[i] instanceof Array ? props[i][1] : null;
 		const newList = !opt?.exclude
-			? listPosts(list, opt)(props, i + 1).sort((a, b) => sortPosts(a, b, key, valIndex))
-			: listPosts(list, opt)(props, i + 1).filter((obj) => !getValue(obj, key, valIndex));
+			? listPosts(posts, opt)(props, i + 1).sort((a, b) => sortPosts(a, b, key, valIndex))
+			: listPosts(posts, opt)(props, i + 1).filter((obj) => !getValue(obj, key, valIndex));
 
 		// console.log(newList);
 
