@@ -89,3 +89,10 @@ a:active {
 .sans {
 	font-family: var(--sans);
 }
+
+/* THEME */
+
+.app-theme-main-content {
+	margin-inline: var(--view-inline);
+	font-size: var(--font-size);
+}

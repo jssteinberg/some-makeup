@@ -40,7 +40,7 @@
 
 	<p aria-hidden="true">
 		<a
-			href="#doc"
+			href="#document"
 			tabindex="-1"
 			class="touch-target"
 			on:click|preventDefault={() => { window.scrollTo(0,0); }}

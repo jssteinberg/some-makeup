@@ -27,13 +27,9 @@ h1 {
 .app-theme-main-content {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
-	--cfs: var(--sans);
-
-	margin-inline: var(--view-inline);
-	font-size: var(--font-size);
 
 	&.sans-theme {
-		font-family: var(--cfs);
+		font-family: var(--sans);
 	}
 
 	blockquote {
@@ -154,7 +150,7 @@ h1 {
 	}
 
 	:where(pre)::after {
-		border-bottom: 1px solid;
+		border-bottom: 1px solid var(--sep-color);
 		content: "";
 		position: absolute;
 		bottom: 0; left: 0;

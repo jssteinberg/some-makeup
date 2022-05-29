@@ -37,7 +37,7 @@ export const listPosts =
 			? listPosts(list, opt)(props, i + 1).sort((a, b) => sortPosts(a, b, key, valIndex))
 			: listPosts(list, opt)(props, i + 1).filter((obj) => !getValue(obj, key, valIndex));
 
-		console.log(newList);
+		// console.log(newList);
 
 		return reverse ? newList.reverse() : newList;
 	};

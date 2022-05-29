@@ -6,7 +6,7 @@
 	import LineHeightCss from './FlowCss.svelte';
 	import PrismCss from './PrismCss.svelte';
 
-	export let title = 'Knut';
+	export let title = 'A knot';
 	export let metaTitle;
 	export let lang;
 	export let description;
