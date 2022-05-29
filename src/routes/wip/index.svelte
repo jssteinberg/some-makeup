@@ -6,7 +6,6 @@
 	import PostList from '$libs/PostList.svelte';
 
 	export let posts;
-	console.log(posts)
 </script>
 
 <script context="module">
