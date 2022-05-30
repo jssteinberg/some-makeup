@@ -2,7 +2,7 @@
 	import MetaTags from './MetaData.svelte';
 	import ContainCss from './IntuitiveCss.svelte';
 
-	export let title = 'Knut';
+	export let title = 'A knot';
 	export let metaTitle;
 	export let lang;
 	export let description;

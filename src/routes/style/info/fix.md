@@ -11,7 +11,23 @@ A “fix” CSS has to start with perhaps **the** rule all elements needs so the
 }
 ```
 
-*Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other `box-sizing` value can cause cut and overflown content.*
+<Details>
+
+<em slot="summary">Another way</em>
+
+```css
+*, ::before, ::after {
+	box-sizing: inherit;
+}
+
+:root {
+	box-sizing: border-box;
+}
+```
+
+The problem with this approach is how inheriting `box-sizing` values can cause cut and overflown content. Inheritance of `box-sizing` by default is just less safe for layouts, and it can be considered less intuitive.
+
+</Details>
 
 ---
 
@@ -41,7 +57,12 @@ pre {
 }
 ```
 
-*Another way to implement this would be to not wrap the content and use `overflow-x: auto`, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.*
+<Details>
+<em slot="summary">Another way</em>
+
+Another way to implement this would be to not wrap the content and use `overflow-x: auto`, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
+
+</Details>
 
 ---
 
@@ -101,9 +122,8 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 
 ---
 
-For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS.
-
-For `<source>`, ensure this relatively new element is not displayed. It has nothing to display and can affect styling. *A polyfill.*
+- For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS.
+- For `<source>`, ensure this relatively new element is not displayed. It has nothing to display and can affect styling. *A polyfill.*
 
 ```css
 [hidden], source {
@@ -194,3 +214,36 @@ select, summary {
 [nc]: https://github.com/necolas/normalize.css/
 [op]: https://open-props.style/
 [sc]: https://github.com/csstools/sanitize.css
+
+<script>
+import Details from "$libs/Details.svelte"
+</script>
+
+<style lang="scss">
+	p {
+		margin-block-end: 0;
+	}
+
+	p + p {
+		margin-block-start: 0;
+		text-indent: var(--space);
+	}
+
+	:is(ol,ul) :is(ol,ul) {
+		margin: 0;
+	}
+
+	@media (min-width: 1200px) {
+		ol {
+			list-style: decimal;
+		}
+
+		:is(ol,ul) {
+			padding: 0;
+		}
+
+		:is(ol,ul) :is(ol,ul) {
+			padding-inline-start: var(--space);
+		}
+	}
+</style>

@@ -4,7 +4,7 @@
 
 	const links = [
 		{
-			label: 'Safer & Intuitive CSS',
+			label: 'Safe & Intuitive Defaults',
 			href: '/style/info',
 		},
 		{

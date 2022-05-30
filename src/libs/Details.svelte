@@ -18,6 +18,7 @@
 			<slot name="summary" />
 		</span>
 	</summary>
+
 	<slot />
 </details>
 
@@ -87,5 +88,9 @@
 		box-shadow: none;
 		border-right: none;
 		border-left: none;
+	}
+
+	summary ~ :global(:last-child) {
+		padding-block-end: var(--space, 1em);
 	}
 </style>
