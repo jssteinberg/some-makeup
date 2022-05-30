@@ -62,6 +62,7 @@
 		text-decoration: underline;
 	}
 
+	nav.sticky a:not(:focus),
 	nav :global([aria-current="page"]) {
 		text-decoration: none;
 	}
