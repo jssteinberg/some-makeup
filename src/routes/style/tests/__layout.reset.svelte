@@ -16,8 +16,6 @@
 
 <StyleNav />
 
-<Nav {links} ariaLabel="Test-pages" />
-
 <CssToggle on:toggle={updateTest} />
 
 {#if els && els.length}
@@ -50,6 +48,8 @@
 	</details>
 </div>
 
+<Nav {links} ariaLabel="Test-pages" sticky="bottom" />
+
 <script>
 	import CssToggle from './_css-toggle.svelte';
 	import StyleNav from '../_style-nav.svelte';
@@ -66,8 +66,8 @@
 			href: '/style/tests/overflow',
 		},
 		{
-			label: 'Line-height',
-			href: '/style/tests/line-height',
+			label: 'Inline',
+			href: '/style/tests/inline',
 		},
 		{
 			label: 'Media',
@@ -91,7 +91,7 @@
 	const updateTest = () => {
 		if (typeof document !== 'undefined')
 			els = document.body.querySelectorAll(
-				'#tests section :is(p,h2)'
+				'#tests :is(p,h2,li)'
 			);
 	};
 

@@ -36,8 +36,8 @@ textarea {
 b, strong {
 	font-weight: bolder; }
 
-/* Some inline elements should not be auto hyphenated. */
-/* Some inline elements can affect line height: fix while maintaining some line-height. */
+/* For inline elements that are better not auto hyphenated. */
+/* For inline elements that can affect line height: fix while maintaining some line-height. */
 code, kbd, samp, sub, sup {
 	hyphens: manual;
 	line-height: .625; }
