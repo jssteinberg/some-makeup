@@ -64,12 +64,6 @@ a {
 	color: inherit;
 }
 
-/* Transform for clicked feedback */
-a:active {
-	transform: translateY(2px);
-	transition: transform .1s ease;
-}
-
 /* Remove animations and transitions when user prefers it. */
 @media (prefers-reduced-motion: reduce) {
 	*, ::before, ::after {

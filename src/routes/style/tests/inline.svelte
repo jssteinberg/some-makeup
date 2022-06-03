@@ -1,21 +1,15 @@
-<h1>line-height</h1>
+<h1>Inline</h1>
 
-<p>Some inline elements can affect the line-height by making the line its on higher.</p>
+<p>Check if inline elements affect lines’ heights.</p>
 
-<section>
-	<h2>Confusing font-size change on device orientation change</h2>
+{#each [0,1] as i}
+	<div class={i === 1 ? `sans` : ``}>
+		<p><em>1 paragraph.</em></p>
+		<p><em>2 paragraphs,<br>both for…</em></p>
+		<p><em>3 paragraphs<br>all three for<br>height comparison.</em></p>
 
-	<p>On Ios font-size for certain elements can get a bigger size when changing device-orientation to landscape.</p>
-</section>
-
-	{#each [0,1] as i}
-		<div class={i === 1 ? `sans` : ``}>
 		<section class="inline-element-example">
 			<h2>Mono font elements</h2>
-
-			<p><em>A paragraph to compare with.</em></p>
-			<p><em>A paragraph to compare with.<br>Over two lines.</em></p>
-			<p><em>Another paragraph to compare with.<br>Over two lines,<br>three lines.</em></p>
 
 			<p>Sometimes inline elements are included in block-level elements. If those elements has a different font, or size, it is typographically more comfortable that is doesn't affect the line-height. <em>Here's a sentence that includes a <code>code</code> element. All the lines in this paragraph should be of equal size.</em></p>
 
@@ -35,28 +29,32 @@
 	x = x*(1.5f - xhalf*x*x);
 	return x;
 }`}</code></pre>
-</section>
-<section>
-	<h2><code>sub, sup</code></h2>
 
-	<p>Almost every developer's favorite molecule is
-	C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."<br aria-hidden="true"><em><code>sub</code> should not affect line-heigh.</em></p>
+<p><code>{`addressTerminatedHastaLaVistaBaby`}</code></p>
+		</section>
 
-	<p>The <b>Pythagorean theorem</b> is often expressed as the following equation: <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var><br aria-hidden="true"><em><code>sup</code> should not affect line-heigh.</em></p>
+		<section>
+			<h2><code>sub, sup</code></h2>
 
-	<p>In a grid:</p>
+			<p>Almost every developer's favorite molecule is
+			C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."<br aria-hidden="true"><em><code>sub</code> should not affect line-heigh.</em></p>
 
-	<p class="grid-test">
-		<sub>lot of sub</sub>
-		<sup>lot of sup</sup>
-	</p>
-</section>
+			<p>The <b>Pythagorean theorem</b> is often expressed as the following equation: <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var><br aria-hidden="true"><em><code>sup</code> should not affect line-heigh.</em></p>
+
+			<p>In a grid:</p>
+
+			<p class="grid-test">
+				<sub>lot of sub</sub>
+				<sup>lot of sup</sup>
+			</p>
+		</section>
 
 
-		</div>
-	{/each}
+	</div>
+{/each}
 
 <ButtonSection />
+
 <div class="sans">
 	<ButtonSection />
 </div>

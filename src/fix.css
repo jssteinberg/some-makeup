@@ -36,8 +36,10 @@ textarea {
 b, strong {
 	font-weight: bolder; }
 
-/* Prevent inline elements from affecting line height while having line-height. */
+/* For inline elements that are better not auto hyphenated. */
+/* For inline elements that can affect line height: fix while maintaining some line-height. */
 code, kbd, samp, sub, sup {
+	hyphens: manual;
 	line-height: .625; }
 
 /* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
