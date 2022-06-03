@@ -31,13 +31,11 @@ The problem with this approach is how inheriting `box-sizing` values can cause c
 
 ---
 
-For the root element there a two rules that prevents overflown text, and one normalizing rule, all three important for mobile devices.
+For the root element there a two rules that prevents overflown text, and one normalizing rule, all three important for mobile devices:
 
-`overflow-wrap: break-word` (not  `word-break` property) it simply breaks words if needed to not overflow horizontally and create a horizontal scrollbar. *As a side note, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
-
-`hyphens: auto` allows the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports or for advanced content creators who knows `shy`.
-
-`-webkit-text-size-adjust: 100%` is for preventing Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
+1. Break words if needed to not overflow horizontally and create a horizontal scrollbar. *As a side note, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
+2. Allow the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports or for advanced content creators who knows `shy`.
+3. Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 
 ```css
 :root {
@@ -49,7 +47,7 @@ For the root element there a two rules that prevents overflown text, and one nor
 
 ---
 
-To prevent `<pre>` from overflowing `pre-wrap` is set.
+Prevent `<pre>` from overflowing `pre-wrap` is set.
 
 ```css
 pre {
@@ -102,17 +100,21 @@ b, strong {
 
 ---
 
-Some inline elements can affect the line-heights of lines they are on. This is not a full normalization of these elements---which would have little value---but a single common rule that fixes the main problem for all these elements. Brilliant!
+Inline elements with different `font-family` or `font-size` can bear a special meaning and stylistically they can affect lines' heights.
+
+1. Avoid changing the meaning of the content by hyphenation inheritance.
+2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value in this case---but a single common rule that fixes the main problem for all these elements in layouts. It's worth noting that it can cause another layout surprise if their parent changes `display` value, but these elements should really not be direct children of parents like that.*
 
 ```css
 code, kbd, samp, sub, sup {
+	hyphens: manual;
 	line-height: .625;
 }
 ```
 
 ---
 
-In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. This causes Ios to zoom in on the `input` when focused. For many users its annoying and/or confusing. For accessibility and usability, and to deal with a following side-effect, consistency: all interactive elements that doesn’t already have `font-size: 1em` are part of this ruleset.
+In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. This causes Ios to zoom in on the `input` when focused. For many users its annoying and/or confusing. For accessibility and usability, and to deal with the consistency side-effect, all interactive elements that doesn't already have `font-size: 1em` are part of this ruleset.
 
 ```css
 ::file-selector-button, button, input, select, textarea {
@@ -123,7 +125,7 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 ---
 
 - For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS.
-- For `<source>`, ensure this relatively new element is not displayed. It has nothing to display and can affect styling. *A polyfill.*
+- For `<source>`, this ensures this relatively new element is not displayed. It has nothing to display and can affect styling. *This is a polyfill.*
 
 ```css
 [hidden], source {
@@ -133,7 +135,7 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 
 ---
 
-Remove wrapping `picture` while maintaining content. If not it can interfere with layout and aspect-ratio when styling. *A polyfill.*
+Remove wrapping `picture` while maintaining content. If not it can interfere with layout and aspect-ratio when styling. *This is a polyfill.*
 
 ```css
 picture {
