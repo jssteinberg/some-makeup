@@ -32,11 +32,16 @@
 		display: inline-flex;
 		align-items: center;
 		flex-wrap: wrap;
+		justify-content: center;
 
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 
 		box-shadow: inset 1px -1px;
-		justify-content: center;
+		outline: none;
+	}
+
+	summary:focus-visible {
+		box-shadow: inset 0 0 0 1px;
 	}
 
 	summary::before {
