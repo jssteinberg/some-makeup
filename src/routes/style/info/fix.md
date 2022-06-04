@@ -3,7 +3,7 @@ title: Fix CSS
 set: ["code"]
 ---
 
-A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
+A CSS fix has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 
 ```css
 *, ::before, ::after {
@@ -125,7 +125,7 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 ---
 
 - For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS.
-- For `<source>`, this ensures this relatively new element is not displayed. It has nothing to display and can affect styling. *This is a polyfill.*
+- For `<source>`, the rule ensures this relatively new element is not displayed. It has nothing to display and can affect styling. *This is a polyfill.*
 
 ```css
 [hidden], source {
@@ -226,8 +226,12 @@ import Details from "$libs/Details.svelte"
 		margin-block-end: 0;
 	}
 
+	li > p,
 	p + p {
 		margin-block-start: 0;
+	}
+
+	p + p {
 		text-indent: var(--space);
 	}
 

@@ -42,8 +42,12 @@ The items quite naturally splits into different files, and can then be imported 
 		margin-block-end: 0;
 	}
 
+	li > p,
 	p + p {
 		margin-block-start: 0;
+	}
+
+	p + p {
 		text-indent: var(--space);
 	}
 
