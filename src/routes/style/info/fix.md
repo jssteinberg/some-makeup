@@ -25,7 +25,7 @@ A “fix” CSS has to start with perhaps **the** rule all elements needs so the
 }
 ```
 
-The problem with this approach is how inheriting `box-sizing` values can cause cut and overflown content. Inheritance of `box-sizing` by default is just less safe for layouts, and it can be considered less intuitive.
+The problem with this approach is how the inheritance of `box-sizing` by default is just less safe for layouts, and it can be considered less intuitive as `border-box` has become the norm. *This is [also discussed here in regards to CSS Remedy](https://github.com/jensimmons/cssremedy/issues/4#issuecomment-1146659677).*
 
 </Details>
 
