@@ -32,15 +32,17 @@ textarea {
 
 /* FIX/EXTEND FONT */
 
+/* Don't auto hyphenate content that can get messed meaning. */
+code, kbd, samp, sub, sup {
+	hyphens: manual; }
+
+/* For inline elements that can affect line height: fix while maintaining some line-height. */
+sub, sup {
+	line-height: .625; }
+
 /* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
 b, strong {
 	font-weight: bolder; }
-
-/* For inline elements that are better not auto hyphenated. */
-/* For inline elements that can affect line height: fix while maintaining some line-height. */
-code, kbd, samp, sub, sup {
-	hyphens: manual;
-	line-height: .625; }
 
 /* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 ::file-selector-button, button, input, select, textarea {

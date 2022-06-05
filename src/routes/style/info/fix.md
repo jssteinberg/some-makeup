@@ -3,7 +3,7 @@ title: Fix CSS
 set: ["code"]
 ---
 
-A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
+A CSS fix has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 
 ```css
 *, ::before, ::after {
@@ -25,7 +25,7 @@ A “fix” CSS has to start with perhaps **the** rule all elements needs so the
 }
 ```
 
-The problem with this approach is how inheriting `box-sizing` values can cause cut and overflown content. Inheritance of `box-sizing` by default is just less safe for layouts, and it can be considered less intuitive.
+The problem with this approach is how the inheritance of `box-sizing` by default is just less safe for layouts, and it can be considered less intuitive as `border-box` has become the norm. *This is [also discussed here in regards to CSS Remedy](https://github.com/jensimmons/cssremedy/issues/4#issuecomment-1146659677).*
 
 </Details>
 
@@ -90,25 +90,53 @@ textarea {
 
 ---
 
-`<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
+Avoid changing the meaning of content by hyphenation inheritance for special inline elements.
 
 ```css
-b, strong {
-	font-weight: bolder;
+code, kbd, samp, sub, sup {
+	hyphens: manual;
 }
 ```
 
 ---
 
-Inline elements with different `font-family` or `font-size` can bear a special meaning and stylistically they can affect lines' heights.
-
-1. Avoid changing the meaning of the content by hyphenation inheritance.
-2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value in this case---but a single common rule that fixes the main problem for all these elements in layouts. It's worth noting that it can cause another layout surprise if their parent changes `display` value, but these elements should really not be direct children of parents like that.*
+Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts.*
 
 ```css
-code, kbd, samp, sub, sup {
-	hyphens: manual;
+sub, sup {
 	line-height: .625;
+}
+```
+
+<Details>
+<span slot="summary">Original <code>sub, sup</code> normalize</span>
+
+```css
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+```
+</Details>
+
+---
+
+`<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
+
+```css
+b, strong {
+	font-weight: bolder;
 }
 ```
 
@@ -125,7 +153,7 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 ---
 
 - For `[hidden]`, this rule maintains the behaviour with higher specificity than browser CSS.
-- For `<source>`, this ensures this relatively new element is not displayed. It has nothing to display and can affect styling. *This is a polyfill.*
+- For `<source>`, the rule ensures this relatively new element is not displayed. It has nothing to display and can affect styling. *This is a polyfill.*
 
 ```css
 [hidden], source {
@@ -193,7 +221,7 @@ select, summary {
 - Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s easier to remove them when needed.
 - `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
-- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme sets it consistently  between elements.
+- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
 - Form elements are not normalized, but are normalized for styling in the “do” CSS.
 - Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
 - Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
@@ -226,8 +254,12 @@ import Details from "$libs/Details.svelte"
 		margin-block-end: 0;
 	}
 
+	li > p,
 	p + p {
 		margin-block-start: 0;
+	}
+
+	p + p {
 		text-indent: var(--space);
 	}
 
