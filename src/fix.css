@@ -32,7 +32,7 @@ textarea {
 
 /* FIX/EXTEND FONT */
 
-/* Don't auto hyphenate content that can get messed meaning. */
+/* Don't auto hyphenate elements that could mess its contents meaning. */
 code, kbd, samp, sub, sup {
 	hyphens: manual; }
 

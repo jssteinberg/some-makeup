@@ -58,7 +58,19 @@ pre {
 <Details>
 <em slot="summary">Another way</em>
 
-Another way to implement this would be to not wrap the content and use `overflow-x: auto`, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
+Another way to implement this would be to not wrap the content, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
+
+```css
+pre {
+	hyphens: none;
+	overflow: auto;
+	tab-size: 2;
+	white-space: pre;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+}
+```
 
 </Details>
 
@@ -90,7 +102,7 @@ textarea {
 
 ---
 
-Avoid changing the meaning of content by hyphenation inheritance for special inline elements.
+The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
 
 ```css
 code, kbd, samp, sub, sup {
