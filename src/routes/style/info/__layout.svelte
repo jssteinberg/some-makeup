@@ -20,7 +20,7 @@
 	$: part = links.filter(link => $page.routeId === link.href.replace(/^\//, ``))[0]?.label;
 </script>
 
-<article>
+<article class="app-theme">
 	<header>
 		<h1>
 			<small>
