@@ -41,7 +41,7 @@
 {/if}
 
 <div lang={langAttr} class={`
-	app-teme
+	app-theme
 	app-theme-main-content
 	${set.includes(`sans`) ? `sans-theme` : ``}
 	${set.includes(`mixed`) ? `` : `typography`}

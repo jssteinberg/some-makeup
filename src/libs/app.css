@@ -1,4 +1,5 @@
 @import '/src/class/touch-target.css';
+@import './app-theme.css';
 
 :root {
 	--TOUCH-TARGET-SIZE: max(48px, 3rem);
@@ -82,39 +83,4 @@ a {
 
 .sans {
 	font-family: var(--sans);
-}
-
-/* THEME */
-
-.app-theme {
-	--added-lead: .65;
-	--line-height: calc(1 + .6);
-	/* --space: calc(var(--font-size) * (1 + var(--added-lead, .6))); */
-	--space: var(--font-size);
-}
-
-@media (min-width: 1500px) {
-	.app-theme {
-		--h1-line-span: 3;
-	}
-}
-
-.app-theme h1 {
-	margin-block: calc(1.5 * var(--space));
-	font-weight: normal;
-}
-
-.app-theme header {
-	font-size: var(--font-size);
-}
-
-:where(.app-theme) h1 strong,
-:where(.app-theme-main-content) strong {
-	font-variant: small-caps;
-	font-weight: normal;
-}
-
-.app-theme-main-content {
-	margin-inline: var(--view-inline);
-	font-size: var(--font-size);
 }

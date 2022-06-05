@@ -1,27 +1,3 @@
-.app-theme-main-content {
-	&.sans-theme {
-		font-family: var(--sans);
-	}
-
-	blockquote {
-		background:
-			linear-gradient(currentColor, currentColor)
-			bottom left/1px calc(100% - 1.75em)
-			no-repeat;
-		margin-inline: 0;
-		padding: 0 0 0 calc(.5 * var(--space, 1em));
-		position: relative;
-	}
-
-	blockquote::before {
-		content: '“';
-		font-size: 3em;
-		position: absolute;
-		top: -.375em;
-		left: -.17em;
-	}
-}
-
 :where(.app-theme-main-content) {
 	> :not(:where(h1,pre)) {
 		width: var(--content-width);

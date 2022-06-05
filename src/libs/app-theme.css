@@ -1,0 +1,56 @@
+.app-theme {
+	--added-lead: .65;
+	--line-height: calc(1 + .6);
+	/* --space: calc(var(--font-size) * (1 + var(--added-lead, .6))); */
+	--space: var(--font-size);
+}
+
+@media (min-width: 1500px) {
+	.app-theme {
+		--h1-line-span: 3;
+	}
+}
+
+.app-theme h1 {
+	margin-block: calc(1.5 * var(--space));
+	font-weight: normal;
+}
+
+.app-theme header {
+	font-size: var(--font-size);
+}
+
+:where(.app-theme) strong {
+	font-variant: small-caps;
+	font-weight: normal;
+}
+
+/* .app-theme-main-content */
+
+.app-theme-main-content {
+	margin-inline: var(--view-inline);
+	font-size: var(--font-size);
+}
+
+.app-theme-main-content.sans-theme {
+	font-family: var(--sans);
+}
+
+.app-theme-main-content blockquote {
+	background:
+		linear-gradient(currentColor, currentColor)
+		bottom left/1px calc(100% - 1.75em)
+		no-repeat;
+	margin-inline: 0;
+	padding: 0 0 0 calc(.5 * var(--space, 1em));
+	position: relative;
+}
+
+.app-theme-main-content blockquote::before {
+	content: '“';
+	font-size: 3em;
+	position: absolute;
+	top: -.375em;
+	left: -.17em;
+}
+
