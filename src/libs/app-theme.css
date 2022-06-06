@@ -54,3 +54,6 @@
 	left: -.17em;
 }
 
+:where(.app-theme-main-content) :where(ol, ul) {
+	padding-inline-start: var(--space, 1em);
+}
