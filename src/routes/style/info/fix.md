@@ -102,26 +102,23 @@ textarea {
 
 ---
 
-The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
+Inline elements with different `font-family` or `vertical-align` usually bear special meanings and stylistically they can affect lines' heights.
+
+1. The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
+2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts. It's worth noting that it can cause layout surprises if the `display` of the parent makes any of these elements block-level. Just keep them as inline elements.*
 
 ```css
 code, kbd, samp, sub, sup {
 	hyphens: manual;
-}
-```
-
----
-
-Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts.*
-
-```css
-sub, sup {
 	line-height: .625;
 }
 ```
 
 <Details>
-<span slot="summary">Original <code>sub, sup</code> normalize</span>
+<em slot="summary">Other ways</em>
+
+*Code for `sub, sup` used in normalize.css and modern-normalize.*
+But these elements very rarely needs a normalization and they are already styled semantically, they just need to not adjust lines' heights.
 
 ```css
 sub,
@@ -138,6 +135,15 @@ sub {
 
 sup {
 	top: -0.5em;
+}
+```
+
+*Code for `code, kbd, samp` used in normalize.css (and about the same in [modern-normalize#L97-109](https://github.com/sindresorhus/modern-normalize/blob/b59ec0d3d8654cbb6843bc9ea45aef5f1d680108/modern-normalize.css#L97-L109) and [sanitize.css#L144-147](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L144-L147)).* Two rules that either does nothing or cause problems! The first rule does nothing in modern browsers. The second rule normalizes the `font-size` to `1em` easily causing higher lines where these elements are present.
+
+```css
+code, kbd, samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 ```
 </Details>

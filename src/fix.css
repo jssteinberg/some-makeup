@@ -33,11 +33,9 @@ textarea {
 /* FIX/EXTEND FONT */
 
 /* Don't auto hyphenate elements that could mess its contents meaning. */
-code, kbd, samp, sub, sup {
-	hyphens: manual; }
-
 /* For inline elements that can affect line height: fix while maintaining some line-height. */
-sub, sup {
+code, kbd, samp, sub, sup {
+	hyphens: manual;
 	line-height: .625; }
 
 /* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
