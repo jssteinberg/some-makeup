@@ -22,6 +22,13 @@ npm install makeup-style
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], etc. *With the file below it even normalizes button and inputs, as the alternatives mentioned does not.*
 
+<Details>
+<em slot="summary">Notes</em>
+
+`code, kbd, samp, sub, sup` are inline elements. This file styles them to not affect lines' heights which can cause unindented behaviour if they are used as block-level elements. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
+
+</Details>
+
 ### 1.2 "Do CSS"---A <cite>Fix CSS</cite> Expansion
 
 ```css
