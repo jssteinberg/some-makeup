@@ -30,10 +30,6 @@
 		h3 { --h3-added-lead: .25; }
 	}
 
-	:where(ol, ul) {
-		padding-inline-start: var(--space, 1em);
-	}
-
 	:is(em,cite) :is(em,cite) {
 		font-style: normal;
 	}
