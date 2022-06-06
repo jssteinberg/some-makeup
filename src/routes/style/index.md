@@ -37,13 +37,21 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 
 *When you're doing a full makeup, do it intuitively.* An improvement of the CSS developer experience, and buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them. Buttons and inputs will most likely need some styling, but this makes consistent styling simpler.
 
-FYI, selectors to target all buttons:
+<Details>
+<em slot="summary">Tips</em>
+
+Selectors to target all buttons:
 
 ```css
-::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
+::file-selector-button,
+[type="button" i],
+[type="reset" i],
+[type="submit" i],
+button {
 	/* ... */
 }
 ```
+</Details>
 
 ## 2. "Space CSS"
 

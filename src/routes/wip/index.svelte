@@ -27,10 +27,7 @@
 
 		return {
 			props: {
-				posts: [
-					...posts,
-					{ title: 'Svelte Layout Reset', path: '/reset' },
-				]
+				posts: posts
 					.sort((a, b) => a.title.localeCompare(b.title))
 					.sort((a, b) => {
 						const aDate = new Date(a.metadata?.date ? a.metadata.date[0] : `1990-01-01`);

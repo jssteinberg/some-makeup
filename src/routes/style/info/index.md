@@ -37,7 +37,13 @@ The items quite naturally splits into different files, and can then be imported 
 [op]: https://open-props.style/
 [sc]: https://github.com/csstools/sanitize.css
 
-<style lang="scss">
+<style>
+	ol ol {
+		list-style-type: lower-alpha;
+	}
+
+	/* Book style stuff */
+
 	p {
 		margin-block-end: 0;
 	}
