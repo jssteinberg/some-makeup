@@ -26,7 +26,7 @@
 	--bg-h: 0; --bg-s: 0%; --bg-l: 6.5%; --bg-a: 1;
 	--bg: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / var(--bg-a));
 
-	--sep-fg: hsla(var(--fg-h), var(--fg-s), var(--fg-l), var(--sep-fg-a, 0.15));
+	--sep-fg: hsl(var(--fg-h) var(--fg-s) var(--sep-fg-l, 25%));
 	--sep-color: var(--sep-fg);
 
 	--color-scheme: dark;

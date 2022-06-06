@@ -105,7 +105,7 @@ textarea {
 Inline elements with different `font-family` or `vertical-align` usually bear special meanings and stylistically they can affect lines' heights.
 
 1. The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
-2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts. It's worth noting that it can cause layout surprises if the `display` of the parent makes any of these elements block-level. Just keep them as inline elements.*
+2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts. It's worth noting that if the `display` value of the parent makes any of these elements block-level they will be short and you have to redo your HTML structure or restyle `line-height` for this context. The `line-height` below is still high enough that the content will show.*
 
 ```css
 code, kbd, samp, sub, sup {
