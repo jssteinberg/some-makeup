@@ -35,7 +35,7 @@
 	</ul>
 
 	<p>
-		This site does not collect any personal information and uses no cookies.
+		This site does not store any of your data or embed anything that can track you. 
 	</p>
 
 	<p aria-hidden="true">
