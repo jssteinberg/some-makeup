@@ -22,8 +22,8 @@ This isn't yet-another CSS normalize library. It solves some of the same problem
 	1. So displaying content and styling is safe on any device by not overflowing;
 	2. To prevent inline elements from affecting line-height to not disrupt readability and typography, and;
 	3. For simple consistency between elements.
-2. CSS rulesets to simplify a full restyle (includes `form` related elements) so coding is as intuitive as can be---generally and across browsers.
-<!-- 3. Add basic CSS rules for better, basic typography and for easier typographic styling. -->
+2. Simplify full styling (includes `form` related elements) so coding is as intuitive as can be---generally and across browsers.
+3. Better, basic typography and easier typographic styling.
 
 Also, when natural, provide CSS properties/variables to make adjustments easier when needed.
 
