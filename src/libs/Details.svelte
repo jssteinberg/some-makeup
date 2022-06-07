@@ -24,7 +24,7 @@
 
 <style>
 	details {
-		margin-block-end: calc(2 * var(--space, 1em));
+		margin-block-end: max(3em, 2 * var(--space, 1em));
 		padding-inline-end: 1em;
 	}
 

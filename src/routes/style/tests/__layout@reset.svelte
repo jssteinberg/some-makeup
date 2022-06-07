@@ -58,7 +58,6 @@
 	import MetaTags from '$libs/MetaData.svelte';
 	import { onMount } from 'svelte';
 	import Header from '$libs/Header.svelte';
-	import Footer from '$libs/Footer.svelte';
 
 	const links = [
 		{

@@ -47,8 +47,4 @@
 	${set.includes(`mixed`) ? `` : `typography`}
 `}>
 	<slot />
-
-	<style lang="scss">
-		@use './app-theme-main-content.scss';
-	</style>
 </div>
