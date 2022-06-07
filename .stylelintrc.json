@@ -14,7 +14,6 @@
 		"keyframe-declaration-no-important": true,
 		"keyframe-block-no-duplicate-selectors": true,
 		"declaration-block-no-duplicate-custom-properties": true,
-		"declaration-block-no-duplicate-properties": true,
 		"declaration-block-no-shorthand-property-overrides": true,
 		"block-no-empty": true,
 		"selector-pseudo-class-no-unknown": true,
@@ -24,8 +23,6 @@
 		"at-rule-no-unknown": true,
 		"comment-no-empty": true,
 		"no-descending-specificity": true,
-		"no-duplicate-at-import-rules": true,
-		"no-duplicate-selectors": true,
 		"no-empty-source": true,
 		"no-invalid-double-slash-comments": true,
 		"no-invalid-position-at-import-rule": true
