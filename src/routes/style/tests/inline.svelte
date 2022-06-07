@@ -8,6 +8,11 @@
 		<p><em>2 paragraphs,<br>both for…</em></p>
 		<p><em>3 paragraphs<br>all three for<br>height comparison.</em></p>
 
+		<section>
+			<h2><code>abbr</code></h2>
+			<p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+		</section>
+
 		<section class="inline-element-example">
 			<h2>Mono font elements</h2>
 
