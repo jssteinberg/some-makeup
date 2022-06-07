@@ -97,10 +97,6 @@
 </style>
 
 <script>
-	import { page } from '$app/stores';
-
-	/* console.log($page) */
-
 	const setColorThemeParameter = () => {
 		dark = !dark;
 		colorThemeParameter = getColorThemeParameter();
