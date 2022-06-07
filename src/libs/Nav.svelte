@@ -53,19 +53,23 @@
 
 		outline: none;
 		padding: 0 1em;
+		text-decoration: none;
 	}
 
 	nav.sticky a,
 	nav :global([aria-current="page"]),
 	nav :global(a:is(:hover,:focus-visible)) {
 		box-shadow: inset 0 0 0 1px;
+	}
+
+	nav :global(a:is(:hover,:focus-visible)) {
 		text-decoration: underline;
 	}
 
-	nav.sticky a:not(:focus),
-	nav :global([aria-current="page"]) {
-		text-decoration: none;
-	}
+	/* nav.sticky a:not(:focus), */
+	/* nav :global([aria-current="page"]) { */
+	/* 	text-decoration: none; */
+	/* } */
 
 	:where(nav):not(:has([aria-current="page"])) :global(a.parent) {
 		box-shadow: inset 0 1px;
