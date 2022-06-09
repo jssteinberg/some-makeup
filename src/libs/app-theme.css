@@ -36,6 +36,11 @@
 	font-family: var(--sans);
 }
 
+.app-theme-main-content h2 {
+	margin-block-start: calc(2 * var(--space));
+	font-weight: 700;
+}
+
 .app-theme-main-content hr {
 	background: transparent;
 	box-shadow: 0 0 0 1px;
@@ -119,11 +124,6 @@
 
 :where(.app-theme-main-content) > :not(:where(h1,pre)) {
 	width: var(--content-width);
-}
-
-:where(.app-theme-main-content) h2 {
-	margin-block-start: calc(3 * var(--space));
-	font-weight: 700;
 }
 
 :where(.app-theme-main-content) :is(h4, h5, h6) {

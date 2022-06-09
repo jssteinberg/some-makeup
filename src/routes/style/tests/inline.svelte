@@ -83,12 +83,6 @@
 </aside> -->
 
 <style>
-	/* section :is(code, kbd, samp) { */
-	/* 	background: rgba(0, 255, 0, .25); */
-	/* 	border-radius: .25rem; */
-	/* 	padding: 0 .5ch; */
-	/* } */
-
 	.ex {
 		font-size: 2.5ex;
 	}
