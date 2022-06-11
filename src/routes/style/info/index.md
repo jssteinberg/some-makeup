@@ -41,10 +41,6 @@ The items quite naturally splits into different files, and can then be imported 
 [sc]: https://github.com/csstools/sanitize.css
 
 <style>
-	ol ol {
-		list-style-type: lower-alpha;
-	}
-
 	/* Book style stuff */
 
 	p {
@@ -62,19 +58,5 @@ The items quite naturally splits into different files, and can then be imported 
 
 	:is(ol,ul) :is(ol,ul) {
 		margin: 0;
-	}
-
-	@media (min-width: 1200px) {
-		ol {
-			list-style: decimal;
-		}
-
-		:is(ol,ul) {
-			padding: 0;
-		}
-
-		:is(ol,ul) :is(ol,ul) {
-			padding-inline-start: var(--space);
-		}
 	}
 </style>

@@ -118,10 +118,6 @@
 
 /* Less specificity */
 
-:where(.app-theme-main-content) :where(ol, ul) {
-	padding-inline-start: var(--space, 1em);
-}
-
 :where(.app-theme-main-content) > :not(:where(h1,pre)) {
 	width: var(--content-width);
 }
@@ -147,6 +143,26 @@
 @media (min-width: 1500px) {
 	:where(.app-theme-main-content) h2 { --h2-line-span: 2; }
 	:where(.app-theme-main-content) h3 { --h3-added-lead: .25; }
+}
+
+/* Lists */
+
+:where(.app-theme-main-content) :is(ol, ul) {
+	padding-inline-start: var(--space, 1em);
+}
+
+:where(.app-theme-main-content) ol ol {
+	list-style-type: lower-alpha;
+}
+
+@media (min-width: 1200px) {
+	:where(.app-theme-main-content) :is(ol,ul) {
+		padding: 0;
+	}
+
+	:where(.app-theme-main-content) :is(ol,ul) :is(ol,ul) {
+		padding-inline-start: var(--space);
+	}
 }
 
 /* Link */
