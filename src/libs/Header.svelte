@@ -15,7 +15,7 @@
 			:root {
 				--bg-l: 100%;
 				--fg-l: 0%;
-				--sep-fg-l: 87.5%;
+				--sep-fg-l: 90%;
 				--color-scheme: light;
 			}
 
