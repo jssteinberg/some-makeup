@@ -8,7 +8,7 @@ set: ["code"]
 
 So you want to makeup style? These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
-```sh
+```shell
 npm install makeup-style
 ```
 

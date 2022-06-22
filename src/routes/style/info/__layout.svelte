@@ -4,11 +4,11 @@
 
 	const links = [
 		{
-			label: 'Safe & Intuitive Defaults',
+			label: 'Intuitive & Safer CSS Defaults',
 			href: '/style/info',
 		},
 		{
-			label: '“Fix” it Safer',
+			label: '1. Fix it Safer',
 			href: '/style/info/fix',
 		},
 		/* { */
