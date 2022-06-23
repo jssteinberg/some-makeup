@@ -106,17 +106,9 @@
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-}
 
-.app-theme-main-content :where(pre)::after {
-	--_width: var(--content-width);
-	--_height: 1px;
-	border-bottom: var(--_height) dotted;
-	content: "";
-	position: absolute;
-	inset: auto auto 0 0;
-	width: var(--_width);
-	height: var(--_height);
+	background: no-repeat bottom left / var(--content-width) 1px 
+		linear-gradient(var(--sep-color), var(--sep-color));
 }
 
 /* Less specificity */
