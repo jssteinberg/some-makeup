@@ -2,8 +2,8 @@
 	@font-face {
 		font-family: "Manrope";
 		src:
-			url("./Manrope[wght].4.505.woff2") format("woff2 supports variations"),
-			url("./Manrope[wght].4.505.woff2") format("woff2-variations");
+			url("./Manrope-wght.4.505.woff2") format("woff2 supports variations"),
+			url("./Manrope-wght.4.505.woff2") format("woff2-variations");
 		font-weight: 100 1000;
 		font-stretch: 25% 151%;
 		font-style: normal;

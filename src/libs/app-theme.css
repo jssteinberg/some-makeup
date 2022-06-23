@@ -36,6 +36,11 @@
 	font-family: var(--sans);
 }
 
+.app-theme-main-content h2 {
+	margin-block-start: calc(2 * var(--space));
+	font-weight: 700;
+}
+
 .app-theme-main-content hr {
 	background: transparent;
 	box-shadow: 0 0 0 1px;
@@ -81,6 +86,7 @@
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
+/* `code` background */
 .app-theme-main-content :not(:is(h1,pre,a)) > code {
 	background: var(--sep-color);
 	border-radius: .15rem;
@@ -100,30 +106,15 @@
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-}
 
-.app-theme-main-content :where(pre)::after {
-	border-bottom: 1px solid var(--sep-color);
-	content: "";
-	position: absolute;
-	bottom: 0; left: 0;
-	width: var(--content-width);
-	height: 1px;
+	background: no-repeat bottom left / var(--content-width) 1px 
+		linear-gradient(var(--sep-color), var(--sep-color));
 }
 
 /* Less specificity */
 
-:where(.app-theme-main-content) :where(ol, ul) {
-	padding-inline-start: var(--space, 1em);
-}
-
 :where(.app-theme-main-content) > :not(:where(h1,pre)) {
 	width: var(--content-width);
-}
-
-:where(.app-theme-main-content) h2 {
-	margin-block-start: calc(3 * var(--space));
-	font-weight: 700;
 }
 
 :where(.app-theme-main-content) :is(h4, h5, h6) {
@@ -147,6 +138,26 @@
 @media (min-width: 1500px) {
 	:where(.app-theme-main-content) h2 { --h2-line-span: 2; }
 	:where(.app-theme-main-content) h3 { --h3-added-lead: .25; }
+}
+
+/* Lists */
+
+:where(.app-theme-main-content) :is(ol, ul) {
+	padding-inline-start: var(--space, 1em);
+}
+
+:where(.app-theme-main-content) ol ol {
+	list-style-type: lower-alpha;
+}
+
+@media (min-width: 1200px) {
+	:where(.app-theme-main-content) :is(ol,ul) {
+		padding: 0;
+	}
+
+	:where(.app-theme-main-content) :is(ol,ul) :is(ol,ul) {
+		padding-inline-start: var(--space);
+	}
 }
 
 /* Link */

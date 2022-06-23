@@ -18,8 +18,8 @@ It's open source and is available as a [variable font](https://web.dev/variable-
 	@font-face {
 		font-family: "Manrope";
 		src:
-			url("./Manrope.4.505.woff2") format("woff2 supports variations"),
-			url("./Manrope.4.505.woff2") format("woff2-variations");
+			url("./Manrope-wght.4.505.woff2") format("woff2 supports variations"),
+			url("./Manrope-wght.4.505.woff2") format("woff2-variations");
 		font-weight: 100 1000;
 		font-stretch: 25% 151%;
 		font-style: normal;
@@ -35,6 +35,12 @@ It's open source and is available as a [variable font](https://web.dev/variable-
 h1 {
 	font-variation-settings: "wght" 1000;
 }
+```
+
+Check if you should preload:
+
+```html
+<link rel="preload" href="Manrope-wght.4.505.woff2" as="font" type="font/woff2">
 ```
 
 <style>
@@ -63,7 +69,5 @@ h1 {
 </style>
 
 <script>
-	import FontManrope from '$libs/FontManrope.svelte'
+	import "$libs/manrope/font.css";
 </script>
-
-<FontManrope />

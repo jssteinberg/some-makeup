@@ -15,7 +15,7 @@
 			:root {
 				--bg-l: 100%;
 				--fg-l: 0%;
-				--sep-fg-l: 87.5%;
+				--sep-fg-l: 90%;
 				--color-scheme: light;
 			}
 
@@ -62,7 +62,7 @@
 
 	.color-switcher::after {
 		--_off: calc(.5rem - 1px);
-		--_duration: .25s;
+		--_duration: .375s;
 
 		background: transparent;
 		content: "";
@@ -72,16 +72,16 @@
 		transition: transform var(--_duration) ease;
 
 		position: absolute;
-		inset: var(--_off) var(--_off) calc(-1 * var(--_off)) calc(-1 * var(--_off));
+		inset: calc(-1 * var(--_off)) var(--_off) var(--_off) calc(-1 * var(--_off));
 		z-index: 1;
 	}
 
 	.color-switcher:is(:hover,:focus-visible)::after {
-		transform: translate(var(--_off), calc(-1 * var(--_off)));
+		transform: translate(var(--_off), var(--_off));
 	}
 
 	.color-switcher:focus-visible::after {
-		animation: outline-1px calc(.5 * var(--_duration)) forwards var(--_duration);
+		animation: outline-1px calc(.75 * var(--_duration)) forwards var(--_duration);
 	}
 
 	@keyframes outline-1px {

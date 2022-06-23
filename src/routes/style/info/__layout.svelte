@@ -4,12 +4,13 @@
 
 	const links = [
 		{
-			label: 'Safe & Intuitive Defaults',
-			href: '/style/info',
+			label: `1. Fix & Do CSS`,
+			href: `/style/info`,
+			subtitle: `Intuitive & Safer CSS Defaults`,
 		},
 		{
-			label: '“Fix” it Safer',
-			href: '/style/info/fix',
+			label: `2. Typography`,
+			href: `/style/info/typography`,
 		},
 		/* { */
 		/* 	label: '“Do” it Intuitively', */
@@ -18,6 +19,7 @@
 	];
 
 	$: part = links.filter(link => $page.routeId === link.href.replace(/^\//, ``))[0]?.label;
+	$: subtitle = links.filter(link => $page.routeId === link.href.replace(/^\//, ``))[0]?.subtitle;
 </script>
 
 <article class="app-theme">
@@ -33,6 +35,10 @@
 				{part}
 			{/if}
 		</h1>
+
+		{#if subtitle}
+			<p><em>{subtitle}</em></p>
+		{/if}
 	</header>
 
 	<slot />
@@ -43,6 +49,10 @@
 </article>
 
 <style>
+	article :global(.app-theme) {
+		--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+	}
+
 	header {
 		margin-block-end: 1rem;
 		padding-inline: var(--view-inline);

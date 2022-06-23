@@ -2,10 +2,10 @@
 	export let title
 	export let metaTitle
 	export let description
-	export let canonical
+	export let canonical = null
 	export let author
-	export let image
-	export let alt
+	export let image = null
+	export let alt = null
 	export let keywords
 
 	title = metaTitle ?? title

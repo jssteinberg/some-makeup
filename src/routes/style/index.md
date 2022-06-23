@@ -8,11 +8,11 @@ set: ["code"]
 
 So you want to makeup style? These minimal CSS files fixes default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
-```sh
+```shell
 npm install makeup-style
 ```
 
-## 1. "Fix CSS"
+## 1. *Fix CSS*
 
 ```css
 @import "makeup-style/src/fix.css";
@@ -20,7 +20,7 @@ npm install makeup-style
 
 *Populate HTML documents and makeup style safely.* A lean CSS fix that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; fixes font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
-This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], etc. *With the file below it even normalizes button and inputs, as the alternatives mentioned does not.*
+This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with below file it even normalizes buttons and inputs, which the mentioned alternatives does not.
 
 <Details>
 <em slot="summary">Notes</em>
@@ -29,13 +29,13 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 
 </Details>
 
-### 1.2 "Do CSS"---A <cite>Fix CSS</cite> Expansion
+## *Do CSS*---A <cite>Fix CSS</cite> Expansion
 
 ```css
 @import "makeup-style/src/do.css";
 ```
 
-*When you're doing a full makeup, do it intuitively.* An improvement of the CSS developer experience, and buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them. Buttons and inputs will most likely need some styling, but this makes consistent styling simpler.
+*When you're doing a full makeover, do it intuitively.* An improvement of the CSS developer experience, and buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them. Buttons and inputs will most likely need some styling, but this makes consistent styling simpler.
 
 <Details>
 <em slot="summary">Tips</em>
@@ -53,7 +53,7 @@ button {
 ```
 </Details>
 
-## 2. "Space CSS"
+## 2. *Space CSS*
 
 ```css
 @import "makeup-style/src/space.css";
@@ -66,7 +66,7 @@ CSS rulesets for consistent spacing between the needed block-level elements.
 `--block-start`/`--block-end` for declaring start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1rem)`.
 
 <Details>
-<span slot="summary">Example</span>
+<em slot="summary">Example</em>
 
 
 ```css
@@ -90,7 +90,7 @@ CSS rulesets for consistent spacing between the needed block-level elements.
 
 </Details>
 
-### 2.1 "Flow CSS"---A <cite>Space CSS</cite> Expansion
+## *Flow CSS*---A <cite>Space CSS</cite> Expansion
 
 ```css
 @import "makeup-style/src/flow.css";
@@ -98,7 +98,7 @@ CSS rulesets for consistent spacing between the needed block-level elements.
 
 CSS with rulesets declaring headings' line-height to be computed to container declaring `--added-lead`, and with rulesets for other elements to flow.
 
-#### Variables
+**Variables:**
 
 `--added-lead` for declaring line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
 
@@ -106,7 +106,7 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 
 `--hr-height` for declaring height of `<hr>`. Falls back to `var(--space, 1rem)`.
 
-##### Headings
+**Heading variables:**
 
 {#each Array.from(Array(3)) as _,i}
 
@@ -138,7 +138,7 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 
 {/each}
 
-#### Side effects
+**Side effects:**
 
 - Easy gradient `<hr>`:
 
