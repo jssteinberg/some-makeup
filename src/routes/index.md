@@ -1,6 +1,6 @@
 ---
 title: some.makeup
-description: Makeup some style for the web
+description: "Some makeup for the web."
 layout: no
 ---
 
