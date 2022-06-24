@@ -1,6 +1,6 @@
 /* loSplash.js - A splash of FP util functions. */
 
-/** Fn returns an object property's value from a key string.
+/** Fn returns an object property value from a key string.
  *
  * ```
  * getValue(obj, key, valArrIndex))

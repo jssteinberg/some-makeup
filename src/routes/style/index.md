@@ -1,6 +1,6 @@
 ---
 title: makeup-style
-description: So you want to makeup some styling?
+description: "Makeup style for the web."
 set: ["code"]
 ---
 

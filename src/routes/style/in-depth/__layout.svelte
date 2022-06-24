@@ -25,16 +25,10 @@
 <article class="app-theme">
 	<header>
 		<h1>
-			<small> makeup-style in-depth: </small>
-			<br aria-hidden="true" />
+			<small>makeup-style in-depth:</small>
 
 			{#if part}
-				{part}{#if subtitle}—{/if}
-
-				{#if subtitle}
-					<br aria-hidden="true" />
-					<em>{subtitle}</em>
-				{/if}
+				{part}{#if subtitle}—{/if}{#if subtitle}<em class="block">{subtitle}</em>{/if}
 			{/if}
 		</h1>
 	</header>
@@ -49,7 +43,7 @@
 </article>
 
 <style>
-	article,
+	.app-theme,
 	article :global(.app-theme) {
 		--space: calc(var(--font-size) * (1 + var(--added-lead, 0.6)));
 	}
@@ -62,10 +56,12 @@
 	h1 small {
 		font-style: italic;
 		font-size: var(--font-size, 1rem);
+		display: block;
+		padding-block: calc(.5 * var(--space, 1em));
 	}
 
-	.sep {
-		display: block;
-		height: var(--space, 1rem);
-	}
+	/* .sep { */
+	/* 	display: block; */
+	/* 	height: var(--space, 1rem); */
+	/* } */
 </style>

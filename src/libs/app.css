@@ -77,6 +77,10 @@ a {
 
 /* UTIL CLASSES */
 
+.block {
+	display: block;
+}
+
 .typography {
 	text-rendering: optimizeLegibility;
 }
