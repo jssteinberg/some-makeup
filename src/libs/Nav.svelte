@@ -62,6 +62,10 @@
 		box-shadow: inset 0 0 0 1px;
 	}
 
+	nav :global([aria-current="page"]) {
+		text-decoration: underline;
+	}
+
 	nav :global(a:is(:hover,:focus-visible)) {
 		text-decoration: underline;
 	}
