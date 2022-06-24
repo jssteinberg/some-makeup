@@ -1,37 +1,33 @@
-<h1>WIP</h1>
-
-<PostList {posts} />
-
-<script>
-	import PostList from '$libs/PostList.svelte';
-
-	export let posts;
-</script>
-
 <script context="module">
 	const markdownFiles = import.meta.globEager(`./*.md`);
-	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
+	const getSlug = path => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
 	export const load = async ({ url }) => {
 		const posts = Object.keys(markdownFiles)
-			.map((path) => {
+			.map(path => {
 				return {
 					filePath: path,
 					slug: getSlug(path),
 					path: `${url.pathname}/${getSlug(path)}`,
-					title: markdownFiles[path].metadata?.title || getSlug(path).replace(/-/, ' '),
+					title:
+						markdownFiles[path].metadata?.title ||
+						getSlug(path).replace(/-/, " "),
 					metadata: markdownFiles[path].metadata,
 				};
 			})
-			.filter((item) => !['index'].includes(item.title));
+			.filter(item => !["index"].includes(item.title));
 
 		return {
 			props: {
 				posts: posts
 					.sort((a, b) => a.title.localeCompare(b.title))
 					.sort((a, b) => {
-						const aDate = new Date(a.metadata?.date ? a.metadata.date[0] : `1990-01-01`);
-						const bDate = new Date(b.metadata?.date ? b.metadata.date[0] : `1990-01-01`);
+						const aDate = new Date(
+							a.metadata?.date ? a.metadata.date[0] : `1990-12-20`,
+						);
+						const bDate = new Date(
+							b.metadata?.date ? b.metadata.date[0] : `1990-12-20`,
+						);
 
 						return bDate - aDate;
 					}),
@@ -40,8 +36,19 @@
 	};
 </script>
 
+<script>
+	import PostList from "$libs/PostList.svelte";
+
+	export let posts;
+</script>
+
+<h1>WIP</h1>
+
+<PostList {posts} />
+
 <style>
-h1, h1 ~ :global(*) {
-	margin-inline: var(--view-inline);
-}
+	h1,
+	h1 ~ :global(*) {
+		margin-inline: var(--view-inline);
+	}
 </style>
