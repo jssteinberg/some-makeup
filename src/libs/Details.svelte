@@ -88,13 +88,6 @@
 		margin-block-start: var(--space, 1em);
 	}
 
-	summary ~ :global(:not(hr)) {
-		background-image: none;
-		box-shadow: none;
-		border-right: none;
-		border-left: none;
-	}
-
 	summary ~ :global(:last-child) {
 		padding-block-end: var(--space, 1em);
 	}
