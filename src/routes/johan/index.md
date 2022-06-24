@@ -1,11 +1,12 @@
 ---
 title: Johan Sebergsen Steinberg
+description: "Coding the front of the web—making it usable and accessible—and still design some."
 set: ["typography"]
 ---
 
 # Johan Sebergsen Steinberg
 
-Johan is currently working as a senior engineer, coding React, Next.js, CSS and HTML---making it usable and accessible---and sometimes designing in Figma, and; always thinking about pleasing, minimalistic, optimized and ethical web products. *Previously worked with Svelte, and still loves and uses it after work.*
+Johan is currently working as a senior engineer coding React, Next.js, CSS and HTML---making it usable and accessible---and still designing some. And always thinking about pleasing, minimalistic, optimized and ethical web products. *Previously worked with Svelte, and still loves and uses it after work.*
 
 <PostList {posts} />
 
