@@ -6,7 +6,7 @@ set: ["code"]
 
 Coding CSS a decade ago, a CSS-reset was normally used, and an utter annoyance. Especially for those new to web development. Then [normalize.css][nc] became popular, thank god, and elements would more or less keep their intended default styles, just be somewhat styled to be similar across browsers. By default HTML elements made visually semantic sense again.
 
-An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but links display as links, lists as lists, and so on. And I would think most agrees on that being a good thing, so many that there are quite a lot of projects in same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and probably others.
+An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but links display as links, lists as lists, and so on. And I would think most agrees on that being a good thing, so many that there are quite a lot of projects in the same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and probably others.
 
 But does all CSS need to be normalized in a low level library like normalize.css?
 The more styling, the more opinionated code. Which is something you want at a bare minimum in a low level CSS library. Also, the more style, the more is likely overwritten when sites and apps are styled.
@@ -21,16 +21,36 @@ Some of the same problems must be solved, and an update for latest browser imple
 	- Normalizing simple semantic styling.
 	- Inline elements should as far as reasonable be prevented from affecting `line-height`, so readability and typography is disrupted as little as possible.
 	- Styling between elements that relates somehow should be consistent without over-complicating things.
-2. How can default CSS be improved to ease complete restyle?
+2. How can default CSS be improved to ease complete restyles?
 	- Elements should have a minimal, similar style between browsers so the restyling works the same across browsers (this definitely includes `form` related elements).
-	- Coding style should generally be as intuitive as can be.
+	- Coding CSS should generally be as intuitive as can be.
 
 And, as mentioned, code that's too opinionated or styling that is often overwritten should be carefully considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
+
+*The up-to-date, full breakdown on draft of the resulting code follows.*
 
 
 ## *Fix CSS Safer*
 
 For the simplest of needs, browser default CSS has some flaws that must be fixed: overflowing content should not be present out of the box and it should be prevented when styling; since the main content of the web is text, the simplest typographic needs should be upheld both for readability and further typographic improvements through style, and; simple inconsistencies disturbing usability and styling.
+
+<Details>
+
+<em slot="summary">Side notes</em>
+
+- CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The fix presented here fixes it with a single `line-height` rule for the inline elements in question.
+- Margins or sizes for headings are not included. Default CSS is typographically descent, even if not always consistent, e.g., `<h1>` size. But headings are usually styled if they need certain margins and size which takes precedence over browser defaults.
+- Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
+- Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
+- `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
+- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
+- Form elements are not normalized, but are normalized for styling in the “do” CSS.
+- Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
+- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
+
+</Details>
+
+---
 
 A CSS fix has to start with perhaps **the** rule all elements need. More intuitively for human developers, it makes browsers include border-width and padding when calculating width and height. It's also very important for preventing horizontal overflow when applying styles.
 
@@ -121,7 +141,7 @@ img, svg, video, canvas {
 
 ---
 
-For accessibility, textareas only resize vertically by default.
+For accessibility, textareas only resize vertically by default. By default a user could by accident make a `<textarea>` overflow the viewport horizontally. Differences in motor skills could make it particularly unpredictable for some users.
 
 ```css
 textarea {
@@ -257,19 +277,6 @@ select, summary {
 }
 ```
 
-### Side notes
-
-- CSS Remedy also adds `line-sizing: normal` to the root element, but that was from a CSS draft later changed. The fix presented here fixes it with a single `line-height` rule for the inline elements in question.
-- Margins or sizes for headings are not included. Browsers has descent styles, even if `<h1>` can differ. Themes usually styles the headings they need with margins and size.
-- Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
-- Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s easier to remove them when needed.
-- `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
-- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
-- Form elements are not normalized, but are normalized for styling in the “do” CSS.
-- Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
-- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
-
-
 ## *Do CSS Intuitively*
 
 ...
@@ -310,10 +317,6 @@ select, summary {
 
 	p + p {
 		text-indent: var(--space);
-	}
-
-	:is(ol,ul) :is(ol,ul) {
-		margin: 0;
 	}
 
 	/* --- */

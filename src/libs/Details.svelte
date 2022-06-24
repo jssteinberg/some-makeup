@@ -25,7 +25,8 @@
 <style>
 	details {
 		margin-block-end: max(3em, 2 * var(--space, 1em));
-		padding-inline-end: 1em;
+		padding-inline-end: var(--space, 1em);
+		padding-block-end: var(--space, 1em);
 	}
 
 	summary {
@@ -86,9 +87,5 @@
 
 	:where(summary) + :global(:where(*)) {
 		margin-block-start: var(--space, 1em);
-	}
-
-	summary ~ :global(:last-child) {
-		padding-block-end: var(--space, 1em);
 	}
 </style>

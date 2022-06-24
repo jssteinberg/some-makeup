@@ -8,7 +8,7 @@
 		},
 		{
 			label: 'in-depth',
-			href: '/style/info',
+			href: '/style/in-depth',
 		},
 		{
 			label: 'tests',
