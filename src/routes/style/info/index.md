@@ -4,11 +4,11 @@ description: "An HTML element's default style does actually show the semantic me
 set: ["code"]
 ---
 
-Coding CSS a decade ago, a CSS-reset was normally used, and an utter annoyance. Especially for those new to web development. Then [normalize.css][nc] became popular, thank god, and elements would more or less keep their intended default styles, just be somewhat styled to be similar across browsers. By default HTML elements made visullay semantic sense again.
+Coding CSS a decade ago, a CSS-reset was normally used, and an utter annoyance. Especially for those new to web development. Then [normalize.css][nc] became popular, thank god, and elements would more or less keep their intended default styles, just be somewhat styled to be similar across browsers. By default HTML elements made visually semantic sense again.
 
-An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but links display as links, lists as lists, and so on. And I would think most agrees on that being a good thing, so many that there are quite a lot of projects in same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and others.
+An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but links display as links, lists as lists, and so on. And I would think most agrees on that being a good thing, so many that there are quite a lot of projects in same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and probably others.
 
-But should all CSS be normalized in a low level library like normalize.css?
+But does all CSS need to be normalized in a low level library like normalize.css?
 The more styling, the more opinionated code. Which is something you want at a bare minimum in a low level CSS library. Also, the more style, the more is likely overwritten when sites and apps are styled.
 
 Can normalize.css' approach be rethought?
@@ -17,9 +17,11 @@ Some of the same problems must be solved, and an update for latest browser imple
 
 1. What needs fixing in default CSS for smaller viewports, typography and consistency?
 	- Displaying content and styling should be as safe as possible---on any device---from overflowing.
+	- Expected simple functionality of HTML should be upheld as far as possible.
+	- Normalizing simple semantic styling.
 	- Inline elements should as far as reasonable be prevented from affecting `line-height`, so readability and typography is disrupted as little as possible.
-	- Related styling between elements should be consistent without over-complicated styling.
-2. How can default CSS be improved to ease restyling?
+	- Styling between elements that relates somehow should be consistent without over-complicating things.
+2. How can default CSS be improved to ease complete restyle?
 	- Elements should have a minimal, similar style between browsers so the restyling works the same across browsers (this definitely includes `form` related elements).
 	- Coding style should generally be as intuitive as can be.
 
@@ -28,7 +30,7 @@ And, as mentioned, code that's too opinionated or styling that is often overwrit
 
 ## *Fix CSS Safer*
 
-For the simplest of needs, browser default CSS has some flaws that must be fixed: overflowing content should not happen out of the box and be prevented when styling; since the main content of the web is text, the simplest typographic needs should be upheld both for readability and further typographic improvements through style, and; simple inconsistencies disturbing usability.
+For the simplest of needs, browser default CSS has some flaws that must be fixed: overflowing content should not be present out of the box and it should be prevented when styling; since the main content of the web is text, the simplest typographic needs should be upheld both for readability and further typographic improvements through style, and; simple inconsistencies disturbing usability and styling.
 
 A CSS fix has to start with perhaps **the** rule all elements need. More intuitively for human developers, it makes browsers include border-width and padding when calculating width and height. It's also very important for preventing horizontal overflow when applying styles.
 

@@ -23,7 +23,11 @@ Plan v1:
 
 Plan v2:
 
+- Support variable font, e.g., for `b, strong`.
 - Wrap stuff in `:where()` or use `@layer`.
+
+Nope:
+
 - Remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now. *No! It's for maintaining behaviour.*
 
 ## History
