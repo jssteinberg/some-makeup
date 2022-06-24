@@ -56,14 +56,17 @@
 		text-decoration: none;
 	}
 
-	nav.sticky a,
-	nav :global([aria-current="page"]),
-	nav :global(a:is(:hover,:focus-visible)) {
+	nav.sticky a {
 		box-shadow: inset 0 0 0 1px;
 	}
 
 	nav :global([aria-current="page"]) {
 		text-decoration: underline;
+	}
+
+	nav.sticky :global(a:focus-visible),
+	nav :global(a:focus-visible) {
+		box-shadow: inset 0 0 0 2px;
 	}
 
 	nav :global(a:is(:hover,:focus-visible)) {

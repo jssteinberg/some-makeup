@@ -45,8 +45,12 @@
 
 	.color-switcher::after,
 	.color-switcher,
-	.site-header a:is(:hover, :focus-visible) {
+	.site-header a:hover {
 		box-shadow: inset 0 0 0 1px var(--fg);
+	}
+
+	.site-header a:focus-visible {
+		box-shadow: inset 0 0 0 2px var(--fg);
 	}
 
 	.site-header [href="/"] {
@@ -81,16 +85,16 @@
 	}
 
 	.color-switcher:focus-visible::after {
-		animation: outline-1px calc(.75 * var(--_duration)) forwards var(--_duration);
+		animation: outline calc(.75 * var(--_duration)) forwards var(--_duration);
 	}
 
-	@keyframes outline-1px {
+	@keyframes outline {
 		from {
-			outline: 1px solid transparent;
+			outline: 2px solid transparent;
 			outline-offset: 0;
 		}
 		to {
-			outline: 1px solid var(--fg);
+			outline: 2px solid var(--fg);
 			outline-offset: 1px;
 		}
 	}
