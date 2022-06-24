@@ -4,23 +4,54 @@ description: Makeup some style for the web
 layout: no
 ---
 
+<script context="module">
+	import { getPostsFromFiles } from '$libs/utils/index.js';
+
+	const markdownFiles = import.meta.globEager(`./*.md`);
+	const excludeFiles = ["index"];
+
+	export const hydrate = false;
+
+	export const load = async ({ url }) => {
+		return {
+			props: {
+				posts: getPostsFromFiles(markdownFiles, url).filter(
+					item => !excludeFiles.includes(item.title),
+				),
+			},
+		};
+	};
+</script>
+
+<script>
+	export let posts = [];
+</script>
+
 <div class="wrapper">
 
 # _some_**.**[makeup-style](/style)
 
-- <small><time>2022-04-20</time></small>
-	<a href="/manrope" sveltekit:prefetch>
+{#if posts}
+	<ul>
+		{#each posts as post}
+			<li>
+				{#if post.metadata?.date}
+					<small>
+						<time>{post.metadata.date[0]}</time>
+					</small>
+				{/if}
 
-	Manrope `@font-face`
-
-	</a>
-
-- <small><time>2022-01-26</time></small>
-	<a href="/gradient-text" sveltekit:prefetch>
-
-	Gradient Text CSS: Overused Yet?
-
-	</a>
+				<a
+					href={post.path}
+					sveltekit:prefetch
+					lang={post.metadata?.lang ? post.metadata.lang : undefined}
+				>
+					<span>{@html post.title}</span>
+				</a>
+			</li>
+		{/each}
+	</ul>
+{/if}
 
 </div>
 
@@ -68,7 +99,3 @@ layout: no
 		display: block;
 	}
 </style>
-
-<script context="module">
-	export const hydrate = false;
-</script>

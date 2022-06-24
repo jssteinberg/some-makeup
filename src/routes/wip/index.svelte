@@ -1,36 +1,16 @@
 <script context="module">
+	import { getPostsFromFiles } from '$libs/utils/index.js';
 	const markdownFiles = import.meta.globEager(`./*.md`);
-	const getSlug = path => path.replace(/.*\/([^/]*)\..*$/, "$1");
+	const excludeFiles = ["index"];
 
 	export const load = async ({ url }) => {
-		const posts = Object.keys(markdownFiles)
-			.map(path => {
-				return {
-					filePath: path,
-					slug: getSlug(path),
-					path: `${url.pathname}/${getSlug(path)}`,
-					title:
-						markdownFiles[path].metadata?.title ||
-						getSlug(path).replace(/-/, " "),
-					metadata: markdownFiles[path].metadata,
-				};
-			})
-			.filter(item => !["index"].includes(item.title));
+		const posts = getPostsFromFiles(markdownFiles, url).filter(
+			item => !excludeFiles.includes(item.title),
+		);
 
 		return {
 			props: {
-				posts: posts
-					.sort((a, b) => a.title.localeCompare(b.title))
-					.sort((a, b) => {
-						const aDate = new Date(
-							a.metadata?.date ? a.metadata.date[0] : `1990-12-20`,
-						);
-						const bDate = new Date(
-							b.metadata?.date ? b.metadata.date[0] : `1990-12-20`,
-						);
-
-						return bDate - aDate;
-					}),
+				posts,
 			},
 		};
 	};

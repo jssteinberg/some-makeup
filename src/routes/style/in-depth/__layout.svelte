@@ -64,8 +64,8 @@
 		font-size: var(--font-size, 1rem);
 	}
 
-	.sep {
-		display: block;
-		height: var(--space, 1rem);
-	}
+	/* .sep { */
+	/* 	display: block; */
+	/* 	height: var(--space, 1rem); */
+	/* } */
 </style>

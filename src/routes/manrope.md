@@ -1,5 +1,6 @@
 ---
-title: Manrope Font-Face
+title: "Manrope <code>@font-face</code>"
+metaTitle: Manrope @font-face
 description: "A modern sans-serif variable font."
 set: ["code"]
 date: ["2022-04-20"]
