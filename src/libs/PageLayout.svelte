@@ -12,7 +12,7 @@
 	export let description;
 	export let author;
 	export let tags;
-	//export let date;
+	export let date;
 	export let set = [];
 
 	$: langAttr = lang ?? set?.includes('nb') ? 'nb' : undefined;
@@ -40,6 +40,9 @@
 	<PrismCss />
 {/if}
 
+{#if date}
+	<p class="date-info"><em>Published/updated: {date.join(", ")}</em></p>
+{/if}
 <div lang={langAttr} class={`
 	app-theme
 	app-theme-main-content
@@ -48,3 +51,10 @@
 `}>
 	<slot />
 </div>
+
+<style>
+	.date-info {
+		text-align: end;
+		padding-inline: var(--view-inline);
+	}
+</style>

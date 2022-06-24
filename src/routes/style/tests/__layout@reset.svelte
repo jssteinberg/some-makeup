@@ -80,6 +80,10 @@
 			label: 'Usability',
 			href: '/style/tests/usability',
 		},
+		{
+			label: 'Convenience',
+			href: '/style/tests/convenience',
+		},
 	];
 
 	let els;

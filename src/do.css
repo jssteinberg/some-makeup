@@ -1,4 +1,4 @@
-/* FOR EASIER STYLING */
+/* CONVENIENCES FOR STYLING */
 
 /* Background images are not repeated. */
 *, ::before, ::after {
@@ -12,11 +12,13 @@
 	/* Inherit vertical alignment. */
 	vertical-align: inherit; }
 
-/* Remove body margin---always removed when theming. */
-body {
-	margin: 0; }
+/* MORE CONSISTENT CROSS-BROWSER STYLING */
 
-/* NORMALIZATION FOR EASIER CROSS-BROWSER STYLING */
+/* Remove confusing body margin when doing styling. */
+/* Remove the margin on form related elements (Safari). */
+body,
+button, input, select, textarea {
+	margin: 0; }
 
 /* Set `search` to textfield. */
 input[type="search" i] {
@@ -27,7 +29,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	-webkit-appearance: none; }
 
 button, ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i] {
-	/* Fix inability to style buttons in Ios and Safari. */
+	/* Fix inability to style buttons (Ios and Safari). */
 	-webkit-appearance: button;
 	/* Cross-browser variable/`none` `border` . */
 	border: none;
@@ -41,10 +43,6 @@ button, ::file-selector-button, [type="button" i], [type="reset" i], [type="subm
 	border-radius: .125em;
 	/* Inherit font-family. */
 	font-family: inherit; }
-
-/* Remove the margin on controls in Safari. */
-button, input, select, textarea {
-	margin: 0; }
 
 /* REDUCE MOTION */
 

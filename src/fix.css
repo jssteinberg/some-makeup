@@ -1,7 +1,7 @@
 /* UNIVERSAL RULES & PREVENT OVERFLOW */
 
+/* Border-box so size includes border and padding, and border doesn't hide text */
 *, ::before, ::after {
-	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box; }
 
 :root {
