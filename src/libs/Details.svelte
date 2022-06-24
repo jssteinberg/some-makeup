@@ -39,6 +39,14 @@
 
 		box-shadow: inset 1px -1px;
 		outline: none;
+
+		position: sticky;
+		top: 0;
+		background: linear-gradient(
+			hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .75) 25%,
+			transparent
+		);
+		text-shadow: 1px 1px 2px var(--bg);
 	}
 
 	summary:focus-visible {
