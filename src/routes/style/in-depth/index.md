@@ -6,28 +6,28 @@ set: ["code"]
 
 Coding CSS a decade ago, a CSS-reset was normally used, and an utter annoyance. Especially for those new to web development. Then [normalize.css][nc] became popular, thank god, and elements would more or less keep their intended default styles, just be somewhat styled to be similar across browsers. By default HTML elements made visually semantic sense again.
 
-An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but links display as links, lists as lists, and so on. And I would think most agrees on that being a good thing, so many that there are quite a lot of projects in the same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and probably others.
+An HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but links display as links, lists as lists, and so on. Normalize.css just normalized all the basic semantic styling across browsers---*normalizing*. And I would think most agree on that being a good thing, so many that there are quite a lot of projects in the same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and probably others.
 
 But does all CSS need to be normalized in a low level library like normalize.css?
 The more styling, the more opinionated code. Which is something you want at a bare minimum in a low level CSS library. Also, the more style, the more is likely overwritten when sites and apps are styled.
 
 Can normalize.css' approach be rethought?
-Some of the same problems must be solved, and an update for latest browser implementations can be needed. But much of the original code from normalize.css is rarely needed or outdated. Modern browsers has less differences between them. There's also some low level parts of default CSS the normalize approach did not fix. CSS Remedy and sanitize.css has tried to fix more, but they are still lacking in some of the following points, like typography and normalizing `form` related elements.
-(sanitize.css does also include some resets, like for [lists in `nav`](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L93-L96).)
+Some of the same problems must be solved, and an update for latest browser implementations can be needed. But much of the original code from normalize.css is rarely needed or outdated. Modern browsers has less differences between them. There's also some low level parts of default CSS the normalize approach did not fix. CSS Remedy and sanitize.css are more up to date, and they have tried to expand their fixing with new approaches and properties, but they are still lacking in some of the following points including typography and normalizing `form` related elements.
+(sanitize.css also expands into resetting style, like for [lists in `nav`](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L93-L96).)
 
-1. What needs fixing in default CSS for smaller viewports, typography and consistency?
-	- Displaying content and styling should be as safe as possible---on any device---from overflowing.
+1. What does still need fixing in default CSS?
+	1. Especially important for smaller viewports, displaying content and adding CSS should not cause overflowing the x-axis as far as possible.
 <!-- Can remember what I meant with this: - Expected simple functionality of HTML should be upheld as far as possible. -->
-	- Normalizing simple semantic styling.
-	- Inline elements should as far as reasonable be prevented from affecting `line-height`, so readability and typography is disrupted as little as possible.
-	- Styling between elements that relates somehow should be consistent without over-complicating things.
-2. How can default CSS be improved to ease complete restyles?
-	- Elements should have a minimal, similar style between browsers so the restyling works the same across browsers (this definitely includes `form` related elements).
-	- Coding CSS should generally be as intuitive as can be.
+	2. Inline elements affecting the height of lines, disrupting readability and typography.
+	3. Consistency between browsers for basic, modern semantic styling. If also 'outdated' elements can easily be included, then OK.
+	4. Consistent related basic style between elements.
+2. Where can default CSS have further basic improvements to ease styling?
+	- Equal cross browser approach to restyling (including `form` related elements).
+	- General basic CSS rules that provides more intuitive behaviors when styling.
 
-And, as mentioned, code that's too opinionated or styling that is often overwritten should be carefully considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
+These points should only be fixed if they can done so safely, not causing side effects, e.g., through inheritance. And, as mentioned, code that's too opinionated or styling that is often overwritten should be considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
 
-*The up-to-date, full breakdown on draft of the resulting code follows.*
+*The up-to-date full breakdown of a resulting code draft follows.*
 
 
 ## *Fix CSS Safer*

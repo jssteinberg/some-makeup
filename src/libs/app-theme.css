@@ -9,11 +9,11 @@
 /* Lists */
 
 :where(.app-theme-main-content) ol {
-	list-style: inside decimal;
+	list-style: decimal inside;
 }
 
 :where(.app-theme-main-content) ul {
-	list-style: inside square;
+	list-style: square inside;
 }
 
 :where(.app-theme-main-content) :is(ol, ul) {
@@ -25,7 +25,7 @@
 }
 
 :where(.app-theme-main-content) ol ol {
-	list-style: lower-alpha;
+	list-style: lower-alpha inside;
 }
 
 @media (min-width: 1200px) {
