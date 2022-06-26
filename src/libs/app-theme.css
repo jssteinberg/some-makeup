@@ -34,7 +34,7 @@
 	}
 
 	:where(.app-theme-main-content) ul {
-		list-style: disc;
+		list-style: square;
 	}
 }
 
