@@ -17,7 +17,7 @@ Some of the same problems must be solved, and an update for latest browser imple
 
 1. What needs fixing in default CSS for smaller viewports, typography and consistency?
 	- Displaying content and styling should be as safe as possible---on any device---from overflowing.
-	- Expected simple functionality of HTML should be upheld as far as possible.
+<!-- Can remember what I meant with this: - Expected simple functionality of HTML should be upheld as far as possible. -->
 	- Normalizing simple semantic styling.
 	- Inline elements should as far as reasonable be prevented from affecting `line-height`, so readability and typography is disrupted as little as possible.
 	- Styling between elements that relates somehow should be consistent without over-complicating things.
@@ -249,8 +249,6 @@ img, svg, video, canvas, audio, iframe, embed, object {
 ```
 
 ---
-
-*Below follows more opinionated rulesets.*
 
 To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>` the`auto` value would become apparent when parent container has `display` `flex` or `grid`.
 

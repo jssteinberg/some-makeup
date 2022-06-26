@@ -13,7 +13,7 @@
 }
 
 :where(.app-theme-main-content) ul {
-	list-style: inside disc;
+	list-style: inside square;
 }
 
 :where(.app-theme-main-content) :is(ol, ul) {
