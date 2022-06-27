@@ -21,8 +21,8 @@ Some of the same problems must be solved, and an update for latest browser imple
 	2. Inline elements affecting the height of lines, disrupting readability and typography.
 	3. Consistency between browsers for basic, modern semantic styling. If also 'outdated' elements can easily be included, then OK.
 	4. Consistent related basic style between elements.
-2. Where can default CSS have further basic improvements to ease styling?
-	- Equal cross browser approach to restyling (including `form` related elements).
+2. Where can default CSS be further improved with basic rules to ease styling?
+	- Normalizing elements for similar approach to restyle (including `form` related elements).
 	- General basic CSS rules that provides more intuitive behaviors when styling.
 
 These points should only be fixed if they can done so safely, not causing side effects, e.g., through inheritance. And, as mentioned, code that's too opinionated or styling that is often overwritten should be considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
@@ -315,21 +315,5 @@ select, summary {
 
 	p + p {
 		text-indent: var(--space);
-	}
-
-	/* --- */
-
-	@media (min-width: 1200px) {
-		ol {
-			list-style: decimal;
-		}
-
-		:is(ol,ul) {
-			padding: 0;
-		}
-
-		:is(ol,ul) :is(ol,ul) {
-			padding-inline-start: var(--space);
-		}
 	}
 </style>

@@ -8,33 +8,30 @@
 
 /* Lists */
 
+:where(.app-theme-main-content) :is(ol, ul) {
+	list-style-position: inside;
+	padding-inline-start: 0;
+}
+
 :where(.app-theme-main-content) ol {
-	list-style: decimal inside;
+	list-style: decimal;
+}
+
+:where(.app-theme-main-content) ol ol {
+	list-style: lower-alpha;
 }
 
 :where(.app-theme-main-content) ul {
-	list-style: square inside;
-}
-
-:where(.app-theme-main-content) :is(ol, ul) {
-	padding-inline-start: 0;
+	list-style: square;
 }
 
 :where(.app-theme-main-content) :is(ol, ul) :is(ol, ul) {
 	padding-inline-start: var(--space, 1em);
 }
 
-:where(.app-theme-main-content) ol ol {
-	list-style: lower-alpha inside;
-}
-
 @media (min-width: 1200px) {
-	:where(.app-theme-main-content) ol {
-		list-style: decimal;
-	}
-
-	:where(.app-theme-main-content) ul {
-		list-style: square;
+	:where(.app-theme-main-content) :is(ol, ul) {
+		list-style-position: outside;
 	}
 }
 
