@@ -78,9 +78,9 @@
 	/* 	text-decoration: none; */
 	/* } */
 
-	:where(nav):not(:has([aria-current="page"])) :global(a.parent) {
-		box-shadow: inset 0 1px;
-	}
+	/* :where(nav):not(:has([aria-current="page"])) :global(a.parent) { */
+	/* 	box-shadow: inset 0 1px; */
+	/* } */
 
 	nav.sticky {
 		--_offset: 1vh;

@@ -8,33 +8,34 @@
 
 /* Lists */
 
+:where(.app-theme-main-content) :is(ol, ul) {
+	list-style-position: inside;
+	padding-inline-start: 0;
+}
+
 :where(.app-theme-main-content) ol {
-	list-style: inside decimal;
+	list-style-type: decimal;
+}
+
+:where(.app-theme-main-content) ol ::marker {
+	font-weight: bolder;
+}
+
+:where(.app-theme-main-content) ol ol {
+	list-style-type: lower-alpha;
 }
 
 :where(.app-theme-main-content) ul {
-	list-style: inside disc;
-}
-
-:where(.app-theme-main-content) :is(ol, ul) {
-	padding-inline-start: 0;
+	list-style-type: square;
 }
 
 :where(.app-theme-main-content) :is(ol, ul) :is(ol, ul) {
 	padding-inline-start: var(--space, 1em);
 }
 
-:where(.app-theme-main-content) ol ol {
-	list-style: lower-alpha;
-}
-
 @media (min-width: 1200px) {
-	:where(.app-theme-main-content) ol {
-		list-style: decimal;
-	}
-
-	:where(.app-theme-main-content) ul {
-		list-style: disc;
+	:where(.app-theme-main-content) :is(ol, ul) {
+		list-style-position: outside;
 	}
 }
 
