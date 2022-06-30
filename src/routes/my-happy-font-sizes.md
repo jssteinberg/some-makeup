@@ -34,11 +34,21 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 For code, and elements that should have same size for consistency, I have these rules:
 
 ```css
-.app-theme-main-content :is(code,kbd,samp,small) {
+.app-theme-main-content :is(
+	code,
+	kbd,
+	samp,
+	small
+) {
 	font-size: .85em;
 }
 
-.app-theme-main-content :not(pre) > :is(code,kbd,samp,small) {
+.app-theme-main-content :not(pre) > :is(
+	code,
+	kbd,
+	samp,
+	small
+) {
 	font-size: 1.85ex;
 }
 ```
@@ -47,7 +57,15 @@ The first ruleset basically targets code blocks (with `pre` parent). The second 
 
 ```css
 .app-theme-main-content code {
-	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Menlo,
+		Monaco,
+		Consolas,
+		Liberation Mono,
+		Courier New,
+		monospace;
 }
 ```
 
