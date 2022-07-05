@@ -22,13 +22,6 @@ npm install makeup-style
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with below file it even normalizes buttons and inputs, which the mentioned alternatives does not.
 
-<Details>
-<em slot="summary">Notes</em>
-
-`code, kbd, samp, sub, sup` are inline elements. This file styles them to not affect lines' heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
-
-</Details>
-
 ## *Do CSS*---A <cite>Fix CSS</cite> Expansion
 
 ```css

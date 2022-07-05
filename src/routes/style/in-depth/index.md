@@ -96,6 +96,16 @@ For the root element there a two rules that prevents overflown text, and one nor
 
 ---
 
+The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
+
+```css
+code, kbd, samp, sub, sup {
+	hyphens: manual;
+}
+```
+
+---
+
 To prevent `<pre>` from overflowing its content is styled to wrap.
 
 ```css
@@ -151,14 +161,12 @@ textarea {
 
 ---
 
-Inline elements with different `font-family` or `vertical-align` usually bear special meanings and stylistically they can affect lines' heights.
+Inline elements with different `font-family` or `vertical-align`, stylistically they can affect lines' heights.
 
-1. The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
-2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts. It's worth noting that if the `display` value of the parent makes any of these elements block-level they will be short and you have to redo your HTML structure or restyle `line-height` for this context. The `line-height` below is still high enough that the content will show.*
+Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts. The `line-height` below is still high enough that the content will show if they became block level by mistake.*
 
 ```css
-code, kbd, samp, sub, sup {
-	hyphens: manual;
+sub, sup {
 	line-height: .625;
 }
 ```
