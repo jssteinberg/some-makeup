@@ -96,16 +96,6 @@ For the root element there a two rules that prevents overflown text, and one nor
 
 ---
 
-The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
-
-```css
-code, kbd, samp, sub, sup {
-	hyphens: manual;
-}
-```
-
----
-
 To prevent `<pre>` from overflowing its content is styled to wrap.
 
 ```css
@@ -156,6 +146,16 @@ For accessibility, textareas only resize vertically by default. By default a use
 ```css
 textarea {
 	resize: vertical;
+}
+```
+
+---
+
+The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
+
+```css
+code, kbd, samp, sub, sup {
+	hyphens: manual;
 }
 ```
 
