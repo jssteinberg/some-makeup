@@ -12,10 +12,6 @@
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%; }
 
-/* Don't auto hyphenate elements that could mess its contents meaning. */
-code, kbd, samp, sub, sup {
-	hyphens: manual; }
-
 /* FURTHER PREVENT OVERFLOW */
 
 /* Wrap pre-formatted text by default. */
@@ -35,6 +31,10 @@ textarea {
 	resize: vertical; }
 
 /* FIX/EXTEND FONT */
+
+/* Don't auto hyphenate elements that could mess its contents meaning. */
+code, kbd, samp, sub, sup {
+	hyphens: manual; }
 
 /* For inline elements that can affect line height: fix while maintaining some line-height. */
 sub, sup {
