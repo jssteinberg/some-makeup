@@ -149,7 +149,7 @@
 		color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .5);
 		font-family: var(--sans);
 		font-weight: 100; font-weight: 300;
-		font-size: clamp(1ex, var(--view-inline) - .9em, 1.5ex);
+		font-size: clamp(10px, var(--view-inline) - .9em, 15px);
 		line-height: .9;
 		width: calc(var(--view-inline) - 3px);
 		position: absolute;

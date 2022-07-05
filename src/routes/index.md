@@ -84,10 +84,6 @@ layout: no
 		min-width: var(--TOUCH-TARGET-SIZE, 48px);
 	}
 
-	ul a > p {
-		margin: 0;
-	}
-
 	ul {
 		display: grid;
 		gap: 1em;
