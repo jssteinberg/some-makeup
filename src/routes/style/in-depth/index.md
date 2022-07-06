@@ -151,22 +151,14 @@ textarea {
 
 ---
 
-The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
+Inline elements with different `font-family` or `vertical-align` usually bear special meanings and stylistically they can affect lines' heights.
+
+1. The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
+2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts (elements using `monospace` would disrupt lines' heights when `font-size` was adjusted up). It's worth noting that if the `display` value of the parent makes any of these elements block-level, their true `line-height` will appear. The solution is to redo your HTML structure, or restyle `line-height`, for this context. The `line-height` below is still high enough that the content will be readable---just barely.*
 
 ```css
 code, kbd, samp, sub, sup {
 	hyphens: manual;
-}
-```
-
----
-
-Inline elements with different `font-family` or `vertical-align`, stylistically they can affect lines' heights.
-
-Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts. The `line-height` below is still high enough that the content will show if they became block level by mistake.*
-
-```css
-sub, sup {
 	line-height: .625;
 }
 ```
