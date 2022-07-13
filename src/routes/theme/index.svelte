@@ -13,43 +13,112 @@
 	};
 
 	const colors = [
-		{ h: "247", s: "40", l: "10", name: "background" },
-		{ h: "247", s: "0", l: "75", name: "foreground" },
-		{ h: "247", s: "35", l: "17.5", name: "black" },
-		{ h: "247", s: "35", l: "32.5", name: "black" },
-		{ h: "348", s: "40", l: "65", name: "red" },
-		{ h: "288", s: "35", l: "75", name: "red" },
-		{ h: "108", s: "40", l: "65", name: "green" },
-		{ h: "117", s: "35", l: "75", name: "green" },
-		{ h: "48", s: "40", l: "65", name: "yellow" },
-		{ h: "57", s: "35", l: "75", name: "yellow" },
-		{ h: "231", s: "40", l: "65", name: "blue" },
-		{ h: "214", s: "35", l: "75", name: "blue" },
-		{ h: "247", s: "40", l: "65", name: "magenta" },
-		{ h: "247", s: "35", l: "75", name: "magenta" },
-		{ h: "185", s: "40", l: "65", name: "cyan" },
-		{ h: "168", s: "35", l: "75", name: "cyan" },
-		{ h: "247", s: "0", l: "65", name: "white" },
+		{ h: "243.2", s: "17.8", l: "10", name: "background" },
+		{
+			h: "243.2",
+			s: "17.8",
+			l: "79",
+			name: "foreground",
+		},
+
+		{
+			h: "243.2",
+			s: "17.8",
+			l: "21",
+			name: "black",
+		} /* hsl(243.2,17.8%,21%) */,
+		{
+			h: "247.3",
+			s: "32.1",
+			l: "31.8",
+			name: "black",
+		} /* hsl(246.9,32.1%,31.8%) */,
+
+		{ h: "7.3", s: "41", l: "55", name: "red" } /* hsl(7.3,41.5%,53.7%) */,
+		{ h: "7.5", s: "42.7", l: "70.6", name: "red" } /* hsl(7.5,42.7%,70.6%) */,
+
+		{
+			h: "164.5",
+			s: "41",
+			l: "55",
+			name: "green",
+		} /* hsl(164.5,41.1%,59.4%) */,
+		{ h: "167.8", s: "42.7", l: "70.6", name: "green" },
+
+		{ h: "67.3", s: "41", l: "55", name: "yellow" } /* hsl(67.3,41.5%,53.7%) */,
+		{
+			h: "67.5",
+			s: "42.7",
+			l: "70.6",
+			name: "yellow",
+		} /* hsl(67.5,42.7%,70.6%) */,
+
+		{ h: "214.3", s: "41", l: "55", name: "blue" } /* hsl(214.3,39.1%,54.3%) */,
+		{
+			h: "243.2",
+			s: "42.7",
+			l: "70.6",
+			name: "blue",
+		} /* hsl(246.3,40.6%,41.6%) */,
+		/* { */
+		/* 	h: "223.7", */
+		/* 	s: "42.7", */
+		/* 	l: "70.6", */
+		/* 	name: "blue", */
+		/* },
+		/* hsl(223.7,28.9%,47.5%) */
+
+		{
+			h: "247.3",
+			s: "41",
+			l: "55",
+			name: "magenta",
+		} /* hsl(247.3,41.5%,53.7%) */,
+		{
+			h: "247.3",
+			s: "42.7",
+			l: "70.6",
+			name: "magenta",
+		} /* hsl(247.5,42.7%,70.6%) */,
+
+		{ h: "187.3", s: "41", l: "55", name: "cyan" } /* hsl(187.3,41.5%,53.7%) */,
+		{
+			h: "187.5",
+			s: "42.7",
+			l: "70.6",
+			name: "cyan",
+		} /* hsl(187.5,42.7%,70.6%) */,
+
+		/* { h: "247.3", s: "0", l: "55", name: "white" }, */
+		{
+			h: "105.7",
+			s: "41",
+			l: "90",
+			name: "white",
+		} /* hsl(105.7,41.2%,90%) */,
 		{ h: "0", s: "0", l: "100", name: "white" },
 	];
 </script>
 
-<ol>
-	{#each colors as color}
-		<li
-			style="--color: {color.h && color.s && color.l
-				? `hsl(${color.h} ${color.s}% ${color.l}%)`
-				: `#${color.hex}`}"
-		>
-			{#if color.name}
-				<strong>{color.name}</strong>
-			{/if}
-			<span>color</span>
-		</li>
-	{/each}
-</ol>
+<article class="app-theme-main-content">
+	<h1>Some Dark Term <span>1.</span></h1>
 
-<pre>
+	<ol>
+		{#each colors as color}
+			<li
+				style="--color: {color.h && color.s && color.l
+					? `hsl(${color.h} ${color.s}% ${color.l}%)`
+					: `#${color.hex}`}"
+			>
+				{#if color.name}
+					<strong>{color.name}</strong>
+				{/if}
+				<span>color</span>
+			</li>
+		{/each}
+	</ol>
+
+	<pre><code>
 # somedarkterm1
 colors:
   # Default colors
@@ -78,19 +147,33 @@ colors:
     magenta: '0x{hslToHex(colors[13])}'
     cyan:    '0x{hslToHex(colors[15])}'
     white:   '0x{hslToHex(colors[17])}'
-</pre>
+
+</code></pre>
+</article>
 
 <style>
 	:global(:root) {
-		--bg: #120f24;
+		--bg: #15151e;
 		--fg: #e2e0eb;
+	}
+
+	h1 > :last-child {
+		font-size: 3em;
+	}
+
+	strong {
+		text-transform: capitalize;
 	}
 
 	ol {
 		list-style: none;
-		padding: 0 var(--view-inline);
+		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(2, max(10em, 50%));
+	}
+
+	li {
+		margin-block: 0.5em;
 	}
 
 	li span {
@@ -102,10 +185,5 @@ colors:
 		background: var(--color);
 		display: block;
 		padding: 1em;
-	}
-
-	pre {
-		margin-block: 2em;
-		margin-inline: var(--view-inline);
 	}
 </style>
