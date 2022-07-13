@@ -13,24 +13,24 @@
 	};
 
 	const colors = [
-		{ h: "247", s: "20", l: "10", name: "background" },
-		{ h: "247", s: "20", l: "75", name: "foreground" },
-		{ h: "247", s: "20", l: "20", name: "black" },
-		{ h: "247", s: "20", l: "40", name: "black" },
-		{ h: "348", s: "25", l: "65", name: "red" },
+		{ h: "247", s: "40", l: "10", name: "background" },
+		{ h: "247", s: "0", l: "75", name: "foreground" },
+		{ h: "247", s: "35", l: "17.5", name: "black" },
+		{ h: "247", s: "35", l: "32.5", name: "black" },
+		{ h: "348", s: "40", l: "65", name: "red" },
 		{ h: "288", s: "35", l: "75", name: "red" },
-		{ h: "108", s: "25", l: "65", name: "green" },
+		{ h: "108", s: "40", l: "65", name: "green" },
 		{ h: "117", s: "35", l: "75", name: "green" },
-		{ h: "48", s: "25", l: "65", name: "yellow" },
+		{ h: "48", s: "40", l: "65", name: "yellow" },
 		{ h: "57", s: "35", l: "75", name: "yellow" },
-		{ h: "231", s: "25", l: "65", name: "blue" },
+		{ h: "231", s: "40", l: "65", name: "blue" },
 		{ h: "214", s: "35", l: "75", name: "blue" },
-		{ h: "247", s: "25", l: "65", name: "magenta" },
+		{ h: "247", s: "40", l: "65", name: "magenta" },
 		{ h: "247", s: "35", l: "75", name: "magenta" },
-		{ h: "185", s: "25", l: "65", name: "cyan" },
+		{ h: "185", s: "40", l: "65", name: "cyan" },
 		{ h: "168", s: "35", l: "75", name: "cyan" },
-		{ h: "247", s: "20", l: "65", name: "white" },
-		{ h: "0  ", s: "0", l: "100", name: "white" },
+		{ h: "247", s: "0", l: "65", name: "white" },
+		{ h: "0", s: "0", l: "100", name: "white" },
 	];
 </script>
 
@@ -82,7 +82,7 @@ colors:
 
 <style>
 	:global(:root) {
-		--bg: #1b1926;
+		--bg: #120f24;
 		--fg: #e2e0eb;
 	}
 
