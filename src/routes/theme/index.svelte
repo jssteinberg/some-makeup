@@ -14,10 +14,10 @@
 
 	const colors = [
 		{ h: "243.2", s: "17.8", l: "10", name: "background" },
-		{ h: "243.2", s: "17.8", l: "79", name: "foreground" },
+		{ h: "243.2", s: "17.8", l: "90", name: "foreground" },
 
 		{ i: 0, h: "243.2", s: "17.8", l: "21", name: "black" },
-		{ i: 8, h: "247.3", s: "32.1", l: "31.8", name: "black" },
+		{ i: 8, h: "243.2", s: "17.8", l: "45", name: "black" },
 
 		{ i: 1, h: "7.3", s: "41", l: "55", name: "red" },
 		{ i: 9, h: "7.5", s: "42.7", l: "70.6", name: "red" },
