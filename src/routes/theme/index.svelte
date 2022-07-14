@@ -59,6 +59,7 @@
 							: ``}</strong
 					>
 				{/if}
+				<code>#{hslToHex(color)}</code>
 				<span>color</span>
 			</li>
 		{/each}
