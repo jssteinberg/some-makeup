@@ -10,11 +10,11 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #8292a2;
+	color: #615e87;
 }
 
 .token.punctuation {
-	color: #f8f8f2;
+	color: #e0f0db;
 }
 
 .token.namespace {
@@ -26,12 +26,12 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #f92672;
+	color: #9c94d4;
 }
 
 .token.boolean,
 .token.number {
-	color: #ae81ff;
+	color: #ccd494;
 }
 
 .token.selector,
@@ -40,7 +40,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #a6e22e;
+	color: #94ccd4;
 }
 
 .token.operator,
@@ -49,23 +49,23 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: #f8f8f2;
+	color: #e0f0db;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: #e6db74;
+	color: #5dbba3;
 }
 
 .token.keyword {
-	color: #66d9ef;
+	color: #9794d4;
 }
 
 .token.regex,
 .token.important {
-	color: #fd971f;
+	color: #ccd494;
 }
 
 .token.important,
