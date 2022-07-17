@@ -7,7 +7,7 @@ layout: no
 <script context="module">
 	import { getPostsFromFiles } from '$libs/utils/index.js';
 
-	const markdownFiles = import.meta.globEager(`./*.md`);
+	const markdownFiles = import.meta.glob("./*.md", { eager: true });
 	const excludeFiles = ["index"];
 
 	export const hydrate = false;
