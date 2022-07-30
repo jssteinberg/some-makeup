@@ -14,10 +14,8 @@
 	--view-inline: 4.125vw;
 	--decor-width: 2px;
 
-	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-		Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-		Noto Color Emoji;
-	--serif: ui-serif, Constantia, Georgia, Hoefler Text, serif;
+	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	/* --serif: ui-serif, Constantia, Georgia, Hoefler Text, serif; */
 	--serif: serif;
 
 	--fg-h: 243.2; --fg-s: 17.8%; --fg-l: 90%; --fg-a: 1;
