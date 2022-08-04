@@ -13,8 +13,8 @@
 	};
 
 	const colors = [
-		{ h: "243.2", s: "17.8", l: "10", name: "background" },
-		{ h: "243.2", s: "17.8", l: "90", name: "foreground" },
+		{ h: "243.2", s: "17.8", l: "10", name: "bg" },
+		{ h: "243.2", s: "17.8", l: "90", name: "fg" },
 
 		{ i: 0, h: "243.2", s: "17.8", l: "21", name: "black" },
 		{ i: 8, h: "243.2", s: "17.8", l: "45", name: "black" },
@@ -28,7 +28,8 @@
 		{ i: 3, h: "67.3", s: "41", l: "55", name: "yellow" },
 		{ i: 11, h: "67.5", s: "42.7", l: "70.6", name: "yellow" },
 
-		{ i: 4, h: "214.3", s: "41", l: "55", name: "blue" },
+		/* { i: 4, h: "214.3", s: "41", l: "55", name: "blue" }, */
+		{ i: 4, h: "214.3", s: "41", l: "70.6", name: "blue" },
 		{ i: 12, h: "243.2", s: "42.7", l: "70.6", name: "blue" },
 
 		{ i: 5, h: "247.3", s: "41", l: "55", name: "magenta" },
@@ -41,6 +42,8 @@
 		{ i: 15, h: "0", s: "0", l: "100", name: "white" },
 
 		{ h: "243.2", s: "17.8", l: "70.6", name: "fg_muted" },
+		{ i: 4, h: "214.3", s: "41", l: "55", name: "blue_muted" },
+		{ h: "248.1", s: "42.7", l: "21", name: "magenta_bg" },
 	];
 </script>
 
@@ -66,6 +69,8 @@
 			</li>
 		{/each}
 	</ol>
+
+	<h2>Alacritty theme</h2>
 
 	<pre><code>
 # somedarkterm1
@@ -118,7 +123,7 @@ colors:
 		list-style: none;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(2, max(10em, 50%));
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	li {
