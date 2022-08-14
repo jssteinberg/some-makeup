@@ -28,7 +28,6 @@
 		{ i: 3, h: "67.3", s: "41", l: "55", name: "yellow" },
 		{ i: 11, h: "67.5", s: "42.7", l: "70", name: "yellow" },
 
-		/* { i: 4, h: "214.3", s: "41", l: "55", name: "blue" }, */
 		{ i: 4, h: "214.3", s: "41", l: "70", name: "blue" },
 		{ i: 12, h: "243.2", s: "42.7", l: "70", name: "blue" },
 
@@ -43,12 +42,9 @@
 
 		{ h: "243.2", s: "17.8", l: "65", name: "fg_muted" },
 		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
-		/* { h: "67.3", s: "17.8", l: "15", name: "yellow_bg_muted" }, */
-		/* { h: "67.3", s: "17.8", l: "20", name: "yellow_bg" }, */
-		/* { h: "67.3", s: "41", l: "15", name: "yellow_bg_muted" }, */
-		/* { h: "67.3", s: "41", l: "25", name: "yellow_bg" }, */
 		{ h: "247.3", s: "41", l: "35", name: "magenta_bg" },
 		{ h: "247.3", s: "41", l: "60", name: "magenta_between" },
+		{ h: "67.3", s: "17.8", l: "20", name: "yellow_bg" },
 	];
 </script>
 
