@@ -15,7 +15,7 @@ Can normalize.css' approach be rethought?
 Some of the same problems must be solved, and an update for latest browser implementations can be needed. But much of the original code from normalize.css is rarely needed or outdated. Modern browsers has less differences between them. There's also some low level parts of default CSS the normalize approach did not fix. CSS Remedy and sanitize.css are more up to date, and they have tried to expand their fixing with new approaches and properties, but they are still lacking in some of the following points including typography and normalizing `form` related elements.
 (sanitize.css also expands into resetting style, like for [lists in `nav`](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L93-L96).)
 
-1. What does still need fixing in default CSS?
+1. What default CSS does still need fixing?
 	1. Especially important for smaller viewports, displaying content and adding CSS should not cause overflowing the x-axis as far as possible.
 <!-- Can remember what I meant with this: - Expected simple functionality of HTML should be upheld as far as possible. -->
 	2. Inline elements affecting the height of lines, disrupting readability and typography.
