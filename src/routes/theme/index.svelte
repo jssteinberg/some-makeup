@@ -47,6 +47,8 @@
 		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
 		{ h: "247.3", s: "41", l: "60", name: "magenta_between" },
 		{ h: "67.3", s: "17.8", l: "20", name: "yellow_bg" },
+
+		/* TODO: add bg for matching parenthesis/tags */
 	];
 </script>
 
