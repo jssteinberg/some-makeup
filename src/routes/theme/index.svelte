@@ -1,4 +1,6 @@
 <script>
+	import Details from "$libs/Details.svelte";
+
 	const hslToHex = ({ h, s, l }) => {
 		l /= 100;
 		const a = (s * Math.min(l, 1 - l)) / 100;
@@ -58,30 +60,36 @@
 </script>
 
 <article class="app-theme-main-content">
-	<h1>Some Dark Term <span>1.</span></h1>
+	<h1>Some Dark Term 1.</h1>
 
-	<ol>
+	<ol class="colors">
 		{#each colors as color}
 			<li
 				style="--color: {color.h && color.s && color.l
 					? `hsl(${color.h} ${color.s}% ${color.l}%)`
 					: `#${color.hex}`}"
 			>
+				<p>
+					<code>#{hslToHex(color)}</code>
+					<span aria-hidden="true">color</span>
+				</p>
 				{#if color.name}
-					<strong
-						>{color.name}{typeof color.i !== "undefined"
-							? ` #${color.i}`
-							: ``}</strong
-					>
+					<p>
+						<strong
+							>{color.name}{typeof color.i !== "undefined"
+								? ` #${color.i}`
+								: ``}</strong
+						>
+					</p>
 				{/if}
-				<code>#{hslToHex(color)}</code>
-				<span>color</span>
 			</li>
 		{/each}
 	</ol>
 
-	<details>
-		<summary>Alacritty theme</summary>
+	<h2>More</h2>
+
+	<Details>
+		<span slot="summary">Alacritty</span>
 
 		<pre><code>
 # somedarkterm1
@@ -113,10 +121,10 @@ colors:
     cyan:    '0x{hslToHex(colors[15])}'
     white:   '0x{hslToHex(colors[17])}'
 		</code></pre>
-	</details>
+	</Details>
 
-	<details>
-		<summary>Kitty theme</summary>
+	<Details>
+		<span slot="summary">Kitty</span>
 
 		<pre><code>
 # somedarkterm1 colors
@@ -148,17 +156,20 @@ color13 #{hslToHex(colors[13])}
 color14 #{hslToHex(colors[15])}
 color15 #{hslToHex(colors[17])}
 		</code></pre>
-	</details>
+	</Details>
 </article>
 
 <style>
-	:global(:root) {
-		--bg: #15151e;
-		--fg: #e2e0eb;
+	h1 {
+		font-family: var(--mono-font, monospace);
+		text-transform: lowercase;
+		word-spacing: -1ch;
 	}
 
-	h1 > :last-child {
-		font-size: 3em;
+	/* colors */
+
+	.colors p {
+		margin-block: calc(0.25 * var(--space, 1em));
 	}
 
 	strong {
@@ -173,7 +184,7 @@ color15 #{hslToHex(colors[17])}
 	}
 
 	li {
-		margin-block: 0.5em;
+		margin-block: calc(0.25 * var(--space, 1em));
 	}
 
 	li span {
