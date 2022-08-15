@@ -40,9 +40,11 @@
 		{ i: 7, h: "105.7", s: "41", l: "90", name: "white" },
 		{ i: 15, h: "0", s: "0", l: "100", name: "white" },
 
+		/* magenta_bg */
+		{ i: 16, h: "247.3", s: "41", l: "35", name: "selection_background" },
+
 		{ h: "243.2", s: "17.8", l: "65", name: "fg_muted" },
 		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
-		{ h: "247.3", s: "41", l: "35", name: "magenta_bg" },
 		{ h: "247.3", s: "41", l: "60", name: "magenta_between" },
 		{ h: "67.3", s: "17.8", l: "20", name: "yellow_bg" },
 	];
@@ -71,9 +73,10 @@
 		{/each}
 	</ol>
 
-	<h2>Alacritty theme</h2>
+	<details>
+		<summary>Alacritty theme</summary>
 
-	<pre><code>
+		<pre><code>
 # somedarkterm1
 colors:
   # Default colors
@@ -102,8 +105,43 @@ colors:
     magenta: '0x{hslToHex(colors[13])}'
     cyan:    '0x{hslToHex(colors[15])}'
     white:   '0x{hslToHex(colors[17])}'
+		</code></pre>
+	</details>
 
-</code></pre>
+	<details>
+		<summary>Kitty theme</summary>
+
+		<pre><code>
+# somedarkterm1 colors
+
+background #{hslToHex(colors[0])}
+foreground #{hslToHex(colors[1])}
+selection_background #{hslToHex(colors[1])}
+# selection_foreground #{hslToHex(colors[1])}
+url_color #{hslToHex(colors[10])}
+cursor #{hslToHex(colors[12])}
+
+# normal colors
+color0 #{hslToHex(colors[2])}
+color1 #{hslToHex(colors[4])}
+color2 #{hslToHex(colors[6])}
+color3 #{hslToHex(colors[8])}
+color4 #{hslToHex(colors[10])}
+color5 #{hslToHex(colors[12])}
+color6 #{hslToHex(colors[14])}
+color7 #{hslToHex(colors[16])}
+
+# bright colors
+color8 #{hslToHex(colors[3])}
+color9 #{hslToHex(colors[5])}
+color10 #{hslToHex(colors[7])}
+color11 #{hslToHex(colors[9])}
+color12 #{hslToHex(colors[11])}
+color13 #{hslToHex(colors[13])}
+color14 #{hslToHex(colors[15])}
+color15 #{hslToHex(colors[17])}
+		</code></pre>
+	</details>
 </article>
 
 <style>
