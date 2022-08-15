@@ -14,7 +14,9 @@
 
 	const colors = [
 		{ h: "243.2", s: "17.8", l: "10", name: "bg" },
-		{ h: "243.2", s: "17.8", l: "90", name: "fg" },
+		/* { h: "243.2", s: "17.8", l: "90", name: "fg" }, */
+		/* { h: "243.2", s: "17.8", l: "80", name: "fg" }, */
+		{ h: "105.7", s: "17.8", l: "80", name: "fg" },
 
 		{ i: 0, h: "243.2", s: "17.8", l: "20", name: "black" },
 		{ i: 8, h: "243.2", s: "17.8", l: "40", name: "black" },
@@ -42,11 +44,14 @@
 
 		/* magenta_bg */
 		{ i: 16, h: "247.3", s: "41", l: "35", name: "selection_background" },
-
-		{ h: "243.2", s: "17.8", l: "65", name: "fg_muted" },
-		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
 		{ h: "247.3", s: "41", l: "60", name: "magenta_between" },
+
+		{ h: "243.2", s: "17.8", l: "5", name: "black_bg" },
 		{ h: "67.3", s: "17.8", l: "20", name: "yellow_bg" },
+
+		{ h: "243.2", s: "17.8", l: "65", name: "gray" },
+
+		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
 
 		/* TODO: add bg for matching parenthesis/tags */
 	];
