@@ -6,13 +6,12 @@
 	</p>
 </Details>
 -->
-
 <script>
 	export let title;
 	export let open;
 </script>
 
-<details {open}>
+<details {open} class="details-component">
 	<summary {title}>
 		<span class="summary-content">
 			<slot name="summary" />
@@ -24,7 +23,7 @@
 
 <style>
 	details {
-		margin-block-end: max(3em, 2 * var(--space, 1em));
+		margin-block: max(2em, 1.5 * var(--space, 1em));
 		padding-inline-end: var(--space, 1em);
 		padding-block-end: var(--space, 1em);
 	}
@@ -43,7 +42,7 @@
 		position: sticky;
 		top: 0;
 		background: linear-gradient(
-			hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .75) 25%,
+			hsl(var(--bg-h) var(--bg-s) var(--bg-l) / 0.75) 25%,
 			transparent
 		);
 		text-shadow: 1px 1px 2px var(--bg);
@@ -65,7 +64,9 @@
 		font-size: 1rem;
 	}
 
-	summary::-webkit-details-marker { display: none; }
+	summary::-webkit-details-marker {
+		display: none;
+	}
 
 	details[open] summary {
 		box-shadow: inset 1px 1px;

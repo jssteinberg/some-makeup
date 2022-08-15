@@ -16,12 +16,10 @@
 
 	const colors = [
 		{ h: "243.2", s: "17.8", l: "10", name: "bg" },
-		/* { h: "243.2", s: "17.8", l: "90", name: "fg" }, */
-		/* { h: "243.2", s: "17.8", l: "80", name: "fg" }, */
 		{ h: "105.7", s: "17.8", l: "80", name: "fg" },
 
-		{ i: 0, h: "243.2", s: "17.8", l: "20", name: "black" },
-		{ i: 8, h: "243.2", s: "17.8", l: "40", name: "black" },
+		{ i: 0, h: "243.2", s: "41", l: "15", name: "black" },
+		{ i: 8, h: "247.3", s: "41", l: "30", name: "black" },
 
 		{ i: 1, h: "7.3", s: "41", l: "55", name: "red" },
 		{ i: 9, h: "7.5", s: "42.7", l: "70", name: "red" },
@@ -45,13 +43,14 @@
 		{ i: 15, h: "0", s: "0", l: "100", name: "white" },
 
 		/* magenta_bg */
-		{ i: 16, h: "247.3", s: "41", l: "35", name: "selection_background" },
-		{ h: "247.3", s: "41", l: "60", name: "magenta_between" },
+		{ h: "247.3", s: "41", l: "30", name: "selection_background" },
+		{ h: "243.2", s: "17.8", l: "55", name: "gray" },
 
 		{ h: "243.2", s: "17.8", l: "5", name: "black_bg" },
-		{ h: "67.3", s: "17.8", l: "20", name: "yellow_bg" },
+		{ h: "67.3", s: "17.8", l: "30", name: "yellow_bg" },
 
-		{ h: "243.2", s: "17.8", l: "65", name: "gray" },
+		{ h: "330", s: "41", l: "55", name: "pink" },
+		{ h: "330", s: "42.7", l: "70", name: "pink_bright" },
 
 		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
 
@@ -92,7 +91,8 @@
 		<span slot="summary">Alacritty</span>
 
 		<pre><code>
-# somedarkterm1
+# Colors
+# somedarkterm1.
 colors:
   # Default colors
   primary:
@@ -127,7 +127,8 @@ colors:
 		<span slot="summary">Kitty</span>
 
 		<pre><code>
-# somedarkterm1 colors
+# Colors
+# somedarkterm1.
 
 background #{hslToHex(colors[0])}
 foreground #{hslToHex(colors[1])}
@@ -136,7 +137,7 @@ selection_background #{hslToHex(colors[1])}
 url_color #{hslToHex(colors[10])}
 cursor #{hslToHex(colors[12])}
 
-# normal colors
+# Normal colors
 color0 #{hslToHex(colors[2])}
 color1 #{hslToHex(colors[4])}
 color2 #{hslToHex(colors[6])}
@@ -146,7 +147,7 @@ color5 #{hslToHex(colors[12])}
 color6 #{hslToHex(colors[14])}
 color7 #{hslToHex(colors[16])}
 
-# bright colors
+# Bright colors
 color8 #{hslToHex(colors[3])}
 color9 #{hslToHex(colors[5])}
 color10 #{hslToHex(colors[7])}
