@@ -42,15 +42,15 @@
 		{ i: 7, h: "105.7", s: "41", l: "90", name: "white" },
 		{ i: 15, h: "0", s: "0", l: "100", name: "white" },
 
-		/* magenta_bg */
-		{ h: "247.3", s: "41", l: "30", name: "selection_background" },
-		{ h: "243.2", s: "17.8", l: "55", name: "gray" },
+		// ---
+
+		{ h: "330", s: "41", l: "55", name: "pink" },
+		{ h: "330", s: "42.7", l: "70", name: "pink_bright" },
 
 		{ h: "243.2", s: "17.8", l: "5", name: "black_bg" },
 		{ h: "67.3", s: "17.8", l: "30", name: "yellow_bg" },
 
-		{ h: "330", s: "41", l: "55", name: "pink" },
-		{ h: "330", s: "42.7", l: "70", name: "pink_bright" },
+		{ h: "243.2", s: "17.8", l: "55", name: "gray" },
 
 		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
 
@@ -132,8 +132,7 @@ colors:
 
 background #{hslToHex(colors[0])}
 foreground #{hslToHex(colors[1])}
-selection_background #{hslToHex(colors[1])}
-# selection_foreground #{hslToHex(colors[1])}
+selection_background #{hslToHex(colors[3])}
 url_color #{hslToHex(colors[10])}
 cursor #{hslToHex(colors[12])}
 
