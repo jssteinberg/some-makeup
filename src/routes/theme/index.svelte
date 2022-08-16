@@ -1,7 +1,7 @@
 <script>
 	import Details from "$libs/Details.svelte";
 
-	const hslToHex = ({ h, s, l }) => {
+		const hslToHex = ({ h, s, l }) => {
 		l /= 100;
 		const a = (s * Math.min(l, 1 - l)) / 100;
 		const f = n => {
@@ -15,29 +15,29 @@
 	};
 
 	const colors = [
-		{ h: "243.2", s: "17.8", l: "10", name: "bg" },
-		{ h: "105.7", s: "17.8", l: "80", name: "fg" },
+		{ h: "243.2", s: "17.8", l: "9", name: "bg" },
+		{ h: "105.7", s: "17.8", l: "81", name: "fg" },
 
-		{ i: 0, h: "243.2", s: "41", l: "15", name: "black" },
-		{ i: 8, h: "247.3", s: "41", l: "30", name: "black" },
+		{ i: 0, h: "243.2", s: "41", l: "14", name: "black" },
+		{ i: 8, h: "247.3", s: "41", l: "31", name: "black" },
 
 		{ i: 1, h: "7.3", s: "41", l: "55", name: "red" },
-		{ i: 9, h: "7.5", s: "42.7", l: "70", name: "red" },
+		{ i: 9, h: "7.5", s: "42.7", l: "71", name: "red" },
 
 		{ i: 2, h: "164.5", s: "41", l: "55", name: "green" },
-		{ i: 10, h: "167.8", s: "42.7", l: "70", name: "green" },
+		{ i: 10, h: "167.8", s: "42.7", l: "71", name: "green" },
 
 		{ i: 3, h: "67.3", s: "41", l: "55", name: "yellow" },
-		{ i: 11, h: "67.5", s: "42.7", l: "70", name: "yellow" },
+		{ i: 11, h: "67.5", s: "42.7", l: "71", name: "yellow" },
 
-		{ i: 4, h: "214.3", s: "41", l: "70", name: "blue" },
-		{ i: 12, h: "243.2", s: "42.7", l: "70", name: "blue" },
+		{ i: 4, h: "214.3", s: "41", l: "71", name: "blue" },
+		{ i: 12, h: "243.2", s: "42.7", l: "71", name: "blue" },
 
 		{ i: 5, h: "247.3", s: "41", l: "55", name: "magenta" },
-		{ i: 13, h: "247.3", s: "42.7", l: "70", name: "magenta" },
+		{ i: 13, h: "247.3", s: "42.7", l: "71", name: "magenta" },
 
 		{ i: 6, h: "187.3", s: "41", l: "55", name: "cyan" },
-		{ i: 14, h: "187.5", s: "42.7", l: "70", name: "cyan" },
+		{ i: 14, h: "187.5", s: "42.7", l: "71", name: "cyan" },
 
 		{ i: 7, h: "105.7", s: "41", l: "90", name: "white" },
 		{ i: 15, h: "0", s: "0", l: "100", name: "white" },
@@ -45,10 +45,10 @@
 		// ---
 
 		{ h: "330", s: "41", l: "55", name: "pink" },
-		{ h: "330", s: "42.7", l: "70", name: "pink_bright" },
+		{ h: "330", s: "42.7", l: "71", name: "pink_bright" },
 
-		{ h: "243.2", s: "17.8", l: "5", name: "black_bg" },
-		{ h: "67.3", s: "17.8", l: "30", name: "yellow_bg" },
+		{ h: "243.2", s: "17.8", l: "3", name: "black_bg" },
+		{ h: "67.3", s: "17.8", l: "31", name: "yellow_bg" },
 
 		{ h: "243.2", s: "17.8", l: "55", name: "gray" },
 
