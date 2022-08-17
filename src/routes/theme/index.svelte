@@ -1,7 +1,7 @@
 <script>
 	import Details from "$libs/Details.svelte";
 
-		const hslToHex = ({ h, s, l }) => {
+	const hslToHex = ({ h, s, l }) => {
 		l /= 100;
 		const a = (s * Math.min(l, 1 - l)) / 100;
 		const f = n => {
@@ -19,7 +19,7 @@
 		{ h: "105.7", s: "17.8", l: "81", name: "fg" },
 
 		{ i: 0, h: "243.2", s: "41", l: "14", name: "black" },
-		{ i: 8, h: "247.3", s: "41", l: "31", name: "black" },
+		{ i: 8, h: "247.3", s: "41", l: "30", name: "black" },
 
 		{ i: 1, h: "7.3", s: "41", l: "55", name: "red" },
 		{ i: 9, h: "7.5", s: "42.7", l: "71", name: "red" },
@@ -48,7 +48,7 @@
 		{ h: "330", s: "42.7", l: "71", name: "pink_bright" },
 
 		{ h: "243.2", s: "17.8", l: "3", name: "black_bg" },
-		{ h: "67.3", s: "17.8", l: "31", name: "yellow_bg" },
+		{ h: "67.3", s: "17.8", l: "30", name: "yellow_bg" },
 
 		{ h: "243.2", s: "17.8", l: "55", name: "gray" },
 
