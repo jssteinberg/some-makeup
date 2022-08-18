@@ -18,10 +18,10 @@
 	/* --serif: ui-serif, Constantia, Georgia, Hoefler Text, serif; */
 	--serif: serif;
 
-	--fg-h: 243.2; --fg-s: 17.8%; --fg-l: 90%; --fg-a: 1;
+	--fg-h: 247.3; --fg-s: 17.8%; --fg-l: 91.5%; --fg-a: 1;
 	--fg: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / var(--fg-a));
 
-	--bg-h: 243.2; --bg-s: 17.8%; --bg-l: 10%; --bg-a: 1;
+	--bg-h: 247.3; --bg-s: 17.8%; --bg-l: 8%; --bg-a: 1;
 	--bg: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / var(--bg-a));
 
 	--sep-fg: hsl(var(--fg-h) var(--fg-s) var(--sep-fg-l, 17.5%));

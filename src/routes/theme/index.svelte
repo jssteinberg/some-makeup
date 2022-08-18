@@ -13,54 +13,56 @@
 		};
 		return `${f(0)}${f(8)}${f(4)}`;
 	};
-	/* const priHue = "247.3" // 243.2 ? */
-	const priHue = "243.2"
+	const priHue = "247.3" // 243.2 ?
+	const sat1 = 42
+	const sat2 = 42
 
 	const colors = [
 		/* { h: "243.2", s: "17.8", l: "8", name: "bg" }, */
 		{ h: priHue, s: "17.8", l: "8", name: "bg" },
-		{ h: "105.7", s: "17.8", l: "83", name: "fg" },
+		{ h: priHue, s: "17.8", l: "91.5", name: "fg" },
 
-		/* { i: 0, h: "243.2", s: "41", l: "14", name: "black" }, */
-		{ i: 0, h: priHue, s: "41", l: "14", name: "black" },
-		{ i: 8, h: priHue, s: "41", l: "30", name: "black" },
+		/* { i: 0, h: "243.2", s: sat1, l: "14", name: "black" }, */
+		{ i: 0, h: priHue, s: sat1, l: "14", name: "black" },
+		{ i: 8, h: priHue, s: sat1, l: "30", name: "black" },
 
-		{ i: 1, h: "7.3", s: "41", l: "55", name: "red" },
-		{ i: 9, h: "7.5", s: "42.7", l: "72", name: "red" },
+		{ i: 1, h: "7.3", s: sat1, l: "55", name: "red" },
+		{ i: 9, h: "7.5", s: sat2, l: "72", name: "red" },
 
-		{ i: 2, h: "164.5", s: "41", l: "55", name: "green" },
-		{ i: 10, h: "167.8", s: "42.7", l: "72", name: "green" },
+		{ i: 2, h: "164.5", s: sat1, l: "55", name: "green" },
+		{ i: 10, h: "167.8", s: sat2, l: "72", name: "green" },
 
-		{ i: 3, h: "67.3", s: "41", l: "55", name: "yellow" },
-		{ i: 11, h: "67.5", s: "42.7", l: "72", name: "yellow" },
+		{ i: 3, h: "67.3", s: sat1, l: "55", name: "yellow" },
+		{ i: 11, h: "67.5", s: sat2, l: "72", name: "yellow" },
 
-		{ i: 4, h: "214.3", s: "41", l: "72", name: "blue" },
-		{ i: 12, h: "243.2", s: "42.7", l: "72", name: "blue" },
+		{ i: 4, h: "214.3", s: sat1, l: "72", name: "blue" },
+		{ i: 12, h: "243.2", s: sat2, l: "72", name: "blue" },
 
-		{ i: 5, h: priHue, s: "41", l: "55", name: "magenta" },
-		{ i: 13, h: "247.3", s: "42.7", l: "72", name: "magenta" },
+		{ i: 5, h: priHue, s: sat1, l: "55", name: "magenta" },
+		{ i: 13, h: "247.3", s: sat2, l: "72", name: "magenta" },
 
-		{ i: 6, h: "187.3", s: "41", l: "55", name: "cyan" },
-		{ i: 14, h: "187.5", s: "42.7", l: "72", name: "cyan" },
+		{ i: 6, h: "187.3", s: sat1, l: "55", name: "cyan" },
+		{ i: 14, h: "187.5", s: sat2, l: "72", name: "cyan" },
 
-		/* { i: 7, h: "105.7", s: "41", l: "91", name: "white" }, */
-		{ i: 7, h: "105.7", s: "17.8", l: "91", name: "white" },
+		{ i: 7, h: "105.7", s: sat1, l: "91.5", name: "white" },
 		{ i: 15, h: "0", s: "0", l: "100", name: "white" },
 
 		// ---
 
-		{ h: "330", s: "41", l: "55", name: "pink" },
-		{ h: "330", s: "42.7", l: "72", name: "pink_bright" },
-		{ h: "330", s: "41", l: "30", name: "pink_bg" },
+		{ h: "7.3", s: sat1, l: "30", name: "selection_background" },
 
-		{ h: priHue, s: "41", l: "3", name: "black_bg" },
+		{ h: "277.5", s: sat1, l: "55", name: "pink" },
+		{ h: "277.5", s: sat2, l: "72", name: "pink_bright" },
+		{ h: "277.5", s: sat1, l: "30", name: "pink_bg" },
+
+		{ h: priHue, s: sat1, l: "3", name: "black_bg" },
 		/* { h: "67.3", s: "17.8", l: "30", name: "yellow_bg" }, */
-		{ h: "67.3", s: "41", l: "30", name: "yellow_bg" },
+		{ h: "67.3", s: sat1, l: "30", name: "yellow_bg" },
 
 		{ h: priHue, s: "17.8", l: "55", name: "gray" },
 
-		/* { h: "214.3", s: "41", l: "55", name: "blue_muted" }, */
-		{ h: "214.3", s: "41", l: "30", name: "blue_bg" },
+		/* { h: "214.3", s: sat1, l: "55", name: "blue_muted" }, */
+		{ h: "214.3", s: sat1, l: "30", name: "blue_bg" },
 	];
 </script>
 
