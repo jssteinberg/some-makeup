@@ -51,6 +51,9 @@
 
 		{ h: "7.3", s: sat1, l: "30", name: "selection_background" },
 
+		/* { h: "214.3", s: sat1, l: "55", name: "blue_muted" }, */
+		{ h: "214.3", s: sat1, l: "30", name: "blue_bg" },
+
 		{ h: "277.5", s: sat1, l: "55", name: "pink" },
 		{ h: "277.5", s: sat2, l: "72", name: "pink_bright" },
 		{ h: "277.5", s: sat1, l: "30", name: "pink_bg" },
@@ -60,9 +63,6 @@
 		{ h: "67.3", s: sat1, l: "30", name: "yellow_bg" },
 
 		{ h: priHue, s: "17.8", l: "55", name: "gray" },
-
-		/* { h: "214.3", s: sat1, l: "55", name: "blue_muted" }, */
-		{ h: "214.3", s: sat1, l: "30", name: "blue_bg" },
 	];
 </script>
 
@@ -140,7 +140,7 @@ colors:
 
 background #{hslToHex(colors[0])}
 foreground #{hslToHex(colors[1])}
-selection_background #{hslToHex(colors[3])}
+selection_background #{hslToHex(colors.filter(obj => obj.name === `selection_background`))}
 url_color #{hslToHex(colors[10])}
 cursor #{hslToHex(colors[12])}
 
