@@ -13,9 +13,9 @@
 		};
 		return `${f(0)}${f(8)}${f(4)}`;
 	};
-	const priHue = "247.3" // 243.2 ?
-	const sat1 = 42
-	const sat2 = 42
+	const priHue = "247.3"; // 243.2 ?
+	const sat1 = 42;
+	const sat2 = 42;
 
 	const colors = [
 		/* { h: "243.2", s: "17.8", l: "8", name: "bg" }, */
@@ -140,7 +140,9 @@ colors:
 
 background #{hslToHex(colors[0])}
 foreground #{hslToHex(colors[1])}
-selection_background #{hslToHex(colors.filter(obj => obj.name === `selection_background`))}
+selection_background #{hslToHex(
+					colors.filter(obj => obj.name === `selection_background`)
+				)}
 url_color #{hslToHex(colors[10])}
 cursor #{hslToHex(colors[12])}
 
