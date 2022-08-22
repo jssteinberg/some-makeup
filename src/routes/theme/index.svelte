@@ -45,7 +45,7 @@
 		{ i: 14, h: "187.5", s: sat2, l: "72", name: "cyan" },
 
 		{ i: 7, h: "105.7", s: sat1, l: "91.5", name: "white" },
-		{ i: 15, h: "0", s: "0", l: "100", name: "white" },
+		{ i: 15, h: priHue, s: 17.8, l: "100", name: "white" },
 
 		// ---
 
