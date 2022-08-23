@@ -139,7 +139,7 @@ colors:
 background #{hslToHex(colors[0])}
 foreground #{hslToHex(colors[1])}
 selection_background #{hslToHex(
-					colors.filter(obj => obj.name === `selection_background`)
+					colors.filter(obj => obj.name === `selection_background`)[0]
 				)}
 url_color #{hslToHex(colors[10])}
 cursor #{hslToHex(colors[12])}
