@@ -21,7 +21,7 @@
 		{ h: priHue, s: "17.8", l: "91.5", name: "fg" },
 
 		/* { i: 0, h: "243.2", s: sat, l: "14", name: "black" }, */
-		{ i: 0, h: priHue, s: sat, l: "14", name: "black" },
+		{ i: 0, h: priHue, s: sat, l: "15", name: "black" },
 		{ i: 8, h: priHue, s: sat, l: "30", name: "black" },
 
 		{ i: 1, h: "7.3", s: sat, l: "55", name: "red" },
