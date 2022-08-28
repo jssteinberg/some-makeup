@@ -17,54 +17,44 @@
 	const sat = "42";
 
 	const colors = [
-		{ h: priHue, s: "17.8", l: "8", name: "bg" },
-		{ h: priHue, s: "17.8", l: "91.5", name: "fg" },
+		{ h: priHue, s: "17.8", l: "8", name: "bg" }, // magenta
+		{ h: priHue, s: "17.8", l: "91.5", name: "fg" }, // magenta
 
-		/* { i: 0, h: "243.2", s: sat, l: "14", name: "black" }, */
-		{ i: 0, h: priHue, s: sat, l: "15", name: "black" },
-		{ i: 8, h: priHue, s: sat, l: "30", name: "black" },
+		{ i: 0, h: priHue, s: sat, l: "15", name: "black" }, // magenta
+		{ i: 8, h: priHue, s: sat, l: "30", name: "black" }, // magenta
 
-		{ i: 1, h: "7.3", s: sat, l: "55", name: "red" },
-		{ i: 9, h: "7.5", s: sat, l: "72", name: "red" },
+		{ i: 1, h: "6.9", s: sat, l: "55", name: "red" }, // cyan complementary
+		{ i: 9, h: "7.5", s: sat, l: "72", name: "red" }, // cyan#14 complementary
 
-		{ i: 2, h: "164.5", s: sat, l: "55", name: "green" },
-		{ i: 10, h: "167.8", s: sat, l: "72", name: "green" },
+		{ i: 2, h: "97.5", s: sat, l: "55", name: "green" }, // magenta split complementary
+		{ i: 10, h: "105.7", s: sat, l: "72", name: "green" }, // white hue
 
-		{ i: 3, h: "67.3", s: sat, l: "55", name: "yellow" },
-		{ i: 11, h: "67.5", s: sat, l: "72", name: "yellow" },
+		{ i: 3, h: "37.5", s: sat, l: "55", name: "yellow" }, // magenta split complementary
+		{ i: 11, h: "68", s: sat, l: "72", name: "yellow" }, // cyan triadic
 
-		{ i: 4, h: "214.3", s: sat, l: "72", name: "blue" },
-		{ i: 12, h: "243.2", s: sat, l: "72", name: "blue" },
+		{ i: 4, h: "217.5", s: sat, l: "72", name: "blue" }, // magenta analogous
+		{ i: 12, h: "243.2", s: sat, l: "72", name: "blue" }, // magenta related
 
-		{ i: 5, h: priHue, s: sat, l: "55", name: "magenta" },
-		{ i: 13, h: "247.3", s: sat, l: "72", name: "magenta" },
+		{ i: 5, h: priHue, s: sat, l: "55", name: "magenta" }, // magenta main
+		{ i: 13, h: priHue, s: sat, l: "72", name: "magenta" }, // magenta
 
-		{ i: 6, h: "187.3", s: sat, l: "55", name: "cyan" },
-		{ i: 14, h: "187.5", s: sat, l: "72", name: "cyan" },
+		{ i: 6, h: "187.3", s: sat, l: "55", name: "cyan" }, // cyan main
+		{ i: 14, h: "187.5", s: sat, l: "72", name: "cyan" }, // cyan#14 main
 
-		{ i: 7, h: "105.7", s: sat, l: "91.5", name: "white" },
-		{ i: 15, h: priHue, s: 17.8, l: "100", name: "white" },
+		{ i: 7, h: "105.7", s: sat, l: "91.5", name: "white" }, // white main
+		{ i: 15, h: priHue, s: "100", l: "100", name: "white" }, // 100% white
 
 		// ---
 
-		{ h: "277.5", s: sat, l: "55", name: "violet" },
+		{ h: "217.5", s: sat, l: "30", name: "blue_bg" },
+		{ h: priHue, s: sat, l: "3", name: "black_bg" }, // magenta
+
+		{ h: "277.5", s: sat, l: "55", name: "violet" }, // magenta analogous
 		{ h: "277.5", s: sat, l: "72", name: "violet_bright" },
-		// { h: "277.5", s: sat, l: "30", name: "violet_bg" },
 		{ h: "277.5", s: sat, l: "72", name: "selection_background" },
-		// { h: "7.3", s: sat, l: "30", name: "selection_background" },
-
-		/* { h: "214.3", s: sat, l: "55", name: "blue_muted" }, */
-		{ h: "214.3", s: sat, l: "30", name: "blue_bg" },
-
-		{ h: priHue, s: sat, l: "3", name: "black_bg" },
-		{ h: "67.3", s: sat, l: "30", name: "yellow_bg" },
 
 		{ h: priHue, s: "17.8", l: "55", name: "gray" },
-		{ h: priHue, s: "17.8", l: "72", name: "gray_bright" },
-
-		{ h: "277.5", s: sat, l: "55", name: "pink" },
-		{ h: "277.5", s: sat, l: "72", name: "pink_bright" },
-		{ h: "277.5", s: sat, l: "30", name: "pink_bg" },
+		{ h: "68", s: sat, l: "30", name: "yellow_bg" },
 	];
 </script>
 
@@ -189,10 +179,11 @@ color15 #{hslToHex(colors[17])}
 	}
 
 	ol {
-		list-style: none;
-		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		padding: 0;
+		font-size: 1rem;
+		list-style: none;
 	}
 
 	li {
