@@ -47,14 +47,14 @@
 
 		// ---
 
-		{ h: "7.3", s: sat, l: "30", name: "selection_background" },
-
-		/* { h: "214.3", s: sat, l: "55", name: "blue_muted" }, */
-		{ h: "214.3", s: sat, l: "30", name: "blue_bg" },
-
 		{ h: "277.5", s: sat, l: "55", name: "violet" },
 		{ h: "277.5", s: sat, l: "72", name: "violet_bright" },
 		// { h: "277.5", s: sat, l: "30", name: "violet_bg" },
+		{ h: "277.5", s: sat, l: "72", name: "selection_background" },
+		// { h: "7.3", s: sat, l: "30", name: "selection_background" },
+
+		/* { h: "214.3", s: sat, l: "55", name: "blue_muted" }, */
+		{ h: "214.3", s: sat, l: "30", name: "blue_bg" },
 
 		{ h: priHue, s: sat, l: "3", name: "black_bg" },
 		/* { h: "67.3", s: "17.8", l: "30", name: "yellow_bg" }, */
