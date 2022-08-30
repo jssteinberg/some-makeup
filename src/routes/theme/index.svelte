@@ -14,14 +14,14 @@
 		return `${f(0)}${f(8)}${f(4)}`;
 	};
 	const priHue = "247.3";
-	const sat = "42";
+	const sat = 42;
 
 	const colors = [
-		{ h: priHue, s: "17.8", l: "8", name: "bg" }, // magenta
-		{ h: priHue, s: "17.8", l: "91.5", name: "fg" }, // magenta
+		{ h: priHue, s: "17.8", l: "8", name: "bg" }, // magenta desaturated
+		{ h: priHue, s: "17.8", l: "91.5", name: "fg" }, // magenta desaturated
 
 		{ i: 0, h: priHue, s: sat, l: "15", name: "black" }, // magenta
-		{ i: 8, h: priHue, s: sat, l: "30", name: "black" }, // magenta
+		{ i: 8, h: priHue, s: "17.8", l: "55", name: "black" }, // magenta desaturated
 
 		{ i: 1, h: "6.9", s: sat, l: "55", name: "red" }, // cyan complementary
 		{ i: 9, h: "7.5", s: sat, l: "72", name: "red" }, // cyan#14 complementary
@@ -32,28 +32,28 @@
 		{ i: 3, h: "37.5", s: sat, l: "55", name: "yellow" }, // magenta split complementary
 		{ i: 11, h: "68", s: sat, l: "72", name: "yellow" }, // cyan triadic
 
-		{ i: 4, h: "217.5", s: sat, l: "72", name: "blue" }, // magenta analogous
-		{ i: 12, h: "243.2", s: sat, l: "72", name: "blue" }, // magenta related
+		{ i: 4, h: "217.5", s: sat, l: "55", name: "blue" }, // magenta analogous
+		{ i: 12, h: "217.5", s: sat, l: "72", name: "blue" }, // magenta#13 analogous
 
-		{ i: 5, h: priHue, s: sat, l: "55", name: "magenta" }, // magenta main
-		{ i: 13, h: priHue, s: sat, l: "72", name: "magenta" }, // magenta
+		{ i: 5, h: priHue, s: sat, l: "55", name: "magenta" }, // magenta MAIN
+		{ i: 13, h: priHue, s: sat, l: "72", name: "magenta" }, // magenta lighter
 
-		{ i: 6, h: "187.3", s: sat, l: "55", name: "cyan" }, // cyan main
-		{ i: 14, h: "187.5", s: sat, l: "72", name: "cyan" }, // cyan#14 main
+		{ i: 6, h: "187.3", s: sat, l: "55", name: "cyan" }, // cyan MAIN
+		{ i: 14, h: "187.5", s: sat, l: "72", name: "cyan" }, // cyan#14 MAIN
 
-		{ i: 7, h: "105.7", s: sat, l: "91.5", name: "white" }, // white main
+		{ i: 7, h: "105.7", s: sat, l: "91.5", name: "white" }, // white MAIN
 		{ i: 15, h: priHue, s: "100", l: "100", name: "white" }, // 100% white
 
 		// ---
 
-		{ h: "217.5", s: sat, l: "30", name: "blue_bg" },
-		{ h: priHue, s: sat, l: "3", name: "black_bg" }, // magenta
+		{ h: priHue, s: sat, l: "30", name: "black_2" }, // magenta darker
+		{ h: priHue, s: sat, l: "3", name: "black_bg" }, // magenta darker
 
 		{ h: "277.5", s: sat, l: "55", name: "violet" }, // magenta analogous
 		{ h: "277.5", s: sat, l: "72", name: "violet_bright" },
 		{ h: "277.5", s: sat, l: "72", name: "selection_background" },
+		{ h: "217.5", s: sat, l: "30", name: "blue_bg" },
 
-		{ h: priHue, s: "17.8", l: "55", name: "gray" },
 		{ h: "68", s: sat, l: "30", name: "yellow_bg" },
 	];
 </script>
