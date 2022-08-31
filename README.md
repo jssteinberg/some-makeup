@@ -17,6 +17,19 @@ npm install makeup-style
 
 ---
 
+Rename?:
+
+- correct.css, develop.css, even.css, flow.css
+- fix.css, forge.css (do), space.css,...
+- amend.css, alter.css...
+- amend.css, brace.css...
+- fix.css, form.css (do), ...
+- fix.css, shape.css (do), space.css,...
+- revise.css, shape.css
+- revise.css, rewrite.css
+- cure.css, develop.css
+- repair.css, prepare.css, ...
+
 Plan v1:
 
 - Check support for `…-block`/`…-inline`. If good, then use.
