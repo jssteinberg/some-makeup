@@ -59,7 +59,19 @@
 </script>
 
 <article class="app-theme-main-content">
-	<h1>Some Dark Term 1.</h1>
+	<h1>Some Dark Terminal 1.</h1>
+
+	<p>
+		<em>In the night, outside of a neon illuminated city-park WC...</em>
+	</p>
+
+	<p>
+		A cool and clear colorscheme for syntax highlighting and terminal colors.
+		Made with contrast, readability and delight in mind. For base, it has a
+		repeating blue tone and two other matching main colors. All other colors
+		match methodically and are equal in either hue and saturation, hue and
+		lightness, or saturation and lightness.
+	</p>
 
 	<ol class="colors">
 		{#each colors as color}
