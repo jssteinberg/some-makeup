@@ -68,7 +68,7 @@
 		display: none;
 	}
 
-	details[open] summary {
+	:where(details[open]) summary {
 		box-shadow: inset 1px 1px;
 	}
 

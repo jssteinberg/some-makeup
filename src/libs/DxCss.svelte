@@ -1,5 +1,5 @@
 <svelte:head>
 	<style lang="scss">
-		@use '../do.css';
+		@use "../reform.css";
 	</style>
 </svelte:head>

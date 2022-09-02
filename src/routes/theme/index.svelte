@@ -1,5 +1,10 @@
 <script>
 	import Details from "$libs/Details.svelte";
+	import ContainCss from "$libs/IntuitiveCss.svelte";
+	import IntuitiveCss from "$libs/DxCss.svelte";
+	import SpaceCss from "$libs/SpaceCss.svelte";
+	import LineHeightCss from "$libs/FlowCss.svelte";
+	import PrismCss from "$libs/PrismCss.svelte";
 
 	const hslToHex = ({ h, s, l }) => {
 		l /= 100;
@@ -15,43 +20,48 @@
 	};
 	const priHue = "247.3";
 	const sat = 42;
+	const li = 55;
+	const li2 = 72.5;
 
 	const colors = [
 		{ h: priHue, s: "17.8", l: "8", name: "bg" }, // magenta desaturated
-		{ h: priHue, s: "17.8", l: "91.5", name: "fg" }, // magenta desaturated
+		// { h: priHue, s: "17.8", l: "91.5", name: "fg" }, // magenta desaturated
+		{ h: "105.7", s: sat, l: "91.5", name: "fg" }, // white MAIN
 
 		{ i: 0, h: priHue, s: sat, l: "15", name: "black" }, // magenta
-		{ i: 8, h: priHue, s: "17.8", l: "55", name: "black" }, // magenta desaturated
+		{ i: 8, h: priHue, s: "17.8", l: li, name: "black" }, // magenta desaturated
 
-		{ i: 1, h: "6.9", s: sat, l: "55", name: "red" }, // cyan complementary
-		{ i: 9, h: "7.5", s: sat, l: "72", name: "red" }, // cyan#14 complementary
+		{ i: 1, h: "6.9", s: sat, l: li, name: "red" }, // cyan complementary
+		{ i: 9, h: "7.5", s: sat, l: li2, name: "red" }, // cyan#14 complementary
 
-		{ i: 2, h: "97.5", s: sat, l: "55", name: "green" }, // magenta split complementary
-		{ i: 10, h: "105.7", s: sat, l: "72", name: "green" }, // white hue
+		{ i: 2, h: "97.5", s: sat, l: li, name: "green" }, // magenta split complementary
+		{ i: 10, h: "105.7", s: sat, l: li2, name: "green" }, // white hue
 
-		{ i: 3, h: "37.5", s: sat, l: "55", name: "yellow" }, // magenta split complementary
-		{ i: 11, h: "68", s: sat, l: "72", name: "yellow" }, // cyan triadic
+		{ i: 3, h: "37.5", s: sat, l: li, name: "yellow" }, // magenta split complementary
+		{ i: 11, h: "68", s: sat, l: li2, name: "yellow" }, // cyan triadic
 
-		{ i: 4, h: "217.5", s: sat, l: "55", name: "blue" }, // magenta analogous
-		{ i: 12, h: "217.5", s: sat, l: "72", name: "blue" }, // magenta#13 analogous
+		{ i: 4, h: "217.5", s: sat, l: li, name: "blue" }, // magenta analogous
+		{ i: 12, h: "217.5", s: sat, l: li2, name: "blue" }, // magenta#13 analogous
 
-		{ i: 5, h: priHue, s: sat, l: "55", name: "magenta" }, // magenta MAIN
-		{ i: 13, h: priHue, s: sat, l: "72", name: "magenta" }, // magenta lighter
+		{ i: 5, h: priHue, s: sat, l: li, name: "magenta" }, // magenta MAIN
+		{ i: 13, h: priHue, s: sat, l: li2, name: "magenta" }, // magenta lighter
 
-		{ i: 6, h: "187.3", s: sat, l: "55", name: "cyan" }, // cyan MAIN
-		{ i: 14, h: "187.5", s: sat, l: "72", name: "cyan" }, // cyan#14 MAIN
+		{ i: 6, h: "187.3", s: sat, l: li, name: "cyan" }, // cyan MAIN
+		{ i: 14, h: "187.5", s: sat, l: li2, name: "cyan" }, // cyan#14 MAIN
 
-		{ i: 7, h: "105.7", s: sat, l: "91.5", name: "white" }, // white MAIN
+		{ i: 7, h: priHue, s: "17.8", l: li2, name: "white" }, // magenta desaturated
+		// { i: 7, h: "105.7", s: sat, l: "91.5", name: "white" }, // white MAIN
 		{ i: 15, h: priHue, s: "100", l: "100", name: "white" }, // 100% white
 
 		// ---
 
 		{ h: priHue, s: sat, l: "30", name: "black_2" }, // magenta darker
 		{ h: priHue, s: sat, l: "3", name: "black_bg" }, // magenta darker
+		{ h: priHue, s: "17.8", l: "91.5", name: "fg_alt" }, // magenta desaturated
 
-		{ h: "277.5", s: sat, l: "55", name: "violet" }, // magenta analogous
-		{ h: "277.5", s: sat, l: "72", name: "violet_bright" },
-		{ h: "277.5", s: sat, l: "72", name: "selection_background" },
+		{ h: "277.5", s: sat, l: li, name: "violet" }, // magenta analogous
+		{ h: "277.5", s: sat, l: li2, name: "violet_bright" },
+		{ h: "277.5", s: sat, l: li2, name: "selection_background" },
 		{ h: "217.5", s: sat, l: "30", name: "blue_bg" },
 
 		{ h: "68", s: sat, l: "30", name: "yellow_bg" },
@@ -59,18 +69,21 @@
 </script>
 
 <article class="app-theme-main-content">
-	<h1>Some Dark Terminal 1.</h1>
+	<h1>Some Dark Terminal</h1>
 
 	<p>
-		<em>In the night, outside of a neon illuminated city-park WC...</em>
+		<em>
+			In the cool night, outside of a neon illuminated city-park WC
+			was…inspiration?!
+		</em>
 	</p>
 
 	<p>
-		A cool and clear colorscheme for syntax highlighting and terminal colors.
-		Made with contrast, readability and delight in mind. For base, it has a
-		repeating blue tone and two other matching main colors. All other colors
-		match methodically and are equal in either hue and saturation, hue and
-		lightness, or saturation and lightness.
+		A cool and clear color palette for terminals and syntax highlighting. Made
+		with contrast, readability and delight in mind. It has a repeating blue tone
+		and two other matching base colors. All other colors match methodically and
+		are equal in either hue and saturation, hue and lightness, or saturation and
+		lightness.
 	</p>
 
 	<ol class="colors">
@@ -82,7 +95,6 @@
 			>
 				<p>
 					<code>#{hslToHex(color)}</code>
-					<span aria-hidden="true">color</span>
 				</p>
 				{#if color.name}
 					<p>
@@ -91,6 +103,7 @@
 								? ` #${color.i}`
 								: ``}</strong
 						>
+						<span aria-hidden="true" aria-label="color-test">color</span>
 					</p>
 				{/if}
 			</li>
@@ -172,6 +185,12 @@ color15 #{hslToHex(colors[17])}
 		</code></pre>
 	</Details>
 </article>
+
+<ContainCss />
+<IntuitiveCss />
+<SpaceCss />
+<LineHeightCss />
+<PrismCss />
 
 <style>
 	h1 {

@@ -19,14 +19,17 @@ npm install makeup-style
 
 Rename?:
 
+- [v] healthy.css, helpful.css, inclusive.css, reform.css, ...
+- revise.css, reform.css, typographic-style.css
+- revise.css, shape.css, typographic-style.css
+- repair.css, shape.css, typographic-style.css
+- revise.css, rewrite.css, space.css, typograph.css
 - correct.css, develop.css, even.css, flow.css
 - fix.css, forge.css (do), space.css,...
-- amend.css, alter.css...
+- amend.css, alter.css, block.css
 - amend.css, brace.css...
 - fix.css, form.css (do), ...
 - fix.css, shape.css (do), space.css,...
-- revise.css, shape.css
-- revise.css, rewrite.css
 - cure.css, develop.css
 - repair.css, prepare.css, ...
 
@@ -41,7 +44,7 @@ Plan v2:
 
 Nope:
 
-- Remove `[hidden]` ... `display: none`? Should be implmented in all used browsers now. *No! It's for maintaining behaviour.*
+- Remove `[hidden]` ... `display: none`? Should be implemented in all used browsers now. *No! It's for maintaining behaviour.*
 
 ## History
 
@@ -49,9 +52,8 @@ Nope:
 
 *Changes from Floor Typography CSS v22:*
 
-- CSS reorganized in new files: fix.css, do.css, space.css and flow.css.
-	- Updated fix and normalize (do.css), more tested.
-	- Less files and features, more quality.
+- Updated default CSS revising and normalizing, more tested.
+- Less files and features, more quality.
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 	- Space is not removed for sub-lists (would cause unexpected list styles if parent list was styled unconventional. Rather remove margin for sub-lists in containers of choice).
