@@ -1,4 +1,5 @@
 <script>
+	import MetaTags from "$libs/MetaTags.svelte"
 	import Details from "$libs/Details.svelte";
 	import ContainCss from "$libs/IntuitiveCss.svelte";
 	import IntuitiveCss from "$libs/DxCss.svelte";
@@ -68,8 +69,13 @@
 	];
 </script>
 
+<MetaTags
+	title={`Makeup Darkness 1.`}
+	description={`A cool and clear color palette for terminals and syntax highlighting.`}
+/>
+
 <article class="app-theme-main-content">
-	<h1>Some Dark Terminal</h1>
+	<h1>Makeup Darkness 1.</h1>
 
 	<p>
 		<em>
