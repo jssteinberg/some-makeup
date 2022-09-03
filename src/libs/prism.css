@@ -12,7 +12,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
 /* comment */
 .token.comment {
-	color: var(--comment, purple);
+	color: var(--comment-fg, purple);
 }
 
 /* black */

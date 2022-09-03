@@ -1,5 +1,5 @@
 <script>
-	import MetaTags from "$libs/MetaTags.svelte"
+	import MetaTags from "$libs/MetaData.svelte";
 	import Details from "$libs/Details.svelte";
 	import ContainCss from "$libs/IntuitiveCss.svelte";
 	import IntuitiveCss from "$libs/DxCss.svelte";
@@ -78,18 +78,17 @@
 	<h1>Makeup Darkness 1.</h1>
 
 	<p>
-		<em>
-			In the cool night, outside of a neon illuminated city-park WC
-			was…inspiration?!
+		<em
+			>Colors from the cool Norwegian city night, outside of a neon illuminated
+			park WC.
 		</em>
 	</p>
 
 	<p>
 		A cool and clear color palette for terminals and syntax highlighting. Made
-		with contrast, readability and delight in mind. It has a repeating blue tone
-		and two other matching base colors. All other colors match methodically and
-		are equal in either hue and saturation, hue and lightness, or saturation and
-		lightness.
+		for readability and delight. It has a repeating blue tone and two other
+		matching base colors. All other colors match methodically and are equal in
+		either hue and saturation, hue and lightness, or saturation and lightness.
 	</p>
 
 	<ol class="colors">
@@ -116,7 +115,9 @@
 		{/each}
 	</ol>
 
-	<h2>More</h2>
+	<h2>Implementations</h2>
+
+	<p><em>More to come.</em></p>
 
 	<Details>
 		<span slot="summary">Alacritty</span>

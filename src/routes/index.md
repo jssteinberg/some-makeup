@@ -1,41 +1,20 @@
 ---
-title: some.makeup
-description: "Some makeup for the web."
+title: Some
+description: "Makeup for the web and tools."
 layout: no
 ---
 
-<script context="module">
-	import { getPostsFromFiles } from '$libs/utils/index.js';
-
-	const markdownFiles = import.meta.glob("./*.md", { eager: true });
-	const excludeFiles = ["index"];
-
-	export const hydrate = false;
-
-	export const load = async ({ url }) => {
-		return {
-			props: {
-				posts: getPostsFromFiles(markdownFiles, url).filter(
-					item => !excludeFiles.includes(item.title),
-				),
-			},
-		};
-	};
-</script>
-
-<script>
-	export let posts = [];
-</script>
-
 <div class="wrapper">
 
-# some.makeup
+# *Some*
+
+*Makeup for the web and tools.*
 
 CSS---[makeup-style](/style)
 
 Palette---[makeup darkness 1.](/darkness-1)
 
----
+<Hr --hr-width="100%" />
 
 {#each posts as post}
 	<p>
@@ -64,13 +43,11 @@ Palette---[makeup darkness 1.](/darkness-1)
 		padding-inline-end: var(--view-inline);
 
 		/* Adjust font-size */
-		/*
 		font-size: clamp(
 			var(--font-size) + .125rem,
-			var(--font-size) + min(1vw,1.5vh),
-			2.125rem
+			var(--font-size) + min(.75vw,1.5vh),
+			1.75rem
 		);
-		*/
 	}
 
 	a {
@@ -79,3 +56,27 @@ Palette---[makeup darkness 1.](/darkness-1)
 		min-width: var(--TOUCH-TARGET-SIZE, 48px);
 	}
 </style>
+
+<script context="module">
+	import { getPostsFromFiles } from '$libs/utils/index.js';
+
+	const markdownFiles = import.meta.glob("./*.md", { eager: true });
+	const excludeFiles = ["index"];
+
+	export const hydrate = false;
+
+	export const load = async ({ url }) => {
+		return {
+			props: {
+				posts: getPostsFromFiles(markdownFiles, url).filter(
+					item => !excludeFiles.includes(item.title),
+				),
+			},
+		};
+	};
+</script>
+
+<script>
+	import Hr from "$libs/Hr.svelte"
+	export let posts = [];
+</script>

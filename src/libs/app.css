@@ -19,7 +19,8 @@
 	/* --serif: ui-serif, Constantia, Georgia, Hoefler Text, serif; */
 	--serif: serif;
 
-	--sep-fg: hsl(var(--fg-h) var(--fg-s) var(--sep-fg-l, 17.5%));
+	--hr-fg: var(--fg);
+	--sep-fg: hsla(var(--fg-hsl) / .2);
 	--sep-color: var(--sep-fg);
 	--color-scheme: dark;
 }
