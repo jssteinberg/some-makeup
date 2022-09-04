@@ -120,6 +120,23 @@
 	<p><em>More to come.</em></p>
 
 	<Details>
+		<span slot="summary">Lua</span>
+
+		<pre><code>
+{`local hues = {
+    black  = { ${colors[2].h}, ${colors[8].h} },
+    red    = { ${colors[3].h}, ${colors[9].h} },
+    green  = { ${colors[4].h}, ${colors[10].h} },
+    yellow = { ${colors[5].h}, ${colors[11].h} },
+    blue   = { ${colors[6].h}, ${colors[12].h} },
+    magenta= { ${colors[7].h}, ${colors[13].h} },
+    cyan   = { ${colors[8].h}, ${colors[14].h} },
+    white  = { ${colors[9].h}, ${colors[15].h} },
+}`}
+		</code></pre>
+	</Details>
+
+	<Details>
 		<span slot="summary">Alacritty</span>
 
 		<pre><code>
