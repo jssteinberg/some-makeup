@@ -5,9 +5,9 @@ Minimal CSS files for fixing default browser CSS, for narrow viewports first, an
 ```
 npm install makeup-style
 
-@import "makeup-style/src/fix.css";
-@import "makeup-style/src/do.css";
-@import "makeup-style/src/space.css";
+@import "makeup-style/src/default.css";
+@import "makeup-style/src/deform.css";
+@import "makeup-style/src/even.css";
 @import "makeup-style/src/flow.css";
 ```
 
@@ -19,19 +19,22 @@ npm install makeup-style
 
 Rename?:
 
-- [v] healthy.css, helpful.css, inclusive.css, reform.css, ...
-- revise.css, reform.css, typographic-style.css
-- revise.css, shape.css, typographic-style.css
-- repair.css, shape.css, typographic-style.css
-- revise.css, rewrite.css, space.css, typograph.css
-- correct.css, develop.css, even.css, flow.css
-- fix.css, forge.css (do), space.css,...
-- amend.css, alter.css, block.css
-- amend.css, brace.css...
-- fix.css, form.css (do), ...
-- fix.css, shape.css (do), space.css,...
-- cure.css, develop.css
-- repair.css, prepare.css, ...
+- (-) default.css, deform.css,  (even.css,  flow.css)  
+- ( ) correct.css, deform.css,  (even.css,  flow.css)  
+- ( ) cure.css,    deform.css,  
+- ( ) heal.css,    help.css,    reform.css, ...
+- ( ) revise.css,  reform.css,  typographic-style.css
+- ( ) revise.css,  shape.css,   typographic-style.css
+- ( ) repair.css,  shape.css,   typographic-style.css
+- ( ) revise.css,  rewrite.css, space.css,  typograph.css
+- ( ) correct.css, develop.css, even.css,   flow.css
+- ( ) fix.css,     forge.css    (do),       space.css,...
+- ( ) amend.css,   alter.css,   block.css
+- ( ) amend.css,   brace.css...
+- ( ) fix.css,     form.css     (do),       ...
+- ( ) fix.css,     shape.css    (do),       space.css,...
+- ( ) cure.css,    develop.css
+- ( ) repair.css,  prepare.css, ...
 
 Plan v1:
 
