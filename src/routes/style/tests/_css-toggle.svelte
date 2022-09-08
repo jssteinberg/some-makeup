@@ -1,21 +1,21 @@
 <script>
-	import IntuitiveCss from '/src/libs/IntuitiveCss.svelte';
-	import DxCss from '/src/libs/DxCss.svelte';
-	import SpaceCss from '/src/libs/SpaceCss.svelte';
-	import LineHeightCss from '/src/libs/FlowCss.svelte';
-	import { createEventDispatcher } from 'svelte';
+	import DefaultCss from "/src/libs/DefaultCss.svelte";
+	import DxCss from "/src/libs/DxCss.svelte";
+	import SpaceCss from "/src/libs/SpaceCss.svelte";
+	import LineHeightCss from "/src/libs/FlowCss.svelte";
+	import { createEventDispatcher } from "svelte";
 
 	const dispatch = createEventDispatcher();
-	const toggleCss = (file) => {
+	const toggleCss = file => {
 		css[file] = !css[file];
 		dispatch("toggle", true);
 	};
 
 	let css = {
-		fix: true,
+		default: true,
 		do: false,
 		space: false,
-		flow: false
+		flow: false,
 	};
 </script>
 
@@ -29,12 +29,12 @@
 				checked={css[file] || false}
 				on:click={() => toggleCss(file)}
 			/>
-			{file === 'lineHeight' ? 'line-height' : file}.css
+			{file === "lineHeight" ? "line-height" : file}.css
 		</label>
 	{/each}
 </div>
 
-{#if css.fix} <IntuitiveCss /> {/if}
+{#if css.default} <DefaultCss /> {/if}
 {#if css.do} <DxCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.flow} <LineHeightCss /> {/if}
@@ -48,7 +48,7 @@
 
 	.container {
 		color-scheme: dark;
-		margin-block: .5em;
+		margin-block: 0.5em;
 		padding-inline-start: var(--view-inline);
 		padding-inline-end: 1rem;
 
@@ -58,24 +58,25 @@
 		overflow-x: auto;
 
 		position: sticky;
-		top: .5rem;
+		top: 0.5rem;
 		z-index: 1;
 	}
 
 	label {
-		--_a: .825;
-		background: hsla(0 0% 0%/var(--_a));
-		border-radius: .5rem;
+		--_a: 0.825;
+		background: hsla(0 0% 0% / var(--_a));
+		border-radius: 0.5rem;
 		border: 1px solid var(--sep-color);
 		box-shadow: inset 0 0 1em 1px var(--sep-color);
-		color: hsla(0 0% 100%/var(--_a));
+		color: hsla(0 0% 100% / var(--_a));
 		cursor: pointer;
 		line-height: 1;
-		padding: .5em 1em;
+		padding: 0.5em 1em;
 		white-space: nowrap;
 	}
 
-	label:hover, label:focus-within {
+	label:hover,
+	label:focus-within {
 		--_a: 1;
 	}
 

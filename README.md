@@ -1,6 +1,6 @@
 # makeup-style
 
-Minimal CSS files for fixing default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
+Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
 ```
 npm install makeup-style

@@ -1,12 +1,12 @@
 <script>
-	import MetaTags from './MetaData.svelte';
-	import ContainCss from './IntuitiveCss.svelte';
-	import IntuitiveCss from './DxCss.svelte';
-	import SpaceCss from './SpaceCss.svelte';
-	import LineHeightCss from './FlowCss.svelte';
-	import PrismCss from './PrismCss.svelte';
+	import MetaTags from "./MetaData.svelte";
+	import ContainCss from "./DefaultCss.svelte";
+	import IntuitiveCss from "./DxCss.svelte";
+	import SpaceCss from "./SpaceCss.svelte";
+	import LineHeightCss from "./FlowCss.svelte";
+	import PrismCss from "./PrismCss.svelte";
 
-	export let title = 'A knot';
+	export let title = "A knot";
 	export let metaTitle;
 	export let lang;
 	export let description;
@@ -15,7 +15,7 @@
 	export let date;
 	export let set = [];
 
-	$: langAttr = lang ?? set?.includes('nb') ? 'nb' : undefined;
+	$: langAttr = lang ?? set?.includes("nb") ? "nb" : undefined;
 </script>
 
 <MetaTags
@@ -23,12 +23,10 @@
 	{metaTitle}
 	{author}
 	keywords={tags}
-	description={
-		description ??
-		(langAttr && langAttr === 'nb'
+	description={description ??
+		(langAttr && langAttr === "nb"
 			? `Et innlegg om ${metaTitle || title}.`
-			: `A post about ${metaTitle || title}.`)
-	}
+			: `A post about ${metaTitle || title}.`)}
 />
 
 <ContainCss />
@@ -36,19 +34,22 @@
 <SpaceCss />
 <LineHeightCss />
 
-{#if set.includes('code')}
+{#if set.includes("code")}
 	<PrismCss />
 {/if}
 
 {#if date}
 	<p class="date-info"><em>Published/updated: {date.join("/")}</em></p>
 {/if}
-<div lang={langAttr} class={`
+<div
+	lang={langAttr}
+	class={`
 	app-theme
 	app-theme-main-content
 	${set.includes(`sans`) ? `sans-theme` : ``}
 	${set.includes(`mixed`) ? `` : `typography`}
-`}>
+`}
+>
 	<slot />
 </div>
 

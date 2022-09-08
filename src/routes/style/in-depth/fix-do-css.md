@@ -1,15 +1,15 @@
 ---
-title: Fix & Do CSS
+title: Default & Do CSS
 set: ["typography", "code"]
 ---
 
-# Fix & Do CSS:<br aria-hidden="true">Beyond a Selective CSS Normalize
+# Default & Do CSS:<br aria-hidden="true">Beyond a Selective CSS Normalize
 
-## Fix CSS
+## Default CSS
 
-> Fix default CSS: so displaying content and styling is safe on any device by not overflowing; to prevent inline elements from affecting line-height, and; so defaults are consistent between elements.
+> Repair default CSS: so displaying content and styling is safe on any device by not overflowing; to prevent inline elements from affecting line-height, and; so defaults are consistent between elements.
 
-A “fix” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
+A “default” CSS has to start with perhaps **the** rule all elements needs so they can be more safely styled and not cause overflow. It makes browsers calculate width and height intuitively by including `border-width` and `padding`. Important for many reasons, also for preventing horizontal overflow.
 
 Another way to implement this would be using the above rule for the root element and changing the above value to `inherit`. But inheriting any other box-sizing value can cause cut and overflown content.
 
@@ -160,7 +160,7 @@ body {
 
 ## Side notes
 
-- CSS Remedy also adds `line-sizing: normal` to the root element, but that was from a CSS draft later changed. The fix presented here fixes it with a single `line-height` rule for the inline elements in question.
+- CSS Remedy also adds `line-sizing: normal` to the root element, but that was from a CSS draft later changed. The rules presented here fixes it with a single `line-height` rule for the inline elements in question.
 - Margins or sizes for headings are not included. Browsers has descent styles, even if `<h1>` can differ. Themes usually styles the headings they need with margins and size.
 - Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s easier to remove them when needed.
@@ -176,7 +176,7 @@ body {
 
 - Think about what CSS is/can be used to, and in what order from basic to advanced sites/apps: typography, layouts, usability, accessibility, more typography and graphical design, animations, 3D rendering.
 
-- If all needed elements where to be normalized across browsers, that would cause a lot of unused code for most apps and sites. Rather style those elements when they are used a lot. Perhaps it can be code-split. It obviously results in more focused and lean CSS when only what needs fixing is styled.
+- If all needed elements where to be normalized across browsers, that would cause a lot of unused code for most apps and sites. Rather style those elements when they are used a lot. Perhaps it can be code-split. It obviously results in more focused and lean CSS when only what needs repairing is styled.
 -->
 
 
