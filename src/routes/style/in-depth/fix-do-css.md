@@ -1,9 +1,9 @@
 ---
-title: Default & Do CSS
+title: Default & Deform CSS
 set: ["typography", "code"]
 ---
 
-# Default & Do CSS:<br aria-hidden="true">Beyond a Selective CSS Normalize
+# Default & Deform CSS:<br aria-hidden="true">Beyond a Selective CSS Normalize
 
 ## Default CSS
 
@@ -146,7 +146,7 @@ select, summary {
 }
 ```
 
-## Do CSS
+## Deform CSS
 
 ...
 

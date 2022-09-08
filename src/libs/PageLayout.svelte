@@ -1,7 +1,7 @@
 <script>
 	import MetaTags from "./MetaData.svelte";
 	import ContainCss from "./DefaultCss.svelte";
-	import IntuitiveCss from "./DxCss.svelte";
+	import IntuitiveCss from "./DeformCss.svelte";
 	import SpaceCss from "./SpaceCss.svelte";
 	import LineHeightCss from "./FlowCss.svelte";
 	import PrismCss from "./PrismCss.svelte";

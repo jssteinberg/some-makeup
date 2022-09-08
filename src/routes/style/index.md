@@ -29,10 +29,10 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 
 </Details>
 
-## *Do CSS*---A <cite>Default CSS</cite> Expansion
+## *Deform CSS*---A <cite>Default CSS</cite> Expansion
 
 ```css
-@import "makeup-style/src/do.css";
+@import "makeup-style/src/deform.css";
 ```
 
 *When you're doing a full makeover, do it intuitively.* An improvement of the CSS developer experience, and buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them. Buttons and inputs will most likely need some styling, but this makes consistent styling simpler.

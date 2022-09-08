@@ -275,7 +275,7 @@ select, summary {
 }
 ```
 
-## *Do CSS Intuitively*
+## *Deform CSS Intuitively*
 
 ...
 

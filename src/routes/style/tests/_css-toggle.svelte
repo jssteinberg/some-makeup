@@ -1,6 +1,6 @@
 <script>
 	import DefaultCss from "/src/libs/DefaultCss.svelte";
-	import DxCss from "/src/libs/DxCss.svelte";
+	import DeformCss from "/src/libs/DeformCss.svelte";
 	import SpaceCss from "/src/libs/SpaceCss.svelte";
 	import LineHeightCss from "/src/libs/FlowCss.svelte";
 	import { createEventDispatcher } from "svelte";
@@ -35,7 +35,7 @@
 </div>
 
 {#if css.default} <DefaultCss /> {/if}
-{#if css.do} <DxCss /> {/if}
+{#if css.do} <DeformCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.flow} <LineHeightCss /> {/if}
 
