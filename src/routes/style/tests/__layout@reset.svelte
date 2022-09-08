@@ -1,13 +1,63 @@
+<script>
+	import CssToggle from "./_css-toggle.svelte";
+	import StyleNav from "../_style-nav.svelte";
+	import Nav from "$libs/Nav.svelte";
+	import { page } from "$app/stores";
+	import MetaTags from "$libs/MetaData.svelte";
+	import { onMount } from "svelte";
+	import Header from "$libs/Header.svelte";
+
+	const links = [
+		{
+			label: "Overflow",
+			href: "/style/tests/overflow",
+		},
+		{
+			label: "Inline",
+			href: "/style/tests/inline",
+		},
+		{
+			label: "Media",
+			href: "/style/tests/media",
+		},
+		{
+			label: "Inputs",
+			href: "/style/tests/inputs",
+		},
+		{
+			label: "Usability",
+			href: "/style/tests/usability",
+		},
+		{
+			label: "Convenience",
+			href: "/style/tests/convenience",
+		},
+	];
+
+	let els;
+	let scrollY = 0;
+	$: testLabel = links.find(val => val.href === $page.url.pathname)?.label;
+	$: if ($page) {
+		updateTest();
+	}
+
+	const updateTest = () => {
+		if (typeof document !== "undefined")
+			els = document.body.querySelectorAll("#tests :is(p,h2,li)");
+	};
+
+	onMount(() => {
+		updateTest();
+	});
+</script>
+
 <MetaTags
-	title={`
-		makeup-style
-		${testLabel ? `${testLabel} test` : `tests`}
-	`}
+	title={`makeup-style ${testLabel ? `${testLabel} test` : `tests`}`}
 	description={`Test makeup-style code for ${testLabel ? testLabel : ``}.`}
 />
 
 <svelte:head>
-	<meta name="robots" content="noindex">
+	<meta name="robots" content="noindex" />
 </svelte:head>
 
 <svelte:window bind:scrollY />
@@ -20,12 +70,12 @@
 
 {#if els && els.length}
 	<div aria-hidden="true" id="element-heights">
-		{#each els as item,i}
+		{#each els as item, i}
 			<span
 				class="element-height-val"
-				style:transform={
-					`translate3d(0, ${item.getBoundingClientRect().top + scrollY}px, 0)`
-				}
+				style:transform={`translate3d(0, ${
+					item.getBoundingClientRect().top + scrollY
+				}px, 0)`}
 			>
 				{#if i === 0}px:{/if}
 				{item.offsetHeight}
@@ -50,59 +100,10 @@
 
 <Nav {links} ariaLabel="Test-pages" sticky="bottom" />
 
-<script>
-	import CssToggle from './_css-toggle.svelte';
-	import StyleNav from '../_style-nav.svelte';
-	import Nav from '$libs/Nav.svelte';
-	import { page } from '$app/stores';
-	import MetaTags from '$libs/MetaData.svelte';
-	import { onMount } from 'svelte';
-	import Header from '$libs/Header.svelte';
-
-	const links = [
-		{
-			label: 'Overflow',
-			href: '/style/tests/overflow',
-		},
-		{
-			label: 'Inline',
-			href: '/style/tests/inline',
-		},
-		{
-			label: 'Media',
-			href: '/style/tests/media',
-		},
-		{
-			label: 'Inputs',
-			href: '/style/tests/inputs',
-		},
-		{
-			label: 'Usability',
-			href: '/style/tests/usability',
-		},
-		{
-			label: 'Convenience',
-			href: '/style/tests/convenience',
-		},
-	];
-
-	let els;
-	let scrollY = 0;
-	$: testLabel = links.find(val => val.href === $page.url.pathname)?.label;
-	$: if ($page) { updateTest(); }
-
-	const updateTest = () => {
-		if (typeof document !== 'undefined')
-			els = document.body.querySelectorAll(
-				'#tests :is(p,h2,li)'
-			);
-	};
-
-	onMount(() => { updateTest(); });
-</script>
-
 <style>
-	*, ::before, ::after {
+	*,
+	::before,
+	::after {
 		box-sizing: border-box;
 	}
 
@@ -116,7 +117,7 @@
 	.wrapper::after {
 		--padding-inline: 1px;
 		border-right: var(--padding-inline) dashed;
-		content: '';
+		content: "";
 		position: absolute;
 		inset: calc(-1 * var(--space, 1rem)) calc(-1 * var(--padding-inline));
 		z-index: -1;
@@ -124,10 +125,8 @@
 	}
 
 	.wrapper :global(h2) {
-		background:
-			0 1em/100% 1px
-			linear-gradient(var(--sep-color), var(--sep-color))
-			no-repeat;
+		background: 0 1em/100% 1px
+			linear-gradient(var(--sep-color), var(--sep-color)) no-repeat;
 	}
 
 	#element-heights {
@@ -137,7 +136,8 @@
 
 	#element-heights::after {
 		content: "";
-		background: no-repeat top right/1px 100% linear-gradient(transparent 25vh,var(--sep-color),transparent 75vh);
+		background: no-repeat top right/1px 100%
+			linear-gradient(transparent 25vh, var(--sep-color), transparent 75vh);
 		width: calc(var(--view-inline) - 1px);
 		position: fixed;
 		inset: 0;
@@ -146,11 +146,12 @@
 
 	.element-height-val {
 		background: var(--bg);
-		color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .5);
+		color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / 0.5);
 		font-family: var(--sans);
-		font-weight: 100; font-weight: 300;
-		font-size: clamp(1ex, var(--view-inline) - .9em, 1.5ex);
-		line-height: .9;
+		font-weight: 100;
+		font-weight: 300;
+		font-size: clamp(10px, var(--view-inline) - 0.9em, 15px);
+		line-height: 0.9;
 		width: calc(var(--view-inline) - 3px);
 		position: absolute;
 		left: 1px;

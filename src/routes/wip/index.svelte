@@ -1,11 +1,12 @@
 <script context="module">
-	import { getPostsFromFiles } from '$libs/utils/index.js';
-	const markdownFiles = import.meta.globEager(`./*.md`);
+	import { getPostsFromFiles } from "$libs/utils/index.js";
+
+	const markdownFiles = import.meta.glob("./*.md", { eager: true });
 	const excludeFiles = ["index"];
 
 	export const load = async ({ url }) => {
 		const posts = getPostsFromFiles(markdownFiles, url).filter(
-			item => !excludeFiles.includes(item.title),
+			item => !excludeFiles.includes(item.title)
 		);
 
 		return {

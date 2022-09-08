@@ -6,77 +6,55 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * @author ocodia
  */
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #8292a2;
-}
-
 .token.punctuation {
-	color: #f8f8f2;
+	color: var(--fg);
 }
 
-.token.namespace {
-	opacity: .7;
+/* comment */
+.token.comment {
+	color: var(--comment-fg, purple);
 }
 
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #f92672;
+/* black */
+
+/* white */
+
+/* red */
+
+/* green */
+.token.attr-name {
+	color: var(--green);
 }
 
-.token.boolean,
-.token.number {
-	color: #ae81ff;
+/* green */
+.token.attr-name {
+	color: var(--green);
 }
 
-.token.selector,
-.token.attr-name,
+/* green 2 */
+.token.property {
+	color: var(--green-2);
+}
+
+/* yellow */
+
+.language-css .token.string {
+	color: var(--yellow-2);
+}
+
+/* blue */
+
+/* blue 2 */
 .token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: #a6e22e;
+.token.tag,
+.token.selector,
+.token.atrule {
+	color: var(--blue-2);
 }
 
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
+/* magenta */
 
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-	color: #e6db74;
+/* cyan */
+.token.function {
+	color: var(--cyan-2);
 }
-
-.token.keyword {
-	color: #66d9ef;
-}
-
-.token.regex,
-.token.important {
-	color: #fd971f;
-}
-
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-.token.italic {
-	font-style: italic;
-}
-
-.token.entity {
-	cursor: help;
-}
-

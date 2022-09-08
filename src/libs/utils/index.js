@@ -1,5 +1,9 @@
 export const getSlugFromPath = path => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
+/**
+  * @arg {object} markdownFiles
+  * @arg {object} url
+  */
 export const getPostsFromFiles = (markdownFiles, url) =>
   Object.keys(markdownFiles)
     .map(path => {

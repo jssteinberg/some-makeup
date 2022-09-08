@@ -11,7 +11,7 @@ Johan is currently working as a senior engineer coding React, Next.js, CSS and H
 <PostList {posts} />
 
 <script context="module">
-	const markdownFiles = import.meta.globEager(`./*.md`);
+	const markdownFiles = import.meta.glob("./*.md", { eager: true });
 	const getSlug = (path) => path.replace(/.*\/([^/]*)\..*$/, "$1");
 
 	export const load = async ({ url }) => {

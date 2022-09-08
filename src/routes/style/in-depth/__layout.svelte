@@ -4,7 +4,7 @@
 
 	const links = [
 		{
-			label: `Fix Do CSS`,
+			label: `Default Do CSS`,
 			href: `/style/in-depth`,
 			subtitle: `Intuitive & Safer CSS Defaults`,
 		},
@@ -15,10 +15,10 @@
 	];
 
 	$: part = links.filter(
-		link => $page.routeId === link.href.replace(/^\//, ``),
+		link => $page.routeId === link.href.replace(/^\//, ``)
 	)[0]?.label;
 	$: subtitle = links.filter(
-		link => $page.routeId === link.href.replace(/^\//, ``),
+		link => $page.routeId === link.href.replace(/^\//, ``)
 	)[0]?.subtitle;
 </script>
 
@@ -28,7 +28,8 @@
 			<small>makeup-style in-depth:</small>
 
 			{#if part}
-				{part}{#if subtitle}—{/if}{#if subtitle}<em class="block">{subtitle}</em>{/if}
+				{part}{#if subtitle}—{/if}{#if subtitle}<em class="block">{subtitle}</em
+					>{/if}
 			{/if}
 		</h1>
 	</header>
@@ -57,7 +58,7 @@
 		font-style: italic;
 		font-size: var(--font-size, 1rem);
 		display: block;
-		padding-block: calc(.5 * var(--space, 1em));
+		padding-block: calc(0.5 * var(--space, 1em));
 	}
 
 	/* .sep { */

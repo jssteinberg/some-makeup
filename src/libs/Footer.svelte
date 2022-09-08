@@ -1,31 +1,32 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from "$app/stores";
 </script>
 
 <footer class="footer">
 	<h2 class="nav">
 		<a
 			sveltekit:prefetch
-			aria-current={$page.url.pathname === '/' ? 'page' : undefined}
+			aria-current={$page.url.pathname === "/" ? "page" : undefined}
 			href="/"
 		>
-			some.makeup</a>
+			some.makeup</a
+		>
 		{new Date().getFullYear()}
 	</h2>
 
 	<ul class="nav">
 		<li>
 			<a
-			sveltekit:prefetch
-			aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
-			href="/about"
+				sveltekit:prefetch
+				aria-current={$page.url.pathname === "/about" ? "page" : undefined}
+				href="/about"
 			>
-			About
+				About
 			</a>
 		</li>
 		<li>
 			<a
-				aria-current={$page.url.pathname === '/wip' ? 'page' : undefined}
+				aria-current={$page.url.pathname === "/wip" ? "page" : undefined}
 				href="/wip"
 				sveltekit:prefetch
 			>
@@ -35,7 +36,8 @@
 	</ul>
 
 	<p>
-		This site does not store any of your data or embed anything that can track you. 
+		This site does not store any of your data, does not track you and does not
+		enable other trackers.
 	</p>
 
 	<p aria-hidden="true">
@@ -43,7 +45,9 @@
 			href="#document"
 			tabindex="-1"
 			class="touch-target"
-			on:click|preventDefault={() => { window.scrollTo(0,0); }}
+			on:click|preventDefault={() => {
+				window.scrollTo(0, 0);
+			}}
 		>
 			Top of page
 		</a>
@@ -51,7 +55,9 @@
 </footer>
 
 <style>
-	*, ::before, ::after {
+	*,
+	::before,
+	::after {
 		box-sizing: border-box;
 		font-size: 1em;
 	}
@@ -60,8 +66,9 @@
 		margin: var(--TOUCH-TARGET-SIZE) var(--view-inline);
 	}
 
-
-	h2, h2 + *, h2 + ul > li {
+	h2,
+	h2 + *,
+	h2 + ul > li {
 		display: inline;
 		margin-inline-end: 1em;
 	}
@@ -83,7 +90,9 @@
 		justify-content: center;
 	}
 
-	h2 a::before { content: "//"; }
+	h2 a::before {
+		content: "//";
+	}
 
 	.nav a::before {
 		content: "/";

@@ -12,10 +12,10 @@ But does all CSS need to be normalized in a low level library like normalize.css
 The more styling, the more opinionated code. Which is something you want at a bare minimum in a low level CSS library. Also, the more style, the more is likely overwritten when sites and apps are styled.
 
 Can normalize.css' approach be rethought?
-Some of the same problems must be solved, and an update for latest browser implementations can be needed. But much of the original code from normalize.css is rarely needed or outdated. Modern browsers has less differences between them. There's also some low level parts of default CSS the normalize approach did not fix. CSS Remedy and sanitize.css are more up to date, and they have tried to expand their fixing with new approaches and properties, but they are still lacking in some of the following points including typography and normalizing `form` related elements.
+Some of the same problems must be solved, and an update for latest browser implementations can be needed. But much of the original code from normalize.css is rarely needed or outdated. Modern browsers has less differences between them. There's also some low level parts of default CSS the normalize approach did not fix. CSS Remedy and sanitize.css are more up to date, and they have tried to expand their styling with new approaches and properties, but they are still lacking in some of the following points including typography and normalizing `form` related elements.
 (sanitize.css also expands into resetting style, like for [lists in `nav`](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L93-L96).)
 
-1. What does still need fixing in default CSS?
+1. What default CSS does still need correction?
 	1. Especially important for smaller viewports, displaying content and adding CSS should not cause overflowing the x-axis as far as possible.
 <!-- Can remember what I meant with this: - Expected simple functionality of HTML should be upheld as far as possible. -->
 	2. Inline elements affecting the height of lines, disrupting readability and typography.
@@ -25,20 +25,20 @@ Some of the same problems must be solved, and an update for latest browser imple
 	1. Normalizing elements for similar approach to restyle (including `form` related elements).
 	2. General basic CSS rules that provides more intuitive behaviors when styling.
 
-These points should only be fixed if they can done so safely, not causing side effects, e.g., through inheritance. And, as mentioned, code that's too opinionated or styling that is often overwritten should be considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
+These points should only be corrected if they can done so safely, not causing side effects, e.g., through inheritance. And, as mentioned, code that's too opinionated or styling that is often overwritten should be considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
 
 *The up-to-date full breakdown of a resulting code draft follows.*
 
 
-## *Fix CSS Safer*
+## *Safer Default CSS*
 
-For the simplest of needs, browser default CSS has some flaws that must be fixed: overflowing content should not be present out of the box and it should be prevented when styling; since the main content of the web is text, the simplest typographic needs should be upheld both for readability and further typographic improvements through style, and; simple inconsistencies disturbing usability and styling.
+For the simplest of needs, browser default CSS has some flaws that needs correction: overflowing content should not be present out of the box and it should be prevented when styling; since the main content of the web is text, the simplest typographic needs should be upheld both for readability and further typographic improvements through style, and; simple inconsistencies disturbing usability and styling.
 
 <Details>
 
 <em slot="summary">Side notes</em>
 
-- CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The fix presented here fixes it with a single `line-height` rule for the inline elements in question.
+- CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The styling presented here repairs it with a single `line-height` rule for the inline elements in question.
 - Margins or sizes for headings are not included. Default CSS is typographically descent, even if not always consistent, e.g., `<h1>` size. But headings are usually styled if they need certain margins and size which takes precedence over browser defaults.
 - Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
@@ -52,7 +52,7 @@ For the simplest of needs, browser default CSS has some flaws that must be fixed
 
 ---
 
-A CSS fix has to start with perhaps **the** rule all elements need. More intuitively for human developers, it makes browsers include border-width and padding when calculating width and height. It's also very important for preventing horizontal overflow when applying styles.
+A default CSS has to start with perhaps **the** rule all elements need. More intuitively for human developers, it makes browsers include border-width and padding when calculating width and height. It's also very important for preventing horizontal overflow when applying styles.
 
 ```css
 *, ::before, ::after {
@@ -154,7 +154,7 @@ textarea {
 Inline elements with different `font-family` or `vertical-align` usually bear special meanings and stylistically they can affect lines' heights.
 
 1. The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
-2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that fixes the main problem for these elements in layouts. It's worth noting that if the `display` value of the parent makes any of these elements block-level they will be short and you have to redo your HTML structure or restyle `line-height` for this context. The `line-height` below is still high enough that the content will show.*
+2. Avoid that lines' heights are affects by these elements. *This is not a full normalization of these elements---which has little value---but a single common rule that repairs the main problem for these elements in layouts (elements using `monospace` would disrupt lines' heights when `font-size` was adjusted up). It's worth noting that if the `display` value of the parent makes any of these elements block-level, their true `line-height` will appear. The solution is to redo your HTML structure, or restyle `line-height`, for this context. The `line-height` below is still high enough that the content will be readable---just barely.*
 
 ```css
 code, kbd, samp, sub, sup {
@@ -285,7 +285,7 @@ select, summary {
 
 - Think about what CSS is/can be used to, and in what order from basic to advanced sites/apps: typography, layouts, usability, accessibility, more typography and graphical design, animations, 3D rendering.
 
-- If all needed elements where to be normalized across browsers, that would cause a lot of unused code for most apps and sites. Rather style those elements when they are used a lot. Perhaps it can be code-split. It obviously results in more focused and lean CSS when only what needs fixing is styled.
+- If all needed elements where to be normalized across browsers, that would cause a lot of unused code for most apps and sites. Rather style those elements when they are used a lot. Perhaps it can be code-split. It obviously results in more focused and lean CSS when only what really needs correction is styled.
 -->
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/

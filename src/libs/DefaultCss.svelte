@@ -1,5 +1,5 @@
 <svelte:head>
 	<style lang="scss">
-		@use '../fix.css';
+		@use "../default.css";
 	</style>
 </svelte:head>
