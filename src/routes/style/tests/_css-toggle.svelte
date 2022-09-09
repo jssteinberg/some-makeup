@@ -13,7 +13,7 @@
 
 	let css = {
 		default: true,
-		do: false,
+		deform: false,
 		space: false,
 		flow: false,
 	};
@@ -35,7 +35,7 @@
 </div>
 
 {#if css.default} <DefaultCss /> {/if}
-{#if css.do} <DeformCss /> {/if}
+{#if css.deform} <DeformCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.flow} <LineHeightCss /> {/if}
 
