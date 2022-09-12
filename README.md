@@ -38,6 +38,12 @@ Rename?:
 
 Plan v1:
 
+- Consider adding to default.css (seems like only applies if words can't be hyphenated):
+
+	```css
+	overflow-wrap: anywhere;
+	```
+
 - Check support for `…-block`/`…-inline`. If good, then use.
 
 Plan v2:
