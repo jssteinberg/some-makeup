@@ -5,12 +5,12 @@
 	box-sizing: border-box; }
 
 :root {
-	/* Words break for no x-axis scrolling (use this, not `word-break`). */
-	overflow-wrap: break-word;
-	/* Words are auto hyphenated to fit narrow widths. */
-	hyphens: auto;
 	/* Prevent adjustment of font-size after Ios orientation change. */
-	-webkit-text-size-adjust: 100%; }
+	-webkit-text-size-adjust: 100%;
+	/* Auto hyphens when words should and can break. */
+	hyphens: auto;
+	/* Words break in narrow containers---uses soft wrap opportunities if present. */
+	overflow-wrap: anywhere; }
 
 /* FURTHER PREVENT OVERFLOW */
 
