@@ -18,7 +18,7 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-*Populate HTML documents and makeup style safely.* A lean CSS default that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; improves default font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
+*Populate HTML documents and makeup style safely.* A lean improved CSS default that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; improves default font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with below file it even normalizes buttons and inputs, which the mentioned alternatives does not.
 
