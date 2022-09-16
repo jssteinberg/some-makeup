@@ -39,7 +39,7 @@
 {/if}
 
 {#if date}
-	<p class="date-info"><em>Published/updated: {date.join("/")}</em></p>
+	<p class="date-info"><em>(Up)date: {date.join("/")}</em></p>
 {/if}
 <div
 	lang={langAttr}
