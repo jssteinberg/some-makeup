@@ -5,6 +5,7 @@
 	import SpaceCss from "./SpaceCss.svelte";
 	import LineHeightCss from "./FlowCss.svelte";
 	import PrismCss from "./PrismCss.svelte";
+	import Date from "./Date.svelte";
 
 	export let title = "A knot";
 	export let metaTitle;
@@ -38,9 +39,8 @@
 	<PrismCss />
 {/if}
 
-{#if date}
-	<p class="date-info"><em>(Up)date {date.join(", ")}</em></p>
-{/if}
+<Date {date} />
+
 <div
 	lang={langAttr}
 	class={`
@@ -52,10 +52,3 @@
 >
 	<slot />
 </div>
-
-<style>
-	.date-info {
-		text-align: end;
-		padding-inline: var(--view-inline);
-	}
-</style>
