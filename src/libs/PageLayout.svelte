@@ -44,11 +44,11 @@
 <div
 	lang={langAttr}
 	class={`
-	app-theme
-	app-theme-main-content
-	${set.includes(`sans`) ? `sans-theme` : ``}
-	${set.includes(`mixed`) ? `` : `typography`}
-`}
+		app-theme
+		app-theme-main-content
+		${set.includes(`sans`) ? `sans-theme` : ``}
+		${set.includes(`mixed`) ? `` : `typography`}
+	`}
 >
 	<slot />
 </div>

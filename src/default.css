@@ -51,7 +51,7 @@ b, strong {
 /* `[hidden]` maintain behaviour when overriding `display` values. */
 /* `source` has nothing to display and should not display (polyfill). */
 [hidden], source {
-	display:none; }
+	display: none; }
 
 /* Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio (polyfill). */
 picture {
