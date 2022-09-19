@@ -18,7 +18,7 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-*Populate HTML documents and makeup style safely.* A lean improved CSS default that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; improves default font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
+*Default CSS for safely creating HTML content and makeup style.* Fixes and improves the necessary browser default CSS for displaying content for all screen sizes, mobile first. That includes avoiding overflowing text and media, `border-box` for coding layouts, and polyfill and improvements for usability---all in the mindset of it being a default CSS. With that mindset not all default styles need to be normalized---when the normalization of a certain style would matter it is always overridden/styled for that context.
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with below file it even normalizes buttons and inputs, which the mentioned alternatives does not.
 
@@ -35,7 +35,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 @import "makeup-style/src/deform.css";
 ```
 
-*When you're doing a full makeover, do it intuitively.* An improvement of the CSS developer experience, and buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them. Buttons and inputs will most likely need some styling, but this makes consistent styling simpler.
+*Deform style---to form style---conveniently and intuitively.* Simple intuitive improvements of the CSS developer experience, plus all buttons and inputs are normalized across modern browsers so they can be consistently styled.
 
 <Details>
 <em slot="summary">Tips</em>
