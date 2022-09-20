@@ -186,6 +186,7 @@
 .app-theme-main-content pre {
 	hyphens: none;
 	overflow: auto;
+	overflow-wrap: normal;
 	padding: 0 var(--space) var(--space) 0;
 	position: relative;
 	tab-size: 2;
