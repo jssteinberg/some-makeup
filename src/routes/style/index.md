@@ -25,7 +25,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 <Details>
 <em slot="summary">Notes</em>
 
-`code, kbd, samp, sub, sup` are inline elements. This file styles them to not affect lines' heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
+`code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
 
 </Details>
 
@@ -35,7 +35,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 @import "makeup-style/src/deform.css";
 ```
 
-*Deform style---to form style---conveniently and intuitively.* Simple intuitive improvements of the CSS developer experience, plus all buttons and inputs are normalized across modern browsers so they can be consistently styled.
+*Deform CSS to code CSS more intuitively.* Simple intuitive improvements of the CSS developer experience, plus all buttons and inputs are normalized across modern browsers so they can be consistently styled.
 
 <Details>
 <em slot="summary">Tips</em>
