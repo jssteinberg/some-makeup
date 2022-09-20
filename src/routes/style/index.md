@@ -35,7 +35,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 @import "makeup-style/src/deform.css";
 ```
 
-*Deform CSS to code CSS more intuitively.* Simple intuitive improvements of the CSS developer experience, plus all buttons and inputs are normalized across modern browsers so they can be consistently styled.
+*Deform CSS to code CSS for all elements easier and more intuitively.* Simple rules for more convenient and intuitive styling. Includes normalizing all buttons and inputs across modern browsers so they can be consistently styled.
 
 <Details>
 <em slot="summary">Tips</em>
