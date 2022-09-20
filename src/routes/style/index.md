@@ -18,9 +18,9 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-*Default CSS for safely creating HTML content and makeup style.* Fixes and improves the necessary browser default CSS for displaying content for all screen sizes, mobile first. That includes avoiding overflowing text and media, `border-box` for coding layouts, and polyfill and improvements for usability---all in the mindset of it being a default CSS. With that mindset not all default styles need to be normalized---when the normalization of a certain style would matter it is always overridden/styled for that context.
+Default CSS for safely creating HTML content and to makeup style. It fixes and improves the necessary browser default CSS for displaying content for all screen sizes, mobile first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS. With that mindset, all default styles does actually not need to be normalized---when normalization of a certain style matters it is usually, and better to be, specifically styled for that context.
 
-This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with below file it even normalizes buttons and inputs, which the mentioned alternatives does not.
+This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with the file below, it can even normalize buttons and inputs, which the alternative normalization libraries ironically does not---which is the normalization that actually can be a hassle.
 
 <Details>
 <em slot="summary">Notes</em>
