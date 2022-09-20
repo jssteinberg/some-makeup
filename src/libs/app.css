@@ -19,10 +19,31 @@
 	/* --serif: ui-serif, Constantia, Georgia, Hoefler Text, serif; */
 	--serif: serif;
 
+	--color-scheme: dark;
+
+	/* Color variables */
+
+	--saturation: 42%; /* normal saturation */
+	--light-1: 55%;
+	--light-2: 72.5%;
+
 	--hr-fg: var(--fg);
 	--sep-fg: hsla(var(--fg-hsl) / .2);
 	--sep-color: var(--sep-fg);
-	--color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-scheme: light;
+		--saturation-2: 95%;
+		--light-2: 40%;
+		--bg-l: 100%;
+		--fg-l:        5%;
+	}
+
+	/* :is(pre,code) .token { */
+	/* 	color: var(--fg) !important; */
+	/* } */
 }
 
 @media (min-width: 600px) {

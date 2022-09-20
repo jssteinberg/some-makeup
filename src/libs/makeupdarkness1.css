@@ -1,41 +1,41 @@
 :root {
 	--hue: 247.3; /* base hue */
-	--saturation: 42%; /* normal saturation */
-	--light-1: 55%;
-	--light-2: 72.5%;
 
 	--bg-h:        var(--hue);    --bg-s:        17.8%;             --bg-l:        8%;
 	--fg-h:        105.7;         --fg-s:        var(--saturation); --fg-l:        91.5%;
 
 	--black-h:     var(--hue);    --black-s:     var(--saturation); --black-l:     14%;
-	--black-2-h:   var(--hue);    --black-2-s:   var(--saturation); --black-2-l:   var(--light-1);
+	--black-2-h:   var(--hue);    --black-2-s:   var(--saturation-2, var(--saturation)); --black-2-l:   var(--light-1);
 
 	--white-h:     var(--hue);    --white-s:     17.8%;             --white-l:     var(--light-2);
 	--white-2-h:   var(--hue);    --white-2-s:   17.8%;             --white-2-l:   100%;
 
 	--red-h:       6.9;           --red-s:       var(--saturation); --red-l:       var(--light-1);
-	--red-2-h:     7.5;           --red-2-s:     var(--saturation); --red-2-l:     var(--light-2);
+	--red-2-h:     7.5;           --red-2-s:     var(--saturation-2, var(--saturation)); --red-2-l:     var(--light-2);
 
 	--green-h:     97.5;          --green-s:     var(--saturation); --green-l:     var(--light-1);
-	--green-2-h:   var(--fg-h);   --green-2-s:   var(--saturation); --green-2-l:   var(--light-2);
+	--green-2-h:   var(--fg-h);   --green-2-s:   var(--saturation-2, var(--saturation)); --green-2-l:   var(--light-2);
 
 	--yellow-h:    37.5;          --yellow-s:    var(--saturation); --yellow-l:    var(--light-1);
-	--yellow-2-h:  68;            --yellow-2-s:  var(--saturation); --yellow-2-l:  var(--light-2);
+	--yellow-2-h:  68;            --yellow-2-s:  var(--saturation-2, var(--saturation)); --yellow-2-l:  var(--light-2);
 
 	--blue-h:      217.5;         --blue-s:      var(--saturation); --blue-l:      var(--light-1);
-	--blue-2-h:    var(--blue-h); --blue-2-s:    var(--saturation); --blue-2-l:    var(--light-2);
+	--blue-2-h:    var(--blue-h); --blue-2-s:    var(--saturation-2, var(--saturation)); --blue-2-l:    var(--light-2);
 
 	--magenta-h:   var(--hue);    --magenta-s:   var(--saturation); --magenta-l:   var(--light-1);
-	--magenta-2-h: var(--hue);    --magenta-2-s: var(--saturation); --magenta-2-l: var(--light-2);
+	--magenta-2-h: var(--hue);    --magenta-2-s: var(--saturation-2, var(--saturation)); --magenta-2-l: var(--light-2);
 
 	--cyan-h:      187.3;         --cyan-s:      var(--saturation); --cyan-l:      var(--light-1);
-	--cyan-2-h:    187.5;         --cyan-2-s:    var(--saturation); --cyan-2-l:    var(--light-2);
+	--cyan-2-h:    187.5;         --cyan-2-s:    var(--saturation-2, var(--saturation)); --cyan-2-l:    var(--light-2);
 
-	--comment-h: 277.5; --comment-s: var(--saturation); --comment-l: var(--light-1);
+	--violet-h: 277.5; --violet-s: var(--saturation); --violet-l: var(--light-1);
+
+	--comment-h: var(--violet-h); --comment-s: var(--violet-s); --comment-l: var(--violet-l);
 
 	--fg-hsl: var(--fg-h) var(--fg-s) var(--fg-l);
 	--fg:        hsl(var(--fg-h)        var(--fg-s)        var(--fg-l));
 	--bg:        hsl(var(--bg-h)        var(--bg-s)        var(--bg-l));
+
 	--black:     hsl(var(--black-h)     var(--black-s)     var(--black-l));
 	--black-2:   hsl(var(--black-2-h)   var(--black-2-s)   var(--black-2-l));
 	--white:     hsl(var(--white-h)     var(--white-s)     var(--white-l));
@@ -52,5 +52,7 @@
 	--magenta-2: hsl(var(--magenta-2-h) var(--magenta-2-s) var(--magenta-2-l));
 	--cyan:      hsl(var(--cyan-h)      var(--cyan-s)      var(--cyan-l));
 	--cyan-2:    hsl(var(--cyan-2-h)    var(--cyan-2-s)    var(--cyan-2-l));
-	--comment-fg:   hsl(var(--comment-h)   var(--comment-s)   var(--comment-l));
+	--violet:    hsl(var(--violet-h)    var(--violet-s)    var(--violet-l))
+
+	--comment-fg:    var(--violet);
 }
