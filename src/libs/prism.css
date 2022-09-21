@@ -6,6 +6,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * @author ocodia
  */
 
+.token.string,
 .token.attr-value,
 .token.punctuation {
 	color: var(--fg);
@@ -36,6 +37,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 /* blue */
 
 /* blue 2 */
+.token.punctuation,
 .token.attr-name,
 .token.property,
 .token.tag,

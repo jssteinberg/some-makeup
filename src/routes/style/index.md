@@ -18,7 +18,7 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-Default CSS for safely creating HTML content and to makeup style. It fixes and improves the necessary browser default CSS for displaying content for all screen sizes, mobile first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS. With that mindset, all default styles does actually not need to be normalized---when normalization of a certain style matters it is usually, and better to be, specifically styled for that context.
+Default CSS for safely creating HTML content and to makeup style. It fixes and improves the necessary browser default CSS for displaying content for all screen sizes, mobile first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS. With that mindset, all elements does actually not need to be normalized. Because when normalization of a certain element matter, it is usually---and it's better---specifically styled for that context.
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with the file below, it can even normalize buttons and inputs, which the alternative normalization libraries ironically does not---which is the normalization that actually can be a hassle.
 
@@ -35,7 +35,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 @import "makeup-style/src/deform.css";
 ```
 
-*Deform CSS to code CSS for all elements easier and more intuitively.* Simple rules for more convenient and intuitive styling. Includes normalizing all buttons and inputs across modern browsers so they can be consistently styled.
+*Deform CSS to code CSS for all elements easier and more intuitively.* Simple rules for more convenient and intuitive styling. Includes simple intuitive rules and inheritances for styling, reduce-motion rules for animations and transitions, and normalizing of all buttons and inputs across modern browsers for consistently styling buttons and inputs while still keeping focus styles for accessibility.
 
 <Details>
 <em slot="summary">Tips</em>
