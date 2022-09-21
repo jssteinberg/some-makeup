@@ -7,7 +7,7 @@ npm install makeup-style
 
 @import "makeup-style/src/default.css";
 @import "makeup-style/src/deform.css";
-@import "makeup-style/src/even.css";
+@import "makeup-style/src/space.css";
 @import "makeup-style/src/flow.css";
 ```
 
