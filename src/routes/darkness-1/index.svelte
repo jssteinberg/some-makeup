@@ -2,7 +2,7 @@
 	import MetaTags from "$libs/MetaData.svelte";
 	import Details from "$libs/Details.svelte";
 	import ContainCss from "$libs/DefaultCss.svelte";
-	import IntuitiveCss from "$libs/DxCss.svelte";
+	import IntuitiveCss from "$libs/DeformCss.svelte";
 	import SpaceCss from "$libs/SpaceCss.svelte";
 	import LineHeightCss from "$libs/FlowCss.svelte";
 	import PrismCss from "$libs/PrismCss.svelte";

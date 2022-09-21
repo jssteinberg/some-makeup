@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from "$app/stores";
 
 	export let links = [];
 	export let ariaLabel;
@@ -12,7 +12,11 @@
 	`;
 </script>
 
-<nav aria-label={ariaLabel} aria-hidden={ariaHidden ? `true` : undefined} class={classes}>
+<nav
+	aria-label={ariaLabel}
+	aria-hidden={ariaHidden ? `true` : undefined}
+	class={classes}
+>
 	{#each links as link}
 		<a
 			href={link.href}
@@ -48,7 +52,10 @@
 		flex-wrap: wrap;
 
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
-		min-width: max(min-content, var(--touch-target-min-width, var(--TOUCH-TARGET-SIZE, 48px)));
+		min-width: max(
+			min-content,
+			var(--touch-target-min-width, var(--TOUCH-TARGET-SIZE, 48px))
+		);
 		white-space: nowrap;
 
 		outline: none;
@@ -69,7 +76,7 @@
 		box-shadow: inset 0 0 0 2px;
 	}
 
-	nav :global(a:is(:hover,:focus-visible)) {
+	nav :global(a:is(:hover, :focus-visible)) {
 		text-decoration: underline;
 	}
 
@@ -87,8 +94,12 @@
 		position: sticky;
 	}
 	nav.sticky a {
-		background: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / .9);
+		background: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / 0.9);
 	}
-	nav.sticky:not(.sticky--bottom) { top: var(--_offset); }
-	nav.sticky--bottom { bottom: var(--_offset); }
+	nav.sticky:not(.sticky--bottom) {
+		top: var(--_offset);
+	}
+	nav.sticky--bottom {
+		bottom: var(--_offset);
+	}
 </style>

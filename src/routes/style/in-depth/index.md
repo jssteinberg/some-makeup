@@ -82,15 +82,15 @@ The problem with this approach is how the inheritance of `box-sizing` by default
 
 For the root element there a two rules that prevents overflown text, and one normalizing rule, all three important for mobile devices:
 
-1. Break words if needed to not overflow horizontally and create a horizontal scrollbar. *As a side note, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
+1. Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 2. Allow the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports or for advanced content creators who knows `shy`.
-3. Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
+3. Break words if needed, and on soft wrap word break possibilities if possible, to not overflow horizontally and create a horizontal scrollbar. *As a side note, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
 
 ```css
 :root {
-	overflow-wrap: break-word;
-	hyphens: auto;
 	-webkit-text-size-adjust: 100%;
+	hyphens: auto;
+	overflow-wrap: anywhere;
 }
 ```
 
@@ -275,7 +275,7 @@ select, summary {
 }
 ```
 
-## *Do CSS Intuitively*
+## *Deform CSS Intuitively*
 
 ...
 

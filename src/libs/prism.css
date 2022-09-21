@@ -6,6 +6,8 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * @author ocodia
  */
 
+.token.string,
+.token.attr-value,
 .token.punctuation {
 	color: var(--fg);
 }
@@ -22,9 +24,6 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 /* red */
 
 /* green */
-.token.attr-name {
-	color: var(--green);
-}
 
 /* green */
 .token.attr-name {
@@ -32,20 +31,15 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 }
 
 /* green 2 */
-.token.property {
-	color: var(--green-2);
-}
 
 /* yellow */
-
-.language-css .token.string {
-	color: var(--yellow-2);
-}
 
 /* blue */
 
 /* blue 2 */
-.token.string,
+.token.punctuation,
+.token.attr-name,
+.token.property,
 .token.tag,
 .token.selector,
 .token.atrule {
@@ -55,6 +49,6 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 /* magenta */
 
 /* cyan */
-.token.function {
-	color: var(--cyan-2);
-}
+/* .token.function { */
+/* 	color: var(--cyan-2); */
+/* } */

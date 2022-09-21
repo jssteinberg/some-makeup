@@ -4,7 +4,7 @@
 
 	const links = [
 		{
-			label: `Default Do CSS`,
+			label: `Default Deform CSS`,
 			href: `/style/in-depth`,
 			subtitle: `Intuitive & Safer CSS Defaults`,
 		},

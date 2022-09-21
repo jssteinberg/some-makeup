@@ -18,24 +18,24 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-*Populate HTML documents and makeup style safely.* A lean CSS default that prevents text and content from overflowing; prevents the needed elements from affecting line-height <small>(excluding `button` and `inputs`)</small>, and; improves default font issues, semantic styling and usability. This CSS is mandatory for avoiding breaking layouts, especially for narrow viewports, and for keeping a consistent typographic rhythm. Be confident in that '90s look if you will!
+Default CSS for safely creating HTML content and to makeup style. It fixes and improves the necessary browser default CSS for displaying content for all screen sizes, mobile first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS. With that mindset, all elements does actually not need to be normalized. Because when normalization of a certain element matter, it is usually---and it's better---specifically styled for that context.
 
-This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with below file it even normalizes buttons and inputs, which the mentioned alternatives does not.
+This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with the file below, it can even normalize buttons and inputs, which the alternative normalization libraries ironically does not---which is the normalization that actually can be a hassle.
 
 <Details>
 <em slot="summary">Notes</em>
 
-`code, kbd, samp, sub, sup` are inline elements. This file styles them to not affect lines' heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
+`code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
 
 </Details>
 
-## *Do CSS*---A <cite>Default CSS</cite> Expansion
+## *Deform CSS*---A <cite>Default CSS</cite> Expansion
 
 ```css
-@import "makeup-style/src/do.css";
+@import "makeup-style/src/deform.css";
 ```
 
-*When you're doing a full makeover, do it intuitively.* An improvement of the CSS developer experience, and buttons and inputs (and inputs that looks like buttons) are restyled across modern browsers by normalizing them. Buttons and inputs will most likely need some styling, but this makes consistent styling simpler.
+*Deform CSS to code CSS for all elements easier and more intuitively.* Simple rules for more convenient and intuitive styling. Includes simple intuitive rules and inheritances for styling, reduce-motion rules for animations and transitions, and normalizing of all buttons and inputs across modern browsers for consistently styling buttons and inputs while still keeping focus styles for accessibility.
 
 <Details>
 <em slot="summary">Tips</em>

@@ -1,6 +1,6 @@
 <script>
 	import DefaultCss from "/src/libs/DefaultCss.svelte";
-	import DxCss from "/src/libs/DxCss.svelte";
+	import DeformCss from "/src/libs/DeformCss.svelte";
 	import SpaceCss from "/src/libs/SpaceCss.svelte";
 	import LineHeightCss from "/src/libs/FlowCss.svelte";
 	import { createEventDispatcher } from "svelte";
@@ -13,7 +13,7 @@
 
 	let css = {
 		default: true,
-		do: false,
+		deform: false,
 		space: false,
 		flow: false,
 	};
@@ -35,7 +35,7 @@
 </div>
 
 {#if css.default} <DefaultCss /> {/if}
-{#if css.do} <DxCss /> {/if}
+{#if css.deform} <DeformCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.flow} <LineHeightCss /> {/if}
 
@@ -47,7 +47,7 @@
 	}
 
 	.container {
-		color-scheme: dark;
+		color-scheme: var(--color-scheme);
 		margin-block: 0.5em;
 		padding-inline-start: var(--view-inline);
 		padding-inline-end: 1rem;
@@ -63,16 +63,18 @@
 	}
 
 	label {
-		--_a: 0.825;
-		background: hsla(0 0% 0% / var(--_a));
+		--_a: 0.9;
+		background: var(--bg);
 		border-radius: 0.5rem;
 		border: 1px solid var(--sep-color);
 		box-shadow: inset 0 0 1em 1px var(--sep-color);
-		color: hsla(0 0% 100% / var(--_a));
+		color: inherit;
 		cursor: pointer;
 		line-height: 1;
 		padding: 0.5em 1em;
 		white-space: nowrap;
+		opacity: var(--_a);
+		transition: all 0.25s;
 	}
 
 	label:hover,

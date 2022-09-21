@@ -85,6 +85,21 @@
 
 /* Regular specificity */
 
+/* Small and Mono font elements */
+
+.app-theme-main-content :is(code, kbd, samp, small) {
+	font-size: .85em;
+}
+
+.app-theme-main-content :not(pre) > :is(code, kbd, samp, small) {
+	font-size: 1.85ex;
+}
+
+.app-theme-main-content code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+/* app-theme */
 .app-theme {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
@@ -158,23 +173,10 @@
 	left: -.17em;
 }
 
-/* Small and Mono font elements */
-
-.app-theme-main-content :is(code,kbd,samp,small) {
-	font-size: .85em;
-}
-
-.app-theme-main-content :not(pre) > :is(code,kbd,samp,small) {
-	font-size: 1.85ex;
-}
-
-.app-theme-main-content code {
-	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-}
-
 /* `code` background */
-.app-theme-main-content :not(:is(h1,pre,a)) > code {
-	background: var(--sep-color);
+.app-theme-main-content :not( :is(h1, pre, a) ) > code {
+	--_bg: hsla(var(--fg-hsl) / .125);
+	background: var(--_bg);
 	border-radius: .25rem;
 	padding: .15em .25em;
 	white-space: normal;
@@ -185,6 +187,7 @@
 .app-theme-main-content pre {
 	hyphens: none;
 	overflow: auto;
+	overflow-wrap: normal;
 	padding: 0 var(--space) var(--space) 0;
 	position: relative;
 	tab-size: 2;

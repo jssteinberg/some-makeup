@@ -1,10 +1,11 @@
 <script>
 	import MetaTags from "./MetaData.svelte";
 	import ContainCss from "./DefaultCss.svelte";
-	import IntuitiveCss from "./DxCss.svelte";
+	import IntuitiveCss from "./DeformCss.svelte";
 	import SpaceCss from "./SpaceCss.svelte";
 	import LineHeightCss from "./FlowCss.svelte";
 	import PrismCss from "./PrismCss.svelte";
+	import Date from "./Date.svelte";
 
 	export let title = "A knot";
 	export let metaTitle;
@@ -38,24 +39,16 @@
 	<PrismCss />
 {/if}
 
-{#if date}
-	<p class="date-info"><em>Published/updated: {date.join("/")}</em></p>
-{/if}
+<Date {date} />
+
 <div
 	lang={langAttr}
 	class={`
-	app-theme
-	app-theme-main-content
-	${set.includes(`sans`) ? `sans-theme` : ``}
-	${set.includes(`mixed`) ? `` : `typography`}
-`}
+		app-theme
+		app-theme-main-content
+		${set.includes(`sans`) ? `sans-theme` : ``}
+		${set.includes(`mixed`) ? `` : `typography`}
+	`}
 >
 	<slot />
 </div>
-
-<style>
-	.date-info {
-		text-align: end;
-		padding-inline: var(--view-inline);
-	}
-</style>
