@@ -15,9 +15,32 @@ npm install makeup-style
 
 *Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr] (there's also [this custom CSS reset][mccr]).*
 
----
+## Plans
 
-Rename?:
+Plan v1:
+
+- [v] Consider adding to default.css (seems like only applies if words can't be hyphenated):
+
+	```css
+	overflow-wrap: anywhere;
+	```
+
+	- Fallback to `overflow-wrap: break-word`?
+
+- Check support for `…-block`/`…-inline`. If good, then use.
+
+Plan v2:
+
+- Support variable font, e.g., for `b, strong`.
+- Wrap stuff in `:where()` or use `@layer`.
+
+Nope:
+
+- Remove `[hidden]` ... `display: none`? Should be implemented in all used browsers now. *No! It's for maintaining behaviour.*
+
+<details>
+
+<summary>Rename?</summary>
 
 - (-) default.css, deform.css,  (even.css,  flow.css)  
 - ( ) correct.css, deform.css,  (even.css,  flow.css)  
@@ -36,26 +59,7 @@ Rename?:
 - ( ) cure.css,    develop.css
 - ( ) repair.css,  prepare.css, ...
 
-Plan v1:
-
-- [v] Consider adding to default.css (seems like only applies if words can't be hyphenated):
-
-	```css
-	overflow-wrap: anywhere;
-	```
-
-	- [ ] publish
-
-- Check support for `…-block`/`…-inline`. If good, then use.
-
-Plan v2:
-
-- Support variable font, e.g., for `b, strong`.
-- Wrap stuff in `:where()` or use `@layer`.
-
-Nope:
-
-- Remove `[hidden]` ... `display: none`? Should be implemented in all used browsers now. *No! It's for maintaining behaviour.*
+</details>
 
 ## History
 

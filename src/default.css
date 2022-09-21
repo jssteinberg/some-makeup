@@ -9,7 +9,7 @@
 	-webkit-text-size-adjust: 100%;
 	/* Auto hyphens when words should and can break. */
 	hyphens: auto;
-	/* Words break in narrow containers---uses soft wrap opportunities if present. */
+	/* Word breaks in narrow containers---uses soft wrap opportunities if present. */
 	overflow-wrap: anywhere; }
 
 /* FURTHER PREVENT OVERFLOW */
