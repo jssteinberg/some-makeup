@@ -37,19 +37,23 @@ Browser default CSS tries to, and/or should, handle simple visuals for semantics
 3. Consistency between browsers for basic, modern semantic styling. If also 'outdated' elements can easily be included (like `<b>`), then include it.
 4. Consistent related basic style between elements.
 
-Further, for the developer experience, basic rules to ease styling is often needed:
+Further, for the developer experience, basic rules to ease styling are often needed:
 
 1. Normalizing elements for similar approach to restyle (including `form` related elements).
 2. General basic CSS rules that provides more intuitive behaviors when styling.
 
-It should only be implemented if it can done so safely, not causing side effects, e.g., through inheritance. And, as mentioned, code that's too opinionated or styling that is often overwritten should be carefully considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
+It should only be implemented if it can be done so safely, not causing side effects (e.g., through inheritance). And, as mentioned, code that's too opinionated or styling that is often overwritten should be carefully considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
 
 *The up-to-date full breakdown of a resulting code draft follows.*
 
 
-## *Safer Default CSS*
+## *Default CSS*
 
-For the simplest of needs, browser default CSS has some flaws that needs correction: overflowing content should not be present out of the box and it should be prevented when styling; since the main content of the web is text, the simplest typographic needs should be upheld both for readability and further typographic improvements through style, and; simple inconsistencies disturbing usability and styling.
+For the simplest of needs, browser default CSS has flaws that needs correction:
+
+- overflowing content should not be present out of the box and it should be prevented when styling;
+- since the main content of the web is text, the simplest typographic needs should be upheld both for readability and further typographic improvements through style, and;
+- no default inconsistencies disturbing usability and styling.
 
 <Details>
 
@@ -69,7 +73,7 @@ For the simplest of needs, browser default CSS has some flaws that needs correct
 
 ---
 
-A default CSS has to start with perhaps **the** rule all elements need. More intuitively for human developers, it makes browsers include border-width and padding when calculating width and height. It's also very important for preventing horizontal overflow when applying styles.
+A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height.
 
 ```css
 *, ::before, ::after {
@@ -79,7 +83,7 @@ A default CSS has to start with perhaps **the** rule all elements need. More int
 
 <Details>
 
-<em slot="summary">Another way</em>
+<em slot="summary">Alternatives</em>
 
 ```css
 *, ::before, ::after {
@@ -97,11 +101,11 @@ The problem with this approach is how the inheritance of `box-sizing` by default
 
 ---
 
-For the root element there a two rules that prevents overflown text, and one normalizing rule, all three important for mobile devices:
+For the document root, there are three important fixes for narrow viewports:
 
-1. Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
-2. Allow the browser to automatically hyphenate words when text wraps if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports or for advanced content creators who knows `shy`.
-3. Break words if needed, and on soft wrap word break possibilities if possible, to not overflow horizontally and create a horizontal scrollbar. *As a side note, sanitize.css states it uses `word-break` in its readme, but actually  uses `overflow-wrap`.*
+1. To Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
+2. To allow browsers to auto hyphenate words when text wraps, if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
+3. To break words if needed, and on soft-wrap word-break possibilities if possible, to not overflow horizontally and create a horizontal scrollbar.
 
 ```css
 :root {
@@ -122,7 +126,7 @@ pre {
 ```
 
 <Details>
-<em slot="summary">Another way</em>
+<em slot="summary">Alternatives</em>
 
 Another way to implement this would be to not wrap the content, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
 
@@ -130,6 +134,7 @@ Another way to implement this would be to not wrap the content, but the CSS for 
 pre {
 	hyphens: none;
 	overflow: auto;
+	overflow-wrap: normal;
 	tab-size: 2;
 	white-space: pre;
 	word-break: normal;
@@ -145,8 +150,8 @@ pre {
 Media and form related elements are styled to be responsive, and could otherwise overflow.
 
 ```css
-audio, embed, iframe, object,
 input, select, textarea,
+audio, embed, iframe, object,
 img, svg, video, canvas {
 	max-width: 100%;
 }

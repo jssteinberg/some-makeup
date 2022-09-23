@@ -19,8 +19,8 @@ pre {
 	white-space: pre-wrap; }
 
 /* Make elements responsive. */
-audio, embed, iframe, object,
 input, select, textarea,
+audio, embed, iframe, object,
 img, svg, video, canvas {
 	max-width: 100%; }
 img, svg, video, canvas {
