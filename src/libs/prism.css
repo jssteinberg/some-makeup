@@ -39,7 +39,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 /* blue 2 */
 .token.punctuation,
 .token.attr-name,
-.token.property,
+/* .token.property, */
 .token.tag,
 .token.selector,
 .token.atrule {

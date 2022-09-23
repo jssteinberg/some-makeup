@@ -16,7 +16,7 @@
 
 <style>
 	.date-info {
-		text-align: end;
+		/* text-align: end; */
 		padding-inline: var(--view-inline);
 	}
 </style>
