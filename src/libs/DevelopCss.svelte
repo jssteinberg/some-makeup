@@ -1,5 +1,5 @@
 <svelte:head>
 	<style lang="scss">
-		@use "../develop.css";
+		@use "../enhance.css";
 	</style>
 </svelte:head>

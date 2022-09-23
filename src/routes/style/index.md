@@ -65,13 +65,13 @@ button {
 ```
 </Details>
 
-## *Develop CSS*---Another <cite>Default CSS</cite> Expansion
+## *Enhance CSS*---Another <cite>Default CSS</cite> Expansion
 
 ```css
-@import "makeup-style/src/develop.css";
+@import "makeup-style/src/enhance.css";
 ```
 
-*Develop CSS easier and more intuitively.* Simple rules for more convenient and intuitive styling. Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.
+*Enhance CSS for more intuitive and easier styling.* Simple rules for more convenient and intuitive styling. Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.
 
 ## 2. *Space CSS*
 

@@ -17,8 +17,8 @@
 			href: `/style/in-depth/deform`,
 		},
 		{
-			label: `Develop`,
-			href: `/style/in-depth/develop`,
+			label: `Enhance`,
+			href: `/style/in-depth/enhance`,
 		},
 		/* { */
 		/* 	label: `Space Flow CSS`, */
