@@ -30,7 +30,6 @@
 	)[0]?.subtitle;
 </script>
 
-<Nav {links} ariaLabel="In-depth Parts" />
 <article class="app-theme">
 	<header>
 		<h1>
@@ -44,6 +43,8 @@
 	</header>
 
 	<slot />
+
+	<Nav {links} ariaLabel="In-depth Parts" sticky="bottom" />
 </article>
 
 <style>
