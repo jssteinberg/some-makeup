@@ -4,16 +4,16 @@
 
 	const links = [
 		{
-			label: `Background`,
+			label: `Introduction`,
 			href: `/style/in-depth`,
 			// subtitle: `Intuitive & Safer CSS Defaults`,
 		},
 		{
-			label: `Default CSS`,
+			label: `Default`,
 			href: `/style/in-depth/default`,
 		},
 		{
-			label: `Deform CSS`,
+			label: `Deform`,
 			href: `/style/in-depth/deform`,
 		},
 		/* { */
@@ -30,7 +30,6 @@
 	)[0]?.subtitle;
 </script>
 
-<Nav {links} ariaLabel="In-depth Parts" />
 <article class="app-theme">
 	<header>
 		<h1>
@@ -44,6 +43,8 @@
 	</header>
 
 	<slot />
+
+	<Nav {links} ariaLabel="In-depth Parts" sticky="bottom" />
 </article>
 
 <style>
