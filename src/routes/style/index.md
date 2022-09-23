@@ -6,7 +6,7 @@ set: ["code"]
 
 # makeup-style
 
-So you want to makeup style? These minimal CSS files fixes and improves default browser CSS---for narrow viewports first---and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
+So you want to makeup style? These minimal CSS files corrects and improves default browser CSS---for narrow viewports first---and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
 
 ```
 npm install makeup-style
@@ -18,14 +18,25 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-Default CSS for safely creating HTML content and to makeup style. It fixes and improves the necessary browser default CSS for displaying content for all screen sizes, narrow viewports first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS. With that mindset, all elements does actually not need to be normalized. Because when normalization of a certain element matter, it is usually---and it's better---specifically styled for that context.
+Default CSS for safely creating HTML content and to makeup style. It corrects and improves the necessary browser default CSS for displaying content for all screen sizes, narrow viewports first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS. With that mindset, all elements does actually not need to be normalized. Because when normalization of a certain element matter, it is usually---and it's better---specifically styled for that context.
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with the file below, it can even normalize buttons and inputs, which the alternative normalization libraries ironically does not---which is the normalization that actually can be a hassle.
 
 <Details>
 <em slot="summary">Notes</em>
 
-`code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
+*All libraries should have honest notes on drawbacks and/or missing support:*
+
+- `code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
+- For browsers that don't support `overflow-wrap: anywhere`, and when a language has poor `hyphens: auto` support, words can overflow their container. This ruleset can be added to always break words for those browsers as well:
+
+	```css
+	@supports not (overflow-wrap: anywhere) {
+		:root {
+			word-break: break-word;
+		}
+	}
+	```
 
 </Details>
 

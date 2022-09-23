@@ -4,9 +4,9 @@
 
 	const links = [
 		{
-			label: `Default Deform CSS`,
+			label: `Default-Deform CSS`,
 			href: `/style/in-depth`,
-			subtitle: `Intuitive & Safer CSS Defaults`,
+			// subtitle: `Intuitive & Safer CSS Defaults`,
 		},
 		/* { */
 		/* 	label: `Space Flow CSS`, */
