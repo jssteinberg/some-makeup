@@ -1,12 +1,20 @@
 <script>
 	import { page } from "$app/stores";
-	/* import Nav from "$libs/Nav.svelte"; */
+	import Nav from "$libs/Nav.svelte";
 
 	const links = [
 		{
-			label: `Default-Deform CSS`,
+			label: `Background`,
 			href: `/style/in-depth`,
 			// subtitle: `Intuitive & Safer CSS Defaults`,
+		},
+		{
+			label: `Default CSS`,
+			href: `/style/in-depth/default`,
+		},
+		{
+			label: `Deform CSS`,
+			href: `/style/in-depth/deform`,
 		},
 		/* { */
 		/* 	label: `Space Flow CSS`, */
@@ -22,6 +30,7 @@
 	)[0]?.subtitle;
 </script>
 
+<Nav {links} ariaLabel="In-depth Parts" />
 <article class="app-theme">
 	<header>
 		<h1>
@@ -35,12 +44,6 @@
 	</header>
 
 	<slot />
-
-	<!--
-	<span class="sep" />
-
-	<Nav {links} ariaLabel="In-depth Parts" sticky="bottom" />
-	-->
 </article>
 
 <style>
@@ -60,9 +63,4 @@
 		display: block;
 		padding-block: calc(0.5 * var(--space, 1em));
 	}
-
-	/* .sep { */
-	/* 	display: block; */
-	/* 	height: var(--space, 1rem); */
-	/* } */
 </style>

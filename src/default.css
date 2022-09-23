@@ -54,8 +54,7 @@ b, strong {
 	display: none; }
 
 /* Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio (polyfill). */
-picture {
-	display: contents; }
+picture { display: contents; }
 
 /* CONSISTENT ALIGNMENTS */
 
