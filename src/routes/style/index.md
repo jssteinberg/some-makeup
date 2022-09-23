@@ -47,7 +47,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 @import "makeup-style/src/deform.css";
 ```
 
-*Deform CSS to code CSS for all elements easier and more intuitively.* Simple rules for more convenient and intuitive styling. Includes simple intuitive rules and inheritances for styling, reduce-motion rules for animations and transitions, and normalizing of all buttons and inputs across modern browsers for consistently styling buttons and inputs while still keeping focus styles for accessibility.
+*Deform CSS to code CSS for all elements easier.* Includes normalizing of all buttons and inputs across modern browsers for consistently styling buttons and inputs while still keeping focus styles for accessibility.
 
 <Details>
 <em slot="summary">Tips</em>
@@ -64,6 +64,14 @@ button {
 }
 ```
 </Details>
+
+## *Develop CSS*---Another <cite>Default CSS</cite> Expansion
+
+```css
+@import "makeup-style/src/develop.css";
+```
+
+*Develop CSS easier and more intuitively.* Simple rules for more convenient and intuitive styling. Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.
 
 ## 2. *Space CSS*
 

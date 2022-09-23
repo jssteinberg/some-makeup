@@ -16,6 +16,10 @@
 			label: `Deform`,
 			href: `/style/in-depth/deform`,
 		},
+		{
+			label: `Develop`,
+			href: `/style/in-depth/develop`,
+		},
 		/* { */
 		/* 	label: `Space Flow CSS`, */
 		/* 	href: `/style/in-depth/typography`, */
