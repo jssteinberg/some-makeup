@@ -4,16 +4,16 @@
 
 	const links = [
 		{
-			label: `Background`,
+			label: `Introduction`,
 			href: `/style/in-depth`,
 			// subtitle: `Intuitive & Safer CSS Defaults`,
 		},
 		{
-			label: `Default CSS`,
+			label: `Default`,
 			href: `/style/in-depth/default`,
 		},
 		{
-			label: `Deform CSS`,
+			label: `Deform`,
 			href: `/style/in-depth/deform`,
 		},
 		/* { */
