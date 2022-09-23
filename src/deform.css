@@ -1,27 +1,3 @@
-/* CONVENIENT/INTUITIVE STYLING */
-
-/* Background images are not repeated. */
-*, ::before, ::after {
-	background-repeat: no-repeat; }
-
-::before, ::after {
-	/* Inherit border-radius. */
-	border-radius: inherit;
-	/* Inherit text-decoration for `content`. */
-	text-decoration: inherit;
-	/* Inherit vertical alignment. */
-	vertical-align: inherit; }
-
-/* REDUCE MOTION */
-
-/* Remove animations and transitions when user prefers it. */
-@media (prefers-reduced-motion: reduce) {
-	*, ::before, ::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important; }}
-
 /* MORE CONSISTENT CROSS-BROWSER STYLING */
 
 /* Remove confusing body margin when doing styling. */

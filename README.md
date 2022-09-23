@@ -7,6 +7,7 @@ npm install makeup-style
 
 @import "makeup-style/src/default.css";
 @import "makeup-style/src/deform.css";
+@import "makeup-style/src/enhance.css";
 @import "makeup-style/src/space.css";
 @import "makeup-style/src/flow.css";
 ```
@@ -42,7 +43,8 @@ Nope:
 
 <summary>Rename?</summary>
 
-- (-) default.css, deform.css, (develop)?,  (even.css,  flow.css)  
+- ( ) default.css, deform.css, enhance.css,  (even.css,  flow.css)  
+- (-) default.css, deform.css, develop.css,  (even.css,  flow.css)  
 - ( ) correct.css, deform.css,  (even.css,  flow.css)  
 - ( ) cure.css,    deform.css,  
 - ( ) heal.css,    help.css,    reform.css, ...

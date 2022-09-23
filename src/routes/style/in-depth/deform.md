@@ -1,49 +1,10 @@
 ---
 title: Deform CSS
-description: "Deform CSS file that fixes and improves default browser CSS—for narrow viewports first—and provides convenient and intuitive CSS-defaults for styling in general."
+description: "deform.css normalizes styles for buttons and inputs across browsers."
 set: ["code"]
 ---
 
 Some rulesets are not always needed, but are still more than usual for more custom designs and when coding lots of CSS. In a way browser default styling needs to be deformed to be formed. These rulesets does deforming by normalizing needed elements and eases forming new style.
-
-### Convenient/Intuitive Styling
-
-Background images are not repeated.
-
-```css
-*, ::before, ::after {
-	background-repeat: no-repeat;
-}
-```
-
----
-
-1. Inherit border-radius.
-2. Inherit text-decoration for `content`.
-3. Inherit vertical alignment.
-
-```css
-::before, ::after {
-	border-radius: inherit;
-	text-decoration: inherit;
-	vertical-align: inherit;
-}
-```
-
-### Reduce Motion
-
-Remove animations and transitions when user prefers it.
-
-```css
-@media (prefers-reduced-motion: reduce) {
-	*, ::before, ::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
-}
-```
 
 ### More Consistent Cross-Browser Styling
 
