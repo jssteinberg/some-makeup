@@ -15,11 +15,11 @@ Some of theses does more that normalizing, they correct and improve browser defa
 
 Neither of the former are actively maintained at the moment (except for Sindre Sorhus’ modern-normalize). CSS rules that corrected/fixes default CSS quickly becomes obsolete with the speed CSS develops (and not all libraries have been explicit on which of their rules are polyfill---another point to improve).
 
-More importantly, how they corrects and improves browsers default styling can be further corrected and improved, not by more code, but by a slightly different *approach*:
-
-- Does all CSS need to be normalized in a low level library like normalize.css?
+More importantly, how they corrects and improves browsers default styling can be further corrected and improved, not by more code, but by a slightly different *approach*.
+Does all CSS need to be normalized in a low level library like normalize.css?
 The more rules, the more opinions. Opinionated code is something you want at a bare minimum in your default CSS. Also, the more style, the more is likely overwritten when sites and apps are styled.
-- Opportunities for improving the developer experience can be further seized.
+
+Opportunities for improving the developer experience should be expanded where possible, while avoiding bloat many projects will not need.
 
 <!--
 Can normalize.css' approach be rethought?
@@ -29,7 +29,7 @@ Some of the same problems must be solved, and an update for latest browser imple
 
 ## What Should be Corrected or Improved?
 
-This should be corrected:
+Browser default CSS tries to, and/or should, handle simple visuals for semantics and usability, and basic typographic flow like no overflow and consistent line-height. So to correct:
 
 1. Especially important for smaller viewports, displaying content and adding CSS should not cause overflowing the x-axis as far as possible.
 <!-- Can remember what I meant with this: - Expected simple functionality of HTML should be upheld as far as possible. -->
@@ -37,12 +37,12 @@ This should be corrected:
 3. Consistency between browsers for basic, modern semantic styling. If also 'outdated' elements can easily be included (like `<b>`), then include it.
 4. Consistent related basic style between elements.
 
-This can be further improved with basic rules to ease styling:
+Further, for the developer experience, basic rules to ease styling is often needed:
 
 1. Normalizing elements for similar approach to restyle (including `form` related elements).
 2. General basic CSS rules that provides more intuitive behaviors when styling.
 
-These points should only be corrected if they can done so safely, not causing side effects, e.g., through inheritance. And, as mentioned, code that's too opinionated or styling that is often overwritten should be considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
+It should only be implemented if it can done so safely, not causing side effects, e.g., through inheritance. And, as mentioned, code that's too opinionated or styling that is often overwritten should be carefully considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
 
 *The up-to-date full breakdown of a resulting code draft follows.*
 
@@ -325,6 +325,7 @@ select, summary {
 		margin-block-end: 0;
 	}
 
+	ol, ul,
 	li > p,
 	p + p {
 		margin-block-start: 0;
