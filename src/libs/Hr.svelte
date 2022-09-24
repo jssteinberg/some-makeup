@@ -4,6 +4,8 @@
 <style>
 	* {
 		--_content-width: var(--hr-width, var(--content-width, 100%));
+		--_base-size: max(var(--TOUCH-TARGET-SIZE) / 3, var(--space, 1em));
+		--_size: max(var(--TOUCH-TARGET-SIZE), 1.5 * var(--space, 1em));
 
 		/* Some rules are normalizing `<hr>`. */
 		background: transparent;
@@ -11,10 +13,10 @@
 		box-shadow: inset 0 0 0 1px var(--hr-fg);
 		color: inherit;
 		display: block;
-		width: calc(1.5 * var(--space, 1em));
-		height: calc(1.5 * var(--space, 1em));
+		width: var(--_size);
+		height: var(--_size);
 		margin: calc(2 * var(--space, 1em))
-			calc(var(--_content-width) * 0.5 - var(--space, 1em) * 0.5);
+			calc(var(--_content-width) * 0.5 - var(--_base-size) * 0.5);
 		transform: rotate(45deg);
 	}
 </style>
