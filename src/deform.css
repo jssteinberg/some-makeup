@@ -1,18 +1,12 @@
-/* DEFORM FOR CONSISTENT CROSS-BROWSER STYLING */
+/* DEFORM FOR EASIER STYLING */
 
-/* Remove confusing body margin when doing styling. */
-/* Remove the margin on form related elements (consistent). */
-body,
-button, input, select, textarea {
+/* Remove body margin. */
+body {
 	margin: 0; }
 
-/* Set `search` to textfield. */
+/* Have `search` style-behave as textfield for easier styling. */
 input[type="search" i] {
 	-webkit-appearance: textfield; }
-
-/* Remove search cancel button. */
-input[type="search" i]::-webkit-search-cancel-button {
-	-webkit-appearance: none; }
 
 ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
 	/* Fix inability to style buttons (Ios and Safari). */
@@ -21,5 +15,5 @@ input[type="search" i]::-webkit-search-cancel-button {
 ::file-selector-button, button, input, select, textarea {
 	/* Inherit `font-family` for consistency of all form related elements. */
 	font-family: inherit;
-	/* Inherit `line-height` no unintentional leading differences. */
+	/* No unintentional `line-height` differences for consistent typography. */
 	line-height: inherit; }

@@ -2,6 +2,7 @@
 	import DefaultCss from "/src/libs/DefaultCss.svelte";
 	import DeformCss from "/src/libs/DeformCss.svelte";
 	import DevelopCss from "/src/libs/DevelopCss.svelte";
+	import FormCss from "/src/libs/FormCss.svelte";
 	import SpaceCss from "/src/libs/SpaceCss.svelte";
 	import LineHeightCss from "/src/libs/FlowCss.svelte";
 	import { createEventDispatcher } from "svelte";
@@ -16,6 +17,7 @@
 		default: true,
 		deform: false,
 		enhance: false,
+		form: false,
 		space: false,
 		flow: false,
 	};
@@ -39,6 +41,7 @@
 {#if css.default} <DefaultCss /> {/if}
 {#if css.deform} <DeformCss /> {/if}
 {#if css.enhance} <DevelopCss /> {/if}
+{#if css.form} <FormCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.flow} <LineHeightCss /> {/if}
 
