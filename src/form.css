@@ -1,12 +1,23 @@
 /* FORM SIMPLER FORMS */
 
 fieldset {
-	all: unset;
-}
+	/* Remove border. */
+	border: none;
+	/* No inline margin, normal block margin. */
+	margin: 1em 0;
+	/* Remove padding. */
+	padding: 0; }
 
-/* Remove the margin on form related elements (Safari). */
-::file-selector-button, button, input, select, textarea {
+/* Intuitive the margins on form related elements (Safari). */
+select, textarea {
 	margin: 0; }
+[type="button" i], [type="reset" i], [type="submit" i], button {
+	margin-inline: 0; }
+/* ...keep `margin-inline-end` for upload button. */
+[type="checkbox" i], [type="radio" i],
+::file-selector-button {
+	margin-block: 0;
+	margin-inline-start: 0; }
 
 /* Remove search cancel button. */
 input[type="search"]::-webkit-search-cancel-button {

@@ -37,6 +37,8 @@
 <section>
 	<h2>Other Form Elements</h2>
 
+	<h3>Radio Buttons</h3>
+
 	<fieldset>
 		<legend>Choose your favorite monster</legend>
 
@@ -48,6 +50,20 @@
 
 		<input type="radio" id="mothman" name="monster" />
 		<label for="mothman">Mothman</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>Choose your monster's features:</legend>
+
+		<div>
+			<input type="checkbox" id="scales" name="scales" checked />
+			<label for="scales">Scales</label>
+		</div>
+
+		<div>
+			<input type="checkbox" id="horns" name="horns" />
+			<label for="horns">Horns</label>
+		</div>
 	</fieldset>
 </section>
 

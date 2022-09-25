@@ -8,19 +8,17 @@ Some rulesets are not always needed, but are still more than usual for more cust
 
 ### More Consistent Cross-Browser Styling
 
-1. Remove confusing body margin when doing styling.
-3. Remove the margin on form related elements (Safari).
+Remove confusing body margin when doing styling.
 
 ```css
-body,
-button, input, select, textarea {
+body {
 	margin: 0;
 }
 ```
 
 ---
 
-Set `search` to textfield.
+Regarding styling, have `search` input element behave as textfield for easier styling.
 
 ```css
 input[type="search" i] {
@@ -30,39 +28,23 @@ input[type="search" i] {
 
 ---
 
-Remove search cancel button.
+Fix inability to style buttons (Ios and Safari).
 
 ```css
-input[type="search"]::-webkit-search-cancel-button {
-	-webkit-appearance: none;
-}
-```
-
----
-
-1. Fix inability to style buttons (Ios and Safari).
-2. Cross-browser variable/`none` `border` .
-3. Cross-browser variable/`unset` `box-shadow`.
-4. Cross-browser variable/`inherit` `line-height`.
-
-```css
-button, ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i] {
+::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
 	-webkit-appearance: button;
-	border: none;
-	box-shadow: unset;
-	line-height: inherit;
 }
 ```
 
 ---
 
-1. Consistent, usable `border-radius`.
-2. Inherit font-family.
+1. Inherit `font-family` for consistency of all form related elements.
+2. No unintentional `line-height` differences for consistent typography.
 
 ```css
-::file-selector-button, button, input, textarea, select {
-	border-radius: .125em;
+::file-selector-button, button, input, select, textarea {
 	font-family: inherit;
+	line-height: inherit;
 }
 ```
 

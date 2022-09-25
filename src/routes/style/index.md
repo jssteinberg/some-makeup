@@ -20,7 +20,7 @@ npm install makeup-style
 
 Default CSS for safely creating HTML content and to makeup style. It corrects and improves the necessary browser default CSS for displaying content for all screen sizes, narrow viewports first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS. With that mindset, all elements does actually not need to be normalized. Because when normalization of a certain element matter, it is usually---and it's better---specifically styled for that context.
 
-This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar. Together with the file below, it can even normalize buttons and inputs, which the alternative normalization libraries ironically does not---which is the normalization that actually can be a hassle.
+This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar.
 
 <Details>
 <em slot="summary">Notes</em>
@@ -47,7 +47,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 @import "makeup-style/src/deform.css";
 ```
 
-*Deform CSS to code CSS for all elements easier.* Includes normalizing of all buttons and inputs across modern browsers for consistently styling buttons and inputs while still keeping focus styles for accessibility.
+*Deform CSS to code CSS for all elements easier.* Includes rules for buttons and inputs for more consistent styling across modern browsers, while still keeping focus styles for accessibility.
 
 <Details>
 <em slot="summary">Tips</em>
