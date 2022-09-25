@@ -1,0 +1,29 @@
+/* MORE CONSISTENT CROSS-BROWSER STYLING */
+
+/* Remove confusing body margin when doing styling. */
+/* Remove the margin on form related elements (Safari). */
+body,
+button, input, select, textarea {
+	margin: 0; }
+
+/* Set `search` to textfield. */
+input[type="search" i] {
+	-webkit-appearance: textfield; }
+
+/* Remove search cancel button. */
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none; }
+
+::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
+	/* Fix inability to style buttons (Ios and Safari). */
+	-webkit-appearance: button;
+	/* Remove border to not unintentionally affect size. */
+	border: none;
+	/* Remove shadow. */
+	box-shadow: none;
+	/* Inherit` `line-height`. */
+	line-height: inherit; }
+
+::file-selector-button, button, input, select, textarea {
+	/* Inherit font-family. */
+	font-family: inherit; }
