@@ -15,7 +15,7 @@
 		display: block;
 		width: var(--_size);
 		height: var(--_size);
-		margin: calc(2 * var(--space, 1em))
+		margin: calc(4 * var(--space, 1em))
 			calc(var(--_content-width) * 0.5 - var(--_base-size) * 0.5);
 		transform: rotate(45deg);
 	}

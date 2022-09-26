@@ -31,7 +31,11 @@ input[type="search" i] {
 Fix inability to style buttons (Ios and Safari).
 
 ```css
-::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
+::file-selector-button,
+[type="button" i],
+[type="reset" i],
+[type="submit" i],
+button {
 	-webkit-appearance: button;
 }
 ```
@@ -42,7 +46,11 @@ Fix inability to style buttons (Ios and Safari).
 2. No unintentional `line-height` differences for consistent typography.
 
 ```css
-::file-selector-button, button, input, select, textarea {
+::file-selector-button,
+button,
+input,
+select,
+textarea {
 	font-family: inherit;
 	line-height: inherit;
 }
