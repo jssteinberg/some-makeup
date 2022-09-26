@@ -1,6 +1,6 @@
 <script>
 	import MetaTags from "./MetaData.svelte";
-	import ContainCss from "./DefaultCss.svelte";
+	import DefaultCSS from "./DefaultCss.svelte";
 
 	export let title = "A knot";
 	export let metaTitle;
@@ -27,4 +27,4 @@
 
 <slot />
 
-<ContainCss />
+<DefaultCSS />

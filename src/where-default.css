@@ -1,5 +1,3 @@
-/* UNIVERSAL RULES FOR NARROW VIEWPORTS */
-
 :where(
 	*, ::before, ::after
 ) {
@@ -9,8 +7,6 @@
 	-webkit-text-size-adjust: 100%;
 	hyphens: auto;
 	overflow-wrap: anywhere; }
-
-/* FURTHER PREVENT OVERFLOW */
 
 :where(pre) {
 	white-space: pre-wrap; }
@@ -29,8 +25,6 @@
 :where(textarea) {
 	resize: vertical; }
 
-/* FIX/EXTEND FONT */
-
 :where(
 	code, kbd, samp, sub, sup
 ) {
@@ -47,16 +41,12 @@
 ) {
 	font-size: 1em; }
 
-/* DISPLAY BEHAVIORS */
-
 [hidden],
 :where(source) {
 	display: none; }
 
 :where(picture) {
 	display: contents; }
-
-/* CONSISTENT ALIGNMENTS */
 
 :where(
 	audio, embed, iframe, object,
@@ -67,9 +57,7 @@
 :where(
 	figure, hr
 ) {
-	margin-inline-start: 0; margin-inline-end: 0; }
-
-/* CONSISTENT CURSOR */
+	margin-inline: 0; }
 
 :where(
 	[aria-disabled="true" i], [disabled], [readonly]

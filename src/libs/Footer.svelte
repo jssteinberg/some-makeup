@@ -11,7 +11,7 @@
 		>
 			some.makeup</a
 		>
-		{new Date().getFullYear()}
+		2021-{new Date().getFullYear()}
 	</h2>
 
 	<ul class="nav">
@@ -37,7 +37,7 @@
 
 	<p>
 		This site does not store any of your data, does not track you and does not
-		enable other trackers.
+		use other trackers.
 	</p>
 
 	<p aria-hidden="true">
