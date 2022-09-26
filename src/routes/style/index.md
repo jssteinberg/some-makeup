@@ -41,13 +41,13 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 
 </Details>
 
-## *Enhance CSS*---A <cite>Default CSS</cite> Expansion
+## *Develop CSS*---A <cite>Default CSS</cite> Expansion
 
 ```css
-@import "makeup-style/src/enhance.css";
+@import "makeup-style/src/develop.css";
 ```
 
-*Enhance CSS for more intuitive and easier styling.* Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.
+*Develop CSS easier.* Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.
 
 ---
 

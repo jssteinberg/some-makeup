@@ -1,6 +1,6 @@
 ---
-title: Enhance CSS
-description: "enhance.css  provides convenient and intuitive CSS-defaults for styling in general."
+title: Develop CSS
+description: "develop.css provides convenient and intuitive CSS-defaults for styling in general."
 set: ["code"]
 ---
 

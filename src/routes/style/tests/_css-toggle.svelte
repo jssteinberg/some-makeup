@@ -14,7 +14,7 @@
 
 	let css = {
 		default: true,
-		enhance: false,
+		develop: false,
 		form: false,
 		space: false,
 		flow: false,
@@ -37,7 +37,7 @@
 </div>
 
 {#if css.default} <DefaultCss /> {/if}
-{#if css.enhance} <DevelopCss /> {/if}
+{#if css.develop} <DevelopCss /> {/if}
 {#if css.form} <FormCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
 {#if css.flow} <LineHeightCss /> {/if}
