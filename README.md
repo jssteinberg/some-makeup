@@ -2,11 +2,17 @@
 
 Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
 
-```
+```bash
 npm install makeup-style
+```
 
+```css
 @import "makeup-style/src/default.css";
 @import "makeup-style/src/develop.css";
+/* or using `:where` */
+@import "makeup-style/src/where-default.css";
+@import "makeup-style/src/where-develop.css";
+
 @import "makeup-style/src/space.css";
 @import "makeup-style/src/flow.css";
 ```
