@@ -50,6 +50,10 @@ Palette---[makeup darkness 1.](/darkness-1)
 		);
 	}
 
+	h1, h1 + p em {
+		text-transform: lowercase;
+	}
+
 	a {
 		display: block;
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);

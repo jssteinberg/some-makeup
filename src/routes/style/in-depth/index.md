@@ -42,7 +42,7 @@ Always corrected:
 Further, for the developer experience, some basic rules to ease styling are very often needed and repeated:
 
 1. General basic rules that provides more intuitive behaviors when styling.
-2. Normalizing elements for a consistent way to style them across browsers (this especially/mostly includes `form` related elements---which normalize.css ironically does not include).
+2. Ease styling elements consistently across browsers (this especially/mostly includes `form` related elements---which normalize.css ironically does not include).
 
 It should only be implemented if it can be done so safely, not causing side effects (e.g., through inheritance). And, as mentioned, code that's too opinionated or styling that is often overwritten should be carefully considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
 

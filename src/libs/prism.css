@@ -1,23 +1,22 @@
 /* PrismJS 1.27.0
-https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+javadoclike+jsdoc+json+jsx+tsx+typescript+typoscript */
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
  */
 
 .token.string,
-.token.attr-value,
-.token.punctuation {
+.token.attr-value
+{
 	color: var(--fg);
 }
 
 /* comment */
 .token.comment {
-	color: var(--comment-fg, purple);
+	color: var(--comment-fg);
 }
 
 /* black */
+.token.punctuation
+{
+	color: var(--black-2);
+}
 
 /* white */
 
@@ -37,7 +36,6 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 /* blue */
 
 /* blue 2 */
-.token.punctuation,
 .token.attr-name,
 /* .token.property, */
 .token.tag,

@@ -1,10 +1,8 @@
 ---
-title: Deform CSS
-description: "Deform CSS file that fixes and improves default browser CSS—for narrow viewports first—and provides convenient and intuitive CSS-defaults for styling in general."
+title: Develop CSS
+description: "develop.css provides convenient and intuitive CSS-defaults for styling in general."
 set: ["code"]
 ---
-
-Some rulesets are not always needed, but are still more than usual for more custom designs and when coding lots of CSS. In a way browser default styling needs to be deformed to be formed. These rulesets does deforming by normalizing needed elements and eases forming new style.
 
 ### Convenient/Intuitive Styling
 
@@ -44,67 +42,6 @@ Remove animations and transitions when user prefers it.
 	}
 }
 ```
-
-### More Consistent Cross-Browser Styling
-
-1. Remove confusing body margin when doing styling.
-3. Remove the margin on form related elements (Safari).
-
-```css
-body,
-button, input, select, textarea {
-	margin: 0;
-}
-```
-
----
-
-Set `search` to textfield.
-
-```css
-input[type="search" i] {
-	-webkit-appearance: textfield;
-}
-```
-
----
-
-Remove search cancel button.
-
-```css
-input[type="search"]::-webkit-search-cancel-button {
-	-webkit-appearance: none;
-}
-```
-
----
-
-1. Fix inability to style buttons (Ios and Safari).
-2. Cross-browser variable/`none` `border` .
-3. Cross-browser variable/`unset` `box-shadow`.
-4. Cross-browser variable/`inherit` `line-height`.
-
-```css
-button, ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i] {
-	-webkit-appearance: button;
-	border: none;
-	box-shadow: unset;
-	line-height: inherit;
-}
-```
-
----
-
-1. Consistent, usable `border-radius`.
-2. Inherit font-family.
-
-```css
-::file-selector-button, button, input, textarea, select {
-	border-radius: .125em;
-	font-family: inherit;
-}
-```
-
 
 <!--
 ### Notes

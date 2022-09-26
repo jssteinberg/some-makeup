@@ -112,6 +112,7 @@
 		margin: 0 var(--view-inline);
 
 		position: relative;
+		border-left: 1px solid;
 	}
 
 	.wrapper::after {
@@ -136,8 +137,8 @@
 
 	#element-heights::after {
 		content: "";
-		background: no-repeat top right/1px 100%
-			linear-gradient(transparent 25vh, var(--sep-color), transparent 75vh);
+		/* background: no-repeat top right/1px 100% */
+		/* 	linear-gradient(transparent 25vh, var(--sep-color), transparent 75vh); */
 		width: calc(var(--view-inline) - 1px);
 		position: fixed;
 		inset: 0;
