@@ -9,7 +9,7 @@ input[type="search" i] {
 	-webkit-appearance: textfield; }
 
 ::file-selector-button, [type="button" i], [type="reset" i], [type="submit" i], button {
-	/* Fix inability to style buttons (Ios and Safari). */
+	/* Fix inability to style buttons (Ios?). */
 	-webkit-appearance: button; }
 
 ::file-selector-button, button, input, select, textarea {

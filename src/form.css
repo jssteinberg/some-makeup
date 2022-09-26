@@ -1,5 +1,15 @@
 /* FORM SIMPLER FORMS */
 
+/* Have `search` style-behave as textfield for easier styling. */
+input[type="search" i] {
+	-webkit-appearance: textfield; }
+
+::file-selector-button, button, input, select, textarea {
+	/* Inherit `font-family` for consistency of all form related elements. */
+	font-family: inherit;
+	/* No unintentional `line-height` differences for consistent typography. */
+	line-height: inherit; }
+
 fieldset {
 	/* Remove border. */
 	border: none;
@@ -8,7 +18,7 @@ fieldset {
 	/* Remove padding. */
 	padding: 0; }
 
-/* Intuitive the margins on form related elements (Safari). */
+/* Intuitive DX margins on form related elements (Safari). */
 select, textarea {
 	margin: 0; }
 [type="button" i], [type="reset" i], [type="submit" i], button {

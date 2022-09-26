@@ -41,31 +41,7 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 
 </Details>
 
-## *Deform CSS*---A <cite>Default CSS</cite> Expansion
-
-```css
-@import "makeup-style/src/deform.css";
-```
-
-*Deform CSS for confusingly styled elements when coding CSS.* Removes `margin` for `body` and fixes inability to properly style and adds rulesets to keep basic typography consistent for buttons, inputs, select and textarea to avoid style out of place for edge cases. This file can be used for styling the form related elements as needed without resetting (`all: unset`), so focus styles can be kept.
-
-<Details>
-<em slot="summary">Tips</em>
-
-Selectors to target all HTML button elements:
-
-```css
-::file-selector-button,
-[type="button" i],
-[type="reset" i],
-[type="submit" i],
-button {
-	/* ... */
-}
-```
-</Details>
-
-## *Enhance CSS*---Another <cite>Default CSS</cite> Expansion
+## *Enhance CSS*---A <cite>Default CSS</cite> Expansion
 
 ```css
 @import "makeup-style/src/enhance.css";

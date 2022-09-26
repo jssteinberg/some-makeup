@@ -12,10 +12,10 @@
 			label: `Default`,
 			href: `/style/in-depth/default`,
 		},
-		{
-			label: `Deform`,
-			href: `/style/in-depth/deform`,
-		},
+		// {
+		// 	label: `Deform`,
+		// 	href: `/style/in-depth/deform`,
+		// },
 		{
 			label: `Enhance`,
 			href: `/style/in-depth/enhance`,
