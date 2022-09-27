@@ -226,7 +226,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 ---
 
-To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>` the`auto` value would become apparent when parent container has `display` `flex` or `grid`.
+To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>`, `margin-inline: auto` would become apparent when parent container displays `flex` or `grid`.
 
 ```css
 figure, hr {
