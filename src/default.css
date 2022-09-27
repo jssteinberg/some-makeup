@@ -36,7 +36,7 @@ img, svg, video, canvas {
 	/* Container width is `max-width`. */
 	max-width: 100%; }
 img, svg, video, canvas {
-	/* ...then auto adjust height to width for necessary elements. */
+	/* ...then auto calculate height for necessary elements. */
 	height: auto; }
 
 pre {

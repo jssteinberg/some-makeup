@@ -145,7 +145,7 @@ img, svg, video, canvas {
 }
 
 img, svg, video, canvas {
-	/* ...then auto adjust height to width for necessary elements. */
+	/* ...then auto calculate height for necessary elements. */
 	height: auto;
 }
 ```
