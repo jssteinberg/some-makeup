@@ -36,8 +36,8 @@
 	</ul>
 
 	<p>
-		This site does not store any of your data, does not track you and does not
-		use other trackers.
+		This site does not store any of your data, and does not track you or embed
+		other trackers.
 	</p>
 
 	<p aria-hidden="true">
