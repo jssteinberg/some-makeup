@@ -8,17 +8,16 @@ A lightweight default CSS that fixes and improves default browser CSS—for narr
 
 <Details>
 
-<em slot="summary">Side notes</em>
+<em slot="summary">Comparisons</em>
 
 - CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The styling presented here repairs it with a single `line-height` rule for the inline elements in question.
-- Margins or sizes for headings are not included. Default CSS is typographically descent, even if not always consistent, e.g., `<h1>` size. But headings are usually styled if they need certain margins and size which takes precedence over browser defaults.
+- Margins or sizes for headings are not included. Headings are styled when default browser style is not sufficient, and default browser style for headings is actually descent.
 - Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
 - `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
 - `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
-- Form elements are not normalized, but are normalized for styling in the “do” CSS.
 - Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
-- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
+- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers (for `:where()`, files "where-default.css" and "where-develop.css" are in package, but experimental).
 
 </Details>
 
