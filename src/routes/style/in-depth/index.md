@@ -27,6 +27,7 @@ Some of the same problems must be solved, and an update for latest browser imple
 (sanitize.css also expands into resetting style, like for [lists in `nav`](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L93-L96).)
 -->
 
+<!--
 ## The Needs
 
 Browser default CSS tries to, and/or should at a maximum, handle simple visuals for semantics and usability, and basic typographic flow like no overflow and consistent line-height. Of course, practically, there are more styling needed for a modern product, but this was never handled by browser default CSS and should no be included in a low level library like this.
@@ -34,7 +35,6 @@ Browser default CSS tries to, and/or should at a maximum, handle simple visuals 
 Always corrected:
 
 1. Especially important for smaller viewports, displaying content and adding CSS should not cause overflowing the x-axis as far as possible.
-<!-- Can remember what I meant with this: - Expected simple functionality of HTML should be upheld as far as possible. -->
 2. Inline elements affecting the height of lines, disrupting readability and typography.
 3. Consistency between browsers for basic, modern semantic styling. If also 'outdated' elements can easily be included (like `<b>`), then include it.
 4. Consistent related basic style between elements.
@@ -42,11 +42,11 @@ Always corrected:
 Further, for the developer experience, some basic rules to ease styling are very often needed and repeated:
 
 1. General basic rules that provides more intuitive behaviors when styling.
-2. Ease styling elements consistently across browsers (this especially/mostly includes `form` related elements---which normalize.css ironically does not include).
 
 It should only be implemented if it can be done so safely, not causing side effects (e.g., through inheritance). And, as mentioned, code that's too opinionated or styling that is often overwritten should be carefully considered. Also, when natural, CSS custom properties can be provided to make adjustments easier.
+-->
 
-*The up-to-date full breakdown of a resulting code draft follows, excluding any use of `:where()` or `@layer`.*
+<!-- *The up-to-date full breakdown of a resulting code draft follows, excluding any use of `:where()` or `@layer`.* -->
 
 <!--
 ### Notes

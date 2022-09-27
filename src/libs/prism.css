@@ -1,6 +1,7 @@
 /* PrismJS 1.27.0
  */
 
+.token.punctuation,
 .token.string,
 .token.attr-value
 {
@@ -13,10 +14,6 @@
 }
 
 /* black */
-.token.punctuation
-{
-	color: var(--black-2);
-}
 
 /* white */
 
@@ -37,7 +34,6 @@
 
 /* blue 2 */
 .token.attr-name,
-/* .token.property, */
 .token.tag,
 .token.selector,
 .token.atrule {

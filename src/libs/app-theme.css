@@ -61,11 +61,6 @@
 	font-style: italic;
 }
 
-@media (min-width: 1500px) {
-	:where(.app-theme) :is(h2, .h2) { --h2-line-span: 2; }
-	:where(.app-theme) :is(h3, .h3) { --h3-added-lead: .25; }
-}
-
 /* Link */
 
 :where(.app-theme-main-content) a {
@@ -103,8 +98,8 @@
 .app-theme {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
-	/* --space: calc(var(--font-size) * (1 + var(--added-lead, .6))); */
-	--space: var(--font-size);
+	--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
+	/* --space: var(--font-size); */
 }
 
 @media (min-width: 1500px) {

@@ -9,7 +9,7 @@
 			// subtitle: `Intuitive & Safer CSS Defaults`,
 		},
 		{
-			label: `Default`,
+			label: `Default CSS`,
 			href: `/style/in-depth/default`,
 		},
 		// {
@@ -17,7 +17,7 @@
 		// 	href: `/style/in-depth/deform`,
 		// },
 		{
-			label: `Develop`,
+			label: `Develop CSS`,
 			href: `/style/in-depth/develop`,
 		},
 		/* { */

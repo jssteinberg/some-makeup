@@ -1,10 +1,10 @@
 ---
 title: Default CSS
-description: "Default CSS file that fixes and improves default browser CSS—for narrow viewports first—and provides convenient and intuitive CSS-defaults for styling in general."
+description: "default.css fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document and for modern conveniences for styling."
 set: ["code"]
 ---
 
-The corrections and improvements for browser default CSS are split into two. Some styling should always be corrected and improved---the true default CSS corrections and improvements.
+A lightweight default CSS that fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document, adds established conveniences for styling and extends basic usability.
 
 <Details>
 
