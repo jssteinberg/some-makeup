@@ -67,62 +67,6 @@ For the document root, there are three important fixes for narrow viewports:
 
 ---
 
-To prevent `<pre>` from overflowing its content is styled to wrap.
-
-```css
-pre {
-	white-space: pre-wrap;
-}
-```
-
-<Details>
-<em slot="summary">Alternatives</em>
-
-Another way to implement this would be to not wrap the content, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
-
-```css
-pre {
-	hyphens: none;
-	overflow: auto;
-	overflow-wrap: normal;
-	tab-size: 2;
-	white-space: pre;
-	word-break: normal;
-	word-spacing: normal;
-	word-wrap: normal;
-}
-```
-
-</Details>
-
----
-
-Media and form related elements are styled to be responsive, and could otherwise overflow.
-
-```css
-input, select, textarea,
-audio, embed, iframe, object,
-img, svg, video, canvas {
-	max-width: 100%;
-}
-
-img, svg, video, canvas {
-	height: auto;
-}
-```
-
----
-
-For accessibility, textareas only resize vertically by default. By default a user could by accident make a `<textarea>` overflow the viewport horizontally. Differences in motor skills could make it particularly unpredictable for some users.
-
-```css
-textarea {
-	resize: vertical;
-}
-```
-
----
-
 Inline elements with different `font-family` or `vertical-align` usually bear special meanings and stylistically they can affect lines' heights.
 
 1. The meaning of some elements' content could be confusing if it gets `hyphens` automatically in the wrong places.
@@ -191,6 +135,63 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 
 ---
 
+Media and form related elements are styled to be responsive, and could otherwise overflow.
+
+```css
+input, select, textarea,
+audio, embed, iframe, object,
+img, svg, video, canvas {
+	max-width: 100%;
+}
+
+img, svg, video, canvas {
+	/* ...then auto adjust height to width for some elements. */
+	height: auto;
+}
+```
+
+---
+
+To prevent `<pre>` from overflowing its content is styled to wrap.
+
+```css
+pre {
+	white-space: pre-wrap;
+}
+```
+
+<Details>
+<em slot="summary">Alternatives</em>
+
+Another way to implement this would be to not wrap the content, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
+
+```css
+pre {
+	hyphens: none;
+	overflow: auto;
+	overflow-wrap: normal;
+	tab-size: 2;
+	white-space: pre;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+}
+```
+
+</Details>
+
+---
+
+For accessibility, textareas only resize vertically by default. By default a user could by accident make a `<textarea>` overflow the viewport horizontally. Differences in motor skills could make it particularly unpredictable for some users.
+
+```css
+textarea {
+	resize: vertical;
+}
+```
+
+---
+
 No display:
 
 1. For `hidden` elements---the rule maintains the behaviour with higher specificity than browser CSS.
@@ -233,6 +234,8 @@ figure, hr {
 }
 ```
 
+---
+
 For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`.
 
 ```css
@@ -240,6 +243,8 @@ For (usually interactive) elements currently not interactive `cursor` will consi
 	cursor: not-allowed;
 }
 ```
+
+---
 
 Ending with the most opinionated ruleset: all clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
@@ -286,5 +291,22 @@ select, summary {
 
 	p + p {
 		text-indent: var(--space);
+	}
+
+	/* Hr as ol */
+
+	:global(body) {
+		counter-reset: ruleset;
+	}
+
+	hr {
+		all: unset;
+	}
+
+	hr::before {
+		counter-increment: ruleset;
+		content: "Set #" counter(ruleset);
+		font-family: var(--mono-font, monospace);
+		transform: rotate(-45deg);
 	}
 </style>

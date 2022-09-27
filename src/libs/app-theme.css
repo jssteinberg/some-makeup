@@ -191,6 +191,7 @@
 	word-break: normal;
 	word-wrap: normal;
 
-	background: no-repeat bottom left / var(--content-width) 1px 
-		linear-gradient(var(--sep-color), var(--sep-color));
+	/* background: no-repeat bottom left / var(--content-width) 1px  */
+	/* 	linear-gradient(var(--sep-color), var(--sep-color)); */
+	border-right: 1px solid var(--sep-color);
 }

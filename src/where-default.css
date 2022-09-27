@@ -1,40 +1,19 @@
 :where(
 	*, ::before, ::after
 ) {
+	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box;
 }
 
 :where(
 	:root
 ) {
+	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%;
+	/* Auto hyphens when words should and can break. */
 	hyphens: auto;
+	/* Word breaks in narrow containers---uses soft wrap opportunities if present. */
 	overflow-wrap: anywhere;
-}
-
-:where(
-	pre
-) {
-	white-space: pre-wrap;
-}
-
-:where(
-	audio, embed, iframe, object,
-	input, select, textarea,
-	img, svg, video, canvas
-) {
-	max-width: 100%;
-}
-:where(
-	img, svg, video, canvas
-) {
-	height: auto;
-}
-
-:where(
-	textarea
-) {
-	resize: vertical;
 }
 
 :where(
@@ -54,6 +33,31 @@
 	::file-selector-button, button, input, select, textarea
 ) {
 	font-size: 1em;
+}
+
+:where(
+	audio, embed, iframe, object,
+	input, select, textarea,
+	img, svg, video, canvas
+) {
+	max-width: 100%;
+}
+:where(
+	img, svg, video, canvas
+) {
+	height: auto;
+}
+
+:where(
+	pre
+) {
+	white-space: pre-wrap;
+}
+
+:where(
+	textarea
+) {
+	resize: vertical;
 }
 
 [hidden],
