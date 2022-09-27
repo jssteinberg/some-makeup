@@ -1,24 +1,23 @@
 ---
 title: Default CSS
-description: "Default CSS file that fixes and improves default browser CSS—for narrow viewports first—and provides convenient and intuitive CSS-defaults for styling in general."
+description: "default.css fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document and for modern conveniences for styling."
 set: ["code"]
 ---
 
-The corrections and improvements for browser default CSS are split into two. Some styling should always be corrected and improved---the true default CSS corrections and improvements.
+A lightweight default CSS that fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document, adds established conveniences for styling and extends basic usability.
 
 <Details>
 
-<em slot="summary">Side notes</em>
+<em slot="summary">Comparisons</em>
 
 - CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The styling presented here repairs it with a single `line-height` rule for the inline elements in question.
-- Margins or sizes for headings are not included. Default CSS is typographically descent, even if not always consistent, e.g., `<h1>` size. But headings are usually styled if they need certain margins and size which takes precedence over browser defaults.
+- Margins or sizes for headings are not included. Headings are styled when default browser style is not sufficient, and default browser style for headings is actually descent.
 - Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
 - `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
 - `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
-- Form elements are not normalized, but are normalized for styling in the “do” CSS.
 - Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
-- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers.
+- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers (for `:where()`, files "where-default.css" and "where-develop.css" are in package, but experimental).
 
 </Details>
 
@@ -63,62 +62,6 @@ For the document root, there are three important fixes for narrow viewports:
 	-webkit-text-size-adjust: 100%;
 	hyphens: auto;
 	overflow-wrap: anywhere;
-}
-```
-
----
-
-To prevent `<pre>` from overflowing its content is styled to wrap.
-
-```css
-pre {
-	white-space: pre-wrap;
-}
-```
-
-<Details>
-<em slot="summary">Alternatives</em>
-
-Another way to implement this would be to not wrap the content, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
-
-```css
-pre {
-	hyphens: none;
-	overflow: auto;
-	overflow-wrap: normal;
-	tab-size: 2;
-	white-space: pre;
-	word-break: normal;
-	word-spacing: normal;
-	word-wrap: normal;
-}
-```
-
-</Details>
-
----
-
-Media and form related elements are styled to be responsive, and could otherwise overflow.
-
-```css
-input, select, textarea,
-audio, embed, iframe, object,
-img, svg, video, canvas {
-	max-width: 100%;
-}
-
-img, svg, video, canvas {
-	height: auto;
-}
-```
-
----
-
-For accessibility, textareas only resize vertically by default. By default a user could by accident make a `<textarea>` overflow the viewport horizontally. Differences in motor skills could make it particularly unpredictable for some users.
-
-```css
-textarea {
-	resize: vertical;
 }
 ```
 
@@ -192,6 +135,63 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 
 ---
 
+Media and form related elements are styled to be responsive, and could otherwise overflow.
+
+```css
+input, select, textarea,
+audio, embed, iframe, object,
+img, svg, video, canvas {
+	max-width: 100%;
+}
+
+img, svg, video, canvas {
+	/* ...then auto adjust height to width for necessary elements. */
+	height: auto;
+}
+```
+
+---
+
+To prevent `<pre>` from overflowing its content is styled to wrap.
+
+```css
+pre {
+	white-space: pre-wrap;
+}
+```
+
+<Details>
+<em slot="summary">Alternatives</em>
+
+Another way to implement this would be to not wrap the content, but the CSS for not wrapping `pre` content must handle several exceptions and becomes a lot more verbose.
+
+```css
+pre {
+	hyphens: none;
+	overflow: auto;
+	overflow-wrap: normal;
+	tab-size: 2;
+	white-space: pre;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+}
+```
+
+</Details>
+
+---
+
+For accessibility, textareas only resize vertically by default. By default a user could by accident make a `<textarea>` overflow the viewport horizontally. Differences in motor skills could make it particularly unpredictable for some users.
+
+```css
+textarea {
+	resize: vertical;
+}
+```
+
+---
+
 No display:
 
 1. For `hidden` elements---the rule maintains the behaviour with higher specificity than browser CSS.
@@ -226,13 +226,15 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 ---
 
-To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>` the`auto` value would become apparent when parent container has `display` `flex` or `grid`.
+To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>`, `margin-inline: auto` would become apparent when parent container displays `flex` or `grid`.
 
 ```css
 figure, hr {
 	margin-inline: 0;
 }
 ```
+
+---
 
 For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`.
 
@@ -241,6 +243,8 @@ For (usually interactive) elements currently not interactive `cursor` will consi
 	cursor: not-allowed;
 }
 ```
+
+---
 
 Ending with the most opinionated ruleset: all clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
@@ -287,5 +291,22 @@ select, summary {
 
 	p + p {
 		text-indent: var(--space);
+	}
+
+	/* Hr as ol */
+
+	:global(body) {
+		counter-reset: ruleset;
+	}
+
+	hr {
+		all: unset;
+	}
+
+	hr::before {
+		counter-increment: ruleset;
+		content: "Set #" counter(ruleset);
+		font-family: var(--mono-font, monospace);
+		transform: rotate(-45deg);
 	}
 </style>

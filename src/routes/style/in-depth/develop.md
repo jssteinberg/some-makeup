@@ -1,8 +1,10 @@
 ---
 title: Develop CSS
-description: "develop.css provides convenient and intuitive CSS-defaults for styling in general."
+description: "develop.css defines additional CSS rulesets for more convenient and intuitive styling."
 set: ["code"]
 ---
+
+Develop CSS with additional CSS rulesets for more convenient and intuitive styling.
 
 ### Convenient/Intuitive Styling
 

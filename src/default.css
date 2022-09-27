@@ -1,7 +1,7 @@
-/* UNIVERSAL RULES & PREVENT OVERFLOW */
+/* UNIVERSAL RULES */
 
-/* Border-box so size includes border and padding, and border doesn't hide text */
 *, ::before, ::after {
+	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box; }
 
 :root {
@@ -12,30 +12,12 @@
 	/* Word breaks in narrow containers---uses soft wrap opportunities if present. */
 	overflow-wrap: anywhere; }
 
-/* FURTHER PREVENT OVERFLOW */
+/* FIX/EXTEND ELEMENT FONT/TEXT */
 
-/* Wrap pre-formatted text by default. */
-pre {
-	white-space: pre-wrap; }
-
-/* Make elements responsive. */
-input, select, textarea,
-audio, embed, iframe, object,
-img, svg, video, canvas {
-	max-width: 100%; }
-img, svg, video, canvas {
-	height: auto; }
-
-/* Only resize vertically (a11y and prevent overflow). */
-textarea {
-	resize: vertical; }
-
-/* FIX/EXTEND FONT */
-
-/* No auto hyphens where a hyphen could mess up text meaning. */
-/* Fix inline elements that can affect line height (some when bigger font-size), but maintain some line-height. */
 code, kbd, samp, sub, sup {
+	/* No auto hyphens where a hyphen could mess up text meaning. */
 	hyphens: manual;
+	/* Fix inline elements that can affect line height (some when bigger font-size), but maintain some line-height. */
 	line-height: .625; }
 
 /* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
@@ -46,34 +28,55 @@ b, strong {
 ::file-selector-button, button, input, select, textarea {
 	font-size: 1em; }
 
+/* MAKE ELEMENTS RESPONSIVE */
+
+input, select, textarea,
+audio, embed, iframe, object,
+img, svg, video, canvas {
+	/* Container width is `max-width`. */
+	max-width: 100%; }
+img, svg, video, canvas {
+	/* ...then auto adjust height to width for necessary elements. */
+	height: auto; }
+
+pre {
+	/* Wrap pre-formatted text by default. */
+	white-space: pre-wrap; }
+
+textarea {
+	/* Only resize vertically (a11y and prevent overflow). */
+	resize: vertical; }
+
 /* DISPLAY BEHAVIORS */
 
-/* `[hidden]` maintain behaviour when overriding `display` values. */
-/* `source` has nothing to display and should not display (polyfill). */
-[hidden], source {
+[hidden],
+source {
+	/* `hidden` elements better maintain behaviour when `display` values are defined. */
+	/* `source` has nothing to display and should not display (polyfill). */
 	display: none; }
 
-/* Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio (polyfill). */
-picture { display: contents; }
+picture {
+	/* Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio (polyfill). */
+	display: contents; }
 
 /* CONSISTENT ALIGNMENTS */
 
-/* Remove layout disrupting space below. */
 audio, embed, iframe, object,
 img, svg, video, canvas {
+	/* Remove layout disrupting space below. */
 	vertical-align: middle; }
 
-/* Intuitive inline margins---horizontal align with adjacent. */
 figure, hr {
+	/* Intuitive inline margins---horizontal align with adjacent. */
 	margin-inline-start: 0; margin-inline-end: 0; }
 
 /* CONSISTENT CURSOR */
 
-/* Consistent cursor for disabled elements */
 [aria-disabled="true" i], [disabled], [readonly] {
+	/* Consistent cursor for disabled elements */
 	cursor: not-allowed; }
 
-/* Consistent cursor for clickable elements. */
 ::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,
 select, summary {
+	/* Consistent cursor for clickable elements. */
 	cursor: pointer; }
