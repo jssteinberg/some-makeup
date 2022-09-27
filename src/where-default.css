@@ -19,6 +19,7 @@
 :where(
 	code, kbd, samp, sub, sup
 ) {
+	/* No auto hyphens where a hyphen could mess up text meaning. */
 	hyphens: manual;
 	line-height: .625;
 }
@@ -36,8 +37,8 @@
 }
 
 :where(
-	audio, embed, iframe, object,
 	input, select, textarea,
+	audio, embed, iframe, object,
 	img, svg, video, canvas
 ) {
 	max-width: 100%;
