@@ -67,22 +67,10 @@
 
 		{ h: "68", s: sat, l: liBg, name: "yellow_bg" },
 
-		{ h: "97.5", s: sat * 1.5, l: li, name: "green 1.5" },
-		{ h: "37.5", s: sat * 1.5, l: li, name: "yellow 1.5" },
-		{ h: "187.3", s: sat * 1.5, l: li, name: "cyan 1.5" },
-
-		{ h: "217.5", s: sat * 2, l: li2, name: "blue 1.75" },
-		{ h: priHue, s: sat * 2, l: li2, name: "magenta 2" },
-
-		{ h: "97.5", s: sat * 2, l: li, name: "green 2" },
-		{ h: "37.5", s: sat * 2, l: li, name: "yellow 2" },
-		{ h: "187.3", s: sat * 2, l: li, name: "cyan 2" },
-
-		{ h: "105.7", s: sat, l: li2, name: "green" },
-		{ h: "68", s: sat, l: li2, name: "yellow" },
-		{ h: "217.5", s: sat, l: li2, name: "blue" },
-		{ h: priHue, s: sat, l: li2, name: "magenta" },
-		{ h: "187.5", s: sat, l: li2, name: "cyan" },
+		{ h: "68", s: sat * 1.75, l: li, name: "yellow_id" },
+		{ h: "187.3", s: sat * 1.75, l: li, name: "cyan_id" },
+		{ h: "37.5", s: sat * 1.75, l: li, name: "orange_id" },
+		{ h: "97.5", s: sat * 1.75, l: li, name: "green_id" },
 	];
 </script>
 
