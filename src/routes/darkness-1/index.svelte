@@ -69,8 +69,9 @@
 
 		{ h: "68", s: sat * 1.75, l: li, name: "yellow_id" },
 		{ h: "187.3", s: sat * 1.75, l: li, name: "cyan_id" },
-		{ h: "37.5", s: sat * 1.75, l: li, name: "orange_id" },
 		{ h: "97.5", s: sat * 1.75, l: li, name: "green_id" },
+		{ h: "217.5", s: sat * 1.75, l: li, name: "blue_id" },
+		{ h: "37.5", s: sat * 1.75, l: li, name: "orange_id" },
 	];
 </script>
 
