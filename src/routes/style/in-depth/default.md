@@ -305,7 +305,7 @@ select, summary {
 
 	hr::before {
 		counter-increment: ruleset;
-		content: "Set #" counter(ruleset);
+		content: "#" counter(ruleset);
 		font-family: var(--mono-font, monospace);
 		transform: rotate(-45deg);
 	}
