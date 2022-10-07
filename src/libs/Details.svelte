@@ -70,6 +70,7 @@
 
 	:where(details[open]) summary {
 		box-shadow: inset 1px 1px;
+		display: block;
 	}
 
 	details[open] summary::before {
