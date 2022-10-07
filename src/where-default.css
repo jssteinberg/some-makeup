@@ -44,10 +44,23 @@
 }
 
 :where(
-	abbr
+	abbr, hr
 ) {
-	/* Reset since no universal functionality. */
-	text-decoration: none; }
+	/* Reset `abbr` since no universal functionality. */
+	/* Reset `hr` so it's ready for style (below). */
+	all: unset; }
+
+:where(
+	hr
+) {
+	/* Re-set `block`. */
+	display: block;
+	/* Use a proper height; enable variables. */
+	height: var(--hr-space, 1em);
+	/* Non flow disrupting horizontal rule. */
+	background: center/100% var(--hr-height, 1px) no-repeat linear-gradient(
+		var(--hr-color, currentColor), var(--hr-color, currentColor)
+	); }
 
 /* MAKE ELEMENTS RESPONSIVE */
 
@@ -109,7 +122,7 @@
 }
 
 :where(
-	figure, hr
+	figure
 ) {
 	/* Intuitive inline margins---horizontal align with adjacent. */
 	margin-inline: 0;

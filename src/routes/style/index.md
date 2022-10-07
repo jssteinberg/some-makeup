@@ -22,6 +22,22 @@ npm install makeup-style
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar.
 
+**CSS variables:**
+
+- `--hr-color` for declaring color of `<hr>`. Falls back to `currentColor`.
+- `--hr-height` for declaring the border height of `<hr>`. Falls back to `1px`.
+- `--hr-space` for declaring the height of `<hr>`. Falls back to `1em`.
+
+**Side effects:**
+
+- `<hr>` can easily be applied a gradient:
+
+	```css
+	hr {
+		background-image: linear-gradient(90deg, lightblue, blue);
+	}
+	```
+
 <Details>
 <em slot="summary">Notes</em>
 
@@ -100,13 +116,11 @@ CSS rulesets for consistent spacing between the needed block-level elements.
 
 CSS with rulesets declaring headings' line-height to be computed to container declaring `--added-lead`, and with rulesets for other elements to flow.
 
-**Variables:**
+**CSS variables:**
 
 `--added-lead` for declaring line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
 
-`--hr-color` for declaring color of `<hr>`. Falls back to `currentColor`.
-
-`--hr-height` for declaring height of `<hr>`. Falls back to `var(--space, 1rem)`.
+`--hr-space` fall back is updated to `var(--space, 1rem)`.
 
 **Heading variables:**
 
@@ -139,16 +153,6 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 </p>
 
 {/each}
-
-**Side effects:**
-
-- Easy gradient `<hr>`:
-
-	```css
-	hr {
-		background-image: linear-gradient(90deg,lightblue,blue);
-	}
-	```
 
 ## 3. Additional Class Files
 

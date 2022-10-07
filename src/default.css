@@ -28,9 +28,20 @@ b, strong {
 	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 	font-size: 1em; }
 
-abbr {
-	/* Reset since no universal functionality. */
-	text-decoration: none; }
+abbr, hr {
+	/* Reset `abbr` since no universal functionality. */
+	/* Reset `hr` so it's ready for style (below). */
+	all: unset; }
+
+hr {
+	/* Re-set `block`. */
+	display: block;
+	/* Use a proper height; enable variables. */
+	height: var(--hr-space, 1em);
+	/* Non flow disrupting horizontal rule. */
+	background: center/100% var(--hr-height, 1px) no-repeat linear-gradient(
+		var(--hr-color, currentColor), var(--hr-color, currentColor)
+	); }
 
 /* MAKE ELEMENTS RESPONSIVE */
 
@@ -70,7 +81,7 @@ img, svg, video, canvas {
 	/* Remove layout disrupting space below. */
 	vertical-align: middle; }
 
-figure, hr {
+figure {
 	/* Intuitive inline margins---horizontal align with adjacent. */
 	margin-inline-start: 0; margin-inline-end: 0; }
 

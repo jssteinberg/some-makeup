@@ -135,11 +135,22 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 
 ---
 
-Underline is removed for `<abbr>` (not with `[title]` to avoid specificity) attribute to not fool anyone to thinking its functionality works universally (e.g., it must be extended for touch screens). When its functionality is not extended, the context of the element must give away its meaning.
+Reset/restyle:
+
+- Underline is removed for `<abbr>` (not with `[title]` to avoid specificity) attribute to not fool anyone to thinking its functionality works universally (e.g., it must be extended for touch screens). When its functionality is not extended, the context of the element must give away its meaning.
+- `<hr>` is by browser default hard to style consistently across browsers and has a disrupting appearance. Style it as simple 1px border, but without disrupting height and with variables for customization.
 
 ```css
-abbr {
-	text-decoration: none;
+abbr, hr {
+	all: unset;
+}
+
+hr {
+	display: block;
+	height: var(--hr-space, 1em);
+	background: center/100% var(--hr-height, 1px) no-repeat linear-gradient(
+		var(--hr-color, currentColor), var(--hr-color, currentColor)
+	);
 }
 ```
 
@@ -236,10 +247,10 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 ---
 
-To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>`, `margin-inline: auto` would become apparent when parent container displays `flex` or `grid`.
+To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`.
 
 ```css
-figure, hr {
+figure {
 	margin-inline: 0;
 }
 ```
