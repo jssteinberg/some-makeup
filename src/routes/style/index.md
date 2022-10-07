@@ -28,8 +28,11 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 *All libraries should have honest notes on drawbacks and/or missing support:*
 
 - Margin for `<body>` is not removed. So you usually also want `body { margin: 0; }`.
+
 - To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
+
 - `code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
+
 - For browsers that don't support `overflow-wrap: anywhere`, and when a language has poor `hyphens: auto` support, words can overflow their container. This ruleset can be added to always break words for those browsers as well:
 
 	```css

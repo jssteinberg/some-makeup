@@ -18,7 +18,7 @@
 	overflow-wrap: anywhere;
 }
 
-/* FIX/EXTEND ELEMENT FONT/TEXT */
+/* FIX/EXTEND FONT/TEXT */
 
 :where(
 	code, kbd, samp, sub, sup
@@ -42,6 +42,12 @@
 	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 	font-size: 1em;
 }
+
+:where(
+	abbr
+) {
+	/* Reset since no universal functionality. */
+	text-decoration: none; }
 
 /* MAKE ELEMENTS RESPONSIVE */
 

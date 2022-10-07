@@ -12,7 +12,7 @@
 	/* Word breaks in narrow containers---uses soft wrap opportunities if present. */
 	overflow-wrap: anywhere; }
 
-/* FIX/EXTEND ELEMENT FONT/TEXT */
+/* FIX/EXTEND FONT/TEXT */
 
 code, kbd, samp, sub, sup {
 	/* No auto hyphens where a hyphen could mess up text meaning. */
@@ -27,6 +27,10 @@ b, strong {
 ::file-selector-button, button, input, select, textarea {
 	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 	font-size: 1em; }
+
+abbr {
+	/* Reset since no universal functionality. */
+	text-decoration: none; }
 
 /* MAKE ELEMENTS RESPONSIVE */
 

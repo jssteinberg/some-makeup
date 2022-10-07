@@ -12,7 +12,7 @@ A lightweight default CSS that fixes and improves default browser CSS—for narr
 
 - CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The styling presented here repairs it with a single `line-height` rule for the inline elements in question.
 - Margins or sizes for headings are not included. Headings are styled when default browser style is not sufficient, and default browser style for headings is actually descent.
-- Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
+- `hr` is not fully normalized. By default browsers styles it decently and semantically. If it's part of a theme, it's usually fully styled anyway.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
 - `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
 - `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
@@ -135,6 +135,16 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 
 ---
 
+Underline is removed for `<abbr>` (not with `[title]` to avoid specificity) attribute to not fool anyone to thinking its functionality works universally (e.g., it must be extended for touch screens). When its functionality is not extended, the context of the element must give away its meaning.
+
+```css
+abbr {
+	text-decoration: none;
+}
+```
+
+---
+
 Media and form related elements are styled to be responsive, and could otherwise overflow.
 
 ```css
@@ -246,7 +256,7 @@ For (usually interactive) elements currently not interactive `cursor` will consi
 
 ---
 
-Ending with the most opinionated ruleset: all clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
+All clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
 ```css
 ::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,

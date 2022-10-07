@@ -19,7 +19,7 @@
 				your <abbr title="HyperText Markup Language">HTML</abbr>.
 			</p>
 			<p>
-				An <abbr>abbr</abbr> with no <code>title</code> attribute.
+				An <abbr>ABBR</abbr> with no <code>title</code> attribute.
 			</p>
 		</section>
 
