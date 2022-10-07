@@ -18,7 +18,9 @@
 				You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style
 				your <abbr title="HyperText Markup Language">HTML</abbr>.
 			</p>
-			<p><code>abbr</code> with no <code>title</code> attribute.</p>
+			<p>
+				An <abbr>abbr</abbr> with no <code>title</code> attribute.
+			</p>
 		</section>
 
 		<section class="inline-element-example">
