@@ -1,4 +1,4 @@
-/* UNIVERSAL RULES */
+/* INTUITIVE UNIVERSAL RULES */
 
 :where(
 	*, ::before, ::after
@@ -32,7 +32,7 @@
 :where(
 	b, strong
 ) {
-	/* Semantic `bolder` font weight for `strong` text (Chrome/Safari). */
+	/* Normalize semantic `bolder` font weight for `strong` text (Chrome/Safari). */
 	font-weight: bolder;
 }
 
@@ -57,10 +57,11 @@
 	display: block;
 	/* Set a proper spacing. */
 	height: 1em;
-	/* Non-flow disrupting horizontal rule. */
+	/* Non-flow disrupting horizontal rule (TODO: position-inline when exists). */
 	background: center left/100% 1px no-repeat linear-gradient(
 		currentColor, currentColor
-	); }
+	);
+}
 
 /* MAKE ELEMENTS RESPONSIVE */
 
