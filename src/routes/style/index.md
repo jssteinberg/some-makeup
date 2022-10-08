@@ -18,7 +18,26 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-*Default CSS for safely creating HTML content and to makeup style.* It corrects and improves the necessary browser default CSS for displaying content for all screen sizes, narrow viewports first. That includes universally using the intuitive `border-box`, otherwise preventing overflowing text and media, preventing inline elements from affecting line-heights, and polyfill and improvements for elements and usability. All rules are included with the mindset of this being default CSS.
+*Default CSS for safely creating
+HTML content and to makeup style.*
+It corrects and improves the minimal
+necessary browser default CSS
+for all screen sizes, narrow
+viewports first. That includes
+universally using the intuitive
+`border-box`, preventing
+overflowing text and media,
+preventing inline elements from
+affecting line-heights, and
+polyfill and improvements for
+elements and usability. All rules
+are included with the mindset of
+this being default CSS
+by embracing certain CSS defaults
+like heading styles, and
+avoiding rules that are
+overridden when more specific style
+is applied.
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar.
 
