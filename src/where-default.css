@@ -1,3 +1,5 @@
+/* UNIVERSAL RULES */
+
 :where(
 	*, ::before, ::after
 ) {
@@ -16,79 +18,122 @@
 	overflow-wrap: anywhere;
 }
 
+/* FIX/EXTEND FONT/TEXT */
+
 :where(
 	code, kbd, samp, sub, sup
 ) {
+	/* No auto hyphens where a hyphen could mess up text meaning. */
 	hyphens: manual;
+	/* Fix inline elements that can affect line height (some when bigger font-size), but maintain some line-height. */
 	line-height: .625;
 }
 
 :where(
 	b, strong
 ) {
+	/* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
 	font-weight: bolder;
 }
 
 :where(
 	::file-selector-button, button, input, select, textarea
 ) {
+	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 	font-size: 1em;
 }
 
 :where(
-	audio, embed, iframe, object,
+	abbr, hr
+) {
+	/* Reset `abbr` since no universal functionality. */
+	/* Reset `hr` so it's ready for style (below). */
+	all: unset; }
+
+:where(
+	hr
+) {
+	/* Re-set `block`. */
+	display: block;
+	/* Set a proper spacing. */
+	height: 1em;
+	/* Non-flow disrupting horizontal rule. */
+	background: center left/100% 1px no-repeat linear-gradient(
+		currentColor, currentColor
+	); }
+
+/* MAKE ELEMENTS RESPONSIVE */
+
+:where(
 	input, select, textarea,
+	audio, embed, iframe, object,
 	img, svg, video, canvas
 ) {
+	/* Container width is `max-width`. */
 	max-width: 100%;
 }
 :where(
 	img, svg, video, canvas
 ) {
+	/* ...then auto calculate height for necessary elements. */
 	height: auto;
 }
 
 :where(
 	pre
 ) {
+	/* Wrap pre-formatted text by default. */
 	white-space: pre-wrap;
 }
 
 :where(
 	textarea
 ) {
+	/* Only resize vertically (a11y and prevent overflow). */
 	resize: vertical;
 }
+
+/* DISPLAY BEHAVIORS */
 
 [hidden],
 :where(
 	source
 ) {
+	/* `hidden` elements better maintain behaviour when `display` values are defined. */
+	/* `source` has nothing to display and should not display (polyfill). */
 	display: none;
 }
 
 :where(
 	picture
 ) {
+	/* Remove wrapping `picture`---maintaining content. Can interfere with layout and aspect-ratio (polyfill). */
 	display: contents;
 }
+
+/* CONSISTENT ALIGNMENTS */
 
 :where(
 	audio, embed, iframe, object,
 	img, svg, video, canvas
 ) {
+	/* Remove layout disrupting space below. */
 	vertical-align: middle;
 }
 
 :where(
-	figure, hr
+	figure
 ) {
+	/* Intuitive inline margins---horizontal align with adjacent. */
 	margin-inline: 0;
 }
+
+/* CONSISTENT CURSOR */
 
 :where(
 	[aria-disabled="true" i], [disabled], [readonly]
 ) {
+	/* Consistent cursor for disabled elements */
 	cursor: not-allowed;
 }
 
@@ -96,5 +141,6 @@
 	::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,
 	select, summary
 ) {
+	/* Consistent cursor for clickable elements. */
 	cursor: pointer;
 }

@@ -4,7 +4,7 @@ description: "default.css fixes and improves default browser CSS—for narrow vi
 set: ["code"]
 ---
 
-A lightweight default CSS that fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document, adds established conveniences for styling and extends basic usability.
+A lightweight default CSS that fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document, adds established conveniences for styling---and some new---and extends basic usability.
 
 <Details>
 
@@ -12,7 +12,7 @@ A lightweight default CSS that fixes and improves default browser CSS—for narr
 
 - CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The styling presented here repairs it with a single `line-height` rule for the inline elements in question.
 - Margins or sizes for headings are not included. Headings are styled when default browser style is not sufficient, and default browser style for headings is actually descent.
-- Elements like `abbr` and `hr` are not normalized. By default browsers styles them decently and semantically. If they’re part of a theme they are usually more restyled as well.
+- `hr` is not fully normalized. By default browsers styles it decently and semantically. If it's part of a theme, it's usually fully styled anyway.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
 - `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
 - `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
@@ -135,6 +135,27 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 
 ---
 
+Reset/restyle:
+
+- Underline is removed for `<abbr>` (not with `[title]` to avoid specificity) attribute to not fool anyone to thinking its functionality works universally (e.g., it must be extended for touch screens). When its functionality is not extended, the context of the element must give away its meaning.
+- `<hr>` is by browser default hard to style consistently across browsers and has a disrupting appearance. This styling is a minimal `1px` border, but typographically nice and its extendable.
+
+```css
+abbr, hr {
+	all: unset;
+}
+
+hr {
+	display: block;
+	height: 1em;
+	background: center left/100% 1px no-repeat linear-gradient(
+		currentColor, currentColor
+	);
+}
+```
+
+---
+
 Media and form related elements are styled to be responsive, and could otherwise overflow.
 
 ```css
@@ -145,7 +166,7 @@ img, svg, video, canvas {
 }
 
 img, svg, video, canvas {
-	/* ...then auto adjust height to width for necessary elements. */
+	/* ...then auto calculate height for necessary elements. */
 	height: auto;
 }
 ```
@@ -219,17 +240,18 @@ picture {
 This ruleset removes a block-end space for these elements that (can when `display` is changed for some of these) disrupt layouts.
 
 ```css
-img, svg, video, canvas, audio, iframe, embed, object {
+audio, embed, iframe, object,
+img, svg, video, canvas {
 	vertical-align: middle;
 }
 ```
 
 ---
 
-To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`. For `<hr>`, `margin-inline: auto` would become apparent when parent container displays `flex` or `grid`.
+To make elements align horizontally with other elements, `margin-inline` is removed. For these elements it would otherwise default to `auto`.
 
 ```css
-figure, hr {
+figure {
 	margin-inline: 0;
 }
 ```
@@ -239,18 +261,26 @@ figure, hr {
 For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`.
 
 ```css
-[aria-disabled="true" i], [disabled], [readonly] {
+[aria-disabled="true" i],
+[disabled],
+[readonly] {
 	cursor: not-allowed;
 }
 ```
 
 ---
 
-Ending with the most opinionated ruleset: all clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
+All clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
 ```css
-::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,
-select, summary {
+::file-selector-button,
+[role="button" i],
+[type="button" i],
+[type="reset" i],
+[type="submit" i],
+button,
+select,
+summary {
 	cursor: pointer;
 }
 ```
@@ -291,22 +321,5 @@ select, summary {
 
 	p + p {
 		text-indent: var(--space);
-	}
-
-	/* Hr as ol */
-
-	:global(body) {
-		counter-reset: ruleset;
-	}
-
-	hr {
-		all: unset;
-	}
-
-	hr::before {
-		counter-increment: ruleset;
-		content: "Set #" counter(ruleset);
-		font-family: var(--mono-font, monospace);
-		transform: rotate(-45deg);
 	}
 </style>

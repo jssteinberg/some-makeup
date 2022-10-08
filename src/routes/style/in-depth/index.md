@@ -16,8 +16,8 @@ Some of theses does more that normalizing, they correct and improve browser defa
 Neither of the former are actively maintained at the moment (except for Sindre Sorhus’ modern-normalize). CSS rules that corrected/fixes default CSS quickly becomes obsolete with the speed CSS develops (and not all libraries have been explicit on which of their rules are polyfill---another point to improve).
 
 More importantly, how they corrects and improves browsers default styling can be further corrected and improved, not by more code, but by a slightly different *approach*.
-Does all CSS need to be normalized in a low level library like normalize.css?
-The more rules, the more opinions. Opinionated code is something you want at a bare minimum in your default CSS. Also, the more style, the more is likely overwritten when sites and apps are styled.
+Do all properties need to be normalized in a low level library?
+The more style rules, the more is likely overwritten when sites and apps are styled.
 
 Opportunities for improving the developer experience should be expanded where possible, while avoiding bloat many projects will not need.
 

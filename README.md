@@ -1,6 +1,6 @@
 # makeup-style
 
-Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides intuitive CSS-defaults for styling in general and typographic style.
+Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
 
 ```bash
 npm install makeup-style
@@ -9,7 +9,7 @@ npm install makeup-style
 ```css
 @import "makeup-style/src/default.css";
 @import "makeup-style/src/develop.css";
-/* or using `:where` */
+/* Alternatively with `:where()` */
 @import "makeup-style/src/where-default.css";
 @import "makeup-style/src/where-develop.css";
 
@@ -23,17 +23,7 @@ npm install makeup-style
 
 ## Plans
 
-Plan v1:
-
-- [v] Consider adding to default.css (seems like only applies if words can't be hyphenated):
-
-	```css
-	overflow-wrap: anywhere;
-	```
-
-	- Fallback to `overflow-wrap: break-word`?
-
-- Check support for `…-block`/`…-inline`. If good, then use.
+*This repo is a mess. A slow fixup is in the works. If you somehow stumbled over this library and would like some speed up, e.g., so you can contribute, please create an issue.*
 
 Plan v2:
 
@@ -48,9 +38,12 @@ Nope:
 
 <summary>Rename?</summary>
 
-- (-) default.css, develop.css,  (even.css,  flow.css)  
-- ( ) default.css, dx.css,  (even.css,  flow.css)  
-- ( ) default.css, enhance.css,  (even.css,  flow.css)  
+- ( ) default.css, development.css, (spacing.css, typographic.css) (For style some?)
+- (-) default.css, develop.css, (space.css, typographic.css)  
+- ( ) default.css, dx.css,      (space.css, typographic-style.css)  
+- ( ) default.css, develop.css, (even.css,  flow.css)  
+- ( ) default.css, dx.css,      (even.css,  flow.css)  
+- ( ) default.css, enhance.css, (even.css,  flow.css)  
 - ( ) correct.css,  (even.css,  flow.css)  
 - ( ) cure.css,     
 - ( ) heal.css,    help.css,    reform.css, ...

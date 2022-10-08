@@ -29,8 +29,8 @@
 			href: "/style/tests/usability",
 		},
 		{
-			label: "Convenience",
-			href: "/style/tests/convenience",
+			label: "Other",
+			href: "/style/tests/other",
 		},
 	];
 
@@ -43,7 +43,7 @@
 
 	const updateTest = () => {
 		if (typeof document !== "undefined")
-			els = document.body.querySelectorAll("#tests :is(p,h2,li)");
+			els = document.body.querySelectorAll("#tests :is(p, h2, li, hr)");
 	};
 
 	onMount(() => {

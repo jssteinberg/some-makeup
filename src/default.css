@@ -12,7 +12,7 @@
 	/* Word breaks in narrow containers---uses soft wrap opportunities if present. */
 	overflow-wrap: anywhere; }
 
-/* FIX/EXTEND ELEMENT FONT/TEXT */
+/* FIX/EXTEND FONT/TEXT */
 
 code, kbd, samp, sub, sup {
 	/* No auto hyphens where a hyphen could mess up text meaning. */
@@ -20,13 +20,28 @@ code, kbd, samp, sub, sup {
 	/* Fix inline elements that can affect line height (some when bigger font-size), but maintain some line-height. */
 	line-height: .625; }
 
-/* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
 b, strong {
+	/* Semantic `bolder` font weight for `strong` text (Chrome/Edge/Safari). */
 	font-weight: bolder; }
 
-/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 ::file-selector-button, button, input, select, textarea {
+	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 	font-size: 1em; }
+
+abbr, hr {
+	/* Reset `abbr` since no universal functionality. */
+	/* Reset `hr` so it's ready for style (below). */
+	all: unset; }
+
+hr {
+	/* Re-set `block`. */
+	display: block;
+	/* Set a proper spacing. */
+	height: 1em;
+	/* Non-flow disrupting horizontal rule. */
+	background: center left/100% 1px no-repeat linear-gradient(
+		currentColor, currentColor
+	); }
 
 /* MAKE ELEMENTS RESPONSIVE */
 
@@ -36,7 +51,7 @@ img, svg, video, canvas {
 	/* Container width is `max-width`. */
 	max-width: 100%; }
 img, svg, video, canvas {
-	/* ...then auto adjust height to width for necessary elements. */
+	/* ...then auto calculate height for necessary elements. */
 	height: auto; }
 
 pre {
@@ -66,7 +81,7 @@ img, svg, video, canvas {
 	/* Remove layout disrupting space below. */
 	vertical-align: middle; }
 
-figure, hr {
+figure {
 	/* Intuitive inline margins---horizontal align with adjacent. */
 	margin-inline-start: 0; margin-inline-end: 0; }
 

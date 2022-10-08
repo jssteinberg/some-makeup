@@ -22,6 +22,7 @@
 	const sat = 42;
 	const li = 55;
 	const li2 = 72.5;
+	const liBg = 30;
 
 	const colors = [
 		{ h: priHue, s: "17.8", l: "8", name: "bg" }, // magenta desaturated
@@ -55,16 +56,22 @@
 
 		// ---
 
-		{ h: priHue, s: sat, l: "30", name: "black_2" }, // magenta darker
+		{ h: priHue, s: sat, l: liBg, name: "black_2" }, // magenta darker
 		{ h: priHue, s: sat, l: "3", name: "black_bg" }, // magenta darker
 		{ h: priHue, s: "17.8", l: "91.5", name: "fg_alt" }, // magenta desaturated
 
 		{ h: "277.5", s: sat, l: li, name: "violet" }, // magenta analogous
 		{ h: "277.5", s: sat, l: li2, name: "violet_bright" },
-		{ h: "277.5", s: sat, l: li2, name: "selection_background" },
-		{ h: "217.5", s: sat, l: "30", name: "blue_bg" },
+		{ h: "277.5", s: sat, l: liBg, name: "selection_background" },
+		{ h: "217.5", s: sat, l: liBg, name: "blue_bg" },
 
-		{ h: "68", s: sat, l: "30", name: "yellow_bg" },
+		{ h: "68", s: sat, l: liBg, name: "yellow_bg" },
+
+		{ h: "68", s: sat * 1.75, l: li, name: "yellow_id" },
+		{ h: "187.3", s: sat * 1.75, l: li, name: "cyan_id" },
+		{ h: "97.5", s: sat * 1.75, l: li, name: "green_id" },
+		{ h: "217.5", s: sat * 1.75, l: li, name: "blue_id" },
+		{ h: "37.5", s: sat * 1.75, l: li, name: "orange_id" },
 	];
 </script>
 

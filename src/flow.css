@@ -7,15 +7,8 @@ blockquote, p {
 }
 
 hr {
-	/* No border, it disrupts vertical rhythm. */
-	border: none;
-	/* Inherit color (Firefox) */
-	color: inherit;
-	/* Non flow disrupting horizontal rules. */
-	background: no-repeat center/100% 1px
-		linear-gradient(var(--hr-color, currentColor), var(--hr-color, currentColor));
-	/* Use variables for height. */
-	height: var(--hr-height, var(--space, 1rem));
+	/* Update space to variable. */
+	height: var(--hr-space, var(--space, 1rem));
 }
 
 h1, .h1 {
