@@ -23,12 +23,12 @@ npm install makeup-style
 
 ## Plans
 
-*This repo is a mess. A slow fixup is in the works. If you somehow stumbled over this library and would like some speed up, e.g., so you can contribute, please create an issue.*
+*This repo is a mess. A fix-up is slowly in the works. If you somehow stumbled over this library and would like it sped up, e.g., for contributions, please create an issue/request.*
 
 Plan v2:
 
 - Support variable font, e.g., for `b, strong`.
-- Wrap stuff in `:where()` or use `@layer`.
+- [-] Wrap stuff in `:where()` or use `@layer`. *`:where()` is available in alt. files.*
 
 Nope:
 
