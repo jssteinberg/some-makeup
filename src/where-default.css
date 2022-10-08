@@ -55,11 +55,11 @@
 ) {
 	/* Re-set `block`. */
 	display: block;
-	/* Use a proper height; enable variables. */
-	height: var(--hr-space, 1em);
-	/* Non flow disrupting horizontal rule. */
-	background: center/100% var(--hr-height, 1px) no-repeat linear-gradient(
-		var(--hr-color, currentColor), var(--hr-color, currentColor)
+	/* Set a proper spacing. */
+	height: 1em;
+	/* Non-flow disrupting horizontal rule. */
+	background: center left/100% 1px no-repeat linear-gradient(
+		currentColor, currentColor
 	); }
 
 /* MAKE ELEMENTS RESPONSIVE */

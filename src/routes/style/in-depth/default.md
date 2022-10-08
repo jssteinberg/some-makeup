@@ -138,7 +138,7 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 Reset/restyle:
 
 - Underline is removed for `<abbr>` (not with `[title]` to avoid specificity) attribute to not fool anyone to thinking its functionality works universally (e.g., it must be extended for touch screens). When its functionality is not extended, the context of the element must give away its meaning.
-- `<hr>` is by browser default hard to style consistently across browsers and has a disrupting appearance. Style it as simple 1px border, but without disrupting height and with variables for customization.
+- `<hr>` is by browser default hard to style consistently across browsers and has a disrupting appearance. This styling is a minimal `1px` border, but typographically nice and its extendable.
 
 ```css
 abbr, hr {
@@ -147,9 +147,9 @@ abbr, hr {
 
 hr {
 	display: block;
-	height: var(--hr-space, 1em);
-	background: center/100% var(--hr-height, 1px) no-repeat linear-gradient(
-		var(--hr-color, currentColor), var(--hr-color, currentColor)
+	height: 1em;
+	background: center left/100% 1px no-repeat linear-gradient(
+		currentColor, currentColor
 	);
 }
 ```

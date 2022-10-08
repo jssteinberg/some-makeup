@@ -22,34 +22,16 @@ npm install makeup-style
 
 This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc] and similar.
 
-**CSS variables:**
-
-- `--hr-color` for declaring color of `<hr>`. Falls back to `currentColor`.
-- `--hr-height` for declaring the border height of `<hr>`. Falls back to `1px`.
-- `--hr-space` for declaring the height of `<hr>`. Falls back to `1em`.
-
-**Side effects:**
-
-- `<hr>` can easily be applied a gradient:
-
-	```css
-	hr {
-		background-image: linear-gradient(90deg, lightblue, blue);
-	}
-	```
-
 <Details>
 <em slot="summary">Notes</em>
 
 *All libraries should have honest notes on drawbacks and/or missing support:*
 
-- Margin for `<body>` is not removed. So you usually also want `body { margin: 0; }`.
+1. `code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
 
-- To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
+2. To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
 
-- `code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
-
-- For browsers that don't support `overflow-wrap: anywhere`, and when a language has poor `hyphens: auto` support, words can overflow their container. This ruleset can be added to always break words for those browsers as well:
+3. For browsers that don't support `overflow-wrap: anywhere`, and when a language has poor `hyphens: auto` support, words can overflow their container. This ruleset can be added to always break words for those browsers as well:
 
 	```css
 	@supports not (overflow-wrap: anywhere) {
@@ -58,6 +40,28 @@ This file is an alternative to [normalize.css][nc], [modern-normalize][mn], [CSS
 		}
 	}
 	```
+
+4. Margin for `<body>` is not removed. So you usually also want `body { margin: 0; }`.
+
+</Details>
+
+<Details>
+<em slot="summary">Tips</em>
+
+`<hr>` 'border' uses `height` and `background` for a nicer border. This makes it easy to adjust:
+
+```css
+hr {
+	/* Gradient border */
+	background-image: linear-gradient(90deg, red, blue);
+	/* Change size */
+	background-size: 5em 2px;
+	/* Change position */
+	background-position: left center;
+	/* Change spacing */
+	height: 2em;
+}
+```
 
 </Details>
 

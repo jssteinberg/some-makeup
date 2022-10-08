@@ -7,7 +7,7 @@ blockquote, p {
 }
 
 hr {
-	/* Update variable fallback. */
+	/* Update space to variable. */
 	height: var(--hr-space, var(--space, 1rem));
 }
 
