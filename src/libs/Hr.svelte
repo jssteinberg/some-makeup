@@ -1,17 +1,15 @@
-<!-- <Hr --hr-width="var(--content-width)" /> -->
+<!-- Example
+ <Hr --hr-width="var(--content-width)" /> -->
 <hr />
 
 <style>
-	* {
+	hr {
 		--_content-width: var(--hr-width, var(--content-width, 100%));
 		--_base-size: max(var(--TOUCH-TARGET-SIZE) / 3, var(--space, 1em));
 		--_size: max(var(--TOUCH-TARGET-SIZE), 1.5 * var(--space, 1em));
 
-		/* Some rules are normalizing `<hr>`. */
-		background: transparent;
-		border: none;
+		all: unset;
 		box-shadow: inset 0 0 0 1px var(--hr-fg);
-		color: inherit;
 		display: block;
 		width: var(--_size);
 		height: var(--_size);
