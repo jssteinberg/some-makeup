@@ -4,7 +4,7 @@ description: "default.css fixes and improves default browser CSS—for narrow vi
 set: ["code"]
 ---
 
-A lightweight default CSS that fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document, adds established conveniences for styling and extends basic usability.
+A lightweight default CSS that fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document, adds established conveniences for styling---and some new---and extends basic usability.
 
 <Details>
 
@@ -240,7 +240,8 @@ picture {
 This ruleset removes a block-end space for these elements that (can when `display` is changed for some of these) disrupt layouts.
 
 ```css
-img, svg, video, canvas, audio, iframe, embed, object {
+audio, embed, iframe, object,
+img, svg, video, canvas {
 	vertical-align: middle;
 }
 ```
@@ -260,7 +261,9 @@ figure {
 For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`.
 
 ```css
-[aria-disabled="true" i], [disabled], [readonly] {
+[aria-disabled="true" i],
+[disabled],
+[readonly] {
 	cursor: not-allowed;
 }
 ```
@@ -270,8 +273,14 @@ For (usually interactive) elements currently not interactive `cursor` will consi
 All clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
 ```css
-::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,
-select, summary {
+::file-selector-button,
+[role="button" i],
+[type="button" i],
+[type="reset" i],
+[type="submit" i],
+button,
+select,
+summary {
 	cursor: pointer;
 }
 ```
@@ -312,22 +321,5 @@ select, summary {
 
 	p + p {
 		text-indent: var(--space);
-	}
-
-	/* Hr as ol */
-
-	:global(body) {
-		counter-reset: ruleset;
-	}
-
-	hr {
-		all: unset;
-	}
-
-	hr::before {
-		counter-increment: ruleset;
-		content: "#" counter(ruleset);
-		font-family: var(--mono-font, monospace);
-		transform: rotate(-45deg);
 	}
 </style>

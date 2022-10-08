@@ -32,19 +32,19 @@
     "svelte-preprocess": "^4.10.7",
     "vite": "^3.0.0"
   },
-  "description": "Correct and improve default browser CSS (excluding IE), for narrow viewports first. Provides intuitive default CSS for styling and typographic style.",
-  "main": "contain.css",
+  "description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
+  "main": "default.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jssteinberg/some-makeup.git"
   },
   "keywords": [
-    "normalize",
-    "typography",
     "css",
     "remedy",
+    "normalize",
     "intuitive",
-    "default"
+    "default",
+    "typography"
   ],
   "author": "Johan Sebergsen Steinberg",
   "license": "ISC",

@@ -124,7 +124,7 @@ CSS with rulesets declaring headings' line-height to be computed to container de
 
 `--added-lead` for declaring line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
 
-`--hr-space` fall back is updated to `var(--space, 1rem)`.
+`--hr-space` for declaring the height of `<hr>`. Falls back to `var(--space, 1rem)`.
 
 **Heading variables:**
 
