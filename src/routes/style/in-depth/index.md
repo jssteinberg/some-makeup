@@ -15,9 +15,10 @@ Neither of the former are actively
 maintained at the moment (except
 for Sindre Sorhus’
 modern-normalize). CSS rules that
-corrected/fixes default CSS quickly
+fixes default CSS quickly
 becomes obsolete with the speed
-the CSS language is updated (and
+browsers implements CSS language
+features (and
 not all libraries have been
 explicit on which of their rules
 are polyfill---another point to
@@ -32,11 +33,12 @@ by
 more code, but by fixing the 
 problem in a minimal way---sometimes
 using newer properties---so elements
-works and can be consistently styled.
+work and can be consistently styled.
 
 Opportunities for improving the
 developer experience should be
-embraced where possible and simple.
+embraced where possible and simple
+to do so.
 
 <!--
 Can normalize.css' approach be rethought?
