@@ -6,20 +6,39 @@ set: ["code"]
 
 Coding CSS a decade ago, a CSS-reset was normally used, and an utter annoyance. Especially for those new to web development. Then [normalize.css][nc] became popular, thank god, and elements would more or less keep their intended default styles, just be somewhat styled to be similar across browsers. By default HTML elements made visually semantic sense again.
 
-## Correct and Improve Default CSS
-
 By browser default, an HTML element's default style does actually show the semantic meaning of that element. Yes that style is simple by default, but links display as links, lists as lists, and so on. As opposed to a CSS reset, Normalize.css kept the semantic visuals and only *normalized* default styling so they looked similar between browsers. Most agree on that being a good thing, so many that there are quite a lot of projects in the same spirit as normalize.css: [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], and probably others.
-Some of theses does more that normalizing, they correct and improve browser default CSS in ways developers expects.
+Some of these does more that normalizing, they correct and improve browser default CSS in ways developers expects.
 
 ## Why Correct and Improve Default CSS Again?
 
-Neither of the former are actively maintained at the moment (except for Sindre Sorhus’ modern-normalize). CSS rules that corrected/fixes default CSS quickly becomes obsolete with the speed CSS develops (and not all libraries have been explicit on which of their rules are polyfill---another point to improve).
+Neither of the former are actively
+maintained at the moment (except
+for Sindre Sorhus’
+modern-normalize). CSS rules that
+fixes default CSS quickly
+becomes obsolete with the speed
+browsers implements CSS language
+features (and
+not all libraries have been
+explicit on which of their rules
+are polyfill---another point to
+improve).
 
-More importantly, how they corrects and improves browsers default styling can be further corrected and improved, not by more code, but by a slightly different *approach*.
-Do all properties need to be normalized in a low level library?
-The more style rules, the more is likely overwritten when sites and apps are styled.
+More importantly, how they
+corrects and improves browser
+default styling can be further
+corrected and improved, not
+necessarily
+by
+more code, but by fixing the 
+problem in a minimal way---sometimes
+using newer properties---so elements
+work and can be consistently styled.
 
-Opportunities for improving the developer experience should be expanded where possible, while avoiding bloat many projects will not need.
+Opportunities for improving the
+developer experience should be
+embraced where possible and simple
+to do so.
 
 <!--
 Can normalize.css' approach be rethought?

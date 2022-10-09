@@ -138,7 +138,6 @@
 
 .app-theme-main-content hr {
 	--_content-width: var(--hr-width, var(--content-width, 100%));
-	--_base-size: max(var(--TOUCH-TARGET-SIZE) / 3, var(--space, 1em));
 	--_size: max(var(--TOUCH-TARGET-SIZE), 1.5 * var(--space, 1em));
 
 	background: transparent;
@@ -147,7 +146,7 @@
 	width: var(--_size);
 	height: var(--_size);
 	margin: calc(4 * var(--space, 1em))
-		calc(var(--_content-width) * 0.5 - var(--_base-size) * 0.5);
+		calc(var(--_content-width) * 0.5 - var(--_size) * 0.5);
 }
 
 .app-theme-main-content blockquote {
