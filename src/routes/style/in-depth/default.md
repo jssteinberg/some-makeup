@@ -4,7 +4,10 @@ description: "default.css fixes and improves default browser CSS—for narrow vi
 set: ["code"]
 ---
 
-A lightweight default CSS that fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document, adds established conveniences for styling---and some new---and extends basic usability.
+A lightweight default CSS that fixes and
+improves default browser CSS—for
+narrow viewports first—to safer
+populate and style HTML documents.
 
 <Details>
 
