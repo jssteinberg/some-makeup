@@ -26,15 +26,13 @@ improve).
 More importantly, how they
 corrects and improves browser
 default styling can be further
-corrected and improved, not necessarily
+corrected and improved, not
+necessarily
 by
-more code, but by a slightly
-different *approach*.
-Do all properties need to be
-normalized in a low level library?
-The more style rules, the more is
-likely overwritten when sites and
-apps are styled.
+more code, but by fixing the 
+problem in a minimal way---sometimes
+using newer properties---so elements
+works and can be consistently styled.
 
 Opportunities for improving the
 developer experience should be
