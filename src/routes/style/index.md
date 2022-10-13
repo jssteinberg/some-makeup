@@ -18,7 +18,7 @@ npm install makeup-style
 @import "makeup-style/src/default.css";
 ```
 
-It corrects and improves the minimal necessary default CSS for all screen sizes, narrow viewports first. That includes universally using the intuitive border-box for styling and preventing overflow, otherwise preventing overflowing content, correct certain elements’ alignments, basic typography, semantics and usability. All rules are included with the mindset of this being a minimal default CSS, which includes embracing certain CSS defaults like heading styles and spacing.
+It corrects and improves the minimal necessary default CSS for all screen sizes, narrow viewports first. That includes universally using the `border-box` for preventing overflow and making styling way more intuitive, otherwise preventing overflowing content, default corrections for typographic style, normalize default semantics, basic default usability and correct certain elements’ alignments. All rules are included with the mindset of this being a minimal default CSS, which includes embracing certain CSS defaults like heading styles and spacing.
 
 This file is an updated alternative to
 [normalize.css][nc],
