@@ -84,8 +84,8 @@
 	<h1>Makeup Darkness 1.</h1>
 
 	<p>
-		<em
-			>Colors from the cool Norwegian city night, outside of a neon illuminated
+		<em>
+			Colors from the cool Norwegian city night, outside of a neon illuminated
 			park WC.
 		</em>
 	</p>
