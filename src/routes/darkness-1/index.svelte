@@ -25,7 +25,7 @@
 	const liBg = 30;
 
 	const colors = [
-		{ h: priHue, s: "17.8", l: "8", name: "bg" }, // magenta desaturated
+		{ h: priHue, s: "17.8", l: "8.5", name: "bg" }, // magenta desaturated
 		// { h: priHue, s: "17.8", l: "91.5", name: "fg" }, // magenta desaturated
 		{ h: "105.7", s: sat, l: "91.5", name: "fg" }, // white MAIN
 
