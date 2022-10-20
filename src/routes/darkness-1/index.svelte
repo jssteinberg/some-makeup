@@ -21,13 +21,12 @@
 	const priHue = "247.3";
 	const sat = 42;
 	const li = 55;
-	const li2 = 72.5;
+	const li2 = 73;
 	const li3 = 92;
 	const liBg = 30;
 
 	const colors = [
 		{ h: priHue, s: sat, l: (100 - li3) / 2, name: "bg" }, // magenta darker
-		// { h: priHue, s: "17.8", l: 100 - li3, name: "bg" }, // magenta desaturated
 		// { h: "105.7", s: sat, l: li3, name: "fg" }, // white MAIN
 		{ h: priHue, s: "17.8", l: li3, name: "fg" }, // magenta desaturated
 
@@ -58,8 +57,8 @@
 
 		// ---
 
+		{ h: priHue, s: "17.8", l: 100 - li3, name: "bg_alt" }, // magenta desaturated
 		{ h: priHue, s: sat, l: liBg, name: "black_2" }, // magenta darker
-		{ h: priHue, s: "17.8", l: li3, name: "fg_alt" }, // magenta desaturated
 
 		{ h: "277.5", s: sat, l: li, name: "violet" }, // magenta analogous
 		{ h: "277.5", s: sat, l: li2, name: "violet_bright" },
@@ -136,7 +135,7 @@ colors:
   # Default colors
   primary:
     background: '0x{hslToHex(colors[0])}'
-    foreground: '0x{hslToHex(colors[1])}'
+    foreground: '0x{hslToHex(colors[17])}'
 
   # Normal colors
   normal:
@@ -170,7 +169,7 @@ colors:
 # somedarkterm1.
 
 background #{hslToHex(colors[0])}
-foreground #{hslToHex(colors[1])}
+foreground #{hslToHex(colors[17])}
 selection_background #{hslToHex(
 					colors.filter(obj => obj.name === `selection_background`)[0]
 				)}
