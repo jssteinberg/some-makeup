@@ -8,7 +8,7 @@
 	--black-2-h:   var(--hue);    --black-2-s:   17.8%;             --black-2-l:   var(--light-1);
 
 	--white-h:     var(--hue);    --white-s:     17.8%;             --white-l:     var(--light-2);
-	--white-2-h:   var(--hue);    --white-2-s:   17.8%;             --white-2-l:   100%;
+	--white-2-h:   105.7;         --white-2-s:   var(--saturation); --white-2-l:   92%;
 
 	--red-h:       6.9;           --red-s:       var(--saturation); --red-l:       var(--light-1);
 	--red-2-h:     7.5;           --red-2-s:     var(--saturation-2, var(--saturation)); --red-2-l:     var(--light-2);
