@@ -27,8 +27,7 @@
 
 	const colors = [
 		{ h: priHue, s: sat, l: (100 - li3) / 2, name: "bg" }, // magenta darker
-		// { h: "105.7", s: sat, l: li3, name: "fg" }, // white MAIN
-		{ h: priHue, s: "17.8", l: li3, name: "fg" }, // magenta desaturated
+		{ h: priHue, s: "17.8", l: li2, name: "fg" }, // magenta desaturated
 
 		{ i: 0, h: priHue, s: sat, l: "15", name: "black" }, // magenta
 		{ i: 8, h: priHue, s: "17.8", l: li, name: "black" }, // magenta desaturated
