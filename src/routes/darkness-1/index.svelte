@@ -26,9 +26,10 @@
 	const liBg = 30;
 
 	const colors = [
-		{ h: priHue, s: "17.8", l: 100 - li3, name: "bg" }, // magenta desaturated
-		// { h: priHue, s: "17.8", l: li3, name: "fg" }, // magenta desaturated
-		{ h: "105.7", s: sat, l: li3, name: "fg" }, // white MAIN
+		{ h: priHue, s: sat, l: (100 - li3) / 2, name: "bg" }, // magenta darker
+		// { h: priHue, s: "17.8", l: 100 - li3, name: "bg" }, // magenta desaturated
+		// { h: "105.7", s: sat, l: li3, name: "fg" }, // white MAIN
+		{ h: priHue, s: "17.8", l: li3, name: "fg" }, // magenta desaturated
 
 		{ i: 0, h: priHue, s: sat, l: "15", name: "black" }, // magenta
 		{ i: 8, h: priHue, s: "17.8", l: li, name: "black" }, // magenta desaturated
@@ -52,13 +53,12 @@
 		{ i: 14, h: "187.5", s: sat, l: li2, name: "cyan" }, // cyan#14 MAIN
 
 		{ i: 7, h: priHue, s: "17.8", l: li2, name: "white" }, // magenta desaturated
-		// { i: 7, h: "105.7", s: sat, l: li3, name: "white" }, // white MAIN
-		{ i: 15, h: priHue, s: "100", l: "100", name: "white" }, // 100% white
+		{ i: 7, h: "105.7", s: sat, l: li3, name: "white" }, // white MAIN
+		// { i: 15, h: priHue, s: "100", l: "100", name: "white" }, // 100% white
 
 		// ---
 
 		{ h: priHue, s: sat, l: liBg, name: "black_2" }, // magenta darker
-		{ h: priHue, s: sat, l: (100 - li3) / 2, name: "black_bg" }, // magenta darker
 		{ h: priHue, s: "17.8", l: li3, name: "fg_alt" }, // magenta desaturated
 
 		{ h: "277.5", s: sat, l: li, name: "violet" }, // magenta analogous

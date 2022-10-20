@@ -1,8 +1,8 @@
 :root {
 	--hue: 247.3; /* base hue */
 
-	--bg-h:        var(--hue);    --bg-s:        17.8%;             --bg-l:        8.5%;
-	--fg-h:        105.7;         --fg-s:        var(--saturation); --fg-l:        91.5%;
+	--bg-h:        var(--hue);    --bg-s:        17.8%;             --bg-l:        4%;
+	--fg-h:        105.7;         --fg-s:        var(--saturation); --fg-l:        92%;
 
 	--black-h:     var(--hue);    --black-s:     var(--saturation); --black-l:     14%;
 	--black-2-h:   var(--hue);    --black-2-s:   17.8%;             --black-2-l:   var(--light-1);
