@@ -29,10 +29,10 @@
 	}
 
 	summary {
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		justify-content: center;
+		max-width: max-content;
 
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 
