@@ -51,7 +51,8 @@
 
 	.container {
 		color-scheme: var(--color-scheme);
-		margin-block: 0.5em;
+		margin-block-start: 0.5em;
+		margin-block-end: 0.5em;
 		padding-inline-start: var(--view-inline);
 		padding-inline-end: 1rem;
 

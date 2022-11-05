@@ -67,6 +67,7 @@
 		font-style: italic;
 		font-size: var(--font-size, 1rem);
 		display: block;
-		padding-block: calc(0.5 * var(--space, 1em));
+		padding-block-start: calc(0.5 * var(--space, 1em));
+		padding-block-end: calc(0.5 * var(--space, 1em));
 	}
 </style>

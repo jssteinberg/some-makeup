@@ -109,7 +109,8 @@
 }
 
 .app-theme :is(h1, .h1) {
-	margin-block: calc(1.5 * var(--space));
+	margin-block-start: calc(1.5 * var(--space));
+	margin-block-end: calc(1.5 * var(--space));
 	font-weight: normal;
 }
 
