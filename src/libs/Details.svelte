@@ -29,7 +29,7 @@
 	}
 
 	summary {
-		display: flex;
+		display: inline-block;
 		align-items: center;
 		flex-wrap: wrap;
 		max-width: max-content;
@@ -41,10 +41,6 @@
 
 		position: sticky;
 		top: 0;
-		background: linear-gradient(
-			hsl(var(--bg-h) var(--bg-s) var(--bg-l) / 0.75) 25%,
-			transparent
-		);
 		text-shadow: 1px 1px 2px var(--bg);
 	}
 
@@ -70,7 +66,6 @@
 
 	:where(details[open]) summary {
 		box-shadow: inset 1px 1px;
-		display: block;
 	}
 
 	details[open] summary::before {
