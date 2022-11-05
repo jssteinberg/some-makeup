@@ -215,7 +215,8 @@ color15 #{hslToHex(colors[17])}
 	/* colors */
 
 	.colors p {
-		margin-block: calc(0.25 * var(--space, 1em));
+		margin-block-start: calc(0.25 * var(--space, 1em));
+		margin-block-end: calc(0.25 * var(--space, 1em));
 	}
 
 	strong {
@@ -231,7 +232,8 @@ color15 #{hslToHex(colors[17])}
 	}
 
 	li {
-		margin-block: calc(0.25 * var(--space, 1em));
+		margin-block-start: calc(0.25 * var(--space, 1em));
+		margin-block-end: calc(0.25 * var(--space, 1em));
 	}
 
 	li span {

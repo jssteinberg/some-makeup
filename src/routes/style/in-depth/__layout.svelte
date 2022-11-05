@@ -59,13 +59,15 @@
 
 	header {
 		margin-block-end: 1rem;
-		padding-inline: var(--view-inline);
+		padding-inline-start: var(--view-inline);
+		padding-inline-end: var(--view-inline);
 	}
 
 	h1 small {
 		font-style: italic;
 		font-size: var(--font-size, 1rem);
 		display: block;
-		padding-block: calc(0.5 * var(--space, 1em));
+		padding-block-start: calc(0.5 * var(--space, 1em));
+		padding-block-end: calc(0.5 * var(--space, 1em));
 	}
 </style>

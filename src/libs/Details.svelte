@@ -23,17 +23,17 @@
 
 <style>
 	details {
-		margin-block: max(2em, 1.5 * var(--space, 1em));
+		margin-block-start: max(2em, 1.5 * var(--space, 1em));
+		margin-block-end: max(2em, 1.5 * var(--space, 1em));
 		padding-inline-end: var(--space, 1em);
 		padding-block-end: var(--space, 1em);
 	}
 
 	summary {
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		justify-content: center;
-
+		max-width: max-content;
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 
 		box-shadow: inset 1px -1px;
@@ -41,10 +41,6 @@
 
 		position: sticky;
 		top: 0;
-		background: linear-gradient(
-			hsl(var(--bg-h) var(--bg-s) var(--bg-l) / 0.75) 25%,
-			transparent
-		);
 		text-shadow: 1px 1px 2px var(--bg);
 	}
 
@@ -55,7 +51,7 @@
 	summary::before {
 		content: "+";
 
-		display: inline-grid;
+		display: grid;
 		place-items: center;
 
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
@@ -70,7 +66,6 @@
 
 	:where(details[open]) summary {
 		box-shadow: inset 1px 1px;
-		display: block;
 	}
 
 	details[open] summary::before {
@@ -86,7 +81,8 @@
 	}
 
 	.summary-content > :global(*) {
-		margin-block: 0;
+		margin-block-start: 0;
+		margin-block-end: 0;
 	}
 
 	.summary-content > :global(:last-child) {
