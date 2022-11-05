@@ -30,9 +30,9 @@
 	}
 
 	summary {
-		display: flex;
+		display: grid;
+		grid-template-columns: auto auto;
 		align-items: center;
-		flex-wrap: wrap;
 		max-width: max-content;
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 
