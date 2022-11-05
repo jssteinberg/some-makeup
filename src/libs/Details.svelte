@@ -29,11 +29,10 @@
 	}
 
 	summary {
-		display: inline-block;
+		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		max-width: max-content;
-
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 
 		box-shadow: inset 1px -1px;
@@ -51,7 +50,7 @@
 	summary::before {
 		content: "+";
 
-		display: inline-grid;
+		display: grid;
 		place-items: center;
 
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
