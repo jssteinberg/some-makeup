@@ -117,6 +117,7 @@
 
 	.wrapper::after {
 		--padding-inline: 1px;
+
 		border-right: var(--padding-inline) dashed;
 		content: "";
 		position: absolute;

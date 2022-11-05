@@ -59,7 +59,8 @@
 
 	header {
 		margin-block-end: 1rem;
-		padding-inline: var(--view-inline);
+		padding-inline-start: var(--view-inline);
+		padding-inline-end: var(--view-inline);
 	}
 
 	h1 small {
