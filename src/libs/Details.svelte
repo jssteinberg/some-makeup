@@ -28,10 +28,9 @@
 	}
 
 	summary {
-		display: flex; /* For Ios Safari v14 */
-		display: inline-flex;
-		align-items: center;
+		display: inline-block;
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
+		max-width: 100%;
 		padding-inline-end: 1em;
 
 		box-shadow: inset 1px -1px;
@@ -47,26 +46,16 @@
 
 	summary::before {
 		content: "+";
-
-		display: grid;
-		place-items: center;
-
+		display: inline-block;
+		line-height: var(--TOUCH-TARGET-SIZE, 48px);
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 		min-width: var(--TOUCH-TARGET-SIZE, 48px);
 		max-width: max-content;
-
-		font-size: 1rem;
+		text-align: center;
 	}
 
 	summary::-webkit-details-marker {
 		display: none;
-	}
-
-	summary > :global(*) {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		max-width: max-content;
 	}
 
 	:where(details[open]) summary {
