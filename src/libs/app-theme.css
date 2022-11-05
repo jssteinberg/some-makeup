@@ -128,7 +128,9 @@
 
 .app-theme-main-content {
 	--line-height: calc(1 + .6);
-	margin-inline: var(--view-inline);
+
+	margin-inline-start: var(--view-inline);
+	margin-inline-end: var(--view-inline);
 	font-size: var(--font-size);
 }
 
@@ -154,7 +156,8 @@
 		linear-gradient(currentColor, currentColor)
 		bottom left/1px calc(100% - 1.75em)
 		no-repeat;
-	margin-inline: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 	padding: 0 0 0 calc(.5 * var(--space, 1em));
 	position: relative;
 }

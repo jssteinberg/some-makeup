@@ -48,7 +48,8 @@
 ) {
 	/* Reset `abbr` since no universal functionality. */
 	/* Reset `hr` for normalizing. */
-	all: unset; }
+	all: unset;
+}
 
 :where(
 	hr
