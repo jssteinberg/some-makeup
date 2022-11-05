@@ -84,19 +84,22 @@
 	</div>
 {/if}
 
-<div id="tests" class="wrapper">
+<section id="tests" class="wrapper">
 	<slot />
 
-	<details>
-		<summary><em>Your browser</em></summary>
+	<h2><em>Browser information</em></h2>
 
-		{#if typeof navigator !== "undefined"}
-			{navigator.userAgent}
-		{:else}
-			Not loaded
-		{/if}
-	</details>
-</div>
+	{#if typeof navigator !== "undefined"}
+		<p>
+			{navigator.userAgent} (<a
+				href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent"
+				>MDN</a
+			>)
+		</p>
+	{:else}
+		<p>Not loaded</p>
+	{/if}
+</section>
 
 <Nav {links} ariaLabel="Test-pages" sticky="bottom" />
 
