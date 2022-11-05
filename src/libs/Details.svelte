@@ -13,9 +13,7 @@
 
 <details {open} class="details-component">
 	<summary {title}>
-		<span class="summary-content">
-			<slot name="summary" />
-		</span>
+		<slot name="summary" />
 	</summary>
 
 	<slot />
@@ -30,18 +28,17 @@
 	}
 
 	summary {
-		display: grid;
-		grid-template-columns: auto auto;
+		display: flex; /* For Ios Safari v14 */
+		display: inline-flex;
 		align-items: center;
-		max-width: max-content;
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
+		padding-inline-end: 1em;
 
 		box-shadow: inset 1px -1px;
 		outline: none;
 
 		position: sticky;
 		top: 0;
-		text-shadow: 1px 1px 2px var(--bg);
 	}
 
 	summary:focus-visible {
@@ -56,12 +53,20 @@
 
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 		min-width: var(--TOUCH-TARGET-SIZE, 48px);
+		max-width: max-content;
 
 		font-size: 1rem;
 	}
 
 	summary::-webkit-details-marker {
 		display: none;
+	}
+
+	summary > :global(*) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: max-content;
 	}
 
 	:where(details[open]) summary {
@@ -74,19 +79,6 @@
 
 	details[open] {
 		box-shadow: inset -1px -1px;
-	}
-
-	.summary-content {
-		display: inline-flex;
-	}
-
-	.summary-content > :global(*) {
-		margin-block-start: 0;
-		margin-block-end: 0;
-	}
-
-	.summary-content > :global(:last-child) {
-		padding-inline-end: 1em;
 	}
 
 	/* Details content */
