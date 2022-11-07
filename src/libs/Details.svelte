@@ -46,6 +46,20 @@
 		box-shadow: inset 0 0 0 1px;
 	}
 
+	:where(details[open]) summary {
+		box-shadow: inset 1px 1px;
+	}
+
+	details[open] {
+		box-shadow: inset -1px -1px;
+	}
+
+	/* Summary icon */
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
 	summary::before {
 		content: "+";
 		display: inline-block;
@@ -55,20 +69,8 @@
 		text-align: center;
 	}
 
-	summary::-webkit-details-marker {
-		display: none;
-	}
-
-	:where(details[open]) summary {
-		box-shadow: inset 1px 1px;
-	}
-
 	details[open] summary::before {
 		transform: rotate(45deg);
-	}
-
-	details[open] {
-		box-shadow: inset -1px -1px;
 	}
 
 	/* Details content */
