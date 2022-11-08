@@ -2,16 +2,13 @@
 
 /* Background images are not repeated. */
 :where(
-	*,
-	::before,
-	::after
+	*, ::before, ::after
 ) {
 	background-repeat: no-repeat;
 }
 
 :where(
-	::before,
-	::after
+	::before, ::after
 ) {
 	/* Inherit border-radius. */
 	border-radius: inherit;
@@ -25,9 +22,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 	:where(
-		*,
-		::before,
-		::after
+		*, ::before, ::after
 	) {
 		/* Remove animations and transitions when user prefers it. */
 		animation-duration: 0.01ms !important;

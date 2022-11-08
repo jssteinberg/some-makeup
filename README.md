@@ -9,7 +9,7 @@ npm install makeup-style
 ```css
 @import "makeup-style/src/default.css";
 @import "makeup-style/src/develop.css";
-/* Alternatively with `:where()` */
+/* Alternatively with `:where()` for less specificity: */
 @import "makeup-style/src/where-default.css";
 @import "makeup-style/src/where-develop.css";
 
