@@ -48,7 +48,7 @@ default.css maybes:
 
 develop.css maybes:
 
-- Mask images are not repeated (from a sanitize.css pull request):
+- Mask images are not repeated (from [a sanitize.css pull request](https://github.com/csstools/sanitize.css/pull/239)):
 
 	```css
 	*, ::before, ::after {
