@@ -34,6 +34,18 @@ Nope:
 
 - Remove `[hidden]` ... `display: none`? Should be implemented in all used browsers now. *No! It's for maintaining behaviour.*
 
+default.css maybes:
+
+- Let SVG scale without boundaries:
+
+	```css
+	img[src$=".svg"] {
+		width: 100%;
+		height: auto;
+		max-width: none;
+	}
+	```
+
 <details>
 
 <summary>Rename?</summary>

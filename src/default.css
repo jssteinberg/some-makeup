@@ -51,7 +51,7 @@ img, svg, video, canvas {
 	/* Avoid elements overflowing. */
 	max-width: 100%; }
 img, svg, video, canvas {
-	/* ...then auto calculate height for necessary elements to avoid stretch. */
+	/* ...and preserve aspect ratio. */
 	height: auto; }
 
 pre {
