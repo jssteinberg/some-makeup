@@ -46,6 +46,16 @@ default.css maybes:
 	}
 	```
 
+develop.css maybes:
+
+- Mask images are not repeated (from a sanitize.css pull request):
+
+	```css
+	*, ::before, ::after {
+		mask-repeat: no-repeat;
+	}
+	```
+
 <details>
 
 <summary>Rename?</summary>

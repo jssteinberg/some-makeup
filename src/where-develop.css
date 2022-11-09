@@ -1,9 +1,9 @@
 /* CONVENIENT/INTUITIVE STYLING */
 
-/* Background images are not repeated. */
 :where(
 	*, ::before, ::after
 ) {
+	/* Background images are not repeated. */
 	background-repeat: no-repeat;
 }
 
