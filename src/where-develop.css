@@ -5,6 +5,8 @@
 ) {
 	/* Background images are not repeated. */
 	background-repeat: no-repeat;
+	/* Mask images are not repeated. */
+	mask-repeat: no-repeat;
 }
 
 :where(

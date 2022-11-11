@@ -46,21 +46,11 @@ default.css maybes:
 	}
 	```
 
-develop.css maybes:
-
-- Mask images are not repeated (from [a sanitize.css pull request](https://github.com/csstools/sanitize.css/pull/239)):
-
-	```css
-	*, ::before, ::after {
-		mask-repeat: no-repeat;
-	}
-	```
-
 <details>
 
 <summary>Rename?</summary>
 
-- ( ) default.css, development.css, (spacing.css, typographic.css) (For style some?)
+- ( ) default.css, development.css, (space.css, typographic.css) (For style some?)
 - (-) default.css, develop.css, (space.css, typographic.css)  
 - ( ) default.css, dx.css,      (space.css, typographic-style.css)  
 - ( ) default.css, develop.css, (even.css,  flow.css)  
