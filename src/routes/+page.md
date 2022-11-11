@@ -4,7 +4,10 @@ description: "Makeup for the web and tools."
 layout: no
 ---
 
-<div class="wrapper">
+<div
+	class="wrapper"
+	data-sveltekit-prefetch
+>
 
 # *Some*
 
@@ -18,19 +21,18 @@ Palette---[makeup darkness 1.](/darkness-1)
 
 {#each posts as post}
 	<p>
-		{#if post.metadata?.date}
+		{#if post.meta?.date}
 			<small>
-				<time>{post.metadata.date[0]}</time>
+				<time>{post.meta.date[0]}</time>
 			</small>
 			<br aria-hidden="true">
 		{/if}
 
 		<a
 			href={post.path}
-			sveltekit:prefetch
-			lang={post.metadata?.lang ? post.metadata.lang : undefined}
+			lang={post.meta?.lang ? post.meta.lang : undefined}
 		>
-			<span>{@html post.title}</span>
+			<span>{@html post.meta.title}</span>
 		</a>
 	</p>
 {/each}
@@ -61,26 +63,9 @@ Palette---[makeup darkness 1.](/darkness-1)
 	}
 </style>
 
-<script context="module">
-	import { getPostsFromFiles } from '$libs/utils/index.js';
-
-	const markdownFiles = import.meta.glob("./*.md", { eager: true });
-	const excludeFiles = ["index"];
-
-	export const hydrate = false;
-
-	export const load = async ({ url }) => {
-		return {
-			props: {
-				posts: getPostsFromFiles(markdownFiles, url).filter(
-					item => !excludeFiles.includes(item.title),
-				),
-			},
-		};
-	};
-</script>
-
 <script>
 	import Hr from "$libs/Hr.svelte"
-	export let posts = [];
+	export let data;
+	const posts = data?.posts;
+	console.log(posts)
 </script>

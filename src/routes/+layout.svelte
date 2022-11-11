@@ -3,6 +3,8 @@
 	import { page } from "$app/stores";
 	import Header from "/src/libs/Header.svelte";
 	import Footer from "/src/libs/Footer.svelte";
+
+	export const prerender = true;
 </script>
 
 <svelte:head>
