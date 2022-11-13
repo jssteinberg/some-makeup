@@ -12,10 +12,6 @@
 			label: `Default CSS`,
 			href: `/style/in-depth/default`,
 		},
-		// {
-		// 	label: `Deform`,
-		// 	href: `/style/in-depth/deform`,
-		// },
 		{
 			label: `Develop CSS`,
 			href: `/style/in-depth/develop`,
@@ -26,12 +22,10 @@
 		/* }, */
 	];
 
-	$: part = links.filter(
-		link => $page.route.id === link.href.replace(/^\//, ``)
-	)[0]?.label;
-	$: subtitle = links.filter(
-		link => $page.route.id === link.href.replace(/^\//, ``)
-	)[0]?.subtitle;
+	$: part = links.filter(link => $page.route.id === link.href)[0]?.label;
+	$: subtitle = links.filter(link => $page.route.id === link.href)[0]?.subtitle;
+
+	page.subscribe(val => console.log(val));
 </script>
 
 <article class="app-theme">

@@ -67,5 +67,4 @@ Palette---[makeup darkness 1.](/darkness-1)
 	import Hr from "$libs/Hr.svelte"
 	export let data;
 	const posts = data?.posts;
-	console.log(posts)
 </script>

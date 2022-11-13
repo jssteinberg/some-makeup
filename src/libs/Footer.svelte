@@ -24,15 +24,15 @@
 				About
 			</a>
 		</li>
-		<li>
-			<a
-				aria-current={$page.url.pathname === "/wip" ? "page" : undefined}
-				href="/wip"
-				sveltekit:prefetch
-			>
-				WIP
-			</a>
-		</li>
+		<!-- <li> -->
+		<!-- 	<a -->
+		<!-- 		aria-current={$page.url.pathname === "/wip" ? "page" : undefined} -->
+		<!-- 		href="/wip" -->
+		<!-- 		sveltekit:prefetch -->
+		<!-- 	> -->
+		<!-- 		WIP -->
+		<!-- 	</a> -->
+		<!-- </li> -->
 	</ul>
 
 	<p>
