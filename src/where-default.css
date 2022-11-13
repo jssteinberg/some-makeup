@@ -58,7 +58,7 @@
 	display: block;
 	/* Set a proper spacing. */
 	height: 1em;
-	/* Non-flow disrupting horizontal rule (TODO: position-inline when exists). */
+	/* Non-flow disrupting horizontal rule (TODO: `position-inline` when exists). */
 	background: center left/100% 1px no-repeat linear-gradient(
 		currentColor, currentColor
 	);
