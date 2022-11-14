@@ -31,43 +31,46 @@
 		display: inline-block;
 		min-height: var(--TOUCH-TARGET-SIZE, 48px);
 		max-width: 100%;
-		padding-inline-end: 1em;
+		position: sticky;
+		top: 0;
 
 		box-shadow: inset 1px -1px;
 		outline: none;
+	}
 
-		position: sticky;
-		top: 0;
+	summary > :global(:last-child) {
+		padding-inline-end: 1em;
 	}
 
 	summary:focus-visible {
 		box-shadow: inset 0 0 0 1px;
 	}
 
-	summary::before {
-		content: "+";
-		display: inline-block;
-		line-height: var(--TOUCH-TARGET-SIZE, 48px);
-		min-height: var(--TOUCH-TARGET-SIZE, 48px);
-		min-width: var(--TOUCH-TARGET-SIZE, 48px);
-		max-width: max-content;
-		text-align: center;
+	:where(details[open]) summary {
+		box-shadow: inset 1px 1px;
 	}
+
+	details[open] {
+		box-shadow: inset -1px -1px;
+	}
+
+	/* Summary icon */
 
 	summary::-webkit-details-marker {
 		display: none;
 	}
 
-	:where(details[open]) summary {
-		box-shadow: inset 1px 1px;
+	summary::before {
+		content: "+";
+		display: inline-block;
+		line-height: var(--TOUCH-TARGET-SIZE, 48px);
+		min-width: var(--TOUCH-TARGET-SIZE, 48px);
+		max-width: max-content;
+		text-align: center;
 	}
 
 	details[open] summary::before {
 		transform: rotate(45deg);
-	}
-
-	details[open] {
-		box-shadow: inset -1px -1px;
 	}
 
 	/* Details content */

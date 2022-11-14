@@ -16,6 +16,8 @@ npm install makeup-style
 
 ```css
 @import "makeup-style/src/default.css";
+/* Or an alternative using `:where()` for less specificity: */
+@import "makeup-style/src/where-default.css";
 ```
 
 It corrects and improves the minimal necessary default CSS for all screen sizes, narrow viewports first. That includes universally using the `border-box` for preventing overflow and making styling way more intuitive, otherwise preventing overflowing content, default corrections for typographic style, normalize default semantics, basic default usability and correct certain elements’ alignments. All rules are included with the mindset of this being a minimal default CSS, which includes embracing certain CSS defaults like heading styles and spacing.
@@ -73,6 +75,8 @@ hr {
 
 ```css
 @import "makeup-style/src/develop.css";
+/* Or an alternative using `:where()` for less specificity: */
+@import "makeup-style/src/where-develop.css";
 ```
 
 *Develop CSS easier.* Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.

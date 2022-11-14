@@ -1,8 +1,10 @@
 /* CONVENIENT/INTUITIVE STYLING */
 
-/* Background images are not repeated. */
 *, ::before, ::after {
-	background-repeat: no-repeat; }
+	/* Background images are not repeated. */
+	background-repeat: no-repeat;
+	/* Mask images are not repeated. */
+	mask-repeat: no-repeat; }
 
 ::before, ::after {
 	/* Inherit border-radius. */
@@ -14,9 +16,9 @@
 
 /* REDUCE MOTION */
 
-/* Remove animations and transitions when user prefers it. */
 @media (prefers-reduced-motion: reduce) {
 	*, ::before, ::after {
+		/* Remove animations and transitions when user prefers it. */
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
