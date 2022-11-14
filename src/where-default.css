@@ -14,8 +14,8 @@
 	-webkit-text-size-adjust: 100%;
 	/* Auto hyphens when words break and for more soft wrap opportunities. */
 	hyphens: auto;
-	/* Word breaks in narrow containers---uses soft wrap opportunities if present. */
-	overflow-wrap: anywhere;
+	/* Break words if needed---`anywhere` uses soft wrap opportunities if present (fallback for Safari Ios<=14). */
+	overflow-wrap: break-word; overflow-wrap: anywhere;
 }
 
 /* FIX/EXTEND FONT/TEXT */
