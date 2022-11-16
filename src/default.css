@@ -38,7 +38,7 @@ hr {
 	display: block;
 	/* Set a proper spacing. */
 	height: 1em;
-	/* Non-flow disrupting horizontal rule. */
+	/* Non-flow disrupting horizontal rule (TODO: `position-inline` when exists). */
 	background: center left/100% 1px no-repeat linear-gradient(
 		currentColor, currentColor
 	); }
@@ -83,7 +83,7 @@ img, svg, video, canvas {
 
 figure {
 	/* Intuitive inline margins---aligns with other elements' default style. */
-	margin-inline-start: 0; margin-inline-end: 0; }
+	margin-inline: 0; }
 
 /* CONSISTENT CURSOR */
 
