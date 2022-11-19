@@ -77,12 +77,12 @@
 </script>
 
 <MetaTags
-	title={`Makeup Darkness 1.`}
+	title={`nightcool`}
 	description={`A cool and clear color palette for terminals and syntax highlighting.`}
 />
 
 <article class="app-theme-main-content">
-	<h1>Makeup Darkness 1.</h1>
+	<h1>nightcool</h1>
 
 	<p>
 		<em>
