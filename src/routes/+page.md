@@ -13,7 +13,7 @@ layout: no
 
 *Makeup for the web and tools.*
 
-CSS library---[makeup-style](/style)
+Base CSS library---[makeup-style](/style)
 
 Code & terminal colors---[nightcool](/nightcool)
 
