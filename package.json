@@ -33,7 +33,10 @@
     "vite": "^3.2.4"
   },
   "description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
-  "main": "default.css",
+  "main": "src/default.css",
+  "directories": {
+  	"lib": "src"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jssteinberg/some-makeup.git"
