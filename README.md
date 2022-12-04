@@ -2,6 +2,12 @@
 
 Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
 
+[Go to documentation](https://some.makeup/style)
+
+*Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr] (there's also [this custom CSS reset][mccr]).*
+
+---
+
 ```bash
 npm install makeup-style
 ```
@@ -17,9 +23,17 @@ npm install makeup-style
 @import "makeup-style/src/flow.css";
 ```
 
-[Go to documentation](https://some.makeup/style)
+## ESM (experiment for Deno)
 
-*Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr] (there's also [this custom CSS reset][mccr]).*
+An ESM option is available. Implemented as an experiment to use with Deno, but only includes "src/where-default.css" and "src/where-develop.css".
+
+```js
+import "https://esm.sh/makeup-style@0.3.2";
+```
+
+```html
+<link rel="stylesheet" href="https://esm.sh/makeup-style@0.3.2?css">
+```
 
 ## Plans
 

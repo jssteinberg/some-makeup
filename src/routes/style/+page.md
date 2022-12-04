@@ -12,6 +12,23 @@ So you want to makeup style? These minimal CSS files corrects and improves defau
 npm install makeup-style
 ```
 
+<Details>
+<em slot="summary">ESM alternative</em>
+
+An experimental ESM option is available (only includes Default CSS and Develop CSS).
+
+Should work for Deno like this:
+
+```js
+import "https://esm.sh/makeup-style@0.3.2";
+```
+
+```html
+<link rel="stylesheet" href="https://esm.sh/makeup-style@0.3.2?css">
+```
+
+</Details>
+
 ## 1. *Default CSS*
 
 ```css
