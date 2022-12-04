@@ -48,29 +48,10 @@ default.css maybes:
 
 <details>
 
-<summary>Rename?</summary>
+<summary>Naming process</summary>
 
-- ( ) default.css, development.css, (space.css, typographic.css) (For style some?)
-- (-) default.css, develop.css, (space.css, typographic.css)  
-- ( ) default.css, dx.css,      (space.css, typographic-style.css)  
-- ( ) default.css, develop.css, (even.css,  flow.css)  
-- ( ) default.css, dx.css,      (even.css,  flow.css)  
-- ( ) default.css, enhance.css, (even.css,  flow.css)  
-- ( ) correct.css,  (even.css,  flow.css)  
-- ( ) cure.css,     
-- ( ) heal.css,    help.css,    reform.css, ...
-- ( ) revise.css,  reform.css,  typographic-style.css
-- ( ) revise.css,  shape.css,   typographic-style.css
-- ( ) repair.css,  shape.css,   typographic-style.css
-- ( ) revise.css,  rewrite.css, space.css,  typograph.css
-- ( ) correct.css, develop.css, even.css,   flow.css
-- ( ) fix.css,     forge.css    (do),       space.css,...
-- ( ) amend.css,   alter.css,   block.css
-- ( ) amend.css,   brace.css...
-- ( ) fix.css,     form.css     (do),       ...
-- ( ) fix.css,     shape.css    (do),       space.css,...
-- ( ) cure.css,    develop.css
-- ( ) repair.css,  prepare.css, ...
+- ( ) default.css, developer.css, space.css, typography.css (for potential style-some)
+- (-) default.css, develop.css, (space.css, typography.css)  
 
 </details>
 
