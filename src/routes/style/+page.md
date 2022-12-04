@@ -54,17 +54,7 @@ This file is an updated alternative to
 
 2. To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
 
-3. For browsers that don't support `overflow-wrap: anywhere`, and when a language has poor `hyphens: auto` support, words can overflow their container. This ruleset can be added to always break words for those browsers as well:
-
-	```css
-	@supports not (overflow-wrap: anywhere) {
-		:root {
-			word-break: break-word;
-		}
-	}
-	```
-
-4. Margin for `<body>` is not removed. So you usually also want `body { margin: 0; }`.
+3. Margin for `<body>` is not removed. So you usually also want `body { margin: 0; }`.
 
 </Details>
 
