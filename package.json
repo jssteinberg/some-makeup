@@ -1,6 +1,6 @@
 {
   "name": "makeup-style",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -36,7 +36,7 @@
   "engines": ">=14.16",
   "exports": "./src/rules.js",
   "directories": {
-  	"lib": "src"
+    "lib": "src"
   },
   "repository": {
     "type": "git",
@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/jssteinberg/some-makeup#readme",
   "files": [
-  	"src/rules.js",
+    "src/rules.js",
     "src/*.css",
     "src/class/*.css"
   ],
