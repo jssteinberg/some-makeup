@@ -8,11 +8,12 @@ Develop CSS with additional CSS rulesets for more convenient and intuitive styli
 
 ### Convenient/Intuitive Styling
 
-Background images are not repeated.
+Background and mask images are not repeated.
 
 ```css
 *, ::before, ::after {
 	background-repeat: no-repeat;
+	mask-repeat: no-repeat;
 }
 ```
 

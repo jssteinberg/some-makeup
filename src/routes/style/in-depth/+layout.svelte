@@ -12,10 +12,6 @@
 			label: `Default CSS`,
 			href: `/style/in-depth/default`,
 		},
-		// {
-		// 	label: `Deform`,
-		// 	href: `/style/in-depth/deform`,
-		// },
 		{
 			label: `Develop CSS`,
 			href: `/style/in-depth/develop`,
@@ -26,12 +22,10 @@
 		/* }, */
 	];
 
-	$: part = links.filter(
-		link => $page.routeId === link.href.replace(/^\//, ``)
-	)[0]?.label;
-	$: subtitle = links.filter(
-		link => $page.routeId === link.href.replace(/^\//, ``)
-	)[0]?.subtitle;
+	$: part = links.filter(link => $page.route.id === link.href)[0]?.label;
+	$: subtitle = links.filter(link => $page.route.id === link.href)[0]?.subtitle;
+
+	page.subscribe(val => console.log(val));
 </script>
 
 <article class="app-theme">
@@ -40,8 +34,9 @@
 			<small>makeup-style in-depth:</small>
 
 			{#if part}
-				{part}{#if subtitle}—{/if}{#if subtitle}<em class="block">{subtitle}</em
-					>{/if}
+				{part}{#if subtitle}—{/if}{#if subtitle}<em class="block">
+						{subtitle}
+					</em>{/if}
 			{/if}
 		</h1>
 	</header>
