@@ -1,3 +1,3 @@
-import DefaultCss from "./src/where-default.css";
+import Css from "./src/where-default.css";
 
-export default DefaultCss;
+export default Css;

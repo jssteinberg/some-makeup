@@ -35,10 +35,11 @@
   "description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
   "engines": ">=14.16",
   "exports": {
-    "./develop.css": "./src/develop.css",
-    "./default.css": "./default.css.js",
     ".": "./index.js",
-    "./makeupStyle": "./src/rules.js"
+    "./develop.css": "./src/develop.css",
+    "./default.css": "./src/default.css",
+    "./where-develop.css": "./src/where-develop.css",
+    "./where-default.css": "./src/where-default.css"
   },
   "directories": {
     "lib": "src"
