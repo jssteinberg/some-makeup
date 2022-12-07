@@ -2,23 +2,16 @@
 
 Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
 
-[Go to documentation](https://some.makeup/style)
+```
+./src/default.css";
+./src/develop.css";
+./src/where-default.css";
+./src/where-develop.css";
+```
+
+[Installation and documentation](https://some.makeup/style)
 
 *Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr] (there's also [this custom CSS reset][mccr]).*
-
----
-
-```bash
-npm install makeup-style
-```
-
-```css
-@import "makeup-style/default.css";
-@import "makeup-style/develop.css";
-/* Alternatively with `:where()` for less specificity: */
-@import "makeup-style/where-default.css";
-@import "makeup-style/where-develop.css";
-```
 
 ## Plans
 

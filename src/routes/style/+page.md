@@ -12,13 +12,38 @@ So you want to makeup style? These minimal CSS files corrects and improves defau
 npm install makeup-style
 ```
 
-## 1. *Default CSS*
+<Details>
+<em slot="summary">Import examples</em>
+
+*The files are exported from "package.json" as [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). The actual files are located in the "src" folder if you need the real path.*
+
+```javascript
+import "makeup-style/default.css";
+import "makeup-style/develop.css";
+```
+
+Alternative files that use `:where()` for less specificity:
+
+```javascript
+import "makeup-style/where-default.css";
+import "makeup-style/where-develop.css";
+```
+
+CSS import (via postcss-import or Lightning CSS):
 
 ```css
 @import "makeup-style/default.css";
-/* Or an alternative using `:where()` for less specificity: */
+@import "makeup-style/develop.css";
+/* Alt. files */
 @import "makeup-style/where-default.css";
+@import "makeup-style/where-develop.css";
 ```
+
+</Details>
+
+## 1. *Default CSS*
+
+Import "default.css", or an alternative using `:where()` for less specificity: "where-default.css".
 
 It corrects and improves the minimal necessary default CSS for all screen sizes, narrow viewports first. That includes universally using the `border-box` for preventing overflow and making styling way more intuitive, otherwise preventing overflowing content, default corrections for typographic style, normalize default semantics, basic default usability and correct certain elements’ alignments. All rules are included with the mindset of this being a minimal default CSS, which includes embracing certain CSS defaults like heading styles and spacing.
 
@@ -63,13 +88,9 @@ hr {
 
 ## *Develop CSS*---A <cite>Default CSS</cite> Expansion
 
-```css
-@import "makeup-style/develop.css";
-/* Or an alternative using `:where()` for less specificity: */
-@import "makeup-style/where-develop.css";
-```
+Import "develop.css", or an alternative using `:where()` for less specificity: "where-develop.css".
 
-*Develop CSS easier.* Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.
+For developer convenience, it includes some simple rules for more intuitive coding, and reduce-motion rules for animations and transitions so accessibility is easier preserved.
 
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
