@@ -1,9 +1,9 @@
-import Default from "./where-default.css";
-import Develop from "./where-develop.css";
+import DefaultCss from "./where-default.css";
+import DevelopCss from "./where-develop.css";
 
 export {
-	Default,
-	Develop,
+	DefaultCss as defaultCss,
+	DevelopCss as developCss,
 };
 
-export default Default;
+export default DefaultCss;
