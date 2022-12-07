@@ -12,29 +12,12 @@ So you want to makeup style? These minimal CSS files corrects and improves defau
 npm install makeup-style
 ```
 
-<Details>
-<em slot="summary">ESM alternative</em>
-
-An experimental ESM option is available (only includes Default CSS and Develop CSS).
-
-Should work for Deno like this:
-
-```js
-import "https://esm.sh/makeup-style@0.3.2";
-```
-
-```html
-<link rel="stylesheet" href="https://esm.sh/makeup-style@0.3.2?css">
-```
-
-</Details>
-
 ## 1. *Default CSS*
 
 ```css
-@import "makeup-style/src/default.css";
+@import "makeup-style/default.css";
 /* Or an alternative using `:where()` for less specificity: */
-@import "makeup-style/src/where-default.css";
+@import "makeup-style/where-default.css";
 ```
 
 It corrects and improves the minimal necessary default CSS for all screen sizes, narrow viewports first. That includes universally using the `border-box` for preventing overflow and making styling way more intuitive, otherwise preventing overflowing content, default corrections for typographic style, normalize default semantics, basic default usability and correct certain elements’ alignments. All rules are included with the mindset of this being a minimal default CSS, which includes embracing certain CSS defaults like heading styles and spacing.
@@ -81,104 +64,13 @@ hr {
 ## *Develop CSS*---A <cite>Default CSS</cite> Expansion
 
 ```css
-@import "makeup-style/src/develop.css";
+@import "makeup-style/develop.css";
 /* Or an alternative using `:where()` for less specificity: */
-@import "makeup-style/src/where-develop.css";
+@import "makeup-style/where-develop.css";
 ```
 
 *Develop CSS easier.* Includes simple intuitive rules and inheritances for styling and reduce-motion rules for animations and transitions.
 
----
-
-## 2. *Space CSS*
-
-```css
-@import "makeup-style/src/space.css";
-```
-
-CSS rulesets for consistent spacing between the needed block-level elements.
-
-`--space` for declaring vertical spacing between intuitive block-level elements. It's a point to not use a font-size relative unit like `em` or `ex`, but use a `rem` value (can also be part of a `clamp()`) to declare the font-size for a container. Falls back to `1rem`.
-
-`--block-start`/`--block-end` for declaring start/end vertical spacing for the intuitive block-level elements. Falls back to `var(--space, 1rem)`.
-
-<Details>
-<em slot="summary">Example</em>
-
-
-```css
-:root {
-	--font-size: clamp(
-		1rem, 4.8vw, 1.3rem
-	);
-}
-
-.content {
-	--space: var(--font-size);
-	font-size: var(--font-size);
-}
-
-@media (min-width: 900px) {
-	:root {
-		--font-size: 1.1rem;
-	}
-}
-```
-
-</Details>
-
-## *Flow CSS*---A <cite>Space CSS</cite> Expansion
-
-```css
-@import "makeup-style/src/flow.css";
-```
-
-CSS with rulesets declaring headings' line-height to be computed to container declaring `--added-lead`, and with rulesets for other elements to flow.
-
-**CSS variables:**
-
-`--added-lead` for declaring line-height to `1 + var(--added-lead, .6)`. Falls back to `.6`.
-
-`--hr-space` for declaring the height of `<hr>`. Falls back to `var(--space, 1rem)`.
-
-**Heading variables:**
-
-{#each Array.from(Array(3)) as _,i}
-
-<p>
-	{#if i !== 2}
-		<code>--h{i + 1}-line-span</code>
-	{:else}
-		<code>--h3-line-span</code>-<code>--h6-line-span</code>
-	{/if}
-	for declaring the number of lines the heading should span over. Falls back to 
-	{#if i === 0}<code>2</code>{:else}<code>1</code>{/if}.
-</p>
-
-<p>
-	{#if i !== 2}
-		<code>--h{i + 1}-added-lead</code>
-	{:else}
-		<code>--h3-added-lead</code>-<code>--h6-added-lead</code>
-	{/if}
-	for declaring the added lead to the heading's line-height. Falls back to
-	{#if i === 0}
-		<code>.125</code>.
-	{:else if i === 1}
-		<code>.25</code>.
-	{:else}
-		<code>var(--added-lead, .6)</code>.
-	{/if}
-</p>
-
-{/each}
-
-## 3. Additional Class Files
-
-```css
-/* .touch-target, .touch-target-center */
-@import "makeup-style/src/class/touch-target.css";
-```
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
 [cc]: https://cube.fyi/

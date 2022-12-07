@@ -13,26 +13,11 @@ npm install makeup-style
 ```
 
 ```css
-@import "makeup-style/src/default.css";
-@import "makeup-style/src/develop.css";
+@import "makeup-style/default.css";
+@import "makeup-style/develop.css";
 /* Alternatively with `:where()` for less specificity: */
-@import "makeup-style/src/where-default.css";
-@import "makeup-style/src/where-develop.css";
-
-@import "makeup-style/src/space.css";
-@import "makeup-style/src/flow.css";
-```
-
-## ESM (experiment for Deno)
-
-An ESM option is available. Implemented as an experiment to use with Deno, but only includes "src/where-default.css" and "src/where-develop.css".
-
-```js
-import "https://esm.sh/makeup-style@0.3.2";
-```
-
-```html
-<link rel="stylesheet" href="https://esm.sh/makeup-style@0.3.2?css">
+@import "makeup-style/where-default.css";
+@import "makeup-style/where-develop.css";
 ```
 
 ## Plans
