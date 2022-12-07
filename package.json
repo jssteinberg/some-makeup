@@ -62,9 +62,11 @@
   },
   "homepage": "https://github.com/jssteinberg/some-makeup#readme",
   "files": [
-    "src/rules.js",
-    "src/*.css",
-    "src/class/*.css"
+    "./default.css.js",
+    "./index.js",
+    "./src/rules.js",
+    "./src/*.css",
+    "./src/class/*.css"
   ],
   "type": "module"
 }
