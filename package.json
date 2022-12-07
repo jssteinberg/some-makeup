@@ -34,7 +34,9 @@
   },
   "description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
   "engines": ">=14.16",
-  "exports": "./src/rules.js",
+  "exports": {
+  	"./makeupStyle": "./src/rules.js"
+	},
   "directories": {
     "lib": "src"
   },
