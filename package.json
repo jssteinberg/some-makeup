@@ -1,6 +1,6 @@
 {
   "name": "makeup-style",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -35,9 +35,9 @@
   "description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
   "engines": ">=14.16",
   "exports": {
-  	"./develop.css": "./src/develop.css",
-  	"./default.css": "./default.css.js",
-  	".": "./index.js",
+    "./develop.css": "./src/develop.css",
+    "./default.css": "./default.css.js",
+    ".": "./index.js",
     "./makeupStyle": "./src/rules.js"
   },
   "directories": {
