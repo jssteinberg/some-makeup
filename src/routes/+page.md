@@ -21,7 +21,8 @@ Code & terminal colors---[nightcool](/nightcool)
 
 {#each posts as post}
 	<p>
-		{#if post.meta?.date}<small><time>{post.meta.date[0]}</time></small>{/if}—<a href={post.path} lang={
+		{#if post.meta?.date}<small><time>{post.meta.date[0]}</time></small>{/if}
+		<a href={post.path} lang={
 			post.meta?.lang
 				? post.meta.lang
 				: undefined
