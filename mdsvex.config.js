@@ -1,8 +1,8 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 const config = defineConfig({
 	layout: {
-		no: '/src/libs/NoPageLayout.svelte',
-		_: '/src/libs/PageLayout.svelte'
+		no: '/src/lib/NoPageLayout.svelte',
+		_: '/src/lib/PageLayout.svelte'
 	},
 
 	extensions: ['.svelte.md', '.md', '.svx'],

@@ -1,3 +1,7 @@
+---
+set: ["code"]
+---
+
 # When Text Overflows
 
 Sometimes text will overflow containers.

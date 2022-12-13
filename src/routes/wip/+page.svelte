@@ -7,11 +7,14 @@
 
 <ol>
 	{#each posts as post}
-		<li>
-			{#if post.meta?.date}<small><time>{post.meta.date[0]}</time></small>{/if}
-			<a href={post.path} lang={post.meta?.lang ? post.meta.lang : undefined}>
-				<span>{@html post.meta?.title || `knot`}</span>
-			</a>
+		<li class={post.meta?.title ? `` : `knot`}>
+			<p>
+				{#if post.meta?.date}<small><time>{post.meta.date[0]}</time></small><br
+					/>{/if}
+				<a href={post.path} lang={post.meta?.lang ? post.meta.lang : undefined}>
+					<span>{@html post.meta?.title || `knot`}</span>
+				</a>
+			</p>
 		</li>
 	{/each}
 </ol>
@@ -20,5 +23,16 @@
 	h1,
 	h1 ~ :global(*) {
 		margin-inline: var(--view-inline);
+	}
+
+	ol {
+		counter-reset: reversed(no);
+		padding: 0;
+		list-style: none;
+	}
+
+	li.knot a::after {
+		counter-increment: no;
+		content: counter(no);
 	}
 </style>

@@ -34,10 +34,10 @@ Playing with my CSS dice.
 <GradientPostStyle hue={deg} />
 
 <script>
-	import Dice from '/src/libs/css-dice/dice.svelte';
-	import AccentHue from '/src/libs/AccentHue.svelte';
-	import GradientPostStyle from '/src/libs/GradientPostStyle.svelte';
-	import '/src/libs/app-input.css';
+	import Dice from '/src/lib/css-dice/dice.svelte';
+	import AccentHue from '/src/lib/AccentHue.svelte';
+	import GradientPostStyle from '/src/lib/GradientPostStyle.svelte';
+	import '/src/lib/app-input.css';
 
 	let deg = 358.7;
 </script>

@@ -1,8 +1,8 @@
 <script>
-	import "../libs/app.css";
+	import "../lib/app.css";
 	import { page } from "$app/stores";
-	import Header from "/src/libs/Header.svelte";
-	import Footer from "/src/libs/Footer.svelte";
+	import Header from "/src/lib/Header.svelte";
+	import Footer from "/src/lib/Footer.svelte";
 
 	export const prerender = true;
 </script>

@@ -1,5 +1,5 @@
 <script>
-	import Nav from "/src/libs/Nav.svelte";
+	import Nav from "/src/lib/Nav.svelte";
 
 	const links = [
 		{

@@ -70,5 +70,5 @@ Check if you should preload:
 </style>
 
 <script>
-	import "$libs/manrope/font.css";
+	import "$lib/manrope/font.css";
 </script>

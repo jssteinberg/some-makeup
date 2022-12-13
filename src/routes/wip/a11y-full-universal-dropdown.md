@@ -13,6 +13,6 @@ Hi!
 </Dropdown>
 
 <script>
-import SimpleDropdown from '$libs/dropdown/SimpleDropdown.svelte'
-import Dropdown from '$libs/dropdown/Dropdown.svelte'
+import SimpleDropdown from '$lib/dropdown/SimpleDropdown.svelte'
+import Dropdown from '$lib/dropdown/Dropdown.svelte'
 </script>

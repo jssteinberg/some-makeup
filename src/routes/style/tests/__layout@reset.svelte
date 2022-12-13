@@ -1,11 +1,11 @@
 <script>
 	import CssToggle from "./_css-toggle.svelte";
 	import StyleNav from "../_style-nav.svelte";
-	import Nav from "$libs/Nav.svelte";
+	import Nav from "$lib/Nav.svelte";
 	import { page } from "$app/stores";
-	import MetaTags from "$libs/MetaData.svelte";
+	import MetaTags from "$lib/MetaData.svelte";
 	import { onMount } from "svelte";
-	import Header from "$libs/Header.svelte";
+	import Header from "$lib/Header.svelte";
 
 	const links = [
 		{

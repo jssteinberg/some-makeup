@@ -59,7 +59,7 @@ Code & terminal colors---[nightcool](/nightcool)
 </style>
 
 <script>
-	import Hr from "$libs/Hr.svelte"
+	import Hr from "$lib/Hr.svelte"
 	export let data;
 	const posts = data?.posts;
 </script>

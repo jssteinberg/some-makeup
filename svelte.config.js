@@ -9,17 +9,14 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		alias: {
-			$libs: 'src/libs'
-		}
 	},
 
 	preprocess: [
 		preprocess({
 			postcss: true,
-			scss: {
-				prependData: '@use "src/variables.scss" as *;'
-			}
+			// scss: {
+			// 	prependData: '@use "src/variables.scss" as *;'
+			// }
 		}),
 
 		mdsvex(mdsvexConfig)

@@ -34,5 +34,5 @@ Then, also incorporating a technique with attributes used in [sanitize.css](http
 <PrismCss />
 
 <script>
-  import PrismCss from '/src/libs/PrismCss.svelte';
+  import PrismCss from '/src/lib/PrismCss.svelte';
 </script>

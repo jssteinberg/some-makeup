@@ -1,6 +1,6 @@
 <script>
 	import { page } from "$app/stores";
-	import Nav from "$libs/Nav.svelte";
+	import Nav from "$lib/Nav.svelte";
 
 	const links = [
 		{
