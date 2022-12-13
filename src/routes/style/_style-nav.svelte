@@ -14,6 +14,10 @@
 		// 	label: 'tests',
 		// 	href: '/style/tests',
 		// },
+		{
+			label: "github",
+			href: "https://github.com/jssteinberg/some-makeup",
+		},
 	];
 </script>
 
