@@ -8,7 +8,7 @@
 <footer class={classes}>
 	<slot />
 
-	<p>
+	<p class="footer-privacy-statement">
 		<em>
 			{title || `This site`} does not store any of your data and does not track you,
 			or embed other trackers.
@@ -40,8 +40,8 @@
 	}
 
 	footer :global(h2),
-	footer :global(h2 + *),
-	footer :global(h2 + ul > li) {
+	footer :global(h2 + :not(.footer-privacy-statement)),
+	footer :global(h2 + :not(.footer-privacy-statement) *) {
 		display: inline;
 		margin-inline-end: 1em;
 	}
@@ -53,10 +53,6 @@
 		min-width: var(--_TOUCH-TARGET-SIZE);
 		text-transform: lowercase;
 		font-variant: small-caps;
-	}
-
-	footer :global(ul > :first-child a) {
-		justify-content: center;
 	}
 
 	footer :global(ul a::before) {

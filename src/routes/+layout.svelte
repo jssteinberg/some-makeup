@@ -20,18 +20,15 @@
 
 	<Footer title="some.makeup">
 		<h2>
-			<a
-				sveltekit:prefetch
-				aria-current={$page.url.pathname === "/" ? "page" : undefined}
-				href="/">some.makeup</a
+			<a aria-current={$page.url.pathname === "/" ? "page" : undefined} href="/"
+				>some.makeup</a
 			>
 			2021-{new Date().getFullYear()}
 		</h2>
 
-		<ul class="nav">
+		<ul>
 			<li>
 				<a
-					sveltekit:prefetch
 					aria-current={$page.url.pathname === "/about" ? "page" : undefined}
 					href="/about"
 				>
