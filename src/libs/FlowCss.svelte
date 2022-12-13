@@ -1,6 +1,6 @@
 <svelte:head>
 	<style lang="scss">
-		@use '../flow.css';
+		@use "../typography.css";
 
 		:root {
 			--added-lead: unset;

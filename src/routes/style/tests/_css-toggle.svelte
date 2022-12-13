@@ -17,7 +17,7 @@
 		develop: false,
 		form: false,
 		space: false,
-		flow: false,
+		typography: false,
 	};
 </script>
 
@@ -40,7 +40,7 @@
 {#if css.develop} <DevelopCss /> {/if}
 {#if css.form} <FormCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
-{#if css.flow} <LineHeightCss /> {/if}
+{#if css.typography} <LineHeightCss /> {/if}
 
 <style>
 	*,
