@@ -1,5 +1,5 @@
 ---
-title: "The `<dialog>` Element"
+title: "The <code>dialog</code> Element"
 ---
 
 # The `<dialog>` Element

@@ -41,7 +41,7 @@
 
 	footer :global(h2),
 	footer :global(h2 + :not(.footer-privacy-statement)),
-	footer :global(h2 + :not(.footer-privacy-statement) *) {
+	footer :global(h2 + :not(.footer-privacy-statement) :not(a)) {
 		display: inline;
 		margin-inline-end: 1em;
 	}
@@ -53,6 +53,10 @@
 		min-width: var(--_TOUCH-TARGET-SIZE);
 		text-transform: lowercase;
 		font-variant: small-caps;
+	}
+
+	footer :global(h2 + * > :first-child a) {
+		justify-content: center;
 	}
 
 	footer :global(ul a::before) {

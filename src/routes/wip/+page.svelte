@@ -1,31 +1,20 @@
-<script context="module">
-	import { getPostsFromFiles } from "$libs/utils/index.js";
-
-	const markdownFiles = import.meta.glob("./*.md", { eager: true });
-	const excludeFiles = ["index"];
-
-	export const load = async ({ url }) => {
-		const posts = getPostsFromFiles(markdownFiles, url).filter(
-			item => !excludeFiles.includes(item.title)
-		);
-
-		return {
-			props: {
-				posts,
-			},
-		};
-	};
-</script>
-
 <script>
-	import PostList from "$libs/PostList.svelte";
-
-	export let posts;
+	export let data;
+	const posts = data?.posts;
 </script>
 
 <h1>WIP</h1>
 
-<PostList {posts} />
+<ol>
+	{#each posts as post}
+		<li>
+			{#if post.meta?.date}<small><time>{post.meta.date[0]}</time></small>{/if}
+			<a href={post.path} lang={post.meta?.lang ? post.meta.lang : undefined}>
+				<span>{@html post.meta?.title || `knot`}</span>
+			</a>
+		</li>
+	{/each}
+</ol>
 
 <style>
 	h1,

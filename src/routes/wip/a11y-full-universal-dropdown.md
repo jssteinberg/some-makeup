@@ -1,8 +1,3 @@
----
-date: ['2022-06']
-title: Dropdown
----
-
 # Possible A11y Fully Featured Universal Dropdown
 
 <SimpleDropdown>
@@ -12,7 +7,7 @@ Hi SimpleDropdown!
 </SimpleDropdown>
 
 <Dropdown>
-	
+
 Hi!
 
 </Dropdown>

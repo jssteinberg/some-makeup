@@ -19,32 +19,34 @@
 	</main>
 
 	<Footer title="some.makeup">
-		<h2>
-			<a aria-current={$page.url.pathname === "/" ? "page" : undefined} href="/"
-				>some.makeup</a
-			>
-			2021-{new Date().getFullYear()}
-		</h2>
+		<div data-sveltekit-prefetch>
+			<h2>
+				<a
+					aria-current={$page.url.pathname === "/" ? "page" : undefined}
+					href="/">some.makeup</a
+				>
+				2021-{new Date().getFullYear()}
+			</h2>
 
-		<ul>
-			<li>
-				<a
-					aria-current={$page.url.pathname === "/about" ? "page" : undefined}
-					href="/about"
-				>
-					About
-				</a>
-			</li>
-			<li>
-				<a
-					aria-current={$page.url.pathname === "/wip" ? "page" : undefined}
-					href="/wip"
-					sveltekit:prefetch
-				>
-					WIP
-				</a>
-			</li>
-		</ul>
+			<ul>
+				<li>
+					<a
+						aria-current={$page.url.pathname === "/about" ? "page" : undefined}
+						href="/about"
+					>
+						About
+					</a>
+				</li>
+				<li>
+					<a
+						aria-current={$page.url.pathname === "/wip" ? "page" : undefined}
+						href="/wip"
+					>
+						WIP
+					</a>
+				</li>
+			</ul>
+		</div>
 	</Footer>
 </div>
 
