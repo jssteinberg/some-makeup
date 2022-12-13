@@ -1,13 +1,17 @@
 import { json } from '@sveltejs/kit';
 
 export const GET = async () => {
-	const allPostFiles = import.meta.glob('/src/routes/wip/*.md');
+	const allPostFiles = import.meta.glob('/src/routes/wip/**/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const all = await resolver();
-			const postPath = path.slice(11, -3);
+			const postPath = path.match(/\+page\./g)
+				? path
+					.slice(11, -3)
+					.replace(/\/[^/]*$/g, ``)
+				: path.slice(11, -3);
 
 			return {
 				meta: all.metadata,
