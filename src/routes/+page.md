@@ -1,5 +1,5 @@
 ---
-title: Some
+title: some.makeup
 description: "Makeup for the web and tools."
 layout: no
 ---
@@ -9,7 +9,7 @@ layout: no
 	data-sveltekit-prefetch
 >
 
-# *Some*
+# *Some.<span class="visually-hidden">makeup</span>*
 
 *Makeup for the web and tools.*
 

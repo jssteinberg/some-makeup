@@ -1,50 +1,24 @@
 <script>
-	import { page } from "$app/stores";
+	let classes;
+
+	export let title;
+	export { classes as class };
 </script>
 
-<footer class="footer">
-	<h2 class="nav">
-		<a
-			sveltekit:prefetch
-			aria-current={$page.url.pathname === "/" ? "page" : undefined}
-			href="/"
-		>
-			some.makeup</a
-		>
-		2021-{new Date().getFullYear()}
-	</h2>
-
-	<ul class="nav">
-		<li>
-			<a
-				sveltekit:prefetch
-				aria-current={$page.url.pathname === "/about" ? "page" : undefined}
-				href="/about"
-			>
-				About
-			</a>
-		</li>
-		<!-- <li> -->
-		<!-- 	<a -->
-		<!-- 		aria-current={$page.url.pathname === "/wip" ? "page" : undefined} -->
-		<!-- 		href="/wip" -->
-		<!-- 		sveltekit:prefetch -->
-		<!-- 	> -->
-		<!-- 		WIP -->
-		<!-- 	</a> -->
-		<!-- </li> -->
-	</ul>
+<footer class={classes}>
+	<slot />
 
 	<p>
-		This site does not store any of your data, and does not track you or embed
-		other trackers.
+		<em>
+			{title || `This site`} does not store any of your data and does not track you,
+			or embed other trackers.
+		</em>
 	</p>
 
 	<p aria-hidden="true">
 		<a
 			href="#document"
 			tabindex="-1"
-			class="touch-target"
 			on:click|preventDefault={() => {
 				window.scrollTo(0, 0);
 			}}
@@ -55,46 +29,37 @@
 </footer>
 
 <style>
-	*,
-	::before,
-	::after {
-		box-sizing: border-box;
-		font-size: 1em;
-	}
-
 	footer {
-		margin: var(--TOUCH-TARGET-SIZE) var(--view-inline);
+		--_TOUCH-TARGET-SIZE: max(48px, 3rem);
+		margin: var(--_TOUCH-TARGET-SIZE) var(--view-inline);
 	}
 
-	h2,
-	h2 + *,
-	h2 + ul > li {
+	footer :global(*) {
+		font-size: 1em;
+		padding: 0;
+	}
+
+	footer :global(h2),
+	footer :global(h2 + *),
+	footer :global(h2 + ul > li) {
 		display: inline;
 		margin-inline-end: 1em;
 	}
 
-	ul {
-		padding: 0;
-	}
-
-	a {
+	footer :global(a) {
 		display: inline-flex;
 		align-items: center;
-		min-height: var(--TOUCH-TARGET-SIZE);
-		min-width: var(--TOUCH-TARGET-SIZE);
+		min-height: var(--_TOUCH-TARGET-SIZE);
+		min-width: var(--_TOUCH-TARGET-SIZE);
 		text-transform: lowercase;
 		font-variant: small-caps;
 	}
 
-	ul > :first-child a {
+	footer :global(ul > :first-child a) {
 		justify-content: center;
 	}
 
-	h2 a::before {
-		content: "//";
-	}
-
-	.nav a::before {
+	footer :global(ul a::before) {
 		content: "/";
 		font-weight: bolder;
 	}
