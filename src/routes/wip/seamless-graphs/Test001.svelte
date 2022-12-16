@@ -1,16 +1,8 @@
 <script>
-	// import { onMount } from "svelte";
 	import "charts.css";
 	export let title;
 	export let titleEffect = "see-trough-transparent";
 	export let lang;
-
-	// onMount(async () => {
-	// 	const data = await fetch(
-	// 		"https://api.servicekanal.no/spotpriser/fradatotildato/2022-11-13/2022-12-13"
-	// 	);
-	// 	console.log(data);
-	// });
 </script>
 
 <section {lang}>
