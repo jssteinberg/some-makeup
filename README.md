@@ -2,22 +2,24 @@
 
 Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
 
+[Installation and documentation](https://some.makeup/style)
+
+The files in question are exported as:
+
 ```
-./src/default.css";
-./src/develop.css";
-./src/where-default.css";
-./src/where-develop.css";
+default.css
+develop.css
+where-default.css
+where-develop.css
 ```
 
-[Installation and documentation](https://some.makeup/style)
+The actual files are located in the “src” folder for the real path.
 
 *Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr] (there's also [this custom CSS reset][mccr]).*
 
 <details>
 
 <summary>Plans</summary>
-
-*Git repository is a mess. A fix-up is slowly in the works. If you somehow stumbled over this library and would like it sped up, e.g., for contributions, please create an issue/request/discussion(?).*
 
 Plan v2:
 
