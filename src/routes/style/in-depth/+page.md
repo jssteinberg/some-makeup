@@ -85,7 +85,7 @@ It should only be implemented if it can be done so safely, not causing side effe
 [sc]: https://github.com/csstools/sanitize.css
 
 <script>
-	import Details from "$libs/Details.svelte"
+	import Details from "$lib/Details.svelte"
 </script>
 
 <style>

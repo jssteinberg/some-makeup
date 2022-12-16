@@ -1,8 +1,8 @@
 <script>
-	import "../libs/app.css";
+	import "../lib/app.css";
 	import { page } from "$app/stores";
-	import Header from "/src/libs/Header.svelte";
-	import Footer from "/src/libs/Footer.svelte";
+	import Header from "/src/lib/Header.svelte";
+	import Footer from "/src/lib/Footer.svelte";
 
 	export const prerender = true;
 </script>
@@ -18,7 +18,36 @@
 		<slot />
 	</main>
 
-	<Footer />
+	<Footer title="some.makeup">
+		<div data-sveltekit-prefetch>
+			<h2>
+				<a
+					aria-current={$page.url.pathname === "/" ? "page" : undefined}
+					href="/">some.makeup</a
+				>
+				2021-{new Date().getFullYear()}
+			</h2>
+
+			<ul>
+				<li>
+					<a
+						aria-current={$page.url.pathname === "/about" ? "page" : undefined}
+						href="/about"
+					>
+						About
+					</a>
+				</li>
+				<li>
+					<a
+						aria-current={$page.url.pathname === "/wip" ? "page" : undefined}
+						href="/wip"
+					>
+						WIP
+					</a>
+				</li>
+			</ul>
+		</div>
+	</Footer>
 </div>
 
 <style>

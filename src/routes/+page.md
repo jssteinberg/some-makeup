@@ -1,5 +1,5 @@
 ---
-title: Some
+title: some.makeup
 description: "Makeup for the web and tools."
 layout: no
 ---
@@ -9,7 +9,7 @@ layout: no
 	data-sveltekit-prefetch
 >
 
-# *Some*
+# *Some.<span class="visually-hidden">makeup</span>*
 
 *Makeup for the web and tools.*
 
@@ -21,7 +21,8 @@ Code & terminal colors---[nightcool](/nightcool)
 
 {#each posts as post}
 	<p>
-		{#if post.meta?.date}<small><time>{post.meta.date[0]}</time></small>{/if}—<a href={post.path} lang={
+		{#if post.meta?.date}<small><time>{post.meta.date[0]}</time></small>{/if}
+		<a href={post.path} lang={
 			post.meta?.lang
 				? post.meta.lang
 				: undefined
@@ -58,7 +59,7 @@ Code & terminal colors---[nightcool](/nightcool)
 </style>
 
 <script>
-	import Hr from "$libs/Hr.svelte"
+	import Hr from "$lib/Hr.svelte"
 	export let data;
 	const posts = data?.posts;
 </script>

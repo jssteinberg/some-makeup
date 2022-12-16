@@ -305,7 +305,7 @@ summary {
 [sc]: https://github.com/csstools/sanitize.css
 
 <script>
-	import Details from "$libs/Details.svelte"
+	import Details from "$lib/Details.svelte"
 </script>
 
 <style>

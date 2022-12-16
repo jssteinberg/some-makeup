@@ -2,20 +2,24 @@
 
 Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
 
+[Installation and documentation](https://some.makeup/style)
+
+The files in question are exported as:
+
 ```
-./src/default.css";
-./src/develop.css";
-./src/where-default.css";
-./src/where-develop.css";
+default.css
+develop.css
+where-default.css
+where-develop.css
 ```
 
-[Installation and documentation](https://some.makeup/style)
+The actual files are located in the “src” folder for the real path.
 
 *Inspired by The Elements of Typographic Style, [normalize.css][nc], [modern-normalize][mn], [CSS Remedy][cr], [sanitize.css][sc], [Open Props][op], [A modern CSS reset][amcr] (there's also [this custom CSS reset][mccr]).*
 
-## Plans
+<details>
 
-*This repo is a mess. A fix-up is slowly in the works. If you somehow stumbled over this library and would like it sped up, e.g., for contributions, please create an issue/request.*
+<summary>Plans</summary>
 
 Plan v2:
 
@@ -38,26 +42,31 @@ default.css maybes:
 	}
 	```
 
+</details>
+
 <details>
 
 <summary>Naming process</summary>
 
 - ( ) default.css, developer.css, space.css, typography.css (for potential style-some)
-- (-) default.css, develop.css, (space.css, typography.css)  
+- (-) default.css, develop.css, (space.css, typography.css)
 
 </details>
 
-## History
+<details>
 
-*makeup-style is the updated, slightly more opinionated remake of my own [Floor Typography CSS](https://floortypography.vercel.app).*
+<summary>History</summary>
 
-*Changes from Floor Typography CSS v22:*
+makeup-style is the updated remake of [Floor Typography CSS](https://floortypography.vercel.app).
+
+Changes from Floor Typography CSS v22:
 
 - Updated default CSS revising and normalizing, more tested.
 - Less files and features, more quality.
 - `--line-span` var for headings (not `--h…-min-font-size`).
 - `--space` var for controlling spacing (not `--spacer`).
 	- Space is not removed for sub-lists (would cause unexpected list styles if parent list was styled unconventional. Rather remove margin for sub-lists in containers of choice).
+</details>
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
 [cc]: https://cube.fyi/

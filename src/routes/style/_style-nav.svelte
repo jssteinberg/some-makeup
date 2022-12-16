@@ -1,5 +1,5 @@
 <script>
-	import Nav from "/src/libs/Nav.svelte";
+	import Nav from "/src/lib/Nav.svelte";
 
 	const links = [
 		{
@@ -14,6 +14,10 @@
 		// 	label: 'tests',
 		// 	href: '/style/tests',
 		// },
+		{
+			label: "github",
+			href: "https://github.com/jssteinberg/some-makeup",
+		},
 	];
 </script>
 

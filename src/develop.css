@@ -2,12 +2,14 @@
 
 *, ::before, ::after {
 	background-repeat: no-repeat;
-	mask-repeat: no-repeat; }
+	mask-repeat: no-repeat;
+}
 
 ::before, ::after {
 	border-radius: inherit;
 	text-decoration: inherit;
-	vertical-align: inherit; }
+	vertical-align: inherit;
+}
 
 /* REDUCE MOTION */
 
@@ -16,4 +18,6 @@
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important; }}
+		scroll-behavior: auto !important;
+	}
+}

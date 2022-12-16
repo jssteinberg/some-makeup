@@ -1,10 +1,10 @@
 <script>
-	import MetaTags from "$libs/MetaData.svelte";
-	import Details from "$libs/Details.svelte";
-	import ContainCss from "$libs/DefaultCss.svelte";
-	import SpaceCss from "$libs/SpaceCss.svelte";
-	import LineHeightCss from "$libs/FlowCss.svelte";
-	import PrismCss from "$libs/PrismCss.svelte";
+	import MetaTags from "$lib/MetaData.svelte";
+	import Details from "$lib/Details.svelte";
+	import ContainCss from "$lib/DefaultCss.svelte";
+	import SpaceCss from "$lib/SpaceCss.svelte";
+	import LineHeightCss from "$lib/FlowCss.svelte";
+	import PrismCss from "$lib/PrismCss.svelte";
 
 	const hslToHex = ({ h, s, l }) => {
 		l /= 100;

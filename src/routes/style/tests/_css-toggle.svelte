@@ -1,9 +1,9 @@
 <script>
-	import DefaultCss from "/src/libs/DefaultCss.svelte";
-	import DevelopCss from "/src/libs/DevelopCss.svelte";
-	import FormCss from "/src/libs/FormCss.svelte";
-	import SpaceCss from "/src/libs/SpaceCss.svelte";
-	import LineHeightCss from "/src/libs/FlowCss.svelte";
+	import DefaultCss from "/src/lib/DefaultCss.svelte";
+	import DevelopCss from "/src/lib/DevelopCss.svelte";
+	import FormCss from "/src/lib/FormCss.svelte";
+	import SpaceCss from "/src/lib/SpaceCss.svelte";
+	import LineHeightCss from "/src/lib/FlowCss.svelte";
 	import { createEventDispatcher } from "svelte";
 
 	const dispatch = createEventDispatcher();
@@ -17,7 +17,7 @@
 		develop: false,
 		form: false,
 		space: false,
-		flow: false,
+		typography: false,
 	};
 </script>
 
@@ -40,7 +40,7 @@
 {#if css.develop} <DevelopCss /> {/if}
 {#if css.form} <FormCss /> {/if}
 {#if css.space} <SpaceCss /> {/if}
-{#if css.flow} <LineHeightCss /> {/if}
+{#if css.typography} <LineHeightCss /> {/if}
 
 <style>
 	*,

@@ -103,5 +103,5 @@ For developer convenience, it includes some simple rules for more intuitive codi
 [sc]: https://github.com/csstools/sanitize.css
 
 <script>
- 	import Details from "/src/libs/Details.svelte";
+ 	import Details from "/src/lib/Details.svelte";
 </script>

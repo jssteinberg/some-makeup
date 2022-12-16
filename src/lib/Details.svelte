@@ -2,7 +2,7 @@
 <Details title="More" open>
 	<span slot="summary">More</span>
 	<p>
-		<a href="/wip" sveltekit:prefetch>WIP</a>
+		<a href="/wip">WIP</a>
 	</p>
 </Details>
 -->

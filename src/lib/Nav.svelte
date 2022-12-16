@@ -16,11 +16,11 @@
 	aria-label={ariaLabel}
 	aria-hidden={ariaHidden ? `true` : undefined}
 	class={classes}
+	data-sveltekit-prefetch
 >
 	{#each links as link}
 		<a
 			href={link.href}
-			sveltekit:prefetch
 			aria-current={$page.url.pathname === link.href ? `page` : undefined}
 			class:parent={$page.url.pathname.includes(link.href)}
 			tabindex={ariaHidden ? `-1` : undefined}
