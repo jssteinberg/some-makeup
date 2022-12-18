@@ -10,7 +10,7 @@
 
 	<p class="footer-privacy-statement">
 		{title || `This site`} does not collect any data, and does not use cookies or
-		other tracking technologies. <em>Privacy keeps us humane.</em>
+		other tracking technologies.
 	</p>
 
 	<p aria-hidden="true">
