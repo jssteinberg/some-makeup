@@ -9,10 +9,8 @@
 	<slot />
 
 	<p class="footer-privacy-statement">
-		<em>
-			{title || `This site`} does not store any of your data and does not track you,
-			or embed other trackers.
-		</em>
+		{title || `This site`} does not collect any data, and does not use cookies or
+		other tracking technologies.
 	</p>
 
 	<p aria-hidden="true">
