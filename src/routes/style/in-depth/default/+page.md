@@ -57,7 +57,7 @@ For the document root, there are three important fixes for narrow viewports:
 
 1. To Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 2. To allow browsers to auto hyphenate words when text wraps, if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
-3. To break words if needed, and on soft-wrap word-break possibilities if possible, to not overflow horizontally and create a horizontal scrollbar (`break-word` is fallback for Safari Ios <= 14).
+3. To break words if needed, and on soft-wrap word-break possibilities if possible, to not overflow horizontally and create a horizontal scrollbar (`break-word` is fallback for Ios Safari 14).
 
 ```css
 :root {
