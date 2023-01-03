@@ -70,4 +70,4 @@ The first ruleset basically targets code blocks (with `pre` parent). The second 
 ```
 
 
-—[Johan](/johan)
+—[Johan](//johan.land)
