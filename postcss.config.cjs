@@ -1,18 +1,12 @@
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-
-const mode = process.env.NODE_ENV;
-const dev = mode === 'development';
+const postcssPresetEnv = require('postcss-preset-env');
 
 const config = {
-	plugins: [
-		autoprefixer(),
-		!dev &&
-			cssnano({
-				preset: 'default'
-			}),
-		autoprefixer
-	]
+	plugins: [postcssPresetEnv({
+		// stage: false,
+		features: {
+			"logical-properties-and-values": { dir: "ltr" },
+		},
+	})]
 };
 
 module.exports = config;

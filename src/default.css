@@ -61,7 +61,7 @@ img, svg, video, canvas {
 	vertical-align: middle; }
 
 figure {
-	margin-inline: 0; }
+	margin-right: 0; margin-left: 0; }
 
 /* CONSISTENT CURSOR */
 

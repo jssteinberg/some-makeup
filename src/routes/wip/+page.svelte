@@ -19,10 +19,10 @@
 	{/each}
 </ol>
 
-<style>
+<style lang="postcss">
 	h1,
 	h1 ~ :global(*) {
-		margin-inline: var(--view-inline);
+		margin-inline: var(--v-inline-gap);
 	}
 
 	ol {

@@ -44,7 +44,7 @@ set: ['nb', 'typography']
 
 </div>
 
-<style>
+<style lang="postcss">
 	.wrapper ul {
 		padding: 0;
 	}

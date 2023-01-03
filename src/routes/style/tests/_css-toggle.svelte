@@ -42,7 +42,7 @@
 {#if css.space} <SpaceCss /> {/if}
 {#if css.typography} <LineHeightCss /> {/if}
 
-<style>
+<style lang="postcss">
 	*,
 	::before,
 	::after {
@@ -53,7 +53,7 @@
 		color-scheme: var(--color-scheme);
 		margin-block-start: 0.5em;
 		margin-block-end: 0.5em;
-		padding-inline-start: var(--view-inline);
+		padding-inline-start: var(--v-inline-gap);
 		padding-inline-end: 1rem;
 
 		display: flex;

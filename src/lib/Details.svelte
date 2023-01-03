@@ -19,10 +19,9 @@
 	<slot />
 </details>
 
-<style>
+<style lang="postcss">
 	details {
-		margin-block-start: max(2em, 1.5 * var(--space, 1em));
-		margin-block-end: max(2em, 1.5 * var(--space, 1em));
+		margin-block: max(2em, 1.5 * var(--space, 1em));
 		padding-inline-end: var(--space, 1em);
 		padding-block-end: var(--space, 1em);
 	}

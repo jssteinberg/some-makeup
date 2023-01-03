@@ -130,8 +130,7 @@
 .app-theme-main-content {
 	--line-height: calc(1 + .6);
 
-	margin-inline-start: var(--view-inline);
-	margin-inline-end: var(--view-inline);
+	margin-inline: var(--v-inline-gap);
 	font-size: var(--font-size);
 }
 

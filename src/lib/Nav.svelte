@@ -32,12 +32,11 @@
 	<slot />
 </nav>
 
-<style>
+<style lang="postcss">
 	nav {
-		margin-block-start: 0.5rem;
-		margin-block-end: 0.5rem;
-		margin-inline-start: var(--view-inline);
-		padding-inline-end: var(--view-inline);
+		margin-block: 0.5rem;
+		margin-inline-start: var(--v-inline-gap);
+		padding-inline-end: var(--v-inline-gap);
 		display: flex;
 		flex: 1;
 		gap: 0.5rem 1rem;

@@ -205,7 +205,7 @@ color15 #{hslToHex(colors[17])}
 <LineHeightCss />
 <PrismCss />
 
-<style>
+<style lang="postcss">
 	h1 {
 		font-family: var(--mono-font, monospace);
 		text-transform: lowercase;
