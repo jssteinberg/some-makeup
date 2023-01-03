@@ -17,6 +17,6 @@ layout: no
 	h1 {
 		font-weight: normal;
 		font-style: italic;
-		margin: 2em var(--viewport-inline-gap) 1em;
+		margin: 2em var(--v-inline-gap) 1em;
 	}
 </style>

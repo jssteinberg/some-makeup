@@ -12,8 +12,7 @@
 
 	--max-content-width: calc(40rem + 15vw);
 	--content-width: min(100%, var(--max-content-width));
-	--viewport-inline-gap: 4.125vw;
-	--v-inline-gap: var(--viewport-inline-gap);
+	--v-inline-gap: 4.125vw;
 	--decor-width: 2px;
 
 	--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -49,8 +48,7 @@
 
 @media (min-width: 600px) {
 	:root {
-		--viewport-inline-gap: 8.25vw;
-		--v-inline-gap: var(--viewport-inline-gap);
+		--v-inline-gap: 8.25vw;
 	}
 }
 
@@ -62,8 +60,8 @@
 
 @media (min-width: 1500px) {
 	:root {
-		--viewport-inline-gap: 12.5vw;
-		--v-inline-gap: var(--viewport-inline-gap);
+		--v-inline-gap: 12.5vw;
+		--font-size: clamp(1.1rem, .125rem + 1vw, 1.2em);
 	}
 }
 
