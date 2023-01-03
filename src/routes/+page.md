@@ -20,7 +20,7 @@ layout: no
 </Index>
 
 <script>
-	import Index from "./Index.svelte"
+	import Index from "./_Index.svelte"
 	export let data;
 	const posts = data?.posts;
 </script>
