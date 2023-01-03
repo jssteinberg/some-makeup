@@ -46,7 +46,7 @@
 	<Nav {links} ariaLabel="In-depth Parts" sticky="bottom" />
 </article>
 
-<style>
+<style lang="postcss">
 	.app-theme,
 	article :global(.app-theme) {
 		--space: calc(var(--font-size) * (1 + var(--added-lead, 0.6)));

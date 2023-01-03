@@ -60,7 +60,7 @@
 	</table>
 </section>
 
-<style>
+<style lang="postcss">
 	section {
 		--_title-size: min(6em, 5vw + 2 * var(--font-size));
 		background-image: linear-gradient(

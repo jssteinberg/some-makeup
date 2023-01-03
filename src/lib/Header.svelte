@@ -2,7 +2,7 @@
 	<a href="/" class="touch-target-center">/</a>
 </header>
 
-<style>
+<style lang="postcss">
 	* {
 		box-sizing: border-box;
 	}

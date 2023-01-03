@@ -14,10 +14,9 @@
 	</p>
 {/if}
 
-<style>
+<style lang="postcss">
 	.date-info {
 		/* text-align: end; */
-		padding-inline-start: var(--v-inline-gap);
-		padding-inline-end: var(--v-inline-gap);
+		padding-inline: var(--v-inline-gap);
 	}
 </style>

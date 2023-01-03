@@ -42,7 +42,7 @@ Playing with my CSS dice.
 	let deg = 358.7;
 </script>
 
-<style>
+<style lang="postcss">
 	.dice-wrapper {
 		display: grid;
 		place-items: center;

@@ -1,15 +1,20 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount } from "svelte";
 	export let bg = false;
 	export let hue = 358.7;
 
 	onMount(() => {
-		if (typeof document === 'undefined') return false;
-		document.documentElement.classList.add('started-dice-animation');
+		if (typeof document === "undefined") return false;
+		document.documentElement.classList.add("started-dice-animation");
 	});
 </script>
 
-<div class="scene container" class:bg aria-hidden="true" style={`--dice-hue: ${hue}deg`}>
+<div
+	class="scene container"
+	class:bg
+	aria-hidden="true"
+	style={`--dice-hue: ${hue}deg`}
+>
 	<ol class="cube">
 		<li class="side front">1</li>
 		<li class="side bottom">2</li>
@@ -20,7 +25,7 @@
 	</ol>
 </div>
 
-<style>
+<style lang="postcss">
 	ol {
 		list-style: none;
 		padding: 0;
@@ -46,7 +51,7 @@
 	}
 
 	.scene.bg::after {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -69,19 +74,24 @@
 
 	@keyframes rotateDice {
 		0% {
-			transform: rotateX(calc(var(--r-x) + 0deg)) rotateY(calc(var(--r-y) + 0deg)) rotateZ(0deg);
+			transform: rotateX(calc(var(--r-x) + 0deg))
+				rotateY(calc(var(--r-y) + 0deg)) rotateZ(0deg);
 		}
 		25% {
-			transform: rotateX(calc(var(--r-x) + 7.5deg)) rotateY(calc(var(--r-y) + 90deg)) rotateZ(0deg);
+			transform: rotateX(calc(var(--r-x) + 7.5deg))
+				rotateY(calc(var(--r-y) + 90deg)) rotateZ(0deg);
 		}
 		50% {
-			transform: rotateX(calc(var(--r-x) + 0deg)) rotateY(calc(var(--r-y) + 180deg)) rotateZ(0deg);
+			transform: rotateX(calc(var(--r-x) + 0deg))
+				rotateY(calc(var(--r-y) + 180deg)) rotateZ(0deg);
 		}
 		75% {
-			transform: rotateX(calc(var(--r-x) + 0deg)) rotateY(calc(var(--r-y) + 270deg)) rotateZ(7.5deg);
+			transform: rotateX(calc(var(--r-x) + 0deg))
+				rotateY(calc(var(--r-y) + 270deg)) rotateZ(7.5deg);
 		}
 		100% {
-			transform: rotateX(calc(var(--r-x) + 0deg)) rotateY(calc(var(--r-y) + 360deg)) rotateZ(0deg);
+			transform: rotateX(calc(var(--r-x) + 0deg))
+				rotateY(calc(var(--r-y) + 360deg)) rotateZ(0deg);
 		}
 	}
 
@@ -121,11 +131,13 @@
 	}
 
 	.left {
-		transform: rotateY(90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(-90deg);
+		transform: rotateY(90deg) translateZ(calc(0.5 * var(--cube-size)))
+			rotateZ(-90deg);
 	}
 
 	.right {
-		transform: rotateY(-90deg) translateZ(calc(0.5 * var(--cube-size))) rotateZ(90deg);
+		transform: rotateY(-90deg) translateZ(calc(0.5 * var(--cube-size)))
+			rotateZ(90deg);
 	}
 
 	.top {

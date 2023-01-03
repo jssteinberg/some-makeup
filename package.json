@@ -1,72 +1,73 @@
 {
-  "name": "makeup-style",
-  "version": "0.3.5",
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "package": "svelte-kit package",
-    "preview": "vite preview",
-    "prepare": "husky install",
-    "lint": "stylelint 'src/*.css' && eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
-    "test": ""
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-vercel": "^1.0.0-next.43",
-    "@sveltejs/kit": "^1.0.0-next.267",
-    "autoprefixer": "^10.4.13",
-    "charts.css": "^0.9.0",
-    "cssnano": "^5.1.14",
-    "eslint": "^8.29.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "husky": "^8.0.2",
-    "mdsvex": "^0.10.6",
-    "postcss": "^8.4.20",
-    "postcss-import": "^15.1.0",
-    "postcss-load-config": "^4.0.1",
-    "prettier": "^2.8.1",
-    "prettier-plugin-svelte": "^2.9.0",
-    "sass": "^1.56.2",
-    "stylelint": "^14.16.0",
-    "svelte": "^3.54.0",
-    "svelte-preprocess": "^5.0.0",
-    "vite": "^4.0.1"
-  },
-  "description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
-  "engines": ">=14.16",
-  "exports": {
-    ".": "./index.js",
-    "./develop.css": "./src/develop.css",
-    "./default.css": "./src/default.css",
-    "./where-develop.css": "./src/where-develop.css",
-    "./where-default.css": "./src/where-default.css"
-  },
-  "directories": {
-    "lib": "src"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jssteinberg/some-makeup.git"
-  },
-  "keywords": [
-    "css",
-    "remedy",
-    "normalize",
-    "intuitive",
-    "default",
-    "typography"
-  ],
-  "author": "Johan Sebergsen Steinberg",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jssteinberg/some-makeup/issues"
-  },
-  "homepage": "https://github.com/jssteinberg/some-makeup#readme",
-  "files": [
-    "index.js",
-    "src/*.css",
-    "src/class/*.css"
-  ],
-  "type": "module"
+	"name": "makeup-style",
+	"version": "0.3.5",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"prepare": "husky install",
+		"lint": "stylelint 'src/*.css' && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+		"test": ""
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-vercel": "^1.0.0-next.43",
+		"@sveltejs/kit": "^1.0.0-next.267",
+		"autoprefixer": "^10.4.13",
+		"charts.css": "^0.9.0",
+		"cssnano": "^5.1.14",
+		"eslint": "^8.29.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"husky": "^8.0.2",
+		"mdsvex": "^0.10.6",
+		"postcss": "^8.4.20",
+		"postcss-import": "^15.1.0",
+		"postcss-load-config": "^4.0.1",
+		"postcss-preset-env": "^7.8.3",
+		"prettier": "^2.8.1",
+		"prettier-plugin-svelte": "^2.9.0",
+		"sass": "^1.56.2",
+		"stylelint": "^14.16.0",
+		"svelte": "^3.54.0",
+		"svelte-preprocess": "^5.0.0",
+		"vite": "^4.0.1"
+	},
+	"description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
+	"engines": ">=14.16",
+	"exports": {
+		".": "./index.js",
+		"./develop.css": "./src/develop.css",
+		"./default.css": "./src/default.css",
+		"./where-develop.css": "./src/where-develop.css",
+		"./where-default.css": "./src/where-default.css"
+	},
+	"directories": {
+		"lib": "src"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jssteinberg/some-makeup.git"
+	},
+	"keywords": [
+		"css",
+		"remedy",
+		"normalize",
+		"intuitive",
+		"default",
+		"typography"
+	],
+	"author": "Johan Sebergsen Steinberg",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jssteinberg/some-makeup/issues"
+	},
+	"homepage": "https://github.com/jssteinberg/some-makeup#readme",
+	"files": [
+		"index.js",
+		"src/*.css",
+		"src/class/*.css"
+	],
+	"type": "module"
 }

@@ -28,10 +28,9 @@
 	<slot />
 </div>
 
-<style>
+<style lang="postcss">
 	.index-container {
-		padding-inline-start: var(--v-inline-gap);
-		padding-inline-end: var(--v-inline-gap);
+		padding-inline: var(--v-inline-gap);
 
 		/* Adjust font-size */
 		font-size: clamp(
@@ -53,22 +52,16 @@
 	}
 
 	ul {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0 var(--v-inline-gap);
 		list-style: none;
 		padding: 0;
 	}
 
-	h1,
-	h1 + * {
-		display: inline;
-	}
-
-	h1::before,
-	h1 + *::after {
-		content: "";
-		display: block;
-		height: var(--space, 1em);
+	/* if supports flex with gap */
+	@supports (display: flex) and (gap: 1em) {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0 var(--v-inline-gap);
+		}
 	}
 </style>

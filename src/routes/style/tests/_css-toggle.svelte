@@ -42,7 +42,7 @@
 {#if css.space} <SpaceCss /> {/if}
 {#if css.typography} <LineHeightCss /> {/if}
 
-<style>
+<style lang="postcss">
 	*,
 	::before,
 	::after {

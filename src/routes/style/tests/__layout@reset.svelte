@@ -103,7 +103,7 @@
 
 <Nav {links} ariaLabel="Test-pages" sticky="bottom" />
 
-<style>
+<style lang="postcss">
 	*,
 	::before,
 	::after {

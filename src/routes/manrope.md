@@ -44,7 +44,7 @@ Check if you should preload:
 <link rel="preload" href="Manrope-wght.4.505.woff2" as="font" type="font/woff2">
 ```
 
-<style>
+<style lang="postcss">
 	h1 ~ :not(pre),
 	h1 {
 		font-family: Manrope;
