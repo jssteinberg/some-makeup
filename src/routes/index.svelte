@@ -9,7 +9,7 @@
 		</h1>
 
 		<p>
-			<em>Makeup for the web and tools.</em>
+			<em>Makeup for the web and tools</em>
 		</p>
 
 		<ul>
@@ -53,8 +53,22 @@
 	}
 
 	ul {
-		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
+		gap: 0 var(--v-inline-gap);
+		list-style: none;
+		padding: 0;
+	}
+
+	h1,
+	h1 + * {
+		display: inline;
+	}
+
+	h1::before,
+	h1 + *::after {
+		content: "";
+		display: block;
+		height: var(--space, 1em);
 	}
 </style>
