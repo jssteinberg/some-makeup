@@ -112,7 +112,7 @@
 
 	.wrapper {
 		max-width: var(--content-width);
-		margin: 0 var(--view-inline);
+		margin: 0 var(--v-inline-gap);
 
 		position: relative;
 		border-left: 1px solid;
@@ -143,7 +143,7 @@
 		content: "";
 		/* background: no-repeat top right/1px 100% */
 		/* 	linear-gradient(transparent 25vh, var(--sep-color), transparent 75vh); */
-		width: calc(var(--view-inline) - 1px);
+		width: calc(var(--v-inline-gap) - 1px);
 		position: fixed;
 		inset: 0;
 		height: 100%;
@@ -155,9 +155,9 @@
 		font-family: var(--sans);
 		font-weight: 100;
 		font-weight: 300;
-		font-size: clamp(10px, var(--view-inline) - 0.9em, 15px);
+		font-size: clamp(10px, var(--v-inline-gap) - 0.9em, 15px);
 		line-height: 0.9;
-		width: calc(var(--view-inline) - 3px);
+		width: calc(var(--v-inline-gap) - 3px);
 		position: absolute;
 		left: 1px;
 		top: 0;

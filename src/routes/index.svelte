@@ -12,13 +12,15 @@
 			<em>Makeup for the web and tools.</em>
 		</p>
 
-		<p>
-			Base CSS library—<a href="/style">makeup-style</a>
-		</p>
+		<ul>
+			<li>
+				Base CSS library—<a href="/style">makeup-style</a>
+			</li>
 
-		<p>
-			Code & terminal colors—<a href="/nightcool">nightcool</a>
-		</p>
+			<li>
+				Code & terminal colors—<a href="/nightcool">nightcool</a>
+			</li>
+		</ul>
 	</div>
 
 	<Hr --hr-width="100%" />
@@ -28,8 +30,8 @@
 
 <style>
 	.index-container {
-		padding-inline-start: var(--view-inline);
-		padding-inline-end: var(--view-inline);
+		padding-inline-start: var(--v-inline-gap);
+		padding-inline-end: var(--v-inline-gap);
 
 		/* Adjust font-size */
 		font-size: clamp(
@@ -48,5 +50,11 @@
 	h1,
 	h1 + p em {
 		text-transform: lowercase;
+	}
+
+	ul {
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
 	}
 </style>

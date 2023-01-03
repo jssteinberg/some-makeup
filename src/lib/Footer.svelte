@@ -29,7 +29,7 @@
 <style>
 	footer {
 		--_TOUCH-TARGET-SIZE: max(48px, 3rem);
-		margin: var(--_TOUCH-TARGET-SIZE) var(--view-inline);
+		margin: var(--_TOUCH-TARGET-SIZE) var(--v-inline-gap);
 	}
 
 	footer :global(*) {

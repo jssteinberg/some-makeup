@@ -17,7 +17,7 @@
 <style>
 	.date-info {
 		/* text-align: end; */
-		padding-inline-start: var(--view-inline);
-		padding-inline-end: var(--view-inline);
+		padding-inline-start: var(--v-inline-gap);
+		padding-inline-end: var(--v-inline-gap);
 	}
 </style>

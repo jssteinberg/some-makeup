@@ -8,7 +8,7 @@
 	}
 
 	.site-header {
-		padding: 2em var(--view-inline) 0;
+		padding: 2em var(--v-inline-gap) 0;
 		margin-block-end: calc(0.5 * var(--space, 1rem));
 		display: flex;
 		justify-content: space-between;
