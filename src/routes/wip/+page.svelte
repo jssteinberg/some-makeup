@@ -22,7 +22,8 @@
 <style>
 	h1,
 	h1 ~ :global(*) {
-		margin-inline: var(--view-inline);
+		margin-inline-start: var(--view-inline);
+		margin-inline-end: var(--view-inline);
 	}
 
 	ol {
