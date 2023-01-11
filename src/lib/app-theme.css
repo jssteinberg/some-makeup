@@ -2,8 +2,8 @@
 
 /* Less specificity */
 
-:where(.app-theme-main-content) > :not(:where(h1,pre)) {
-	width: var(--content-width);
+:where(.app-theme-main-content) > :not(:where(h1, pre)) {
+	max-width: var(--content-width);
 }
 
 /* Lists */
