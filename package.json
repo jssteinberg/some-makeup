@@ -32,6 +32,7 @@
 		"stylelint": "^14.16.1",
 		"svelte": "^3.55.1",
 		"svelte-preprocess": "^5.0.0",
+		"unocss": "^0.48.3",
 		"vite": "^4.0.4"
 	},
 	"description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
