@@ -23,7 +23,7 @@
 		</ul>
 	</div>
 
-	<Hr --hr-width="100%" />
+	<Hr --hr-width="100%" --hr-size="max(3rem, 48px)" />
 
 	<slot />
 </div>
