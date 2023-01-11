@@ -3,7 +3,7 @@
 @import './makeupdarkness1.css';
 
 :root {
-	--TOUCH-TARGET-SIZE: max(48px, 3rem);
+	--touch-target-size: max(48px, 3em);
 
 	--added-lead: .225; /* Approx. browser default added-lead */
 	--font-size: clamp(

@@ -42,8 +42,8 @@
 
 	.index-container :global(a) {
 		display: block;
-		min-height: var(--TOUCH-TARGET-SIZE, 48px);
-		min-width: var(--TOUCH-TARGET-SIZE, 48px);
+		min-height: var(--touch-target-size, 48px);
+		min-width: var(--touch-target-size, 48px);
 	}
 
 	h1,

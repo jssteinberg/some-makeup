@@ -51,10 +51,10 @@
 		align-items: center;
 		flex-wrap: wrap;
 
-		min-height: var(--TOUCH-TARGET-SIZE, 48px);
+		min-height: var(--touch-target-size, 48px);
 		min-width: max(
 			min-content,
-			var(--touch-target-min-width, var(--TOUCH-TARGET-SIZE, 48px))
+			var(--touch-target-min-width, var(--touch-target-size, 48px))
 		);
 		white-space: nowrap;
 

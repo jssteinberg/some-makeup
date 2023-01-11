@@ -9,7 +9,7 @@
 <style lang="postcss">
 	hr {
 		--_content-width: min(100%, var(--hr-width, var(--content-width, 100%)));
-		--_size: max(var(--TOUCH-TARGET-SIZE), 1.5 * var(--space, 1em));
+		--_size: max(var(--touch-target-size), 1.5 * var(--space, 1em));
 
 		all: unset;
 		box-shadow: inset 0 0 0 1px var(--hr-fg, currentColor);

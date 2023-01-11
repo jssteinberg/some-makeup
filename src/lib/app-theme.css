@@ -140,7 +140,7 @@
 
 .app-theme-main-content hr {
 	--_content-width: var(--hr-width, var(--content-width, 100%));
-	--_size: max(var(--TOUCH-TARGET-SIZE), 1.5 * var(--space, 1em));
+	--_size: max(var(--touch-target-size), 1.5 * var(--space, 1em));
 
 	background: transparent;
 	box-shadow: inset 0 0 0 1px var(--hr-fg);
