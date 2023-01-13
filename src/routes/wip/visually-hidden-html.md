@@ -4,13 +4,15 @@ description: How to hide HTML elements visually with CSS.
 set: ["code"]
 ---
 
-# Visually Hidden HTML
+# CSS for Visually Hidden HTML
 
 To visually hide HTML elements with CSS, this is still the most comprehensive post I've found on this, adressing several cases not discussed anywhere else: https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
 
 Some details of the rules are further explored here, where it's also noted that `:active` must be considered in Safari: https://www.tpgi.com/the-anatomy-of-visually-hidden/
 
 The latter made me realize that separating into two variants, like `.visually-hidden` and `.visually-hidden-focusable`, is not wise since a visually hidden element should show if it can have focus and has focus---for not screen reader users.
+
+Another functionality I'm testing is to be able set a container to visually-hidden, but not when any children has focus using `:has()`.
 
 Then, also incorporating a technique using aria attributes instead of classes used in [sanitize.css](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L344-L356), it results in the following snippet:
 
