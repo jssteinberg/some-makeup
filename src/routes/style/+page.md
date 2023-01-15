@@ -12,7 +12,7 @@ So you want to makeup style? These minimal CSS files corrects and improves defau
 npm install makeup-style
 ```
 
-*Also consider using an auto prefixer and auto polyfill generator for older browsers, e.g., via [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env).
+*Also consider using a library like [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env) for auto prefixing and fixing of newer rules for older browsers.*
 
 <Details>
 <em slot="summary">Import examples</em>
@@ -56,7 +56,7 @@ This file is an updated alternative to
 [sanitize.css][sc] and similar---updated for all major browsers and new CSS. When it comes to normalization, it does not always do a full normalization for elements that works and are consistent to style, and/or that are specifically styled when they are relevant.
 
 <Details>
-<em slot="summary">Important</em>
+<em slot="summary">Important!</em>
 
 *Notes on possible gotchas:*
 
