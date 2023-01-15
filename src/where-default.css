@@ -11,7 +11,7 @@
 	:root
 ) {
 	/* Prevent adjustment of font-size after Ios orientation change. */
-	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 	/* Auto hyphens when words break and for more soft wrap opportunities. */
 	hyphens: auto;
 	/* Break words if needed---`anywhere` uses soft wrap opportunities if present (fallback for Safari Ios<=14). */

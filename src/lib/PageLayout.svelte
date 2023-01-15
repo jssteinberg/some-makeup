@@ -1,6 +1,6 @@
 <script>
 	import MetaTags from "./MetaData.svelte";
-	import ContainCss from "./DefaultCss.svelte";
+	import DefaultCss from "./DefaultCss.svelte";
 	import SpaceCss from "./SpaceCss.svelte";
 	import LineHeightCss from "./FlowCss.svelte";
 	import PrismCss from "./PrismCss.svelte";
@@ -29,7 +29,7 @@
 			: `A post about ${metaTitle || title}.`)}
 />
 
-<ContainCss />
+<DefaultCss />
 <SpaceCss />
 <LineHeightCss />
 

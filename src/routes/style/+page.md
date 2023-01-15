@@ -12,6 +12,8 @@ So you want to makeup style? These minimal CSS files corrects and improves defau
 npm install makeup-style
 ```
 
+Also consider using an auto prefixer and auto fallback/polyfill generation for older browsers, e.g., via [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env), for `text-size-adjust`, `hyphens` and `all`.
+
 <Details>
 <em slot="summary">Import examples</em>
 
