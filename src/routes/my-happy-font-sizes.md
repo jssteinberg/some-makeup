@@ -25,7 +25,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 		--font-size: clamp(
 			1.1rem,
 			.125rem + 1vw,
-			1.12em
+			1.12rem
 		);
 	}
 }
@@ -35,7 +35,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 		--font-size: clamp(
 			1.1rem,
 			.125rem + 1vw,
-			1.2em
+			1.2rem
 		);
 	}
 }
