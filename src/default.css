@@ -4,7 +4,7 @@
 	box-sizing: border-box; }
 
 :root {
-	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 	hyphens: auto;
 	overflow-wrap: break-word; overflow-wrap: anywhere; }
 
