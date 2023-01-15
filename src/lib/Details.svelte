@@ -28,7 +28,7 @@
 
 	summary {
 		display: inline-block;
-		min-height: var(--TOUCH-TARGET-SIZE, 48px);
+		min-height: var(--touch-target-size, 48px);
 		max-width: 100%;
 		position: sticky;
 		top: 0;
@@ -62,8 +62,8 @@
 	summary::before {
 		content: "+";
 		display: inline-block;
-		line-height: var(--TOUCH-TARGET-SIZE, 48px);
-		min-width: var(--TOUCH-TARGET-SIZE, 48px);
+		line-height: var(--touch-target-size, 48px);
+		min-width: var(--touch-target-size, 48px);
 		max-width: max-content;
 		text-align: center;
 	}

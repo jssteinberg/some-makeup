@@ -1,7 +1,7 @@
 ---
 title: My Happy Font Sizes
 description: "Clamped font sizes I prefer for body text on different breakpoints."
-date: ["2022-06-24", "2022-06-30"]
+date: ["2022-06-24", "2022-06-30", "2023-01-15"]
 set: ["code"]
 ---
 
@@ -24,8 +24,18 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 	:root {
 		--font-size: clamp(
 			1.1rem,
-			1.125rem + 1vw,
-			1.12em
+			.125rem + 1vw,
+			1.12rem
+		);
+	}
+}
+
+@media (min-width: 1500px) {
+	:root {
+		--font-size: clamp(
+			1.1rem,
+			.125rem + 1vw,
+			1.2rem
 		);
 	}
 }

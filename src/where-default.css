@@ -56,9 +56,9 @@
 ) {
 	/* Re-set `block`. */
 	display: block;
-	/* Set a proper spacing. */
+	/* Set height to default block elements' spacing. */
 	height: 1em;
-	/* Non-flow disrupting horizontal rule (TODO: `position-inline` when exists). */
+	/* Non-flow disrupting horizontal rule. */
 	background: center left/100% 1px no-repeat linear-gradient(
 		currentColor, currentColor
 	);

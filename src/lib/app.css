@@ -3,7 +3,7 @@
 @import './makeupdarkness1.css';
 
 :root {
-	--TOUCH-TARGET-SIZE: max(48px, 3rem);
+	--touch-target-size: max(48px, 3em);
 
 	--added-lead: .225; /* Approx. browser default added-lead */
 	--font-size: clamp(
@@ -54,14 +54,14 @@
 
 @media (min-width: 900px) {
 	:root {
-		--font-size: clamp(1.1rem, .125rem + 1vw, 1.12em);
+		--font-size: clamp(1.1rem, .125rem + 1vw, 1.12rem);
 	}
 }
 
 @media (min-width: 1500px) {
 	:root {
 		--v-inline-gap: 12.5vw;
-		--font-size: clamp(1.1rem, .125rem + 1vw, 1.2em);
+		--font-size: clamp(1.1rem, .125rem + 1vw, 1.2rem);
 	}
 }
 
