@@ -1,8 +1,6 @@
 /* INTUITIVE UNIVERSAL RULES */
 
-:where(
-	*, ::before, ::after
-) {
+*, ::before, ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box;
 }
@@ -132,17 +130,13 @@
 
 /* CONSISTENT CURSOR */
 
-:where(
-	[aria-disabled="true" i], [disabled], [readonly]
-) {
+[aria-disabled="true" i], [disabled], [readonly] {
 	/* Consistent cursor for disabled elements */
 	cursor: not-allowed;
 }
 
-:where(
-	::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,
-	select, summary
-) {
+::file-selector-button, [role="button" i], [type="button" i], [type="reset" i], [type="submit" i], button,
+select, summary {
 	/* Consistent cursor for clickable elements. */
 	cursor: pointer;
 }

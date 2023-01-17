@@ -12,7 +12,7 @@ So you want to makeup style? These minimal CSS files corrects and improves defau
 npm install makeup-style
 ```
 
-Also consider using an auto prefixer and auto polyfill generator for older browsers, e.g., via [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env), for `hyphens` and `all` properties.
+*Also consider using a library like [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env) for auto prefixing and fixing of newer rules for older browsers.*
 
 <Details>
 <em slot="summary">Import examples</em>
@@ -56,15 +56,15 @@ This file is an updated alternative to
 [sanitize.css][sc] and similar---updated for all major browsers and new CSS. When it comes to normalization, it does not always do a full normalization for elements that works and are consistent to style, and/or that are specifically styled when they are relevant.
 
 <Details>
-<em slot="summary">Notes</em>
+<em slot="summary">Important!</em>
 
-*All libraries should have honest notes on drawbacks and/or missing support:*
+*Notes on possible gotchas:*
 
-1. `code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
+1. Margin for `<body>` is not removed. So you usually also want `body { margin: 0; }`.
 
-2. To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
+2. To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. It is not accompanied by [rules to control auto-hyphens](https://clagnut.com/blog/2395). `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
 
-3. Margin for `<body>` is not removed. So you usually also want `body { margin: 0; }`.
+3. `code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. Solution is to redo your HTML structure or restyle `line-height` for these elements in this context.
 
 </Details>
 

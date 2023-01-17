@@ -21,7 +21,8 @@ b, strong {
 	font-size: 1em; }
 
 abbr, hr {
-	all: unset; }
+	all: unset;
+	box-sizing: border-box; }
 
 hr {
 	display: block;
