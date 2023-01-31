@@ -8,7 +8,7 @@ blockquote, p {
 
 hr {
 	/* Update space to variable. */
-	height: var(--hr-space, var(--space, 1rem));
+	height: var(--hr-height, var(--space, 1rem));
 }
 
 h1, .heading-1 {
@@ -16,12 +16,13 @@ h1, .heading-1 {
 	--_line-height: calc(
 		1 + var(--h1-added-lead, var(--_added-lead))
 	);
-	font-size: calc(
+	--_font-size: calc(
 		var(--h1-line-span, 2)
 		* 1em
 		* (1 + var(--added-lead, .6))
 		/ var(--_line-height)
 	);
+	font-size: var(--h1-font-size, var(--_font-size));
 	line-height: var(--_line-height);
 }
 
