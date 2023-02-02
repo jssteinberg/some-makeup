@@ -5,7 +5,7 @@ const config = {
 		features: {
 			"case-insensitive-attributes": false,
 			"logical-properties-and-values": { dir: "ltr" },
-			"oklab-function": { subFeatures: { displayP3: false } },
+			// "oklab-function": { subFeatures: { displayP3: false } },
 		},
 	})]
 };
