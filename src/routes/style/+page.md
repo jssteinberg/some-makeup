@@ -89,7 +89,7 @@ hr {
 
 Import "develop.css", or an alternative using `:where()` for less specificity: "where-develop.css".
 
-For developer convenience, it includes some simple rules for more intuitive coding, and reduce-motion rules for animations and transitions so accessibility is easier preserved. *The latter first seen in [A Modern CSS Reset][amcr].
+For developer convenience, it includes some simple rules for more intuitive coding, and reduce-motion rules for animations and transitions so accessibility is easier preserved. *The latter first seen in [A Modern CSS Reset][amcr].*
 
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/
