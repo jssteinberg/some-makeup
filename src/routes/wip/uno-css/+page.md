@@ -17,7 +17,7 @@ More on using it with Sveltekit: https://github.com/unocss/unocss/tree/main/exam
 
 <Test001>
 
-Here's a component that uses Uno CSS preflights and safelist (whatever that is).
+Here's a component that uses Uno CSS utility classes.
 
 </Test001>
 

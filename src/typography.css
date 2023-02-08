@@ -8,24 +8,25 @@ blockquote, p {
 
 hr {
 	/* Update space to variable. */
-	height: var(--hr-space, var(--space, 1rem));
+	height: var(--hr-height, var(--space, 1rem));
 }
 
-h1, .h1 {
+h1, .heading-1 {
 	--_added-lead: .125;
 	--_line-height: calc(
 		1 + var(--h1-added-lead, var(--_added-lead))
 	);
-	font-size: calc(
+	--_font-size: calc(
 		var(--h1-line-span, 2)
 		* 1em
 		* (1 + var(--added-lead, .6))
 		/ var(--_line-height)
 	);
+	font-size: var(--h1-font-size, var(--_font-size));
 	line-height: var(--_line-height);
 }
 
-h2, .h2 {
+h2, .heading-2 {
 	--_added-lead: .25;
 	--_line-height: calc(
 		1 + var(--h2-added-lead, var(--_added-lead))
@@ -39,7 +40,7 @@ h2, .h2 {
 	line-height: var(--_line-height);
 }
 
-h3, .h3 {
+h3, .heading-3 {
 	--_added-lead: var(--added-lead, .6);
 	--_line-height: calc(
 		1 + var(--h3-added-lead, var(--_added-lead))
@@ -53,7 +54,7 @@ h3, .h3 {
 	line-height: var(--_line-height);
 }
 
-h4, .h4 {
+h4, .heading-4 {
 	--_line-height: calc(
 		1 + var(--h4-added-lead, var(--added-lead, .6))
 	);
@@ -66,7 +67,7 @@ h4, .h4 {
 	line-height: var(--_line-height);
 }
 
-h5, .h5 {
+h5, .heading-5 {
 	--_line-height: calc(
 		1 + var(--h5-added-lead, var(--added-lead, .6))
 	);
@@ -79,7 +80,7 @@ h5, .h5 {
 	line-height: var(--_line-height);
 }
 
-h6, .h6 {
+h6, .heading-6 {
 	--_line-height: calc(
 		1 + var(--h6-added-lead, var(--added-lead, .6))
 	);

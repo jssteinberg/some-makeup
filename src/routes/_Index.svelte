@@ -42,8 +42,12 @@
 
 	.index-container :global(a) {
 		display: block;
-		min-height: var(--touch-target-size, 48px);
-		min-width: var(--touch-target-size, 48px);
+		min-height: 2.5em;
+		min-width: 2.5em;
+	}
+
+	.index-top ~ :global(p) {
+		margin-block: 0.5em;
 	}
 
 	h1,

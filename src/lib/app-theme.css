@@ -67,6 +67,8 @@
 	text-underline-offset: .125em;
 	text-decoration-thickness: 1px;
 	text-decoration-color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .5);
+	/* avoid break inside */
+	break-inside: avoid;
 }
 
 :where(.app-theme-main-content) a:hover {
@@ -82,12 +84,12 @@
 
 /* Small and Mono font elements */
 
-.app-theme-main-content :is(code, kbd, samp, small) {
+.app-theme-main-content :is(small, kbd, samp, pre, code) {
 	font-size: .85em;
 }
 
-.app-theme-main-content :not(pre) > :is(code, kbd, samp, small) {
-	font-size: 1.85ex;
+.app-theme-main-content pre code {
+	font-size: 1em;
 }
 
 .app-theme-main-content code {
