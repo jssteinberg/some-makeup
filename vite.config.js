@@ -6,7 +6,6 @@ const config = {
 	plugins: [
 		Unocss({
 			mode: 'svelte-scoped',
-			/* more options */
 		}),
 		sveltekit(),
 	],
