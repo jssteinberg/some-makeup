@@ -35,7 +35,7 @@
 		"unocss": "^0.49.2",
 		"vite": "^4.0.4"
 	},
-	"description": "Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
+	"description": "Minimal CSS files for correcting, improving and normalizing default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
 	"engines": ">=14.16",
 	"exports": {
 		".": "./index.js",

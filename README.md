@@ -1,6 +1,6 @@
 # makeup-style
 
-Minimal CSS files for correcting and improving default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.
+Minimal CSS files for correcting and improving default browser CSS; for styling in general and typographic style.
 
 [Installation and documentation](https://some.makeup/style)
 
