@@ -17,7 +17,7 @@ Another functionality I'm testing is to be able set a container to visually-hidd
 Then, also incorporating a technique using aria attributes instead of classes used in [sanitize.css](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L344-L356), it results in the following snippet:
 
 ```css
-.visually-hidden:not(:focus):not(:active):not(:has(:focus, :active)),
+.visually-hidden:not(:focus):not(:active),
 [aria-hidden="false" i][hidden]:not(:focus):not(:active) {
   position: absolute !important;
   white-space: nowrap !important;
@@ -30,6 +30,23 @@ Then, also incorporating a technique using aria attributes instead of classes us
   clip: rect(1px, 1px, 1px, 1px) !important;
   clip-path: inset(50%) !important;
   -webkit-clip-path: inset(50%) !important;
+}
+
+@supports (:has()) {
+	.visually-hidden:not(:focus):not(:active):not(:has(:focus, :active)),
+	[aria-hidden="false" i][hidden]:not(:focus):not(:active) {
+		position: absolute !important;
+		white-space: nowrap !important;
+		padding: 0 !important;
+		margin: -1px !important;
+		border: 0 !important;
+		overflow: hidden !important;
+		width: 1px !important;
+		height: 1px !important;
+		clip: rect(1px, 1px, 1px, 1px) !important;
+		clip-path: inset(50%) !important;
+		-webkit-clip-path: inset(50%) !important;
+	}
 }
 
 [aria-hidden="false" i][hidden] {
