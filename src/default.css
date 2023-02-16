@@ -14,11 +14,14 @@ code, kbd, samp, sub, sup {
 	hyphens: manual;
 	line-height: .625; }
 
-b, strong {
-	font-weight: bolder; }
+code, kbd, samp, pre {
+	font-family: monospace, monospace; }
 
 ::file-selector-button, button, input, select, textarea {
 	font-size: 1em; }
+
+b, strong {
+	font-weight: bolder; }
 
 abbr, hr {
 	all: unset;
