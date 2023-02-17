@@ -20,13 +20,11 @@ Background and mask images are not repeated.
 ---
 
 1. Inherit border-radius.
-2. Inherit text-decoration for `content`.
-3. Inherit vertical alignment.
+2. Inherit vertical alignment.
 
 ```css
 ::before, ::after {
 	border-radius: inherit;
-	text-decoration: inherit;
 	vertical-align: inherit;
 }
 ```

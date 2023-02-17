@@ -12,8 +12,6 @@
 ) {
 	/* Inherit border-radius. */
 	border-radius: inherit;
-	/* Inherit text-decoration for `content`. */
-	text-decoration: inherit;
 	/* Inherit vertical alignment. */
 	vertical-align: inherit;
 }
