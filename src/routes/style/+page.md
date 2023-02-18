@@ -45,15 +45,14 @@ CSS import (via postcss-import or Lightning CSS):
 
 ## *Default CSS*
 
-Import "default.css", or an alternative using `:where()` for less specificity: "where-default.css".
+Import "default.css", or the alternate "where-default.css" that uses `:where()` for less specificity.
 
-*The actual few, up-to-date, low-level CSS rules you want below your styling.*
 It corrects and improves the minimal necessary default CSS:
 
-1. An up to date cross-browser normalizing,
-2. Responsive rules for small screen-sizes—that includes universally using `border-box` for preventing overflow and making styling way more intuitive, otherwise preventing overflowing content
-3. Typography
-4. Usability
+1. Up to date browser normalizing.
+2. Responsive rules for small screen-sizes including universal `border-box` to prevent overflow and make styling intuitive, and otherwise prevent overflowing content with `hyphens`, `overflow-wrap` and specific element rules.
+3. Fix the elements that disrupts typographic rhythm.
+4. Intuitive `cursor` values for usability.
 
 All rules are included with the mindset of this generally fixing and improving default CSS in a minimal way. It does not style headings, or what would otherwise belong in your actual theme.
 
@@ -62,6 +61,7 @@ This file is an updated alternative to
 [modern-normalize][mn],
 [CSS Remedy][cr],
 [sanitize.css][sc] and similar---updated for all major browsers and with the latest CSS properties.
+*The actual few, up-to-date, low-level CSS rules you want below your styling.*
 
 <Details>
 <em slot="summary">Notes & Tips</em>
@@ -95,7 +95,7 @@ hr {
 
 Import "develop.css", or an alternative using `:where()` for less specificity: "where-develop.css".
 
-For developer convenience, it includes some simple rules for more intuitive coding, and reduce-motion rules for animations and transitions so accessibility is easier preserved. *The latter first seen in [A Modern CSS Reset][amcr].*
+For developer convenience, it includes some simple rules for more intuitive coding, and reduce-motion rules for animations and transitions so accessibility is easier preserved.
 
 
 [amcr]: https://piccalil.li/blog/a-modern-css-reset/

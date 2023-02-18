@@ -1,7 +1,7 @@
 ---
 title: Develop CSS
 description: "develop.css defines additional CSS rulesets for more convenient and intuitive styling."
-set: ["code"]
+set: ["code", "book"]
 ---
 
 Develop CSS with additional CSS rulesets for more convenient and intuitive styling.
@@ -31,7 +31,8 @@ Background and mask images are not repeated.
 
 ### Reduce Motion
 
-Remove animations and transitions when user prefers it.
+First seen in [A Modern CSS Reset][amcr],
+remove animations and transitions when user prefers it.
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -64,21 +65,3 @@ Remove animations and transitions when user prefers it.
 <script>
 	import Details from "$lib/Details.svelte"
 </script>
-
-<style>
-	/* Book style stuff */
-
-	p {
-		margin-block-end: 0;
-	}
-
-	ol, ul,
-	li > p,
-	p + p {
-		margin-block-start: 0;
-	}
-
-	p + p {
-		text-indent: var(--space);
-	}
-</style>

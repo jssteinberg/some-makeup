@@ -101,7 +101,7 @@
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
 	--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
-	/* --space: var(--font-size); */
+	--inline-space: var(--font-size);
 }
 
 @media (min-width: 1500px) {
