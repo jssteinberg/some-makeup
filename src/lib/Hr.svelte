@@ -1,7 +1,7 @@
 <!-- Example
 
 ```
-<Hr --hr-width="100%" --hr-size="3rem" />
+<Hr --hr-width="100%" />
 ``` -->
 
 <hr />
@@ -9,7 +9,7 @@
 <style lang="postcss">
 	hr {
 		--_content-width: min(100%, var(--hr-width, var(--content-width, 100%)));
-		--_size: calc(1.5 * var(--space, 1em));
+		--_size: 3rem;
 
 		all: unset;
 		box-shadow: inset 0 0 0 1px var(--hr-fg, currentColor);

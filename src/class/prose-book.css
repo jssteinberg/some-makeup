@@ -11,5 +11,5 @@
 }
 
 .prose-book p + p {
-	text-indent: var(--inline-space, var(--space, 40px));
+	text-indent: var(--space-inline, var(--space, 40px));
 }

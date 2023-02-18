@@ -49,7 +49,7 @@ Import "default.css", or the alternate "where-default.css" that uses `:where()` 
 
 It corrects and improves the minimal necessary default CSS:
 
-1. Up to date browser normalizing.
+1. Up to date browser normalizing of the bare necessities.
 2. Responsive rules for small screen-sizes including universal `border-box` to prevent overflow and make styling intuitive, and otherwise prevent overflowing content with `hyphens`, `overflow-wrap` and specific element rules.
 3. Fix the elements that disrupts typographic rhythm.
 4. Intuitive `cursor` values for usability.
