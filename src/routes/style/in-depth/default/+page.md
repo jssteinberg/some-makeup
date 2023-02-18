@@ -1,7 +1,7 @@
 ---
 title: Default CSS
 description: "default.css fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document and for modern conveniences for styling."
-set: ["code"]
+set: ["code", "book"]
 ---
 
 A lightweight default CSS that fixes and
@@ -314,21 +314,3 @@ summary {
 <script>
 	import Details from "$lib/Details.svelte"
 </script>
-
-<style>
-	/* Book style stuff */
-
-	p {
-		margin-block-end: 0;
-	}
-
-	ol, ul,
-	li > p,
-	p + p {
-		margin-block-start: 0;
-	}
-
-	p + p {
-		text-indent: var(--space);
-	}
-</style>

@@ -1,7 +1,7 @@
 ---
 title: makeup-style
 description: "Makeup style for the web."
-set: ["code"]
+set: ["code", "book"]
 ---
 
 # makeup-style
@@ -43,13 +43,19 @@ CSS import (via postcss-import or Lightning CSS):
 
 </Details>
 
-## 1. *Default CSS*
-
-*The actual few, up-to-date, low-level CSS rules you want below your styling.*
+## *Default CSS*
 
 Import "default.css", or an alternative using `:where()` for less specificity: "where-default.css".
 
-It corrects and improves the minimal necessary default CSS for **(1)** an up to date cross-browser normalizing, **(2)** responsive rules for small screen-sizes—that includes universally using `border-box` for preventing overflow and making styling way more intuitive, otherwise preventing overflowing content—**(3)** typography and **(4)** usability. All rules are included with the mindset of this generally fixing and improving default CSS in a minimal way. It does not style headings, or what would otherwise belong in your actual theme.
+*The actual few, up-to-date, low-level CSS rules you want below your styling.*
+It corrects and improves the minimal necessary default CSS:
+
+1. An up to date cross-browser normalizing,
+2. Responsive rules for small screen-sizes—that includes universally using `border-box` for preventing overflow and making styling way more intuitive, otherwise preventing overflowing content
+3. Typography
+4. Usability
+
+All rules are included with the mindset of this generally fixing and improving default CSS in a minimal way. It does not style headings, or what would otherwise belong in your actual theme.
 
 This file is an updated alternative to
 [normalize.css][nc],

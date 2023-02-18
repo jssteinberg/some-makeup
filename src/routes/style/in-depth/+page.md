@@ -1,7 +1,7 @@
 ---
 title: makeup-style in-depth
 description: "Minimal CSS files that fixes and improves default browser CSS—for narrow viewports first—and provides convenient and intuitive CSS-defaults for styling in general."
-set: ["code"]
+set: ["code", "book"]
 ---
 
 Coding CSS a decade ago, a CSS-reset was normally used, and an utter annoyance. Especially for those new to web development. Then [normalize.css][nc] became popular, thank god, and elements would more or less keep their intended default styles, just be somewhat styled to be similar across browsers. By default HTML elements made visually semantic sense again.
@@ -87,21 +87,3 @@ It should only be implemented if it can be done so safely, not causing side effe
 <script>
 	import Details from "$lib/Details.svelte"
 </script>
-
-<style>
-	/* Book style stuff */
-
-	p {
-		margin-block-end: 0;
-	}
-
-	ol, ul,
-	li > p,
-	p + p {
-		margin-block-start: 0;
-	}
-
-	p + p {
-		text-indent: var(--space);
-	}
-</style>
