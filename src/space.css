@@ -1,9 +1,11 @@
 /* Consistent block margin for the needed block-level elements. */
-h1, h2, h3, h4, h5, h6,
-address, datalist, details, fieldset, pre, table,
-canvas, embed, figure, iframe, object, video,
-dl, ol, ul,
-blockquote, p, hr {
-	margin-top: var(--block-start, var(--space, 1rem));
-	margin-bottom: var(--block-end, var(--space, 1rem));
+:where(
+	h1, h2, h3, h4, h5, h6,
+	address, datalist, details, fieldset, pre, table,
+	canvas, embed, figure, iframe, object, video,
+	dl, ol, ul,
+	blockquote, p, hr
+) {
+	margin-top: var(--space-block-start, var(--space-block, var(--space, 1rem)));
+	margin-bottom: var(--space-block-end, var(--space-block, var(--space, 1rem)));
 }
