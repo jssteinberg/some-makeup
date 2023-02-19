@@ -1,7 +1,7 @@
 ---
 title: Develop CSS
 description: "develop.css defines additional CSS rulesets for more convenient and intuitive styling."
-set: ["code"]
+set: ["code", "book"]
 ---
 
 Develop CSS with additional CSS rulesets for more convenient and intuitive styling.
@@ -20,20 +20,19 @@ Background and mask images are not repeated.
 ---
 
 1. Inherit border-radius.
-2. Inherit text-decoration for `content`.
-3. Inherit vertical alignment.
+2. Inherit vertical alignment.
 
 ```css
 ::before, ::after {
 	border-radius: inherit;
-	text-decoration: inherit;
 	vertical-align: inherit;
 }
 ```
 
 ### Reduce Motion
 
-Remove animations and transitions when user prefers it.
+First seen in [A Modern CSS Reset][amcr],
+remove animations and transitions when user prefers it.
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -66,21 +65,3 @@ Remove animations and transitions when user prefers it.
 <script>
 	import Details from "$lib/Details.svelte"
 </script>
-
-<style>
-	/* Book style stuff */
-
-	p {
-		margin-block-end: 0;
-	}
-
-	ol, ul,
-	li > p,
-	p + p {
-		margin-block-start: 0;
-	}
-
-	p + p {
-		text-indent: var(--space);
-	}
-</style>

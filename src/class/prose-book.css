@@ -1,0 +1,15 @@
+/* Book style stuff */
+
+.prose-book p {
+	margin-block-end: 0;
+}
+
+.prose-book ol, ul,
+.prose-book li > p,
+.prose-book p + p {
+	margin-block-start: 0;
+}
+
+.prose-book p + p {
+	text-indent: var(--space-inline, var(--space, 40px));
+}

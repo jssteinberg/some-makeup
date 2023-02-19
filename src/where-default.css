@@ -28,10 +28,10 @@
 }
 
 :where(
-	b, strong
+	code, kbd, samp, pre
 ) {
-	/* Normalize semantic `bolder` font weight for `strong` text (Chrome/Safari). */
-	font-weight: bolder;
+	/* Fixes `font-size` when no `font-family`, and no parent has `font-size`. */
+	font-family: monospace, monospace;
 }
 
 :where(
@@ -39,6 +39,13 @@
 ) {
 	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
 	font-size: 1em;
+}
+
+:where(
+	b, strong
+) {
+	/* Normalize semantic `bolder` font weight for `strong` text (Chrome/Safari). */
+	font-weight: bolder;
 }
 
 :where(
@@ -65,7 +72,7 @@
 /* MAKE ELEMENTS RESPONSIVE */
 
 :where(
-	input, select, textarea,
+	input, progress, select, textarea,
 	audio, embed, iframe, object,
 	img, svg, video, canvas
 ) {

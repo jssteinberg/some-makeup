@@ -46,6 +46,7 @@
 		app-theme-main-content
 		${set.includes(`sans`) ? `sans-theme` : ``}
 		${set.includes(`mixed`) ? `` : `typography`}
+		${set.includes(`book`) ? `prose-book` : ``}
 	`}
 >
 	<slot />

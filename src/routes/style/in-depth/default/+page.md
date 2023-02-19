@@ -1,7 +1,7 @@
 ---
 title: Default CSS
 description: "default.css fixes and improves default browser CSS—for narrow viewports first—to safer populate HTML document and for modern conveniences for styling."
-set: ["code"]
+set: ["code", "book"]
 ---
 
 A lightweight default CSS that fixes and
@@ -16,7 +16,6 @@ populate and style HTML documents.
 - CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The styling presented here repairs it with a single `line-height` rule for the inline elements in question.
 - Margins or sizes for headings are not included. Headings are styled when default browser style is not sufficient, and default browser style for headings is actually descent.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
-- `font-size: 1em` is not set for elements using monospace font, as many libraries does. Ironically themes specifically styling them adjust that font-size down, as browsers already does by default. This browser default font-size is not a problem (anymore?).
 - `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
 - Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
 - Using `:where()` or `@layer` could be of future improvements when more users updates their browsers (for `:where()`, files "where-default.css" and "where-develop.css" are in package, but experimental).
@@ -104,26 +103,24 @@ sup {
 	top: -0.5em;
 }
 ```
-
-*Code for `code, kbd, samp` used in normalize.css (and about the same in [modern-normalize#L97-109](https://github.com/sindresorhus/modern-normalize/blob/b59ec0d3d8654cbb6843bc9ea45aef5f1d680108/modern-normalize.css#L97-L109) and [sanitize.css#L144-147](https://github.com/csstools/sanitize.css/blob/092d0d85922bfa72d28e9e8d25d80a5437c8df44/sanitize.css#L144-L147)).* Two rules that either does nothing or cause problems! The first rule does nothing in modern browsers. The second rule normalizes the `font-size` to `1em` easily causing higher lines where these elements are present.
-
-```css
-code, kbd, samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-```
 </Details>
 
 ---
 
-`<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
+To fix a rare gotcha, when `font-size` for `code, kbd, samp, pre` is defined, but not `font-family`, and no parent is styled with `font-size`, only then will browsers compute `font-size` differently (e.g., with default browser settings, `1em` would be computed to `13px` instead of `16px`):
 
 ```css
-b, strong {
-	font-weight: bolder;
+code, kbd, samp, pre {
+	font-family: monospace, monospace;
 }
 ```
+
+<Details>
+<em slot="summary">Alternatives</em>
+
+[Normalize.css][nc], [modern-normalize][mn] and [sanitize.css][sc] also defines `font-size: 1em`, but `font-size` is usually defined for sites that display code, and if it isn't then browser default is good.
+
+</Details>
 
 ---
 
@@ -132,6 +129,16 @@ In browser’s default CSS, text inputs has a smaller `font-size` than `16px`. T
 ```css
 ::file-selector-button, button, input, select, textarea {
 	font-size: 1em;
+}
+```
+
+---
+
+`<strong>` should be `bolder` in all browsers so strong text is relative to its parent. This improves the default displayed semantics of the element. `<b>` is also included in case any outdated WYSIWYG editors still use it.
+
+```css
+b, strong {
+	font-weight: bolder;
 }
 ```
 
@@ -307,21 +314,3 @@ summary {
 <script>
 	import Details from "$lib/Details.svelte"
 </script>
-
-<style>
-	/* Book style stuff */
-
-	p {
-		margin-block-end: 0;
-	}
-
-	ol, ul,
-	li > p,
-	p + p {
-		margin-block-start: 0;
-	}
-
-	p + p {
-		text-indent: var(--space);
-	}
-</style>
