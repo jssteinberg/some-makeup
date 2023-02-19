@@ -84,8 +84,8 @@
 
 /* Small and Mono font elements */
 
-.app-theme-main-content :is(small, kbd, samp, pre, code) {
-	font-size: .85em;
+.app-theme-main-content :where(.small, small, kbd, samp, pre, code) {
+	font-size: .8125em;
 }
 
 .app-theme-main-content :not( :is(h1, pre) ) > :is(kbd, samp, pre, code) {
