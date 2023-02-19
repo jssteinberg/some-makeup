@@ -72,7 +72,7 @@
 /* MAKE ELEMENTS RESPONSIVE */
 
 :where(
-	input, select, textarea,
+	input, progress, select, textarea,
 	audio, embed, iframe, object,
 	img, svg, video, canvas
 ) {

@@ -36,7 +36,7 @@ hr {
 
 /* MAKE ELEMENTS RESPONSIVE */
 
-input, select, textarea,
+input, progress, select, textarea,
 audio, embed, iframe, object,
 img, svg, video, canvas {
 	max-width: 100%; }
