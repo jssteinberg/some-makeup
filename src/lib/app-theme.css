@@ -88,6 +88,10 @@
 	font-size: .85em;
 }
 
+.app-theme-main-content :not( :is(h1, pre) ) > :is(kbd, samp, pre, code) {
+	break-inside: avoid;
+}
+
 .app-theme-main-content pre code {
 	font-size: 1em;
 }
@@ -174,7 +178,7 @@
 }
 
 /* `code` background */
-.app-theme-main-content :not( :is(h1, pre, a) ) > code {
+.app-theme-main-content :not( :is(h1, pre) ) > code {
 	--_bg: hsla(var(--fg-hsl) / .125);
 	background: var(--_bg);
 	border-radius: .25rem;

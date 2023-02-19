@@ -45,23 +45,23 @@ CSS import (via postcss-import or Lightning CSS):
 
 ## *Default CSS*
 
-Import "default.css", or the alternate "where-default.css" that uses `:where()` for less specificity.
+Import *default.css*, or the alternate *where-default.css* that uses `:where()` for less specificity.
 
 It corrects and improves the minimal necessary default CSS:
 
 1. Up to date browser normalizing of the bare necessities.
-2. Responsive rules for small screen-sizes including universal `border-box` to prevent overflow and make styling intuitive, and otherwise prevent overflowing content with `hyphens`, `overflow-wrap` and specific element rules.
-3. Fix the elements that disrupts typographic rhythm.
+2. Responsive rules for small screen-sizes including universal `border-box` to prevent overflow and make styling intuitive, and otherwise prevent overflowing content with `hyphens`, `overflow-wrap` and improving some element to be responsive.
+3. Fix elements that disrupts typographic rhythm.
 4. Intuitive `cursor` values for usability.
 
-All rules are included with the mindset of this generally fixing and improving default CSS in a minimal way. It does not style headings, or what would otherwise belong in your actual theme.
+All rules are included with the mindset of this generally fixing and improving default CSS in a minimal way. It does not style headings, or what would otherwise belong in your actual theme. Some form elements get a `max-width: 100%` or and buttons `cursor: pointer`, but nothing more as they work cross browsers and restyling is a matter of opinion. But resetting their style is easy using `all` and `apperance`.
 
 This file is an updated alternative to
 [normalize.css][nc],
 [modern-normalize][mn],
 [CSS Remedy][cr],
 [sanitize.css][sc] and similar---updated for all major browsers and with the latest CSS properties.
-*The actual few, up-to-date, low-level CSS rules you want below your styling.*
+The actual few, up-to-date, low-level CSS rules you want below your styling.
 
 <Details>
 <em slot="summary">Notes & Tips</em>
@@ -93,7 +93,7 @@ hr {
 
 ## *Develop CSS*---A <cite>Default CSS</cite> Expansion
 
-Import "develop.css", or an alternative using `:where()` for less specificity: "where-develop.css".
+Import *develop.css*, or the alternate *where-develop.css* that uses `:where()` for less specificity.
 
 For developer convenience, it includes some simple rules for more intuitive coding, and reduce-motion rules for animations and transitions so accessibility is easier preserved.
 
