@@ -62,7 +62,7 @@
 
 <style lang="postcss">
 	section {
-		--_title-size: min(6em, 5vw + 2 * var(--font-size));
+		--_title-size: min(6em, 5vw + 2 * var(--text-body));
 		background-image: linear-gradient(
 			-135deg,
 			hsla(var(--fg-hsl) / 0.1),

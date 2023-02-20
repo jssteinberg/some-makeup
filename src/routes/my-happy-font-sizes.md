@@ -13,7 +13,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 
 ```css
 :root {
-	--font-size: clamp(
+	--text-body: clamp(
 		1rem,
 		4.8vw,
 		1.3rem
@@ -22,7 +22,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 
 @media (min-width: 900px) {
 	:root {
-		--font-size: clamp(
+		--text-body: clamp(
 			1.1rem,
 			.125rem + 1vw,
 			1.12rem
@@ -32,7 +32,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 
 @media (min-width: 1500px) {
 	:root {
-		--font-size: clamp(
+		--text-body: clamp(
 			1.1rem,
 			.125rem + 1vw,
 			1.2rem

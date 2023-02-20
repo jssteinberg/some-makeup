@@ -7,7 +7,7 @@
 	--touch-target-size: max(48px, 3em);
 
 	--added-lead: .225; /* Approx. browser default added-lead */
-	--font-size: clamp(
+	--text-body: clamp(
 		1rem, 4.8vw, 1.3rem
 	);
 
@@ -55,14 +55,14 @@
 
 @media (min-width: 900px) {
 	:root {
-		--font-size: clamp(1.1rem, .125rem + 1vw, 1.12rem);
+		--text-body: clamp(1.1rem, .125rem + 1vw, 1.12rem);
 	}
 }
 
 @media (min-width: 1500px) {
 	:root {
 		--v-inline-gap: 12.5vw;
-		--font-size: clamp(1.1rem, .125rem + 1vw, 1.2rem);
+		--text-body: clamp(1.1rem, .125rem + 1vw, 1.2rem);
 	}
 }
 

@@ -34,8 +34,8 @@
 
 		/* Adjust font-size */
 		font-size: clamp(
-			var(--font-size) + 0.125rem,
-			var(--font-size) + min(0.75vw, 1.5vh),
+			var(--text-body) + 0.125rem,
+			var(--text-body) + min(0.75vw, 1.5vh),
 			1.75rem
 		);
 	}

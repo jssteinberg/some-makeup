@@ -104,8 +104,8 @@
 .app-theme {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
-	--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
-	--space-inline: var(--font-size);
+	--space: calc(var(--text-body) * (1 + var(--added-lead, .6)));
+	--space-inline: var(--text-body);
 }
 
 @media (min-width: 1500px) {
@@ -121,7 +121,7 @@
 }
 
 .app-theme header {
-	font-size: var(--font-size);
+	font-size: var(--text-body);
 }
 
 .app-theme :is(h2, .h2) {
@@ -137,7 +137,7 @@
 	--line-height: calc(1 + .6);
 
 	margin-inline: var(--v-inline-gap);
-	font-size: var(--font-size);
+	font-size: var(--text-body);
 }
 
 .app-theme-main-content.sans-theme {

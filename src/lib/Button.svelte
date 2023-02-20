@@ -57,7 +57,7 @@
 		cursor: pointer;
 		color: white;
 		display: inline-block;
-		font-size: var(--font-size, 1em);
+		font-size: var(--text-body, 1em);
 		font-weight: var(--font-weight, normal);
 		line-height: var(--line-height, 1.375);
 		min-height: var(--_min-height);

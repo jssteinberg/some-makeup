@@ -49,7 +49,7 @@
 <style lang="postcss">
 	.app-theme,
 	article :global(.app-theme) {
-		--space: calc(var(--font-size) * (1 + var(--added-lead, 0.6)));
+		--space: calc(var(--text-body) * (1 + var(--added-lead, 0.6)));
 	}
 
 	header {
@@ -60,7 +60,7 @@
 
 	h1 small {
 		font-style: italic;
-		font-size: var(--font-size, 1rem);
+		font-size: var(--text-body, 1rem);
 		display: block;
 		padding-block-start: calc(0.5 * var(--space, 1em));
 		padding-block-end: calc(0.5 * var(--space, 1em));
