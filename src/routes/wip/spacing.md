@@ -1,8 +1,8 @@
 ---
-title: "Unraveling Space & Size: For Web Design & Development"
+title: "Unraveling Space Size: For Web Design & Development"
 ---
 
-# Unraveling Space: For Web Design & Development
+# Unraveling Space Size: For Web Design & Development
 
 When deciding on spacing in web design you have to start with a base space. This space should be relative to your main font-sizes, either: 1rem (text-base), 1em of your body text (text-body) or 1 leading of one of the former.
 
@@ -17,5 +17,30 @@ If you choose `rem` your good to go, for `em`, you can't actually use `em` but u
 
 .prose {
 	font-size: var(--text-body);
+}
+```
+
+---
+
+```
+:root {
+	/* base space */
+	--space: var(--text-body, 1rem);
+	/* inline space for elements like `ol, ul` */
+	--space-inline: calc(1.5 * var(--space));
+	/* x-axis space for gap between viewport edge and content */
+	--space-vx: 4.125vw;
+}
+
+@media (min-width: 600px) {
+	:root {
+		--space-vx: 8.25vw;
+	}
+}
+
+@media (min-width: 1500px) {
+	:root {
+		--space-vx: 12.5vw;
+	}
 }
 ```
