@@ -4,6 +4,8 @@ title: "Unraveling Space Size: For Web Design & Development"
 
 # Unraveling Space Size: For Web Design & Development
 
+Spacing in web design refers to the old art of typographic spacing, and later spacing of graphical design---which usually is based on the aesthetics of typography. An important part of typographic spacing is the rhythm.
+
 When deciding on spacing in web design you have to start with a base space. This space should be relative to your main font-sizes, either: 1rem (text-base), 1em of your body text (text-body) or 1 leading of one of the former.
 
 If you choose `rem` your good to go, for `em`, you can't actually use `em` but use a variable e.g.:
@@ -24,9 +26,10 @@ If you choose `rem` your good to go, for `em`, you can't actually use `em` but u
 
 ```
 :root {
-	/* base space */
+	/* --space - base space */
 	--space: var(--text-body, 1rem);
-	/* inline space for elements like `ol, ul` */
+	/* --space-inline - inline space for elements like `ol, ul`.
+	 * You want a dedicated global var for this and not `calc()`-it incase `--space` changes. */
 	--space-inline: calc(1.5 * var(--space));
 	/* x-axis space for gap between viewport edge and content */
 	--space-vx: 4.125vw;
