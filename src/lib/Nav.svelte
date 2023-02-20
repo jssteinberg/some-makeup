@@ -35,8 +35,8 @@
 <style lang="postcss">
 	nav {
 		margin-block: 0.5rem;
-		margin-inline-start: var(--v-inline-gap);
-		padding-inline-end: var(--v-inline-gap);
+		margin-inline-start: var(--space-vx);
+		padding-inline-end: var(--space-vx);
 		display: flex;
 		flex: 1;
 		gap: 0.5rem 1rem;

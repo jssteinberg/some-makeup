@@ -30,7 +30,7 @@
 
 <style lang="postcss">
 	.index-container {
-		padding-inline: var(--v-inline-gap);
+		padding-inline: var(--space-vx);
 
 		/* Adjust font-size */
 		font-size: clamp(
@@ -65,7 +65,7 @@
 		ul {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 0 var(--v-inline-gap);
+			gap: 0 var(--space-vx);
 		}
 	}
 </style>

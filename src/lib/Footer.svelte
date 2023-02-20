@@ -29,7 +29,7 @@
 <style lang="postcss">
 	footer {
 		--_TOUCH-TARGET-SIZE: max(48px, 3rem);
-		margin: var(--_TOUCH-TARGET-SIZE) var(--v-inline-gap);
+		margin: var(--_TOUCH-TARGET-SIZE) var(--space-vx);
 	}
 
 	footer :global(*) {
