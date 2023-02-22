@@ -6,11 +6,6 @@ blockquote, p {
 	line-height: calc(1 + var(--added-lead, .6));
 }
 
-hr {
-	/* Update space to variable. */
-	height: var(--hr-height, var(--space, 1rem));
-}
-
 h1, .heading-1 {
 	--_added-lead: .125;
 	--_line-height: calc(
