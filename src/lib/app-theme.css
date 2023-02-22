@@ -30,7 +30,7 @@
 }
 
 :where(.app-theme-main-content) :is(ol, ul) :is(ol, ul) {
-	padding-inline-start: var(--space, 1em);
+	padding-inline-start: var(--space-inline);
 }
 
 @media (min-width: 1200px) {
@@ -165,7 +165,7 @@
 		no-repeat;
 	margin-inline-start: 0;
 	margin-inline-end: 0;
-	padding: 0 0 0 calc(.5 * var(--space, 1em));
+	padding: 0 0 0 calc(.5 * var(--space-inline));
 	position: relative;
 }
 
