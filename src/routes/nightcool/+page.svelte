@@ -1,6 +1,5 @@
 <script>
 	import MetaTags from "$lib/MetaData.svelte";
-	import Details from "$lib/Details.svelte";
 	import ContainCss from "$lib/DefaultCss.svelte";
 	import SpaceCss from "$lib/SpaceCss.svelte";
 	import LineHeightCss from "$lib/FlowCss.svelte";
@@ -121,83 +120,6 @@
 			</li>
 		{/each}
 	</ol>
-
-	<h2>Implementations</h2>
-
-	<p><em>More to come.</em></p>
-
-	<Details>
-		<span slot="summary">Alacritty</span>
-
-		<pre><code>
-# Colors
-# somedarkterm1.
-colors:
-  # Default colors
-  primary:
-    background: '0x{hslToHex(colors[0])}'
-    foreground: '0x{hslToHex(colors[17])}'
-
-  # Normal colors
-  normal:
-    black:   '0x{hslToHex(colors[2])}'
-    red:     '0x{hslToHex(colors[4])}'
-    green:   '0x{hslToHex(colors[6])}'
-    yellow:  '0x{hslToHex(colors[8])}'
-    blue:    '0x{hslToHex(colors[10])}'
-    magenta: '0x{hslToHex(colors[12])}'
-    cyan:    '0x{hslToHex(colors[14])}'
-    white:   '0x{hslToHex(colors[16])}'
-
-  # Bright colors
-  bright:
-    black:   '0x{hslToHex(colors[3])}'
-    red:     '0x{hslToHex(colors[5])}'
-    green:   '0x{hslToHex(colors[7])}'
-    yellow:  '0x{hslToHex(colors[9])}'
-    blue:    '0x{hslToHex(colors[11])}'
-    magenta: '0x{hslToHex(colors[13])}'
-    cyan:    '0x{hslToHex(colors[15])}'
-    white:   '0x{hslToHex(colors[17])}'
-		</code></pre>
-	</Details>
-
-	<Details>
-		<span slot="summary">Kitty</span>
-
-		<pre><code>
-# Colors
-# somedarkterm1.
-
-background #{hslToHex(colors[0])}
-foreground #{hslToHex(colors[17])}
-selection_background #{hslToHex(
-					colors.filter(obj => obj.name === `selection_background`)[0]
-				)}
-url_color #{hslToHex(colors[10])}
-cursor #{hslToHex(colors[12])}
-
-# Normal colors
-color0 #{hslToHex(colors[2])}
-color1 #{hslToHex(colors[4])}
-color2 #{hslToHex(colors[6])}
-color3 #{hslToHex(colors[8])}
-color4 #{hslToHex(colors[10])}
-color5 #{hslToHex(colors[12])}
-color6 #{hslToHex(colors[14])}
-color7 #{hslToHex(colors[16])}
-
-# Bright colors
-color8 #{hslToHex(colors[3])}
-color9 #{hslToHex(colors[5])}
-color10 #{hslToHex(colors[7])}
-color11 #{hslToHex(colors[9])}
-color12 #{hslToHex(colors[11])}
-color13 #{hslToHex(colors[13])}
-color14 #{hslToHex(colors[15])}
-color15 #{hslToHex(colors[17])}
-		</code></pre>
-	</Details>
 </article>
 
 <ContainCss />
