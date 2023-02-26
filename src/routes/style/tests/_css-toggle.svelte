@@ -53,7 +53,7 @@
 		color-scheme: var(--color-scheme);
 		margin-block-start: 0.5em;
 		margin-block-end: 0.5em;
-		padding-inline-start: var(--space-vx);
+		padding-inline-start: var(--space-edge-x);
 		padding-inline-end: 1rem;
 
 		display: flex;

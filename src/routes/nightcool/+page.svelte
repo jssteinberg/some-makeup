@@ -3,7 +3,6 @@
 	import ContainCss from "$lib/DefaultCss.svelte";
 	import SpaceCss from "$lib/SpaceCss.svelte";
 	import LineHeightCss from "$lib/FlowCss.svelte";
-	import PrismCss from "$lib/PrismCss.svelte";
 
 	const hslToHex = ({ h, s, l }) => {
 		l /= 100;
@@ -106,17 +105,19 @@
 			>
 				<p>
 					<code>#{hslToHex(color)}</code>
-				</p>
-				{#if color.name}
-					<p>
+					{#if color.name}
 						<strong
 							>{color.name}{typeof color.i !== "undefined"
 								? ` #${color.i}`
 								: ``}</strong
 						>
-						<span aria-hidden="true" aria-label="color-test">color</span>
-					</p>
-				{/if}
+						<span
+							aria-hidden="true"
+							aria-label="color-test"
+							class="whitespace-nowrap text-color">color</span
+						>
+					{/if}
+				</p>
 			</li>
 		{/each}
 	</ol>
@@ -125,7 +126,6 @@
 <ContainCss />
 <SpaceCss />
 <LineHeightCss />
-<PrismCss />
 
 <style lang="postcss">
 	h1 {
@@ -148,6 +148,7 @@
 	ol {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		align-items: end;
 		padding: 0;
 		font-size: 1rem;
 		list-style: none;
@@ -158,7 +159,7 @@
 		margin-block-end: calc(0.25 * var(--space, 1em));
 	}
 
-	li span {
+	.text-color {
 		color: var(--color);
 	}
 

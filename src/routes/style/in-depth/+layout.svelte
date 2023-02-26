@@ -54,8 +54,8 @@
 
 	header {
 		margin-block-end: 1rem;
-		padding-inline-start: var(--space-vx);
-		padding-inline-end: var(--space-vx);
+		padding-inline-start: var(--space-edge-x);
+		padding-inline-end: var(--space-edge-x);
 	}
 
 	h1 small {

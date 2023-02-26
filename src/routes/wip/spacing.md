@@ -32,18 +32,18 @@ If you choose `rem` your good to go, for `em`, you can't actually use `em` but u
 	 * You want a dedicated global var for this and not `calc()`-it incase `--space` changes. */
 	--space-inline: calc(1.5 * var(--space));
 	/* x-axis space for gap between viewport edge and content */
-	--space-vx: 4.125vw;
+	--space-edge-x: 4.125vw;
 }
 
 @media (min-width: 600px) {
 	:root {
-		--space-vx: 8.25vw;
+		--space-edge-x: 8.25vw;
 	}
 }
 
 @media (min-width: 1500px) {
 	:root {
-		--space-vx: 12.5vw;
+		--space-edge-x: 12.5vw;
 	}
 }
 ```

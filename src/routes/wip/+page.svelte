@@ -22,7 +22,7 @@
 <style lang="postcss">
 	h1,
 	h1 ~ :global(*) {
-		margin-inline: var(--space-vx);
+		margin-inline: var(--space-edge-x);
 	}
 
 	ol {

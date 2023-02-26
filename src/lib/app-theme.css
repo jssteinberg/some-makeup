@@ -136,7 +136,7 @@
 .app-theme-main-content {
 	--line-height: calc(1 + .6);
 
-	margin-inline: var(--space-vx);
+	margin-inline: var(--space-edge-x);
 	font-size: var(--text-body);
 }
 

@@ -17,6 +17,6 @@ layout: no
 	h1 {
 		font-weight: normal;
 		font-style: italic;
-		margin: 2em var(--space-vx) 1em;
+		margin: 2em var(--space-edge-x) 1em;
 	}
 </style>

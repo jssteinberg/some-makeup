@@ -3,7 +3,7 @@
 	import DefaultCss from "./DefaultCss.svelte";
 	import SpaceCss from "./SpaceCss.svelte";
 	import LineHeightCss from "./FlowCss.svelte";
-	import PrismCss from "./PrismCss.svelte";
+	// import PrismCss from "./PrismCss.svelte";
 	import Date from "./Date.svelte";
 
 	export let title = "A knot";
@@ -33,9 +33,9 @@
 <SpaceCss />
 <LineHeightCss />
 
-{#if set.includes("code")}
-	<PrismCss />
-{/if}
+<!-- {#if set.includes("code")} -->
+<!-- 	<PrismCss /> -->
+<!-- {/if} -->
 
 <Date {date} />
 
