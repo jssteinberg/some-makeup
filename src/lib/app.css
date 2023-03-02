@@ -45,7 +45,7 @@
 		--saturation-2: 95%;
 		--light-2: 40%;
 		--bg: white;
-		--fg: oklch(2.72% 0.094 287.43);
+		--fg: oklch(12.72% 0.014 287.43);
 	}
 
 	/* :is(pre,code) .token { */
