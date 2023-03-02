@@ -31,11 +31,8 @@
 	--light-2: 73.5%;
 	--light-3: 93%;
 
-	--fg-h:        105.7;         --fg-s:        var(--saturation); --fg-l:        var(--light-3);
-	--bg-h:        var(--hue);    --bg-s:        var(--saturation); --bg-l:        calc(100% - var(--light-3));
-	--fg-hsl: var(--fg-h) var(--fg-s) var(--fg-l);
-	--fg:        hsl(var(--fg-h)        var(--fg-s)        var(--fg-l));
-	--bg:        hsl(var(--bg-h)        var(--bg-s)        var(--bg-l));
+	--fg: oklch(82.72% 0.014 287.43);
+	--bg: oklch(12.72% 0.014 287.43);
 
 	--hr-fg: var(--fg);
 	--sep-fg: hsla(var(--fg-hsl) / .2);
@@ -47,8 +44,8 @@
 		--color-scheme: light;
 		--saturation-2: 95%;
 		--light-2: 40%;
-		--bg-l: 100%;
-		--fg-l:        5%;
+		--bg: white;
+		--fg: oklch(2.72% 0.094 287.43);
 	}
 
 	/* :is(pre,code) .token { */
