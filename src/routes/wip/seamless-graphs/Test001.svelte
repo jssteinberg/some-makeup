@@ -62,7 +62,7 @@
 
 <style lang="postcss">
 	section {
-		--_title-size: min(6em, 5vw + 2 * var(--font-size));
+		--_title-size: min(6em, 5vw + 2 * var(--text-body));
 		background-image: linear-gradient(
 			-135deg,
 			hsla(var(--fg-hsl) / 0.1),
@@ -71,7 +71,7 @@
 		color: hsla(var(--fg-hsl) / 0.75);
 		min-height: 30vh;
 		margin: calc(0.5 * var(--_title-size)) 0;
-		padding: calc(0.5 * var(--space, 1rem)) var(--v-inline-gap);
+		padding: calc(0.5 * var(--space, 1rem)) var(--space-edge-x);
 		position: relative;
 		contain: content;
 	}

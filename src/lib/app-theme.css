@@ -30,7 +30,7 @@
 }
 
 :where(.app-theme-main-content) :is(ol, ul) :is(ol, ul) {
-	padding-inline-start: var(--space, 1em);
+	padding-inline-start: var(--space-inline);
 }
 
 @media (min-width: 1200px) {
@@ -84,8 +84,8 @@
 
 /* Small and Mono font elements */
 
-.app-theme-main-content :is(small, kbd, samp, pre, code) {
-	font-size: .85em;
+.app-theme-main-content :where(.small, small, kbd, samp, pre, code) {
+	font-size: .8125em;
 }
 
 .app-theme-main-content :not( :is(h1, pre) ) > :is(kbd, samp, pre, code) {
@@ -97,6 +97,7 @@
 }
 
 .app-theme-main-content code {
+	color: var(--term-fg);
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
@@ -104,8 +105,8 @@
 .app-theme {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
-	--space: calc(var(--font-size) * (1 + var(--added-lead, .6)));
-	--space-inline: var(--font-size);
+	--space: calc(var(--text-body) * (1 + var(--added-lead, .6)));
+	--space-inline: var(--text-body);
 }
 
 @media (min-width: 1500px) {
@@ -121,7 +122,7 @@
 }
 
 .app-theme header {
-	font-size: var(--font-size);
+	font-size: var(--text-body);
 }
 
 .app-theme :is(h2, .h2) {
@@ -136,8 +137,8 @@
 .app-theme-main-content {
 	--line-height: calc(1 + .6);
 
-	margin-inline: var(--v-inline-gap);
-	font-size: var(--font-size);
+	margin-inline: var(--space-edge-x);
+	font-size: var(--text-body);
 }
 
 .app-theme-main-content.sans-theme {
@@ -165,7 +166,7 @@
 		no-repeat;
 	margin-inline-start: 0;
 	margin-inline-end: 0;
-	padding: 0 0 0 calc(.5 * var(--space, 1em));
+	padding: 0 0 0 calc(.5 * var(--space-inline));
 	position: relative;
 }
 
@@ -175,15 +176,6 @@
 	position: absolute;
 	top: -.375em;
 	left: -.17em;
-}
-
-/* `code` background */
-.app-theme-main-content :not( :is(h1, pre) ) > code {
-	--_bg: hsla(var(--fg-hsl) / .125);
-	background: var(--_bg);
-	border-radius: .25rem;
-	padding: .15em .25em;
-	white-space: normal;
 }
 
 /* Code block */

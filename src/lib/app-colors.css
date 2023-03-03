@@ -1,0 +1,12 @@
+:root {
+	--primary: oklch(32.72% 0.054 287.43);
+	/* --term-fg: oklch(82.72% 0.084 287.43); */
+	--term-fg: oklch(71% 0.17 287.43);
+}
+
+/* light */
+@media (prefers-color-scheme: light) {
+	:root {
+		--term-fg: oklch(31% 0.17 287.43);
+	}
+}

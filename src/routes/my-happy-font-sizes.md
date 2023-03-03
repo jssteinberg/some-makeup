@@ -1,7 +1,7 @@
 ---
 title: My Happy Font Sizes
 description: "Clamped font sizes I prefer for body text on different breakpoints."
-date: ["2022-06-24", "2022-06-30", "2023-01-15"]
+date: ["2022-06-24", "2022-06-30", "2023-01-15", "2023-03-03"]
 set: ["code"]
 ---
 
@@ -13,7 +13,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 
 ```css
 :root {
-	--font-size: clamp(
+	--text-body: clamp(
 		1rem,
 		4.8vw,
 		1.3rem
@@ -22,7 +22,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 
 @media (min-width: 900px) {
 	:root {
-		--font-size: clamp(
+		--text-body: clamp(
 			1.1rem,
 			.125rem + 1vw,
 			1.12rem
@@ -32,7 +32,7 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 
 @media (min-width: 1500px) {
 	:root {
-		--font-size: clamp(
+		--text-body: clamp(
 			1.1rem,
 			.125rem + 1vw,
 			1.2rem
@@ -44,26 +44,22 @@ The CSS-variable in question for the body text `font-size` (using my not too ser
 For code, and elements that should have same size for consistency, I have these rules:
 
 ```css
-.app-theme-main-content :is(
+.app-theme-main-content :where(
 	code,
 	kbd,
+	pre,
 	samp,
 	small
 ) {
-	font-size: .85em;
+	font-size: .8125em;
 }
 
-.app-theme-main-content :not(pre) > :is(
-	code,
-	kbd,
-	samp,
-	small
-) {
-	font-size: 1.85ex;
+.app-theme-main-content pre code {
+	font-size: 1em;
 }
 ```
 
-The first ruleset basically targets code blocks (with `pre` parent). The second ruleset targets inline `code`. Using system monospace fonts this generally gives a matching result in size:
+Using system monospace fonts this generally gives a matching result in size:
 
 ```css
 .app-theme-main-content code {
@@ -78,6 +74,5 @@ The first ruleset basically targets code blocks (with `pre` parent). The second 
 		monospace;
 }
 ```
-
 
 —[Johan](//johan.land)

@@ -17,6 +17,6 @@
 <style lang="postcss">
 	.date-info {
 		/* text-align: end; */
-		padding-inline: var(--v-inline-gap);
+		padding-inline: var(--space-edge-x);
 	}
 </style>

@@ -9,3 +9,8 @@
 	margin-top: var(--space-block-start, var(--space-block, var(--space, 1rem)));
 	margin-bottom: var(--space-block-end, var(--space-block, var(--space, 1rem)));
 }
+
+/* Similar block height for needed elements. */
+hr {
+	height: var(--space-block, var(--space, 1rem));
+}

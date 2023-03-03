@@ -30,12 +30,12 @@
 
 <style lang="postcss">
 	.index-container {
-		padding-inline: var(--v-inline-gap);
+		padding-inline: var(--space-edge-x);
 
 		/* Adjust font-size */
 		font-size: clamp(
-			var(--font-size) + 0.125rem,
-			var(--font-size) + min(0.75vw, 1.5vh),
+			var(--text-body) + 0.125rem,
+			var(--text-body) + min(0.75vw, 1.5vh),
 			1.75rem
 		);
 	}
@@ -65,7 +65,7 @@
 		ul {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 0 var(--v-inline-gap);
+			gap: 0 var(--space-edge-x);
 		}
 	}
 </style>
