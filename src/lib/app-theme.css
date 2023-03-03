@@ -178,15 +178,6 @@
 	left: -.17em;
 }
 
-/* `code` background */
-.app-theme-main-content :not( :is(h1, pre) ) > code {
-	--_bg: hsla(var(--fg-hsl) / .125);
-	background: var(--_bg);
-	border-radius: .25rem;
-	padding: .15em .25em;
-	white-space: normal;
-}
-
 /* Code block */
 
 .app-theme-main-content pre {

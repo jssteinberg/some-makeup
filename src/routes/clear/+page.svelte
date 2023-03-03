@@ -51,12 +51,12 @@
 	.dark {
 		/* lc */
 		background: oklch(12.72% 0.014 287.43);
-		color: oklch(82.72% 0.084 287.43);
+		color: oklch(71% 0.17 287.43);
 	}
 
 	.light {
 		/* l-c */
-		color: oklch(32.72% 0.064 287.43);
+		color: oklch(31% 0.17 287.43);
 	}
 
 	.primary-l :nth-child(1) {
