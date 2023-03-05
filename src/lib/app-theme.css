@@ -63,8 +63,10 @@
 
 /* Link */
 
-:where(.app-theme-main-content) a {
+:where(.app-theme) a {
+	text-decoration: none;
 	text-underline-offset: 1px;
+	text-decoration-line: underline;
 	text-decoration-thickness: 1px;
 	break-inside: avoid;
 }
@@ -103,7 +105,7 @@
 .app-theme {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
-	--space: calc(var(--text-body) * (1 + var(--added-lead, .6)));
+	--space: calc(var(--text-body) * (1 + var(--added-lead)));
 	--space-inline: var(--text-body);
 }
 
