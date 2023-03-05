@@ -64,10 +64,8 @@
 /* Link */
 
 :where(.app-theme-main-content) a {
-	text-underline-offset: .125em;
+	text-underline-offset: 1px;
 	text-decoration-thickness: 1px;
-	text-decoration-color: hsla(var(--fg-h) var(--fg-s) var(--fg-l) / .5);
-	/* avoid break inside */
 	break-inside: avoid;
 }
 
