@@ -3,7 +3,7 @@
 	import StyleNav from "../_style-nav.svelte";
 	import Nav from "$lib/Nav.svelte";
 	import { page } from "$app/stores";
-	import MetaTags from "$lib/MetaData.svelte";
+	import MetaData from "$lib/MetaData.svelte";
 	import { onMount } from "svelte";
 	import Header from "$lib/Header.svelte";
 
@@ -51,7 +51,7 @@
 	});
 </script>
 
-<MetaTags
+<MetaData
 	title={`makeup-style ${testLabel ? `${testLabel} test` : `tests`}`}
 	description={`Test makeup-style code for ${testLabel ? testLabel : ``}.`}
 />

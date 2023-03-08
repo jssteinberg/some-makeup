@@ -1,5 +1,5 @@
 <script>
-	import MetaTags from "$lib/MetaData.svelte";
+	import MetaData from "$lib/MetaData.svelte";
 	import ContainCss from "$lib/DefaultCss.svelte";
 	import SpaceCss from "$lib/SpaceCss.svelte";
 	import LineHeightCss from "$lib/FlowCss.svelte";
@@ -74,7 +74,7 @@
 	];
 </script>
 
-<MetaTags
+<MetaData
 	title={`nightcool`}
 	description={`A cool and clear color palette for terminals and syntax highlighting.`}
 />
