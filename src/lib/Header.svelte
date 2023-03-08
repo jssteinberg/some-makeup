@@ -26,8 +26,4 @@
 	.site-header a:is(:hover, :focus-visible) {
 		box-shadow: inset 0 0 0 2px var(--fg);
 	}
-
-	/* .site-header [href="/"] { */
-	/* 	box-shadow: inset 1px 1px; */
-	/* } */
 </style>

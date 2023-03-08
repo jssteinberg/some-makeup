@@ -49,6 +49,8 @@
 		align-items: center;
 		min-height: var(--_TOUCH-TARGET-SIZE);
 		min-width: var(--_TOUCH-TARGET-SIZE);
+		text-decoration: none;
+		text-decoration-line: underline;
 		text-transform: lowercase;
 		font-variant: small-caps;
 	}
