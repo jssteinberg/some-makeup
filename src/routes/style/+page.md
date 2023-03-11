@@ -1,7 +1,7 @@
 ---
 title: makeup-style
 description: "Makeup style for the web."
-set: ["code", "book"]
+set: ["code"]
 ---
 
 # makeup-style
