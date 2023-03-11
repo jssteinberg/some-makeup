@@ -1,22 +1,37 @@
 <script>
 	export let date;
+	$: isoDates = date.map(d => new Date(d).toISOString());
 </script>
 
 {#if date}
-	<p class="date-info">
-		<em>
-			{#if date.length > 1}
-				(Up)date ({date[date.length - 1]}) {date[0]}
-			{:else}
-				Date {date[0]}
-			{/if}
-		</em>
-	</p>
+	<dl>
+		{#if date.length > 1}
+			<dt>Updated</dt>
+			<dd>
+				<time datetime={isoDates[date.length - 1]}
+					>{isoDates[date.length - 1].split("T")[0]}</time
+				>
+			</dd>
+		{/if}
+		<dt>Published</dt>
+		<dd>
+			<time datetime={isoDates[0]}>{isoDates[0].split("T")[0]}</time>
+		</dd>
+	</dl>
 {/if}
 
 <style lang="postcss">
-	.date-info {
-		/* text-align: end; */
+	dl {
+		margin-block-end: 0;
 		padding-inline: var(--space-edge-x);
+	}
+
+	dl > * {
+		display: inline;
+		margin: 0;
+	}
+
+	dl > :not(:last-child) {
+		margin-inline-end: 0.5em;
 	}
 </style>
