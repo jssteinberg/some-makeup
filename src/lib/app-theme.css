@@ -42,21 +42,25 @@
 /* Adjust inline elements */
 
 :where(.app-theme) :is(em, cite) :is(em, cite),
-:where(.app-theme) :is(h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) em {
+:where(.app-theme) :is(h2, h3, h4, h5, h6) em {
 	font-weight: normal;
 }
 
 /* Headings */
 
-:where(.app-theme) :is(h4, .h4, h5, .h5, h6, .h6) {
+:where(.app-theme) :is(h3) {
+	padding-block: calc(.5 * var(--space));
+}
+
+:where(.app-theme) :is(h3, h4, h5, h6) {
 	margin-block-end: 0;
 }
 
-:where(.app-theme) :is(h4, .h4, h5, .h5, h6, .h6) + * {
+:where(.app-theme) :is(h3, h4, h5, h6) + * {
 	margin-block-start: 0;
 }
 
-:where(.app-theme) :is(h5, .h5, h6, .h6) {
+:where(.app-theme) :is(h5, h6) {
 	font-weight: normal;
 	font-style: italic;
 }
@@ -92,21 +96,22 @@
 	break-inside: avoid;
 }
 
-.app-theme-main-content pre code {
-	font-size: 1em;
-}
-
 .app-theme-main-content code {
 	color: var(--term-fg);
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+.app-theme-main-content pre code {
+	font-size: 1em;
 }
 
 /* app-theme */
 .app-theme {
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
-	--space: calc(var(--text-body) * (1 + var(--added-lead)));
-	--space-inline: var(--text-body);
+	--leading: calc(var(--text-body) * (1 + var(--added-lead)));
+	--space: var(--leading);
+	--space-inline: var(--leading);
 }
 
 @media (min-width: 1500px) {
