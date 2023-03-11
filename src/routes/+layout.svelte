@@ -10,7 +10,7 @@
 	<!-- theme-color for Safari -->
 	<meta
 		name="theme-color"
-		content="#0c0a19"
+		content="rgb(6, 6, 12)"
 		media="(prefers-color-scheme: dark)"
 	/>
 	<meta
