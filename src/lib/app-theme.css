@@ -110,7 +110,7 @@
 	--added-lead: .65;
 	--line-height: calc(1 + .6);
 	--leading: calc(var(--text-body) * (1 + var(--added-lead)));
-	--space: var(--leading);
+	--space: var(--text-body);
 	--space-inline: var(--leading);
 }
 
