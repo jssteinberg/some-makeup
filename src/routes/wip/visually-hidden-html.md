@@ -32,7 +32,7 @@ Then, also incorporating a technique using aria attributes instead of classes us
   -webkit-clip-path: inset(50%) !important;
 }
 
-@supports (:has()) {
+@supports selector(:has(+ *)) {
 	.visually-hidden:not(:focus):not(:active):not(:has(:focus, :active)),
 	[aria-hidden="false" i][hidden]:not(:focus):not(:active) {
 		position: absolute !important;
@@ -70,3 +70,4 @@ Let's start at the top. Some of the rules are quite obvious.
 ## Related links
 
 - https://en.wikipedia.org/wiki/Chess_annotation_symbols
+- https://www.bram.us/2023/01/04/css-has-feature-detection-with-supportsselector-you-want-has-not-has/
