@@ -267,18 +267,6 @@ figure {
 
 ---
 
-For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`.
-
-```css
-[aria-disabled="true" i],
-[disabled],
-[readonly] {
-	cursor: not-allowed;
-}
-```
-
----
-
 All clickable elements gets `cursor: pointer`. The reason being how popular UI libraries, like Bootstrap, adds it for buttons and have made web users accustomed to it. Let’s embrace it and make it as consistent as it can be!
 
 ```css
@@ -291,6 +279,18 @@ button,
 select,
 summary {
 	cursor: pointer;
+}
+```
+
+---
+
+For (usually interactive) elements currently not interactive `cursor` will consistently be `not-allowed`. *Ruleset is below other `cursor` rules to take precedence.*
+
+```css
+[aria-disabled="true" i],
+[disabled],
+[readonly] {
+	cursor: not-allowed;
 }
 ```
 
