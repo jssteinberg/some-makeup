@@ -1,6 +1,6 @@
 <script>
 	export let date;
-	$: isoDates = date.map(d => new Date(d).toISOString());
+	$: isoDates = date ? date.map(d => new Date(d).toISOString()) : undefined;
 </script>
 
 {#if date}
