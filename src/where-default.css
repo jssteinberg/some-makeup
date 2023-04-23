@@ -144,6 +144,6 @@ select, summary {
 }
 
 [aria-disabled="true" i], [disabled], [readonly] {
-	/* Consistent cursor for disabled elements */
+	/* Consistent cursor for disabled elements (below other `cursor` rules in file to take precedence) */
 	cursor: not-allowed;
 }
