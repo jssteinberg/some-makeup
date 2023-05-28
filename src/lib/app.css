@@ -31,8 +31,8 @@
 	--light-2: 73.5%;
 	--light-3: 93%;
 
-	--fg: oklch(82.72% 0.014 287.43);
-	--bg: oklch(12.72% 0.014 287.43);
+	--fg: oklch(90% 0.014 287.43);
+	--bg: oklch(10% 0.014 287.43);
 
 	--hr-fg: var(--fg);
 	--sep-fg: hsla(var(--fg-hsl) / .2);
@@ -79,7 +79,7 @@
 }
 
 body {
-	color: var( --fg); /* color on body---safari fix for dynamic dark/light mode changing */
+	color: var(--fg); /* color on body---safari fix for dynamic dark/light mode changing */
 	margin: 0;
 }
 
