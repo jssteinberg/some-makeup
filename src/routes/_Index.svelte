@@ -30,24 +30,25 @@
 
 <style lang="postcss">
 	.index-container {
-		padding-inline: var(--space-edge-x);
-
 		/* Adjust font-size */
+		font-size: var(--text-body);
+		/*
 		font-size: clamp(
 			var(--text-body) + 0.125rem,
 			var(--text-body) + min(0.75vw, 1.5vh),
-			1.75rem
+			1.5rem
 		);
+		*/
+	}
+
+	.index-top {
+		padding-inline: var(--space-edge-x);
 	}
 
 	.index-container :global(a) {
 		display: block;
 		min-height: 2.5em;
 		min-width: 2.5em;
-	}
-
-	.index-top ~ :global(p) {
-		margin-block: 0.5em;
 	}
 
 	h1,

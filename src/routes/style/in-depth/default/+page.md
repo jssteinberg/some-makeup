@@ -146,7 +146,7 @@ b, strong {
 
 Reset/restyle:
 
-- Underline is removed for `<abbr>` (not with `[title]` to avoid specificity) attribute to not fool anyone to thinking its functionality works universally (e.g., it must be extended for touch screens). When its functionality is not extended, the context of the element must give away its meaning.
+- Style is removed for `<abbr>` attribute to not give the illusion that it has a functionality that works universally. For instance when using `title` attribute its functionality must be extended for touch screens. When its functionality is not extended, the context of the element must give away its meaning (see [`<abbr>` at MDN](//developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr).
 - `<hr>` is by browser default hard to style consistently across browsers and has a disrupting appearance. This styling is a minimal `1px` border, but typographically nice and its extendable.
 
 ```css

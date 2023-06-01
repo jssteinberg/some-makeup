@@ -1,7 +1,7 @@
 ---
 title: makeup-style
 description: "Makeup style for the web."
-set: ["code", "book"]
+set: ["code"]
 ---
 
 # makeup-style
@@ -70,7 +70,7 @@ Margin for `<body>` is not removed. So you usually also want to style `body { ma
 
 Check browser support for properties `hyphens` and `all`, and consider automating fallbacks and polyfill with [postcss-preset-env][ppe] or similar.
 
-To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. It is not accompanied by [rules to control auto-hyphens](https://clagnut.com/blog/2395). `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
+To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. It is not accompanied by [rules to control auto-hyphens](https://clagnut.com/blog/2395). `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows the [`shy` HTML entity](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens#suggesting_line_break_opportunities).
 
 `code, kbd, samp, sub, sup` are inline elements Default CSS styles to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. The solution is to redo your HTML structure (perhaps it can be more semantic?), or restyle `line-height` for these elements in this context.
 

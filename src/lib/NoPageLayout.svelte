@@ -1,5 +1,5 @@
 <script>
-	import MetaTags from "./MetaData.svelte";
+	import MetaData from "./MetaData.svelte";
 	import DefaultCSS from "./DefaultCss.svelte";
 
 	export let title = "A knot";
@@ -14,7 +14,7 @@
 	$: langAttr = lang ?? set?.includes("nb") ? "nb" : undefined;
 </script>
 
-<MetaTags
+<MetaData
 	{title}
 	{metaTitle}
 	{author}

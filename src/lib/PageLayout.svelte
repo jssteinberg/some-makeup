@@ -1,5 +1,5 @@
 <script>
-	import MetaTags from "./MetaData.svelte";
+	import MetaData from "./MetaData.svelte";
 	import DefaultCss from "./DefaultCss.svelte";
 	import SpaceCss from "./SpaceCss.svelte";
 	import LineHeightCss from "./FlowCss.svelte";
@@ -18,7 +18,7 @@
 	$: langAttr = lang ?? set?.includes("nb") ? "nb" : undefined;
 </script>
 
-<MetaTags
+<MetaData
 	{title}
 	{metaTitle}
 	{author}
@@ -37,7 +37,9 @@
 <!-- 	<PrismCss /> -->
 <!-- {/if} -->
 
-<Date {date} />
+<Date {date}>
+	<p lang="en" class="visually-hidden">Published date and last update:</p>
+</Date>
 
 <div
 	lang={langAttr}

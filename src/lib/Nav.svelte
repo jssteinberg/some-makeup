@@ -64,11 +64,13 @@
 	}
 
 	nav.sticky a {
+		background-color: var(--bg);
 		box-shadow: inset 0 0 0 1px;
 	}
 
 	nav :global([aria-current="page"]) {
-		text-decoration: underline;
+		text-decoration: none;
+		text-decoration-line: underline;
 	}
 
 	nav.sticky :global(a:focus-visible),
@@ -92,9 +94,6 @@
 	nav.sticky {
 		--_offset: 1vh;
 		position: sticky;
-	}
-	nav.sticky a {
-		background: hsl(var(--bg-h) var(--bg-s) var(--bg-l) / 0.9);
 	}
 	nav.sticky:not(.sticky--bottom) {
 		top: var(--_offset);

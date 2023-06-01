@@ -7,17 +7,6 @@
 
 <svelte:head>
 	<link rel="canonical" href={`https://some.makeup${$page.url.pathname}`} />
-	<!-- theme-color for Safari -->
-	<meta
-		name="theme-color"
-		content="#0c0a19"
-		media="(prefers-color-scheme: dark)"
-	/>
-	<meta
-		name="theme-color"
-		content="#ffffff"
-		media="(prefers-color-scheme: light)"
-	/>
 </svelte:head>
 
 <div id="document">
