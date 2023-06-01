@@ -1,5 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import Unocss from 'unocss/vite';
+import Unocss from '@unocss/svelte-scoped/vite';
 
 const spacing = {
 	'.5': 'calc(0.125 * var(--space, 1rem))',
@@ -32,7 +32,6 @@ const width = {
 const config = {
 	plugins: [
 		Unocss({
-			mode: 'svelte-scoped',
 			theme: {
 				// breakpoints,
 				spacing: {
