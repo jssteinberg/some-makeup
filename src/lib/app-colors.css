@@ -1,6 +1,6 @@
 :root {
 	--primary: oklch(32.72% 0.054 287.43);
-	--term-fg: oklch(71% 0.17 287.43);
+	--term-fg: oklch(80% 0.17 287.43);
 }
 
 /* light */
