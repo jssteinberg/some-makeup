@@ -3,35 +3,34 @@
 	$: isoDates = date ? date.map(d => new Date(d).toISOString()) : undefined;
 </script>
 
+<slot />
+
 {#if date}
-	<dl>
+	<ol>
+		<li>
+			<time datetime={isoDates[0]}>{isoDates[0].split("T")[0]}</time>
+		</li>
 		{#if date.length > 1}
-			<dt>Updated</dt>
-			<dd>
+			<li>
 				<time datetime={isoDates[date.length - 1]}
 					>{isoDates[date.length - 1].split("T")[0]}</time
 				>
-			</dd>
+			</li>
 		{/if}
-		<dt>Published</dt>
-		<dd>
-			<time datetime={isoDates[0]}>{isoDates[0].split("T")[0]}</time>
-		</dd>
-	</dl>
+	</ol>
 {/if}
 
 <style lang="postcss">
-	dl {
+	ol {
+		display: flex;
+		flow: row wrap;
+		font-style: italic;
+		list-style: none;
 		margin-block-end: 0;
 		padding-inline: var(--space-edge-x);
 	}
 
-	dl > * {
-		display: inline;
-		margin: 0;
-	}
-
-	dl > :not(:last-child) {
-		margin-inline-end: 0.5em;
+	li:not(:last-child)::after {
+		content: ";\00a0";
 	}
 </style>

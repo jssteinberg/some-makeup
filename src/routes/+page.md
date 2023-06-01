@@ -10,13 +10,15 @@ layout: no
 			<Date date={post.meta?.date} />
 
 			<p>
-				<a href={post.path} lang={
-					post.meta?.lang
-						? post.meta.lang
-						: undefined
-				}>
-					{@html post.meta.title}
-				</a>
+				<strong>
+					<a href={post.path} lang={
+						post.meta?.lang
+							? post.meta.lang
+							: undefined
+					}>
+						{@html post.meta.title}
+					</a>
+				</strong>
 			</p>
 		</div>
 	{/each}

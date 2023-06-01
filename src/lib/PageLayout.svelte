@@ -37,7 +37,9 @@
 <!-- 	<PrismCss /> -->
 <!-- {/if} -->
 
-<Date {date} />
+<Date {date}>
+	<p lang="en" class="visually-hidden">Published date and last update:</p>
+</Date>
 
 <div
 	lang={langAttr}
