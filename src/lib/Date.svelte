@@ -1,20 +1,29 @@
 <script>
+	let classes = "";
+
+	export { classes as class };
 	export let date;
+	export let small = false;
+
 	$: isoDates = date ? date.map(d => new Date(d).toISOString()) : undefined;
 </script>
 
 <slot />
 
 {#if date}
-	<ol>
+	<ol class={classes || undefined}>
 		<li>
-			<time datetime={isoDates[0]}>{isoDates[0].split("T")[0]}</time>
+			<svelte:element this={small ? "small" : "span"}>
+				<time datetime={isoDates[0]}>{isoDates[0].split("T")[0]}</time>
+			</svelte:element>
 		</li>
 		{#if date.length > 1}
 			<li>
-				<time datetime={isoDates[date.length - 1]}
-					>{isoDates[date.length - 1].split("T")[0]}</time
-				>
+				<svelte:element this={small ? "small" : "span"}>
+					<time datetime={isoDates[date.length - 1]}
+						>{isoDates[date.length - 1].split("T")[0]}</time
+					>
+				</svelte:element>
 			</li>
 		{/if}
 	</ol>

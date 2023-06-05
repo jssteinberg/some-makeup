@@ -7,18 +7,16 @@ layout: no
 <Index>
 	{#each posts as post}
 		<div>
-			<Date date={post.meta?.date} />
+			<Date date={post.meta?.date} small />
 
 			<p>
-				<strong>
-					<a href={post.path} lang={
-						post.meta?.lang
-							? post.meta.lang
-							: undefined
-					}>
-						{@html post.meta.title}
-					</a>
-				</strong>
+				<a href={post.path} lang={
+					post.meta?.lang
+						? post.meta.lang
+						: undefined
+				}>
+					{@html post.meta.title}
+				</a>
 			</p>
 		</div>
 	{/each}
