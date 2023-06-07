@@ -111,6 +111,10 @@ a {
 	font-family: var(--sans);
 }
 
+.whitespace-nowrap {
+	white-space: nowrap;
+}
+
 .visually-hidden,
 .visually-hidden-focusable:not(:focus) {
   border: 0 !important;

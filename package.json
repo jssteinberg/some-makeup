@@ -14,7 +14,6 @@
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^3.0.0",
 		"@sveltejs/kit": "^1.20.0",
-		"@unocss/svelte-scoped": "^0.52.7",
 		"autoprefixer": "^10.4.14",
 		"charts.css": "^0.9.0",
 		"cssnano": "^6.0.1",
@@ -33,7 +32,6 @@
 		"stylelint": "^15.6.2",
 		"svelte": "^3.59.1",
 		"svelte-preprocess": "^5.0.4",
-		"unocss": "^0.52.7",
 		"vite": "^4.3.9"
 	},
 	"description": "Minimal CSS files for correcting, improving and normalizing default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
