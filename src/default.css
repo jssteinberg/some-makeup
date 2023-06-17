@@ -14,9 +14,6 @@ code, kbd, samp, sub, sup {
 	hyphens: manual;
 	line-height: .625; }
 
-code, kbd, samp, pre {
-	font-family: monospace, monospace; }
-
 ::file-selector-button, button, input, select, textarea {
 	font-size: 1em; }
 
