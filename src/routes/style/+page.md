@@ -1,7 +1,7 @@
 ---
 title: makeup-style
 description: "Makeup style for the web."
-set: ["code"]
+set: ["code", "book"]
 ---
 
 # makeup-style
@@ -46,10 +46,9 @@ CSS import (via postcss-import or Lightning CSS):
 ## *Default CSS*
 
 Import *default.css*, or the alternate *where-default.css* that uses `:where()` for less specificity.
+Their rules corrects and improves the minimal necessary default CSS, ready for other layers of style on top:
 
-It corrects and improves the minimal necessary default CSS:
-
-1. Up to date browser normalizing of the bare necessities.
+1. Up to date minimal browser normalizing.
 2. Responsive rules for small screen-sizes including universal `border-box` to prevent overflow and make styling intuitive, and otherwise prevent overflowing content with `hyphens`, `overflow-wrap` and improving some element to be responsive.
 3. Fix elements that disrupts typographic rhythm.
 4. Intuitive `cursor` values for usability.
