@@ -19,7 +19,6 @@
 
 :where(.app-theme-main-content) ol ::marker {
 	font-style: italic;
-	font-weight: bolder;
 }
 
 :where(.app-theme-main-content) ol ol {
