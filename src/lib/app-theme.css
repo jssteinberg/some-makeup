@@ -89,7 +89,7 @@
 /* Small and Mono font elements */
 
 .app-theme-main-content :where(.small, small, kbd, samp, pre, code) {
-	font-size: .8125em;
+	font-size: .8em;
 }
 
 .app-theme-main-content :not( :is(h1, pre) ) > :is(kbd, samp, pre, code) {
@@ -98,6 +98,7 @@
 
 .app-theme-main-content code {
 	color: var(--term-fg);
+	margin-inline: .125em;
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 

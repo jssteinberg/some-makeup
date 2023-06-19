@@ -48,6 +48,10 @@
 		box-shadow: inset 0 0 0 2px;
 	}
 
+	:where(details[open]) summary {
+		margin-block-end: var(--space, 1em);
+	}
+
 	:where(details[open]) summary:not(:focus-visible) {
 		box-shadow: unset;
 		color: var(--bg);
