@@ -1,6 +1,6 @@
 /* INTUITIVE UNIVERSAL RULES */
 
-html *, ::before, ::after {
+*, html *, ::before, html ::before, ::after, html ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box;
 }

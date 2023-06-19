@@ -1,11 +1,11 @@
 /* CONVENIENT/INTUITIVE STYLING */
 
-html *, ::before, ::after {
+*, html *, ::before, html ::before, ::after, html ::after {
 	background-repeat: no-repeat;
 	mask-repeat: no-repeat;
 }
 
-::before, ::after {
+::before, html ::before, ::after, html ::after {
 	border-radius: inherit;
 	vertical-align: inherit;
 }
@@ -13,7 +13,7 @@ html *, ::before, ::after {
 /* REDUCE MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-	html *, ::before, ::after {
+	*, html *, ::before, html ::before, ::after, html ::after {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
