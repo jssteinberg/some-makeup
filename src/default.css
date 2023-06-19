@@ -1,6 +1,6 @@
 /* INTUITIVE UNIVERSAL RULES */
 
-*, ::before, ::after {
+html *, ::before, ::after {
 	box-sizing: border-box; }
 
 :root {

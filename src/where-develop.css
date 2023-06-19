@@ -1,6 +1,6 @@
 /* CONVENIENT/INTUITIVE STYLING */
 
-*, ::before, ::after {
+html *, ::before, ::after {
 	/* Background images are not repeated. */
 	background-repeat: no-repeat;
 	/* Mask images are not repeated. */
@@ -19,7 +19,7 @@
 /* REDUCE MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-	*, ::before, ::after {
+	html *, ::before, ::after {
 		/* Remove animations and transitions when user prefers it. */
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;

@@ -1,6 +1,6 @@
 /* CONVENIENT/INTUITIVE STYLING */
 
-*, ::before, ::after {
+html *, ::before, ::after {
 	background-repeat: no-repeat;
 	mask-repeat: no-repeat;
 }
@@ -13,7 +13,7 @@
 /* REDUCE MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-	*, ::before, ::after {
+	html *, ::before, ::after {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
