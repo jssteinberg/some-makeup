@@ -25,10 +25,10 @@ populate and style HTML documents.
 
 ---
 
-A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height.
+A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height. For HTML documents (perhaps the only relevant document type), the selectors are preceded with `html` for convenience, to override `:where()` in certain cases, e.g., `:where(abbr, hr) { all: unset; }` (used in "where-default.css").
 
 ```css
-*, ::before, ::after {
+*, html *, ::before, html ::before, ::after, html ::after {
 	box-sizing: border-box;
 }
 ```

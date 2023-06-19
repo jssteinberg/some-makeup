@@ -4,14 +4,14 @@ description: "develop.css defines additional CSS rulesets for more convenient an
 set: ["code", "book"]
 ---
 
-Develop CSS with additional CSS rulesets for more convenient and intuitive styling.
+Develop CSS with additional CSS rulesets for more convenient and intuitive styling. For HTML documents (usually), all selectors has a variant preceded with `html` for convenience, to override certain cases of `:where()`.
 
 ### Convenient/Intuitive Styling
 
 Background and mask images are not repeated.
 
 ```css
-*, ::before, ::after {
+*, html *, ::before, html ::before, ::after, html ::after {
 	background-repeat: no-repeat;
 	mask-repeat: no-repeat;
 }
@@ -23,7 +23,7 @@ Background and mask images are not repeated.
 2. Inherit vertical alignment.
 
 ```css
-::before, ::after {
+::before, html ::before, ::after, html ::after {
 	border-radius: inherit;
 	vertical-align: inherit;
 }
@@ -36,7 +36,7 @@ remove animations and transitions when user prefers it.
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-	*, ::before, ::after {
+	*, html *, ::before, html ::before, ::after, html ::after {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
