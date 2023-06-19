@@ -25,10 +25,10 @@ populate and style HTML documents.
 
 ---
 
-A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height. For HTML documents (perhaps the only relevant document type), the selectors are preceded with `html` for convenience, to override `:where()` in certain cases, e.g., `:where(abbr, hr) { all: unset; }` (used in "where-default.css").
+A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height. `html` is added for convenience so `:where()` and `all: unset` can be used, but still inherit box-sizing in certain cases (this would not work with `:root` since it has higher specificity). E.g., `:where(abbr, hr) { all: unset; }` (used in "where-default.css").
 
 ```css
-*, html *, ::before, html ::before, ::after, html ::after {
+html *, html ::before, html ::after {
 	box-sizing: border-box;
 }
 ```
@@ -53,14 +53,14 @@ The problem with this approach is how the inheritance of `box-sizing` by default
 
 ---
 
-For the document root, there are three important fixes for narrow viewports:
+For the document root---`<html>`---there are three important fixes for narrow viewports:
 
 1. To Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 2. To allow browsers to auto hyphenate words when text wraps, if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
 3. To break words if needed, and on soft-wrap word-break possibilities if possible, to not overflow horizontally and create a horizontal scrollbar (`break-word` is fallback for Ios Safari 14).
 
 ```css
-:root {
+html {
 	-webkit-text-size-adjust: 100%;
 	hyphens: auto;
 	overflow-wrap: break-word; overflow-wrap: anywhere;

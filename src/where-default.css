@@ -1,12 +1,12 @@
 /* INTUITIVE UNIVERSAL RULES */
 
-*, html *, ::before, html ::before, ::after, html ::after {
+html *, html ::before, html ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box;
 }
 
 :where(
-	:root
+	html
 ) {
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%;

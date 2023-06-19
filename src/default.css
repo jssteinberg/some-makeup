@@ -1,9 +1,9 @@
 /* INTUITIVE UNIVERSAL RULES */
 
-*, html *, ::before, html ::before, ::after, html ::after {
+html *, html ::before, html ::after {
 	box-sizing: border-box; }
 
-:root {
+html {
 	-webkit-text-size-adjust: 100%;
 	hyphens: auto;
 	overflow-wrap: break-word; overflow-wrap: anywhere; }
