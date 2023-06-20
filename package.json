@@ -35,7 +35,9 @@
 		"vite": "^4.3.9"
 	},
 	"description": "Minimal CSS files for correcting, improving and normalizing default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
-	"engines": ">=14.16",
+	"engines": {
+		"node": "*"
+	},
 	"exports": {
 		".": "./index.js",
 		"./develop.css": "./src/develop.css",
