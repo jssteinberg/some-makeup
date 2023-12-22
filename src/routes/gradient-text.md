@@ -12,9 +12,9 @@ The CSS code for gradient text has become too simple---**everyone's doing it!** 
 
 ```css
 h1.gradient-text {
-	background-image: linear-gradient(
-		90deg, var(--from), var(--to)
-	);
+	--to: orange;
+	--from: purple;
+	background-image: linear-gradient(-165deg, var(--to), var(--from) 75%, var(--from));
 	color: transparent;
 	-webkit-background-clip: text;
 }
@@ -33,9 +33,9 @@ h1.gradient-text {
 	}
 
 	h1 {
-		--from: orange;
-		--to: purple;
-		background-image: linear-gradient(-165deg, var(--from), var(--to) 75%, var(--to));
+		--to: orange;
+		--from: purple;
+		background-image: linear-gradient(-165deg, var(--to), var(--from) 75%, var(--from));
 		color: transparent;
 		background-clip: text;
 	}
