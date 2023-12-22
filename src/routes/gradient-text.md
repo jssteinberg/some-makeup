@@ -33,9 +33,9 @@ h1.gradient-text {
 	}
 
 	h1 {
-		--from: hsla(var(--gradient-base-hue, 180), 50%, 60%, 1);
-		--to: hsla(var(--gradient-base-hue, 180), 75%, 90%, 1);
-		background-image: linear-gradient(165deg, var(--from), var(--fg, white) 75%, var(--fg, white));
+		--from: orange;
+		--to: purple;
+		background-image: linear-gradient(-165deg, var(--from), var(--to) 75%, var(--to));
 		color: transparent;
 		background-clip: text;
 	}
