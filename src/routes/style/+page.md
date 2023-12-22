@@ -53,7 +53,7 @@ Their rules corrects and improves the minimal necessary default CSS, ready for o
 3. Fix elements that disrupts typographic rhythm.
 4. Intuitive `cursor` values for usability.
 
-All rules are included with the mindset of this generally fixing and improving default CSS in a minimal way. It does not style headings, or what would otherwise belong in your actual theme. For form elements some input related elements get a `max-width: 100%` and button elements gets `cursor: pointer`---nothing more as they work cross browsers and restyling is a matter of opinion. But resetting their style is now quite easy using `all` and `apperance`.
+All rules are included with the mindset of this generally fixing and improving default CSS in a minimal way. It does not style headings, or what would otherwise belong in your actual theme. For form elements, some input related elements get a `max-width: 100%` and button elements gets `cursor: pointer`---nothing more as they work cross browsers and restyling is a matter of opinion. But resetting their style is now quite easy using `all` and `apperance`.
 
 This file is an updated alternative to
 [normalize.css][nc],

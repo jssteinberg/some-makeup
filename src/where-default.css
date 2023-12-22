@@ -30,7 +30,7 @@ html *, html ::before, html ::after {
 :where(
 	::file-selector-button, button, input, select, textarea
 ) {
-	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
+	/* Avoid `input`/`textarea` cause zoom when on focus (Ios); incl. elements for consistency. */
 	font-size: 1em;
 }
 
