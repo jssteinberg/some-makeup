@@ -83,6 +83,7 @@
 		min-width: var(--touch-target-size, 48px);
 		max-width: max-content;
 		text-align: center;
+		transition: transform 0.25s;
 	}
 
 	details[open] summary::before {
