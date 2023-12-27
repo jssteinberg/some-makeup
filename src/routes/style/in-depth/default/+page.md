@@ -18,14 +18,13 @@ populate and style HTML documents.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
 - `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently (perhaps for several elements).
 - Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
-- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers (for `:where()`, files "where-default.css" and "where-develop.css" are in package, but experimental).
 - `font-family: monospace, monospace` is not set as it introduces the side-effect of increasing monospace elements' font-sizes when no font-size is set on parent.
 
 </Details>
 
 ---
 
-A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height. `html` is added for convenience so `:where()` and `all: unset` can be used, but still inherit box-sizing in certain cases (this would not work with `:root` since it has higher specificity). E.g., `:where(abbr, hr) { all: unset; }` (used in "where-default.css").
+A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height. The selectors starts with `html` for developer convenience, so `:where()` and `all: unset` can be used, but still inherit box-sizing in certain cases (this would not work with `:root` since it has higher specificity). E.g., `:where(abbr, hr) { all: unset; }` (used in "where-default.css").
 
 ```css
 html *, html ::before, html ::after {
