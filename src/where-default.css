@@ -1,12 +1,12 @@
 /* INTUITIVE UNIVERSAL RULES */
 
-*, ::before, ::after {
+html *, html ::before, html ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box;
 }
 
 :where(
-	:root
+	html
 ) {
 	/* Prevent adjustment of font-size after Ios orientation change. */
 	-webkit-text-size-adjust: 100%;
@@ -28,16 +28,9 @@
 }
 
 :where(
-	code, kbd, samp, pre
-) {
-	/* Fixes `font-size` when no `font-family`, and no parent has `font-size`. */
-	font-family: monospace, monospace;
-}
-
-:where(
 	::file-selector-button, button, input, select, textarea
 ) {
-	/* Avoid `input`/`textarea` cause zoom when on focus (Ios). `1em` for others for consistency. */
+	/* Avoid `input`/`textarea` cause zoom when on focus (Ios); incl. elements for consistency. */
 	font-size: 1em;
 }
 

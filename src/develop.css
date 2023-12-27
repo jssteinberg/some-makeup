@@ -1,11 +1,11 @@
 /* CONVENIENT/INTUITIVE STYLING */
 
-*, ::before, ::after {
+html *, html ::before, html ::after {
 	background-repeat: no-repeat;
 	mask-repeat: no-repeat;
 }
 
-::before, ::after {
+html ::before, html ::after {
 	border-radius: inherit;
 	vertical-align: inherit;
 }
@@ -13,7 +13,7 @@
 /* REDUCE MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-	*, ::before, ::after {
+	html *, html ::before, html ::after {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;

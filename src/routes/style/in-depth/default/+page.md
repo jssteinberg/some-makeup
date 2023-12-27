@@ -16,18 +16,18 @@ populate and style HTML documents.
 - CSS Remedy also adds `line-sizing: normal` to the root element based on a CSS draft, but that draft has later been changed. The styling presented here repairs it with a single `line-height` rule for the inline elements in question.
 - Margins or sizes for headings are not included. Headings are styled when default browser style is not sufficient, and default browser style for headings is actually descent.
 - Margins for nested lists are not removed, as sanitize.css does. Sometimes someone wants to style lists in a totally different way, and have margins on nested lists. It’s more flexible to remove them when needed.
-- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently  between elements.
+- `font-size` for `<small>` is not normalized as it’s already smaller in all browsers. If using a specific size is important for a theme, then the theme should set it consistently (perhaps for several elements).
 - Polyfills: CSS Remedy (and of course normalize.css) contains some polyfills for elements browsers haven't/hadn't added (correct) styles for. Like: `audio:not([controls]) { display:none; }`.
-- Using `:where()` or `@layer` could be of future improvements when more users updates their browsers (for `:where()`, files "where-default.css" and "where-develop.css" are in package, but experimental).
+- `font-family: monospace, monospace` is not set as it introduces the side-effect of increasing monospace elements' font-sizes when no font-size is set on parent.
 
 </Details>
 
 ---
 
-A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height.
+A default CSS has to start with perhaps **the** rule all elements need. It's more intuitive for developers coding layouts, and it prevents overflowing content, by making browsers include border-width and padding when calculating width and height. The selectors starts with `html` for developer convenience, so `:where()` and `all: unset` can be used, but still inherit box-sizing in certain cases (this would not work with `:root` since it has higher specificity). E.g., `:where(abbr, hr) { all: unset; }` (used in "where-default.css").
 
 ```css
-*, ::before, ::after {
+html *, html ::before, html ::after {
 	box-sizing: border-box;
 }
 ```
@@ -52,14 +52,14 @@ The problem with this approach is how the inheritance of `box-sizing` by default
 
 ---
 
-For the document root, there are three important fixes for narrow viewports:
+For the document root---`<html>`---there are three important fixes for narrow viewports:
 
 1. To Prevent Safari on Ios to adjust bigger font-size for some elements when device is in landscape orientation.
 2. To allow browsers to auto hyphenate words when text wraps, if appropriate. *The support may still be lacking for some languages in some browsers.* `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows `shy`.
 3. To break words if needed, and on soft-wrap word-break possibilities if possible, to not overflow horizontally and create a horizontal scrollbar (`break-word` is fallback for Ios Safari 14).
 
 ```css
-:root {
+html {
 	-webkit-text-size-adjust: 100%;
 	hyphens: auto;
 	overflow-wrap: break-word; overflow-wrap: anywhere;
@@ -103,23 +103,6 @@ sup {
 	top: -0.5em;
 }
 ```
-</Details>
-
----
-
-To fix a rare gotcha, when `font-size` for `code, kbd, samp, pre` is defined, but not `font-family`, and no parent is styled with `font-size`, only then will browsers compute `font-size` differently (e.g., with default browser settings, `1em` would be computed to `13px` instead of `16px`):
-
-```css
-code, kbd, samp, pre {
-	font-family: monospace, monospace;
-}
-```
-
-<Details>
-<em slot="summary">Alternatives</em>
-
-[Normalize.css][nc], [modern-normalize][mn] and [sanitize.css][sc] also defines `font-size: 1em`, but `font-size` is usually defined for sites that display code, and if it isn't then browser default is good.
-
 </Details>
 
 ---

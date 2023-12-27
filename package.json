@@ -1,6 +1,6 @@
 {
 	"name": "makeup-style",
-	"version": "0.4.2",
+	"version": "0.6.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -12,32 +12,32 @@
 		"test": ""
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^3.0.0",
-		"@sveltejs/kit": "^1.20.0",
-		"@unocss/svelte-scoped": "^0.52.7",
-		"autoprefixer": "^10.4.14",
+		"@sveltejs/adapter-vercel": "^3.1.0",
+		"@sveltejs/kit": "^1.30.3",
+		"autoprefixer": "^10.4.16",
 		"charts.css": "^0.9.0",
-		"cssnano": "^6.0.1",
-		"eslint": "^8.41.0",
-		"eslint-config-prettier": "^8.8.0",
+		"cssnano": "^6.0.2",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^8.10.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"husky": "^8.0.3",
 		"mdsvex": "^0.10.6",
-		"postcss": "^8.4.24",
+		"postcss": "^8.4.32",
 		"postcss-import": "^15.1.0",
-		"postcss-load-config": "^4.0.1",
-		"postcss-preset-env": "^8.4.2",
+		"postcss-load-config": "^4.0.2",
+		"postcss-preset-env": "^8.5.1",
 		"prettier": "^2.8.8",
 		"prettier-plugin-svelte": "^2.10.1",
-		"sass": "^1.62.1",
-		"stylelint": "^15.6.2",
-		"svelte": "^3.59.1",
-		"svelte-preprocess": "^5.0.4",
-		"unocss": "^0.52.7",
-		"vite": "^4.3.9"
+		"sass": "^1.69.5",
+		"stylelint": "^15.11.0",
+		"svelte": "^3.59.2",
+		"svelte-preprocess": "^5.1.3",
+		"vite": "^4.5.1"
 	},
 	"description": "Minimal CSS files for correcting, improving and normalizing default browser CSS, for narrow viewports first, and provides convenient and intuitive CSS-defaults for styling in general and typographic style.",
-	"engines": ">=14.16",
+	"engines": {
+		"node": "*"
+	},
 	"exports": {
 		".": "./index.js",
 		"./develop.css": "./src/develop.css",

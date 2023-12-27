@@ -24,8 +24,6 @@
 
 	$: part = links.filter(link => $page.route.id === link.href)[0]?.label;
 	$: subtitle = links.filter(link => $page.route.id === link.href)[0]?.subtitle;
-
-	page.subscribe(val => console.log(val));
 </script>
 
 <article class="app-theme">
@@ -34,7 +32,7 @@
 			<small>makeup-style in-depth:</small>
 
 			{#if part}
-				{part}{#if subtitle}—{/if}{#if subtitle}<em class="block">
+				{part}{#if subtitle}—{/if}{#if subtitle}<em>
 						{subtitle}
 					</em>{/if}
 			{/if}
@@ -47,6 +45,10 @@
 </article>
 
 <style lang="postcss">
+	h1 em {
+		display: block;
+	}
+
 	.app-theme,
 	article :global(.app-theme) {
 		--space: calc(var(--text-body) * (1 + var(--added-lead, 0.6)));

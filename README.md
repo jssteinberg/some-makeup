@@ -4,7 +4,7 @@ Minimal CSS files for correcting and improving default browser CSS; for styling 
 
 [Installation and documentation](https://some.makeup/style)
 
-The files in question are exported as:
+The files in question are exported as ("makeup-style/..."):
 
 ```
 default.css
@@ -48,6 +48,7 @@ default.css maybes:
 
 <summary>Naming process</summary>
 
+- makeup-style/ahead.css, ../develop.css, ../space.css, ../typography.css
 - ( ) default.css, developer.css, space.css, typography.css (for potential style-some)
 - (-) default.css, develop.css, (space.css, typography.css)
 

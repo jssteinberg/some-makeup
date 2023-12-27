@@ -1,9 +1,9 @@
 /* INTUITIVE UNIVERSAL RULES */
 
-*, ::before, ::after {
+html *, html ::before, html ::after {
 	box-sizing: border-box; }
 
-:root {
+html {
 	-webkit-text-size-adjust: 100%;
 	hyphens: auto;
 	overflow-wrap: break-word; overflow-wrap: anywhere; }
@@ -13,9 +13,6 @@
 code, kbd, samp, sub, sup {
 	hyphens: manual;
 	line-height: .625; }
-
-code, kbd, samp, pre {
-	font-family: monospace, monospace; }
 
 ::file-selector-button, button, input, select, textarea {
 	font-size: 1em; }

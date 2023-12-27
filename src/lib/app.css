@@ -2,7 +2,7 @@
 @import '../class/prose-book.css';
 @import './app-theme.css';
 @import './app-colors.css';
-/* @import './makeupdarkness1.css'; */
+@import './prism.css';
 
 :root {
 	--touch-target-size: max(48px, 3em);
@@ -31,7 +31,7 @@
 	--light-2: 73.5%;
 	--light-3: 93%;
 
-	--fg: oklch(95% 0.014 287.43);
+	--fg: oklch(92.5% 0.014 287.43);
 	--bg: oklch(5% 0.014 287.43);
 
 	--hr-fg: var(--fg);
@@ -109,6 +109,10 @@ a {
 
 .sans {
 	font-family: var(--sans);
+}
+
+.whitespace-nowrap {
+	white-space: nowrap;
 }
 
 .visually-hidden,
