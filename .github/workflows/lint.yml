@@ -21,18 +21,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install stylelint
+      - name: Install
         run: |
-          npm install stylelint
+          npm ci
 
-      - name: Run stylelint
-        run: npx stylelint "src/**/*.css"
-          --format github
-          --output-file stylelint-results.sarif
-        continue-on-error: true
-
-      - name: Upload analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: stylelint-results.sarif
-          wait-for-processing: true
+      - name: Lint
+        run: npm run lint
