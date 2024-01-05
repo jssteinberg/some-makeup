@@ -16,10 +16,6 @@
 			<li>
 				Base CSS library—<a href="/style">makeup-style</a>
 			</li>
-
-			<li>
-				Code & terminal colors—<a href="/nightcool">nightcool</a>
-			</li>
 		</ul>
 	</div>
 
