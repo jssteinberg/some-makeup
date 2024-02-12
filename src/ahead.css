@@ -3,6 +3,8 @@
 html *, html ::before, html ::after {
 	/* Border-box so size includes border and padding, and border doesn't hide text */
 	box-sizing: border-box;
+	/* `0` min-width instead of `auto` to avoid `flex` overflowing. */
+	min-width: 0;
 }
 
 :where(
