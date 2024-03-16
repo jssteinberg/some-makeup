@@ -21,8 +21,9 @@ The actual files are located in the “src” folder for the real path.
 
 <summary>Plans</summary>
 
-Plan v2:
+Plan @next:
 
+- `textarea { font-family: inherit; }`? Firefox does not inherit font-family.
 - Support variable font, e.g., for `b, strong`.
 - [-] Wrap stuff in `:where()` or use `@layer`. *`:where()` is available in alt. files.*
 

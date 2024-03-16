@@ -65,19 +65,17 @@ The actual few, up-to-date, low-level CSS rules you want below your styling.
 <Details>
 <em slot="summary">Notes & Tips</em>
 
-1. Cloudflare's auto minify of CSS may remove space before CSS attribute selector ignore case flag.
+1. Margin for `<body>` is not removed. So you usually also want to style `body { margin: 0; }`.
 
-2. Margin for `<body>` is not removed. So you usually also want to style `body { margin: 0; }`.
+2. To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. It is not accompanied by [rules to control auto-hyphens](https://clagnut.com/blog/2395). `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows the [`shy` HTML entity](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens#suggesting_line_break_opportunities).
 
-3. To allow browsers to auto hyphenate words when text wraps, `hyphens: auto` is applied. It is not accompanied by [rules to control auto-hyphens](https://clagnut.com/blog/2395). `hyphens: manual` may be set (for some elements) on wider viewports and/or for advanced content creators who knows the [`shy` HTML entity](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens#suggesting_line_break_opportunities).
+3. `code, kbd, samp, sub, sup` are styled to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. The solution is to redo your HTML structure (perhaps it can be more semantic?), or restyle `line-height` for these elements in this context.
 
-4. `code, kbd, samp, sub, sup` are styled to not affect line-heights. If they are used as block-level elements though, they will be short in height since their `line-height` is adjusted. E.g., if their direct parent uses `grid` or `flex`. The solution is to redo your HTML structure (perhaps it can be more semantic?), or restyle `line-height` for these elements in this context.
-
-5. If `font-size` for `code, kbd, samp, pre` is defined, but not `font-family`, and no parent is styled with `font-size`, then browsers will not compute the `font-size` for these elements intuitively (e.g., with default browser settings, `1em` would be computed to `13px` instead of `16px`).
+4. If `font-size` for `code, kbd, samp, pre` is defined, but not `font-family`, and no parent is styled with `font-size`, then browsers will not compute the `font-size` for these elements intuitively (e.g., with default browser settings, `1em` would be computed to `13px` instead of `16px`).
 
 	Fix by defining before mentioned, or by `code, kbd, samp, pre { font-family: monospace, monospace; }` (this is not defined by default because of it's sideeffect of initially increasing their font-sizes).
 
-6. `<hr>` 'border' uses `height` and `background` for a nicer border. This makes it easy to adjust and extend:
+5. `<hr>` 'border' uses `height` and `background` for a nicer border. This makes it easy to adjust and extend:
 
 	```css
 	hr {
@@ -92,7 +90,7 @@ The actual few, up-to-date, low-level CSS rules you want below your styling.
 	}
 	```
 
-7. Check browser support for properties `hyphens` and `all`, and consider automating fallbacks and polyfill with [postcss-preset-env][ppe] or similar.
+6. Check browser support for properties `hyphens` and `all`, and consider automating fallbacks and polyfill with [postcss-preset-env][ppe] or similar.
 
 </Details>
 
