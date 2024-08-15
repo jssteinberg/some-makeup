@@ -38,6 +38,7 @@
 	},
 	"exports": {
 		".": "./index.js",
+		"./ahead.css": "./src/ahead.css",
 		"./develop.css": "./src/develop.css",
 		"./default.css": "./src/default.css",
 		"./where-develop.css": "./src/where-develop.css",
